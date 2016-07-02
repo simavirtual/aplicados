@@ -1,0 +1,22 @@
+#
+#  96.03.23    T.LNK for CA-Clipper
+#
+#  This sample link file is included by the Tnn link files which
+#  demonstrate how to link a Clip-4-Win EXE which will
+#  call a statically linked CA-Clipper Windows DLL.
+#
+   output t                # Output EXE name
+
+   file t                  # List OBJ files here
+
+   defbegin                # Module definition commands
+      name t               # Indicate an EXE
+      exetype windows 3.1  # Indicate a Windows EXE
+      imports
+         D.STATTEST        # Import the STATTEST function
+   defend                  # End module definition commands
+
+   lib Clip4win            # Library file(s) for Clip-4-Win
+
+   nobell                  # No irritating beep
+

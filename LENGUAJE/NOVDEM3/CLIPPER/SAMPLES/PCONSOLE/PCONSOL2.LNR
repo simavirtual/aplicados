@@ -1,0 +1,20 @@
+######################################################################
+##                                                                  ##
+##                    .RTLink Script for PCONSOL2                   ##
+##                A Novell Utility Written with NOVLIB              ##
+##                                                                  ##
+######################################################################
+
+# My PRGs
+	FILE PCONSOL2, NWI
+
+# NOVLIB
+	FILE NOVLIB50
+    LIB NOVLIB, NOVDOS
+
+# CA-Clipper
+	LIB CLIPPER,EXTEND,TERMINAL
+
+OUTPUT PCONSOL2
+MAP A,S
+

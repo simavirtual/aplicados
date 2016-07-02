@@ -1,0 +1,34 @@
+#
+#  96.02.09    GDBUDLL.LNK
+#
+#  This sample link file demonstrates how to place
+#  the whole GDBU utility into a DOS extended DLL
+#
+   out gdbudll       # The DLL name
+
+   fi dbumenu        # List .OBJ files here
+   fi dialog
+   fi getsys
+   fi dbustru
+   fi dbview
+   fi util
+   fi dbumemo
+   fi formview
+   fi create
+   fi msgbox
+   fi copybox
+   fi bfilter
+   fi tbread
+   fi repx
+   fi copyfs
+
+   fi bldclp53          # Clipper 5.x DLL initialisation
+
+   defbegin             # Module definition commands
+      library gdbudll   # Indicate a DLL
+      exports
+         MAIN           # Export the DBU function
+   defend
+   nodeflib             # No default libraries
+   nobell               # No irritating beep
+

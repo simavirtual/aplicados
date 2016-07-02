@@ -1,0 +1,11 @@
+            Welcome to Schooner 2.00 GUI
+    Schooner is the powerful, full featured database application development system. Version 2.00 is the enhanced Graphical User Interface developmentç
+version of the highly praised Schooner 1.00 shareware version.
+    Version 2.00 GUI now lets you create complete applications with attractive and easy to use Graphical User Interface mouse controls, icons andç
+images. But we think Schooner is still the easiest and fastest way to program DOS applications because Schooner uses the Xbase style of programmingç
+that lets you leverage the knowledge you already have.
+    In fact, this entire demo is written in Schooner. To see the rest of the demo simply click the mouse cursor on the top left EXIT icon of thisç
+listbox and check out each of the available options. The source code is also included so you can see how easy and fast it is to create applications inç
+Schooner.
+    So if you have not already, be sure to order your own copy today. See the ORDER option for details.
+

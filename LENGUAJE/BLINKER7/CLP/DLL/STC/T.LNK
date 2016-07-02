@@ -1,0 +1,20 @@
+#
+#  96.03.23    T.LNK for CA-Clipper
+#
+#  This sample link file is included by the Tnn link files which
+#  demonstrate how to link a DOS extended CA-Clipper EXE which will
+#  call a statically linked CA-Clipper Windows DLL.
+#
+   bli exe ext             # Create a DOS extended program
+   output t                # Output EXE name
+
+   file t                  # List OBJ files here
+
+   defbegin                # Module definition commands
+      name t               # Indicate an EXE
+      imports
+         D.STATTEST        # Import the STATTEST function
+   defend                  # End module definition commands
+
+   nobell                  # No irritating beep
+

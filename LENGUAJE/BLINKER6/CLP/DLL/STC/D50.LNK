@@ -1,0 +1,10 @@
+#
+#  96.03.23    D50.LNK for CA-Clipper 5.01
+#
+#  This sample link file demonstrates how to link a Windows DLL containing
+#  CA-Clipper 5.01 code will be statically linked to a CA-Clipper code EXE.
+#
+   @d                      # Include the generic link file for all versions
+
+   file bldclp50           # Clipper 5.01 DLL OBJ for the DLL
+

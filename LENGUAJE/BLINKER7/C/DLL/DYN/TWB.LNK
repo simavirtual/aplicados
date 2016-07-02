@@ -1,0 +1,14 @@
+#
+#  97.12.17    TWB.LNK
+#
+#  This sample link file demonstrates how to create a Windows test
+#  program to use a Windows DLL with Borland C/C++
+#
+
+file c0wl                  # Borland C/C++ startup file
+
+@tw                        # Include generic link file
+
+lib cwl                    # Borland C/C++ DLL run time library for Windows
+lib import                 # Windows import library
+notable                    # Required only for Borland C/C++ version 3.1

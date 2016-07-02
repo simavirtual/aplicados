@@ -1,0 +1,12 @@
+#
+#  96.02.12    T53.LNK for CA-Clipper 5.3
+#
+#  This sample link file demonstrates how to link a DOS extended CA-Clipper
+#  5.3 EXE which will call a dynamically linked CA-Clipper Windows DLL.
+#
+   @t                      # Include the generic link file for all versions
+
+   fil blxclp53            # Clipper 5.3 DLL OBJ for the EXE
+
+   lib blxclp53            # Clipper 5.3 extender override library
+

@@ -1,0 +1,48 @@
+
+* WIZNAME = WZ_BQUER
+* VERSION = .96
+* TIMESTAMP = 493573734.0000
+* CLIENTSERVER =
+* TABLES = D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\DETALLES.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\OFICINAS.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\PARTES.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\PERSVENT.DBF
+* JOINS = Detalles;C¢dfac;Facturas;C¢dfac;0
+* JOINS = Oficinas;C¢dofi;Persvent;C¢dofi;0
+* JOINS = Clientes;C¢dcli;Facturas;C¢dcli;0
+* JOINS = Partes;C¢dpart;Detalles;C¢dpart;0
+* JOINS = Persvent;C¢drep;Facturas;C¢drep;0
+* FIELDS = Facturas.c¢dfac;Facturas.c¢dcli;Facturas.fechfac;Facturas.impfac;Clientes.contacto;Clientes.empresa;Clientes.direcci¢n;Clientes.ciudad;Clientes.estado;Clientes.cp;Clientes.tel‚f;Persvent.nombre;Oficinas.c¢dofi;Partes.descripc
+* FIELDS = Detalles.precio;Detalles.impl¡nea;BENEFPART=(Detalles.precio-Partes.coste)*100;VENTOTAL=(Detalles.cantidad*Partes.precio)
+* SORT FIELDS = 
+* GROUP = Facturas.fechfac:1D;Facturas.c¢dfac:1N
+* SQL = SQL Select statement for Mailmerge Wizard:
+* SELECT Facturas.c¢dfac,Facturas.c¢dcli,Facturas.fechfac,Facturas.impfac,Clientes.contacto,Clientes.empresa,Clientes.direcci¢n,Clientes.ciudad,Clientes.estado,Clientes.cp,Clientes.tel‚f,Persvent.nombre,Oficinas.c¢dofi,Partes.descripc,;
+*		Detalles.precio,Detalles.impl¡nea,(Detalles.precio-Partes.coste)*100 BENEFPART,(Detalles.cantidad*Partes.precio) VENTOTAL;
+*	FROM D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\DETALLES.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\OFICINAS.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\PARTES.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\PERSVENT.DBF;
+*	WHERE Facturas.C¢dfac = Detalles.C¢dfac AND Persvent.C¢dofi = Oficinas.C¢dofi AND Facturas.C¢dcli = Clientes.C¢dcli AND Detalles.C¢dpart = Partes.C¢dpart AND Facturas.C¢drep = Persvent.C¢drep;
+*	GROUP BY Facturas.fechfac,Facturas.c¢dfac;
+*	INTO CURSOR Consulta
+IF !USED("Facturas")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF ?") AGAIN IN 0 ALIAS Facturas
+ENDIF
+IF !USED("Detalles")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\DETALLES.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\DETALLES.DBF ?") AGAIN IN 0 ALIAS Detalles
+ENDIF
+IF !USED("Oficinas")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\OFICINAS.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\OFICINAS.DBF ?") AGAIN IN 0 ALIAS Oficinas
+ENDIF
+IF !USED("Clientes")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF ?") AGAIN IN 0 ALIAS Clientes
+ENDIF
+IF !USED("Partes")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\PARTES.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\PARTES.DBF ?") AGAIN IN 0 ALIAS Partes
+ENDIF
+IF !USED("Persvent")
+	USE LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\PERSVENT.DBF","DBF","Buscar D:\FPD26\SAMPLE\CATALOG.DOS\PERSVENT.DBF ?") AGAIN IN 0 ALIAS Persvent
+ENDIF
+SELECT Facturas.c¢dfac,Facturas.c¢dcli,Facturas.fechfac,Facturas.impfac,Clientes.contacto,Clientes.empresa,Clientes.direcci¢n,Clientes.ciudad,Clientes.estado,Clientes.cp,Clientes.tel‚f,Persvent.nombre,Oficinas.c¢dofi,Partes.descripc,;
+		Detalles.precio,Detalles.impl¡nea,;
+		(Detalles.precio-Partes.coste)*100 AS BENEFPART,;
+		(Detalles.cantidad*Partes.precio) AS VENTOTAL;
+	FROM Facturas,Detalles,Oficinas,Clientes,Partes,Persvent;
+	WHERE Facturas.C¢dfac = Detalles.C¢dfac AND Persvent.C¢dofi = Oficinas.C¢dofi AND Facturas.C¢dcli = Clientes.C¢dcli AND Detalles.C¢dpart = Partes.C¢dpart AND Facturas.C¢drep = Persvent.C¢drep;
+	GROUP BY Facturas.fechfac,Facturas.c¢dfac;
+	INTO CURSOR Consulta

@@ -1,0 +1,223 @@
+INSTALACION DE FOXPRO PARA MS-DOS
+
+FoxPro para MS-DOS ofrece tres opciones de instalaci¢n:
+
+ *  La instalaci¢n normal copia al disco duro los archivos del
+    programa, los archivos de ayuda y los ejemplos de FoxPro desde
+    disquetes o desde la red. La instalaci¢n normal instala FoxPro para
+    MS-DOS en un £nico equipo.
+
+ *  La instalaci¢n administrativa ( /A) copia todos los archivos de
+    FoxPro, junto con los archivos de instalaci¢n, a una unidad de red.
+    De este modo, los usuarios podr n ejecutar la versi¢n compartida para
+    red despu‚s de realizar una instalaci¢n en estaci¢n de trabajo.
+    Tambi‚n pueden instalar FoxPro para MS-DOS en sus equipos locales,
+    mediante una instalaci¢n normal, a partir de los archivos almacenados
+    en la unidad de red.
+
+ *  La instalaci¢n en estaci¢n de trabajo ( /N) copia a un sistema
+    local los archivos de inicializaci¢n de FoxPro de modo que pueda
+    ejecutarse una versi¢n compartida de red de FoxPro para MS-DOS. La
+    instalaci¢n en estaci¢n de trabajo ocupa menos espacio en los equipos
+    individuales y permite un mayor control administrativo sobre el uso
+    de FoxPro. Para realizar la instalaci¢n en estaci¢n de trabajo es
+    necesario haber realizado previamente una instalaci¢n administrativa.
+
+ *  La instalaci¢n normal despu‚s de una instalaci¢n administrativa
+    se realiza del mismo modo que la instalaci¢n normal desde disquetes.
+    Para iniciar la instalaci¢n normal despu‚s de una instalaci¢n
+    administrativa debe escribir X:\<ruta de acceso>\INSTALAR en el
+    s¡mbolo del MS-DOS y presionar la tecla ENTRAR. En el comando
+    anterior, X representa la unidad de red y <ruta de acceso> representa
+    el directorio donde instal¢ FoxPro mediante instalaci¢n
+    administrativa.
+
+
+	**************************************************************
+	* Nota: Todos los usuarios de Microsoft FoxPro deben tener   *
+	* licencia de uso para Microsoft FoxPro. Esta licencia puede *
+	* conseguirse adquiriendo un paquete del producto o un	     *
+	* conjunto de licencias Microsoft. Si desea m s informaci¢n  *
+	* sobre las restricciones de uso en una red, consulte el     *
+	* acuerdo de licencia de Microsoft FoxPro.		     *
+	**************************************************************
+
+	FoxPro plantea varias preguntas durante el proceso de
+	instalaci¢n. La respuesta predeterminada aparece entre corchetes, por
+	ejemplo:
+
+	¨Confirma que desea instalar en C:\FOXPRO25\? [S] :
+
+	Para elegir la respuesta predeterminada, presione la tecla
+	ENTRAR.
+
+	En estas instrucciones se supone que est  realizando la
+	instalaci¢n desde la unidad A: Si va a realizar la instalaci¢n desde
+	otra unidad distinta, adapte las instrucciones en consecuencia.
+
+
+INSTALACION ADMINISTRATIVA ( /A)
+
+	Antes de comenzar la instalaci¢n administrativa, la red debe
+	estar en funcionamiento y usted debe tener acceso de lectura y
+	escritura al directorio de la red en el que desee instalar FoxPro. Si
+	desea m s informaci¢n al respecto, consulte la documentaci¢n del
+	software de red.
+
+	Para instalar FoxPro para MS-DOS con fines administrativos:
+
+	1.  Introduzca el Disco 1 de FoxPro en la unidad A:.
+
+	2.  Escriba A:\INSTALAR /A tras el s¡mbolo del MS-DOS y
+	presione ENTRAR.
+
+	3.  Escriba sus datos de identificaci¢n. El programa de
+	instalaci¢n le pedir  que confirme esta informaci¢n. Si est  haciendo
+	una re-instalaci¢n de FoxPro, esta informaci¢n se incluir 
+	autom ticamente. Cuando inicie FoxPro para MS-DOS, esta informaci¢n
+	aparecer  en la pantalla inicial.
+
+	4.  El programa de instalaci¢n sugiere un directorio en el que
+	instalar  FoxPro para MS-DOS. Si desea instalar FoxPro en este
+	directorio, presione la tecla ENTRAR. Si no desea instalar FoxPro en
+	el directorio predeterminado, escriba N y presione la tecla ENTRAR. Se
+	le pedir  que indique un directorio para la instalaci¢n.
+
+	5.  Si el directorio en el que va a instalar FoxPro no se
+	encuentra en la l¡nea PATH del archivo AUTOEXEC.BAT, el programa de
+	instalaci¢n le preguntar  si desea modificar dicha l¡nea en el
+	archivo AUTOEXEC.BAT. Presione la tecla ENTRAR si desea modificarla o
+	escriba N y presione la tecla ENTRAR si no desea modificarla.
+
+	6.  Los archivos de FoxPro para MS-DOS y todos los archivos
+	necesarios para posteriores instalaciones se copian al servidor. Una
+	vez terminada la instalaci¢n b sica, se le pedir  que presione la
+	tecla ESC para salir o cualquier otra tecla para continuar con la
+	instalaci¢n de componentes opcionales.
+
+Instalaci¢n de componentes opcionales
+
+	Los componentes opcionales que instale mediante la instalaci¢n
+	administrativa estar n disponibles para su utilizaci¢n en la estaci¢n
+	de trabajo; los componentes no instalados mediante la instalaci¢n
+	administrativa no podr n utilizarse en la estaci¢n de trabajo. Todos
+	los componentes de FoxPro seguir n a disposici¢n de quienes realicen
+	una instalaci¢n normal despu‚s de la instalaci¢n administrativa,
+	independientemente de los componentes opcionales que se incluyan.
+
+	Antes de instalar los componentes opcionales, el programa de
+	instalaci¢n le pedir  que elija el tipo de monitor que utiliza en su
+	sistema.
+
+	Utilice las teclas de direcci¢n para seleccionar el tipo de
+	monitor apropiado y presione la tecla ENTRAR.
+
+	Durante la instalaci¢n, se le ofrecer  la posibilidad de
+	instalar los programas y archivos suplementarios de FoxPro. Este paso
+	es id‚ntico al paso correspondiente de la instalaci¢n normal.
+
+Detener la instalaci¢n
+
+	Si desea detener el proceso de instalaci¢n, presione la tecla
+	ESC cuando aparezca alg£n mensaje o presione CTRL+C en cualquier
+	momento. Si presiona CTRL+C, la instalaci¢n no se detendr 
+	inmediatamente. Cuando la instalaci¢n se detiene, aparece el s¡mbolo
+	del MS-DOS.
+
+Instalaci¢n de archivos adicionales
+
+	Incluso si ya ha instalado FoxPro, todav¡a puede instalar los
+	archivos adicionales que no especific¢ durante la primera
+	instalaci¢n. Para ello, reinicie FoxPro escribiendo FOX tras el
+	s¡mbolo del MS-DOS y presione ENTRAR. Inserte cualquiera de los
+	disquetes del producto en la unidad de disquetes e introduzca el
+	siguiente comando en la ventana Comandos de FoxPro:
+
+	DO INSTALL
+
+	Se le pedir  que introduzca el disquete o los disquetes que
+	contienen los archivos adicionales que desee instalar.
+
+	Nota: Si la instalaci¢n se realiza desde una unidad distinta de
+	A:, se le pedir  que seleccione otra unidad de origen despu‚s del
+	mensaje "Anular, Repetir, Descartar?".
+
+
+INSTALACION EN ESTACION DE TRABAJO ( /N)
+
+	1.  Escriba X:\<ruta de acceso>\INSTALAR /N en el s¡mbolo del
+	MS-DOS. En el anterior comando, X representa la unidad de la red y
+	<ruta de acceso> representa el directorio en el que instal¢ FoxPro
+	mediante la instalaci¢n administrativa.
+
+	2.  El programa de instalaci¢n sugiere un directorio en el que
+	instalar  FoxPro para MS-DOS. Si desea instalar FoxPro en este
+	directorio, presione la tecla ENTRAR. Si no desea instalar FoxPro en
+	el directorio predeterminado, escriba N y presione la tecla ENTRAR. Se
+	le pedir  que indique un directorio para la instalaci¢n.
+
+	3.  Si el directorio en el que va a instalar FoxPro no se
+	encuentra en la l¡nea PATH del archivo AUTOEXEC.BAT, el programa de
+	instalaci¢n le preguntar  si desea modificar dicha l¡nea en el
+	archivo AUTOEXEC.BAT. Presione la tecla ENTRAR si desea modificarla o
+	escriba N y presione la tecla ENTRAR si no desea modificarla.
+
+	4.  El programa de instalaci¢n copiar  el archivo FOX.EXE al
+	directorio FoxPro. Puede dar por finalizada la instalaci¢n
+	presionando la tecla ESC en este momento o presionando cualquier otra
+	tecla para configurar FoxPro en la estaci¢n de trabajo.
+
+	5.  Aparecer  una pantalla de informaci¢n explicando la
+	configuraci¢n de FoxPro; tambi‚n podr  especificar el directorio
+	donde se crear n los archivos de configuraci¢n. La opci¢n
+	predeterminada es el directorio FoxPro. Presione la tecla ENTRAR para
+	aceptar esta opci¢n o escriba el directorio deseado en el cuadro de
+	texto y presione la tecla ENTRAR.
+
+	6.  Dependiendo del bot¢n que elija, ahora podr  continuar con
+	el procedimiento de configuraci¢n, o bien cancelarlo.
+
+	7.  Aparecer  un cuadro de di logo en el que puede establecer
+	los directorios para:
+
+	  * CONFIG.FP - El archivo de configuraci¢n de FoxPro.
+	  * FOXUSER - Una tabla FoxPro que almacena los tama¤os de las
+	  ventanas, etc.
+	  * Archivos overlay - Puesto que el archivo ejecutable de
+	  FoxPro es demasiado grande y no cabe por completo en la memoria
+	  convencional, se guardan partes del mismo en archivos overlay que se
+	  cargan en memoria cuando se necesitan.
+	  * Archivos de trabajo del editor - Archivos temporales
+	  creados durante las sesiones de edici¢n.
+	  * Archivos de trabajo de ordenaci¢n - Archivos temporales
+	  utilizados durante la ordenaci¢n e indexaci¢n de tablas.
+	  * Archivo de trabajo del programa - Archivo temporal del
+	  programa.
+
+	En el cuadro de di logo se incluyen descripciones de estas
+	opciones. FoxPro utiliza, de forma predeterminada, toda la memoria
+	expandida disponible. En este cuadro de di logo se puede limitar la
+	memoria EMS disponible para FoxPro.
+
+	En la parte inferior del cuadro de di logo hay tres botones de
+	comando:
+		<<Aceptar>> - Permite aceptar los directorios y opciones
+		EMS.
+		<<Archivador>> - Abre el accesorio Archivador de FoxPro
+		permiti‚ndole ver los directorios antes de decidir sobre las opciones
+		predeterminadas del directorio de configuraci¢n.
+		<<Cancelar>> - Cancela el procedimiento de configuraci¢n.
+
+	8.  El programa de instalaci¢n le ofrece la posibilidad de
+	actualizar el archivo AUTOEXEC.BAT, siendo en este caso FoxPro quien
+	buscar¡a la informaci¢n de configuraci¢n en los directorios
+	especificados.
+
+	9.  Tambi‚n se le ofrece la posibilidad de que los cambios de
+	configuraci¢n se escriban autom ticamente en el archivo CONFIG.FP.
+
+	10. La instalaci¢n ha terminado. Presione cualquier tecla para
+	iniciar FoxPro. Recuerde que es necesario reinicializar el sistema
+	para que se apliquen los cambios efectuados en el archivo
+	AUTOEXEC.BAT.
+

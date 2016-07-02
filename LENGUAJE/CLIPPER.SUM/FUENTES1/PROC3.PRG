@@ -1,0 +1,23 @@
+CLEAR
+X:=10 ; Y:=20 ; Z:=30
+DO PRINCIPAL WITH X,Y,Z
+? X,Y,Z   // RETORNA 0.56   20  36
+
+?"------"
+
+X:=10 ; Y:=20 ; Z:=30
+DO PRINCIPAL WITH (X),Y,Z
+? X,Y,Z    // RETORNA  10  20  36
+
+
+
+PROCEDURE PRINCIPAL(a,b,c)
+C=C*1.2
+A=B/C
+inkey(0)
+RETURN
+
+
+
+
+

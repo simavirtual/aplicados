@@ -1,0 +1,24 @@
+//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+//³ FIVEDLL.LNK                               WORKBENCH (c) Tom Groeger ³Û
+//³ Link Script                                                03/23/96 ³Û
+//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙÛ 
+// ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+blinker incremental OFF
+nobell
+nodefLib
+output FIVEDLL
+
+DEFBEGIN
+  library      FIVEDLL
+  description 'TestDll for FiveWin/Blinker 4.0'
+  exetype      Windows 3.1
+  Stacksize    2000
+  exports      HelloWorld
+              
+DEFEND
+
+file FIVEDLL                        # The sample PRG
+file BLDCLP52                       # Blinker DLL obj for the DLL
+lib  FIVESTUB                       # FiveWin stubs for internal functions
+

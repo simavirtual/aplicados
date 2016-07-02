@@ -1,0 +1,3 @@
+CLIPPER %1
+PLINK86 fi %1 @FLIP87.LNK
+

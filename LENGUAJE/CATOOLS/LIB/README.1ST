@@ -1,0 +1,35 @@
+CA Clipper Tools
+Version 3.0c Libraries
+Real and Protected Mode
+October 2000
+
+These new Clipper Tools 3.0c Libraries replace both the __wait_4.obj from Clipper 5.3b and the __wait_b.obj third party fix, as well as the CT and CTP Tools libraries (both 5.2 and 5.3 - compatible versions).  The new libraries resolve additional R6003 errors with applications run on fast machines (machines over 500MHz).
+
+You should have the following products installed before attempting to use these new libraries:
+
+* CA-Clipper Tools 3.0c (REAL and/or PROTECTED MODE)
+* CA-Clipper 5.2e and/or CA-Clipper 5.3b
+
+Usage Instructions
+==================
+
+Although the new Tools 3.0c Libraries functionally replace the CT.LIB, CTP.LIB, and __WAIT_*.OBJ files, no files will be deleted or overwritten.
+
+Simply unzip the TOOLS3.ZIP file into your CATOOLS\LIB subdirectory.  By default the 5.3 version libraries will be placed in a 53 subdirectory. 
+
+The new files are as follows:
+
+CT52.LIB
+CT53.LIB
+CTP52.LIB
+CTP53.LIB
+
+Clipper 5.2e real-mode programmers should remove references to __WAIT_B.OBJ and replace CT.LIB references with CT52.LIB in their link scripts.
+
+Clipper 5.2e protected-mode programmers should remove references to __WAIT_B.OBJ and replace CTP.LIB references with CTP52.LIB in their link scripts.
+
+Clipper 5.3b real-mode programmers should remove references to __WAIT_4.OBJ and replace CT.LIB references with CT53.LIB in their link scripts.
+
+Clipper 5.3b protected mode programmers should remove references to __WAIT_4.OBJ and replace CTP.LIB references with CTP53.LIB in their link scripts.
+
+All other code and references should remain the same.

@@ -1,0 +1,12 @@
+#
+#  96.03.23    DWM.LNK
+#
+#  This sample link file demonstrates how to create
+#  a Windows DLL with Microsoft Visual C/C++
+#
+
+@dw                        # Include generic link file
+
+lib ldllcew                # Microsoft DLL run time library for Windows
+lib libw                   # Windows import library
+

@@ -1,0 +1,1983 @@
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+     °°°°°°°²²²²°°²²²²°°°°°²²²²°°°²²²²²²°°²²²²²²°°²²²²²²°°°²²²²°°°°°°°°°°°    
+   °°°°°°°°²²  ²²°°²²  °°°°°²²  °°°²²  ²²°°²²  ²²°°²²  ²²°²²  ²²°°°°°°°°°°°°  
+  °°°°°°°°²²  °°  °²² °°°°°°²² °°°°²² °²² °²² °²² °²² °²² ²²²°°  °°°°°°°°°°°° 
+ °°°°°°°°°²² °°°°°°²² °°°°°°²² °°°°²²²²²  °²²²²²  °²²²²²  °²²²°°°°°°°°°°°°°°°°
+ °°°°°°°°°²² °°°°°°²² °°²°°°²² °°°°²²    °°²²  ²²°°²²  ²²°°° ²²²°°°°°°°°°°°°°°
+  °°°°°°°°°²²°°²²°°²² °²² °°²² °°°°²² °°°°°²² °²² °²² °²² ²²°°²² °°°°°°°°°°°° 
+   °°°°°°°°°²²²²  ²²²²²²² °²²²²°°°²²²²°°°°²²²²²²  ²²²²²²  °²²²²  °°°°°°°°°°°  
+     °°°°°°°°    °°       °°    °°°    °°°°      °°      °°°    °°°°°°°°°°    
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+ 
+   Volume 1, Number 6                                        4 March 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  .............................................................  1
+    DOSRCS - Revision Control System - part (4)  ..........................  1
+    The Programmer's Guide to CLIPPER Linkers - part (3)  .................  5
+    Best way of making FOR cyclus, and what about WHILE cyclus  ........... 10
+    WHICH packing/unpacking program to choose???????  ..................... 13
+    Will Clipper expand to graphics environment?  ......................... 16
+ 2. SOFTWARE  ............................................................. 18
+    TIPS&TRICKS - how to found largest string in array  ................... 18
+    DANIEL.LIB - NEW version of DANIEL.RMK  ............................... 18
+ 3. ANOMALIES  ............................................................ 22
+    ANOMALIES reports and commets  ........................................ 22
+    Clipper Debugger anomalies  ........................................... 22
+    INCONSISTENCY  ........................................................ 24
+    New RTLINK version, INCREMENTAL LINKING  .............................. 24
+ 4. ECHODUMP  ............................................................. 26
+    CONFERENCE DUMP part (5)  ............................................. 26
+ 5. CLIPPER NET  .......................................................... 28
+    Index of described files in Clipper BBS Magazine  ..................... 28
+ CLIPBBS 1-06       Table of Contents (...)         4 Mar 1991
+
+
+    Routing-Plan for ClipperNet  .......................................... 28
+    CLN - SOUND.ARJ  ...................................................... 30
+    CLN - TBWHL4.ARJ  ..................................................... 31
+    ClipNet - NFDESC2.ARJ  ................................................ 31
+    ClipNet - NFLIB2.ARJ  ................................................. 32
+    ClipNet - NFSRC2.ARJ  ................................................. 32
+    ClipperNet - ACCESS.ARJ  .............................................. 34
+    ClipperNet - ACHOO2.ARJ  .............................................. 34
+ 6. CLIPBBS  .............................................................. 36
+    CLIPBBS distribution  ................................................. 36
+    CLIPBBS, how to write an article!!!  .................................. 37
+
+                                   - - - - -
+ CLIPBBS 1-06                   Page 1                    4 Mar 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+             DOSRCS - Revision Control System - part (4)
+ 
+                          _________________
+                          Check In - CI.EXE
+                          ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ CI.EXE is second most often used program from DOSRCS set of
+ programs. It's used in simply form in our RCSPUT.BAT:
+ 
+               ³ @echo off
+               ³ echo Processing [%1]
+               ³ CI -q %1
+ 
+ One switch used in this case, -q, is used only for supressing some
+ messages and questions given by CI.EXE.
+ 
+ Complete syntax is:
+ 
+         CI [options] file ...
+ 
+ One important warning:
+ 
+         Every RCS used and stored file is using user names for
+         specifying who is able to access file and not. Originally
+         every file is getting name of user who was storing first
+         this file and this user has right to use this file. Other
+         users not, until they are written inside of file as other
+         possible users. It's done by RCS program, or by making
+         access list empty. Superuser can of course access all files
+         without limitation.
+ ________
+ BRANCHES
+ 
+         Branches are created automatically in most cases. Typicall
+         example is this:
+ 
+         TEST.PRG has initial revison 1.1 and next revisions
+                 1.2 and 1.3
+ 
+                 Owner of file will retrieve 1.1 from RCS and
+                 start changing (1.1 is locked!). After this will
+                 use CheckIn without specifying new number of
+                 revision. CheckIn will see that 1.1 is locked and
+                 therefore will assume that new revision number MUST
+                 be 1.1.1.1 (added 1.1 after 1.1) and will store it
+                 with this number. User then can continue in
+                 BRANCHING with number 1.1.1.2, 1.1.1.3...
+ 
+ ________________________
+ UNLOCKING of LOCKED FILE
+ 
+ CLIPBBS 1-06                   Page 2                    4 Mar 1991
+
+
+         Sometime is needed to unlock locked revision (user can for
+         example delete .PRG file and forget to use PUT for storing
+         it back!). When this will happend, nobody is able to get
+         revision for locking again and must be used RCS.EXE for
+         unlocking. See some next continuing about RCS.EXE
+ 
+ _____________________________________
+ CHECKING of differences and -Q switch
+ 
+         Normally, CI checks whether the revision to be deposited is
+         different from the preceding one. If it is not different,
+         CI either aboirts the deposit (if -Q is given) or asks
+         whether to abort (if -Q is omitted). Deposit can be forced
+         with -F option.
+ 
+ ____________
+ LOG MESSAGES
+ 
+         Log message is used for every deposited revision. CI is
+         asking for LOG message every time when new revision (or
+         forced revision) is coming. User/programmer can use as many
+         lines wants and end them with "." or Ctrl Z. All lines are
+         then part of $Log$ keyword. If CI is used for more files in
+         one (CI *.PRG for example), is possible use the same
+         message for all this files - CI is asking for reuse old
+         message, but it's not working in case how i'm using CI,
+         because PUT is calling RCSPUT with only one file at one
+         time. But mostly changes in sources are different for
+         everyone different.
+ 
+ ___________________
+ INCLUDING NEW FILES
+ 
+         New files of RCS are created when RCS file of give
+         source/text is not exist. RCS is then creating new RCS file
+         with initial revision (1.1 by default), access list is
+         initialized to empty and CI is asking for DESCRIPTIVE TEXT
+         instead of LOG message. This text is description of purpose
+         of file and is NOT part of $Log$ definition.
+ 
+ __________
+ CI options
+ 
+ 
+         -r[<rev>]
+ 
+         assigns revision number <rev> to checked in revision,
+         releases corresponding lock and deletes working file. This
+         -r option is automatically given if not specified. Non
+         specified <rev> is request for automatic counting of new
+         revision number. <rev> if specified must be higher than the
+         latest one on the branch to which rev belongs, or must
+         start a new branch.
+ 
+ 
+         -f[<rev>]
+ CLIPBBS 1-06                   Page 3                    4 Mar 1991
+
+
+         Forces a deposit. New revision is deposited even it is not
+         different from preceding one.
+ 
+         -k[<rev>]
+ 
+         Searches working file for keyword values to determine its
+         revision number, creating date, state and author (see
+         article about KEYWORDS) and assigns these values to
+         deposited revision rather than computing them.
+ 
+ º       This is quite nice switch with main interest in sending a
+ º       complete latest revision to another place (developers,
+ º       check out sites, beta test sites). Then receiver will use
+ º       CI -k *.* on all files and if correct keywords are written
+ º       in EVERY file (no problem when used one kind of header), CI
+ º       will take all correct number from files and will create
+ º       correct stored new revision in another set of RCS files on
+ º       another place!
+ 
+         -l[<rev>]
+ 
+         Works like -r, only it perform addition CO -L for just
+         deposited revision. Therefore, deposited revision is
+         immediately checked out again and locked.
+ 
+ º       This one is usefull in case that one wants to save
+ º       revision, but continue in workign and editing.
+ 
+ 
+         -u[<rev>]
+ 
+         Works like -l, except that deposited revision is NOT
+         locked.
+ 
+ º       This one is useful in case that one wants to (for example)
+ º       copile revision immediately after checking, but is not
+ º       planning another editing.
+ 
+ 
+         -q[<rev>]
+ 
+         Diagnostics output is not printed, revision which is not
+         different from preceding one is NOT deposited, unless -f is
+         given.
+ 
+ 
+         -d<date>
+ 
+         Uses <date> for the checkin date and time. Date may be
+         specified in free format as was explained in article about
+         CO.EXE program.
+ 
+ º       Useful in case of need to say different date of creating
+ º       revision than reality, or for "-k" option where date is not
+ º       available.
+ 
+ CLIPBBS 1-06                   Page 4                    4 Mar 1991
+
+
+         -m<msg>
+ 
+         Uses <msg> as LOG message for ALL revisions checked in. If
+         this switch is not used, CI will ask for filling in all LOG
+         messages.
+ 
+         -n<name>
+ 
+         Assigns the symbolic name <name> to the number of the
+         checked-in revision. CI printer an error if name is already
+         assigned to another number. Later is possible to use this
+         symbolic name instead of revision number in CO command.
+ 
+         This is giving nice possibility to NAMED some from
+         revisions which have key value.
+ 
+         -N<name>
+ 
+         Same as -n, but it's overriding previsou assignment of
+         name. RCS is of course still keeping number style of
+         revisions, only assigns additional name, therefore name can
+         be reasigned to another revision. Please NOTE THAT this is
+         "-N" and previous one was "-n".
+ 
+         -s<state>
+ 
+         Sets the state of the checked-in revision to the identifier
+         <state>. Default is <Exp>. Can be used for division of
+         revisions or writing down some special flags or comments.
+ 
+         -t[<txtfile>]
+ 
+         Writes DESCRIPTIVE text into the RCS file (deleted the
+         existing text of course). If <txtfile> is omitted, CI
+         prompts the user for text, otherwise descriptive text is
+         copied from file <txtfile>.
+ 
+         -w<login>
+ 
+         Uses <login> for Author field of deposited revision. Can be
+         used for change of author or for set author for "-k"
+         option
+ 
+ 
+ All flags are described, interesting are marked with double line,
+ together with tip of use.
+ 
+ See you later...
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 5                    4 Mar 1991
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (3)
+ 
+ 
+         - OVERLAY RELOADING WITH RTLINK/CLIPPER-5.0 -
+ 
+         This is a very important "undocumented" feature of the RTLINK
+         linker supplied with Clipper-5.0.  I have been RELOADING
+         objects from the Summer 87 Clipper libraries for years, so when
+         I received my copy of Clipper-5.0, the first thing I attempted
+         to do was to overlay some of the larger modules in the
+         Clipper libraries using the RELOAD command in my linker
+         script file.  The Nantucket development team had the foresight
+         to insure that their C and ASM compiler assigned a UNIQUE name
+         to each Clipper C/ASM object in the Clipper libraries, thus
+         allowing, you, the Clipper programmer to use both the
+         "undocumented" RELOAD command and MODULE command in your .LNK
+         script files.
+ 
+         Refer to the script file on the next page for an example of how
+         to use these features to reduce memory usage in your Clipper-5.0
+         applications.  This link file creates an overlay area for
+         overlaying the larger modules in the Clipper libraries which
+         are not likely to call each other recursively, therefore you
+         will probably notice very difference in speed performance yet
+         you will get up to 40K more memory overhead depending on how
+         much of the Clipper libraries your application uses.
+ 
+         You may get a "warning" message during link time if your
+         application does not call one of the modules referenced in an
+         overlay area.  In the event this happens, simply remove that
+         module from the link file.  For example, if you are not using
+         any TBROWSE objects, remove the following line:
+ 
+            SECTION MODULE D:\S89\EDIT\TBROWSE.C
+ 
+          # Example of using RELOADABLE overlays with the
+          # Clipper-5.0 version of RTLINK
+ 
+          FI <my files>
+          LIB <my libs>
+          LIB \CLIPPER5\LIB\extend
+          LIB \CLIPPER5\LIB\clipper
+          LIB \CLIPPER5\LIB\terminal
+          LIB \CLIPPER5\LIB\dbfntx
+          OUTPUT <my .EXE>
+          VERBOSE
+          RELOAD FAR 200
+          BEGINAREA
+            SECTION MODULE D:\S89\EDIT\MEMOEDIT.C
+                    MODULE D:\S89\MEMO\MEMOTRAN.C
+            SECTION MODULE D:\S89\MEMO\MEMOREAD.C
+                    MODULE D:\S89\MEMO\MEMOWRIT.C
+                    MODULE D:\S89\MEMO\MEMOLINE.C
+                    MODULE D:\S89\MEMO\MLCOUNT.C
+                    MODULE D:\S89\MEMO\MLPOS.C
+            SECTION MODULE D:\S89\EDIT\TBROWSE.C
+ CLIPBBS 1-06                   Page 6                    4 Mar 1991
+
+
+            SECTION MODULE D:\S89\EDIT\ACHOICE.C
+                    MODULE D:\S89\ARRAY\ASCAN.C
+                    MODULE D:\S89\ARRAY\ASORT.C
+                    MODULE D:\S89\ARRAY\ARRAY.C
+                    MODULE D:\S89\ARRAY\DIRECTRY.C
+            SECTION MODULE D:\S89\DBCMD\DBSTRUCT.C
+                    MODULE D:\S89\DBCMD\DBCREATE.C
+                    MODULE D:\S89\DBCMD\JOINLIST.C
+                    MODULE D:\S89\DBF\SORTOF.C
+            SECTION MODULE D:\S89\TERM\GETHELP.C
+          ENDAREA
+ 
+ 
+ 
+ 
+         = DYNAMIC OVERLAYS =
+ 
+         "Dynamic Overlays" are segments of code which are loaded into a
+         "memory pool" at runtime.   Dynamic overlay segments usually
+         look like this in your link file:
+ 
+           # only 1 area needed
+           BEGINAREA
+             SECTION FILE A
+             SECTION FILE B
+             SECTION FILE C
+             SECTION FILE D
+             SECTION FILE E
+             SECTION FILE F
+           ENDAREA
+ 
+         In the above example, if a function in FILE A calls a function
+         in FILE B, then FILE B is loaded into the memory pool along with
+         FILE A and the memory pool is "dynamically" managed to insure
+         that modules which call each other repetitively will remain in
+         memory to improve speed performance.  Some dynamic overlay
+         linkers also provide automatic "reloading" to insure that the
+         application will always have sufficient memory in the pool.
+         Modules which don't need to be in the memory pool will be
+         removed to allow room for others at runtime.
+ 
+         Dynamic overlay linkers (ALINK, BLINKER, WARPLINK, RTLINK-
+         CLIPPER 5.0) offer the advantage of simpler overlay design and
+         usually better memory management.  Some also have a tendency to
+         "fragment" the Clipper free memory pool because they share the
+         heap with the Clipper application rather than allocating a
+         separate dos memory area.  This can cause applications to run out
+         of memory after prolonged running of the application if there is
+         not sufficient memory overhead at the start of the application.
+         Some dynamic overlay linkers also support overlay management by
+         "frequency of usage".  If a module is called often during the
+         running of an application, it will remain in the overlay pool
+         rather than being "swapped out" to load other overlays.  This
+         insures optimum runtime performance.
+ 
+         Dynamic-overlay linkers such as WARPLINK and BLINKER both
+ CLIPBBS 1-06                   Page 7                    4 Mar 1991
+
+
+         make a disclaimer in their documentation requiring that the
+         objects being overlayed are "well-behaved".   After much
+         experimentation with our own libraries and many third-
+         party libraries, it is now more clear what constitutes
+         well-behaved modules:
+ 
+            a. Well-behaved code uses the Clipper EXTEND interface,
+               registers or the stack for parameter passing and does
+               not use undocumented features of Clipper.
+ 
+            b. All Clipper-compiled .OBJects are dynamically-
+               overlayable.
+ 
+         Modules which CANNOT be dynamically-overlaid are:
+ 
+            a. Routines which handle interrupts.
+ 
+            b. Modules in which the DATA area is changed during
+               runtime rather than allocating memory in the root area.
+ 
+         Dynamic overlaying of third-party libraries can be an
+         aggravating learning experience if you don't get support from
+         the third party vendor in trying to accomplish this task.
+         From my experience, the entire concept of dynamic-overlaying
+         of C/ASM code is not very well-defined.  BLINKER and WARPLINK
+         have chosen to accept this challenge while the more conservative
+         RTLINK has chosen instead to dynamic-overlay Clipper-compiled
+         objects only and handle all the C/ASM code using static or
+         reloable overlays - which, in my opinion, is a much more reliable
+         concept.
+ 
+         In the long run, I believe that dynamic-overlay linkers will
+         survive only if they work flawlessly with all third-party
+         libraries or very clearly define the rules for compatability with
+         each third-party product and develop a following of add-on
+         support.
+ 
+ 
+         - PROCEDURE-LEVEL OVERLAY LOADING -
+ 
+         For a dynamic-overlay manager to work effectively, it is
+         important that it load overlays at the smallest possible code-
+         segment level, i.e., the procedure/function rather than the
+         entire object.  This requires managing the symbol table
+         seperately from the code and data, therefore, these linkers
+         place the symbol table into the root memory area and each
+         function into a separate overlay segment.  To keep the root
+         memory symbol table as small as possible it is recommended that
+         you compile your application into a few large objects rather
+         than many small objects when using dynamic-overlay linkers.
+ 
+         I am not exactly sure at this time how RTLINK/CLIPPER-5.0
+         accomplishes the symbol management, but compiling into large
+         objects does not appear to be necessary with Clipper-5.0 to
+         reduce the executable memory model.  RTLINK/CLIPPER-5.0 does
+         not appear to be dependent on the method that your source code
+ CLIPBBS 1-06                   Page 8                    4 Mar 1991
+
+
+         is compiled with the exception of line numbers, which WILL
+         increase your memory usage.
+ 
+ 
+ 
+         = DYNAMIC LINKING =
+ 
+         True "Dynamic linkers" should not be confused with "Dynamic
+         Overlay" linkers.  Dynamic overlay linkers perform all the
+         linking and fix-ups for the entire application at one time
+         and then produce an .EXEcutable program.  True "dynamic linkers"
+         perform all the linking and fix-ups at "runtime" by linking
+         from your .OBJ files or "dynamic-libraries" during the
+         running of the application.
+ 
+         Dynamic linkers (dCLIP, dCLIPRUN, NOLINK) provide the best
+         memory-management for very large applications.   All other forms
+         of linkers still require that each symbol reference in the
+         application be resolved at link time and assigned an address in
+         the "root" memory area.  Even the most sophisticated of overlay
+         management schemes cannot eliminate the need to create this
+         "symbol table", therefore the memory usage of a program will
+         always increase proportionally with the number of symbols in the
+         .OBJects regardless of the overlay technique.
+ 
+         Dynamic linkers solve this problem by adding to the "root-
+         memory" symbol table only if a function or procedure is called
+         at runtime.  Dynamic linkers will load the executable portion of
+         the code into an "object pool" and perform the symbol fixups in
+         the main heap area.  Once a symbol has been added to the heap,
+         it will stay in memory even after returning from the called
+         function, however the executable code may be removed from the
+         object pool to make space for new objects which may be called
+         by the application.
+ 
+         Dynamic linkers also allow linking from sets of dynamic
+         libraries during the running of an application therefore large
+         applications such as accounting systems can be distributed
+         with one .EXE (the "dynamic-link engine") and multiple "dynamic-
+         libraries".
+ 
+         There are at least two (2) pre-requisites for a language to
+         be able to support true dynamic linking:
+ 
+          1.  The compiled code must be fully relocatable and not contain
+              any code or data which must remain at a fixed memory
+              location.
+ 
+          2.  The error-handling system must allow for reconciling
+              "missing externals" at runtime.
+ 
+         Clipper SUMMER-87 and 5.0 compile code into P-code (or Pseudo-
+         code) objects rather than native code.  This code is "interpreted"
+         rather than "executed" at runtime, therefore it is fully
+         relocatable.  In addition, any called function or procedure which
+         is not in memory or in an overlay will cause a runtime error
+ CLIPBBS 1-06                   Page 9                    4 Mar 1991
+
+
+         which is passed through the UNDEF_ERROR() function (Summer 87) or
+         the ErrorSys() code block (Clipper-5.0).   dCLIP and NOLINK
+         take advantage of this feature of Clipper by "dynamically-linking"
+         the missing code from .OBJect files on the disk or from dynamic
+         libraries to resolve the "missing external" error then returning
+         a .TRUE. value from the error handler to continue program
+         execution.  The error is completely transparent to the operator
+         because it is resolved by the dynamic-link system as follows:
+ 
+            * Clipper's ERRORSYS.PRG module
+            FUNCTION undef_error
+            PARAM   _proc,_line,_info
+            IF SUBSTR(_info,1,16)="missing EXTERNAL"
+              * get name of .OBJect from .MAP file or .DLB dynamic lib.
+              _obj=DC_OBJFIND(_proc)
+              * link object into memory and verify proc is loaded
+              IF DC_OBJLOAD(_obj) .AND. TYPE(_proc+'()')='UI'
+                RETURN .t.
+              ENDIF
+            ENDIF
+            DO _disperror WITH _proc,_line,_info
+            BREAK
+ 
+         Some Dynamic-Linkers also provide a "dynamic-link library", so
+         you can actually link a "linker" into your application, thereby
+         taking advantage of multiple link technologies in one
+         application.  dCLIP.EXE is an example of an Clipper application
+         which uses three (3) overlaying techniques all at the same
+         time.  DCLIP.EXE is built using the dCLIP "dynamic-link" library,
+         the Clipper Libraries, some Clipper-compile objects and RTLINK.
+         Much of the C/ASM code in the Clipper libraries and the
+         DCLIPNL.LIB "dynamic-link" library are overlayed using the
+         "RELOADABLE" overlay capability of RTLINK.  The Clipper-compiled
+         part of dCLIP is "DYNAMICALLY" overlayed with the RTLINK dynamic
+         overlay manager, and the user "application" code is "DYNAMICALLY-
+         LINKED" at runtime by the dCLIP dynamic link functions.  This
+         dynamic-link technology is easily included in any Clipper
+         application by simply defining the DCLIPNL.LIB ahead of
+         CLIPPER.LIB in your application link statement, then using
+         a function call in your application to reference the object
+         maps or dynamic libraries to use during program execution.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 10                   4 Mar 1991
+
+
+     Best way of making FOR cyclus, and what about WHILE cyclus
+ 
+ Next from serie of speed tests of CLipper is here. At this time we
+ will be looking how is working FOR command and if is not better to
+ make replacement with WHILE.
+ 
+ TEST programs used for this purpose are simple:
+ 
+ TEST1     pure FOR loop with 10000 of iterations
+     ³           local   start  := 0 ,;         Ä¿
+     ³                   n,n1                    ÃÄthe same for ALL
+     ³                                          ÄÙ    tests
+     ³           ? "test no 1,    FOR 0->9999"
+     ³           start = seconds()
+     ³           for n:=0 to 9999
+     ³           ?? n,chr(13)
+     ³           next
+     ³           ?
+     ³           ? "    elapsed ",seconds()-start
+ 
+ TEST2     pure FOR loop with 100,000 of iterations
+     ³           ? "test no 2,   FOR 0->99999"
+     ³           start = seconds()
+     ³           for n:=0 to 99999
+     ³           ?? n,chr(13)
+     ³           next
+     ³           ?
+     ³           ? "    elapsed ",seconds()-start
+ 
+ TEST3     combined two FOR loops with 100,000 of iterations
+     ³           ? "test no 3,  FOR 0->9 ( FOR 0->9999 )"
+     ³           start = seconds()
+     ³           for n1=0 to 9
+     ³           for n=0 to 9999
+     ³                   ?? n,chr(13)
+     ³           next
+     ³           next
+     ³           ?
+     ³           ? " elapsed ",seconds()-start
+ 
+ TEST4     combined two FOR loops with 100,000 of iterations
+     ³           ? "test no 4,  FOR 0->9999 (FOR 0->9)"
+     ³           start = seconds()
+     ³           for n1=0 to 9999
+     ³           for n=0 to 9
+     ³                   ?? n,chr(13)
+     ³           next
+     ³           next
+     ³           ?
+     ³           ? "    elapsed ",seconds()-start
+ 
+ Comments:       difference of T3 and T4 is only in way of nesting
+                 FOR loops. It was just for fun with possible
+                 different results.
+ 
+                 Functionally T2, T3 and T4 are doing EXACTLY the
+ CLIPBBS 1-06                   Page 11                   4 Mar 1991
+
+
+                 same job, only with different way. T1 is for
+                 counting theoreticall time for T2,T3 and T4
+ 
+           ³ T1            ³ T2            ³ T3            ³ T4
+   ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+     result³ 19.93         ³ 213.55        ³ 199.82        ³ 200.31
+     theory³               ³ 199.93        ³ 199.93        ³ 199.93
+   ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+     diff  ³               ³  13.62        ³-  0.11        ³   0.38
+ 
+ Lets take a look to results.
+ 
+ -       First look is telling, that T3 is FASTEST from all other
+         test with 100,000 of iterations. Real FOR with only one
+         FOR command is much slower than TWO NESTED FOR LOOPS.
+ 
+         Why is this? It's very simple and it can be seen on screen
+         when tests are running. At moment when T2 is running over
+         iteration with number 65535 is coming SLOWNESS of
+         displaying with comparation to previous speed. Why is this
+         happening is again very simple and it's NOT any "bug" or
+         "gotcha" of Nantucket.
+         Registers of your mikroprocessor in your PC are 16bits, it
+         means they are able to keep value 0-65535. Nantucket seems
+         made good work, because is OPTIMIZING small loops into ONLY
+         one 16bit register and only when needed is taking another
+         16bit register. Then it's probably working with 32bits for
+         FOR command and is of course slower (must operate with two
+         instead of one register).
+ 
+ -       Above mentioned register explanations is also explaining
+         why T3 and T4 are faster than T2. They are using TWO times
+         only 16bit registers and therefore must be faster because
+         of saved time. Time used for switching between two FORs
+         is very small.
+ 
+ -       Still seems better to make 0->9 (0->9999) than T4, because
+         it went (only little) bit faster.
+ 
+ 
+ 
+ For lot of fan, i did another two tests with WHILE. Both are
+ simulating T1 and T2.
+ 
+ TEST11          WHILE loop for 10,000 iteration
+     ³           local start     := 0 ,;
+     ³           n
+     ³
+     ³           ? "test1,     WHILE 0->9999"
+     ³           n     = 0
+     ³           start = seconds()
+     ³           while n++<10000
+     ³           ?? n,chr(13)
+     ³           end
+     ³           ?
+     ³           ? "    elapsed   ",seconds()-start
+ CLIPBBS 1-06                   Page 12                   4 Mar 1991
+
+
+ TEST12          WHILE loop for 100,000 iterations
+     ³           ?
+     ³           ? "test2,     WHILE 0->99999"
+     ³           n     = 0
+     ³           start = seconds()
+     ³           while n++<100000
+     ³           ?? n,chr(13)
+     ³           end
+     ³           ?
+     ³           ? "    elapsed   ",seconds()-start
+ 
+ 
+ And now we can give FINAL table connected with previous one.
+ 
+           ³ T1            ³ T2            ³ T3            ³ T4
+   ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+     result³ 19.93         ³ 213.55        ³ 199.82        ³ 200.31
+     theory³               ³ 199.93        ³ 199.93        ³ 199.93
+   ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+     diff  ³               ³  13.62        ³-  0.11        ³   0.38
+   ÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄ
+           ³ T11           ³ T12
+   ÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     result³ 19.94         ³ 213.33
+   ÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ In long run (T12) seems WHILE loop a bit faster. Interesting again.
+ In normal run (with 16bit counting) it's bit slower, or the same
+ speed as FOR loop.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 13                   4 Mar 1991
+
+
+          WHICH packing/unpacking program to choose???????
+ 
+ 
+ Maybe you know, there exists war called Archivers War. Everyone is
+ trying to explain why one archiver is better than other. My small
+ addition to this "WAR" is only pure view to times and sizes created
+ with using of several kind of archive programs.
+ 
+ First, i took a database of size about 1MB because it can be very
+ interesting for us, Clipper programmers.
+ 
+ Files        ORDER.DBF   size  1121395 bytes
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Archivers ³ Make   ³Restore³ Final Size ³ Percent³ Comment        ³
+ ³          ³  time  ³ time  ³            ³        ³                ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ZIP1.10   ³   4.78 ³ 0.13  ³  119,038   ³ 10.61  ³                ³
+ ³ARJ2.20   ³   1.08 ³ 0.27  ³  106,473   ³  9.49  ³  (no options)  ³
+ ³ARJ2.20   ³   1.01 ³       ³  106,730   ³  9.51  ³  -m1           ³
+ ³ARJ2.20   ³   0.88 ³       ³  110,324   ³  9.83  ³  -m2           ³
+ ³ARJ2.20   ³   0.62 ³       ³  114,288   ³ 10.19  ³  -m3           ³
+ ³ARJ2.20   ³   0.48 ³ 0.30  ³  142,626   ³ 12.71  ³  -m4           ³
+ ³ARJ2.20   ³   4.35 ³ 0.23  ³  101,028   ³  9.00  ³  -jm           ³
+ ³ARJ2.20   ³   1.08 ³       ³  106,202   ³  9.47  ³  -jh65500      ³
+ ³PAK2.51   ³   0.90 ³ 0.30  ³  134,845   ³ 12.02  ³                ³
+ ³PKPAK3.61 ³   0.22 ³ 0.20  ³  123,691   ³ 11.03  ³                ³
+ ³LHA2.12   ³   1.56 ³ 0.22  ³  108,286   ³  9.65  ³                ³
+ ÀÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ 
+ And then, i took RTLINK.EXE (everybody has this 300KBs big monster)
+ and runned again the same compressions.
+ 
+ Files        RTLINK.EXE   size  354701  bytes
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Archivers ³ Make   ³Restore³ Final Size ³ Percent³ Comment        ³
+ ³          ³  time  ³ time  ³            ³        ³                ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ZIP1.10   ³   0.47 ³ 0.08  ³  179,045   ³ 50.47  ³                ³
+ ³ARJ2.20   ³   0.63 ³ 0.18  ³  166,526   ³ 46.94  ³ -m1 and no opt.³
+ ³ARJ2.20   ³   0.48 ³       ³  169,080   ³ 47.66  ³  -m2           ³
+ ³ARJ2.20   ³   0.40 ³       ³  171,559   ³ 48.37  ³  -m3           ³
+ ³ARJ2.20   ³   0.28 ³       ³  187,824   ³ 59.95  ³  -m4           ³
+ ³ARJ2.20   ³   0.67 ³       ³  163,283   ³ 46.03  ³  -jm           ³
+ ³ARJ2.20   ³   0.63 ³       ³  166,509   ³ 46.94  ³  -jh65500      ³
+ ³PAK2.51   ³   0.50 ³ 0.17  ³  176,890   ³ 49.87  ³                ³
+ ³PKPAK3.61 ³   0.17 ³ 0.12  ³  241,809   ³ 68.17  ³                ³
+ ³LHA2.12   ³   0.60 ³ 0.18  ³  170,431   ³ 48.05  ³                ³
+ ÀÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ 
+ And now, we can do some sorts - editor will do this.
+ 
+         Fastest on .DBF                         T1 points
+ CLIPBBS 1-06                   Page 14                   4 Mar 1991
+
+
+         PKPAK3.61 ³   0.22                       11
+         ARJ2.20   ³   0.48   -m4                 10
+         ARJ2.20   ³   0.62   -m3                  9
+         ARJ2.20   ³   0.88   -m2                  8
+         PAK2.51   ³   0.90                        7
+         ARJ2.20   ³   1.01   -m1                  6
+         ARJ2.20   ³   1.08   (no options)         5
+         ARJ2.20   ³   1.08   -jh65500             4
+         LHA2.12   ³   1.56                        3
+         ARJ2.20   ³   4.35   -jm                  2
+         ZIP1.10   ³   4.78                        1
+ 
+         Fastest on .EXE                         T2 points
+         PKPAK3.61 ³   0.17                       10
+         ARJ2.20   ³   0.28   -m4                  9
+         ARJ2.20   ³   0.40   -m3                  8
+         ZIP1.10   ³   0.47                        7
+         ARJ2.20   ³   0.48   -m2                  6
+         PAK2.51   ³   0.50                        5
+         LHA2.12   ³   0.60                        4
+         ARJ2.20   ³   0.63   (no options)         3
+         ARJ2.20   ³   0.63   -jh65500             2
+         ARJ2.20   ³   0.67   -jm                  1
+ 
+         Creating smallest result on .DBF       T3 points
+         ARJ2.20   ³   101,028    -jm            11
+         ARJ2.20   ³   106,202    -jh65500       10
+         ARJ2.20   ³   106,473    (no options)    9
+         ARJ2.20   ³   106,730    -m1             8
+         LHA2.12   ³   108,286                    7
+         ARJ2.20   ³   110,324    -m2             6
+         ARJ2.20   ³   114,288    -m3             5
+         ZIP1.10   ³   119,038                    4
+         PKPAK3.61 ³   123,691                    3
+         PAK2.51   ³   134,845                    2
+         ARJ2.20   ³   142,626    -m4             1
+ 
+         Creating smallest result on .EXE       T4 points
+         ARJ2.20   ³   163,283    -jm            10
+         ARJ2.20   ³   166,509    -jh65500        9
+         ARJ2.20   ³   166,526    -m1 and no opt. 8
+         ARJ2.20   ³   169,080    -m2             7
+         LHA2.12   ³   170,431                    6
+         ARJ2.20   ³   171,559    -m3             5
+         PAK2.51   ³   176,890                    4
+         ZIP1.10   ³   179,045                    3
+         ARJ2.20   ³   187,824    -m4             2
+         PKPAK3.61 ³   241,809                    1
+ 
+ POINT scales (first way of view results):
+ 
+         Archiver  ³ switches       ³ T1  T2  T3  T4 º  SUM
+         ÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÄ
+         ARJ2.20   ³    -m3         ³  9   8   5   5 º   27
+         ARJ2.20   ³    -m2         ³  8   6   6   7 º   27
+         PKPAK3.61 ³                ³ 11  10   3   1 º   25
+ CLIPBBS 1-06                   Page 15                   4 Mar 1991
+
+
+         ARJ2.20   ³    -m1         ³  6   3   8   8 º   25
+         ARJ2.20   ³    (no options)³  5   3   9   8 º   25
+         ARJ2.20   ³    -jh65500    ³  4   2  10   9 º   25
+         ARJ2.20   ³    -jm         ³  2   1  11  10 º   24
+         ARJ2.20   ³    -m4         ³ 10   9   1   2 º   22
+         LHA2.12   ³                ³  3   4   7   6 º   20
+         PAK2.51   ³                ³  7   5   2   4 º   18
+         ZIP1.10   ³                ³  1   7   4   3 º   15
+ 
+         This first way of viewing result is giving very funny result,
+         it's moving PKZIP at LATEST place because of BIG slownes on
+         .DBF files and still worse results of compression than most
+         from ARJ methods. Shocking is place of PKPAK3.161 on third
+         place because if you will look back, then it's giving most
+         worse result of size of result archives, but it's fastest from
+         all arhives tested (in MAKING because extracting is not so much
+         interesting in this competition).
+ 
+ LOGICAL SCALES (second way of viewing results)
+ 
+         Logical way of looking to results is very simple. PKPAK is not
+         good for use because it's producing worse results of
+         compressing. Logically i will then want forget about nice times
+         of packing (actually, they aren't so much different, because
+         machine used for testing was only 286/16Mhz LAPTOP).
+ 
+                 Then personal/logical scale is:
+ 
+                         ARJ (dependent from switches)
+                         LHA
+                         ZIP
+                         all others ready for drop out
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 16                   4 Mar 1991
+
+
+              Will Clipper expand to graphics environment?
+                                  alias
+                           Theoretical article
+                                  about
+                   FUTURE OF CLIPPER and NANTUCKET :-)
+ 
+ 
+ 
+ What's a Clipper at this moment? I'm sure about one thing, at this
+ moment it's character based compiler with many difficulities of
+ implementing it inside of graphics based environment. With this is
+ connected also question when we will see a Clipper for Window....
+ 
+ Clipper needs great change to be able fulfill all needs for
+ graphically oriented application of this time. Windows and any
+ graphics based environment is fixed to fact, that application or
+ compiler used for creating or programs are enough fast in moment of
+ displaying. If not, user is getting complete nice system with not
+ nice background of slow speed.
+ 
+ Way of clippering at this moment is single process task. Windows is
+ event driven system with many facilities of multitasking system,
+ including DDE (dynamic data exchange) system.
+ 
+ Nantucket then has two ways to choose:
+ 
+         -       slowly adapt Clipper to new environment with producting
+         several changed versions until it will fit into needs of
+         Windows programming
+ 
+         -       drastically change Clipper to something different and
+         incompatible in many cases with original xBASE language ideas.
+ 
+ Problem of second alternative is, that it will leave many programmers
+ in "old" fashioned Clipper which can come into dead end. Will not be
+ changed and upgraded because will be here new "windows Clipper" with
+ main interest of Nantucket (passing perfect inside of WINDOWS hysteria
+ coming into world). In this drasctic case will come something like is
+ coming in case of S87 -> 5.0x jump. Many old programmers have problems
+ to recognize significant changes and additions of new Clipper and are
+ not able to use it in all directions. But it's still very small and non
+ problematic at all. What can come in case of Windows Clipper will be
+ creating of new compiler. In case of Nantucket which seems to jumping
+ from left to right with difficulties to maintain correctly and enough
+ fast world market it can mean only one. If step to create Windows
+ Clipper will come into reality, Nantucket will have to drop idea of
+ Clipper in old fashion and create new language, or replace completely
+ philosophy of market.
+ 
+ Of course is here possibility to follow first slow way, which can be
+ more easy for Nantucket, but it can only mean loosing of Windows market
+ whcih is coming to be bigger and bigger and probably loose head with
+ competition with Borland (which had always better market politic than
+ Nantucket, at least in other continents than America.)
+ 
+ From windows Clipper and windows market let make step out to take a
+ CLIPBBS 1-06                   Page 17                   4 Mar 1991
+
+
+ look to actual state of Clipper.
+ 
+ First, i have to say, that it's mine personal view and i'm living in
+ EUROPE and not in U.S. where will probably everything looks different
+ and probably much better.
+ 
+ Nantucket, producing one from most complex xBASE compatible programming
+ systems Clipper made a big step with not enough saved back. Clipper 5.0
+ was a crash of many possible customers and dealers because was
+ unbelievable buggy. Game with dates of releasing 5.01 (which actually
+ should be 5.1 because it's not only bugfix) and final decision NEVER
+ telling any date, NEVER telling any bug reports means lost of trust
+ from many sides. Lost of money in case of firms were trusting in 5.0
+ version can be sometime very big number.
+ 
+ Promises of informing registered users about "something" from acting in
+ Nantucket are also left. Only one what i got as registered user was
+ Clipper 5.01, but not ANY informations. It's matter of local supporters
+ and dealers of course, but then it's also in hands of Nantucket itself.
+ 
+ Is possible also say, that Clipper itself is fulfilled with not filled
+ promises. From biggest ones is easy to point out:
+         NEVER distributed dBASE index drivers
+         NEVER working incremental linking of RTLINK
+         NEVER published Clipper Programmers Interface
+         NEVER published Replaceable Database Drivers information,
+                 nor any existing drivers
+         STILL problematic use of Clipper programs in small
+                 memory of PCs
+ 
+ Still repeating stories with bugs (so called ANOMALIES by Nantucket)
+ which are invented by many parties, but for sure not Nantucket is also
+ not giving good image to Clipper. Especially if some problems are
+ staying permanently from version to version which should be a bugfix.
+ 
+ For European users is GOOD technical support of Nantucket something as
+ midnight dream. FAXES or telephones to Nantucket offices are mostly
+ unaswered or without ANY professional answer when they are little bit
+ difficulty than reading of standard manuals. Possibility to go to
+ COMPUSERVE is in Europe very hard and when, then is very expensive.
+ Therefore putting attention into Compuserve from side of Nantucket is
+ maybe good for U.S., but not for any other parts of world. Very good
+ idea of setting up Nantucket Bulletin Board in England is slowly going
+ to nowhere because staff of Nantucket is not able to decide WHO and HOW
+ OFTEN has to work on this Bulletin Board and Clipper World (that's name
+ of this BBS) is dying and staying on dead point.
+ 
+ With all this oscillating background will be very difficult to come
+ into professional WINDOWS market. Especially because will be needed
+ probably to get second, drastic way.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 18                   4 Mar 1991
+
+
+ =============================================================================
+                                   SOFTWARE
+ =============================================================================
+
+
+             TIPS&TRICKS - how to found largest string in array
+ 
+ In some of mine function for displaying MENU on screen (generic function)
+ was coming a need to count SIZE of window for MENU, because text of every
+ field can come in different length.
+ 
+ For this sample, we have to say:
+ 
+     INPU is    aMenu - array of texts for MENU function. Something like:
+ 
+         aMenu := {"First","Second","Third","Latest one"}
+ 
+ And then, it's simple to use aeval() function for get what we need.
+ 
+     local nMaxLen := 0
+     aeval(aMenu, {|n| nMaxLen:=max(len(xx),nMaxLen)} )
+ 
+ And that's all. Some explanations:
+ 
+     aeval(aMenu, {|n| nMaxLen:=max(len(n) ,nMaxLen)} )
+             ³      ³               ÀÄÄÄÄÄÄÂÄÄÄÄÄÄÄÙ
+             ³      ³                      ÀÄÄ getting maximal from
+             ³      ³                          two values and assigning
+             ³      ³                          it as new maximal length
+             ³      ÀÄÄÄÄÄÄÄÄ It's needed for aeval() function, every
+             ³               time it's getting value of one portion of
+             ³               array
+             ÀÄÄÄÄÄÄ aeval() function is scanning WHOLE array, field
+                     by field and is using codeblock defined as second
+                     parameter
+
+ -----------------------------------------------------------------------------
+
+
+                   DANIEL.LIB - NEW version of DANIEL.RMK
+ 
+ After getting NANFOR.LIB got inspired with their .RMK file and made totally
+ new one for DANIEL.LIB. Old one is of course working still, but this one is
+ far better. Feel free to get it as inspiration also, because it's nice
+ piece of easy to change .RMK file.
+ 
+ I'm absolutely sure, that using of RMAKE is someting that is staying at
+ lowest level of interest to upgrade in knowledges and in praxis in most of
+ programmers minds. Mine opinion is different and sometime i'm getting mad
+ to make some upgrades of my using of .RMK files. This is one from them.
+ 
+ <----------------------------------FILE BEGINS HERE------------------------>
+ 
+ /***************************************************************************
+  * $Author$
+  * $Date$
+ CLIPBBS 1-06                   Page 19                   4 Mar 1991
+
+
+  * $Revision$
+  * $RCSfile$
+  * $Source$
+  * $State$
+  * $Locker$
+  *
+  * $Log$
+  *
+  ***************************************************************************/
+ 
+ 
+ //  ------------------------------------------------------------------------
+ //  PATH macros for compiling and/or linking. They MUST be set correctly
+ //  ------------------------------------------------------------------------
+ 
+ l   =   \LIB
+ o   =   \SOURCE\DANIEL\OBJ
+ s   =   \SOURCE\DANIEL
+ c5  =   C:\CL5\BIN
+ tc  =   C:\TC\BIN
+ mc  =   C:\MSC\BIN
+ ma  =   C:\MASM
+ ta  =   C:\TASM
+ ex  =   \SOURCE\DANIEL
+ 
+ 
+ //  ------------------------------------------------------------------------
+ //  Killing working giles used for manipulation or checkings
+ //  ------------------------------------------------------------------------
+ 
+ wrk =   DANIEL.RSP
+ 
+ !iffile $(s)\$(wrk)
+     #! del $(s)\$(wrk)
+ !endif
+ 
+ //  ------------------------------------------------------------------------
+ //  Now some internal definition dependent from DEFs from outside
+ //  ------------------------------------------------------------------------
+ 
+ //  DEBUG is defined in case of request for DEBUGGING capable version
+ !ifdef DEBUG
+     SW  =   /W/N/M/B
+     SW1 =   /DDEBUG
+     !stdout "DANIEL.RMK     -   DEBUGGER version generated"
+ !else
+     SW  =   /W/N/M/L
+     !stdout "DANIEL.RMK     -   NOTDEBUG version generated"
+ !endif
+ 
+ //  ------------------------------------------------------------------------
+ //  And some defintions which are changing internal parameters
+ //  ------------------------------------------------------------------------
+ 
+ PLL     =   /PLL:FULLBASE
+ 
+ CLIPBBS 1-06                   Page 20                   4 Mar 1991
+
+
+ //  ------------------------------------------------------------------------
+ //  apply above defined paths into internal RMAKE defintions for DEFAULTS
+ //  default will be used when will not be specified directly. Can save some
+ //  time and work with filling all informations
+ //  ------------------------------------------------------------------------
+ 
+ makepath[.OBJ] := $(o)
+ makepath[.PRG] := $(s)
+ makepath[.EXE] := $(ex)
+ makepath[.LIB] := $(l)
+ makepath[.CH]  := $(s)
+ makepath[.INC] := $(s)
+ makepath[.C]   := $(s)
+ 
+ 
+ //  ------------------------------------------------------------------------
+ //  inference rules for TC files
+ //  WARNING $(tc)... TWO lines are actually ONE line. For space in magazine
+ //                   was divided in two. BEFORE USING PUT BACK!!!!!!
+ //  ------------------------------------------------------------------------
+ .c.obj:
+     $(tc)\TCC -I\TC\INCLUDE -L\TC\LIB -C -d -ml -wmlt -K -G -O
+             -Z -k- -c -o$(o)\$* $(s)\$*.C
+     echo -+$(o)\$* & >> $(s)\$(wrk)
+ 
+ //  ------------------------------------------------------------------------
+ //  inference rules for .PRG files
+ //  ------------------------------------------------------------------------
+ .prg.obj:
+     $(c5)\clipper.exe $(s)\$* $(sw) $(sw1) /o$(o)\$*
+     echo -+$(o)\$* & >> $(s)\$(wrk)
+ 
+ 
+ //  ------------------------------------------------------------------------
+ //  inference rules for library from RSP
+ //  ------------------------------------------------------------------------
+ .RSP.LIB:
+     echo ,$(l)\DANIEL.LST; >> $(s)\$(wrk)
+     if not exist $(l)\DANIEL.LIB LIB $(l)\DANIEL.LIB
+     LIB.EXE $(l)\DANIEL.LIB @$(s)\$(wrk)
+     DEL $(l)\DANIEL.BAK
+ 
+ //  ------------------------------------------------------------------------
+ //  check existency of CLIPPER.EXE and then dependece of CLIPPER files
+ //  ------------------------------------------------------------------------
+ 
+ !iffile $(c5)\CLIPPER.EXE
+ 
+ dd_lib1.obj :   dd_lib1.prg  dprinter.ch daniel.ch
+ dd_lib2.obj :   dd_lib2.prg  dprinter.ch daniel.ch
+ dd_lib3.obj :   dd_lib3.prg  dprinter.ch daniel.ch
+ dd_lib4.obj :   dd_lib4.prg  dprinter.ch daniel.ch
+ dd_lib5.obj :   dd_lib5.prg  dprinter.ch daniel.ch
+ dd_netw.obj :   dd_netw.prg  dprinter.ch daniel.ch
+ configer.obj:   configer.prg dprinter.ch daniel.ch
+ 
+ CLIPBBS 1-06                   Page 21                   4 Mar 1991
+
+
+ !else
+     //  clipper.exe doesn't exit
+     !stderr "DANIEL.RMK error: CLIPPER.EXE file not found...."
+ !endif
+ 
+ //  ------------------------------------------------------------------------
+ //  check existency of TCC.EXE and then dependece of C files
+ //  ------------------------------------------------------------------------
+ 
+ !iffile $(tc)\TCC.EXE
+ 
+ cleanup.obj :   cleanup.c
+ faxlog.obj  :   faxlog.c
+ isprinte.obj:   isprinte.c
+ screen.obj  :   screen.c
+ wptext.obj  :   wptext.c
+ wputil.obj  :   wputil.c
+ 
+ !else
+     //  TCC.EXE doesn't exist
+     !stderr "DANIEL.RMK error: TCC.EXE file not found....."
+ !endif
+ 
+ //  ------------------------------------------------------------------------
+ //  final dependence of library
+ //  ------------------------------------------------------------------------
+ 
+ DANIEL.LIB  :   $(wrk)
+ 
+ 
+  <------------------------------END OF FILE-------------------------------->
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 22                   4 Mar 1991
+
+
+ =============================================================================
+                                   ANOMALIES
+ =============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                       Clipper Debugger anomalies
+ 
+ CLD is now great program and i'm really using it every day.  Previous
+ CLD was unusable because of memory problems of CLIPPER (no one my
+ application was able to fit in memory together with CLD.EXE nor
+ CLD.LIB). There is lot of improvements in this new debugger, but of
+ course there are same nonlogical and non working things:
+ 
+      Totally new HELP system for CLD is enough descriptive, but not
+      CONTENTS SENSITIVE. When one will press F1 (Help key), then will
+      get first page of help and MUST scan through all of them to page
+      which need. In case of small memory left is this process VERY slow
+      (because of lot of disc swaps).
+ 
+      Don't try to use HELP system when you are editing (for example)
+      colour codes or path string for your source files.  If one will
+      press F1 at this moment,then will get some graphics codes which
+      are equal to code of F1, but will not get help. Somebody who made
+      it forget that F1 is help and not a valid key for editing
+      characters...
+ 
+      One must still be carefully when specifying command line options
+      for SPLIT and EGA/VGA screen.  CLD /S/50 and CLD /50/S is really
+      not the same for CLD..  Just use spaces between them and then it's
+      working well (CLD /S /50 is the same as CLD /50 /S)
+ 
+      Be aware of using ? row() or ? col(). Both of them will return not
+      value from YOUR program, but value from inside of Debugger.
+      Debugging a program and needs to know values of cursor position is
+      at this moment totally impossible.
+ 
+      Some from people using CLD will report - When i pressed F8, then
+ CLIPBBS 1-06                   Page 23                   4 Mar 1991
+
+
+      CLD didn't make steps through my procedure, he just did action for
+      F10 (execute procedure). Be aware at this moment if your .OBJ
+      files ALL had specified /B switch for CLIPPER command line. If
+      not, then CLD will not warning you of course, will just step
+      through. You can then be surprised and thinking what is wrong!
+ 
+      There is IMPOSSIBILITY to debugging a code which is using #include
+      statements for include PART of CODE (not only #define and other
+      definitions). Because Clipper is allowing you to use #include for
+      normal part of program (with all commands...), then i'm expecting
+      that will be able to correct do debugging of this includes.
+      ABSOLUTELY not, when one will do this, will have a debugger step
+      cursor somewhere in .PRG file, but on wrong place of course,
+      because of mixup of line numbers. Small example of this:
+ 
+ 
+      Program.prg
+      1    function Main()
+      2         #include "small.inc"
+      3         ? 'Hello this is NOT a first line of program'
+      4         ? 'and there will be a RETURN coming'
+      5    RETURN NIL
+ 
+      File  SMALL.INC
+      1         ? 'This is a first line of program of course'
+      2         ? '-----------------------------------------'
+ 
+      Of course, after compiling here is another program:
+      1    function Main()
+      2         ? 'THis is a first line of program of course'
+      3         ? '-----------------------------------------'
+      4         ? 'Hello this is NOT a first line of program'
+      5         ? 'and there will be a RETURN coming'
+      6    RETURN NIL
+ 
+      CLD will start a debugging and display PROGRAM.PRG file on screen
+      with debugging step cursor on line "2" of PROGRAM.PRG file.
+      Executed instruction but will be a instruction from line "1" of
+      SMALL.INC. I'm so sure, that this stupid acting is possible to
+      eliminate just by better recognizing of includes and modifying
+      screen display routines of source code.
+ 
+      There is of course EASY solving for this - NEVER use #include for
+      part of your code. All your code you can easy put to separate .OBJ
+      files and call them like function.  Then will CLD working GREAT.
+ 
+      Possibility to use Alt-D function for stop program in working is
+      limited. If there will be for example:
+ 
+           WHILE rlock()
+           ENDDO          (of course, this is a mistake. But i made it
+                          few time, just forgotten "!" negation)
+ 
+      Then one will NOT be able to stop program and see what is working.
+      When i had this problem i did lot of looking what is wrong and
+      after LONG period i found that there is missing one negation for
+ CLIPBBS 1-06                   Page 24                   4 Mar 1991
+
+
+      condition.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                              INCONSISTENCY
+ 
+ One funny inconsistency of program language is in new Clipper 5.01
+ version. I found it when i was thinking:
+ 
+      OK, there are  @ SAY .. COLOUR,  @ .. TO .. COLOUR command
+      (something new in 5.01, extension of @ command). Then there OF
+      COURSE is @ .. CLEAR .. COLOUR.  GOTCHA, there is NOT @CLEAR with
+      COLOUR parameter. Maybe somebody is thinking that CLEAR is without
+      colour, but then is wrong.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                 New RTLINK version, INCREMENTAL LINKING
+ 
+ Another expectation which i had when new Clipper 5.01 was coming -
+ incremental linking in new version of Clipper will work. Truth is again
+ different.  DO NOT use incremental linking. It's working successfully
+ only for few first links and then programmer will receive nice set of
+ error from program.  Probably will then start looking to errors in own
+ program, but reality is - incremental linking is NOT working.
+ 
+ First, second and sometime third link is WITHOUT problems, but after
+ this you can receive errors of this kind:
+ 
+      Syntax error: +
+           Be sure, that on your program line where report is
+           reported doesn't exist a "+" operation
+      Syntax error
+           Just funniest error, because it's SYNTAX error on
+           compiled and linked code. Maybe there is processor of
+           your PC reporting non existed function....
+      Cannot create overlay file: !^%#@(*
+           Really, i cannot reproduce file name reported by
+           overlay manager, because this magazine will not
+           probably have all control and graphical symbols which
+           one can get in IBM PC environment.
+ 
+ All this errors you will get in part of code which was a subject of
+ changes, everything other (not changed) is still working pretty
+ perfect.
+ 
+ FAX which i then sent to Nantucket, together with uploads of these
+ error reports to Nantucket special message area on CLIPPER WORLD BBS
+ are WITHOUT answers.
+ 
+ CLIPBBS 1-06                   Page 25                   4 Mar 1991
+
+
+ FAX to Pocket Soft Inc., authors of RTLINK, is with answer:
+      RTLINK version shipped with Clipper 5.01 is working with
+      INCREMENTAL linking without problems. It passed our and Nantucket
+      test suites. If you have some problems, please contact
+      Nantucket.....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 26                   4 Mar 1991
+
+
+ =============================================================================
+                                   ECHODUMP
+ =============================================================================
+
+
+                          CONFERENCE DUMP part (5)
+ 
+ Subj: NTX Structure                  Prvt: N          Read: N
+ 
+ I think Rick Spence's book on Clipper 5.0 has description of
+ NTX file structure and others used in the Clipper environment.
+ 
+ Subj: OBJECT VISION                  Prvt: N          Read: N
+ 
+ Borland has released a new toy called "Object Vision".
+ Has anyone out there used this product?
+ Looks real interesting in the advertisements.
+ 
+ Subj: PKLITE/Blinker?                Prvt: N          Read: N
+ 
+ very interesting.  Had assumed Lite e.a. would not work with overlayed
+ programs at all.  Do you have any experience using it with Blinker?
+ 
+ Subj: PKLITE/BLINKER?                Prvt: N          Read: N
+ 
+    I could be wrong, but strictly speaking from my shareware copy of
+ the PKLITE program, it advises not to compress overlayed .EXE-s ...
+ Having used it on programs not utilizing overlays say about 320K, I
+ have reduced sizes down to say about 125-130K ... It's neat . One
+ thing one must remember is that there is no reduction in memory used
+ size form the original program . Say if it was 450K before, it will
+ still be 450K even though it has been compressed. However, I can't state
+ what the commercial version is capable of < least not yet > ...
+ 
+ Subj: PKLITE/Blinker?                Prvt: N          Read: N
+ 
+         I principally use Warplink, with Tlink for short things and
+ in development cycles, though Warplink seems to be taking over that as
+ well.  I have played with Blinker, but I prefer the MSLink-style of
+ linker invocation; hence Warplink.  I can't say whether Pklite will
+ work or not with Blinker, but I heard it will.  Apparently, the issue
+ has to do with external vs. internal overlays.  I believe I saw a
+ message thread to that effect either on this Clipper net or one of
+ the others.  BTW, note that the issue of linker speed is irrelevant
+ when using incremental linking.  When relinking incrementally the
+ link time is one second or so.  In a large program with complex
+ overlaying done internally Pklite is the longest part of cycle, so
+ save it for release versions.
+ 
+ Subj: Randomness                     Prvt: N          Read: N
+ 
+ Is it my imagination or does Clipper not have a random number function?
+ 
+ All I could find in the manual is a program to maipulate the time
+ function to simulate a random number generator.  If Load-us and the
+ ("Out to")-C programs can do it, why can't dBase or Clipper without
+ CLIPBBS 1-06                   Page 27                   4 Mar 1991
+
+
+ all the contortionism?
+ 
+ Subj: Randomness                     Prvt: N          Read: N
+ 
+ Standard Clipper just don't have a Random() function.  Some add-on libs
+ does thou, eg. FUNCky.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 28                   4 Mar 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³<sorry, forget, will add in next number, hope>  ³[1-05]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                         Routing-Plan for ClipperNet
+ 
+ Followin text is routing schema of ClipperNet from last friday. Someone
+ interested in connecting to ClipperNet, find your nearest RC or NC node
+ and ask for information. Someone for downloading files from ClipperNet
+ advertised here, find closest BBS, take a look into FIDONET NODELIST
+ (all number are FIDONET NODENUMBERS..
+ 
+ 
+ CLIPBBS 1-06                   Page 29                   4 Mar 1991
+
+
+        CLN-HQ  2:240/100 Clipper WorkShop BBS (Hamburg - FRG)
+        RC 24       |
+                    |
+        RC 23       |234/64 TugBoat BBS (Glumsoe - DK)
+                    |    |
+                    |    |231/62 TBSM's Opus (Kolding - DK)
+                    |
+                    |240/1 Ramos II (Hannover - FRG)
+        NC 240      |240/102 MuM BBS (Hamburg - FRG)
+                    |240/600 IGEPOS Mailbox System (Lage - FRG)
+                    |241/2004 NordSee BBS (Leer - FRG)
+                    |    |
+                    |    |241/5302 Terrania City (Bonn - FRG)
+                    |
+                    |241/2103 H.C.C. (Hamburg - FRG)
+                    |
+                    |241/5609 BLM (Wermelskirchen - FRG)
+                    |    |
+                    |    |241/4008 Stone's Box (Haan - FRG)
+                    |    |    |
+                    |    |    |241/5603 Funboard (Velbert - FRG)
+                    |    |         |
+                    |    |         |241/4512 BS-1 (Bad Salzuflen - FRG)
+                    |    |              |
+                    |    |              |241/4511 MICOS BS (Bad Salzuflen-FRG)
+                    |    |                  |
+                    |    |                  |241/4501 Life-Box(Osnabrueck-FRG)
+                    |    |
+                    |    |241/5303 NEPTUN Box (Bonn - FRG)
+                    |    |    |
+                    |    |    |243/93 Piano-Bar (Urbar - FRG)
+                    |    |
+                    |    |241/5608 Pit's BBS (Wermelskirchen - FRG)
+                    |
+        NC 241      |241/7605 Baden Area (Offenburg - FRG)
+                    |    |
+                    |    |241/7000 Popey-Box (Donaueschingen - FRG)
+                    |
+                    |242/47 Dungeon of Despair (Aachen - FRG)
+                    |
+        NC 243      |243/29 Clipper Ship (Nieder Olm - FRG)
+                    |    |
+                    |    |247/31 Tritech BBS (Seelzen - FRG)
+                    |    |    |
+                    |    |    |247/9 Wildbox (Heidelberg - FRG)
+                    |    |         |
+                    |    |         |247/1 Schawott-Host (Brensbach - FRG)
+                    |    |
+                    |    |249/29 Guenter's Mailbox (Mainz - FRG)
+                    |
+        NC 245      |245/60 Bonny's (Dortmund - FRG)
+                    |    |
+                    |    |241/4152 Quick!-Box (Meerbusch - FRG)
+                    |    |    |
+                    |    |    |242/92 Skyhigh Mailsystem (Krefeld - FRG)
+                    |    |
+ CLIPBBS 1-06                   Page 30                   4 Mar 1991
+
+
+                    |    |245/9 MANNY'S BBS (Essen - FRG)
+                    |    |    |
+                    |    |    |245/102 WiInf_BBS (Essen - FRG)
+                    |    |
+                    |    |245/36 SoftStream (Dortmund - FRG)
+                    |
+        NC 246      |246/15 MagicBox Munich (Muenchen - FRG)
+                    |    |
+                    |    |241/8007 Merlin BBS (Nuernberg - FRG)
+                    |    |246/5 PERI-BBS (Kassel - FRG)
+                    |    |246/10 Beta-System (Muenchen - FRG)
+                    |    |246/26 AGS-Box (Leutkirch - FRG)
+                    |    |246/32 Aischgrund Mailboxsystem (Gerhardshofen-FRG)
+                    |         |
+                    |         |246/12 AlphaSoft Network (Fuerth/Stadeln - FRG)
+                    |
+        RC 28       |285/610 Lobster BBS (Schiedam - NL)
+                    |    |
+                    |    |285/402 AllTime Board (Koudekerke - NL)
+                    |    |285/608 NETCONSULT BBS (Rotterdam - NL)
+                    |    |500/223 HEKOM BBS (Harmelen - NL)
+                    |    |    |
+                    |    |    |283/314 KISS Software Support (Almelo - NL)
+                    |    |
+                    |    |500/236 Touch-One (Den Haag - NL)
+                    |    |512/43  Flash BBS (Utrecht - NL)
+                    |
+        RC 29       |296/10 BBS D.C.V.V. (Maaseik - B)
+                    |    |
+        RC 20       |    |201/254 Clipper(Sweden) BBS (Vallingby - S)
+                    |    |    |
+                    |    |    |200/306 Lanthandelen (Kalmar - S)
+                    |    |
+                    |    |294/5 CIS BBS (Antwerpen - B)
+                    |
+        RC 30       |302/801 Gepard's Oracle (Zuerich - CH)
+                    |    |
+                    |    |302/807 SENECA (Zuerich - CH)
+                    |    |    |
+                    |    |    |302/804 Triton (Zuerich - CH)
+                    |    |
+        RC 32       |    |321/100 Cyrielle (Montargis - F)
+                    |    |
+        RC 33       |    |331/110 DB-Line (Biandronno - I)
+                    |
+        RC 31       |313/9 EuroSoft Net 2 (Wien - A)
+                    |
+        RC 34       |341/25 Clipper U.C.P. (Majadahonda - E)
+                         |
+                         |341/8 AlpaSoft (Madrid - E)
+                         |341/14 Rafa_STD-1 (Madrid - E)
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - SOUND.ARJ
+ CLIPBBS 1-06                   Page 31                   4 Mar 1991
+
+
+ File Name:      SOUND.ARJ
+ Other Names:
+ 
+ File Size:      2,336 bytes
+ File Contents:
+                 SOUND.CH           1447
+                 SOUND.TXT          1762
+                 SOUND.PRG           411
+ 
+ Sound function using TONE() function for playing a melody. Point of this
+ function is, that it's getting parameter as array of arrays contains in
+ every field tone and length of piece of melody.
+ 
+ In SOUND.CH file are defined some particular notes and two sample sounds
+ for your programs. It's also nice way how to implement note names in
+ clipper programs anyway.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - TBWHL4.ARJ
+ 
+ File Name:     TBWHL4.ARJ
+ Other Names:
+ 
+ File Size:      5,164 bytes
+ File Contents:
+                 NAMES.DBF          1458
+                 READ.ME            1317
+                 NAMES.NTX          2048
+                 TBWHILE.PRG        7041
+                 MAKEIT.BAT           49
+ 
+ COMPUSERVER coming well commented function for WHILE browsing a database
+ with Tbrowse objects. It's good as example how to handle own cases, because
+ it contains complete sample with included database (.DBF).
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - NFDESC2.ARJ
+ 
+ File Name:      NFDESC2.ARJ
+ Other Names:
+ 
+ File Size:      5,129 bytes
+ File Contents:
+                 NFDESC.TXT        12451
+ 
+ NANFORUM library is one from greatest Clipper projects which i ever seen.
+ It's great idea of sharing user supplied, test and used sources into one
+ big library. It's managed by some CompuServe users to final state of
+ CLIPBBS 1-06                   Page 32                   4 Mar 1991
+
+
+ complete library with .NG documentation.
+ 
+ First day when i looked into NANFORUM library i decided immediately take it
+ inside of mine used libraries set. I can only reccomend to do this for you
+ also. If want to take a look to list of functions in this library before
+ taking over of complete needed library files, get this file, because .TXT
+ inside is complete list of functions with descriptions.
+ 
+ See also articles about NANFORUM in "SOFTWARE" section of magazine.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - NFLIB2.ARJ
+ 
+ File Name:      NFLIB2.ARJ
+ Other Names:
+ 
+ File Size:      167,730 bytes
+ File Contents:
+                 NANFOR.LIB       197161
+                 FTINT86.CH         1250
+                 FTMENUTO.CH        2329
+                 FT_ACH2T.CH        4572
+                 NANFOR.NG        333548
+ 
+ THIS IS MAIN FILE NEEDED for NanForum library. Complete documenation (.NG
+ file) and complete 5.01 library (NANFOR.LIB) with needed definition files
+ (.CH files) are included. Don't worry about size, it's great and needed for
+ everybody to save LOT of programming.
+ 
+ See articles about NANFOR.LIB in this magazine!
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - NFSRC2.ARJ
+ 
+ File Name:      NFSRC2.ARJ
+ Other Names:
+ 
+ File Size:      308,973
+ File Contents:
+         ADAPTER.ASM        3428     BYTENOT.PRG        2531
+         AINT86.ASM         4453     BYTEOR.PRG         2659
+         CHDIR.ASM          2021     BYTEXOR.PRG        2788
+         DEFAULT.ASM        4535     CALENDAR.PRG       7395
+         DIRFUNC.ASM        2971     CLRSEL.PRG        24956
+         DISPA.ASM          4524     CNTRYSET.PRG       2403
+         ENDCAP.ASM         6266     COM34.PRG          2687
+         FLOPTST.ASM        9955     D2E.PRG            2453
+         FLUSHCAP.ASM       4195     DATECNFG.PRG      11619
+ CLIPBBS 1-06                   Page 33                   4 Mar 1991
+
+
+         HANDCNT.ASM        6372     DAYOFYR.PRG        3939
+         INP.ASM            3427     DAYTOBOW.PRG       2403
+         ISPRINT.ASM        8548     DECTOBIN.PRG       1763
+         KSPEED.ASM         6627     DFILE.PRG          6574
+         LOGOUT.ASM         2719     DIR2DBF.PRG        4195
+         MKDIR.ASM          2149     DISKFUNC.PRG       3349
+         NOVDMP2.ASM        2844     DISPMSG.PRG        8113
+         NOVPURGE.ASM       2219     DOSVER.PRG         2275
+         NWTTS1.ASM         3555     E2D.PRG            1749
+         NWTTS2.ASM         2788     EASTER.PRG         3683
+         NWTTS3.ASM         3044     ELAPMIL.PRG        1635
+         NWTTS4.ASM         2660     ELAPSED.PRG        4579
+         NWTTS5.ASM         2532     ELTIME.PRG         2275
+         ORIGIN.ASM         3299     EXIST.PRG          1837
+         OUTP.ASM           4196     FIELD.PRG         11491
+         PUTKEY.ASM        10595     FINDITH.PRG        3427
+         REBOOT.ASM         2660     FIRSTDAY.PRG       1763
+         RESTATT.ASM        6600     GCD.PRG            3043
+         RMDIR.ASM          2149     HEX2DEC.PRG        1772
+         SAVEATT.ASM        7908     INVCLR.PRG         2543
+         SHADOW.ASM         9060     ISBIT.PRG          2787
+         TMENU.ASM         38602     ISBITON.PRG        2019
+         _WHEREIS.ASM      23526     ISSHARE.PRG        2403
+         ALT.C              1507     LASTDAY.PRG        1891
+         CAPLOCK.C          2019     LINKED.PRG         4963
+         CINT86.C           8552     MADD.PRG           4451
+         CTRL.C             1507     MENU1.PRG         20198
+         DISPC.C           27601     MENUTO.PRG        12522
+         FTTEXT.C          16982     METAPH.PRG        14691
+         GETENVRN.C         5219     MILTIME.PRG        7523
+         NUMLOCK.C          2275     MIN2DHM.PRG        1636
+         PEEK.C             2147     MONTH.PRG          4195
+         POKE.C             2275     MOUSE1.PRG        23032
+         PROPER.C           3299     NETPV.PRG          3043
+         PRTSCR.C           2019     NOOCCUR.PRG        2531
+         SHIFT.C            1507     NTOW.PRG           4164
+         STOD.C             1507     NWLSTAT.PRG        2219
+         VIDEO1.C          11049     NWSEM.PRG         16077
+         FTINT86.CH         1250     NWUID.PRG          3811
+         FTMENUTO.CH        2329     PAGE.PRG           2531
+         FT_ACH2T.CH        4572     PCHR.PRG           8435
+         CINT86.H           1174     PEGS.PRG           8675
+         DFKEY.H            5117     PENDING.PRG        4835
+         FTTEXT.H           1410     PICKDAY.PRG        1763
+         TMENU.INC          3746     POPADDER.PRG      45352
+         MINTER.MAC         9931     PRTESC.PRG         2915
+         AADING.PRG         4772     QTR.PRG            3939
+         AAVG.PRG           2510     RAND1.PRG          2275
+         ACCTADJ.PRG        3427     RESTSETS.PRG       1891
+         ACCTMNTH.PRG       4579     ROUND.PRG          7267
+         ACCTQTR.PRG        4579     SAVEARR.PRG        6774
+         ACCTWEEK.PRG       3811     SAVESETS.PRG       2275
+         ACCTYEAR.PRG       3299     SCANCODE.PRG       3171
+         ACH2TB.PRG        27161     SCREGION.PRG       8705
+         ADESSORT.PRG       2636     SETDATE.PRG        2787
+         AEMAXLEN.PRG       3811     SETTIME.PRG        2915
+ CLIPBBS 1-06                   Page 34                   4 Mar 1991
+
+
+         AEMINLEN.PRG       3683     SINKEY.PRG         2787
+         AMEDIAN.PRG        3913     SQZN.PRG           4030
+         ANOMATCH.PRG       3127     SYSMEM.PRG         1930
+         ANY2ANY.PRG        6698     TBWHILE.PRG       14947
+         AREDIT.PRG        10932     TEMPFILE.PRG       3427
+         ASUM.PRG           2769     VERTMENU.PRG       6207
+         AT2.PRG            3555     VIDCUR.PRG         3965
+         ATPROMPT.PRG      17385     VIDMODE.PRG        3043
+         BITCLR.PRG         2915     WDA.PRG            2659
+         BITSET.PRG         2787     WEEK.PRG           3939
+         BITTEST.PRG        7779     WHEREIS.PRG        3939
+         BLINK.PRG          2403     WORKDAYS.PRG       2787
+         BYT2BIT.PRG        2609     WOY.PRG            5987
+         BYT2HEX.PRG        2459     XBOX.PRG           8599
+         BYTEAND.PRG        2787     YEAR.PRG           3171
+         BYTENEG.PRG        2147     NANFOR.RMK        18351
+ 
+ COMPLETE (real) complete sources of NANFORUM library available for everyone
+ who wants to make ANY changes in sources. They are really free for sources.
+ 
+ This files is absolutely no needed for to have NANFORUM library working
+ (you need only file with .LIB !!), therefore take it only when you need it,
+ or just want it.
+ 
+ Finaly i was wondering if include complete list of files inside archive,
+ but i found it useful for some cases.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - ACCESS.ARJ
+ 
+ File Name:      ACCESS.ARJ
+ Other Names:
+ 
+ File Size:      411
+ File Contents:
+                 ACCESS.PRG         1198
+ 
+ 
+ Source of TEST program for speed of Clipper. Very easy and showing only
+ time needed for accessing variables in FOR cycles.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - ACHOO2.ARJ
+ 
+ File Name:      ACHOO2.ARJ
+ Other Names:
+ 
+ File Size:      6,851 bytes
+ CLIPBBS 1-06                   Page 35                   4 Mar 1991
+
+
+ File Contents:
+                 ACHOOS.PRG        21976
+ 
+ ACHOICE "replacement" allowing combine achoice() features with direct GET,
+ searching for whole menu line (not only one letter)...
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 36                   4 Mar 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-06                   Page 37                   4 Mar 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

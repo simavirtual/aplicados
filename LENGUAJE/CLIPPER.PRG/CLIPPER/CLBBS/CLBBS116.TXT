@@ -1,0 +1,1387 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+       °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 1, Number 16                                   10 December 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. EDITORIAL  .............................................................  1
+    Monday editorial  ......................................................  1
+ 2. ARTICLES  ..............................................................  3
+    5.0 FOCUS: Memory Management - Symbol Reduction  .......................  3
+    Some useful aliases for 4DOS!!!!  ......................................  9
+    DOS 5 and QUARTERDECK PRODUCTS  ........................................ 10
+    How to get more options out of <GRUMPBROW>  ............................ 15
+    How to be indepndent from drive letters, directory names  .............. 18
+ 3. Q&A  ................................................................... 19
+    Q&A: DSZ aborting uploads when running on BBS with Lantastic  .......... 19
+    Q&A: Lantastic hangs system after loading network drivers  ............. 19
+    Q&A: Optimizing Lantastic performance  ................................. 20
+    Q&A: MNP5 problems with connection, slowing speed  ..................... 20
+ 4. ANOMALIES  ............................................................. 21
+    ANOMALIES reports and commets  ......................................... 21
+    AEVAL, undocumented second passing parameter  .......................... 21
+ 5. CLIPPER NET  ........................................................... 22
+    Index of described files in Clipper BBS Magazine  ...................... 22
+ CLIPBBS 1-16       Table of Contents (...)        10 Dec 1991
+
+
+    ClipperNet - PAT2-5.ARJ  ............................................... 23
+ 6. CLIPBBS  ............................................................... 24
+    CLIPBBS distribution  .................................................. 24
+    CLIPBBS, how to write an article!!!  ................................... 26
+
+                                   - - - - -
+ CLIPBBS 1-16                   Page 1                   10 Dec 1991
+
+
+ ==============================================================================
+                                   EDITORIAL
+ ==============================================================================
+
+
+                              Monday editorial
+ 
+ RAMBO III, funny movie :-) RTL 4 is giving this comic movie before
+ christmas, 'soviet like' helicopters are flying with red star, but on first
+ see they are typically american manufactured. What else to expect, it must
+ be quite difficult to get somewhere real sowiet helicopter (vertioljot)...
+ 
+ Back to the point as usual. It's too busy time now and it's really hard job
+ to keep Clipper BBS magazine filled with interesting things and not become
+ too short. Still looking for other authors....
+ 
+ Last few issues were filled a little by some other non-clipper stuff, i
+ just found them useful to help me with my computers and programs, therefore
+ they were here. This or some next numbers i'm continuing with discovering
+ profit of 4DOS replacement of COMMAND.COM. It's something what i'm every
+ day discovering as really good step in past.
+ 
+ In past week we received FIRST time in history something from NANTUCKET
+ (BELGIUM) with offer on NANTUCKET TOOLS II and some other additional third
+ party libraries for CLipper. What was really surprising - prices.
+ ASTRONOMICAL number in BFR after changing into USD or just GLD is coming to
+ be few times more expensive that can be expected... Still don't know what
+ to thing about it.
+ 
+ CLIP-A-TIME magazine published by England Clipper user club which is good
+ in quality is every issue (MONTHLY, i guess i can make it also when count
+ four or five CLIPBBS numbers <grin>) asking for contribution. FEW months
+ ago i sent them FEW articles and they were not published nor was coming any
+ reaction. Problem probably was, that they were criticising Nantucket and
+ picking up some problems of Clipper 5.01 just few weeks after releasing.
+ CLIP-A-TIME is at this moment following simple way "NEVER PUBLISH SOMETHING
+ THAT WILL BOTHER NANTUCKET ENGLAND". Maybe it is not true, but last six or
+ how much issies are following this way in my opinion, telling like
+ "INCREMENTAL LINKING IS WORKING PERFECT AND CAN BE HELPFULL" or "RTLINK IS
+ INVALUEABLE UTILITY" following with odas of perfectness of RTLINK, is
+ giving me only one answer... But anyway, this magazine is in good value (in
+ past was better) and maybe will come better.
+ 
+ What i will try to prepare for you? That's a question. There are many plans
+ what to write, but time is shorter and shorter. But let see:
+ 
+ -   serie about codeblocks, i guess, it's something not yet well known
+ -   DANIEL.LIB got changed into DTOOLS.LIB shareware postcard library
+     which will come published and distributed in Clipper BBS Magazine
+     with complete SOURCE code here. It's still under development and
+     will be freely distributed with registration condition - one post
+     card - because i'm just curious and i like to have lot of post,
+     actually my wife likes it more :-)
+ -   serie about DMAKE, one from most wonderfull and universal make which
+     i ever seen and i'm using
+ -   serie about Multi Edit 5.0, programmers editor which can be in
+ CLIPBBS 1-16                   Page 2                   10 Dec 1991
+
+
+     quality compared only to BRIEF i guess
+ -   revision of long time coming serie about Clipper BUGS (honestly
+     called anomalies) is planned to take a care of sorting of all
+     discovered and found problems with some cross referencing to be
+     able give complete printout
+ -   some TBROWSE related articles
+ 
+ OK guys, it's maybe much more, but what about you, can't you write
+ something too? Have a nice reading....
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 3                   10 Dec 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+             5.0 FOCUS: Memory Management - Symbol Reduction
+                            by Roger Donnay
+ 
+ 
+ In my previous articles, I discussed how to manage memory in your Clipper
+ applications by using the RTLINK linker which comes with Clipper 5.0.
+ Now it time to discuss how to manage the SYMBOL TABLE in your Clipper
+ applications to reduce memory usage.
+ 
+ Every compiled object contains symbols, constants, code and data.
+ Linkers can usually do a good job of overlaying code and constants but
+ symbols and data must be treated differently.  Symbols must always be
+ placed in "root" memory for overlay managers and macro-compilers to be
+ able to find and load the module which contains the called symbol.  The
+ more symbols your application uses, the more conventional DOS memory will
+ be required to run your application, therefore, any time spent in learning
+ how to reduce or prevent symbol table entries will pay off big dividends.
+ 
+ 
+ Symbol Redundancy
+ 
+ Clipper is a very powerful language largely because of it's runtime
+ Macro-compiler which can evaluate any expression.  Unfortunately, the
+ ability to perform these magical feats is dependent on creating a public
+ symbol table which occupies a great deal of memory.  Each memvar, array
+ and database element referenced in a Clipper program occupies space in
+ this symbol table.  In most Clipper applications, COMMON SYMBOLS will
+ be referenced in many different program modules.  For example, if you
+ reference the memvar INV_NMBR just one time in each of 10 different
+ clipper-compiled objects, there will be 10 different symbol-table entries
+ for INV_NMBR.
+ 
+   CLIPPER SUMMER 87
+ 
+   If you are still using Summer 87, then there are two options for
+   removing the redundant symbol-table entries:
+ 
+   (1) Compile your 10 programs into one larger object, then INV_NMBR will
+       occupy only 1 memory location in the symbol table thereby greatly
+       reducing the root memory allocation for the symbol INV_NMBR.
+       This can become a delicate balancing act, however, when trying
+       to find the proper balance of .OBJ file size verses symbol count
+       to make a difference in memory usage.  If you are using an overlay
+       linker such as PLINK86, increasing the .OBJect size may increase the
+       overlay area size thereby nullifying the memory savings from the
+       reduced symbols.  Static overlay linkers do nothing to help this
+       problem because they overlay at the "object" level.  If you are
+       using a "dynamic" overlay linker such as BLINKER, ALINK or WARPLINK,
+       this method of symbol compaction is very effective because these
+       linkers overlay at the "procedure" level and are not affected by the
+       size of the compiled objects.
+ CLIPBBS 1-16                   Page 4                   10 Dec 1991
+
+
+   (2) Use a third-party product which will "compact" the symbol table in
+       your .EXEcutable program to remove the redunant entries.
+       WARPLINK provides a utility named SP.EXE which essentially performs
+       the same task, however, symbol-compaction with WARPLINK is a two-step
+       process.  First the .EXE must be created using WARPLINK.EXE, followed
+       by running SP.EXE using the following syntax:
+ 
+          SP <input file .EXE name> <output file .EXE name>
+ 
+       The results, in some cases can be dramatic.  In one of my
+       applications, SP.EXE removed 908 duplicate symbols from the
+       symbol table and reduced my .EXE by 15k.
+ 
+       SP.EXE will work only on .EXE files created with WARPLINK or
+       .EXE files which contain no overlays.
+ 
+ 
+ 
+   CLIPPER 5.0
+ 
+   The RTLINK linker provided with 5.0 has been specially-designed to
+   "compact" the symbol table during linking, thereby making it
+   unneccessary to compile your .PRGs into larger objects.  This saves
+   an immense amount of time when making changes to your code, because
+   each .PRG can be compiled into a separate .OBJ and reduce compile-time.
+ 
+ 
+ 
+ Symbol Reduction
+ 
+ There are several techiques for reducing the symbol-table size in your
+ applications, all which are accomplished in your program source code.
+ In the following examples, I will show you how to eliminate symbols
+ both in Summer 87 and Clipper 5.0.  If you are using Summer 87, then
+ these techniques may have the affect of making your code less verbose
+ and therefore more cryptic.  Many programmers prefer to use symbols in
+ their source code to make it more readable and understandable.  The
+ Clipper-5.0 pre-processor offers the advantage of both readable code
+ and symbol-reduction, therefore it is recommended that you use
+ pre-processor techniques when programming in 5.0.
+ 
+ 
+ 1. USE CONSTANTS INSTEAD OF MEMVARS
+ 
+ Clipper memory variables are always treated as "symbols".
+ Refrain from using a memory variable if a constant is sufficient.
+ For example, an unnecessary symbol can be eliminated by changing
+ the code:
+ 
+      escapekey=27
+      DO WHILE INKEY()#escapekey
+        *clipper code
+      ENDDO
+ 
+    to:
+ 
+ CLIPBBS 1-16                   Page 5                   10 Dec 1991
+
+
+      * Summer 87 or Clipper-5.0
+      DO WHILE INKEY()#27
+        *clipper code
+      ENDDO
+ 
+    or:
+ 
+      * Clipper-5.0 only using preprocessor commands
+      #define escapekey 27
+      DO WHILE INKEY()#escapekey
+        *clipper code
+      ENDDO
+ 
+ 
+ 
+ 
+ 2. USE ARRAYS INSTEAD OF MEMVARS
+ 
+ Every different Clipper memvar name creates a "symbol", whereas an array
+ name creates only ONE symbol.  The following example shows how to save
+ considerable memory in a clipper application by reducing the symbol count
+ with an array.
+ 
+   This code produces 10 symbols:
+ 
+     mname = name
+     maddress = address
+     mcity = city
+     mstate = state
+     mzip = zip
+     @ 1,1 SAY 'Name   ' GET mname
+     @ 2,1 SAY 'Address' GET maddress
+     @ 3,1 SAY 'City   ' GET mcity
+     @ 4,1 SAY 'State  ' GET mstate
+     @ 5,1 SAY 'Zip    ' GET mzip
+     READ
+     REPL name WITH mname, address WITH maddress,;
+     city WITH mcity, state WITH mstate, zip WITH mzip
+ 
+ 
+ 
+   This code produces 6 symbols:
+ 
+     * Summer 87 or Clipper-5.0
+     PRIVATE gets[5]
+     gets[1] = name
+     gets[2] = address
+     gets[3] = city
+     gets[4] = state
+     gets[5] = zip
+     @ 1,1 SAY 'Name   ' GET gets[1]
+     @ 2,1 SAY 'Address' GET gets[2]
+     @ 3,1 SAY 'City   ' GET gets[3]
+     @ 4,1 SAY 'State  ' GET gets[4]
+     @ 5,1 SAY 'Zip    ' GET gets[5]
+     READ
+ CLIPBBS 1-16                   Page 6                   10 Dec 1991
+
+
+     REPL name WITH gets[1], address WITH gets[2],;
+     city WITH gets[3], state WITH gets[4], zip WITH gets[5]
+ 
+ 
+ 
+   The following code also produces 6 symbols, however the 5.0 pre-
+   processor is used here to create both DEBUG and NON-DEBUG versions of
+   compiled object code.  In the following example the pre-processor is
+   used to convert the 5 memvars to an array when compiling the final
+   version.
+ 
+   To compile the below code WITHOUT symbol substitution for debugging
+   purposes, compile as follows:
+ 
+           CLIPPER <my app> /dDEBUG
+ 
+   To compile the below code WITH symbol substitution for your final
+   application, compile as follows:
+ 
+           CLIPPER <my app>
+ 
+   The /dDEBUG switch has the same effect as the comand:
+ 
+           #define DEBUG
+ 
+   in your source code, however, it is much more convenient because it
+   allows you to make debug or non-debug versions of your code simply from
+   the DOS command line or .BAT files.
+ 
+     #ifndef DEBUG  && compiling non-DEBUG version
+       PRIVATE gets[5]
+       #define mname     gets[1]
+       #define maddress  gets[2]
+       #define mcity     gets[3]
+       #define mstate    gets[4]
+       #define mzip      gets[5]
+     #endif
+     mname = name
+     maddress = address
+     mcity = city
+     mstate = state
+     mzip = zip
+     @ 1,1 SAY 'Name   ' GET mname
+     @ 2,1 SAY 'Address' GET maddress
+     @ 3,1 SAY 'City   ' GET mcity
+     @ 4,1 SAY 'State  ' GET mstate
+     @ 5,1 SAY 'Zip    ' GET mzip
+     READ
+     REPL name WITH mname, address WITH maddress,;
+     city WITH mcity, state WITH mstate, zip WITH mzip
+ 
+ 
+ 
+ 3. USE THE SAME NAME MEMVARS WHENEVER POSSIBLE
+ 
+ Again, every "different" Clipper memvar in a module creates a symbol.  If
+ CLIPBBS 1-16                   Page 7                   10 Dec 1991
+
+
+ an object contains several procedures, use the same name for memvars even
+ though they may not perform the same or similar functions.   For example,
+ procedure A and procedure B both need 5 memvars.  If procedure A declares
+ its memvars with 5 unique names and procedure B declares its memvars with 5
+ unique names, then 10 symbols are used in the linked application.  To
+ eliminate 5 symbols, make sure that procedure B assigns the same name to
+ the memvars as procedure A.   This is not possible of course, if the
+ memvars need to be public to both procedures and perform different
+ functions, only if they are private.
+ 
+ 
+ 
+ 4.  USE COMPLEX EXPRESSIONS INSTEAD OF MEMVARS
+ 
+ The following three lines of codes represents the method that most
+ Clipper programmers choose to accomplish most programming tasks.  It
+ makes sense to code this way for readability, but if you are writing a
+ very large application, this technique can be very symbol-intensive.
+ The following three lines of code will read the disk file READ.ME into
+ a memvar named READ_FILE, save the changed code into a file named
+ EDIT_FILE, then write the changed code back to the disk file READ.ME.
+ 
+   read_file=MEMOREAD('READ.ME')
+   edit_file=MEMOEDIT(read_file)
+   MEMOWRIT('READ.ME',edit_file)
+ 
+ 
+ These three lines of code can be replaced by one complex expression
+ which uses no symbols at all.
+ 
+   MEMOWRIT("READ.ME",MEMOEDIT(MEMOREAD("READ.ME")))
+ 
+ An additional advantage to coding this way is that less free-pool or VMM
+ memory is used because the process of temporarily storing the text in
+ READ_FILE and EDIT_FILE is completely eliminated.  In Summer 87 this
+ would have the affect of less free pool fragmentation, while in Clipper
+ 5.0, you may improve performance by eliminating allocation of VMM memory.
+ If you find that creating complex expression such as this are unreadable
+ and hard to maintain then use the 5.0 pre-processor to accomplish the
+ same task as follows:
+ 
+   # DEFINE read_file MEMOREAD('READ.ME')
+   # DEFINE edit_file MEMOEDIT(read_file)
+   MEMOWRIT('READ.ME',edit_file)
+ 
+ The above code is just as readable as the original three lines of code
+ but will not create any symbols at compile time.  Try compiling this
+ code with your Clipper 5.0 compiler and use the /P switch to write the
+ pre-processed code to a .PPO file, then look at the .PPO file to see
+ what is actually compiled.
+ 
+ 
+ 5.  USE STATICS AND LOCALS INSTEAD OF PRIVATES AND PUBLICS
+ 
+ Sometimes it is just not possible or practical to write code without
+ using symbols, so if you find yourself in this situation, Clipper 5.0
+ CLIPBBS 1-16                   Page 8                   10 Dec 1991
+
+
+ provides the new feature of "LOCALIZING" symbols to the code segment
+ which is currently being executed rather than placing the symbol in the
+ main symbol table.  Local symbols are effectively "overlayed" because
+ they are treated as part of the code segment rather than given a place
+ in the main symbol table.
+ 
+ Not only does this save valuable memory but it also improves speed
+ performance because the public symbol table does not need to be searched
+ each time a STATIC or LOCAL symbol is referenced in your code.  Of course,
+ if the symbol you are referencing is needed for the entire application or
+ is used in a macro, then it must be declared as PRIVATE or PUBLIC.
+ Symbols which are not declared at all are automatically assumed to be
+ PRIVATE, so make sure you use the LOCAL declaration for all symbols
+ in your code which you do not want to end up in the main symbol table.
+ 
+ The following example shows how to save considerable memory in a clipper
+ application by reducing the symbol count with LOCAL declarations.
+ 
+   This code produces 10 main memory symbols:
+ 
+     PRIVATE mname,maddress,mcity,mstate,mzip
+     mname = name
+     maddress = address
+     mcity = city
+     mstate = state
+     mzip = zip
+     @ 1,1 SAY 'Name   ' GET mname
+     @ 2,1 SAY 'Address' GET maddress
+     @ 3,1 SAY 'City   ' GET mcity
+     @ 4,1 SAY 'State  ' GET mstate
+     @ 5,1 SAY 'Zip    ' GET mzip
+     READ
+     REPL name WITH mname, address WITH maddress,;
+     city WITH mcity, state WITH mstate, zip WITH mzip
+ 
+ 
+   This code produces 5 main memory symbols and 5 local symbols:
+ 
+     LOCAL mname,maddress,mcity,mstate,mzip
+     mname = name
+     maddress = address
+     mcity = city
+     mstate = state
+     mzip = zip
+     @ 1,1 SAY 'Name   ' GET mname
+     @ 2,1 SAY 'Address' GET maddress
+     @ 3,1 SAY 'City   ' GET mcity
+     @ 4,1 SAY 'State  ' GET mstate
+     @ 5,1 SAY 'Zip    ' GET mzip
+     READ
+     REPL name WITH mname, address WITH maddress,;
+     city WITH mcity, state WITH mstate, zip WITH mzip
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 9                   10 Dec 1991
+
+
+                       Some useful aliases for 4DOS!!!!
+ 
+     Save current text mode in "rc" as <cols>X<rows>, suitable for use by
+     RSET later and set the new mode.
+ 
+         RSAV=set rc=%[_columns]X%_rows^%&
+ 
+     Tom Rawson gets the credit for this one.  It takes you to the directory
+     where your application is and returns afterward.  If your CDPATH is set
+     correctly (mine is) you don't ever need to specify a drive letter.  See
+     NOLTR.ZIP for details.
+ 
+         IN=pushd %1^%2&^popd
+ 
+             Just use it like     PUSHD \CL5 CLIPPER
+ 
+     Some abbreviations to save alias space elsewhere.
+ 
+         TO=pushd            or      PU=pushd
+         FR=popd             or      PO=popd
+         KS=keystack
+ 
+ 
+     A DIR alias which puts the most recently added/modified files first.  Good
+     for finding that new document (or download) whose name you haven't
+     learned yet.
+ 
+         NEWF=dir /2apv /o:rt
+ 
+ 
+     Usual DIR alias.
+ 
+         DDIR=*dir /2apv /o:a
+ 
+     This is more dangerous than convenient!  It takes out files and containing
+     directories and subdirectories in one swell foop.
+ 
+         WIPEDIR=erase /q /s /x /y /z %1
+ 
+     Old habits die hard!
+ 
+         COMMAND=%comspec%
+ 
+     Move entire directories faster than a speeding keyboard finger!
+ 
+         MMOVE=move /D /U %&
+ 
+     Invoke DMAKE.EXE with parameters for generate DEBUGGING able .EXE
+ 
+         tli=dmake DEBUG=YES PLL=FULLBASE
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 10                  10 Dec 1991
+
+
+                         DOS 5 AND QUARTERDECK PRODUCTS
+ 
+ The shipping versions of all Quarterdeck products are essentially compatible
+ with DOS 5.  Some shipping Quarterdeck products have already been modified
+ with DOS 5 compatibility in mind; others will contain changes in future
+ releases to enhance DOS 5 support.
+ 
+ DOS 5 contains a number of enhancements over previous versions.  Among the
+ most notable features is more advanced memory management - specifically, the
+ ability to create and use DOS "High Memory" regions above 640K.  These
+ high-memory regions can be used for loading resident programs, drivers and
+ parts of DOS itself.
+ 
+ In many ways, the facilities for managing memory, which are built into DOS 5
+ are similar to those, first made available to users of DOS 2.x, 3.x and 4.x by
+ version 4.10 of QEMM-386, released in the spring of 1988.  QEMM-386, which is
+ now at version 5.13 has evolved considerably from that original product,
+ incorporating improvements with each new version.  These improvements have
+ progressively resulted in more available memory for the user, higher
+ reliability and enhanced ease of use.  Quarterdeck also makes this technology
+ available to users of 8088 and 80286 computers with EMS 4 or Shadow RAM,
+ through its QRAM and QEMM-50/60 products.
+ 
+ While the memory management features of DOS 5 represent an advance for DOS,
+ using Quarterdeck's memory managers still retains significant advantages for
+ most users. The differences between the current release of Quarterdeck memory
+ managers and those built into DOS 5 are as follows:
+ 
+ 1) The combined size of DOS 5's memory managers (HIMEM.SYS and EMM386.SYS) is
+ 8.4 to 10.4K.  QEMM-386, provides the facilities of both these drivers in 2.4
+ to 3.4K.  Therefore, even with optimally configured DOS memory managers, QEMM
+ should retain a 7K advantage below 640K.
+ 
+ 2) QEMM-386 typically provides 96K MORE High RAM by default than The DOS 5
+ memory manager on non-PS/2 systems, and 32K MORE by default on PS/2 systems.
+ The DOS 5 memory manager allows these areas to be included manually, but this
+ requires some expertise.
+ 
+ 3) DOS 5 has no equivalent to Quarterdeck's Manifest program.  Manifest is a
+ memory analysis program which currently is included FREE, with QEMM-386.  It
+ provides extensive information about the computer it is running on and is an
+ invaluable tool when optimizing a system or diagnosing a memory problem or
+ conflict.
+ 
+ 4) The DOS 5 memory manager has no OPTIMIZE program to automatically load
+ TSR's and device drivers into the optimum regions of upper memory.  Novice
+ users may experience considerable difficulty achieving good results from the
+ DOS 5 LOADHIGH program, but even advanced users will appreciate the speed and
+ accuracy with which OPTIMIZE sets up a system.
+ 
+ 5) The DOS 5 memory manager provides no Analysis feature.  QEMM's Analysis is
+ an extremely useful tool, that can be used to determine the areas of high
+ memory that can safely be used, when the memory manager cannot make this
+ determination on it's own. Analysis also lets QEMM-386 users reclaim unused
+ addresses in the system ROM and in other areas in high memory -- a great
+ advantage to memory-hungry users.
+ CLIPBBS 1-16                   Page 11                  10 Dec 1991
+
+
+ 6) The DOS 5 memory manager can't map ROM's into faster RAM.  QEMM-386 has the
+ option of mapping ROM's into fast RAM -- a feature which often results in
+ substantially better performance, especially where screen update speed is
+ important.
+ 
+ 7) The DOS 5 memory managers have no facility to sort memory.  On machines
+ where some sections of memory runs slower than other sections, QEMM-386 sorts
+ the memory so that the fastest memory will be used first.
+ 
+ 8) The DOS 5 memory manager cannot manage ShadowRAM or Top Memory, a feature
+ QEMM-386 users on limited-memory systems depend heavily upon.  Many one-meg
+ systems turn 384K of the first megabyte of memory into ShadowRAM or Top
+ Memory.  This memory is unavailable when using the DOS 5 memory managers.
+ 
+ 9) Microsoft Windows 3.0 Standard mode won't run under the DOS 5 memory
+ manager when the memory manager is active (in virtual 8086 mode), for example
+ when using a disk cache.  QEMM-386 can run Windows 3.0 in all three modes:
+ Real, Standard or Enhanced, whether or not QEMM-386 is active.
+ 
+ 10) The DOS 5 memory manager provides no control over the region of High RAM
+ that can be used to load programs high.  This means that even expert users may
+ be unable to use High RAM efficiently in situations where TSR's and drivers
+ must be loaded in a specific order.  The Quarterdeck LOADHI programs allow
+ TSR's or drivers to be directed to specific high memory locations, giving
+ complete control to the user.  Of course, as mentioned before, this feature is
+ used expertly by the OPTIMIZE program in order to provide the optimum
+ configuration.
+ 
+ 11) On PS/2's and other microchannel systems, QEMM-386 can automatically
+ detect the addresses used by any adapter listed in our MCA.ADL file.  This is
+ especially valuable on systems with adapter RAM (used by many network cards,
+ among other adapters). Adapter RAM can be particularly hard for 386 memory
+ managers to detect.  The DOS 5 memory manager has no such feature.  As the
+ addresses used by network cards vary from machine to machine and card to card,
+ QEMM-386's MCA.ADL file can save considerable work for network administrators
+ in companies with large installations of PS/2's or microchannel compatibles on
+ networks.  Users of PS/2 machines which are not on a network will also benefit
+ from this "ease of use" feature.
+ 
+ 12) DOS 5 has no equivalent for the VIDRAM utility, which allows users to
+ extend conventional memory on EGA/VGA systems that aren't using EGA/VGA
+ graphics.
+ 
+ 13) The DOS 5 memory manager can't increase the size of conventional memory on
+ monochrome, Hercules, CGA, and 512K systems.  QEMM-386 allows DOS memory to be
+ expanded beyond arbitrary limits, such as 512K or 640K, where there is no
+ installed hardware device which would block this expansion.
+ 
+ 14) DOS 5.0 provides no software for managing Upper Memory Blocks (UMBs) on
+ 8088 or 80286 machines with EMS 4 or shadow RAM.  Quarterdeck's QRAM and
+ QEMM-50/60 provide a path for users of these machines to use "LOADHI"
+ technology (Quarterdeck's or DOS 5's), while maintaining an interface which is
+ consistent with 386 and 486 machines which are running QEMM-386 and DOS 5, or
+ earlier versions of DOS.
+ 
+ 15) QEMM-386 is required to support DESQview 386.  While DESQview can run with
+ CLIPBBS 1-16                   Page 12                  10 Dec 1991
+
+
+ the DOS 5 memory managers, as it can with other EMS drivers, only by using
+ QEMM-386 can you get the special features of DESQview 386 which provide for
+ memory protection and the multi-tasking of "ill-behaved" DOS programs.
+ 
+                           UPGRADING - THE EASY PATH
+ 
+ If you are installing DOS 5 on a system that already has QEMM or QRAM
+ installed, simply leave the Quarterdeck memory managers in place and run the
+ DOS SETUP program.  SETUP will install your DOS upgrade and create an
+ UNINSTALL disk to use if you decide to go back to your old DOS.  SETUP
+ typically makes two changes to your CONFIG.SYS file.  It places a
+ "DEVICE=SETVER.EXE" statement at the beginning of your CONFIG.SYS (before QEMM
+ or QRAM) and puts "DOS=HIGH" at the end of the CONFIG.SYS.  It will also put a
+ "SHELL=COMMAND.COM statement in the file if there is not one already.  For our
+ purposes, you can leave that, "as-is".
+ 
+ If you like, you can move the line which loads SETVER.EXE below the line that
+ loads QEMM-386 (or QRAM) and run OPTIMIZE.  OPTIMIZE will take care of loading
+ SETVER high.  The default size of SETVER is .4K, so even if you leave it
+ alone, it will not make a big impact on your memory.  Of course, if you don't
+ have any programs that require it (run SETVER with no parameters to see the
+ list), you can take it out entirely.
+ 
+ If you are running DESQview, remove the "DOS=HIGH" from the end of the
+ CONFIG.SYS file.  DESQview can use the high memory space and will use more of
+ it than can DOS, so you are generally better off removing the statement.  If
+ you are not running DESQview, you may leave "DOS=HIGH" in place.
+ 
+ If you are upgrading from DOS 2 or 3 and have the statement "BUFFERS=1" in
+ your CONFIG.SYS, you should change it to "BUFFERS=15" (or whatever number of
+ buffers you desire).  Then remove the line which loads "BUFFERS.COM" from your
+ AUTOEXEC.BAT, and re-run OPTIMIZE to optimize your system.  The BUFFERS.COM
+ program cannot support DOS 5 style buffers and without this change, you are
+ likely to experience a system slowdown when BUFFERS.COM fails to load
+ additional buffers.
+ 
+ At this point, you are done and your system should be optimized.  DO NOT
+ bother "going through the optimize procedures listed in the DOS 5.0 manual",
+ as suggested by SETUP. QEMM's LOADHI and OPTIMIZE procedures have already done
+ this for you.  Specifically, you should avoid the use of the DOS=UMB
+ parameter.  While this parameter is not incompatible with Quarterdeck memory
+ managers, it makes high memory unavailable to our current LOADHI programs. In
+ a "best case scenario" you will lose 7K in DOS, using DOS 5's "loadhigh"
+ features.  In a "worst case scenario", it could be much more.
+ 
+ If you have any questions about whether your system is optimized or if you
+ have added or subtracted any TSR's or drivers during the upgrade, check the
+ "Hints" given by Manifest and re-run the OPTIMIZE program.
+ 
+                         SPECIFIC COMPATIBILITY ISSUES
+ 
+ The following are specific compatibility issues related to current versions of
+ Quarterdeck software and the use of DOS 5.
+ 
+ 1) For QRAM or QEMM 50/60 users who are using QEXT.SYS:
+ 
+ CLIPBBS 1-16                   Page 13                  10 Dec 1991
+
+
+ If you are a DESQview user, use the QEXT.SYS that came with your software and
+ do not use the "DOS=HIGH" option.  As mentioned earlier, DESQview makes use of
+ more efficient use of this memory than DOS.
+ 
+ If you are not a DESQview user and wish to use the DOS=HIGH option, use DOS's
+ HIMEM.SYS to provide the High Memory Area for "DOS=HIGH" or obtain a version
+ of Quarterdeck's QEXT.SYS dated later than May, 1991.  Earlier versions do not
+ work with the "DOS=HIGH" option.  A version which will work is currently
+ available on the Quarterdeck Electronic Bulletin Board system (213-396-3904)
+ and will be shipped with future versions of Quarterdeck software.
+ 
+ If you are using the DOS 5 RAMDRIVE.SYS or SMARTDRV.SYS and they fail to load,
+ move the line which loads QEXT.SYS so that it loads BEFORE the QEMM 50/60
+ driver or QRAM in your CONFIG.SYS file. The version of QEXT.SYS that is on the
+ Quarterdeck Bulletin Board also solves this problem.
+ 
+ 2) If you use DOS 5's DOSKEY utility and run DESQview:
+ 
+ Obtain DESQview 2.34 from Quarterdeck orders department. The DOSKEY utility
+ will conflict with DESQview's DOS Services program if loaded before DESQview.
+ To use DOSKEY in a DESQview DOS window, modify the "Program" line of the
+ program information file using "Change a Program" to load "DOSKEY" and
+ configure the "Parameters" line with "/REINSTALL" so that each DOS window will
+ have its own, unique set of stacked commands.
+ 
+ 3) If you run Microsoft Windows 3.0 in Standard mode, inside DESQview:
+ 
+ Obtain DESQview 2.34 from Quarterdeck orders department.  Earlier versions of
+ DESQview run Windows unreliably in Standard mode when DOS 5 is present.  There
+ is not a problem running Windows Real mode.
+ 
+ 4)  If you run Microsoft Windows 3.0 in Enhanced mode:
+ 
+ If you run Microsoft Windows in Enhanced mode and plan to use the DOS=HIGH
+ parameter, you must take care that you do not use the "EXT=" or "MEM="
+ parameters to QEMM-386.  Doing so will prevent Windows from being able to
+ start in Enhanced mode.  It will not affect operation in Real or Standard
+ modes.
+ 
+ 5) If you run DOS 5's DOSSHELL program:
+ 
+ The DOSSHELL program works fine with Quarterdeck's memory management software.
+ It is also possible to start DESQview from the shell, however you cannot task
+ switch away from versions of DESQview prior to 2.34 or the system will hang.
+ DESQview 2.34 prevents this problem, however it is presumed that most users
+ who use more advanced DOS environments, such as DESQview or Windows will not
+ be using DOSSHELL.
+ 
+ 6) If you run DESQview and use SETVER.EXE:
+ 
+ SETVER, does not take effect when run inside DESQview 2.33 or earlier. Because
+ SETVER does not work inside DESQview 2.33 and earlier, programs that require
+ SETVER may malfunction when run under these versions of DESQview.  A list of
+ the programs which require SETVER is available by typing "SETVER" to the DOS
+ prompt.  If you have programs which require the use of SETVER in DOS and want
+ to run them in DESQview, contact the Quarterdeck Orders Department for an
+ CLIPBBS 1-16                   Page 14                  10 Dec 1991
+
+
+ upgrade of your DESQview to version 2.34
+ 
+ 7)  If your system requires the DOS DISPLAY.SYS or PRINTER.SYS drivers:
+ 
+ The DOS 5 utilities, DISPLAY.SYS and PRINTER.SYS cannot be successfully loaded
+ into upper memory by the LOADHI.SYS that ships with QEMM-386 5.13 and earlier,
+ QEMM-50/60 5.00 and earlier, and QRAM 1.01 and earlier. Future versions of
+ LOADHI.SYS are expected to be able to load these drivers into upper memory.
+ 
+ You can load these drivers into low memory or, if you do not require
+ Quarterdeck's LOADHI programs to load larger TSRs or drivers, it is possible
+ to add DOS=UMB to your CONFIG.SYS file and use DEVICEHIGH to load them.  As
+ mentioned before, the "DOS=UMB" parameter currently makes high memory
+ unavailable to Quarterdeck's LOADHI programs.
+ 
+ 8) If you run DESQview and get the message, "packed file is corrupt", when you
+ open a window:
+ 
+ The EXEPACK utility that came with versions of DOS before DOS 5 contained a
+ bug that resulted in the error message "packed file is corrupt" being given
+ when a packed .EXE file was executed in the first 64K of conventional memory.
+ DOS 5 patches the files in memory so that they can be successfully unpacked
+ and executed.  However, since DESQview takes over much of the program-loading
+ process from DOS, this patch does not take effect in DESQview versions before
+ 2.34.  If you encounter this error, opening a window in DESQview, contact the
+ Quarterdeck Orders Department for an upgrade your DESQview.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 15                  10 Dec 1991
+
+
+                 How to get more options out of <GRUMPBROW>
+ 
+ How to get more(options) out of <Grumpbrow>, the generic database browser
+ of <Grumpfish LIBrary> ?
+ 
+ As the <Grumpfish LIBrary> is delivered with source code it is possible to
+ make all kind of individual changes and adaptations.
+ 
+ I was a little bit dissatisfied that the <Grumpbrow>-function, a generic
+ database browser which offers built-in functions for add, edit, delete,
+ search (and query-by-example) and view routines, only has these 6 options
+ for me. I wanted more!
+ 
+ But not much effort to get more than these 6 options and to enlarge the
+ <Grumpbrow>-function for your personal demands.  The following example will
+ illustrate step-by-step how you can do that. We show it for the S87
+ version; but there is no big difference to the CL5 version.
+ 
+ Around the lines 53 - 56 of <brow.prg> we find the definition of the
+ View-option within the Grumpbrow function. It looks like:
+ 
+ IF "V" $ UPPER(sec_level)
+    security[6] = .T.
+    options = options + "[V]iew  "
+ ENDIF
+ 
+ First step is to change "V" to "M" and change "[V]iew " to "[M]ore " so
+ that we have this "More" option in the menu-line of the Grumpbrow function.
+ It should read like:
+ 
+ IF "M" $ UPPER(sec_level)
+    security[6] = .T.
+    options = options + "[M]ore  "
+ ENDIF
+ 
+ Now we make the second change: Around the lines 291 - 295 within <brow.prg>
+ we have to change the key option so that the user input of "m" will be
+ accepted instead of the old "v".
+ 
+ The old lines:
+ 
+ *** V = view
+ CASE (key = 86 .OR. key = 118) .AND. security[6]
+  IF ! override(6)
+   gfbrecview('V')
+  ENDIF
+ 
+ are changed to:
+ 
+ *** V = view  (now M for our MoreOption Menu!)
+ CASE (key = 77 .OR. key = 109) .AND. security[6]
+  IF ! override(6)
+   gfbrecview('V')
+  ENDIF
+ 
+ (right guessed! the ASCII value of the key-combination "SHIFT" and "m" is
+ CLIPBBS 1-16                   Page 16                  10 Dec 1991
+
+
+ 77; "m" alone is 109)
+ 
+ When the changes are made we compile the new <brow.prg>:
+ --------------------------------------------------------
+ clipper brow -m -l
+ 
+ and put the new version into <grump.lib> so that it replaces the old
+ <brow> definitions:
+ ---------------------------------------------------------------------
+ lib grump -+ brow;
+ 
+ No one takes care of this but it should be mentioned:  You have the
+ original <brow.prg> and <grump.lib> in a safe place so if your changes lead
+ to chaotic bits & bytes you can use the orginal files without problems.
+ 
+ Now after we have made the basic changes in the <brow.prg> and replaced the
+ old <brow> in <grumplib> with the changed one, we can begin to use it in
+ our program.
+ 
+ Normally we would call <grumpbrow> somehow like this:
+ -----------------------------------------------------
+ grumpbrow('aedv', 5, 2, 20, 78, .t.)
+ 
+ (with A)dd, E)edit, D)elete and V)iew option)
+ 
+ But to make use of our changes we have to declare an alternate for the old
+ view option and call <grumpbrow> with this alternate:
+ 
+ private alternate_[6]
+ afill(alternate_,"")
+ alternate_[6] = "moreprogs()"
+ grumpbrow("aedm", 5, 2, 20, 78, .t., '','',alternate_)
+ 
+ If the user now presses "M" <grumpbrow> calls the <moreprogs> option.  But
+ where is it? Right, we have to write it. But that isn't much work and as it
+ gives us many possibilities it even makes fun.
+ 
+ In <moreprogs> or whatever you will name this function you can write your
+ own sub-menu where you can do all jobs you like to do.  But as you have the
+ <Grumpfish LIBrary> why not use for this sub-menu <menuv> with which it's
+ more than easy to write a vertical bounce-bar menu?
+ 
+ As by way of exception we had a quick glance in the manual we know that the
+ different menu options for <menuv> are declared as arrays.  In our example
+ we have 4 <moreoptions>-arrays, so that <moreprogs> looks like this:
+ 
+ ********
+ * instead of V)iew now our own sub-menu:
+ function moreprogs
+  save screen
+  set message to 24 center
+  private moreoptions[4]
+  moreoptions[1] = "Text$Enter a Text for the client^cltxt"
+  moreoptions[2] = "Invoices$See invoices for this client^clinvoic"
+  moreoptions[3] = "View$View the current record^viewit"
+  moreoptions[4] = "Quit$Leave this menu"
+ CLIPBBS 1-16                   Page 17                  10 Dec 1991
+
+
+  sel = menuv(moreoptions,"Sub-Menu",9,"+W/R,+W/N","+W/R")
+  set message to
+  restore screen
+  return(.t.)
+ return(.t.)
+ 
+ To sum it up:
+ -------------
+ 
+ First we took an option that <grumpbrow> offers originally and replaced it
+ with our own alternate (instead of the V)iew-option we call <moreprogs>).
+ 
+ In <moreprogs> we define our own sub-menu (for that we took <MenuV> from
+ the Grumpfish-Library), so that instead of only viewing we get a sub-menu
+ with any options we like.
+ 
+ In <moreprogs> we can call all kinds of programs.
+ 
+ So that we don't loose the "View"-option we build it into our sub menu
+ (viewit). Another nice feature is the possibility to enter notes for the
+ client. With a unique field for any client (internal client number for
+ example) we can compose a file name (mfile = ltrim(str(clno,8)) + ".TXT")
+ and with the internal Clipper commands MEMOWRIT, MEMOEDIT and MEMOREAD we
+ can enter a new text, view and edit an already existent one.
+ Ideal suited for notes on the client and better than the use of a
+ MEMO-field.
+ 
+ And with <clinvoic> we have a small function with which we can view all
+ invoices that this client already has received.
+ 
+ You realize that there are many possibilities of useful functions you can
+ integrate in this sub-menu.
+ 
+ The described changes are for S87; but there's not much difference for the
+ CL5-version.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 18                  10 Dec 1991
+
+
+       How to be indepndent from drive letters, directory names...
+ 
+ 
+ Another from serie 4DOS articles is coming. Idea presented in this
+ article is not discovered by me. It's just written article based on
+ idea of someone else, but this idea is VERY nice and i have to make
+ this talking little bit longer.
+ 
+ 4DOS is allowing to set environmental variable called CDPATH to special
+ version of path. This CDPATH is used when CD (or any change directory
+ command) is not able to find name of directory. CD is then trying to
+ change into CDPATH\name_of_directory and if is succesfull, will change
+ into this directory. My SET CDPATH then looks like this:
+ 
+         SET CDPATH=C:\;C:\SOURCE;c:\DANIEL;c:\Cl5;C:\MSC;H:\;I:\;G:\
+ 
+         (last three are going to OTHER three networked computers
+          and allowing extend into other network drives)
+ 
+ Then, just writing     CD DTOOLS   will move me into C:\SOURCES\DTOOLS
+                        CD QMODEM   will move me into G:\QMODEM
+ 
+ Then we can make a definition of some aliases:
+ 
+         IN=pushd %1^%2&^popd
+ 
+                 This one will just change to directory and then execute
+                 application in this directory with all parameters and
+                 after end will return back to original directory. Can
+                 be used like:
+ 
+                 IN QMODEM QMODEM        or      IN DTOOLS DMAKE
+ 
+ 
+ Another advantage of this is, that original PATH can be VERY short,
+ because all other, NOT VERY often used files are accesible via IN
+ alias, or via other alias like     NCRUN=IN NCOM NCBAT DANIEL password
+                                    (which is equivalent of
+                                     CD c:\ncom
+                                     NCBAT DANIEL password
+                                     <return back to original directory>
+                                    )
+ 
+ 
+ In just single user environment (and single disk) is vise set CDPATH
+ into several often used subdirectory names (like first part in above
+ presented example) because it can save a typing of CD \SOURCE\DTOOLS.
+ In network environment, where is most problematic to remember on which
+ disk is located which directory with which program it can be much more
+ helpfull when CDPATH contains all needed network drivers or directories
+ on those drives.
+ 
+ Cheers
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 19                  10 Dec 1991
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+ Q&A: DSZ refuses to work with some systems
+ 
+ PROBLEM:   DSZ/Zmodem refuses to work with my computer system.
+ 
+ SYMPTOMS:  When using DSZ/Zmodem, it refuses to recognize the serial port.  No
+            communication occurs and I get bumped out of the program.
+ 
+ SOLUTION:  I ran into this problem with DSZ/Zmodem on my machine.  The problem
+            is that I was using a non-standard Port/IRQ combination.  My system
+            uses COM3 and IRQ5 for the modem.  In order to support this
+            combination you must invoke DSZ with the portx parameter.  My
+            command line to invoke DSZ from Qmodem is as follows:
+ 
+            DSZ portx 3e8,5 speed %1 rz -rr
+ 
+            This sets up DSZ to use COM3 and IRQ5.  DSZ is case sensitive!  Do
+            not use upper-case letters for parameters.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   DSZ aborting uploads when running a BBS on LANtastic.
+ 
+ SYMPTOMS:  DSZ will issue a "Serial Input Error LS Register 02" error message
+            and abort an upload.  This problem did not surface prior to the
+            installation of LANtastic.
+ 
+ SOLUTION:  This problem is caused by interrupt latency.  On my system, which
+            runs DesqView, the installation of 16550AFN UARTS solved this
+            problem when running locally.  However, the network accesses
+            introduced enough additional interrupt latency that the problem
+            surfaced again.  The solution was to add the "ha slow" switch to
+            the DSZ command line.  This switch disables serial communication
+            between the computer and the modem during disk (or network) access.
+            Be aware that DSZ is case sensitive!  You must use lower case
+            characters for this switch.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   System hangs when loading LANtastic network drivers.
+ 
+ SYMPTOMS:  The computer will hang when loading the LANtastic network drivers.
+            This happens on Artisoft AE-2 Ethernet cards with Boot ROMs.
+ 
+ SOLUTION:  Make sure that you have the Boot ROM address jumpers set properly.
+            On my system, my EMS driver was using D000 for its page frame, and
+            my AE-2 card was set to use the same area.  I had to move the BOOT
+            ROM address to C800 in order to prevent conflicts.  D000 is the
+            default address, but would not work on my Zenith 286, since Zenith
+            slushes the video ROM to the E000 paragraph, leaving only the D000
+ CLIPBBS 1-16                   Page 20                  10 Dec 1991
+
+
+            paragraph for the EMS page frame.  Be aware that Artisoft provides
+            a 16K Boot ROM, so some addresses can not be used.  This is
+            explained in the AE-2 manual.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   Optimizing LANtastic network performance.
+ 
+ SYMPTOMS:  Programs load slowly across the network.  Overall performance seems
+            slow.
+ 
+ SOLUTION:  The best solution I could find was to include the switch SIZE=8192
+            in the REDIR command line.  An example would be:
+ 
+                 REDIR SERVER SIZE=8192
+ 
+            This switch sets the size of the buffers that REDIR will use.
+            Transfer rates across my network increased 3 to 4 times.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   Connect problems when using MNP-5 modems.  Sometimes the speed is
+            slower than other times.
+ 
+ SYMPTOMS:  When calling a BBS that is using a U.S. Robotics Dual-Standard or
+            HST modem using a 2400 baud MNP-5 modem, sometimes the connection
+            will be at 2400 baud and sometimes it will be 1200.  In both cases
+            the connection will be a "reliable connect".
+ 
+ SOLUTION:  Some 2400 baud MNP-5 modems are not fully compatible with the MNP
+            protocol.  Generally these were earlier modems, but I know of one
+            case where the modem was a current production model.  The solution
+            is to have the BBS operator change his S15 register to 64.  This
+            allows compatibility with these modems.  This register change must
+            be done on the Dual-Standard or HST modem, not on the 2400 baud
+            modem.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 21                  10 Dec 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                AEVAL, undocumented second passing parameter
+ 
+ 
+ In some previous issue of ClipBBS was commented anomaly reported by Jo French
+ about AEVAL() and passing "SECOND RETURN REFERENCE".
+ 
+ One from Clipper echo (FIDONET) readers is giving explanation what was meant
+ by above term.
+ 
+ <QUOUTE>
+ What he is referring to is that inside of the codeblock there is an extra
+ parameter passed to AEVAL() on each iteration. Therefore, the code block
+ gets two parameters on each iteration rather than just the documented
+ one:
+ 
+ { | cElementValue,nElementNumber | .... }
+ 
+ This saves you the effort of keeping a counter within the codeblock.
+ 
+ <QOUTE END>
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 22                  10 Dec 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ CLIPBBS 1-16                   Page 23                  10 Dec 1991
+
+
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - PAT2-5.ARJ
+ 
+ File Name:      PAT2-5.ARJ
+ Other Names:
+ 
+ File Size:      3,860 bytes
+ File Contents:
+                 TEMPFILE.PRG       4084
+                 TEMPFILE.OBJ        933
+                 PAT5.DOC           1551
+ 
+ Fix of FT_TempFil() function because it was leaving temporary file OPEN
+ and therefore was eating one file handle more than needed.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 24                  10 Dec 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 1-16                   Page 25                  10 Dec 1991
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-16                   Page 26                  10 Dec 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

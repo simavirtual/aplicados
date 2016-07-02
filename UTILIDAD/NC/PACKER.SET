@@ -1,0 +1,178 @@
+#
+#	Archivo de configuraci¢n de compresi¢n para el CN 4.0
+#
+#	Autor 	: Anthony O'Dowd
+#	Fecha	: Enero de 1993
+#
+##############################################################################
+##
+#
+# El formato de este archivo es como sigue :-
+#
+#	<1> Para definir el inicio de las l°neas de comando de utilidades de
+#           compresi¢n use ":" seguidos de un corto texto descriptivo. Este
+#	    texto se muestra en el cuadro de di†logo Selecci¢n de mÇtodo de
+#           compresi¢n.
+#
+#	<2> Para definir las caracter°sticas de una utilidad de compresi¢n
+#           use un n£mero de dos d°gitos seguido de ":". Los dos d°gitos son 
+#	    significativos ya que definen el tipo de comando que soporta la
+#	    utilidad de compresi¢n.
+#
+#	El significado de estos n£meros es el siguiente :-
+#
+#	00:     Extensi¢n de archivo de un tipo de archivo comprimido.
+#	01:	Comando para a§adir un archivo a un archivo comprimido.
+#       02:	Comando para a§adir un archivo a un archivo comprimido 
+#		y tambiÇn almacenar la v°a de acceso completa del archivo.
+#	03:	Comando para extraer un archivo de un archivo comprimido.
+#       04:     Comando para extraer un archivo de un archivo comprimido 
+#		y mantener su v°a de acceso completa.
+#	05:	Comando para mover un archivo a un archivo comprimido.
+#       06:	Comando para mover un archivo a un archivo comprimido 
+#		y tambiÇn almacenar la v°a de acceso completa al archivo.
+#	07:	Comando para borrar un archivo de un archivo comprimido.
+#	08:	Comando para seleccionar el mejor mÇtodo de compresi¢n soportado 
+#		por la utilidad de compresi¢n.
+#	09:	Comando para crear el archivo comprimido m†s peque§o posible.
+#	10:	Comando para crear un archivo comprimido de la forma m†s r†pida
+#               posible cada vez.
+#	11:	Rasgo integrador. êste es un integrador de 16 bits que define
+#		algunas caracter°sticas adicionales de la utilidad de 
+#		compresi¢n. Los dos bits m†s importantes en este n£mero son :-
+#			bit 15...Fijar a uno si la utilidad de compresi¢n
+#				 soporta el concepto de archivo respuesta. 
+#			bit 14...Fijar a uno si desea tener una sesi¢n
+#				 interactiva con la utilidad de compresi¢n. En
+#				 este modo el Comandante permite la utilidad de
+#				 compresi¢n y muestra su progreso en la pantalla
+#				 en la parte superior de los paneles de archivo
+#				 del Comandante. Puede ser £til en depuraci¢n de
+#				 cambios de utilidades de compresi¢n.
+#	12:	Si el bit 15 del Rango integrador est† a 1 esta es la definici¢n
+#		del car†cter que debe preceder al archivo respuesta.
+#	13:     êste define el mapeado de los c¢digos de error de compresi¢n a
+#		c¢digos comprensibles por el Comandante. Sirve para verificaci¢n
+#		de errores e informes.
+#
+#		Los c¢digos de error manejados por el Comandante Norton son :-
+#
+#		0.....Sin error
+#		7.....Usada utilidad de compresi¢n ilegal que el Comandante no
+#		      puede entender		
+#		8.....Utilidad de compresi¢n no definida en Packer.set
+#		9.....Memoria insuficiente para ejecutar la utilidad de
+#		      compresi¢n
+#	       10.....Imposible encontrar la utilidad de compresi¢n (debe estar
+#		      en la v°a de acceso del Comandante para encontrarla).
+#	       11.....Imposible localizar Command.com para cargar la utilidad 
+#		      de compresi¢n
+#	       12.....Imposible encontrar la utilidad de compresi¢n. (debe estar 
+#		      en la v°a de acceso del Comandante para encontrarla).
+#	       13.....Imposible encontrar el archivo PACKER.SET 
+#	       14.....Imposible abrir el archivo respuesta
+#	       15.....Par†metros insuficientes especificados en la l°nea de
+#		      comando.
+#
+##############################################################################
+##
+#
+:PKZIP 1.x/2.x
+00:ZIP
+01:pkzip -u -wHS
+02:pkzip -u -P -wHS
+03:pkunzip -o
+04:pkunzip -o -d
+05:pkzip -mu -wHS
+06:pkzip -mu -P -wHS
+07:pkzip -d
+08:-es
+09:-ex
+10:-ex
+11:01
+12:@
+#
+# Este define el mapeado de c¢digos de error para pkzip a
+# los c¢digos est†ndar comprensibles por el Comandante.
+#
+13:14,3;1,1;16,4;13,2;11,6
+:ARJ
+00:ARJ
+01:arj u -y 
+02:arj u -y 
+03:arj e -y -e 
+04:arj x -y 
+05:arj m -y -d -e 
+06:arj m -y -d 
+07:arj d -y
+08:-m4 
+09:-m1 
+10:-m1
+11:01
+12:!
+13:6,1;1,2;5,3;7,4;96,1
+:ARC
+00:ARC
+01:arc a
+02:arc a
+03:arc eow
+04:arc xow
+05:arc muw
+06:arc muwz
+07:arc dw
+08:
+09:
+10:
+11:00
+12:@
+13:255,5
+:PAK
+00:PAK
+01:pak u
+02:pak u 
+03:pak e -wa
+04:pak e -i -wa
+05:pak m -wa
+06:pak m -wa -i
+07:pak d -wa
+08:/C 
+09:/CR
+10:/S
+11:01
+12:@
+13:1;6
+:ZOO
+00:ZOO
+01:zoo -add
+02:zoo -add 
+03:zoo -extract 
+04:zoo -extract
+05:zoo -move
+06:zoo -move
+07:zoo -delete
+08: 
+09:
+10:
+11:00
+12:@
+13:1;6
+:LHARC
+00:LHZ
+01:lharc u -am
+02:lharc a -apm
+03:lharc e -wm 
+04:lharc e -wm 
+05:lharc m -am
+06:lharc m -am 
+07:lharc d -mm 
+08:
+09:
+10:
+11:00
+12:
+13:1;6
+
+
+
+ 
+

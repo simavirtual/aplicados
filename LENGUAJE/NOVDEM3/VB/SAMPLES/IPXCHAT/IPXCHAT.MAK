@@ -1,0 +1,9 @@
+IPXCHAT.FRM
+..\..\NOVLIB.BAS
+IPXVARS.BAS
+ProjWinSize=88,180,248,215
+ProjWinShow=0
+IconForm="Form1"
+Title="IPXCHAT"
+ExeName="IPXCHAT.EXE"
+

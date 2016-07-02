@@ -1,0 +1,5 @@
+CLEAR
+USE FUNC
+REPORT form x TO PRINT
+USE
+

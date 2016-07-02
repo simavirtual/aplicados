@@ -1,0 +1,677 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+       °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 1, Number 18                                   24 December 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    Codeblocks, is it for something or not?  ...............................  1
+ 2. ANOMALIES  .............................................................  7
+    ANOMALIES reports and commets  .........................................  7
+ 3. CLIPPER NET  ...........................................................  8
+    Index of described files in Clipper BBS Magazine  ......................  8
+    ATTENTION! PDNDBASE Are is coming to be closed  ........................  9
+ 4. CLIPBBS  ............................................................... 11
+    CLIPBBS distribution  .................................................. 11
+    CLIPBBS, how to write an article!!!  ................................... 13
+
+                                   - - - - -
+ CLIPBBS 1-18                   Page 1                   24 Dec 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+                    Codeblocks, is it for something or not?
+                                 part ONE
+ 
+ New serie is starting just NOW...... <grin>
+ 
+ CODEBLOCK, new invention in Clipper 5.x described by Nantucket very shortly
+ and without any effort to start new revolution in Clipper programming which
+ Codeblock for sure is.
+ 
+ For someone who knows "C" language is here a simple analogy of CodeBlock in
+ this language. Codeblock is equivalent of POINTER TO FUNCTION which can be
+ used for calling or any other manipulation with this function/pointer.
+ Clipper is not yet giving any freedom in programming like "C" language,
+ therefore Codeblock implementation is little different.
+ 
+ Let say we will create simple program:
+ 
+  ³1 function Main()
+  ³2 local   bToDo := {|| MyFunction()}
+  ³3     clear
+  ³4     ? "starting function defined in bToDo"
+  ³5     eval(bToDo)
+  ³6     ? "function ended"
+  ³7 return (NIL)
+ 
+ After compilation of this program will programmer get of course error about
+ undefined MyFunction(). Therefore we must put another few lines into file:
+ 
+  ³8 function MyFunction()
+  ³9     ? "- function was called by Eval() of codeblock"
+  ³10return (NIL)
+ 
+ CODEBLOCK which is defined on line (2) is telling simple story to compiler.
+ First "{||" that we want to define codeblock ( "{" is just ARRAY, "{|" is
+ just codeblock) and this codeblock will contain "program" represented at
+ present case by one function "MyFunction()". Function will NOT get any
+ parameters when called via this Codeblock.
+ 
+ Line (5) then start execution of this Codeblock via EVAL() function which is
+ entitled to EVALUATE codeblock. "Evaluate" term is used correctly in this
+ case, because Codeblocks are used for passing and returning values also,
+ therefore "Evaluate" is much correct that just EXECUTE (DOS program is
+ executed in Clipper via RUN statement, and is not able to return ANY value
+ back..).
+ 
+ Evaluation of Codeblock will simple get definition of Codeblock (your
+ debugger will also show place in source where codeblock is defined) and
+ continue in program which is defined in BODY of codeblock. After all of it
+ will continue normal running of program.
+ 
+ At this moment, noone can see what is a profit from using a codeblock. Let us
+ CLIPBBS 1-18                   Page 2                   24 Dec 1991
+
+
+ take another example:
+ 
+  ³  function Main()
+  ³  local bToDo
+  ³      aadd(bToDo, {"First Menu Line", {|| FunctionOne()}  })
+  ³      aadd(bToDo, {"Second Menu Line",{|| FunctionTwo()}  })
+  ³      aadd(bToDo, {"Last Menu Line",  {|| FunctionThree()}})
+  ³      DoMenu(bToDo)
+  ³  return (NIL)
+ 
+ What's happening now, bToDo will contain array of lines for MENU and
+ codeblock which belong to every line from menu. Call of ONE function called
+ DoMenu() with parameter of defined menu will draw menu on screen, ask for
+ choice of needed line and then:
+ 
+  ³  function DoMenu(aDef)
+  ³      ..some lines of drawing menu, selection by user..
+  ³      EVAL(aDef[User_selected,2])
+  ³      ..some lines of restoring screen
+  ³  return (NIL)
+ 
+ EVAL() function will then just RUN needed function which belongs into
+ selected menu line. On this simple way is possible to eliminate old way of
+ using MACRO evaluation for this or writing millions of DO CASE construction
+ every different for different menu.
+ 
+ And now, we are at important point. MACROs and CODEBLOCKS are functionally
+ equal or not? Yes, they can be used on the same way with one big difference:
+ 
+     CODEBLOCK is compiled and LINKED into application and then JUST
+     executed in form of already linked code
+ 
+     MACRO is stored in application in ASCII form and then is COMPILED
+     and LINKED at RUNTIME.
+ 
+ Comparation table for MACRO and CODEBLOCK CAN BE:
+ 
+                                     MACRO           CODEBLOCK
+ 
+ A.  already linked and compiled         NO              YES
+ B.  linked and compiled at runtime     YES               NO
+ C.  is using any special part
+      of runtime modules of libraries   YES               NO   (about 30KBs)
+ D.  is taking time of running          YES               NO
+ E.  can be saved in .MEM or .DBF       YES (text)        NO
+ F.  can pass parameters in full
+      capabilities of Clipper            NO              YES
+ G.  there is a check of existence
+      of used functions or names         NO              YES
+ 
+ Let us now discuss little bit above mentioned comparation.
+ 
+ A.  Codeblock is compiled and linked during compiling and linking of
+     application, therefore .EXE file contains only compiled and prepared
+     code of Codeblock.
+ 
+ CLIPBBS 1-18                   Page 3                   24 Dec 1991
+
+
+ B.  MACRO instad is saved into .EXE as is defined in program in ASCII
+     form and during running of .EXE is compiled and linked EACH time
+     when is needed. CLIPPER is using for this functions which normally
+     are not used.
+ 
+ C.  Those functions are using about 30KB of memory and .EXE size and
+     normally nobody needs them.
+ 
+ D.  Also of course, calling of functions for MACRO means that it will
+     take additional time to do this job. Codeblock has NOT this time because
+     is already prepared during compile-link cycle.
+ 
+ E.  Saving of MACRO is possible anywhere where programmers wants. It's simple
+     text as is used in program. CODEBLOCK is impossible to save because it is
+     ADRESS pointing somewhere into .EXE which is used in EVAL() function for
+     passing execution onto this adress. Some people are offering way to save
+     CODEBLOCKs in way of saving MACRO which is later reevaluated into
+     codeblock using construction &("{||"+block+"}") and assigning result into
+     variable which contains real codeblock. But this solution has advantage
+     of saving, but it IS STILL MACRO and not codeblock.
+     Anyway, i NEVER had any need to save codeblock to disk....
+ 
+ F.  Calling a function in macro way:
+ 
+         cMacro := "MyFunc(par1,par2)"
+         result := &cMacro
+ 
+     in not equal to calling a CODEBLOCK:
+ 
+         bBlock := {|par1,par2| MyFunc(par1,par2)}
+         result := Eval(bBlock,par1,par2)
+ 
+     In case of MACRO there is limitation which is not nice. This limitation
+     is coming from fact, that parameters passed into MyFunc() in presented
+     example MUST have allways names "par1" and "par2". In Codeblock case one
+     can just use:
+ 
+         result := Eval(bBlock,FirstParameter,RowLine)
+ 
+     And is problem of codeblock to transfer correct values into MyFunc()
+     because definition of Codeblock is defining FORMAL NAMES of parameters,
+     instead MACRO defintiion is defining REAL NAMES of parameters.
+ 
+     Also limitation is in fact, that parameters used in MACRO MUST be
+     non-local or non-static variables, because they are INVISIBLE in any
+     macro evaluation..
+ 
+ G.  On the same moment is there one important change from MACRO to codeblock,
+     all names used in definition are checked in case of CODEBLOCK for
+     existence or definition. MACRO definition are NOT checked in any way.
+     Therefore can happend:
+ 
+         myMacro := "substr(cString,10,2)+padr(cString2,5)"
+ 
+     Can result in error DURING running of program (which is one from worst
+     things happening to programmer) because for example padr() function was
+ CLIPBBS 1-18                   Page 4                   24 Dec 1991
+
+
+     NOT linked in program and programmer forget to use EXTERN statement for
+     forcing linker to this function.
+ 
+         myBlock := {|| substr(cString,10,2)+padr(cString2,5)}
+ 
+     Will ALLWAYS link needed functions into your program because linker will
+     see request for PADR() immediately during linking.
+ 
+     This can cause serious troubles in case of MACRO using in Clipper
+     programs which are jumping out during running without visible reason with
+     messages about undefined functions. They are just not linked in, because
+     programmer forget to EXTERN them.
+ 
+ Back to lessons now :-)
+ 
+ In general, definition of Codeblock looks like this:
+ 
+     Codeblock  :=      "{|" [parameter[,...]] "|" definition "}"
+ 
+     (this magazine is not able to use bold or underline, therefore
+      i had to use some strange way of picking up parts of definition)
+ 
+     First, "{|" starts definition of Codeblock, between "{" and "|" can be
+     number of spaces which one wants without any troubles. It is not
+     important. Combination of this two characters IS starting definition
+     and is important for compiler to recognize codeblock definition.
+ 
+     [parameter[,...]] is OPTIONAL list of FORMAL parameter names. Codeblock
+     can receive parameters from EVAL() function (or any other CODEBLOCK
+     related functions), but they have to be defined in definition of
+     Codeblock. All names used in defintion of parameters are FORMAL and they
+     have NOT connection to other names in program. Parameter names are as
+     usual separated by comma character.
+ 
+     Definition of parameter part is then closed with "|" character. In
+     general, "|" characters are used for CLOSING parameters definition
+     in Codeblock definition. "||" represents then EMPTY parameter definition
+     and MUST be presend in case of definition of Codeblock which is NOT
+     using parameters.
+ 
+     BODY of codeblock contains definition of program to execute for codeblock
+     when EVALuated(). THis body can be ONE function, or MORE functions
+     separated with commas. This possibility is not used very often by
+     programmers, because is not yet well known and got used. Therefore
+     following example are defining codeblocks:
+ 
+         {|| MyFunction()}
+                     just call function nothing else
+         {|x,y,z| Max(Max(x,y),Max(y,z))}
+                     this is definition of function to pickup max
+                     value from three, it can be defined also as:
+                         function Max3(x,y,z)
+                         return Max(Max(x,y),Max(y,z))
+                     Codeblock can be used as   EVAL(block,14,5,8)
+                     Function can be used ad    Max3(14,5,8)
+         {|nArea,cSeek|  dbselectarea(narea),;
+ CLIPBBS 1-18                   Page 5                   24 Dec 1991
+
+
+                         dbseek(cSeek)}
+                     just two lines of code equivalent in one codeblock
+                     which can be used as EVAL(ALIAS("MYDBF"),"Hello")
+         { {K_UP    , {|b| b:up()   } },;
+           {K_DOWN  , {|b| b:down() } },;
+           {K_LEFT  , {|b| b:left() } },;
+           {K_RIGHT , {|b| b:right()} }  }
+                     this is a ARRAY definition which is used as
+                     "program" for executing action dependent on
+                     pressed key. AEVAL() is used for this job as
+                     another example of Codeblock() using:
+                       ³ AEVAL(aArray,{|aOne| TryIt(aOne)})
+                       ³
+                       ³ function TryIt(aOne)
+                       ³     if lastkey()==aOne[1]
+                       ³         Eval(aOnep[2],BrowseBlock)
+                       ³     endif
+                       ³ return (NIL)
+                     First one AEVAL() is just scanning whole array
+                     and for every elemt is evaluating codeblock with
+                     one parameter - field of array. Then codeblock is
+                     calling TryIt({key , blockforthiskey}) and TryIt()
+                     function will receive small array which then will
+                     use for testing if key was the same as defined in
+                     array. If so, then CodeBlock belongs to this key will
+                     be promptly executed. This few lines construction
+                     which is well flexble to change is replacement of:
+ 
+                     do case
+                         case lastkey()=K_UP
+                             b:up()
+                         case lastkey()=K_RIGHT
+                             b:right()
+                         ....etc....etc...
+ 
+     That's it. Few examples.
+ 
+ Another possibility of CodeBlock is, that body of codeblock RETURNS via
+ EVAL() (or any other codeblock function) latest return value (return value of
+ latest expression in body definition). Therefore it can be used for passing
+ anything back (as for example of "max3" function). There is NO limitation of
+ type of returned value.
+ 
+ Clipper 5.0x is coming with Codeblock facilities and is huge using them at
+ many places. Just take a short look onto STD.CH file defining translation of
+ some clipper commands:
+ 
+  ³  #command SET FORMAT TO <proc>.<ext>                                     ;
+  ³                                                                          ;
+  ³        => _ProcReq_( <(proc)> + "." + <(ext)> )                          ;
+  ³         ; __SetFormat( {|| <proc>()} )
+ 
+     See in __SetFormat, that it is directly pointing into "procedure" name
+     via constructed codeblock.
+ 
+  ³  #command SET FORMAT TO <x:&>                                            ;
+ CLIPBBS 1-18                   Page 6                   24 Dec 1991
+
+
+  ³                                                                          ;
+  ³        => if ( Empty(<(x)>) )                                            ;
+  ³      ;   SET FORMAT TO                                                ;
+  ³      ; else                                                           ;
+  ³      ;   __SetFormat( &("{||" + <(x)> + "()}") )                      ;
+  ³      ; end
+ 
+     In this case one actually can see how to make MACRO/CODEBLOCK
+     conversion.
+ 
+  ³  #command SET KEY <n> TO <proc>                                          ;
+  ³        => SetKey( <n>, {|p, l, v| <proc>(p, l, v)} )
+ 
+     For sure is better use directly SetKey() function instead of OLD format
+     with SET KEY command. In both cases it's ending in SetKey() which is
+     using of course Codeblock.
+ 
+  ³  #command REPLACE [ <f1> WITH <x1> [, <fn> WITH <xn>] ]                  ;
+  ³           [FOR <for>]                                                    ;
+  ³           [WHILE <while>]                                                ;
+  ³           [NEXT <next>]                                                  ;
+  ³           [RECORD <rec>]                                                 ;
+  ³           [<rest:REST>]                                                  ;
+  ³           [ALL]                                                          ;
+  ³                                                                          ;
+  ³        => DBEval(                                                        ;
+  ³                   {|| _FIELD-><f1> := <x1> [, _FIELD-><fn> := <xn>]},    ;
+  ³                   <{for}>, <{while}>, <next>, <rec>, <.rest.>            ;
+  ³                 )
+ 
+     This is typicall example, totally REDUNDANT REPLACE command is replaced
+     immediately into DBEVAL() function with CODEBLOCK consists of:
+ 
+             {|| FIELD->NAMEOFIT := value}
+ 
+     On the same way are used DELETE, RECALL, UPDATE, COUNT, SUM,
+         AVERAGE  commands...
+ 
+ to be continued....
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-18                   Page 7                   24 Dec 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-18                   Page 8                   24 Dec 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ CLIPBBS 1-18                   Page 9                   24 Dec 1991
+
+
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+      As of January First, 1992, the Programmers Distribution Network
+      will be closing down the file area known as PDNDBASE.  This is
+      because of a new file distribution network that has moved into
+      Zone 1 via my system called ClipperNet.
+ 
+      ClipperNet is run by Mike Paschen, at 2:240/100 1:107/230 (and
+      1:107/232) is handling Zone 1, and feeding a node in Zone 2.
+ 
+      The (current) locations that one may link into the ClipperNet in
+      Zone 1 and 2 are:
+ 
+ Zone 1:
+ 13/13 - 102/531 - 107/230 232 - 116/36 - 134/21 - 147/17 - 170/407
+ 274/13 - 282/56 - 283/125 - 324/121 - 395/3 - 2604/101 - 3629/269
+ 
+ (*Please note that 13/13 is currently not accepting any NEW links,
+ except ones that are already established through his system*)
+ 
+ Zone 2:
+ 200/305 306  201/254 - 231/62 - 234/64 - 240/1 100 102 600 - 241/2004
+ 2103 4008 4152 4501 4511 4512 5302 5303 5603 5608 5609 7000 7605 8007
+ 241/8501 - 242/47 66 92 - 243/29 93 - 245/5 9 36 60 102 - 246/5 10 12
+ 246/15 26 32 - 247/1 9 31 - 249/29 - 255/34 - 282/510 - 283/314
+ 285/402 608 - 285/610 - 294/5 296/10 20 - 302/801 804 807 - 313/9
+ 321/100 - 331/110 - 341/6 8 14 25 - 344/3 - 500/223
+ 
+ 
+      The file areas currently available are:
+ 
+      CL-50         Clipper-Net Clipper 5.0 Tools
+      CL-87         Clipper-Net Clipper '87 Tools
+ CLIPBBS 1-18                   Page 10                  24 Dec 1991
+
+
+      CL-DBASE      Clipper-Net dBase Tools
+      CL-DFLEX      Clipper-Net DFLEX Tools
+      CL-DOC        Clipper-Net Documents, Anomalyreports
+      CL-FCO        Clipper-Net Force (FCO) Tools
+      CL-FOX        Clipper-Net FoxBase Tools
+      CL-SQL        Clipper-Net SQL Tools
+      CL-TOOL       Clipper-Net Clipper related Tools
+ 
+      And two EchoMail conferences:
+ 
+      ANNOUNCE.CLN  File Announcements
+      SYSOPS.CLN    SysOps CLN support conference.
+ 
+      1:107/230 and 232 are still accepting nodes for linking into the
+      CLN.  I would prefer to have the PDN and CLN follow along the
+      same lines, but this may take some time.  If you were picking up
+      the PDNDBASE area from your PDN uplink, please request that your
+      uplink pick up the ClipperNet from their uplink.  It is not
+      mandatory that they do so, (nothing in the PDN is mandatory), but
+      if you ask nice, they may do it for you!  :-)
+ 
+      Please, help me to keep the list of nodes that are getting
+      ClipperNet current by sending me link information as it occurs.
+      This helps in finding the best possible link for everyone.
+ 
+      IF YOU ARE NOT CURRENTLY PICKING UP THE PDNECHO, IT IS AVAILABLE
+      ON THE BACKBONE.  PLEASE LINK INTO THIS, AS THERE ARE MAJOR
+      CHANGES HAPPENING IN ALL THE FILE DISTRIBUTION NETWORKS, AND YOU
+      WILL NEED TO KEEP ABREAST OF THEM!
+ 
+      If you have any questions, my voice number is 516-666-6514, or
+      you can send NetMail.
+ 
+      Happy Holidays, Don't Drink and Drive, and enjoy the new services
+      provided.
+ 
+      /* Erik */
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-18                   Page 11                  24 Dec 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 1-18                   Page 12                  24 Dec 1991
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-18                   Page 13                  24 Dec 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

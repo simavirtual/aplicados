@@ -1,0 +1,1337 @@
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+     °°°°°°°²²²²°°²²²²°°°°°²²²²°°°²²²²²²°°²²²²²²°°²²²²²²°°°²²²²°°°°°°°°°°°    
+   °°°°°°°°²²  ²²°°²²  °°°°°²²  °°°²²  ²²°°²²  ²²°°²²  ²²°²²  ²²°°°°°°°°°°°°  
+  °°°°°°°°²²  °°  °²² °°°°°°²² °°°°²² °²² °²² °²² °²² °²² ²²²°°  °°°°°°°°°°°° 
+ °°°°°°°°°²² °°°°°°²² °°°°°°²² °°°°²²²²²  °²²²²²  °²²²²²  °²²²°°°°°°°°°°°°°°°°
+ °°°°°°°°°²² °°°°°°²² °°²°°°²² °°°°²²    °°²²  ²²°°²²  ²²°°° ²²²°°°°°°°°°°°°°°
+  °°°°°°°°°²²°°²²°°²² °²² °°²² °°°°²² °°°°°²² °²² °²² °²² ²²°°²² °°°°°°°°°°°° 
+   °°°°°°°°°²²²²  ²²²²²²² °²²²²°°°²²²²°°°°²²²²²²  ²²²²²²  °²²²²  °°°°°°°°°°°  
+     °°°°°°°°    °°       °°    °°°    °°°°      °°      °°°    °°°°°°°°°°    
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+ 
+   Volume 1, Number 10                                   29 Octomber 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    The Programmer's Guide to CLIPPER Linkers - part (7)  ..................  1
+    Some improvement to read command line arguments!!!  ....................  7
+    Building code for REAL developers...  .................................. 12
+ 2. SOFTWARE  .............................................................. 17
+    List of CLIPPER related areas on CLIPPER BBS HQ system  ................ 17
+ 3. ANOMALIES  ............................................................. 21
+    ANOMALIES reports and commets  ......................................... 21
+    Jo French anomalies report, some comments  ............................. 21
+    AEVAL()           Undocumented return reference  ....................... 21
+    APPEND FROM       Append From Delimited with Character Numbers  ........ 22
+ 4. CLIPPER NET  ........................................................... 23
+    Index of described files in Clipper BBS Magazine  ...................... 23
+ 5. CLIPBBS  ............................................................... 25
+    CLIPBBS distribution  .................................................. 25
+    CLIPBBS, how to write an article!!!  ................................... 26
+
+                                   - - - - -
+ CLIPBBS 1-10                   Page 1                   29 Oct 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (7)
+ 
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                              PRODUCT COMPARISONS
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ 
+         PLINK86s87
+ 
+         Current Version - Clipper Summer 87
+ 
+         List Price - Supplied with Clipper Summer 87
+ 
+         PLINK86s87 is the linker provided with Clipper and is
+         compatible with all Clipper-compiled objects, Clipper-compiled
+         libraries, the Clipper libraries, and all third-party libraries.
+         PLINK86 is a "static overlay" linker and requires careful
+         overlay design.
+ 
+         PLINK86s87 supports overlaying of "MODULES" from libraries to
+         allow you to take simplify your development environment and
+         work from libraries rather than .OBJ files.
+ 
+         PLINK86s87 is a mature, reliable linker which is sophisticated
+         enough to handle linking of most large Clipper applications which
+         requires overlays, provided that you are patient enough to
+         analyze your code and structure your overlays properly.
+ 
+ 
+ 
+         RTLINK
+ 
+         Current Version - 3.11
+ 
+         List Price - $295.00
+ 
+         RTLINK.EXE is a general-purpose MS-DOS linker for all compiler
+         languages, assembly languages, and Clipper.   RTLINK is compatible
+         with the Clipper libraries, Clipper-compiled objects and all
+         third-party libraries.  RTLINK is is also compatible with all
+         PLINK86 commands and will link your applications from your
+         existing PLINK86 *.LNK files.
+ 
+         RTLINK is both a "static" overlay linker and a "reloadable"
+         overlay linker.  It's "reloadable" overlay feature is limited
+         however to C/ASM object files and library modules.  All of the
+         modules in CLIPPER.LIB, EXTEND.LIB and most third-party n
+         libraries are reloadable because they were written in C/ASM.
+ CLIPBBS 1-10                   Page 2                   29 Oct 1991
+
+
+         All Clipper-compiled modules must be placed in "static-overlays"
+         in the same manner as PLINK86.
+ 
+         RTLINK also allows use of .PLLs (pre-linked libraries) to help
+         reduce disk space usage of applications.   RTLINK is a mature,
+         reliable linker which is sophisticated enough to handle linking
+         of any large application which requires overlays.
+ 
+         RTLINK has a "VIRTUAL OVERLAY" feature which provides the added
+         feature of including the DATA portion of object modules into
+         overlay segments, by writing the data to a "virtual overlay"
+         on disk and restoring the data whenever the overlayed code is
+         reloaded into memory.
+ 
+         RTLINK supports overlaying of "MODULES" from libraries to
+         allow you to take simplify your development environment and
+         work from libraries rather than .OBJ files.
+ 
+         RTLINK is an excellent linker for all applications, but
+         particularly for applications which are C/ASM code intensive
+         and NOT Clipper-code intensive.
+ 
+ 
+ 
+         RTLINKplus
+ 
+         Current Version - 4.0
+ 
+         List Price - $495.00
+ 
+ 
+         RTLINKplus is an even more sophisticated version of RTLINK which
+         offer much more power in the area of debugging tools.  RTLINKplus
+         includes MicroSoft CODE-VIEW support, a sophisticated runtime
+         PROFILER, and an overlay analyzing system which scans .MAP files
+         and produces graphs of overlay usage to help determine the
+         efficiency of your overlay structures.
+ 
+         RTLINKplus also includes a VIRTUAL MEMORY LINKING system which
+         allows Microsoft C and MASM programs to automatically execute in
+         all available conventional and expanded memory or in as little as
+         100k of conventional memory.
+ 
+ 
+         RTLINK and RTLINKplus are available from:
+ 
+         Pocket Soft, Inc.
+         P.O. Box 821049
+         Houston, TX 77282
+         Voice: (713) 460-5600
+         Fax  : (713) 460-2651
+ 
+         RTLINK/CLIPPER-5.0
+ 
+         Current version - 3.11
+ 
+ CLIPBBS 1-10                   Page 3                   29 Oct 1991
+
+
+         List Price - Included with CLIPPER-5.0
+ 
+         RTLINK-CLIPPER/5.0 is a custom version of RTLINK which supports
+         all the basic features of RTLINK but with two important new
+         features:
+ 
+         1. Automatic Clipper-code overlaying - this feature uses a
+            "dynamic-overlaying" technique which automatically manages
+            Clipper-code overlays in an overlay pool at runtime.
+ 
+         2. Incremental linking - this feature provides a faster link
+            cycle than normal linking by maintaining a work file which
+            is a history of past linking sessions.  This work file is
+            then used to insure that only the code "changed" since the
+            last link session is linked into the new executable.
+ 
+ 
+ 
+         ALINK
+ 
+         Current Version - 1.08
+ 
+         List Price - $195.00
+ 
+         ALINK.EXE is a linker specially designed for Clipper
+         applications.   ALINK is compatible with the Clipper libraries
+         and all third-party libraries.  ALINK is also compatible with
+         many PLINK86 commands and will link your applications from your
+         existing PLINK86 *.LNK files with some modifications.
+ 
+         ALINK is a "dynamic overlay" linker which provides dynamic
+         overlays for Clipper-compiled object files only.  ALINK will
+         NOT overlay from .LIBrary files therefore all functions from
+         .LIB files will be linked into the ROOT memory area.
+ 
+         ALINK is the only linker which is NOT a stand-alone linking
+         system.  It is instead an overlay "pre-processor" which
+         extracts all the code segments from the Clipper-compiled objects
+         down to the function or procedure level, creates an .OVL file
+         of Clipper-executable code, then creates a set of .SYM (symbol)
+         files which are used by PLINK86 or Microsoft LINK to complete
+         the symbol "fix-ups" and generate the .EXEcutable program.
+ 
+         ALINK also includes a replacement for OVERLAY.LIB which is the
+         "dynamic overlay" manager.  This manager is linked into the
+         .EXEcutable programs and manages the dynamic overlaying of all
+         the Clipper code.  ALINK uses the Clipper free pool to link its
+         executable code segments, therefore it is recommended that you
+         use a memory-packing utility and call the AL_FLUSH() function
+         regularly in your ALINK-ed programs to reduce memory fragmentation.
+ 
+         ALINK is an excellent linker for applications which are
+         Clipper-code intensive.  If you use many functions from third-
+         party libraries, then ALINK will not allow these to be
+         overlayed.
+ 
+ CLIPBBS 1-10                   Page 4                   29 Oct 1991
+
+
+         ALINK is a available from:
+ 
+         Accfin Software
+         329 North State St.
+         Orem, UT 84057
+         1-(800) 336-6644
+ 
+ 
+ 
+         BLINKER
+ 
+         Current Version - 1.3
+ 
+         List Price - $189.00
+ 
+ 
+         BLINKER.EXE is a linker specially designed for Clipper
+         applications.
+ 
+         BLINKER is compatible with the Clipper libraries, and all third-
+         party libraries.  BLINKER is also compatible with many PLINK86
+         commands and will link your applications from your existing
+         PLINK86 *.LNK files with some modifications.
+ 
+         Like ALINK,  BLINKER is a "dynamic overlay" linker which provides
+         dynamic overlays for Clipper-compiled objects and "some" C/ASM
+         objects.  BLINKER will allow overlaying of entire libraries
+         with the "ALLOCATE" command.  This is not always a useful feature
+         because very few libraries have modules which are ALL compatible
+         with BLINKER.  BLINKER requires that C/ASM modules be "well-
+         behaved".  The EXTEND.LIB library is an example of a well-behaved
+         library, therefore, it may be ALLOCATEd in an overlay section.
+ 
+         BLINKER's dynamic overlay manager works excellently with
+         Clipper-compiled code and the EXTEND.LIB library.  Once you
+         start experimenting with other libraries, you may find that it
+         is not worth the effort to go any further.  Some third-party
+         library developers such as FUNCKY, FLIPPER, dCLIP, etc. have
+         released new versions of their libraries which are broken out
+         into "resident" and "overlayable" to be fully compatible with
+         BLINKER.
+ 
+         BLINKER provides the best memory management solution for Clipper-
+         code intensive .EXEcutable applications.  BLINKER is not a simple
+         linker.  It also imbeds functions into the linked program which
+         are called between loading of overlay segments for "memory-packing"
+         to help reduce the memory fragmentation caused by "dynamic-
+         overlaying".  This may cause problems with any non-standard memory
+         allocation techniques you may have built into your application and
+         should be taken into consideration.
+ 
+         BLINKER supports special profiling features, incremental-linking,
+         and allows "burning" of the  SET CLIPPER environment into the
+         .EXEcutable program.
+ 
+         BLINKER evolved from ALINK's technology therefore it accomplishes
+ CLIPBBS 1-10                   Page 5                   29 Oct 1991
+
+
+         its "dynamic-overlaying" in much the same manner, however it is
+         a stand-alone linker and is 5 to 10 times faster than ALINK in
+         producing an executable program.
+ 
+         BLINKER is available from:
+ 
+         BLINK, Inc.
+         P.O. Box 7154
+         Richmond, VA 23221-0154
+         Voice: (804) 353-0137
+         Fax  : (804) 355-1676
+ 
+ 
+ 
+         WARPLINK
+ 
+         Current version - 1.50b
+ 
+         List Price - $250.00
+ 
+         WARPLINK is a general-purpose linker designed for "dynamic-
+         overlay" applications.
+ 
+         WARPLINK is compatible with the Clipper libraries, and all
+         third-party libraries.  WARPLINK is NOT compatible with PLINK86
+         commands and will NOT link your applications from your existing
+         PLINK86 *.LNK files.
+ 
+         WARPLINK is a "dynamic overlay" linker which provides dynamic
+         overlays for Clipper-compiled objects and "some" C/ASM objects.
+         WARPLINK will allow overlaying of called modules from complete
+         libraries by including the library name in (parenthesis).
+ 
+         Like BLINKER, WARPLINK requires that C/ASM modules be "well-
+         behaved".  Because WARPLINK is a general-purpose linker it is
+         more compatible with third-party libraries than BLINKER,
+         and it produces as memory-efficient executables as BLINKER.
+ 
+         There are applications, however, where WARPLINK will create better
+         memory models than BLINKER due to its ability to overlay code not
+         manageable by BLINKER and other situations where WARPLINK will
+         create better speed performance than RTLINK because its
+         "overlay-pool" technique is more efficient than RTLINK's disk-
+         intensive "overlay-reloading".  WARPLINK "learns" how to manage
+         the pool most efficiently while the application is running.
+ 
+         WARPLINK can overlay entire libraries but is NOT capable of
+         overlaying "MODULES" like PLINK86 and RTLINK.
+ 
+         WARPLINK also includes portions of the SMARTMEM (tm) library
+         by Steve Steiner for memory profiling and memory defragmentation.
+ 
+         WARPLINK works with all languages and can create .COM files
+         directly from .OBJ files for much smaller non-Clipper
+         applications.  It also supports incremental linking by re-linking
+         only the modules which have been changed.
+ CLIPBBS 1-10                   Page 6                   29 Oct 1991
+
+
+         WARPLINK also includes a symbol-compacting utility which
+         produces a second .EXE from the original .EXE and removes all
+         duplicate (redundant) symbols from the symbol table to improve
+         memory performance.  This eliminates the need to compile your
+         .PRGs into large objects using .CLP files.
+ 
+         WARPLINK is an excellent linker for all applications.  What
+         it lacks in features, it more than makes up for in performance.
+ 
+         WARPLINK is a available from:
+ 
+         Hyperkinetix, Inc.
+         666 Baker #405
+         Costa Mesa, CA 92626
+         (714) 668-9234
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 7                   29 Oct 1991
+
+
+           `C' Style ArgC() and ArgV() Function For Clipper 5.01
+           =====================================================
+ 
+                           By David A Pearson.
+                           -------------------
+ 
+    After reading about the Exe_Path() function by Terry Carmen back in
+    issue 1-02 I decided that it would be nice to expand on the idea and
+    include a set of ArgC() and ArgV() functions in my library.
+ 
+    Given below is the source for the functions I developed. The approach
+    I took was to grab the whole command line from the PSP block and then
+    write a Clipper function to `split' the command line in the same way
+    that `C' does when your applications starts up.
+ 
+    First off, the function for grabbing the command line:
+ 
+ ;*****************************************************************************
+ ; File....: _GETARGS.ASM                                                     *
+ ; By......: David A Pearson                                                  *
+ ; Function: Provides an internal function for getting the arguments passed   *
+ ; ........: to a clipper program.                                            *
+ ;*****************************************************************************
+ 
+ Public          _GetArgs
+ 
+ Extrn           __RetCLen:Far
+ 
+ _GetArgs_Text   Segment 'CODE'
+                 Assume CS:_GetArgs_Text
+ 
+ ;*****************************************************************************
+ ; Function: _GetArgs()                                                       *
+ ; Syntax..: _GetArgs() --> cArgString                                        *
+ ; Usage...: Returns the argument string passed to the clipper program.       *
+ ; By......: David A Pearson.                                                 *
+ ;*****************************************************************************
+ 
+ _GetArgs        Proc    Far
+ 
+                 Push    BP              ; Save registers
+                 Mov     BP,SP
+                 Push    DS
+                 Push    ES
+                 Push    SI
+                 Push    DI
+ 
+                 Mov     AH,62h
+                 Int     21h             ; BX now contains segment for PSP.
+                 Mov     ES,BX
+                 Mov     SI,80h          ; Offset for arg' string size byte.
+                                         ; Move size into AL.
+                 Mov     AL,Byte Ptr ES:[SI]
+                 Xor     AH,AH           ; Zero AH.
+                 Push    AX              ; Place size onto stack.
+                 Inc     SI              ; Point to start of string.
+ CLIPBBS 1-10                   Page 8                   29 Oct 1991
+
+
+                 Mov     AX,ES           ; Move the segment of the string into
+                                         ; AX.
+                 Mov     BX,SI           ; Move the offset of the string into
+                                         ; BX.
+                 Push    AX              ; Place segment and offset onto the
+                 Push    BX              ; stack.
+                 Call    __RetCLen       ; Call Clipper with the string.
+                 Add     SP,6            ; restore the stack.
+ 
+                 Pop     DI              ; Restore registers
+                 Pop     SI
+                 Pop     ES
+                 Pop     DS
+                 Pop     BP
+ 
+                 Ret                     ; And back we go
+ 
+ _GetArgs        EndP
+ 
+ _GetArgs_Text   EndS
+ End
+ 
+    I'm not too sure if this code will overlay very well with the likes of
+    Blinker, but I'm sure that the ASM programmers among you will be able
+    to sort that out!
+ 
+    Now that we have a method of grabbing the command line we need to split
+    it down into a usable form. Source code follows:
+ 
+ /*****************************************************************************
+ * File....: ARGS.PRG                                                         *
+ * By......: David A Pearson                                                  *
+ * Function: Provides a set of functions for getting at the command line      *
+ * ........: arguments in a 'C' style.                                        *
+ * Notes...: Compile with switches /n/w                                       *
+ * ........: Please note that the first time you call either ArgC() or Argv() *
+ * ........: the function SetArgs() will be called. SetArgs() in turn calls   *
+ * ........: _GetArgs() to retrieve the command tail from the PSP block. It   *
+ * ........: then goes on to parse the string and split it up as 'C' would    *
+ * ........: before your program executes.                                    *
+ * ........: Because of this initial delay you may wish to make a dummy call  *
+ * ........: to one of the functions at the start of you application.         *
+ *****************************************************************************/
+ 
+ #define SLASH_R            chr(13)  // \r is an argument separator.
+ #define SLASH_T            chr(9)   // \t is an argument sepatator.
+ 
+ #define ARG_SEPARATORS     " "+SLASH_R+SLASH_T
+ 
+ #xtranslate PrevChar(<cString>,<nPosition>)  ;
+             =>                               ;
+             if(<nPosition> > 0,substr(<cString>,<nPosition>-1,1),"")
+ 
+ static nArgC := NIL
+ static aArgV := {}
+ 
+ CLIPBBS 1-10                   Page 9                   29 Oct 1991
+
+
+ /*****************************************************************************
+ * Function: ArgC()                                                           *
+ * Syntax..: ArgC() --> nNumberOfArguments                                    *
+ * Usage...: Returns the number of arguments passed to the Clipper program.   *
+ * By......: David A Pearson                                                  *
+ *****************************************************************************/
+ 
+ function ArgC()
+ if nArgC == NIL
+    SetArgs()
+ endif
+ return(nArgC)
+ 
+ /*****************************************************************************
+ * Function: ArgV()                                                           *
+ * Syntax..: ArgV([<nArgIndex>]) --> cArg | aArgs                             *
+ * Usage...: If <nArgIndex> is passed it returns the argument at the position *
+ * ........: indicated by the index. If called with no parameter it returns   *
+ * ........: an array of all arguments.                                       *
+ * By......: David A Pearson                                                  *
+ *****************************************************************************/
+ 
+ function ArgV(nArgIndex)
+ local acReturn := NIL
+ if nArgC == NIL
+    SetArgs()
+ endif
+ if valtype(nArgIndex) == "N"
+    if nArgIndex > 0 .and. nArgIndex <= nArgC
+       acReturn := aArgV[nArgIndex]
+    else
+       acReturn := if(nArgIndex == 0,Exe_Path(),"")
+    endif
+ else
+    acReturn := aArgv
+ endif
+ return(acReturn)
+ 
+ /*****************************************************************************
+ * Function: SetArgs()                                                        *
+ * Syntax..: SetArgs() --> NIL                                                *
+ * Usage...: Internal function to read in the command line and split it into  *
+ * ........: it's componant parts in a style similar to 'C'.                  *
+ * By......: David A Pearson                                                  *
+ *****************************************************************************/
+ 
+ static function SetArgs()
+ local cCommand     := alltrim(_GetArgs()),;
+       cThisArg     := ""                 ,;
+       cThisChar    := ""                 ,;
+       lInQuotes    := .F.                ,;
+       nLoopCounter := 0
+ if empty(cCommand)
+    nArgC := 0
+ else
+    for nLoopCounter := 1 to len(cCommand)
+ CLIPBBS 1-10                   Page 10                  29 Oct 1991
+
+
+       cThisChar := substr(cCommand,nLoopCounter,1)
+       do case
+          case cThisChar $ ARG_SEPARATORS .and. !lInQuotes
+               if !(PrevChar(cCommand,nLoopCounter) $ ARG_SEPARATORS);
+                          .and. !empty(cThisArg)
+                  aadd(aArgV,cThisArg)
+                  cThisArg := ""
+               endif
+          case cThisChar == "\"
+               if substr(cCommand,nLoopCounter+1,1) != '"'
+                  cThisArg += cThisChar
+               endif
+          case cThisChar == '"'
+               if PrevChar(cCommand,nLoopCounter) == "\"
+                  cThisArg += cThisChar
+               else
+                  if lInQuotes
+                     aadd(aArgV,cThisArg)
+                     cThisArg := ""
+                  else
+                     if !(PrevChar(cCommand,nLoopCounter) $ ARG_SEPARATORS);
+                                 .and. !empty(cCommand)
+                        aadd(aArgV,cThisArg)
+                        cThisArg := ""
+                     endif
+                  endif
+                  lInQuotes := !lInQuotes
+               endif
+          otherwise
+               cThisArg += cThisChar
+       endcase
+    next
+    if !empty(cThisArg)
+       aadd(aArgV,cThisArg)
+    endif
+    nArgC := len(aArgV)
+ endif
+ return(NIL)
+ 
+    Please note that for ArgV() to work correctly you should include the
+    Exe_Path() function in your application.
+ 
+    ArgC() returns the number of paramaters passed on the command line,
+    for example:
+ 
+         nPassed := ArgC()
+ 
+    ArgV() returns the actual value of the parameter, for example:
+ 
+         function ShowArgs()
+         local nArg := 0
+         for nArg := 0 to ArgC()
+            ? ArgV(nArg)
+         next
+         return(NIL)
+ 
+ CLIPBBS 1-10                   Page 11                  29 Oct 1991
+
+
+    would display a list of all arguments passed. Note that calling ArgV()
+    with a value of 0 is the same as calling Exe_Path(). Also, you can
+    call ArgV() with no parameters to get an array of all passed parameters.
+    For example:
+ 
+         function ShowArgs()
+         local aArgs := ArgV()
+         aeval(aArgs,{|element| qout(element)})
+         return(NIL)
+ 
+    Please note that the returned array does *not* contain the output
+    from Exe_Path(), Clipper isn't too keen on you asking for element
+    0 of an array!
+ 
+    Using a ArgV()/ArgC() approach in your application has a couple of
+    advantages. First, you can get access to the command line from any
+    point in your system, not just from the top level function/procedure.
+    Also, you can cater for a variable number of parameters. By using
+    ArgV() you can also detect the Clipper // paramaters too, for example
+    you can check if //F<NoOfFiles> has been passed on the command line.
+ 
+    I hope this is of use to someone. I developed these more for fun than
+    anything else, and I must admit I've not used them for anything yet!
+ 
+                 __DavePearson()
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 12                  29 Oct 1991
+
+
+          BUILDING CODE FOR REAL (estate?) DEVELOPERS
+          -----------------------------------------------------------
+          Copyright (C) G. L. Jereza  1991  All Rights Reserved.
+ 
+          Developing  software  is  very  much  like  building a house.
+          Let's look at two similarities and briefly elaborate on  one.
+          First,  the  system  analyst  is,  in  many  ways,  like  the
+          architect; the  system designer  is like  the contractor; and
+          the programmer the  craftsman.  And  second, just as  a house
+          must be built with a set of building codes, so must a program
+          be written according to design and coding standards.
+ 
+          Standards are  the application's  bedrock.   The standards in
+          here  come  from  several  sources.    Most are from personal
+          experience.   The others  are from  other language  norms, or
+          were adapted from  Simonyi's Hungarian notation  methodology,
+          as  well  as  other  sources.    The  selection was, well ...
+          eclectic.
+ 
+          These standards have somewhat overlapping objectives:
+ 
+                  1. improve maintainability
+                  2. save time thinking about variable names
+                  3. save effort entering unnecessary keystrokes
+                  4. make debugging easier, and
+                  5. encourage consistency through documentation
+ 
+          The common theme is speed.  However, since software evolve or
+          die, the primary objective is to improve maintainability.
+ 
+          In the long  term, these standards  are more economical  than
+          new hardware.   Successful  implementation, however,  require
+          consistent  use,  and  of  course,  that  both  designer  and
+          programmer exercise discipline and a sense of idealism.
+ 
+          Enough said.
+ 
+ 
+          CLIPPER 5 DESIGN AND CODING STANDARDS
+ 
+          Rule 1: Establish a clear objective.  Remember that a problem
+                  understood  is  half  solved.    Use  one sentence to
+                  describe   it   and  several  qualifiers  to  address
+                  'doability' (including features), time, and cost
+                  constraints. Example:
+ 
+                           An interpreter module for Clipper.
+                             - IDE like QuickBasic 4.5
+                             - x guru year(s)
+                             - priced less than $100
+ 
+                  Once the objective has been created, stand by it.  If
+                  the pressure to change becomes unbearable, then  call
+                  it something else.  A  new version perhaps?  (A  very
+                  wicked grin  is appropriate  here).   Or start  a new
+                  project!  (Easy to do when you have not invested your
+ CLIPBBS 1-10                   Page 13                  29 Oct 1991
+
+
+                  ego, or too much time, into that old project).  Often
+                  times, it is far  easier to start from  the beginning
+                  as compared to modifying code.
+ 
+          Rule 2: Define   file  structures   and   relationships,  and
+                  normalize data (remove subcategories).  Start a  data
+                  dictionary where all the terms are defined.  The  key
+                  word here is 'start'.
+ 
+          Rule 3: Avoid coding until the very last.  Use pseudocode  or
+                  structured English.   Prototype as soon  as possible.
+                  Draft a user's manual.  Get user feedback.  Make sure
+                  you WILL have users.  Realize that there is no  right
+                  way of doing the wrong thing.
+ 
+          Rule 4: Code the  program in  three stages:   First,  make it
+                  work.  Second, make it look good.  Last, optimize the
+                  code.  Test top modules first (i.e. top-down design).
+                  Use 'stubs' for lower modules.
+ 
+          Rule 5: Avoid overly clever or convoluted code (e.g. compound
+                  Boolean expressions). Period.
+ 
+          Rule 6: Practice good system design.  Checklist:
+ 
+                  __  Modules should be functionally cohesive.  Do  not
+                      combine  unrelated  processes  into   meaningless
+                      modules. Avoid procedures. Use functions.
+                  __  Modules  should  be  loosely  coupled.   Few data
+                      elements should be shared between module  i.e.  a
+                      module should  not modify  the internal  logic or
+                      data of  another module.   Use  local and  static
+                      variables.
+                  __  A module should not call more than  approximately
+                      half a dozen lower-level modules.
+                  __  Any module affected by the outcome of a  decision
+                      should be subordinate to the module that  affects
+                      the   decision   (though   not   necessarily  the
+                      immediate subordinate).
+ 
+          Rule 7: Design  a  user-friendly  interface.   This means you
+                  must  design  for  the  user  and  you must know your
+                  subject.  Checklist:
+ 
+                  __  Maintain the user's interest.
+                  __  Orient the user (e.g. number screens).
+                  __  Communicate in concrete and specific terms.
+                  __  Request inputs and produce outputs in consistent
+                      terms.
+                  __  Ask for information in a logical sequence.
+                  __  Make it obvious what kind of error was commited
+                      and where.
+                  __  Provide a way to cancel part or all of the
+                      transaction.
+                  __  Provide a convenient help mechanism.
+                  __  Give the user  control.
+ CLIPBBS 1-10                   Page 14                  29 Oct 1991
+
+
+                  __  Keep the user informed at all times.
+                  __  Provide defaults for standard inputs.
+                  __  Take advantage of color and sound, but don't
+                      overdo it.
+                  __  Focus the user's attention e.g. a cursor.
+                      People focus on one concept at a time. Do not
+                      focus on the technology.
+                  __  Keep  it simple even if it means code complexity.
+                      Avoid unnecessary parts. Avoid the feature-creature.
+ 
+          Rule 8: Do not re-invent the wheel.  Do what CPAs  (certified
+                  public  accountants)  do:    cut,  paste, and attach.
+                  Isaac Newton said, "If I have seen further, it is  by
+                  standing on  ye shoulders  of giants".   Re-use code,
+                  but  do  not  code  for  re-usability (unless this is
+                  *the* objective).
+ 
+          Rule 9: Write clear code, and complete but  concise comments.
+                  Checklist:
+ 
+                  __  Lower   case    all   native    language   words.
+                      Exceptions:
+ 
+                      a. FUNCTION, RETURN, LOCAL, STATIC, and FIELDS.
+                      b. Object oriented export instance variables.
+                         Example:
+ 
+                           oBrowse:getColumn(oColumn)
+                                   ^--- lowercase tagname.
+ 
+                  __  Begin   user-defined   functions   with   Capital
+                      letters.  Start functions from a 3rd party source
+                      with a "3".  (What?!   You don't have the  source
+                      code?).  Use  UpperLower combinations to  delimit
+                      identifiers,  e.g.    FirstName.    Also,   start
+                      conversion functions with the value they take and
+                      end  with  the  converted  value separated by the
+                      number 2.
+ 
+                  __  Prefix  all  variables  with  a  character   type
+                      prefix:
+ 
+                        a - Array         o - Object
+                        b - Code block    s - Screen variable
+                        c - Character     k - Color string
+                        d - Date          m - a variable in .mem file
+                        l - Logical       z - miscellaneous or catchall
+                        n - Numeric
+ 
+                      Use   the   single   type-prefix   character  for
+                      temporary variables.
+ 
+                  __  Express  file  names  in  capital letters.  Begin
+                      file names  with a  common prefix.   Index  files
+                      should reflect the file  that they belong to  but
+                      not what the index expression is.  Example:
+ CLIPBBS 1-10                   Page 15                  29 Oct 1991
+
+
+                      Correct:
+                         NAMES.DBF ---> NAMES1.NTX
+                                        NAMES2.NTX
+                      Wrong:
+                         NAMES.DBF ---> NAMESF.NTX
+                                        NAMESL.NTX
+ 
+                      Also, reference all fields with an alias.
+ 
+                  __  Layout  each  code  page  in  an  orderly manner.
+                      Avoid  writing  lines  that  extend  beyond   the
+                      visible right margin.  Use continuation  symbols.
+                      Indent logical levels 3 spaces.  Do not use tabs.
+                      Use  parentheses  liberally.    Use a full screen
+                      width line of dashes to delineate a logical break
+                      in a  program file.
+ 
+                  __  Use  a  standard 'header' for  each program file.
+                      Example:
+ 
+                         Name .......: 3GOOD()
+                         Description.: Check code integrity.
+                         Syntax .....: 3GOOD()
+                         Returns ....: Logical
+                         Called by...: Main()
+                         Calls.......: -none-
+                         Example ....: if !3GOOD()
+                                          zap
+                                       endif
+                         Comments....: Function from Free Inc.
+ 
+                  __  Limit  module  listings  to  54  lines or 1 page.
+                      Large  complex  modules  should  be  broken  into
+                      submodules.  On  rare ocassions, trivial  modules
+                      consisting of two to three lines, can be combined
+                      into a supermodule.
+ 
+                  __  Use  version  control  software  to document code
+                      during development.
+ 
+                  __  Use include files.
+ 
+                  __  Ideally, final code should be self - documenting.
+                      Four    letter    command    abbreviations    are
+                      counter-productive.   Like code,  comments should
+                      be  modular.    No  references  to  other sources
+                      (other than in the header) allowed.
+ 
+                  __  Compile using the following example:
+                      CLIPPER filename  [/m/n/s/m | /m/n/b/p]
+ 
+                  __  Link using the following example:
+                      RTLINK FI filename VE 2 LIB 3freelib PLL base50
+ 
+          Rule 10: Test your  application with this in  mind:  "testing
+                  can  show  the  presence,  but  never  the absence of
+ CLIPBBS 1-10                   Page 16                  29 Oct 1991
+
+
+                  errors".   Where the  documentation and  the software
+                  are inconsistent  with each  other, generally  assume
+                  that the error is in the software (or as our publish-
+                  er is fond of saying, 'reality is different').
+ 
+          That's it.  Just like the ten commandments.  And like the ten
+          commandments, the list is not all inclusive or comprehensive.
+          It is aimed toward  smaller projects.  In those  instances,
+          it worked for me.  And it should work for you too.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 17                  29 Oct 1991
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+ List of CLIPPER related areas on CLIPPER BBS HQ system
+ 
+     Mentioned files are available on NETCONSULT BBS, 31-10-4157141
+     (working hours, workdays 18:00->08:00, weekends 24hours/day)
+ 
+     Speeds 1200bps -> 14400bps (V32 modem)
+ 
+     FIDONET 2:285/608, Signet 27:1331/4412
+ 
+ 
+ ÕÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+ ³ # 53 ³ CLIPPER related utilities *CL*              Access Level :        10 ³
+ ÃÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ °°°°°±±±±±²²²²²ÛÛÛÛÛ ³    153 KBytes in     2 Files  ³ ÛÛÛÛÛ²²²²²±±±±±°°°°° ³
+ ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ XREF140C.ZIP  152610 10-17-91* [002] DBase/Clipper DBF and NDX/NTX
+                                           Documentation Tool
+ 
+ 
+ 
+ ÕÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+ ³ # 54 ³ CLIPPER text&.NGuides     *CL*              Access Level :        10 ³
+ ÃÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ °°°°°±±±±±²²²²²ÛÛÛÛÛ ³   1499 KBytes in    42 Files  ³ ÛÛÛÛÛ²²²²²±±±±±°°°°° ³
+ ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ -ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ -³                  TEXT FILES about/around CLIPPER                         ³Ş
+ -³                                                                          ³Ş
+ -ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙŞ
+ - ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ 
+ RELCLIP5.ARJ   59424 06-11-91  [002] Release note in WP 5.1 format
+ -            THis file uploaded  by somebody there maybe for making betters
+ -            score of Download:Upload ratio contains complete text of release
+ -            note about Clipper 5.01.
+ NED.TXT         2271 05-07-91  [002] lezen van commandline (clipper 5.0 +
+                                           EXPAND.LIB)
+ -            Sample text about reading a command line parameters from inside
+ -            of Clipper more universal than PARAMSTR() function. (Dutch text)
+ SHARE.MSG       6028 09-30-90  [001] Text about using SHARE.EXE with CLIPPER
+ -            Usefull text explaining SHARE.EXE command from MS DOS. Especialy
+ -            usefull because written from point of view CLIPPER.
+ CL50PRG.ARJ    25684 09-16-91  [002] Discussion about 5.0 from CW on Nantucket
+ -            Discussion about Clipper 5.0x from CLIPPER WORLD. CLIPPER World is
+ -            Nantucket BBS in UK and contains areas for CLipper with direct
+ -            support of Nantucket stuff in England.
+ CLIPLINK.ARJ   38148 09-06-91  [002] documentation about LINKERs for CLIPPER
+ - ±°±        Document about CLipper linkers. Giving complete list of linkers for
+ - ±°±        clipper. Compares them and explaining all linking and overlaying
+ - ±°±        methods. Giving explanation about how to static overlay clipper and
+ - ±°±        how to control some from linkers. VERY GOOD text.
+ CLIPBBS 1-10                   Page 18                  29 Oct 1991
+
+
+ CLPGUID4.ARJ   29404 04-14-91  [002] Errate of programs for Rick Spence's book
+ -           This is a complete set of programs used in Rick Spences's book about
+ -           Clipper, together with fixes of mistakes inside.
+ 
+ -ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ -³                  NORTON GUIDES or another help for CLIPPER               ³Ş
+ -³                                                                          ³Ş
+ -ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙŞ
+ - ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ 
+ 50NGCH.ARJ      9583 01-06-91  [002] Norton Guide for Clipper 5.0 header files
+ -           This is ONLY a complete .NG database contains all .CH file coming
+ -           with CLIpper 5.0. It's nice to have it sometime when one is
+ -           interested in some constants or structures stored inside of this
+ -           header files.
+ 
+ -ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ -³                  NANTUCKET and ANOTHER CLIPPER NEWSLETTERs....           ³Ş
+ -³                                                                          ³Ş
+ -ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙŞ
+ - ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ 
+ NN0101.ARJ      9869 12-11-90  [002] Nantucket News Volume 1 Number 1
+ NN0102.ARJ     17079 12-11-90  [000] Nantucket News Volume 1 Number 2
+ NN0103.ARJ     17921 12-11-90  [000] Nantucket News Volume 1 Number 3
+ NN0104.ARJ      8164 12-11-90  [000] Nantucket News Volume 1 Number 4
+ NN0201.ARJ      7576 12-11-90  [000] Nantucket News Volume 2 Number 1
+ NN0202.ARJ     18900 12-11-90  [000] Nantucket News Volume 2 Number 2
+ NN0203.ARJ      3205 12-11-90  [000] Nantucket News Volume 2 Number 3
+ NN0204.ARJ      9125 01-04-91  [000] Nantucket News Volume 2 Number 4
+ NN0301.ARJ     16109 12-11-90  [000] Nantucket News Volume 3 Number 1
+ NN0302.ARJ     12296 12-11-90  [000] Nantucket News Volume 3 Number 2
+ NN0303.ARJ     15879 12-11-90  [000] Nantucket News Volume 3 Number 3
+ R(C)0206.ARJ   47402 12-11-90  [000] Reference Clipper Volume 2 number 6
+ R(C)0209.ARJ   69086 12-11-90  [000] Reference Clipper Volume 2 number 9
+ R(C)0210.ARJ  141162 12-11-90  [000] Reference Clipper Volume 2 number 10
+ R(C)0211.ARJ   97237 12-11-90  [000] Reference Clipper Volume 2 number 11
+ R(C)0212.ARJ  123300 12-11-90  [000] Reference Clipper Volume 2 number 12
+ R(C)0306.ARJ   19940 09-12-90  [000] Reference Clipper Volume 3 number 6
+ R(C)0307.ARJ   48238 12-11-90  [000] Reference Clipper Volume 3 number 7
+ R(C)0310.ARJ  125633 09-12-90  [000] Reference Clipper Volume 3 number 10
+ R(C)0311.ARJ  127102 09-12-90  [000] Reference Clipper Volume 3 number 11
+ R(C)0312.ARJ  201636 09-12-90  [000] Reference Clipper Volume 3 number 12
+ TIPS_1.ARJ      4708 08-20-91  [001] Another ROGER DONNAY text about
+ TIPS_2.ARJ      3770 08-15-91  [001] Clipper, Linking, Overlaying
+ TIPS_3.ARJ      5064 08-15-91  [002] And other usefull things
+ CLPFON.ARJ     54373 09-10-91  [001] Some EGA/VGA Clipper Fonts, needs Expand
+                                           Lib
+ CL5103.ARJ     28749 09-16-91  [003] Anomaly report No. 3 for Clipper 5.01
+ ALTDO328.ARJ   25805 09-16-91  [001] Fast, small DBF file utility
+ CLIP110.ARJ    27114 09-16-91  [001] Clip 1.10, easy MAKE for Clipper '87 &
+                                           5.0x
+ CL-ROUTE.263    4499 09-21-91  [000] CLN routing plan for Friday, 20 Sep 1991
+ SCANCODE.ARJ    2154 09-27-91  [000] dbf-file with all ScanCodes
+ CL-ROUTE.270    5109 09-28-91  [000] CLN routing plan for Friday, 27. Sep 1991
+ FECHO.DAT        512 10-15-91* (yet to be descriped)
+ CLIPBBS 1-10                   Page 19                  29 Oct 1991
+
+
+ -------------------------------------NEW_-------------------------------
+ CL-POL.007      3319 10-14-91* CLN policy No. 07, Sunday, 13. Oct 1991
+ CL-ROUTE.286    5686 10-14-91* CLN routing plan for Sunday, 13. Oct 1991
+ CTNEWS01.ARJ   21220 10-14-91* [001] Deutsche Clipper News Ausgabe 1 von Henry
+                                           Jalbuena (2:246/14.5)
+ 
+ 
+ 
+ ÕÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+ ³ # 55 ³ CLIPPER libraries         *CL*              Access Level :        10 ³
+ ÃÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ °°°°°±±±±±²²²²²ÛÛÛÛÛ ³   1072 KBytes in    14 Files  ³ ÛÛÛÛÛ²²²²²±±±±±°°°°° ³
+ ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ -ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ -³                  LIBRARIES for Clipper - all  kinds                      ³Ş
+ -³                                                                          ³Ş
+ -ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙŞ
+ - ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+ 
+ CLIP327.ARJ    13141 03-17-90  [000] 5.0x  Communication CLIPPER<-->IBM3270
+ -            This is .LIB file which will allow to connect Clipper application
+ -            to IBM3270 communication.
+ CLPNET.ARJ      8855 07-11-90  [003] 5.0x  NOVELL Bindery functions Library
+ -           .LIB file for accessing bindery informations from NOVELL bindery.
+ -            Novell bindery contains all informations about users and objects
+ -            inside of server. Therefore can be very useful to have access to
+ -            this kind of informations.
+ LXNET.ARJ      18048 09-30-90  [002] 5.0x NOVELL Bindery and printing
+ -            This is a another version of CLPNET.ARJ. Adding some possibilities
+ -            to access a printing abilities of Novell Netware.
+ MOUS50.ARJ     13507 03-23-91  [001] 5.0x mouse library
+ -            Complete MOUSE library for use in Clipper 5.0x applications.
+ -            Of course is NOT supplied source, only .LIB file.
+ CLIPFPCX.ARJ   34268 05-24-91  [004] S87 5.01x  Clipper s87/5.01: "Fast" PCX
+ - ±°±        VERY good library for VERY FAST displaying a PCX file to display
+ - ±°±        of your computer. Working really very fast and taking very small
+ - ±°±        part of memory for to do it.
+ VWINDOW.ARJ    11257 05-16-91  [005] 5.0x Windowing library for CLipper
+ -            This is a library with documentation for windowing system for use
+ -            with Clipper 5.0x. Seems nice, but i have my own one.
+ AHELP5.ARJ    197215 05-16-91  [001] Complete Linkable (.LIB) help
+ -            This library is offering complete HELP system with all normal
+ -            HELP possibilities. There is also good documentation for it.
+ TRL.ARJ       311671 04-04-91  [002] 5.0x Tom Rettig Library for Summer+5.0
+ -  ±°±       Well known library with mostly low level functions. Now it's
+ -  ±°±       totally free for use and is coming together with ALL sources.
+ -  ±°±
+ EXPAND50.ARJ   78090 04-04-91  [001] 5.0x Expand Library for CLIPPER 5.0
+ EXPAND52.ARJ   87272 06-18-91  [002] 5.01 Expand library v2.00
+ EXPAND30.ARJ   65418 08-29-91  [001] S87  Expand Library for Summer 87
+ -  ±°±       Dutch origin library. Very good combination of low level and
+ -  ±°±       high level functions for all kind of system dependent functions.
+ -  ±°±       Modem communication, mouse, PRINT support and number of next
+ -  ±°±       well usefull functions. This is really VERY good library. V2.00
+ -  ±°±       lot of new function which are really very nice!
+ TSDWIN10.ARJ   27895 03-06-91  [002] 5.0 Another windowing library
+ CLIPBBS 1-10                   Page 20                  29 Oct 1991
+
+
+ -            Complete windowing library for CLipper 5.0 which seems be a good.
+ -            I didn't test this library but probably i will do this because
+ -            seems to be really nice.
+ 3PX50.ARJ      65134 11-24-90  [000] Another Library for Clipper
+ -            some function to improve your programs...
+ CLHLP100.ARJ  140920 07-04-91  [001] Create Help utility for your program.!!
+ -            Library for both versions of Clipper S87 and 5.01
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 21                  29 Oct 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                  Jo French anomalies report, some comments
+ 
+ Following serie of anomalies and comments to them is using as basis complete
+ JO FRENCH anomaly report (file CL5103.NG), eventually later version (5104 is
+ slowly coming somewhere around). Because i'm not member of Compuserver and
+ from Europe is Compuserver one from most expensive and most hard accesible
+ medias to acces, i want to comment some Jo French reported anomalies here.
+ Maybe he will get all this commment and will be able to update his report
+ for new things from mine and also for some commented facts.
+ 
+ Jo French is making great deal. For 5.0 version of CLipper it was wonderfull
+ job to collect all those bugs (anomalies so called) and in this time Jo's
+ report was very good with very good checking. Probably during time and lot
+ of work it's sometime loosing quality of previous reports. Because i'm
+ keeping also mine personal buglists, my investigations of all Jo's reported
+ problems is sometime different. Therefore i want to pick up those differences
+ and hope that someone else will be able to give me additional informations
+ to finish my private research.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+
+
+              AEVAL()           Undocumented return reference.
+ 
+   Problem Statement
+ 
+   AEVAL() documentation does not mention the presence of a second return
+   reference; i.e., the element number.
+ 
+ ---COMMENT---
+ CLIPBBS 1-10                   Page 22                  29 Oct 1991
+
+
+     Maybe my english knowledge is not enough good to understand this simple
+     sentence <grin>, but i don't see any possibility to have presence of a
+     second return reference from one function. Only via changing directly
+     some parameter of function, but how two returns?
+ 
+     JO, if you are reading this, please try to keep good work which i saw
+     in all 5.0 version reports and complete all description to be enough
+     clear and descriptive.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+
+
+       APPEND FROM       Append From Delimited with Character Numbers.
+ 
+   Problem Statement
+ 
+   APPEND FROM DELIMITED does not translate numbers enclosed in quotes to
+   numerics for input to a numeric field.
+ 
+ ------COMMENT-----
+ 
+     Maybe i'm missing some background of this problem, but when i'm
+     creating test program like this:
+      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³  #define VARSIZE 128                        ³
+      ³  dbcreate('test01.dbf',;                    ³
+      ³          { {"CHARS", "C", VARSIZE , 0 },;   ³
+      ³          {"NUMBR", "N",  12     , 2 }  })   ³
+      ³                                             ³
+      ³  use TEST01                                 ³
+      ³  append from test.txt delimited             ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+     Then creating file TEST.TXT with text for append:
+      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³  1,1                                        ³
+      ³  "2","2"                                    ³
+      ³  3,3                                        ³
+      ³  "4","4"                                    ³
+      ³  5,5                                        ³
+      ³  "6","6"                                    ³
+      ³  7,7                                        ³
+      ³  "8","8"                                    ³
+      ³  9,9                                        ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+     Result is as expected. Numeric field correctly filled with
+     numbers coming from appended text, never mind if closed in
+     quotes or not.
+ 
+     Has anybody around some other experience?
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 23                  29 Oct 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ CLIPBBS 1-10                   Page 24                  29 Oct 1991
+
+
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 25                  29 Oct 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-10                   Page 26                  29 Oct 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

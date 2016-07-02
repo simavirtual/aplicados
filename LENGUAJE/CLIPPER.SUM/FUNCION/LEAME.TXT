@@ -1,0 +1,43 @@
+
+Estimado lector,
+
+A pesar de nuestros esfuerzos en proporcionar un disquete 
+operativo, es necesario realizar algunas correcciones 
+en ciertas funciones para su adeccuado funcionamiento.
+Adem s, hay que hacer algunas observaciones en relaci¢n 
+a la utilizaci¢n de algunas funciones. Compruebe los 
+t¢picos que siguen y realice las alteraciones necesarias 
+si en su libro aparecen las siguientes situaciones:
+
+
+Antes de eyecutar el programa por primera vez, indexe los
+archivos ejemplo de la siguiente manera:
+
+Archivo FUNC.DBF    indexar por CODFUNC generando el ¡ndice INDCOD
+        SETORES.DBF indexar pod CODSET  generando el ¡ndice INDSET
+        CARGOS.DBF  indexar por CODCAR  generando el ¡ndice CODCAR
+
+==============================================================
+
+PROGRAMA  PRFGRAFI
+
+El archivo INGRESOS.DBF no existe. Aparece en dos ejemplos
+de GRAFHOR1 precisamente para comprobar el mensaje de error.
+
+==============================================================
+
+PROGRAMA PRFPROC
+
+En el programa ejemplo se incluyeron algunas l¡neas con la 
+funci¢n INKEY(0) para que el lector tuviera que pulsar 
+cualquier tecla para visualizar los term¢metros que muestran 
+el desarrollo del procesamiento.
+Esto es debido a que el archivo de datos es muy peque¤o y 
+sin estas l¡neas, el usuario veria mal el movimiento del 
+indicador. Suprima esas l¡neas cuando quiera ejecutar estas 
+funciones en sus sus programas.
+
+LINEA  11 DEL DISQUETE  (18 EN EL LISTADO FINAL)
+LINEA  62 DEL DISQUETE  (69 EN EL LISTADO FINAL)
+LINEA 167 DEL DISQUETE (174 EN EL LISTADO FINAL)
+

@@ -1,0 +1,9 @@
+    Welcome to the Schooner help example. This help screen is built from an IMGLISTBOX() function. The IMGLISTBOX() function is a fully programmableç
+function which allows you to build virtually any type of scrolling or list selection function.
+    For example, the scrolling FEATURES list found in the Features option on the main title screen is an IMGLISTBOX() function programmed to scrollç
+text from a simple text file. The HOME LIST menu option found under the Options menu in this Real Estate example is an IMGLISTBOX() functionç
+programmed to display and select from a .DBF file.
+    Schooner Version 2.00 is filled with many other powerful GUI tools. Display .PCX images, build icon boxes, detect mouse activity, print graphicsç
+and much more. 
+    Schooner Version 2.00 - The clear choice for graphical development.
+

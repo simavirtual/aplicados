@@ -1,0 +1,22 @@
+//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+//³ FIVEEXE.RMK                               WORKBENCH (c) Tom Groeger ³Û
+//³ Make Script                                                03/23/96 ³Û
+//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙÛ 
+// ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+MakePath[.ch]   = "C:\FW\INCLUDE";$(include);
+
+.prg.obj:
+  SET INCLUDE=$(MakePath[.ch])
+  SET CLIPPERCMD=-m -w -n -q -es2
+  clipper $< -o$@
+
+.obj.exe:
+  blinker @FIVEEXE.LNK
+
+// Modules
+// =========
+FiveExe.obj     : FiveExe.prg
+
+FiveExe.exe     : FiveExe.obj
+

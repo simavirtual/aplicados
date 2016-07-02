@@ -1,0 +1,90 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+WHO DIALOG DISCARDABLE  0, 0, 328, 269
+STYLE WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Who"
+CLASS "Who"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,265,5,50,20
+    LISTBOX         IDC_LIST1,10,30,140,80,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,10,140,310,115,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Active Connections",IDC_STATIC,10,10,70,8
+    LTEXT           "Connections Open Files",IDC_STATIC,10,125,80,8
+    ICON            IDI_ICON1,IDC_STATIC,170,5,18,20
+    GROUPBOX        "Connection Info",IDC_STATIC,170,30,150,80
+    EDITTEXT        IDC_EDIT1,275,120,20,13,ES_AUTOHSCROLL
+    CTEXT           "Refresh Rate",IDC_STATIC,225,125,45,10
+    LTEXT           "Login Date :",IDC_STATIC,175,45,40,13
+    LTEXT           "Login Time :",IDC_STATIC,175,60,40,13
+    LTEXT           "Station Address :",IDC_STATIC,175,75,55,13
+    EDITTEXT        IDC_EDIT3,220,45,95,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT4,220,60,95,13,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT5,175,90,140,13,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "CLOSE",IDC_BUTTON1,205,5,50,19
+END
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICON1               ICON    DISCARDABLE     "WHO.ICO"
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

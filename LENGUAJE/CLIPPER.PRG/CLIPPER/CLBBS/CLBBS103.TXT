@@ -1,0 +1,2001 @@
+                                                             
+        ²²²²   ²²      ²²²²   ²²²²²²  ²²²²²²  ²²²²²²   ²²²²    
+       ²²°°²²  ²²°      ²²°°   ²²°°²²  ²²°°²²  ²²°°²² ²²°°²²   
+      ²²°°  °° ²²°      ²²°    ²²° ²²° ²²° ²²° ²²° ²²°²²²  °°  
+      ²²°      ²²°      ²²°    ²²²²²°° ²²²²²°° ²²²²²°° ²²²     
+      ²²°      ²²°      ²²°    ²²°°°°  ²²°°²²  ²²°°²²   °²²²   
+       ²²  ²²  ²²°      ²²°    ²²°     ²²° ²²° ²²° ²²°²²  ²²°  
+        ²²²²°° ²²²²²²  ²²²²   ²²²²    ²²²²²²°°²²²²²²°° ²²²²°°  
+         °°°°   °°°°°°  °°°°   °°°°    °°°°°°  °°°°°°   °°°°   
+                                                             
+   Volume 1, Number 3                               11 February 1991
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1.  EDITORIAL  ...........................................................  1
+     New things are coming  ...............................................  1
+ 2.  ARTICLES  ............................................................  2
+     Hungarian identifier naming conventions  .............................  2
+     DBEVAL() or classic WHILE ! EOF() ??  ................................  7
+     RCS - Revision Control System  ....................................... 12
+ 3.  SOFTWARE  ............................................................ 16
+     DANIEL.LIB - RMAKE file for build library  ........................... 16
+     DANIEL.LIB - ISPRINTER2() universal function  ........................ 17
+     DANIEL.LIB - SCREEN shadowing module  ................................ 19
+ 4.  NEWS  ................................................................ 22
+     M&T Books: Clipper 5 - A Developer's Guide  .......................... 22
+ 5.  Q&A  ................................................................. 24
+     Why is .EXE in 5.0x so big  .......................................... 24
+ 6.  ADVERTISEMENT  ....................................................... 25
+     What was published in previous number?  .............................. 25
+ 7.  COMMENTS  ............................................................ 26
+     SOLUTION of preprocessor limitation for recursion  ................... 26
+ 8.  ECHODUMP  ............................................................ 27
+     CONFERENCE DUMP part (2)  ............................................ 27
+ 9.  CLIPPER NET  ......................................................... 32
+     ClipNet - CLPFON.ARJ  ................................................ 32
+     ClipNet - COND.ARJ  .................................................. 32
+ CLIPBBS 1-03       Table of Contents (...)        11 Feb 1991
+
+
+     ClipNet - INDXSL.ARJ  ................................................ 33
+     ClipNet - IOBASYS9.ARJ  .............................................. 33
+     ClipNet - MK30.ARJ  .................................................. 34
+     ClipNet - MOVEGETS.ARJ  .............................................. 35
+     ClipNet - READPW.ARJ  ................................................ 35
+     ClipNet - SYMBOL.ARJ  ................................................ 35
+ 10. CLIPBBS  ............................................................. 37
+    CLIPBBS distribution  ................................................ 37
+    CLIPBBS, how to write an article!!!  ................................. 38
+
+                                   - - - - -
+ CLIPBBS 1-03                   Page 1                   11 Feb 1991
+
+
+ =============================================================================
+                                   EDITORIAL
+ =============================================================================
+
+
+                          New things are coming....
+ 
+ Third number. Yes, it's this. CLIPBBS is published at this moment rather
+ randomly than periodically. Maybe i will stay on this method <grin>. It's
+ more fun and allowing to keep issues filled with articles. And if issue is
+ sunner than expected, it can be nice surprise. And last, it's unusual i
+ guess, because i don't know about any other magazine which is published
+ randomly/sometime.
+ 
+ Now first paragraph was not about news which i want to tell you. My station
+ (and me of course also) is member of Clipper Net. Clipper distribution
+ network formed in Europe with initiative of Mike Paschen (West Germany).
+ It's good idea which many of us had already before, but realization and
+ start is very good. And reliability also. ClipNet is carrying through
+ several european countries many Clipper, dBASE, FOXBase, FORCE (or any
+ xBASE) files with main interest in Clipper.  Don't know how fast it will
+ grow into intercontinental connection, but maybe somebody will want to
+ cooperate in this and share in transatlantic connection. FidoNet PDN
+ (Programmers Distribution Network) is already carrying a DBASE area (also
+ with xBASE relationship) and this magazine is probably using this way also
+ to come to you through your BBS, but PDN has too big scale to successfully
+ follow all Clipper freaks needs. Therefore choose of Clipper Net is good
+ move.
+ 
+ I want to make small part of Clipper BBS Magazine as advertisement of
+ ClipNet (changes in flow of files and lists of main connection points) and
+ mainly list of ALL new coming files with longer description and some
+ results of testings. Hopefully waiting, that somebody else will also be
+ able to write sometime other articles about files around us in BBS systems,
+ because this is most needed in hundredths of CLipper files around.
+ 
+ In this issue (third) is coming first set of articles about files coming to
+ ClipNet in this days. As files will coming i will publish info about them
+ and also about some other files from past in ClipNet or in my BBS and
+ archive. If someone will want those files, then please read carefully where
+ is possible to get them (Clipnet or my personal archives or my BBS) and go
+ to published source. In case of source coming from ClipNet or from me, is
+ possible to send a floppy (empty or with your interesting files), post
+ marks or another empty floppy for payment of send back and i will put what
+ you want in this floppy and send it back to you. If wanted FILEREQUEST or
+ DOWNLOAD, then it's of course free. ClipNet is ALWAYS free and my BBS is
+ always open without payment with ALL CLipper files on it.
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 2                   11 Feb 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+             Hungarian identifier naming conventions
+ 
+ Next serie of articles is UNCHANGED and UNTOUCHED file posted in ClipNet
+ and coming probably via CIX. It's complete original text, made by Robert A.
+ DiFalco. I found it very important and unfortunately cannot tell to author a
+ work about idea to publish it in CLIPBBS magazine, but i assume that it was
+ released for public use. Full copyright is of course on author, this is
+ reprint of unchanged text.
+ 
+ 
+ Part 1
+                   -----------------------------------
+                   xBase Identifier Naming Conventions
+ 
+                                  -or-
+ 
+                               H  U  N  G
+                    Hungarian types without the arian
+                   -----------------------------------
+                   Robert A. DiFalco        71610,1705
+                   -----------------------------------
+                   Revision                       1.02
+                   -----------------------------------
+ 
+ 
+ Let me start off by stating that these are only my opinions on naming
+ conventions for xBase programming. In my opinion these methods are
+ extensible to C, ASM, BASIC and just about any other programming
+ language. It looks very similar to Hungarian notation as outlined by
+ Charles Simonyi of Microsoft Corporation. Don't be fooled, however, this is
+ much different. I find it more intuitive and logical though that may
+ pertain only to my thinking. Also, this naming convention was not
+ thought up by myself but rather is a bastardization of the Clipper
+ recommended naming conventions and conventions used by many of the
+ programmers I know. Charles Simonyi's original paper can be found in MSSYS
+ forum on CIS in library 10 under the name of HNGRN.ZIP and should be read
+ for reference.
+ 
+ 
+ These conventions take in the same factors as outlined by Charles Simonyi
+ for creating names in a program. The factors listed below are directly
+ quoted from his monograph.
+ 
+ Begin quote:
+ 
+ 1. Mnemonic value   - so that the programmer can remember the name.
+ 
+ 2. Suggestive value - so that others can read the code easily.
+ 
+ 3. "Consistency"    - this is often viewed as an aesthetic idea, yet it
+                       also has to do with the information efficiency of the
+ CLIPBBS 1-03                   Page 3                   11 Feb 1991
+
+
+                       program text. Roughly speaking, we want similar names
+                       for similar quantities.
+ 
+ 4. Speed of decision- we cannot spend too much time pondering the name of a
+                       single quantity, nor is there time for typing and
+                       editing extremely long variable names.
+ 
+ End quote:
+ 
+ In xBase, our variable names have even a more pressing reason for short
+ identifiers since we only have 10 characters to work with. To alleviate
+ using needless characters, we will use lowerUpper combinations instead of
+ dividing underscores.
+ 
+ 
+ Procedure/Function Naming conventions
+ =====================================
+ Procedures and Functions will be heretofore called "Functions". Function
+ names will not be "typed" as variables. As xBase and languages in general
+ head towards object oriented approaches it is important to allow our
+ Functions to return multiple types. This negates the approach of typing
+ Functions by return variable type. Instead we will apply a "loose" set of
+ rules to Functions. Native language functions will be in all lowercase
+ while 3rd party or "home grown" functions will be mixed case beginning
+ with a single Capital letter.
+ 
+ 1. Functions will start with a capital letter followed by lower case
+    letters thus distinguishing them from variables. If the Function name
+    can be better expressed by two or three identifiers an UpperLower
+    combination will be used rather than underscores to delimit identifiers.
+    Consider the following Examples:
+ 
+    ClrSet()    - Sets colors
+    SaveGets()  - Saves active get list
+    PrnScr()    - Prints the screen
+    GetPass()   - Gets a password
+    Choose()    - Menu of items to "choose" from
+ 
+ 2. Conversion Functions will start with the value they take and end with
+    converted value separated by the number 2. Some examples would be as
+    follows:
+ 
+    Str2Arr()  - Changes a string to an array.
+    Hex2Dec()  - Changes a Hex string into a decimal numeric.
+    Clr2Attr() - Changes a color string to an integer attribute.
+    Dbf2Arr()  - Loads a DBF into an array.
+ 
+ 3. Where possible, use standard qualifiers as outlined in the section
+    dedicated to "Variable Naming Conventions". A few examples follow.
+ 
+    Clr  - Color
+    Scr  - Screen
+    Crs  - Cursor
+    Max  - Maximum value
+    Min  - Minimum value
+    Str  - String
+ CLIPBBS 1-03                   Page 4                   11 Feb 1991
+
+
+    Fld  - Field
+    Prn  - Print
+ 
+ 4. Where possible, express the @function of procedure in less than three
+    qualifiers ( names ). Refer to the examples given for Rule 1.
+ 
+ 5. The keywords PROCEDURE, FUNCTION and RETURN shall be in all uppercase.
+ 
+    FUNCTION SayStr( cMsg, cClr )
+       local cSavClr := setcolor( cClr )
+ 
+       ? cMsg
+       setcolor( cSavClr )
+ 
+    RETURN NIL
+ 
+ Language native functions shall be typed in all lowercase to delineate them
+ from non-native functions as in the above call to setcolor(). The exception
+ to this is Object oriented export instance variables which will employ the
+ lowerUpper notation standard as used by OOP languages such as SmallTalk.
+ 
+ oBrowse:addColumn( oColumn )
+         ^  ^
+         |  Upper case First letter
+         Lower case first tag name
+ 
+ 
+ DBF and Field related Punctuation Conventions
+ =============================================
+ There are some rules noteworthy for DBF, NTX, ALIAS and FIELD operations to
+ delineate them from Functions and Variables. FIELD names will NOT be typed
+ by a lowercase type identifier as with Variables.
+ 
+ 1. Database and Index files, as well as Field names will always be expressed
+    in capital letters. As xBase languages main point of existence is the
+    manipulation of DataFiles, this will make them stand out against
+    variables and other qualifiers.
+ 
+ 2. Where possible they will use the same standard qualifiers used for
+    Variables and Functions. See the examples for Rule 3 of
+    "Procedure/Function Naming Conventions".
+ 
+ 3. Fields will be referenced by an ALIAS. Consider the following.
+ 
+    HACCT->ACCNUM
+    HCONST->PASSWORD
+    HCONST->COMPANY
+ 
+ 4. Variables referencing Fields will have the same name as the Field with
+    the addition of the HUNG type prefix.
+ 
+    cFName   := HCUST->FNAME
+    cLName   := HCUST->LNAME
+    cAddr    := HCUST->ADDR
+    nAge     := HCUST->AGE
+    lActive  := HCUST->ACTIVE
+ CLIPBBS 1-03                   Page 5                   11 Feb 1991
+
+
+    nBalance := HLOAN->BALANCE
+ 
+    ( Please note that the storage operators ( "=" ) are lined up for easy
+      reading giving a table appearance. )
+ 
+ 5. With regard to DBF file names, data, index or otherwise they should
+    all begin with a common prefix and that prefix is similar to the
+    name.
+ 
+    This insures that I have few naming conflicts with other systems
+    that may reside on the computer and just about guarantees I can
+    separate my files out if they get placed into a common subdirectory.
+ 
+ 6. Index filenames should reflect the file that they belong to but
+    should not attempt to indicate what the index expression is.  A
+    much cleaner routine results when index files are simply numbered.
+ 
+    HACCTS.DBF ---> HACCTS1.NTX
+                    HACCTS2.NTX
+                    HACCTS3.NTX
+ 
+    Internally the only information I am required to keep is the index key
+    in an array and all indexes can be rebuilt in the order of their
+    respective suffix number.
+ 
+ 
+ Command Punctuation Conventions
+ ===============================
+ This area of my HUNG naming conventions will probably meet with the most
+ opposition. User Defined Commands will use descriptive names as outlined in
+ "Procedure/Function Naming Conventions".  User Defined or not, Commands
+ will have one Rule.
+ 
+ 1. All Commands will be typed with lower case letters.
+ 
+ The reasons for this are simple. This will delineate commands from
+ variables, functions and DBF elements. Consider the following examples.
+ 
+ FUNCTION CmdExample
+ 
+    use HCUST new
+    set index to HCUST1, HCUST2, HCUST3
+ 
+    cLName := "DiFalco"
+ 
+    seek cLName
+ 
+    HCUST->AGE    := 28
+    HCUST->ACTIVE := .t.
+    HCUST->LNAME  := cLName
+ 
+    close HCUST
+ 
+ RETURN NIL
+ 
+ ( Please take note that in replace statements we also line up the "with"
+ CLIPBBS 1-03                   Page 6                   11 Feb 1991
+
+
+   portion of the command as we do storage operators. )
+ 
+ ... (to be continued in next issue) ...
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 7                   11 Feb 1991
+
+
+              DBEVAL() or classic WHILE ! EOF() ??
+ 
+ One discussion in FidoNet CLIPPER echo was about comparsion of speed
+ DBEVAL() function and classical "while ! eof()" combination. Problem was,
+ if is better use DBEVAL() instead of old WHILE cycle.
+ 
+ Here is a result. I made several tests with sometime interesting results
+ and two final decisions.
+ 
+ <Limitations of tests>
+ 
+   º     Several comments about testing before main examples.
+   º
+   ÌÍÍÍ  1)      EVERY test was run 5 times and result number
+   º             of seconds is average from this 5 tries. Usually
+   º             first (or first two) test was different for small
+   º             amount, last tests had the same value
+   º
+   ÌÍÍÍ  2)      EVERY test _must_ be run as SEPARATE .EXE program
+   º             if this condition is not done, then two tests in
+   º             one .EXE are giving possibilities of wrong result.
+   º             That's because FIRST test will establish memory
+   º             CACHE for database used in SECOND test. Second
+   º             test is then FAR better than reality
+   º
+   ÌÍÍÍ  3)      Test machine was AT286/16Mhz, 40MB 20ms harddisk
+   º             free memory about 600KBs for MS DOS .EXE task,
+   º             CLIPPER 5.01, FULLBASE and no PLL linking with
+   º             standard RTLINK.
+   º
+   ÈÍÍÍ  4)      Harddisk where data test file was sitting WAS
+                 not prepared by defragmenter. Tests were done in
+                 usual working conditions.
+ 
+ <Subject of testing>
+ 
+         Subject of testing is database created only for testing
+         and doesn't contains any interesting data. It's just used for
+         skipping through and do some counting and measurement of used time.
+ 
+       ³ #define VARSIZE 128
+       ³ local counter := 0
+       ³ dbcreate('test01.dbf',;
+       ³         { {"CHARS", "C", VARSIZE , 0 },;
+       ³           {"NUMBR", "N",  12     , 2 }  })
+       ³ use TEST01
+       ³ r1:=0
+       ³ input " ---# of records ->" to r1
+       ³ for counter:=0 to r1
+       ³         dbappend()
+       ³         replace NUMBR with r1-counter
+       ³         //  it's for reverse order in case of index test!!!!
+       ³ next
+ 
+         This small program was used for generating test database in needed
+         size. Actually, used size was 1000, 5000 and 10000 records with
+ CLIPBBS 1-03                   Page 8                   11 Feb 1991
+
+
+         later small playing with size of record. But it was only for get
+         impression how much is significant size of record.
+ 
+ <First test program>
+ 
+       ³ local counter := 0 , start
+       ³ use TEST01
+       ³ go top
+       ³ start=seconds()
+       ³ while !eof()
+       ³         counter:=counter+len(CHARS)
+       ³         skip 1
+       ³ enddo
+       ³ ? '      elapsed = ',seconds()-start
+ 
+         Simple program is just skipping whole database from beginning to
+         end and doing job of addition constant number given by function.
+         This counting has not reason, just some time for processing.
+         Then it's displaying number of seconds in whole WHILE cycle.
+ 
+ <Second test program>
+ 
+       ³ local counter := 0 , start
+       ³ use TEST01
+       ³ go top
+       ³ start=seconds()
+       ³ dbeval({|| counter:=counter+len(CHARS)})
+       ³ ? '      elapsed = ',seconds()-start
+ 
+         Functionally ABSOLUTE equivalent of first program, only is using
+         DBEVAL() function instead of WHILE cycle.
+ 
+         My mind was originally thinking, DBEVAL() should be FASTER than
+         WHILE cycle which is doing more overhead than DBEVAL()
+ 
+ < RESULTS of TEST1 and TEST2>
+ 
+         Original record size 128+12 bytes of pure data, used
+         FULLBASE.PLL for speed up of linking changes and save
+         disk space.
+ 
+         test        º 1000 ³  5000 ³ 10000 ³ records
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+         WHILE       º 1.48 ³ 11.65 ³ 25.04 ³
+         DBEVAL      º 1.70 ³ 12.36 ³ 26.91 ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 0.22 ³  0.71 ³  1.87 ³
+ 
+      É» And that's it. DBEVAL() is for sure slower than classical
+      È¼ WHILE construction.
+ 
+         Original record size 128+12 bytes of pure data, used NO
+         PLL, test with 10000 records not used.
+ 
+         test        º 1000 ³  5000 ³ 10000 ³ records
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+ CLIPBBS 1-03                   Page 9                   11 Feb 1991
+
+
+         WHILE       º 1.65 ³ 11.70 ³       ³
+         DBEVAL      º 1.87 ³ 12.86 ³       ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 0.22 ³  1.16 ³       ³
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+          diff WHILE º 0.17 ³  0.05 ³       ³ (difference with case of
+          diff DBEVALº 0.17 ³  0.50 ³       ³  first FULLBASE link )
+ 
+      É» DBEVAL() is again slower than WHILE (what else, it cannot be
+      ºº hidden inside using or not of .PLL, but it's SLOWER (not so
+      ºº much) than example using complete .PLL (FULLBASE). It's also
+      È¼ very interesting....
+ 
+ 
+ <Third test program>
+ 
+         Third (and fourth) test program is equivalent of number one
+         and number two. With one exception. Is used INDEX. Whole database
+         is indexed in REVERSE order via numeric index.
+ 
+         local counter := 0 , start
+         use TEST01
+         index on NUMBR to test01
+         go top
+         start=seconds()
+         while !eof()
+                 counter:=counter+len(CHARS)
+                 skip 1
+         enddo
+         ? '      elapsed = ',seconds()-start
+ 
+ <Fourth test program>
+ 
+         It's again version using only DBEVAL() function:
+ 
+         local counter := 0 , start
+         use TEST01
+         index on NUMBR to test01
+         go top
+         start=seconds()
+         dbeval({|| counter:=counter+len(CHARS)})
+         ? '      elapsed = ',seconds()-start
+ 
+ < RESULTS of TEST3 and TEST4, compare with TEST1 and TEST2>
+ 
+ 
+         Original record size 128+12 bytes of pure data, used
+         FULLBASE.PLL for speed up of linking changes and save
+         disk space.
+ 
+         test        º 1000 ³  5000 ³ 10000 ³ records
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+         WHILE/NTX   º 2.75 ³ 23.40 ³ 55.75 ³
+         DBEVAL/NTX  º 2.86 ³ 27.25 ³ 57.89 ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 0.11 ³  3.85 ³  2.14 ³
+ CLIPBBS 1-03                   Page 10                  11 Feb 1991
+
+
+      É» And that's it. DBEVAL() is for sure slower than classical
+      ºº WHILE construction. In this case is difference little bit
+      ºº varying on number of records, probably because of index
+      È¼ tables and memory?
+ 
+         Original record size 128+12 bytes of pure data, used NO
+         PLL, test with 10000 records not used.
+ 
+         test        º 1000 ³  5000 ³ 10000 ³ records
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+         WHILE/NTX   º 1.09 ³ 22.73 ³       ³
+         DBEVAL/NTX  º 1.31 ³ 23.34 ³       ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 0.22 ³  0.61 ³       ³
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+          diff WHILE º-1.66 ³ -0.67 ³       ³ (difference with case of
+          diff DBEVALº-1.55 ³ -3.91 ³       ³  first FULLBASE link )
+ 
+      É» DBEVAL() is again slower than WHILE (what else, it cannot be
+      ºº hidden inside using or not of .PLL, but it's FASTER (not so
+      ºº much) than example using complete .PLL (FULLBASE). It's also
+      ºº very interesting! In first case, without index was NO PLL
+      ºº version SLOWER than PLL version. In case of using indexes
+      ºº is NO PLL version FASTER than PLL version. What is the magic
+      È¼ done by Nantucket :-)?
+ 
+ 
+         And now, comparsion between NON INDEX and YES INDEX:
+ 
+         First version with FULLBASE.....
+ 
+         test        º 1000 ³  5000 ³ 10000 ³ records
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+         WHILE       º 1.48 ³ 11.65 ³ 25.04 ³
+         WHILE/NTX   º 2.75 ³ 23.40 ³ 55.75 ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 1.27 ³ 11.75 ³ 30.71 ³ !!!!!!!
+         ÍÍÍÍÍÍÍÍÍÍÍÍÎÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍ
+         DBEVAL      º 1.70 ³ 12.36 ³ 26.91 ³
+         DBEVAL/NTX  º 2.86 ³ 27.25 ³ 57.89 ³
+         ÄÄÄÄÄÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄ
+          difference º 1.16 ³ 14.89 ³ 30.98 ³
+ 
+ 
+      É» And result is, of course. INDEX means all processing TWO
+      ºº and MORE times slower. Be aware of using indexes in ON state
+      ºº in case when it's no needed. Your application can be MUCH
+      È¼ faster!
+ 
+         Version WITHOUT PLL is no longer needed to compare. If
+         wanted, feel free and do it :-)
+ 
+ <Additional test, what to do with record size?>
+ 
+         Additional, latest test was done by changing record size
+         to some other values and performing still the same tests,
+ CLIPBBS 1-03                   Page 11                  11 Feb 1991
+
+
+         linked without PLL and with PLL FULLBASE, 5000 records..
+ 
+         Record size   ³ WHILE ³ DBEVAL ³WHILE/NTX³DBEVAL/NTX
+         ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ
+          16+12        ³  4.12 ³  5.06  ³ 11.98   ³ 12.80
+          16+12 PLL    ³  4.45 ³  5.27  ³ 13.84   ³ 14.50
+         128+12        ³ 11.65 ³ 12.36  ³ 22.73   ³ 23.34
+         128+12 PLL    ³ 11.70 ³ 12.86  ³ 23.40   ³ 27.25
+         256+12        ³ 23.95 ³ 24.28  ³ 45.92   ³ 46.14
+ 
+      É» That's all. Result of this is also nice. EVERY operation
+      ºº with index ON is still two times slower than non index
+      ºº operation and time needed for work is growing much when
+      È¼ record size is growing. And 256+12 is not so big records.
+ 
+ <<FINAL DECISION AND RECOMMENDATION>>
+ 
+ 
+         1]      Whenever it's possible, avoid using of INDEXed
+                 database when trying to make scan or count, or
+                 any other long process shorter in time.
+ 
+         2]      DBEVAL() is very good function, but in general
+                 *IS* slower than classical WHILE construction.
+ 
+         3]      There is some connection between PLL and speed
+                 of databases processing. But this is very hard
+                 to decide into real.
+ 
+                                                         ______
+                                                         Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 12                  11 Feb 1991
+
+
+                 RCS - Revision Control System
+ 
+ 
+ Title is telling, what will be a subject of coming long series
+ of articles. Title is also talking about something usually very,
+ very expensive and hard reachable.
+ 
+ Truth is sometime different and life also. Week ago i posted
+ into ClipperNet complete Revision Control System working with
+ ANY kind of pure text files and wonderfully working with Clipper
+ or C sources. Before i had not this complete program package, my
+ programmers life was very hard when i was trying to keep sources
+ on all my computers up to date, keep log books about all changes
+ and fixes in all my source and so on. After moment when i met
+ DOSRCS files in Dave Wall's BBS in England it was great change
+ in programmers work. Now i'm using RCS command every day and
+ this program is doing a great job.
+ 
+ Don't know about what i'm talking? No problem, just follow this
+ serie of articles related to RCS and learn WHAT RCS is, HOW
+ DOSRCS is working, HOW use DOSRCS, which BAT, BTM or ALIAS
+ commands to set for make work with RCS easier.
+ 
+ First, most important information. WHERE one can get RCS
+ programs, documentation and also sources?
+ 
+ Simple:
+ 
+         1) ClipperNet where it was posted
+         2) NETCONSULT BBS, +31-10-4157141 (18:00-08:00)
+            look for DOSRCS*.ARJ or use file request with
+            ANY FidoNet compatible mailer (being in any nodelist
+            is not needed) and ask for RCS (magic name)
+         3) Dave Wall's BBS called WELSHWIZARD in U.K.
+            number see in list of distribution points
+ 
+ OK, go and GET it if you are programmer working on larger
+ programs or more sources. Get it NOW...... :-)
+ 
+                          ____________
+                          WHAT IS RCS?
+                          ÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ Revision Control System is helpful tool for everybody who is
+ producing sources or texts with interest on keeping care of
+ revisions and versions. RCS is then allowing do:
+ 
+ -       keep all informations about old versions and their
+         descriptions
+ -       keep descriptions of changes between versions
+ -       in any time get original source/text of any old
+         version
+ -       all this is kept in one single file, recorded are
+         only changes and not complete version, therefore it's
+         saving disc space
+ -       include in source/text special keyword replaceable
+ CLIPBBS 1-03                   Page 13                  11 Feb 1991
+
+
+         with all related informations about versions, dates,
+         file names, sizes
+ -       keep order in NETWORK of programmers working
+         simultaneously on source/text files. RCS is locking
+         source/text file during changes and not allowing do
+         changes by another people
+ -       keeping separate revisions of program in one system
+         of source files
+ 
+                         _______________
+                         HOW TO USE RCS?
+                         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ First needed is, to have ANY RCS system. Normally prices of
+ complete RCS systems are related in thousands of dollars.
+ Actually, all those expensive RCS systems are able to keep
+ changes in ANY kind of file (including binary) and do many other
+ manipulations and are easy to control via menus or any good
+ human interface. DOSRCS offered in FREEWARE area of programs is
+ exception, but GREAT. DOSCRS is coming together with sources,
+ therefore is also easy applicable to any from your programs.
+ DOSRCS which i'm describing and using is also in list of
+ supported RCS in Multi Editor 5.0 (American Cybernetics), one
+ from greatest editors which i even seen in my life. Then get
+ DOSRCS and unpack only one archive contains .EXE files of RCS
+ and put them somewhere in your PATH. That's enough to start
+ using DOSRCS>
+ 
+ DOSRCS is very simple and easy and small. Power is big, but
+ human interface is missing. Therefore all runs are done via
+ running any .EXE file with some switches and parameters.
+ 
+ Then you need your source files or your text files in separate
+ directory - anyway, it's normal usual way. Go into this
+ directory and create here new subdirectory called RCS. In
+ directory RCS will DOSRCS keep ALL RCS files. After application
+ of RCS command for including all your files into system, your
+ source directory will be totally empty and all files will be
+ moved into new RCS directory. Then is needed use new DOSRCS
+ command to get actual versions of your sources. Therefore don't
+ be afraid after discovering that your files no longer exists :-)
+ 
+ For basic using of DOSRCS we must fill few conditions:
+ 
+ 1) ALL RCS .EXE files are in DOS PATH
+ 2) RCS subdirectory is created
+ 3) Two following .BAT files are created:
+ 
+         RCSPUT.BAT
+ 
+                 This .BAT file will be used for putting your
+                 files into RCS. For first put and also for all
+                 putting coming with changes and upgrades.
+ 
+                 Simpliest way is:
+ 
+ CLIPBBS 1-03                   Page 14                  11 Feb 1991
+
+
+              ³  @echo off
+              ³  echo Processing [%1]
+              ³  CI -q %1
+ 
+                 Really is needed only latest line of this .BAT
+                 file, but for later step is BEST to have
+                 complete .BAT file like this.
+ 
+                 CI is program coming with DOSRCS and means words
+                 CheckIn, -q switch is for suppressing some
+                 messages given by program, it's not important.
+                 It's only suppressing some lazy questions given
+                 by CI program which are slowing down and asking
+                 for your attention.
+ 
+                 %1 is DOS way how to pass parameters (you must
+                 know) and will be name of your file or ANY
+                 combination of "*" and "?" characters for give
+                 a mask to process.
+ 
+         PUT.BAT
+ 
+                 This .BAT file will be used for calling previous
+                 .BAT file. DOSRCS has one disadvantage, when
+                 processing larger amount of files (*.* for
+                 example), is not displaying names of files in
+                 this -Q (quiet) mode, therefore RCSPUT.BAT will
+                 be able to display it via ECHO command when will
+                 get it.
+ 
+              ³  for %%i in (%1) do rcsput %%i
+ 
+                 YES, that's all. I'm using 4DOS and i have this
+                 in my ALIAS list as alias called PUT, but it
+                 can be of course .BAT file also. Purpose and
+                 function of this file is, that in case of any
+                 "*" and "?" passed filename is expanding it into
+                 complete list, file by file and running RCSPUT
+                 .BAT file for processing of this single file.
+ 
+         GET.BAT
+ 
+                 This is .BAT file used for GETTING your source
+                 or text files from saved RCS directory. It's
+                 last important .BAT file:
+ 
+               ³ CO -l RCS\%1
+ 
+                 Again, only ONE line as you can see. Calling
+                 program CO (CheckOut) which is getting from RCS
+                 directory needed file (files if passed with "*"
+                 and "?" characters) and latest version of this
+                 file is putting in actual source directory. -L
+                 switch is needed for correct LOCKING of revision
+                 in RCS source directory. Will be explained
+                 later.
+ CLIPBBS 1-03                   Page 15                  11 Feb 1991
+
+
+ 4) All your source files are stored and introduced into RCS
+         system by using PUT command first time.
+ 
+                 After running PUT *.PRG (for example) will CI
+                 command start making new files in RCS
+                 subdirectory and will ask for EVERY file for
+                 initial description of this file. User of DOSRCS
+                 must fill this description and end it with "."
+                 on separated line, or CtrlZ on separated line.
+                 This is description of program like PURPOSE or
+                 FUNCTION of this program.
+ 
+ 5) Before EVERY using of your .PRG files or making changes is
+                 necessary to get them out from RCS directory.
+ 
+                 Just use GET *.PRG (for example) and wait some
+                 time. For 800KBs of sources on 286/16Mhz machine
+                 it's few minutes, on 386/33Mhz it's not minute
+                 at all. After this your original source
+                 directory will be filled with latest version of
+                 your files, and you can start using of them. RCS
+                 subdirectory is still keeping complete DOSRCS
+                 files (therefore you need enough disc space for
+                 two copies during work) and they are locked for
+                 use of anyone else (only files requested of
+                 course, for example GET MYSOURCE.PRG will use
+                 and lock only one file).
+ 
+ 6) When changes been made it is necessary to record them back
+ 
+                 On the same way is necessary to put all files
+                 BACK to RCS subdirectory when they will not be
+                 longer used by you. Use PUT command (PUT *.PRG
+                 for example) and stay look on computer screen.
+                 DOSRCS command CI will scan files for
+                 differences of actual version in your source
+                 directory and latest version in RCS
+                 subdirectory. In case of changes will store new
+                 version in RCS subdirectory and record all
+                 changes and ASK you for filling description of
+                 changes made on your file (how much lines do you
+                 want, end with "." or Ctrl Z as before). If file
+                 was not changed, it's not stored back and simply
+                 skipped.
+ 
+ 
+ And that's all what is needed for first starting with DOSRCS
+ programs and use of them.
+ 
+ Next article (and articles) will come closer to all DOSRCS
+ programs and some nice specialities.
+ 
+ See you later.....
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 16                  11 Feb 1991
+
+
+ =============================================================================
+                                   SOFTWARE
+ =============================================================================
+
+
+             DANIEL.LIB - public domain library, RMAKE part
+ 
+ 
+ Next 'program' is complete .RMK file for library. It's taking care of
+ all compilation of C and Clipper and putting pieces into resulting
+ library. Nothing complicated. very easy....
+ 
+ <--------------------cut in here, it's a beginning ------------>
+ 
+ // DANIEL.LIB make file called DANIEL.RMK
+ // stdout is only printing message on screen, nothing more
+ !stdout "DANIEL.LIB cycle"
+ 
+ //      i'm ALWAYS keeping all .OBJ files in separate directory
+ //      called OBJ which is _under_ actual directory with sources
+ makepath[.OBJ]  := "\SOURCE\DANIEL\OBJ\"
+ //      directory where .PRG files are sitting
+ makepath[.PRG]  := "\SOURCE\DANIEL"
+ //      directory where .C files are sitting
+ makepath[.C]    := "\SOURCE\DANIEL"
+ //      directory where .CH files are sitting
+ makepath[.CH]   := "\SOURCE\DANIEL"
+ //      directory where DANIEL.LIB will/is sitting
+ makepath[.LIB]  := "\LIB"
+ 
+ //      in case of invoking with RMAKE DANIEL.RMK /DDEBUG
+ //      will CLIPPER generate all code with included debugging
+ //      information. Also i'm every time using /W/N/M switches
+ //      /B is for debugging, and live version is with /L generated
+ //      without line number informations....
+ //      calling LIB.EXE is for excluding old version of .OBJ from
+ //      library and then including new .OBJ in (-+)
+ //      LIB.EXE is coming as standard librarian with MSC, ASM ...
+ //      or can be replaces with TLIB.EXE coming with Turbo products
+ #ifdef DEBUG
+ .prg.obj:
+     clipper $< /w/n/m/b /o$@
+     lib \lib\daniel -+$@;
+ #else
+ .prg.obj:
+     clipper $< /w/n/m/l /o$@
+     lib \lib\daniel -+$@;
+ #endif
+ 
+ //      for ALL .C files will work this command line
+ //      used for Turbo C++ in this case, for other it can be different
+ //      of course and must be revised then
+ .c.obj:
+     TCC -I\TC\INCLUDE -L\TC\LIB -C -d -ml -wmlt -K -G -O -Z -k- -c -o$@  $<
+     LIB \LIB\DANIEL.LIB -+$@;
+ 
+ CLIPBBS 1-03                   Page 17                  11 Feb 1991
+
+
+ //      this is a list of modules in library and their dependencies
+ //      .CH files with headers for Clipper programs are also included
+ //      because their change can affect WHOLE library
+ dd_lib1.obj:        dd_lib1.prg  dprinter.ch daniel.ch
+ dd_lib2.obj:        dd_lib2.prg  dprinter.ch daniel.ch
+ dd_lib3.obj:        dd_lib3.prg  dprinter.ch daniel.ch
+ dd_lib4.obj:        dd_lib4.prg  dprinter.ch daniel.ch
+ dd_lib5.obj:        dd_lib5.prg  dprinter.ch daniel.ch
+ dd_netw.obj:        dd_netw.prg  dprinter.ch daniel.ch
+ configer.obj:       configer.prg dprinter.ch daniel.ch
+ //      above was only CLipper code, following is C code for functions
+ cleanup.obj:        cleanup.c
+ faxlog.obj:         faxlog.c
+ isprinte.obj:       isprinte.c
+ screen.obj:         screen.c
+ //      two last are complete WordPerfect interface....
+ wptext.obj:         wptext.c
+ wputil.obj:         wputil.c
+ 
+ <------------ That's all, cut out, end of program------------------>
+
+ -----------------------------------------------------------------------------
+
+
+                *DANIEL.LIB - ISPRINTER2() universal function
+ 
+ Next following is function written for purpose of testing ALL LPT ports,
+ not only LPT1 as is done with original ISPRINTER() function coming in
+ CLIPPER. Function is written in Turbo C and now is compiled with Turbo C++,
+ but is easy to use in any other C language. It's written for CLIPPER 5.0x
+ and used in 5.0 and 5.01 programs.
+ 
+ How to compile this, please take a look to RMAKE example, how to use this,
+ take a look into listing, it's explained here.
+ 
+ <---------------------------code starts here-------------------------->
+ 
+ /* first is coming standard set of #include commands, it's in ALL
+    of my C functions for Clipper. Some from them are relevant of
+    course, but i'm too lazy remove them
+ */
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+ #include <dir.h>
+ #include <stdlib.h>
+ #include <dos.h>
+ #include <fcntl.h>
+ #include <stdarg.h>
+ #include <process.h>
+ #include <errno.h>
+ #include <io.h>
+ #include <sys\stat.h>
+ /* latest #include is CLIPPER .H module coming with 5.0x */
+ #include <extend.h>
+ 
+ CLIPBBS 1-03                   Page 18                  11 Feb 1991
+
+
+ /* definition of possible states of printer              */
+ enum PMODE {READY,BUSY, PAPER, NOTHERE, LAN, ISOFF};
+ 
+ /* internal function used only inside of C for calling
+    BIOS Interrupt 017h to get printer status and return  */
+ int GetPrinter(int Printer)
+ 
+     _DX=Printer;                    /* printer number    */
+     _AH=2;                          /* function number   */
+     geninterrupt(0x17);
+     return(_AH);                    /* status is in AH   */
+ 
+ 
+ /* internal function for doing a CASE with status from
+    interrupt 017h, get printer status                    */
+ int GetStatus(int Status)
+ 
+     switch(Status)
+       {
+       case 0xD0 : return(READY);    /* printer is ready  11010000 */
+       case 0x40 : return(BUSY);     /* printer is BUSY   01000000 */
+       case 0xc8 : return(ISOFF);    /* printer is off    11001000 */
+       case 0x48 : return(BUSY);     /* printer is BUSY   01001000 */
+       case 0x2  : return(NOTHERE);  /* printer not exist 00000010 */
+       case 0x90 : return(LAN);      /* it's network lpt  10010000 */
+       case 0x91 : return(NOTHERE);  /* printer not exist 10010001 */
+       default   : {
+           if ((Status & 0x20)!=0)   /* paper out         xx1xxxxx */
+                        return(PAPER);
+           if ((Status & 0x40)!=0)   /* printer not exist x1xxxxxx */
+                        return(NOTHERE);
+           if ((Status & 0x80)==0)   /* printer BUSY      1xxxxxxx */
+             return(BUSY);           /*                   ³³³³³  ³ */
+         }                           /* explanation       ³³³³³  ³ */
+       }                             /*  BUSY=0     ÄÄÄÄÄÄÙ³³³³  ³ */
+ }                                   /*  ACK        ÄÄÄÄÄÄÄÙ³³³  ³ */
+                                     /*  PAPER OUT  ÄÄÄÄÄÄÄÄÙ³³  ³ */
+                                     /*  SELECTED   ÄÄÄÄÄÄÄÄÄÙ³  ³ */
+                                     /*  IO ERROR   ÄÄÄÄÄÄÄÄÄÄÙ  ³ */
+                                     /*  TIME OUT   ÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ /*  testing in above function is maybe too much intensive, but it's
+     result of some tests with SEVERAL machines and SEVERAL networks
+     or standalone printers. Above structure of deciding which value
+     means what seems sometime strange (especially case of NETWORK),
+     but it's just result of TESTs, nut only logical thinking
+ */
+ 
+ /* this is real Clipper function called with possible two ways:
+ 
+     IsPrinter(<nNumber>)    where <nNumber> is 1,2,3 for LPT1,2,3
+         Return in this case is just .T. -> printer is OK
+                                     .F. -> printer is KO
+     IsPrinter(<nNumber>,<anything>)
+         Return in this case TEXT string of printer state as defined
+         down
+ */
+ CLIPBBS 1-03                   Page 19                  11 Feb 1991
+
+
+ CLIPPER IsPrinter2()
+ 
+        int Stav;
+ /*  char SS[6][10] = {"READY","BUSY","PAPER","NOTHERE","LAN","ISOFF"};
+     First i was defining this as array, but problem was, that this
+     string operation in C was taking one function from CL.LIB and i
+     wanted to get this out, after this i used if structure down to
+     directly assign this. Thanx to it, this function is independent
+     from CL.LIB!
+ */
+     int Prt;
+     if(PCOUNT==1 && ISNUM(1))       /* first case, only one parameter */
+        {
+          Prt=_parni(1);
+          --Prt;                     /* BIOS uses 0,1,2 for LPT1,2,3   */
+          Stav=GetStatus(GetPrinter(Prt));
+          if ((Stav==READY) || (Stav==LAN))
+             Stav=1;                 /* printer is OK                  */
+          else
+             Stav=0;                 /* printer is not OK              */
+          _retl(Stav);                  /* return logical now             */
+        }
+     else if (PCOUNT==2 && ISNUM(1))    /* second case, two parameters    */
+        {
+          Prt=_parni(1);
+          --Prt;
+          Stav=GetStatus(GetPrinter(Prt));
+             if (Stav==READY)           /* assign text for returning      */
+                 _retc("READ");
+             else if (Stav==BUSY)
+                         _retc("BUSY");
+                     else if (Stav==PAPER)
+                             _retc("PAPER");
+                         else if (Stav==NOTHERE)
+                                 _retc("NOTHERE");
+                             else if (Stav==LAN)
+                                     _retc("LAN");
+                                 else if (Stav==ISOFF)
+                                             _retc("ISOFF");
+ 
+        }
+         else
+             _ret();                    /* in any other case NIL return   */
+ 
+ 
+ <----------------------------end of listing----------------------------->
+
+ -----------------------------------------------------------------------------
+
+
+                    DANIEL.LIB - SCREEN shadowing module
+ 
+ Following functions are for use with simple method to make SHADOW under
+ window on screen. But REAL shadow which is changing color of characters
+ under instead of changing them to other semigraphic characters. Clipper
+ code in this case was too slow, because it's using this method:
+ CLIPBBS 1-03                   Page 20                  11 Feb 1991
+
+
+     RestScreen(<coordinates>,shadow(SaveScree(<coordinates>)))
+ 
+ Block of screen characters and attributes given by SaveScreen is passed to
+ C function which is only changing EVERY second byte (attribute) to code
+ which represents color used for shadows.
+ 
+ <---------------------code starts here----------------------------------->
+ 
+ /*  Screen utilities based on SAVESCREEN and RESTSCREEN!  Parameter of
+     ALL functions produced in this file MUST be result of SAVESCREEN. This
+     because independency of screen type - result of SAVESCREEN is array
+     with sequency:  character color char color char color ....  Then all
+     operations are simply reduced to one array with known structure..
+ */
+ 
+ #include <stdio.h>
+ #include <ctype.h>
+ #include <string.h>
+ #include <dir.h>
+ #include <stdlib.h>
+ #include <dos.h>
+ #include <fcntl.h>
+ #include <stdarg.h>
+ #include <process.h>
+ #include <errno.h>
+ #include <io.h>
+ #include <sys\stat.h>
+ 
+ #include <extend.h>
+ 
+ 
+ CLIPPER shadow()
+ /*  making SHADOW color for passed part of screen..
+     all other must get a CLIPPER program (to get a good
+     part of screen...)
+ */
+ 
+     char *str;
+     int  l;
+     int  i;
+     str  = _parc(1);            /* parameter is string           */
+     l    = _parclen(1);         /* length of passed example      */
+     for(i=0;i<l;i+=2) {         /* every SECOND byte is replaced */
+         str[i+1]=8;             /* with code 8, GRAY on BLACK    */
+     }
+     _retclen(str,l);            /* pass back string, changed     */
+ 
+ 
+ CLIPPER rectcolor()
+ /*  is setting rectangle passed as first parameter to color passed
+     as second parameter - color is of course number, not clipper
+     specification
+ */
+ 
+     char *str;
+     int  l,i,c;
+ CLIPBBS 1-03                   Page 21                  11 Feb 1991
+
+
+     str  = _parc(1);
+     c    = _parni(2);
+     l    = _parclen(1);
+     for(i=0;i<l;i+=2) {         /* this is similar with one exception */
+         str[i+1]=c;             /* it can change to which color do you*/
+     }                           /* want from all 256 codlor codes     */
+     _retclen(str,l);
+ 
+ 
+ <-----------------------end of code----------------------------------->
+ 
+ Finally, RectColor() function is NEVER used in my programs, take it
+ as example how simple change can change significantly function.
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 22                  11 Feb 1991
+
+
+ =============================================================================
+                                     NEWS
+ =============================================================================
+
+
+                 M&T Books: Clipper 5 - A Developer's Guide
+ 
+ Having received my latest addition to my Clipper library, "Clipper 5 - A
+ Developer's Guide" by Booth/Leif/Yellick, and a few requests for
+ impressions on the book, what follows is a short review of this fine book.
+ 
+ Title     : "Clipper 5 - A Developer's Guide"
+ Publisher : M&T Books
+ ISBN      : 1-55851-240-3
+ Price     : US$34.95
+ 
+ First Impressions? It's BIG and HEAVY! All 1375 pages are filed with useful
+ information, and tips.
+ 
+ The first few chapters concentrate on the Compiler, Linker and Make
+ facilities supplied with Clipper 5.01. Since I knew most of this
+ information, I skipped most of these early chapters. They do, however
+ supply a complete view on all the switches for Clipper, and the PLL for
+ RTLink, which I found interesting.
+ 
+ Chapters 4 to 9 concentrate on the Clipper language. I read most of these
+ chapters last night (took about 5 hours of solid reading!). Everything from
+ Data types, to Arrays through Code Blocks, the pre-processor, and variable
+ scoping. All chapters are littered with useful tips, and sample code, and
+ new topics are covered with very good analogys. The chapter on arrays is
+ one prime example. Because of the complex nature of 5.0 arrays, the
+ Summer '87 type is covered first, and then multi dimentional arrays, and
+ all their associated power. The chapter finished off with filling an array
+ from a database and saving and loading multi dimensional arrays to/from
+ Disk.
+ 
+ The Debugger (5.01 version) is handles in Chapter 10. I haven't read this
+ as yet, so can't comment on the chapter.
+ 
+ Chapters 11 to 15 cover programming techniques. One major chapter in this
+ section is devoted to the User Interface. The chapter discusses the "right"
+ and "wrong" ways to design screens. It also includes a complete AChoice
+ toolkit with a scrolling gadget, and quick lookup. Printer control is
+ covered in Chapter 15.
+ 
+ The next 9 chapters cover more database and programming trchniques, but as
+ I am only at #17, can't say too much about them. Interfacing DOS, and DOS
+ filenames, Memo Fields, and Low level file access are a few of the topcs
+ covered.
+ 
+ The three chapters following cover an object class each :  TBrowse, GET and
+ Error. They each cover the object, give heaps of examples, and add
+ enhancements to the main structure.
+ 
+ Finally, there is a chapter on Obselete statments, commands and functions.
+ 
+ CLIPBBS 1-03                   Page 23                  11 Feb 1991
+
+
+ The two appendices give standard INKEY() codes, the ASCII chart (which make
+ good references), and three "long source code listings" that were too big
+ to include in the chapters themselves.
+ 
+ If you want a reference to Clipper 5, or 5.01, this book is not the one to
+ buy. Straley's "Programming with Clipper 5.0 and 5.01" (ISBN 0-553-35242-3.
+ US$39.95) has a very good reference in part I.
+ 
+ Clipper 5 - A Developer's Guide is a very good book. The text is very well
+ written, and includes examples from real world situations. There is also a
+ good handful of humerous sentences! I was heard chuckling into the night
+ last night while reading! I recommend it to anyone looking to improve their
+ programming skills in the move from S'87 to 5.01, or are after some good
+ tips on handline situations.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 24                  11 Feb 1991
+
+
+ =============================================================================
+                                      Q&A
+ =============================================================================
+
+
+ Question:
+ 
+     Why is .EXE in 5.0x so big.....
+ 
+ Answer:
+ 
+     Obvious answer to questions like this is - read again your manual
+     for Clipper 5.0x. But it's too short at this moment.
+ 
+     Few points:
+ 
+     1.  Clipper 5.0x is coming with totally different philosophy
+         of programming, memory management and all other possibilities,
+         therefore .EXE file is bigger because contains many things
+         which aren't done by programmer, but are done by Clipper and
+         Clipper needs them for work
+ 
+     2.  Clipper is NOT any kind of low level language as ASM or C.
+         It's SPECIALIZED language for database management and not
+         for writing simple utility programs. Therefore nobody can
+         expect small .EXE from small one line program. It WAS true
+         already in Summer 87, only .EXE was smaller.
+ 
+     3.  Compare yourself sizes of Summer 87 .LIB files and size of
+         .LIB files from 5.0x. It's part of answer. They are of course
+         bigger. Every program coming with libraries is growing and
+         growing with never version. Turbo C++ libraries are getting
+         1.2MB from your disk, TC.EXE is about 900KB big. It's normal
+         and common that all .EXEs are growing and growing and software
+         is distributed in bigger and bigger amount of floppies.
+ 
+     4.  Possibility to save DISK space in case of Clipper 5.0x .EXEs
+         is hidden in .PLL libraries. .PLL library can save for ALL
+         your .EXEs part common for all of them. In case of BASE50.PLL
+         coming with Clipper it's about 300KB of code, in case of
+         FULLBASE.PLL it's about 430KB of code. This all is normally
+         included in your .EXE and taking place on your disk many
+         times. Start using of .PLLs, or buy bigger disc :-)
+ 
+     5.  Size of .EXE has nothing to do with ability to RUN in small
+         part of memory available. In many cases S87 .EXE is not able
+         to fit in normal memory without static overlaying and 5.0x
+         .EXE is working without problems because is using own modern
+         overlaying automatically. .EXE in size of 1.5MB (yes, i have
+         programs such like this) is working in 450KBs free of normal
+         PC memory.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 25                  11 Feb 1991
+
+
+ =============================================================================
+                                 ADVERTISEMENT
+ =============================================================================
+
+
+ WHEN ONE WILL SEE THIS LOGO :
+                  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+                  ³ÛÛ²²±±°°°°°°°°°°°°°°°°°°°°°°°°°°°±±²²ÛÛ³
+                  ³ÛÛ²²±±°                         °±±²²ÛÛ³
+                  ³ÛÛ²²±±°  This file was brought  °±±²²ÛÛ³
+                  ³ÛÛ²²±±°  to you via ClipperNet  °±±²²ÛÛ³
+                  ³ÛÛ²²±±°                         °±±²²ÛÛ³
+                  ³ÛÛ²²±±°°°°°°°°°°°°°°°°°°°°°°°°°°°±±²²ÛÛ³
+                  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+     then can know, that file is coming via ClipperNet. Software distribution
+     network specialized for Clipper and xBase files in general. New forming
+     network with HQ station in Germany is now including several EUROPEAN
+     countries and is open to ALL FidoNet Mail Capable systems with TICK
+     possibilities. Contact Mike Paschen in Germany or any other ClipperNet
+     node for information about connection into ClipperNet. Contact your
+     local sysop about getting info how HE can connect ClipperNet for YOU.
+
+ -----------------------------------------------------------------------------
+
+
+                   What was published in previous number?
+ 
+     EDITORIAL, now?
+     THEDRAW - An Ansi Screen Editor
+     Public domain library?
+     DANIEL.LIB - public domain library, RMAKE part
+     Getting PATH to your .EXE
+     WYSIWYG Designer for Clipper/dBase
+     Magic of Clipper compiler or not?
+     CONFERENCE DUMP part (1)
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 26                  11 Feb 1991
+
+
+ =============================================================================
+                                   COMMENTS
+ =============================================================================
+
+
+              SOLUTION of preprocessor limitation for recursion
+ 
+ If remember, then in FIRST (or SECOND) number of CLIPBBS was in
+ Question&Answers some question about RECURSIVE using of preprocessor with
+ non correctly using free parameters.
+ 
+  ³  #command MYUSE <db1> [ALIAS <a1>] [<ro1: READONLY>]     ;
+  ³              [, <dbn> [ALIAS <an>] [<ron: READONLY>] ]   ;
+  ³      =>  myfunc( <(db1)>, <(a1)>, <.ro1.> )             ;
+  ³      [ ; myfunc( <(dbn)>, <(an)>, <.ron.> ) ]
+  ³
+  ³  MYUSE d1 ALIAS a1, ;
+  ³      d2,          ;
+  ³      d3 ALIAS a3
+  ³
+  ³  This translates to:
+  ³
+  ³  myfunc( "d1", "a1", .f.)
+  ³  myfunc( "d2", "a3", .f.)    // Why does this line have a3 in it???
+  ³  myfunc( "d3", "a3", .f.)
+ 
+ Answer is here now and was found in CLIPPER echo in FIDONET, the same
+ as original question.
+ 
+ It's a limitation in the PP, rather than a bug . . . this sort of
+ translation needs to be done as a multi-step process:
+ 
+ #command MYUSE <db1> [ALIAS <a1>] [<ro1: READONLY>]     ;
+           [, <*more*> ]                                 ;
+      =>  myfunc( <(db1)>, <(a1)>, <.ro1.> )             ;;
+          MYUSE <more>
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 27                  11 Feb 1991
+
+
+ =============================================================================
+                                   ECHODUMP
+ =============================================================================
+
+
+                          CONFERENCE DUMP part (2)
+ 
+ Subj: CLIPPER'S DBU.EXE              Prvt: N          Read: N
+ 
+ Has anyone encountered this bug in Clipper's (5.01) DBU.EXE:
+ 
+ If you have a database with a field name called "FILENAME" and try to
+ create an index using that as a key you will get an error message.
+ 
+ Also if you were have a database with a field name "FILENAME" and you
+ attempt to create an index via another field name the index will
+ not be created.  It shows the index file (on the screen) but if you look
+ to see what the key is the key is empty and if you quit to DOS the index
+ file is not their. However in it's place is a index file called 1.NTX.
+ 
+ Subj: CLIPPER'S DBU.EXE              Prvt: N          Read: N
+ 
+ Generally it's a bad idea not only to use Clipper's "reserved
+ words" for field or variables names, but to use names that have
+ the same first four letters.  And "FILE" is a reserved function
+ name (see the Reference manual, p. E-1).
+ 
+ So either use something like FLDNAME, or, as some people
+ advocate, the "stutter" convention: FFIELDNAME.
+ 
+ Subj: F11 AND F12 KEYS               Prvt: N          Read: N
+ 
+   Try SET KEY -11 TO < for F11 >
+    "   "   "  -12  " < for F12 >
+ 
+ Subj: F11 AND F12 KEYS               Prvt: N          Read: N
+ 
+ I think this isn't right, but will check it out.
+ When I use SET KEY -4 TO BIRTH, it sets F5 (not 4) to run BIRTH.PRG, and
+ the other keys are set similarly, with INKEY() values like so:
+ 
+         Key           F1 F2 F3 F4 F5 F6 F7 F8 F9 F10
+      Inkey() Value    28 -1 -2 -3 -4 -5 -6 -7 -8  -9
+ 
+ According to Steven Straley's book, -11 corresponds to SHIFT-F2, while
+ -12 corresponds to SHIFT-F3.
+ 
+ Subj: F11 AND F12 KEYS               Prvt: N          Read: N
+ 
+ It depends on the DOS and BIOS version of the PC when you use standard
+ Clipper.  With standard clipper you don't get an negative number as you do
+ with the other Fn keys.
+ 
+ FUNCky has a replacement for Inkey() which gives you -40, -41, etc. for
+ the keys, just like Clip5.  There's still the BIOS limitation thou.
+ 
+ CLIPBBS 1-03                   Page 28                  11 Feb 1991
+
+
+ Subj: F11 AND F12 KEYS               Prvt: N          Read: N
+ 
+ Inkey() Values for F11 and F12:
+ 
+       F11    -41
+       F12    -42
+ Shift-F11    -42
+ Shift-F12    -43
+  Ctrl-F11    -44
+  Ctrl-F12    -45
+   Alt-F11    -46
+   Alt-F12    -47
+ 
+ So try
+    SET KEY -41 TO (whatever), etc.....
+ 
+ Subj: F11 AND F12 KEYS               Prvt: N          Read: N
+ 
+             You are so right there < hope my appology got thru >
+ to whom ever I posted that too. I though the fellow was asking
+ how to set the other function key combos and didn't stop to think
+ about his possibly wanting to program F11 and F12 directly. As I
+ understand it, this ability should/will/might become a reality
+ when the extended < purposed > NEW ANSI set/s is odopted. I have
+ not as yet found a bios scan code for f11 or f12 . I suspect
+ it will be in a high 300/400 range though.
+ 
+ Subj: F11 AND F12 KEYS-SUMMER87      Prvt: N          Read: N
+ 
+ 
+ When I use SET KEY -4 TO BIRTH, it sets F5 (not 4) to run BIRTH.PRG,
+ and the other keys are set similarly, with INKEY() values like so:
+ 
+      Key              F1 F2 F3 F4 F5 F6 F7 F8 F9 F10
+      Inkey() Value    28 -1 -2 -3 -4 -5 -6 -7 -8  -9
+ 
+ According to Steven Straley's book, _Programming_in-Clipper:
+ _Second_Edition_, -11 corresponds to SHIFT-F2, while -12 corresponds
+ to SHIFT-F3.
+ 
+ The values of *ANY* key may be found with this program that I use
+ when I'm not sure, or I'm demonstrating the concept.
+ 
+ *: CLIPPER RELEASE: SUMMER '87
+ *: SYSTEM: VARIOUS
+ *: PURPOSE: TO TELL OPERATOR THE ASCII VALUE OF ANY KEY PRESSED
+ *:          WHILE THE PROGRAM IS RUNNING. USEFUL WHEN YOU WANT
+ *:          TO USE UNUSUAL KEY COMBINATIONS, ETC.
+ 
+ *: COLOR, DATE, TIME STUFF FOR THE SCREEN *
+ STORE "W+/B,BG+,B+" TO MNORMAL
+ STORE "B+/W,BG+,B+" TO MINVERSE
+ STORE "N+/G,GR+,B+" TO MSPECIAL
+ SET COLOR TO &MNORMAL
+ CLEAR
+ @09,08 TO 11,60 DOUBLE
+ CLIPBBS 1-03                   Page 29                  11 Feb 1991
+
+
+ SET COLOR TO &MSPECIAL
+ @02,02 SAY "DATE: " + DTOC(DATE())
+ @02,65 SAY "TIME: " + TIME()
+ SET COLOR TO &MNORMAL
+ 
+ * HERE'S THE CODE *
+ DO WHILE .T.
+   @10,10 SAY "INKEY VALUE OF THE KEY PRESSED IS ÍÍ>+STR(INKEY(1),5)
+   SET COLOR TO &MINVERSE
+   #12,00 SAY SPACE(80)
+   @12,25 SAY "HIT ALT-C TO QUIT THIS ROUTINE"
+ ENDDO
+ RETURN
+ 
+ Subj: F11 AND F12 KEYS-SUMMER87      Prvt: N          Read: N
+ 
+   Boy am I punchy or what <?????> ... Or is it DO WHILE .NOT. READING
+ the other person's post ...
+   Indeed, sorry bout that and you do have it right . I am not
+ altogether sure that someone hasn't designed a commercial library
+ for that purpose yet, as I know it know , you cannot access the
+ BIOS scan-codes for F11 or F12 using Summer87. I pulled out my
+ MSC 5.1 and Jasmas Primer and wrote his scan-code 'Showkey.PRG'
+ just to see if I could tweek a bios number off the old dinosaur.
+ Figured if they wrote Summer87 with MSC 5.0 then 5.1 might punch
+ out an answer. Nope ... F11 and F12 both use a sub-set of the
+ newer < I ain't got it > ANSI extended codes. ver. 4.xx I think?
+   I tried a couple of my other Commercial Libraries for Clipper87
+ and failed the < find the code > test . You don't really want to
+ know what MSC 6.0 told me < sumthing like r u CRAZY ? > ...
+   So, guess you have all the options of defining 40 function key
+ combos - limit in 87 claims 32 at a time and no F11 or F12 unless
+ you have a super duper brand new 286/386/486 ...
+ 
+ Subj: FOXPRO PROBLEM                 Prvt: N          Read: N
+ 
+ Since it sounds like you know your Foxpro maybe you can help me with a
+ pesky little problem I can't figger out.
+ 
+ As I understand Foxpro's automatic record locking, Foxpro is supposed to
+ lock a record whenever you attempt to change it. The problem I have is
+ in edit. Once I page up or down to the next or previous record the
+ record is not locked and I must press ^O to lock it before I can edit
+ the fields. Any ideas?
+ 
+ Subj: FOXPRO PROBLEM                 Prvt: N          Read: N
+ 
+  the only thing occurring to me off-hand is that if you
+ locked the previous record _manually_ (i.e., with an explicit
+ RLOCK() command, either at the command window or in your program
+ code) the lock on the first record isn't released when you move
+ the record pointer. And unless you happen to have SET MULTILOCK
+ ON (not a good idea, unless you really need it) you can't lock
+ more than one record at once in the same database. Thus, any
+ attempt by Fox for an automatic lock would fail.
+   The other possibility, of course, is that some other user had
+ CLIPBBS 1-03                   Page 30                  11 Feb 1991
+
+
+ the record or file locked at that moment. But if you could then
+ get the lock with Ctrl-O, that's unlikely. Also, Ctrl-O locks are
+ supposed to release automatically when you move the record
+ pointer.
+ 
+ Subj: FOXPRO/ CLIPPER 5.01           Prvt: N          Read: N
+ 
+ One problem I have in recommending FOXPRO 2.0 over Clipper 5.01, is the
+ final price.  A developer wanting all the goddies for FoxPro, would have
+ to buy the Network version, the compiler, the WATCOM api stuff...  Well
+ it might cost $2,000!  Clipper 5.01 may ask you to roll your own, but it
+ is priced accordingly.  If you don't want to roll your own, well you
+ have a lot of money left over for 3rd party libs that will do real
+ magic.
+ 
+ I think that when you can't be creative, and are forced to use someone
+ elses idea of how to point out an error (for example), you will look
+ like a lot of other guys.  I want my apps to look unique, and stand out.
+ 
+ Subj: FOXPRO/ CLIPPER 5.01           Prvt: N          Read: N
+ 
+ Bringing up the price tag is a real good point. You can buy a lot of
+ third party lib's with that extra 1500.00 if you buy Clipper over
+ FoxPro2.
+ 
+ Subj: GRAPHICS                       Prvt: N          Read: N
+ 
+ What's a good graphics library for clipper or dbase3+?
+ 
+ Subj: GRAPHICS                       Prvt: N          Read: N
+ 
+ dGE from Pinnacle work for both.
+ 
+ Subj: GRAPHICS                       Prvt: N          Read: N
+ 
+    I might suggest the following and they are all commercial not
+ Share-Ware ...
+ 
+    [ CLIPPER ]
+ 
+      FLIPPER by Pro Works
+      SilverPaint by SilverWare
+ 
+    [ dBASE ]
+ 
+      dGE 4.x  by Pinnacle
+      SilverPaint by SilverWare
+ 
+      just to name a few ...
+ 
+ Subj: GRAPHICS                       Prvt: N          Read: N
+ 
+ I use Flipper.  I tried DGE for a thirty day period.  I returned it
+ because it is too general. DGE (which cost the same as Flipper) allows
+ you to create graphics with Clipper, C, DBfast, and other dialect as
+ well.  As a result of this it has to stay general.  On the other hand,
+ CLIPBBS 1-03                   Page 31                  11 Feb 1991
+
+
+ Flipper is written especially for Clipper.  I once thought that DGE
+ would be a better buy for the reason that it support other languages but
+ I knew I would not leave Clipper so I decided to go with Flipper.
+ 
+ Subj: GRAPHICS                       Prvt: N          Read: N
+ 
+ Questions: Does flipper allow display of pcx,tif,etc. files?
+            Does it support dot matrix and HP Deskjet printers?
+            Can you write graphs and or use existing graphs?
+            Do you print from screen or write to printer directly or an
+            alternate file?
+ 
+ I'm reaserching,I've looked into a all the packages I can find and now
+ want to ask users specific questions.
+ thanks for your time,
+ 
+ Subj: INTERNAL DBCOMMIT ERR#19       Prvt: N          Read: N
+ 
+ Try to recreate your indexes and see how you go. that is usually the
+ problem when a commit fails.
+ 
+ 
+ Subj: INTERNAL DBCOMMIT ERR#19       Prvt: N          Read: N
+ 
+ The low internal error numbers should be the same for Clip5 as for S'87,
+ so #19 would be NTX corruption.
+ 
+ BTW, There is a ZIP which contain a number of collected IE's for Clip5 and
+ some comments on these.  The last version I've seen was named CL5IE104.ZIP
+ and I nkow that it's on The File Bank in San Diego, CA and The Boss in
+ Tenefly, NJ.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 32                  11 Feb 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+                            ClipNet - CLPFON.ARJ
+ 
+ File Name:      CLPFON.ARJ
+ Other Names:    CLPFONTS.xxx
+ 
+ File Size:      54,373 bytes
+ File Contents:
+                 EGAFONTS.DBF      84656 bytes
+                 VGAFONTS.DBF      92245
+                 CLPFONTS.DOC       1561
+                 EXPFONT.PRG        3802
+ 
+ Original set of files with additional fonts for EXPAND.LIB is distributed
+ with EGA and VGA version of fonts and example program for managing
+ databases containing fonts. EXPAND library is great additional library for
+ Clipper Summer 87 and Clipper 5.0x, author Pepijn Smits is accessible via
+ CLIPPER echo in FidoNet or in some bulletin boards in The Netherlands where
+ he is living.
+ 
+ Original idea of saving fonts for EGA/VGA in databases is allowing write
+ flexible programs with possibilities to use fonts coming in separated
+ database file. Change of fonts is then fast and without affect to program
+ itself. In files EGAFONTS.DBF and VGAFONTS.DBF are fonts supplied by author
+ of EXPAND.LIB for standard 25*80 mode of VGA/EGA.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                             ClipNet - COND.ARJ
+ 
+ File Name:      COND.ARJ
+ Other Names:
+ 
+ File Size:      14,983 bytes
+ File Contents:
+                 CONDINDX.CH        2706
+                 CONDINDX.PRG       9764
+                 ISSUES.DBF        52663
+ 
+ That's really interesting file. Originally it's a builder of CONDITIONAL
+ index. For FOXBASE or FOXPRO freaks, it's normal INDEX FOR command. Just
+ condition is here for exclude some records from index. Don't understand yet
+ why Nantucket didn't give this possibility to all Clipper programmers
+ directly....
+ 
+ Back to main theme. CONDINDX.PRG and CONDINDX.CH are case of very nice
+ program, quite readable with few examples of VERY good using preprocessor
+ and command definitions. Result is complete NEW command for Clipper for
+ building conditional index and then using of this index, together with
+ CLIPBBS 1-03                   Page 33                  11 Feb 1991
+
+
+ example program (included in source with very good way using #ifdef..) and
+ example database for this program.
+ 
+ One small comment which i have to have. Author is directly changing KEY
+ expression in .NTX file. I'm not quite sure if it's good way how to do
+ programming with overwriting something. But it's just only my comment.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - INDXSL.ARJ
+ 
+ File Name:      INDXSL.ARJ
+ Other Names:
+ 
+ File Size:      4,154 bytes
+ File Contents:
+                 ITEMS.DBF           780
+                 TESTINDX.PRG       6634
+                 TESTINDX.LNK         57
+                 READ.ME            2088
+ 
+ Not very readable and very commented code of function to make field
+ selection and index based on this selection. Idea is very good and final
+ view on screen and control is also good, therefore code analysis is
+ recommended only to experienced programmers <grin>.
+ 
+ Purpose of this function and connected example program and database is
+ allow user make index file based on own criteria of sort. Popup box coming
+ to screen is displaying list of all fields in database. User is then able
+ to scroll this list and select order of fields in index expression to
+ build. After end of this selection is created new index file with exact
+ index equal to selection of user.
+ 
+ This facility can be nice when system with open architecture is created and
+ reports are needed with free way of sorting request. Key then can be of
+ course only simple sum of all needed fields in needed order, but it's
+ mostly enough for normal users.
+ 
+ READ.ME file contains basic explanation of program and files. TESTINDX.LNK
+ is for use with MS LINK. Linking with standard RTLINK is the same as in
+ case of any other clipper files.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                           ClipNet - IOBASYS9.ARJ
+ 
+ File Name:      IOBASYS9.ARJ
+ Other Names:
+ 
+ File Size:      62,548 bytes
+ CLIPBBS 1-03                   Page 34                  11 Feb 1991
+
+
+ File Contents:
+                 AGENDA.TXT         3357     GENINFO.TXT       17346
+                 DEMO.PRG          16283     IOBASYS9.DOC      27212
+                 DEMO.TXT           4531     IOBASYS9.LIB      40001
+                 DEMO1.DBF           254     MAKEDEMO.BAT        114
+                 DEMO1.NTX          2048     ORDER.DOC          4702
+                 DEMO1.VEW           330     READ.ME            2157
+                 DEMO2.DBF          5473     TEXTVIEW.EXE      22013
+                 DEMO2.NTX          2048     TV.OPT                6
+                 DEMOPROC.OBJ      12558
+ 
+ This is a LIMITED version of maybe powerful library for CLIPPER SUMMER 87
+ (warning for all using 5.0x version!). Original library is called IOBASYS
+ and it's pure commercial product. Firm decided to improve market and made
+ this extract with two function for Summer 87 (5.0 version of full library
+ also exist, at least it's told in DOCs). MemoEdit() replacement with BLOCK,
+ SEARCH and some other capabilities and replacement for DBEDIT() allowing
+ use filtered browsing without INDEX, SET FILTER or any other additional
+ file.
+ 
+ Point of this library is, that they are also offering a "C" language module
+ for calling CLIPPER from C. I'm afraid, that this case they are only
+ talking about Summer87, because it's more known and 5.01 is too new and too
+ subject of changes about knowing this hidden information from Nantucket.
+ 
+ I had not chance to try it, because of no existence Summer 87 version of
+ Clipper on my place....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - MK30.ARJ
+ 
+ File Name:      MK30.ARJ
+ Other Names:
+ 
+ File Size:      18,760 bytes
+ File Contents:
+                 INFO.DBF            335     MAKEDEMO.BAT         79
+                 MKDEMO.DOC        14710     MKDMO.LIB         18983
+                 INFO.DBT           1627     MKDEMO.PRG         9198
+ 
+ 
+ DEMO version of MK.LIB. Nice mouse library, but in all doc's isn't any word
+ about price and so on. DEMO version of MK.LIB is limited by disabling
+ F1,F3,F5,F7,F9 and F11 keys and limitation of run for 60days. Only one
+ contact is given to firm called ARIES and it's phone number probably in
+ U.S.
+ 
+ MK.LIB is complete MicroSoft Mouse compatible Clipper library, probably for
+ CLIPPER Summer 87 (this information is also missing, but from program and
+ library i think, it's S87 only). Library contains set of low level function
+ and also some high level functions as replacement for MemoEdit() or
+ @PROMPT.
+ CLIPBBS 1-03                   Page 35                  11 Feb 1991
+
+
+ Don't forget it's a DEMO, but if you are interested in buy it, seems good.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - MOVEGETS.ARJ
+ 
+ File Name:      MOVEGETS.ARJ
+ Other Names:
+ 
+ File Size:      3,949 bytes
+ File Contents:
+                 READ.ME            2609     MAKEIT.BAT           91
+                 GSYSFRAG.PRG       2034     FIN2.DBF            195
+                 OBJGET2.PRG        2627
+ 
+ Another idea how to change GETSYS.PRG. Author of this sample (CSYSFRAG.PRG)
+ was inspired by FoxBase (what else of course...) with VALID clause. In this
+ sample is VALID clause used for returning NUMBER of get element to go for
+ next input. Take this file (it's small) for example how to use GET objects
+ and how to change own GETSYS.PRG.
+ 
+ Sample program (OBJGET2.PRG) included with complete example how directly
+ use GETLIST and all GET system related functions and objects.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - READPW.ARJ
+ 
+ File Name:      READPW.ARJ
+ Other Names:
+ 
+ File Size:      1,783 bytes
+ File Contents:
+                 READPWD.SRC        2594
+ 
+ Function for include in @GET command to get reader of password which is
+ giving echoes of '*' and tones for every press of key, but not displaying
+ password.
+ 
+ New function has to be included in GETSYS.PRG (yes, another GETSYS
+ improvement... <grin>) and then freely used with @GET SEND: operation.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - SYMBOL.ARJ
+ 
+ File Name:      SYMBOL.ARJ
+ CLIPBBS 1-03                   Page 36                  11 Feb 1991
+
+
+ Other Names:
+ 
+ File Size:      7,636 bytes
+ File Contents:
+                 SYMBOL.EXE        13132
+ 
+ Summer 87 utility, because it's not working with 5.0x programs at all.
+ Probably it's making some kind of table of symbols? It's coming WITHOUT
+ documentation at all. Or maybe it's optimizing symbol table in .EXE file?
+ Who knows.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 37                  11 Feb 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-03                   Page 38                  11 Feb 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

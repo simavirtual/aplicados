@@ -1,0 +1,23 @@
+//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+//³ FIVEDLL.RMK                               WORKBENCH (c) Tom Groeger ³Û
+//³ Make Script                                                03/23/96 ³Û
+//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙÛ 
+// ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+MakePath[.ch]   = "C:\FW\INCLUDE";$(include);
+
+.prg.obj:
+  SET INCLUDE=$(MakePath[.ch])
+  SET CLIPPERCMD=-m -w -n -q -es2
+  clipper $< -o$@
+
+.obj.dll:
+  Blinker @FIVEDLL.LNK
+  BliLib  /NP /OL FIVEDLL.LIB /ID FIVEDLL.DLL
+
+// Modules
+// =========
+FIVEDLL.OBJ     : FIVEDLL.PRG
+
+FIVEDLL.DLL     : FIVEDLL.OBJ
+

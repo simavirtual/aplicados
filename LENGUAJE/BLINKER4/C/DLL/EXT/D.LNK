@@ -1,0 +1,20 @@
+#
+#  96.03.15    D.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a DOS extended DLL
+#
+
+bli exe ext                # Create a DOS extended program
+out d                      # Output file name
+fi d                       # List OBJ files here
+
+defbegin                   # Begin module definition commands
+   library d               # Library module name
+   exports                 # It exports the following symbols
+      _testprintf          # Export _testprintf by name
+defend                     # End module definition commands
+
+nobell                     # No irritating beep
+map s,a                    # Create MAP file
+

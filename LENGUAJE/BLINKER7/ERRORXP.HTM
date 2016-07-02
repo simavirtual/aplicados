@@ -1,0 +1,571 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0043)http://guille.costasol.net/Clipper/Guru.htm -->
+<!-- saved from url=(0022)http://internet.e-mail --><!-- saved from url=(0022)http://internet.e-mail --><HTML><HEAD><TITLE>Programación en Clipper</TITLE>
+<META http-equiv=expires content=-1>
+<META http-equiv=Window-target content=_top>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#0000ff aLink=#ff0000 link=#0000ff bgColor=#ffffff 
+background="">
+<SCRIPT language=JavaScript>
+var gsPath = "../"
+function IrADeLista(){
+    var s1 = gsBanner.D1.selectedIndex;
+    var s2 = gsBanner.D1.options[s1].value;
+    if( s2 != "Selecciona" )
+        window.location = gsPath + s2;
+}
+</SCRIPT>
+
+<SCRIPT language=JavaScript src=""></SCRIPT>
+
+<P>&nbsp;</P>
+<DIV align=center>
+<CENTER>
+<TABLE style="BORDER-COLLAPSE: collapse" borderColor=#111111 cellSpacing=0 
+cellPadding=0 width="90%" border=0>
+  <TBODY>
+  <TR>
+    <TH><A href="http://guille.costasol.net/Clipper/indice.asp"><IMG height=64 
+      hspace=4 src="" width=72 align=middle border=0></A><FONT face=Verdana 
+      size=5><B> Clipper 5.x</B></FONT>
+      <P><FONT face=Verdana size=5><B>Respuestas del 
+  Gurú.</B></FONT></P></TH></TR></TBODY></TABLE></CENTER></DIV>
+<P>&nbsp;</P>
+<DIV align=center>
+<CENTER>
+<TABLE style="BORDER-COLLAPSE: collapse" borderColor=#000000 cellSpacing=0 
+cellPadding=6 width="100%" border=1>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width="20%"><FONT face=Verdana color=#ff0000 size=3><B><A 
+      href="http://guille.costasol.net/Clipper/indice.asp">Índice 
+      general</A></B></FONT><FONT face=Verdana color=#ff0000 
+      size=4><B>&nbsp;</B></FONT></TD>
+    <TD vAlign=top width="80%"><FONT face=Verdana>He notado que en muchas 
+      oportunidades me consultan una y otra vez lo mismo, por lo que decidí 
+      abrir este sector donde a medida que el tiempo me lo permita iré 
+      publicando las preguntas mas frecuentes que me realizan los programadores. 
+      <BR>Los textos de color </FONT><FONT face=Verdana 
+      color=#008000><STRONG>verde</STRONG></FONT><FONT face=Verdana> indican la 
+      respuesta.</FONT>
+      <P>&nbsp;</P>
+      <HR>
+
+      <P><A name=PCL></A><FONT face=Verdana size=2>(14-Abr-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Agrandar la 
+      letra usando PCL 5</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Bien resulta que esta impresora ya ha 
+      dado todo lo que podía y mas y ahora<BR>&gt;he comprado un HP cuya única 
+      emulación es "PCL 5" he mirado de adaptar el<BR>&gt;programa a este 
+      lenguaje pero me encuentro con lo siguiente.<BR>&gt;<BR><BR></FONT><FONT 
+      face=Verdana color=#008040 size=2>Si, PCL es correcto.<BR></FONT><FONT 
+      face=Verdana size=2><BR>&gt;En IBM PROP. podía crear caracteres mas 
+      grandes con solo una instrucción de<BR>&gt;escape y bajo PCL no encuentro 
+      esta secuencia.<BR>&gt;<BR><BR></FONT><FONT face=Verdana color=#008040 
+      size=2>Es muy simple, debes buscar en mi página:<BR></FONT><A 
+      href="http://www.mundoprogramacion.com/Clipper/pcl.htm"><FONT face=Verdana 
+      size=2>http://www.mundoprogramacion.com/Clipper/pcl.htm</FONT></A><FONT 
+      face=Verdana size=2><BR><BR><BR>&gt;Por lo que la pregunta es obvia 
+      ¿conoces la forma de conseguir que los<BR>&gt;caracteres se puedan hacer 
+      mas grandes ?<BR><BR></FONT><FONT face=Verdana color=#008040 size=2>Por 
+      las dudas que no comprendas como se utilizan, te adjunto un ejemplo 
+      mas<BR>claro.</FONT><FONT face=Verdana size=2><BR><BR>&gt;En el manual que 
+      tengo de IBM esta posibilidad se llama 
+      "ENLARGED"<BR>&gt;<BR><BR></FONT><FONT face=Verdana color=#008040 
+      size=2>Haaaaggg el manual, no entiendo porque no ponen los códigos PCL 
+      allí.<BR></FONT><FONT face=Verdana size=2></FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/prg/ejemprn.prg"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo ejemprn.prg (- de 1 
+      Kb)</FONT></P>
+      <HR>
+
+      <P><A name=prgs></A><FONT face=Verdana size=2>(08-Abr-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Un buen ejemplo 
+      de como enlazar .PRG's</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;amigo, estoy programando, pero todo lo 
+      tengo que concentar en un solo<BR>&gt;archivo (fuente), Pues si los 
+      trabajo por modulos, al compilar, me manda<BR>&gt;Error, recuerdo que hay 
+      un comando para hacerlos llamar internamente cada<BR>&gt;uno de los 
+      modulos<BR>&gt;por ejemplo:<BR>&gt;<BR>&gt;mi programa se llama 
+      cotización.prg, pero en ese archivo, hay un menu<BR>&gt;principal, que 
+      llama al segundo o tercer modolu, pero es lo que no recuerdo<BR>&gt;como 
+      hacerlo, si es con "DO", me puede ayudar amigo, y al momento de 
+      Linkar<BR>&gt;solo llamar al principal, y los demás en automatico se 
+      compilan<BR></FONT><FONT face=Verdana color=#008000 size=2><BR>Me 
+      imagino.<BR><BR>Bueno, te adjunto un ejemplo en 4 archivos, espero lo 
+      entiendas.<BR>Lo compilas así:<BR>Clipper menu<BR>blinker fi menu<BR><BR>y 
+      listo.<BR><BR>Tienes el programa principal : MENU.PRG<BR>Dos programas que 
+      son llamados PROG1.PRG y PROG2.PRG<BR>y el archivo de funciones 
+      Funcs.prg<BR><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/binarios/Prgs.zip"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo prgs.zip (3 Kb)</FONT></P>
+      <HR>
+
+      <P><A name=encdec></A><FONT face=Verdana size=2>(07-Abr-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Encriptar bases 
+      de datos con Clipper puro.</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;mi pregunta es si hay la 
+      posibilidad<BR>&gt;de encriptar los archivos en dbf y como 
+      hacerlo.<BR>&gt;<BR><BR></FONT><FONT face=Verdana color=#008000 size=2>Hay 
+      dos maneras de hacerlo, una fácil pero cara y un poquito mas 
+      laboriosa<BR>aunque gratis, y con la ventaja de tener el fuente del 
+      encriptor, ¿Cuál<BR>supones que yo prefiera?.<BR><BR>La fácil es con 
+      librerías de terceros como la DriverSix, donde te olvidas<BR>del tema ya 
+      que la encripción/desencripción se realiza de manera desatendida<BR>y el 
+      programador solo debe abrir las bases de datos en forma encriptada 
+      y<BR>olvidarse del tema.<BR>Estas librerías son pagas y muy caras por 
+      cierto.<BR><BR>Lo que hago es utilizar una rutina de 
+      encripción/desencripción que yo mismo<BR>creé. La misma encripta datos de 
+      cualquier tipo con claves de cualquier tipo<BR>y devuelve un valor de la 
+      misma longitud.<BR><BR>Cript(xDatos, xClave)<BR>Encripta una variable de 
+      cualquier tipo ya sea numérica, caracter, de fecha<BR>o lógica y devuelve 
+      los datos del mismo tipo y largo que la variable<BR>original, ideal para 
+      encriptar bases de datos.<BR><BR>xDatos = Datos a encrptar puede ser 
+      numérica, lógica, caracter o fecha.<BR>xClave = Clave que puede ser 
+      numérica, lógica, caracter o fecha.<BR><BR>Devuelve un valor encriptado 
+      del mismo tipo y ancho que el original.<BR><BR>Ejemplo:<BR><BR>Cript("Esto 
+      es una prueba", 1479)<BR>===&gt; Una serie de caracteres 
+      ilegibles<BR>Cript("Esto es una prueba", "JAQUECA")<BR>===&gt; Una serie 
+      de caracteres ilegibles<BR>Cript(1677, "CLAVE")<BR>===&gt; 
+      8402<BR>Cript(.T., 1479)<BR>===&gt; .F.<BR>Cript(.T., 1478)<BR>===&gt; 
+      .T.<BR><BR>DeCript(xDatos, xClave)<BR>Desencripta los datos encriptados 
+      por la función Cript()<BR><BR>xDatos = Datos a desencrptar puede ser 
+      numérica, lógica, caracter o fecha.<BR>xClave = Clave que puede ser 
+      numérica, lógica, caracter o fecha.<BR><BR>Devuelve el valor original 
+      desencriptado.<BR><BR>Y los uso de la siguiente manera:<BR><BR>Ha la hora 
+      de grabar datos en una base :<BR>[...]<BR>Replace Base-&gt;Campo With 
+      Cript(xDato, xClave)<BR>[...]<BR><BR>En un 
+      TBrow:<BR><BR>oTBrow:AddColumn(TbColumnNew("Nombre" ,;<BR>{|| 
+      deCript(Base-&gt;Dato, xClave) }))<BR><BR><BR>Y de la misma manera debes 
+      encriptar los datos antes de guardarlos y<BR>desencriptarlos al 
+      mostrarlos.<BR><BR>Te adjunto un archivo con las rutinas, espero haberte 
+      ayudado.<BR><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/prg/encdec.prg"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo encdec.prg (3 Kb)</FONT></P>
+      <HR>
+
+      <P><A name=ejemdbe></A><FONT face=Verdana size=2>(04-Abr-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Pintar registros 
+      condicionalmente con la función DbEdit()</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Maestro, existe alguna forma en que el 
+      dbEdit se sombree a nivel de todo el registro, no solo por campo de 
+      registro?<BR>&gt;<BR>&gt;Es decir, cuando cambie de registro, el dbEdit 
+      debe de seleccionar o sombrear siempre TODO el registro 
+      actual.<BR><BR></FONT><FONT face=Verdana color=#008000 size=2>Sabes hace 
+      algunos años hice la misma pregunta a varios programadores Clipper que se 
+      encontraban en una exposición a la que asistí.<BR>La respuesta unánime fue 
+      : "NO".<BR>No me convenció y le busqué la vuelta al asunto y así fue que 
+      la encontré. Es una chapuza pero ayuda mucho porque si bien prefiero los 
+      objetos TBrow, la función DBEdit es mucho menos laboriosa.<BR>Te adjunto 
+      un ejemplo donde aparecen pintados ciertos registros de distintos campos 
+      según condiciones, por ejemplo saldos negativos y pagos en 
+      efectivo.<BR></FONT><FONT face=Verdana size=2><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/binarios/Ejemdbe.zip"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo Ejemdbe.ZIP (2 Kb)</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(27-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=codbar></A><FONT face=Verdana 
+      size=2><STRONG>Leer datos desde un lector de códigos de 
+      barras.</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;necesito agregar en un sistema de 
+      facturación de mi propiedad la lectura de codigos barra mediante alguna 
+      pistola u otro lector de codigos de barra. ya baje el que imprime lo que 
+      da una ventaja, pero, como obtengo la lectura para que la reconzca mi 
+      sistema.<BR>&gt;<BR>&gt;Espero puedas responder a mi 
+      inquietud.<BR>&gt;<BR><BR></FONT><FONT face=Verdana color=#008000 
+      size=2>No entiendo por que pero recibo esta consulta muy a menudo, está 
+      muy bien que pregunten si no conocen la respuesta, lo que no entiendo es 
+      porque piensan que hay que hacer algo en especial para leer la información 
+      proveniente desde el lector de códigos de barra.<BR>El tema es así, un 
+      lector de códigos de barra deposita el código leído directamente en el 
+      buffer de teclado, lo cual sería equivalente a escribir en el teclado el 
+      código manualmente.<BR>En pocas palabras, si tu lees con el lector un 
+      código de barras que sea : 123456789 sería lo mismo que escribir 
+      directamente en el teclado la secuencia numérica 132456789.<BR>La única 
+      diferencia es que el lector seguramente lo hará algo mas 
+      rápido.<BR>:-)<BR>Lo que si debes hacer es adaptar tu sistema de 
+      facturación para que cuando se presione una tecla numérica se abra un 
+      "Read" y lea la secuencia, de dar &lt;Enter&gt; al final se encarga 
+      también el lector, el cual algunas veces, dependiendo de la marca" hay que 
+      configurarlo para que lo haga, esto viene muy bien explicado en el manual 
+      del usuario.<BR>Ejemplo de rutina para que efectúe el 
+      "Read":<BR><BR>Inkey(0)<BR>[...]<BR>Case LastKey() &gt;= 48 .And. 
+      LastKey() &lt;= 57<BR>Keyb(Chr(LastKey())<BR>@... Get CodBar Pict 
+      [999999999999999]<BR>Read<BR>[...]<BR><BR>Lo que hago es cargar en el 
+      buffer la primer tecla presionada para que el "Read" continúe cargando el 
+      resto del código.<BR></FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(26-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=dbeval></A><FONT face=Verdana 
+      size=2><STRONG>La función DbEval()</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Necesito aprender a utilizar DBEVAL() con 
+      ejemplos prácticos. Me ayudas?<BR><BR></FONT><FONT face=Verdana 
+      color=#008000 size=2>Pero por supuesto, este es el tipo de consultas que 
+      contesto con mucho gusto.<BR><BR>Ok, ejemplos prácticos... veamos, la 
+      verdad es que los manuales y guías que tengo no tienen ejemplos prácticos 
+      sobre esta función, ni mucho menos la NG's (Norton Guides), es un horror 
+      el ejemplo que ahí proponen.<BR><BR>Bueno, voy a explicarte la función por 
+      partes, espero que lo puedas comprender, si te pierdes me lo dices y te 
+      explico mejor algún punto.<BR>Partamos de la funcionalidad, básicamente lo 
+      que hace es ejecutar un "bloque de código", que puede ser una función 
+      tuya, el incremento de una variable, etc., evaluando para cada registro se 
+      cumplan ciertas condiciones.<BR>¿La compliqué mucho verdad?<BR>Bueno, 
+      vamos a ver cada uno de los parámetros en un ejemplo por separado para que 
+      lo entiendas.<BR>La sintaxis sería así:<BR><BR>DbEval( {|| Bloque de 
+      código, &lt;Condición "For"&gt;, &lt;Condición "While"&gt;, &lt;nNext&gt;, 
+      &lt;Número de Registro&gt;, &lt;lRest&gt;)<BR><BR>Como podrás observar 
+      exceptuando el bloque de código todos los demás parámetros son opcionales, 
+      con lo <BR>cual podemos hacer mas simples los ejemplos.<BR>Partiremos por 
+      un ejemplo donde solo se use el Bloque de código, como no usamos 
+      condiciones lo que vamos a hacer es contar la cantidad de registros de una 
+      base de datos.<BR>En este ejemplo el bloque de código será "nCount++" lo 
+      que sería igual a nCount = nCount + 1, o sea que se incremente la variable 
+      nCount en uno cada vez que se ejecuta el bloque, como está libre de 
+      condiciones será en cada registro.<BR><BR>Ejemplo (1):<BR>LOCAL nCount := 
+      0 <BR>Use EJEMCLI.DBF<BR>DbEval( {|| nCount++}, , , , , )<BR>? "Total de 
+      Clientes :", nCount<BR><BR>Respuesta ==&gt; Cantidad de registros en la 
+      base de datos<BR>Nota importante: dbEval() se ajusta a los filtros 
+      preestablecidos como ser:<BR>Set Dele (on/off)<BR>Set Filter to <BR>Y 
+      otros que afecten a la base de datos.<BR><BR>Ahora veamos un ejemplo con 
+      una condición "For"<BR>El resultado será la cantidad de clientes cuyo 
+      saldo sea menor a cero.<BR><BR>LOCAL nCount := 0<BR>dbUseArea(.F., , 
+      "EJEMCLI.DBF")<BR>DbEval( {|| nCount++}, {|| Saldo &lt; 0} , , , , )<BR>? 
+      "Total de Clientes morosos :", nCount<BR><BR>Respuesta ==&gt; Cantidad de 
+      registros en la base de datos que cumplan con la condición Saldo &lt; 
+      0.<BR><BR>Ahora veamos un ejemplo con una condición "While"<BR><BR>LOCAL 
+      nCount := 0<BR>dbUseArea(.F., , "EJEMCLI.DBF")<BR>DbEval( {|| 
+      Contador(nCount)}, {|| Saldo &lt; 0} ,{||LastKey() # 27 }, , , )<BR>? 
+      "Total de Clientes morosos :", nCount<BR><BR>********************<BR>Func 
+      Contador(nCount)<BR>********************<BR>Inkey()<BR>Retu 
+      nCount++<BR><BR>Respuesta ==&gt; Cantidad de registros en la base de datos 
+      que cumplan con la condición Saldo &lt; 0 hasta que se toque la tecla 
+      Escape (lastkey() = 27) ó termine la base lo primero que suceda.<BR><BR>El 
+      parámetro nNext lo que hace ejecutar el código de bloque sobre una 
+      cantidad de registros determinada, en el siguiente ejemplo dará como 
+      resultado la cantidad de registros dentro de los siguientes 150 que 
+      cumplan con la condición Saldo &lt; 0 hasta que se toque la tecla Escape 
+      (lastkey() = 27)<BR><BR>LOCAL nCount := 0<BR>dbUseArea(.F., , 
+      "EJEMCLI.DBF")<BR>DbEval( {|| Contador(nCount)}, {|| Saldo &lt; 0} 
+      ,{||LastKey() # 27 }, 150, , )<BR>? "Total de Clientes morosos :", 
+      nCount<BR><BR>********************<BR>Func 
+      Contador(nCount)<BR>********************<BR>Inkey()<BR>Retu 
+      nCount++<BR><BR>El parámetro correspondiente al número de registro hace 
+      que el código de bloque se ejecute solo sobre el registro mencionado, no 
+      voy a poner un ejemplo porque considero es demasiado simple y no hace 
+      falta.<BR><BR>Y Por último el parámetro lRest es un valor lógico que 
+      indica si la evaluación será desde el primer registro en el caso que sea 
+      .F. ó desde el registro actual .T.<BR>El siguiente ejemplo muestra la 
+      cantidad de cantidad de registros en la base de datos que cumplan con la 
+      condición Saldo &lt; 0 a partir del registro 150<BR><BR>LOCAL nCount := 
+      0<BR>dbUseArea(.F., , "EJEMCLI.DBF")<BR>Goto 150<BR>DbEval( {|| 
+      Contador(nCount)}, {|| Saldo &lt; 0} , , , , .T.)<BR>? "Total de Clientes 
+      morosos :", nCount<BR></FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(22-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=Get></A><FONT face=Verdana 
+      size=2><STRONG>El Comando Get con el parámetro "when".</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Se supone que el @ ... get Variable 
+      message "Hola"<BR>&gt;<BR>&gt;tiene que mostrarte el mensaje al final de 
+      la pantalla, esta con SET MESSAGE TO 23 center pero no sale nada, acaso 
+      hay que setear otra cosa ??<BR><BR></FONT><FONT face=Verdana color=#008000 
+      size=2>No, el commando "message" solo sirve para usar con el comando 
+      "Prompt", no con "Say" o "Get".<BR>Te adjunto un ejemplo que realizé 
+      exclusivamente para responder a tu pregunta, en el hay 4 "Get's" y un 
+      mensaje en la línea 23 que cambia cada vez que accedes a un 
+      campo.<BR><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/prg/ejemread.prg"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo ejemread.prg (977 
+      bytes)</FONT><FONT face=Verdana color=#008000 size=2><BR></FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(19-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=Errorblock></A><FONT face=Verdana 
+      size=2><STRONG>Manejo de errores desde Clipper.</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;quisiera saber cual es la manera de 
+      controlar los errores por ejemplo<BR>&gt;use tabla 
+      exclusive&nbsp;&nbsp;&nbsp; &amp;&amp; en este momento se genera un error 
+      y me manda el mensaje <BR>&gt;neterror()&nbsp;&nbsp; &amp;&amp; el 
+      neterror me manda el mensaje pero antes ya se genero un error 
+      <BR>&gt;</FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>Esto es muy simple, debes 
+      utilizar la función ErrorBlock() para controlar los errores que 
+      desees.<BR>Por ejemplo, el error correspondiente a hacer un USE en 
+      exclusivo de una base de datos ya abierta es el 21.<BR>Un ejemplo de 
+      programa sería: &nbsp; </FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>Local bErrorHandler // Defino 
+      como local la variable bErrorHandler &nbsp; bLastHandler := 
+      ErrorBlock(bErrorHandler)</FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>// Antes de asignar mi 
+      manejador de errores grabo el actual en la variable bLastHandler &nbsp; 
+      ErrorBlock( {|e| SysError( E )} ) <BR>// Antes del comando USE para 
+      controlar los errores desde mi función Syserror() &nbsp; use tabla 
+      exclusive // Abro la tabla<BR>? neterr()&nbsp; // Muestro si hay 
+      error<BR>ErrorBlock(bLastHandler) // Devuelvo el control de errores al 
+      manejador original. &nbsp; </FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>Y la función Syserror() debería 
+      ser mas o menos así: &nbsp; </FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>FUNCTION SYSERROR( e )<BR>If 
+      e:genCode = 21 <BR>&nbsp;&nbsp; //21 es el código para este error, en el 
+      archivo de cabecera ERROR.CH encontraras los códigos para cada 
+      error.<BR>&nbsp; NetErr(.t.) // Asigno NetErr = .T. (verdadero)<BR>&nbsp; 
+      Retu .F.&nbsp; // Devuelvo el control al programa.<BR>EndI&nbsp; 
+      <BR>Return (.F.) &nbsp; </FONT></P>
+      <P><FONT face=Verdana size=2><BR>&gt;quisisera saber cual es la forma para 
+      que clipper no mande los mensajes de error y yo los pueda 
+      codificar.</FONT></P>
+      <P><FONT face=Verdana color=#008000 size=2>Usando ErrorBlock() puedes 
+      asignar funciones para controlar tu mismo los errores, grabarlos en un 
+      archivo .LOG, reintentar una impresión hasta que la impresora esté lista o 
+      se presione una tecla, y muchas otras cosas mas. &nbsp;</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(18-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=impred></A><FONT face=Verdana 
+      size=2><STRONG>Imprimir en Red desde Clipper</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;perdona que me dirija a ti directamente, 
+      he estado mirando la web y no he visto lo que busco. <BR><BR>Es que esta 
+      sección es para eso, así que procede con tu pregunta.<BR><BR>&gt;Me 
+      gustaría saber si es posible imprimir en RED, con clipper a una impresora 
+      USB bajo Windows. <BR>&gt;<BR>&gt;Vamos lo que quiero es saber si es 
+      posible imprimir bajo windows, a una impresora en red y que además es USB. 
+      Todo esto usando clipper, claro.<BR>&gt;<BR><BR></FONT><FONT face=Verdana 
+      color=#008000 size=2>Bien, tu pregunta se ha hecho tan común en estos 
+      últimos tiempos que publicaré mi respuesta en mi página.<BR>Imprimir en 
+      Red desde Windows en cualquier impresora es muy fácil.<BR>Primero debes 
+      instalar la impresora en la máquina adecuada con sus correspondientes 
+      "Drivers" no importa si esta es USB, paralela ó IR (Transmisión de datos 
+      por infrarrojo).<BR>Luego en cada una de las PC's donde vas a correr el 
+      programa debes seguir los siguientes pasos:<BR>Hacer "Click" en el botón 
+      de Inicio, configuración, Impresoras.<BR>"Doble Click" en "Agregar 
+      Impresora".<BR>Hacer "Click" en el botón "Siguiente", Seleccionar 
+      impresora en Red y luego "Click" en el botón "Siguiente" 
+      nuevamente.<BR>Hacer "Click" en el botón "Examinar" y buscar la PC que 
+      contiene la impresora, "Click" en la impresora y aceptar, nos habrá traído 
+      la dirección UNC en el cuadro de texto, algo así como : 
+      \\Facturación\HP4100<BR>Hacer "Click" en el botón "Siguiente", Seleccionar 
+      "deseo que los programas DOS impriman en esta impresora"<BR>Luego hacemos 
+      click en el botón siguiente hasta terminar.<BR>Eso es todo, incluso si 
+      deseamos que nuestro programa dirija la salida de impresión a dos ó mas 
+      impresoras distintas solo tenemos que repetir los pasos para agregar otra 
+      impresora y luego en las propiedades de cada una de las impresoras en la 
+      solapa "General" hacemos "Click" en capturar puerto.<BR>Windows 95, 98 y 
+      Me nos proveen de 9 puertos virtuales por lo que podemos asignar hasta 9 
+      impresoras distintas.<BR>Luego en nuestro programa utilizamos el 
+      comando:<BR>Set Printer to &lt;cPuerto&gt;<BR>Donde cPuerto será LPT1 para 
+      la impresora que asignamos a ese puerto, LPT2 para siguiente y 
+      así...</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(18-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><A name=i9002></A><FONT face=Verdana 
+      size=2><STRONG>Error interno 9002 (Internal error 9002) 
+      </STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Hola!<BR>&gt;Tengo un problema. Compilo 
+      un programa con Clipper 5.2e y lo Linkeo con<BR>&gt;Blinker 3.0 sin 
+      problemas.<BR>&gt;Cuando lo ejecuto no entra al programa y me da el 
+      siguiente error:<BR>&gt;<BR>&gt;RDDREGISTE (0) Internal Error 
+      9002<BR>&gt;<BR>&gt;Por qué se produce? Cómo lo soluciono? 
+      HELP!!!<BR><BR></FONT><FONT face=Verdana color=#008000 size=2>Si leemos el 
+      manual de Clipper nos dice que un error interno 9002 se produce en tiempo 
+      de ejecución cuando el sistema no puede detectar la RDD para el manejo de 
+      bases de datos e índices usados por la aplicación.<BR>Esto en la teoría 
+      puede ser cierto, no obstante a la práctica, los años me enseñaron que 
+      este poco descriptivo error corresponde a diferentes cosas que paso a 
+      detallar:<BR>En primer lugar es probable que se esté utilizando una 
+      biblioteca u objeto que no sean compatibles con la versión de Clipper con 
+      la que se ha compilado el programa.<BR>Otra posibilidad es que el 
+      Linkeditor (Bliker en este caso) no reconozca la biblioteca que contiene 
+      el manejador de bases de datos (RDD).<BR>También es posible que no sea 
+      apropiado el orden de inclusión de los objetos y/o bibliotecas en el 
+      "Script" de Linkeditado.<BR>Y por último que algún .OBJ se encuentre 
+      corrupto.<BR>¿Soluciones?<BR>Empecemos por el principio, primero hay que 
+      verificar si todas las versiones de bibliotecas y objetos son compatibles 
+      con el compilador y linkeditor actual, luego si hay un "Script" de 
+      linkeditado verificar el orden en que son llamados los objetos y/o 
+      bibliotecas y por último, si esto está bien, proceder a borrar y a 
+      regenerar cada uno de los .OBJ que conforman al programa.</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(14-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Leer datos desde 
+      COM1, COM2, COM3 ó COM4.</STRONG></FONT></P>
+      <P><FONT face=Verdana><BR></FONT><FONT face=Verdana size=2>&gt;Estoy 
+      haciendo un programa y necesito leer del puerto com1 o com2 el peso en KGS 
+      que me marca la bascula.<BR>&gt;Cuales son los comandos con lo cual puedo 
+      hacerlo en Clipper.<BR><BR></FONT><FONT face=Verdana color=#008000 
+      size=2>Bien, he tenido que realizar este tipo de comunicaciones con 
+      distintos dispositivos en varias oportunidades, antes, con Clipper Summer 
+      '87 he tenido que recurrir a un programa hecho en C#, ya que no existía 
+      ninguna biblioteca o función que lo permitiera.<BR>¿Sabes lo que sería 
+      "Clipper Summer '87" sin la existencia de C?<BR>Sería lipper Summer '87. 
+      <BR><STRONG>:-)</STRONG> Un poco de humor no viene mal, ¿no?<BR><BR>Bueno, 
+      continuando con el tema, Clipper 5 trae unas funciones especiales para 
+      manejar la comunicación mediante los puertos Com, se encuentran en la 
+      librería Clipper Tools, (CT y CTP53)<BR>Igualmente el tema es bastante 
+      complicado ya que el programa debe interpretar los valores que el 
+      dispositivo transmite al puerto.<BR>En la dirección 
+      http://www.clipx.net/ng/tools1-3/ng3261e.php (inglés) están perfectamente 
+      explicados estos comandos.<BR><BR>Los comandos son:<BR><STRONG>COM_OPEN(), 
+      COM_INIT() y 
+      COM_READ()</STRONG><BR><BR><STRONG>COM_OPEN()</STRONG><BR>Abre el puerto 
+      he inicializa el 
+      Buffer.<BR><BR>Sintaxis<BR><BR>COM_OPEN(&lt;nComPort&gt;,&lt;nBufferIn&gt;,&lt;nBufferOut&gt;,<BR>[&lt;lTrapMode&gt;]) 
+      --&gt; lStatus<BR><BR><BR>Argumentos:<BR><BR>&lt;nComPort&gt; Designa el 
+      número de puerto "Com" a ser leído, este puede ser 1, 2, 3 ó 
+      4.<BR><BR>&lt;nBufferIn&gt; Define el tamaño del buffer de entrada, hasta 
+      64535 Bytes (64 Kb), si se omite el valor será 100 
+      Bytes.<BR><BR>&lt;nBufferOut&gt; Define el tamaño del buffer de salida, 
+      hasta 64535 Bytes (64 Kb), si se omite el valor será 100 
+      Bytes.<BR><BR>&lt;lTrapMode&gt; Si el valor es .T. (verdadero) el puerto 
+      solo disparará una interrupción cuando recibe datos, y estos no son el 
+      resultado de una falla en la transmisión, si se omite el valor será .F. 
+      (Falso)<BR><BR>Devuelve .T. (Verdadero) si se abrió el puerto con 
+      éxito.<BR><BR><BR><STRONG>COM_INIT()</STRONG><BR>Inicializa los parámetros 
+      del puerto 
+      Com.<BR><BR>Sintaxis<BR><BR>COM_INIT(&lt;nComPort&gt;,[&lt;nBaudRate&gt;],[&lt;cParity&gt;],<BR>[&lt;nDataLength&gt;],[&lt;nStopBits&gt;]) 
+      --&gt; lInitialized<BR><BR>Argumentos<BR><BR>&lt;nComPort&gt; Designa el 
+      número de puerto "Com" a ser leído, este puede ser 1, 2, 3 ó 
+      4.<BR><BR>&lt;nBaudRate&gt; Determina 300, 600, 1200, 2400, 4800, 9600 ó 
+      19200 baudios, si se omite se tomaran 300 baudios, yo particularmente uso 
+      1200.<BR><BR>&lt;cParity&gt; Determina la paridad : (E)ven, (O)dd, (M)ark, 
+      (S)pace, or (N)one. si se omite se tomara "N".<BR><BR>&lt;nDataLength&gt; 
+      Largo de datos, 7 u 8 Bits, el valor por default es 
+      8.<BR><BR>&lt;nStopBits&gt; Bits de parada, si se omite el valor será 
+      1.<BR><BR>Devuelve : .T. si se inicializa 
+      Ok.<BR><BR><BR><STRONG>COM_READ()</STRONG><BR>Lee una cadena de caracteres 
+      desde el buffer de 
+      recepción.<BR><BR>Sintaxis:<BR>COM_READ(&lt;nComPort&gt;,[&lt;nLargo&gt;],[&lt;lNoBorrar&gt;])<BR>--&gt; 
+      cCadena<BR><BR>Argumentos:<BR><BR>&lt;nComPort&gt; Designa el número de 
+      puerto "Com" a ser leído, este puede ser 1, 2, 3 ó 
+      4.<BR><BR>&lt;nLargo&gt; Determina la cantidad de caracteres a leer desde 
+      el buffer, si no incluyes este parámetro serán leídos todos los 
+      caracteres.<BR><BR>&lt;lNoBorrar&gt; .T. (Verdadero) Hace que no se borre 
+      la cadena leída en el buffer, si no se incluye se 
+      borrarán.<BR><BR>Devuelve una cadena de caracteres correspondientes al 
+      buffer de recepción.<BR><BR>Ejemplo:<BR><BR>cInput := COM_READ(1, 10) // 
+      Lee Diez caracteres desde el puerto 1<BR>? cInput // Los muestra en la 
+      pantalla<BR><BR><BR>Es conveniente cerrar el puerto luego de usarlo 
+      mediante <STRONG>Com_Close</STRONG>(nComPort)</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(12-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>(DOS Error 4) En 
+      Windows 2000/ME/NT</STRONG></FONT><FONT face=Verdana>.</FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Tengo una aplicación hecha con alguna 
+      versión de clipper, cuando la ejecuto en una máquina con W95 ó W98 la 
+      aplicación funciona bien, pero cuando la ejecuto en una maquina con W2000 
+      me manda el siguiente error:<BR>&gt;<BR>&gt;Error <STRONG>DBFNTX/1003 Open 
+      error</STRONG>:<BR>&gt;\sistema\datsis\ofertax1.ntx<BR>&gt;<STRONG>(DOS 
+      Error 4)</STRONG><BR>&gt;<BR><BR></FONT><FONT face=Verdana color=#008000 
+      size=2>Ok, Este error también sucede en <EM>Windows ME y NT.</EM><BR>En 
+      primer lugar un <EM>"DOS Error 4"</EM> se produce cuando se agotaron los 
+      manejadores de archivos disponibles, o sea que hay mas archivos abiertos 
+      de los que se asignaron mediante el comando <EM>"Files"</EM> en el archivo 
+      <EM>"CONFIG.SYS"</EM>.<BR><STRONG>Windows XP, NT y W2K (2000)</STRONG> 
+      <STRONG>no utilizan los archivos CONFIG.SYS y AUTOEXEC.BAT </STRONG>como 
+      si lo hacen las versiones anteriores, en su lugar <STRONG>utilizan 
+      CONFIG.NT y AUTOEXEC.NT </STRONG>ubicados en la carpeta (directorio) 
+      <EM>"\WINDOWS\System32\"</EM>, por lo que para aumentar la cantidad de 
+      manejadores de archivos (file handlers) es necesario incluir las 
+      siguientes líneas:<BR><BR>En el archivo \WINDOWS\System32\Config.nt<BR>la 
+      línea :<BR>FILES=100<BR><BR>En el archivo 
+      \WINDOWS\System32\Autoexec.nt<BR>la línea :<BR>SET 
+      CLIPPER=F100<BR><BR>Esta última línea aveces no es suficiente con 
+      colocarla solo en el archivo AUTOEXEC.NT, sino que es necesario ejecutarla 
+      en cada una de las sesiones DOS que se abran, para lo cual es conveniente 
+      hacer un .BAT que incluya este comando y luego ejecute el 
+      programa.<BR>Ejemplo:<BR>SET CLIPPER=F100<BR>MYPROG.EXE<BR><BR>Siendo 
+      <STRONG>MYPROG.EXE</STRONG> el programa en Clipper a ejecutar.</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(12-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Windows tarda 
+      mucho en imprimir desde Clipper.</STRONG></FONT></P>
+      <P><FONT face=Verdana size=2>&gt;Estoy tratando de imprimir en una 
+      impresora de matrix de punto, en un sistema programado en lenguaje clipper 
+      bajo un sistema operativo windows XP.<BR>&gt;El reporte tarda mucho en ser 
+      enviado a la impresora, la unica manera que he logrado que salga rapido es 
+      saliendome del sistema y volviendo a entrar.<BR>&gt;<BR><BR></FONT><FONT 
+      face=Verdana color=#008000 size=2>Mucho es como dos minutos y puedes 
+      también presionar Alt-Tab para que salga de inmediato.<BR></FONT><FONT 
+      face=Verdana size=2><BR>&gt;Supongo que el buffer de impresión esta 
+      esperando alguna instrucción<BR>&gt;para cerrarse.<BR><BR></FONT><FONT 
+      face=Verdana color=#008000 size=2>Si, es un error de Windows heredado 
+      desde la versión '98, no de Clipper.<BR></FONT><FONT face=Verdana 
+      size=2><BR>&gt;<BR>&gt;Si tiene algun concocimiento&nbsp; sobre esto le 
+      sabria agradecer mucho su ayuda.<BR>&gt;<BR><BR></FONT><FONT face=Verdana 
+      color=#008000 size=2>En Internet encontré mas de cien foros donde se 
+      comenta el tema, personalmente probé cada una de las soluciones allí 
+      propuestas y no puedo dar con la solución, cambié mil cosas en los .INI de 
+      Windows, modifique mi programa de impresión, pero nada.<BR>Este problema 
+      me está rompiendo el coco a mi también, te pido que si logras solucionarlo 
+      me avises.<BR>Gracias y disculpa el no poder ayudarte.</FONT></P>
+      <HR>
+
+      <P><FONT face=Verdana size=2>(10-Mar-2003)</FONT><FONT 
+      face=Verdana><BR></FONT><FONT face=Verdana size=2><STRONG>Evitar Clipper 
+      dos veces ejecutadose.</STRONG></FONT></P>
+      <P><FONT face=Verdana color=#000000 size=1>&gt;Te quiero preguntar si es 
+      posible con Clipper 5.3, puro hacer que cuando ya este abierto el sistema 
+      y te lo vuelven a llamar se abra la ventana del sistema que ya estaba 
+      abierto?<BR></FONT><FONT face=Verdana color=#008000 size=1><BR>Bueno, la 
+      cosa es así, Clipper puro, si, pero ejecutando una función de Windows 95', 
+      98', ME, 2K, NT, ME (prácticamente todos) llamada desde Clipper, para 
+      poder mostrar la ventana. <BR>Hay quienes dices, no los culpo, que 
+      efectuar este tipo de llamadas no es una ejecución de Clipper puro, no los 
+      culpo aunque yo particularmente considero que como bien todos saben 
+      Windows es un sistema operativo y si yo realizo un programa en Clipper el 
+      cual no incluye librerías externas y solo hace una llamada a una función 
+      del OS, entonces ese programa es Clipper puro.<BR>Te adjunto un ejemplo, 
+      muy simple por cierto, pero funcional, el cual realicé exclusivamente para 
+      ti, como para explicarte mejor tal llamada. Para probarlo baja todos los 
+      archivos en cualquier carpeta y trata de<BR>ejecutarlo mas de una 
+      vez.<BR><BR></FONT><A 
+      href="http://guille.costasol.net/Clipper/binarios/ya.zip"><FONT 
+      face=Verdana color=#008000 size=1><IMG height=16 src="" width=41 
+      border=0></FONT></A><FONT face=Verdana color=#008000 size=1> </FONT><FONT 
+      face=Verdana color=#000000 size=1>Archivo YA.ZIP (109 
+  Kb)</FONT></P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <P><FONT face=Verdana size=2><B>Esta sección sobre CA-Clipper está 
+    coordinada íntegramente por </B></FONT><A 
+    href="http://guille.costasol.net/Clipper/diego.htm"><FONT face=Verdana 
+    size=2><B>Diego Lucio D'Onofrio</B></FONT></A></P></BLOCKQUOTE></BLOCKQUOTE>
+<HR color=#000000 noShade SIZE=3>
+
+<P align=center><A href="http://guille.costasol.net/indice.asp"><FONT 
+face=Verdana size=2><IMG height=50 
+alt="la Luna del Guille o... el Guille que está en la Luna... tanto monta..." 
+src="" width=200 border=0></FONT></A></P><!-- Contador de NedStat iniciado el 01/Nov/2002 a las 23:15 -->
+<P><FONT face=Verdana size=2><B>Estadísticas desde el 01/Nov/2002 23:15</B><BR><!-- Begin Nedstat Basic code --><!-- Title: Programación Clipper en el Guille --><!-- URL: http://guille.costasol.net/Clipper/indice.htm -->
+<SCRIPT language=JavaScript src="">
+</SCRIPT>
+
+<SCRIPT language=JavaScript>
+<!--
+  nedstatbasic("AB3DUg1GsMlJJ5qBO2L4IQvdYkCg", 0);
+// -->
+</SCRIPT>
+<NOSCRIPT></FONT><A 
+href="http://v1.nedstatbasic.net/stats?AB3DUg1GsMlJJ5qBO2L4IQvdYkCg" 
+target=_blank><FONT face=Verdana size=2><IMG height=18 src="" width=18 border=0 
+nosave></FONT></A><A 
+href="http://v1.nedstatbasic.net/stats?AB3DUg1GsMlJJ5qBO2L4IQvdYkCg" 
+target=_blank><FONT face=Verdana size=2></NOSCRIPT></FONT></A><FONT face=Verdana 
+size=2> <!-- End Nedstat Basic code --></FONT></P></BODY></HTML>

@@ -1,0 +1,25 @@
+#
+#    Sample link file for DBU using WL32's native link configuration.
+#    This is very similar to Microsoft Link, TLink, and WarpLink.
+#    A variety of file specification styles are used.
+#
+#
+#    Object module file list comes first.
+#    /il option displays linking information.
+#    Plus sign continues the object module list.
+/il dbu+
+dbuview +
+#    Multiple files per line are supported.
+dbustru   dbuedit dbuindx +
+#    Final object module line, no plus sign at end of line
+#    (note that plus signs may be used between file names instead of spaces).
+dbucopy+dbuutil + dbuhelp
+#    Executable file name, default to first object module name if none listed
+dbu
+#    No map file name, no /m option, no map file will be created.
+
+#    Library list
+cwclp52 clipper extend+
+terminal+dbfntx
+#
+#    End of link file.

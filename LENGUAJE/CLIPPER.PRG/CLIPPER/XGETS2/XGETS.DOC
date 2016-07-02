@@ -1,0 +1,118 @@
+                                XGETS.DOC
+
+---------------------------THE IMPORTANT STUFF--------------------------------
+
+This code is placed in the public domain by the author (Shaun Botha).  You may
+copy and modify the code freely except that I ask that you include my name as
+the original author.  Author takes no repsonsibility for any damages caused by
+this code.
+
+If you do make modifications to the code and think it's worth including in a
+future version of the module I ask that you inform me of your changes via my
+CompuServe address: 70043,2641.
+
+-------------------------------------------------------------------------------
+
+XGets provides some extras to the standard Clipper get system. The module
+provides the following extensions:
+
+    - Individual messages to be displayed for each GET.  In addition your
+      application can specify the procedure to be used for displaying
+      messages.  This means that you will not be 'locked in' by the module's
+      display routines.
+      eg.  @ 5, 5 get cName;
+             message "Please enter your name"
+
+    - Associate a lookup function for each get.  This means that when the
+      lookup key (K_F12 / K_CTRL_F1) is pressed the lookup function is called.
+      The module will also display a character of your choice next to the GET
+      field to indicate to the user that a lookup is available.  The character
+      is only displayed when the user enters the GET.  Note that you can
+      redefine the key(s) to be used as lookup keys.
+      eg. @ 5, 5 get cName;
+            message "Please enter your name or [F12] for a lookup";
+            lookup using nameSelect()
+
+    - Associate a special key to be associated with a GET.  This will allow you
+      to call functions from a GET based on the key that a user has pressed.
+      eg. @ 5, 5 get cName;
+            message "Please enter your name or [F12] for a lookup; [F7] to copy";
+            lookup using nameSelect() ;
+            special key K_F7 execute copyValue()
+
+    - Flag a GET as READONLY.  This is kinda like using the WHEN clause as
+      .F. except that the user will actually be able to enter the GET.  This
+      is especially useful in the case of scrolling GETS where one might want
+      to see the value of the GET without allowing updates.
+      eg. @ 5, 5 get cName;
+            message "This is the person's name - you cannot change it!!";
+            readonly
+
+The above functionality can be applied to individual GETS in the @ .. GET
+statement or it can be applied to the whole getlist once all the GETs have
+been placed on the screen.
+eg. To 'view' a form without actual editing :-
+        @ 5, 5 get cName
+        @ 6, 5 get cDept
+        @ 7, 5 get nSalary
+        if lViewOnly
+            set gets to readonly
+        endif
+        read
+
+    To associate a special key with all GETs in the current getList
+        @ 5, 5 get cName
+        @ 6, 5 get cDept
+        @ 7, 5 get nSalary
+        special key for gets K_F7 execute copyFunc()
+        read
+
+NOTES:
+    - The XGETS module use only standard Clipper code - ie no use is made
+      of 3rd party libs or internals.
+    - XGets extensions can be used in conjunction with Clipper's standard
+      @ .. GET statement - ie you can still use PICTURE, VALID, WHEN, etc
+    - XGets uses the GET's cargo variable - if you're already using it then
+      you will have to declare it as an array.
+    - XGets installs a custom reader for each GET.  If you're using your own
+      reader already I suggest that you include the XGETS code in your reader
+      or visa-versa.  Note that the reader is only remapped for those GETs that
+      use XGETs extensions - ie not all GETs in a getList will necessarily use
+      the XGETS reader.
+    - See XGDEMO.PRG for demo code on how to use XGETS.
+    - See XGETS.CH for all functionality provided by this module.
+    - If a GET is flagged as readonly the lookup function will not be called.
+      Note, however, that special key definitions are still called.
+    - You can only associate one special key to with a GET in the @ GET
+      statement.  If you need to associate more special keys use the
+      'SPECIAL KEY ...' command (See XGETS.CH).
+    - When the XGETS module calls a procedure (lookup or special key) it passes
+      the current GET to the procedure.  The linkage is accomplished at
+      compile-time by using the '_oGet' variable in the statement.  You will
+      have to specify this as a a parameter to the function in order to
+      access it.
+        eg @ 5, 5 get cName ;
+            lookup nameSelect(_oGet)
+      For special keys the same applies except that one extra parameter is
+      passed - the key that was pressed.  In order to access that parameter use
+      the '_nKey' variable.
+        eg.  @ 5, 5 get cName ;
+            special key K_F7 execute copyFunc(_oGet, _nKey)
+
+      Note that _oGet and _nKey are declared in a code block and will therefore
+      not override variables by the same name that you have already declared.
+    - Use the xGetGetSet(bMsgBlock, cChar) function to specify the following
+        - bMsgBlock: The block which is evaluated to display a message
+        - cChar    : The character to display next to GETs which have lookups
+       eg. xGetGetSet( { |c| showMessage(c) }, chr(16) ) will cause XGETS to
+           use the showMessage() procedure to display messages (the message
+           text is passed as a parameter) and character 16 () to be displayed
+           before the GET for lookups.  xGetGetSet() is a get/set function
+           which means it will return current settings as a two element array.
+           Parameters are optional.
+    - Code has been written using Multi-Edit with TabStops set to 3, TabExpand
+      set to 'Tabs'
+
+Enjoy
+
+ShaunB..

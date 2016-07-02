@@ -1,0 +1,25 @@
+//
+//  RL.RMK
+//
+//  Make file for RL, CA-Clipper REPORT and LABEL FORM design program.
+//
+//  Copyright (c) 1990-1995, Computer Associates International, Inc.
+//  All rights reserved.
+//
+
+// Define comma separated obj list as a macro
+objs=RLFRONT, RLBACK, RLDIALG
+
+// Inference rule for compiling (.prg) to .OBJ files
+.prg.obj:
+	CLIPPER $< /m /n
+
+// Dependency statements for .OBJ files
+RLFRONT.OBJ: .\Rlfront.prg
+RLBACK.OBJ: .\Rlback.prg
+RLDIALG.OBJ: .\Rldialg.prg
+
+// Dependency rule for linking .OBJ files to .EXE file
+RL.EXE: RLFRONT.OBJ RLBACK.OBJ RLDIALG.OBJ
+        BLINKER FILE $(objs) OUTPUT $@
+

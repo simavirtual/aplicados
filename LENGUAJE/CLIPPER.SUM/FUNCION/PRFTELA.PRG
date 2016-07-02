@@ -1,0 +1,559 @@
+CLEAR
+MOLDURA(02,02,10,30," O P C I O N E S ",,)
+MOLDURA(02,40,05,65,"ARCHIVOS",.T.,.T.)
+MOLDURA(13,02,20,40,"LISTA DE NOMBRES",.F.,.T.)
+MOLDURA(08,50,24,78,"VENTANA DE CONSULTA",.T.,.F.)
+INKEY(0)
+cls
+texto=REPL("Megatron Assessoria e Treinamento ",3)
+texto=left(texto,79)
+setcolor("RB")
+FOR I = 0 TO 24
+? texto
+NEXT
+setcolor("w/n")
+NUMERO=0
+INICIO=TIME()
+SOMBRA1(05,05,15,15)
+CUADRO(05,05,15,15,2,,.t.)
+
+SOMBRA1(02,25,15,55)
+CUADRO(02,25,15,55,3,,.t.)
+FIM=TIME()
+@ 14,26 SAY ELAPTIME(INICIO,FIM)
+INKEY(0)
+
+setcolor("RB")
+FOR I = 0 TO 24
+? texto
+NEXT
+setcolor("w/n")
+
+INICIO=TIME()
+SOMBRA2(05,05,15,15)
+CUADRO(05,05,15,15,2,,.t.)
+
+SOMBRA2(02,25,15,55)
+CUADRO(02,25,15,55,3,,.t.)
+FIM=TIME()
+@ 14,26 SAY ELAPTIME(INICIO,FIM)
+INKEY(0)
+
+NUMERO=1
+setcolor("RB")
+FOR I = 0 TO 24
+? texto
+NEXT
+setcolor("w/n")
+CUADRO(02,02,10,20,1,"GR+/b")      // 1
+CUADRO(05,05,15,15,2,,.t.)   // 2
+CUADRO(17,01,23,20,3,"gr+/n")   // 3
+CUADRO(02,30,12,40,4,,.T.)   // 4
+CUADRO(02,43,08,55,5)   // 5
+CUADRO(02,60,10,70,1,,.T.)       // 6 SUPERPUESTO POR EL CUADRO 7
+CUADRO(02,60,10,70,176)   // 7
+CUADRO(15,30,20,40,177,,.T.)   // 8  37 3 
+CUADRO(12,60,18,75,178)   // 9
+CUADRO(20,45,23,77,219,"b/w",.t.)  // 10
+CUADRO(12,42,16,50,"+","G/W")   // 11
+CUADRO(00,00,24,79,"*")   // 12
+INKEY(0)
+FOR I = 0 TO 24
+? texto
+NEXT
+CUADRO(10,10,20,50,6,,.T.)  //13
+CUADRO(01,40,08,70,7,,.T.)  //14
+
+INKEY(0)
+
+
+CLEAR
+
+cls
+texto=REPL("Megatron Assessoria e Treinamento ",3)
+texto=left(texto,79)
+setcolor("RB")
+FOR I = 0 TO 24
+? texto
+NEXT
+setcolor("w/n")
+
+EXPANDCH(20,02,22,77,"OPERACION NO VALIDA...")
+EXPANDCH(10,25,12,60)
+INKEY(0)
+
+EXPANIZQ(15,02,22,77,"ERROR AL TECLEAR. INTENTELO DE NUEVO...")
+EXPANIZQ(10,25,12,60)
+INKEY(0)
+
+ZOOMIN()
+SETCOLOR("N/W")
+@ 09,40 SAY "Puede mostrar mensajes o pantallas"
+@ 10,40 SAY "de apertura y cierre para"
+@ 12,40 SAY "sus sistemas"
+@ 14,40 say "Pulse una tecla para continuar..."
+SET COLOR TO
+INKEY(0)
+ZOOMOUT(1)
+
+CLEAR
+BOXASCD(12,01,22,77,.T.)
+@ 14,20 SAY "EJEMPLO DE TEXTO SITUADO EN LA CAJA DESPUES DE SU"
+@ 16,20 SAY "APERTURA. UNA VEZ MOSTRADO EL TEXTO, PUEDE ELIMINAR"
+@ 18,20 SAY "LA CAJA O CERRARLA CON LA FUNCION CLOSEASCD()"
+@ 20,20 SAY "EN ESTE EJEMPLO AGUARDAMOS Y RECUPERAMOS LA PANTALLA"
+INKEY(3)
+RESTORE SCREEN FROM TELABOX
+
+BOXASCD(12,01,22,77,.T.,"W/G")
+@ 14,20 SAY "EJEMPLO DE TEXTO SITUADO EN LA CAJA DESPUES DE SU"
+@ 16,20 SAY "APERTURA. UNA VEZ MOSTRADO EL TEXTO, PUEDE ELIMINAR"
+@ 18,20 SAY "LA CAJA O CERRARLA CON LA FUNCION CLOSEASCD()"
+@ 20,20 SAY "EN ESTE EJEMPLO USAMOS CLOSEASCD()"
+CLOSEASCD(12,01,23,77,3,.T.)
+
+CLEAR
+BOXDESCD(12,01,22,77,.T.)
+@ 14,20 SAY "EJEMPLO DE TEXTO SITUADO EN LA CAJA DESPUES DE SU"
+@ 16,20 SAY "APERTURA. UNA VEZ MOSTRADO EL TEXTO, PUEDE ELIMINAR"
+@ 18,20 SAY "LA CAJA O CERRARLA CON LA FUNCION CLOSEDESCD()"
+@ 20,20 SAY "EN ESTE EJEMPLO AGUARDAMOS Y RECUPERAMOS LA PANTALLA"
+INKEY(3)
+RESTORE SCREEN FROM TELABOX
+
+BOXDESCD(12,01,22,77,.T.,"W/G")
+@ 14,20 SAY "EJEMPLO DE TEXTO SITUADO EN LA CAJA DESPUES DE SU"
+@ 16,20 SAY "APERTURA. UNA VEZ MOSTRADO EL TEXTO, PUEDE ELIMINAR"
+@ 18,20 SAY "LA CAJA O CERRARLA CON CLOSEDESCD()"
+@ 20,20 SAY "EN ESTE EJEMPLO USAMOS CLOSEDESCD()"
+CLOSEDESCD(12,01,23,77,3,.T.)
+
+
+
+*****
+INKEY(0)
+clear
+BOXSISU(02,02,22,75,.T.)
+INKEY(0)
+BOXSISU(05,08,17,26,.T.,"W/R")
+INKEY(0)
+BOXSISU(04,45,16,65)
+INKEY(0)
+
+clear
+BOXSIIN(02,02,20,75,.T.)
+INKEY(0)
+BOXSIIN(05,05,15,20,.T.,"R/G")
+INKEY(0)
+BOXSIIN(04,45,17,65)
+INKEY(0)
+
+clear
+BOXSDIN(01,40,10,75,.T.)
+INKEY(0)
+BOXSDIN(05,03,21,20,.T.,"R/G")
+INKEY(0)
+BOXSDIN(15,45,18,65)
+INKEY(0)
+
+clear
+BOXSDSU(01,40,10,77,.T.)
+INKEY(0)
+BOXSDSU(05,03,21,20,.T.,"R/B")
+INKEY(0)
+BOXSDSU(15,45,18,65)  
+INKEY(0)
+
+
+****************************************************************
+FUNCTION EXPANDCH(Lin1,col1,lin2,col2,texto,TIEMPO,color)
+LOCAL BOXTEXTO :=SAVESCREEN(LIN1,COL1,LIN2,COL2)
+IF COLOR=NIL
+   cor1="W+/B"
+ENDIF
+IF TEXTO=NIL
+ texto="PULSE UNA TECLA PARA PARA CONTINUAR"
+endif
+IF TIEMPO=NIL
+ TIEMPO=2
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&COR1")
+FOR CONTA=COL1 TO COL2
+   @ lin1,col1 TO lin2,conta double
+   @ lin1+1,col1+1 CLEAR TO lin2-1,conta-1
+   INKEY(.01)
+NEXT
+@ lin1+1,col1+1SAY TRIM(texto)
+SETCOLOR("&CORANTIG")
+INKEY(TIEMPO)
+FOR CONTA=COL2 TO COL1 STEP-1
+ RESTSCREEN(LIN1,CONTA,LIN2,COL2,BOXTEXTO)
+ INKEY(.01)
+NEXT
+RETURN NIL
+***************************************************************
+FUNCTION EXPANIZQ(Lin1,col1,lin2,col2,texto,TIEMPO,color)
+LOCAL BOXTEXTO :=SAVESCREEN(LIN1,COL1,LIN2,COL2)
+IF COLOR=NIL
+   cor1="W+/B"
+ENDIF
+IF TEXTO=NIL
+ texto="PULSE UNA TECLA PARA CONTINUAR"
+endif
+IF TIEMPO=NIL
+ TIEMPO=2
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&1COR")
+FOR CONTA=COL2 TO COL1 STEP-1
+   @ lin1,conta TO lin2,col2 double
+   @ lin1+1,conta+1 CLEAR TO lin2-1, col2-1
+NEXT
+@ lin1+1,col1+1SAY TRIM(texto)
+INKEY(TIEMPO)
+SETCOLOR("&CORANTIG")
+FOR CONTA=COL1 TO COL2
+ RESTSCREEN(LIN1,COL1,LIN2,CONTA,BOXTEXTO)
+ INKEY(.01)
+NEXT  3[ 3 
+RETURN NIL
+***************************************************************
+FUNCTION BOXSDIN(lin1,col1,lin2,col2,cuadro,color)
+IF COLOR=NIL
+   COR1=SETCOLOR()
+    ELSE
+   COR1=COLOR
+ENDIF
+IF CUADRO=NIL
+   cuadro=.f.
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&COR1")
+IF cuadro
+   @ lin1,col1 TO lin2,col2 double
+   @ lin1+1,col1+1 CLEAR TO lin2-1,col2-1
+ENDIF
+conta=col1+3
+@ lin2+1,conta SAY REPL(CHR(219),(col2-col1))
+conta=lin1+1
+DO WHILE conta<=lin2
+   @ conta,col2+2 SAY CHR(219)
+   conta=conta+1
+ENDDO
+SETCOLOR("&CORANTIG")
+RETURN NIL
+
+***************************************************************
+FUNCTION BOXSIIN(lin1,col1,lin2,col2,cuadro,color)
+IF COLOR=NIL
+   COR1=SETCOLOR()
+ ELSE
+   COR1=COLOR
+ENDIF
+IF CUADRO=NIL
+   cuadro=.f.
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&COR1")
+IF cuadro
+   @ lin1,col1 TO lin2,col2 double
+   @ lin1+1,col1+1 CLEAR TO lin2-1,col2-1
+ENDIF
+conta=lin1+1
+DO WHILE conta<=lin2
+   @ conta,col1-2 SAY CHR(219)
+   conta=conta+1
+ENDDO
+@ lin2+1,col1-2 SAY REPL(CHR(219),(col2-col1))
+SETCOLOR("&CORANTIG")
+RETURN NIL
+
+***************************************************************
+FUNCTION BOXSISU(lin1,col1,lin2,col2,cuadro,color)
+IF COLOR=NIL  
+   COR1=SETCOLOR()
+ ELSE
+   COR1=COLOR
+ENDIF
+IF CUADRO=NIL
+   cuadro=.f.
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&COR1")
+IF cuadro
+   @ lin1,col1 TO lin2,col2 double
+   @ lin1+1,col1+1 CLEAR TO lin2-1,col2-1
+ENDIF
+conta=col1-2
+@ lin1-1,conta SAY REPL(CHR(223),(col2-col1+1))
+conta=lin1
+conta=lin1-1
+DO WHILE conta<=lin2-1
+   @ conta,col1-2 SAY CHR(219)
+   conta=conta+1
+ENDDO
+SETCOLOR("&CORANTIG")
+RETURN NIL
+
+***************************************************************
+FUNCTION BOXSDSU(lin1,col1,lin2,col2,cuadro,color)
+IF COLOR=NIL
+   COR1=SETCOLOR()
+ ELSE
+   COR1=COLOR
+ENDIF
+IF CUADRO=NIL
+   cuadro=.f.
+ENDIF
+CORANTIG=SETCOLOR()
+SETCOLOR("&COR1")
+IF cuadro
+   @ lin1,col1 TO lin2,col2 double
+   @ lin1+1,col1+1 CLEAR TO lin2-1,col2-1
+ENDIF
+conta=col1+1
+@ lin1-1,conta SAY REPL(CHR(223),(col2-col1+1))
+conta=lin1-1
+DO WHILE conta<=lin2-1
+   @ conta,col2+2 SAY CHR(219)
+   conta=conta+1
+ENDDO
+SETCOLOR("&CORANTIG")
+RETURN NIL
+
+***************************************************************
+FUNCTION BOXDESCD(Lin1,col1,lin2,col2,sombra,color)
+PUBLIC TELABOX  ; SAVE SCREEN TO TELABOX
+COR1:=COLOR
+CORANTIG=SETCOLOR()  
+IF COLOR=NIL
+   cor1="N/W"
+ENDIF
+IF SOMBRA=NIL
+   sombra=.F.
+ENDIF
+SETCOLOR("&COR1")
+FOR CONTA=LIN1 TO LIN2
+   @ LIN1,col1 TO CONTA,col2 double
+   @ LIN1+1,col1+1 CLEAR TO CONTA-1, col2-1
+   INKEY(.1)
+NEXT
+
+SETCOLOR("&CORANTIG")
+IF sombra
+   BOXSDIN(lin1,col1,lin2,col2)
+ENDIF
+RETURN NIL
+
+*******************************************************
+FUNCTION CLOSEDESCD(LIN1,COL1,LIN2,COL2,tiempo)
+IF TIEMPO=NIL
+   tiempo=.01
+ENDIF
+INKEY(TIEMPO)
+FOR CONTA=LIN2 TO LIN1 STEP-1
+   @ conta,col1-2 CLEAR TO conta, col2+2
+   INKEY(.1)
+NEXT
+
+***************************************************************
+FUNCTION BOXASCD(Lin1,col1,lin2,col2,sombra,color)
+PUBLIC TELABOX  ; SAVE SCREEN TO TELABOX
+COR1:=COLOR
+CORANTIG=SETCOLOR()
+IF COLOR=NIL
+   cor1="N/W"
+ENDIF
+IF SOMBRA=NIL
+   sombra=.F.
+ENDIF
+SETCOLOR("&COR1")
+FOR CONTA=LIN2 TO LIN1 STEP -1
+   @ conta,col1 TO lin2,col2 double
+   @ conta+1,col1+1 CLEAR TO lin2-1, col2-1
+   INKEY(.1)
+NEXT
+SETCOLOR("&CORANTIG")
+IF sombra
+   BOXSDIN(lin1,col1,lin2,col2)
+ENDIF
+RETURN NIL
+
+
+**************************************************  
+FUNCTION CLOSEASCD(LIN1,COL1,LIN2,COL2,TIEMPO)
+IF TIEMPO=NIL
+ TIEMPO=.01
+ENDIF
+INKEY(TIEMPO)
+FOR CONTA=LIN1 TO LIN2
+   @ lin1,col1-2 CLEAR TO conta, col2+2
+   INKEY(.1)
+NEXT
+
+***************************************************************
+FUNCTION ZOOMIN(TIEMPO)
+CLEAR
+IF TIEMPO=NIL
+ tiempo=.01      && AUMENTAR ESTE VALOR PARA DISMINUIR LA VELOCIDAD
+ENDIF
+@ 0,0 TO 1,1
+INKEY(tiempo)
+@ 1,1 TO 3,3
+INKEY(tiempo)
+@ 3,2 TO 6,6
+INKEY(tiempo)
+@ 6,7 TO 9,10
+INKEY(tiempo)
+@ 9,9 TO 15,16
+INKEY(tiempo)
+@ 12,12 TO 18,27
+INKEY(tiempo)
+@ 15,17 TO 20,30
+INKEY(tiempo)
+@ 19,22 TO 24,37
+INKEY(tiempo)
+@ 16,27 TO 21,45
+INKEY(tiempo)
+@ 13,30 TO 18,55
+INKEY(tiempo)
+CORANTIG=SETCOLOR()
+SET COLOR TO N/W
+@ 5,35 TO 16,75
+@ 06,36 CLEAR TO 15,74
+SETCOLOR("&CORANTIG")
+RETURN NIL
+
+*****************************************************
+FUNCTION ZOOMOUT(TIEMPO)
+IF TIEMPO=NIL
+ TIEMPO=.1
+ENDIF
+@ 5,35 CLEAR TO 16,75
+INKEY(tiempo)
+@ 13,30 CLEAR TO 20,55
+INKEY(tiempo)
+@ 16,27 CLEAR TO 21,45
+INKEY(tiempo)
+@ 19,22 CLEAR TO 24,37  
+INKEY(tiempo)
+@ 15,17 CLEAR TO 22,33
+INKEY(tiempo)
+@ 12,12 CLEAR TO 18,27
+INKEY(tiempo)
+@ 9,9 CLEAR TO 15,16
+INKEY(tiempo)
+@ 6,7 CLEAR TO 9,10
+INKEY(tiempo)
+@ 3,2 CLEAR TO 6,6
+INKEY(tiempo)
+@ 1,1 CLEAR TO 3,3
+INKEY(tiempo)
+@ 0,0 CLEAR TO 1,1
+RETURN NIL
+
+****************************************************
+FUNCTION MOLDURA(LIN1,COL1,LIN2 ,COL2,TEXTO,DOBLE,ALTO)
+IF PCOUNT()<7
+RETURN (NIL)
+ENDIF
+IF DOBLE=NIL
+ DOBLE=.F.
+ENDIF
+IF ALTO=NIL
+ ALTO=.F.
+ENDIF
+IF doble
+ @LIN1,COL1 CLEAR TO LIN2 ,COL2
+ @LIN1,COL1 TO LIN2 ,COL2 double
+ELSE
+ @LIN1,COL1 CLEAR TO LIN2 ,COL2
+ @LIN1,COL1 TO LIN2 ,COL2
+ENDIF
+tam=COL2-COL1
+novapos=(tam-LEN(texto))/2
+IF ALTO
+  @ LIN1,COL1+NOVAPOS SAY TEXTO
+ ELSE
+  @ LIN2,COL1+NOVAPOS SAY TEXTO
+ENDIF
+RETURN (NIL)
+
+
+
+********************************************************
+FUNCTION SOMBRA1(LS,CS,LI,CI)
+V=SAVESCREEN(LS+1,CS+1,LI+1,CI+1)
+FOR I = 2 TO LEN(V)  STEP 2
+ V=STUFF(V,I,1,CHR(8))
+NEXT
+RESTSCREEN(LS+1,CS+1,LI+1,CI+1,V)
+RETURN(.T.)
+
+  
+********************************************************
+FUNCTION SOMBRA2(LS,CS,LI,CI)
+COL=SAVESCREEN(LS+1,CI+1,LI+1,CI+1)
+LIN=SAVESCREEN(LI+1,CS+1,LI+1,CI+1)
+FOR I = 2 TO LEN(COL)  STEP 2
+ COL=STUFF(COL,I,1,CHR(8))
+NEXT
+FOR I = 2 TO LEN(LIN) STEP 2
+ LIN=STUFF(LIN,I,1,CHR(8))
+NEXT
+RESTSCREEN(LS+1,CI+1,LI+1,CI+1,COL)
+RESTSCREEN(LI+1,CS+1,LI+1,CI+1,LIN)
+RETURN(.T.)
+
+
+***********************************************
+FUNCTION CUADRO(LS,cs,li,ci,tipo,COLOR,LLENO)
+local q[9]
+CORBOX=COLOR
+IF TIPO=NIL
+ TIPO=1
+ENDIF
+IF LLENO=NIL
+LLENO=.F.
+ENDIF
+q[1]=CHR(201)+CHR(205)+CHR(187)+CHR(186)+;
+CHR(188)+CHR(205)+CHR(200)+CHR(186)
+q[2]=CHR(218)+CHR(196)+CHR(191)+CHR(179)+;
+CHR(217)+CHR(196)+CHR(192)+CHR(179)
+q[3]=CHR(213)+CHR(205)+CHR(184)+CHR(179)+;
+CHR(190)+CHR(205)+CHR(212)+CHR(179)
+q[4]=CHR(214)+CHR(196)+CHR(183)+CHR(186)+;
+CHR(189)+CHR(196)+CHR(211)+CHR(186)
+q[5]=CHR(220)+CHR(220)+CHR(220)+CHR(219)+;
+CHR(219)+CHR(220)+CHR(219)+CHR(219)
+q[6]=CHR(218)+CHR(196)+CHR(183)+CHR(186)+;
+CHR(188)+CHR(205)+CHR(212)+CHR(179)
+q[7]=CHR(201)+CHR(205)+CHR(184)+CHR(179)+;
+CHR(217)+CHR(196)+CHR(211)+CHR(186)
+IF VALTYPE(TIPO)="C"
+ Q[9]=REPL(TIPO,8)
+ TIPO=9
+ENDIF
+IF (tipo >=176 .AND.tipo <=178) .OR.tipo=219
+ IF LLENO
+ q[8]=REPLICATE(CHR(tipo),9)
+ ELSE
+ q[8]=REPLICATE(CHR(tipo),8)
+ ENDIF
+ tipo=8
+ENDIF
+IF TIPO<>8 .AND. LLENO    // LIMPIA EL FONDO DE LA CAJA
+ Q[TIPO]=Q[TIPO]+CHR(32)
+ENDIF
+IF COLOR<>NIL  
+ CORANTIGA=SETCOLOR()
+ SETCOLOR("&CORBOX")
+ @ls,cs,li,ci box q[tipo]
+ SETCOLOR("&CORANTIGA")
+ELSE
+ @LS,CS,LI,CI BOX Q[TIPO]
+ENDIF
+IF NUMERO <>0
+@LS+1,CS+1 SAY STR(NUMERO++,2)// QUITAR ESTA LINEA DE LA FUNCION
+ENDIF            

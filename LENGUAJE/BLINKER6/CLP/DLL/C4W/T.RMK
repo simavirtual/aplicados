@@ -1,0 +1,25 @@
+//
+// 96.03.23  T.RMK
+//
+// This sample make file demonstrates how to create a Clip-4-Win
+// Windows EXE which use a statically linked DLL.
+//
+
+                                        // CA-Clipper compiler version number
+COMVER := 52
+
+#include "..\..\all.rmk"                // Standard make file definitions
+
+"$(OUTDIR)\t.exe" :  "$(OBJDIR)\t.obj" \
+                     t.lnk \
+                     "t$(COMVER).lnk"
+          $(LNKCMD) @t$(COMVER) out $@ $(LNKOPT)
+
+"$(OUTDIR)\d.dll"  : "$(OBJDIR)\d.obj" \
+                     d.lnk \
+                     "d$(COMVER).lnk"
+          $(LNKCMD) @d$(COMVER) out $@ $(LNKOPT)
+
+"$(OBJDIR)\d.obj"  : d.prg
+
+"$(OBJDIR)\t.obj"  : t.prg

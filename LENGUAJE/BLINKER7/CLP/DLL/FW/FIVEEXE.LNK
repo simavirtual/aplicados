@@ -1,0 +1,32 @@
+//ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+//³ FIVEEXE.LNK                               WORKBENCH (c) Tom Groeger ³Û
+//³ Link Script                                                03/23/96 ³Û
+//ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙÛ 
+// ßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßßß
+
+blinker incremental OFF
+nobell
+output FiveEXE
+
+DEFBEGIN
+  name        FIVEEXE         
+  description 'FiveWin Windows executable to call a DLL function'
+  exetype      Windows 3.1
+  Stacksize    8500
+  Heapsize     8500
+  code         preload moveable discardable
+  data         preload moveable
+  segment      'PLANKTON_TEXT'  nondiscardable
+  segment      'EXTEND_TEXT'    nondiscardable
+  segment      'OM_TEXT'        nondiscardable
+  segment      'OSMEM_TEXT'     nondiscardable
+  segment      'SORTOF_TEXT'    nondiscardable
+  segment      'STACK_TEXT'     nondiscardable
+DEFEND
+
+file FIVEEXE                        # The sample PRG
+file BLXCLP52                       # Blinker DLL obj for the .EXE
+lib  FIVEDLL                        # The FiveDLL Import Library
+lib  FIVEWIN                        # FiveWin library
+lib  WINAPI                         # FiveWin library
+

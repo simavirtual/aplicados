@@ -1,0 +1,88 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#include "bindview.h"
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+BINDVIEW DIALOG DISCARDABLE  21, 25, 177, 177
+STYLE WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "Bindery Viewing Utility"
+CLASS "BindView"
+FONT 8, "System"
+BEGIN
+    LISTBOX         LISTBOX_1,4,41,81,81,LBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         LISTBOX_2,92,41,81,81,LBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         DISPLAY_BOX,4,137,167,33,LBS_SORT | WS_VSCROLL
+    LTEXT           "Bindery Object:",105,3,30,74,8,NOT WS_GROUP
+    LTEXT           "Bindery Property:",106,94,31,75,8,NOT WS_GROUP
+    LTEXT           "Property Value:",107,5,126,156,9,NOT WS_GROUP
+    RADIOBUTTON     "File Server",FS_BUTTON,4,14,55,12,WS_GROUP | WS_TABSTOP
+    RADIOBUTTON     "Group",GROUP_BUTTON,32,2,30,12,WS_TABSTOP
+    RADIOBUTTON     "User",USER_BUTTON,4,2,28,12,WS_TABSTOP
+    ICON            IDI_ICON1,IDC_STATIC,155,5,18,20
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""bindview.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICON1               ICON    DISCARDABLE     "NLBV.ICO"
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

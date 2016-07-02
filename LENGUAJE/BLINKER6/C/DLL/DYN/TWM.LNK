@@ -1,0 +1,12 @@
+#
+#  96.03.23    TWM.LNK
+#
+#  This sample link file demonstrates how to create a Windows test
+#  program to use a Windows DLL with Microsoft Visual C/C++
+#
+
+@tw                        # Include generic link file
+
+lib llibcew                # Microsoft EXE run time library for Windows
+lib libw                   # Windows import library
+

@@ -1,0 +1,1046 @@
+                                                            
+       ²²²²   ²²      ²²²²   ²²²²²²  ²²²²²²  ²²²²²²   ²²²²    
+      ²²°°²²  ²²°      ²²°°   ²²°°²²  ²²°°²²  ²²°°²² ²²°°²²   
+     ²²°°  °° ²²°      ²²°    ²²° ²²° ²²° ²²° ²²° ²²°²²²  °°  
+     ²²°      ²²°      ²²°    ²²²²²°° ²²²²²°° ²²²²²°° ²²²     
+     ²²°      ²²°      ²²°    ²²°°°°  ²²°°²²  ²²°°²²   °²²²   
+      ²²  ²²  ²²°      ²²°    ²²°     ²²° ²²° ²²° ²²°²²  ²²°  
+       ²²²²°° ²²²²²²  ²²²²   ²²²²    ²²²²²²°°²²²²²²°° ²²²²°°  
+        °°°°   °°°°°°  °°°°   °°°°    °°°°°°  °°°°°°   °°°°   
+                                                            
+  Volume 1, Number 1                                4 February 1991
+                 (c) Daniel Do‡ekal, All Rights Reserved
+  
+     BBS Clipper magazine, published RANDOMLY, later WEEKLY......
+  
+     Some from materials are coming from scanning CLIPPER echo
+     which is carying FidoNet. Mostly this echo is and will be
+     source of often asked Question and Answers because can be
+     very helpfull in this small moment.
+    
+     Other materials, which are fully signed or abbreviated are
+     copyrighted material of appropriate persons.
+  
+     Publisher is not responsible for other authors....
+     Published materials don't have to be opinion of publisher..
+  
+
+
+                               Table of Contents
+
+  1. EDITORIAL  ..........................................................  1
+     First letter from editor&publisher  .................................  1
+  2. ARTICLES  ...........................................................  3
+     .PPO? OOPs, CLIPPER 5.0 has a preprocessor!  ........................  3
+     To be aware in 5.01?  ...............................................  5
+  3. QUESTIONS AND ANSWERS  .............................................. 13
+     4DOS and CLIPPER  ................................................... 13
+     Clipper books and magazines  ........................................ 13
+     Needed fix of BNU for hanging in 5.01?  ............................. 16
+     Discovering GHOST empty records  .................................... 16
+     Turbo C++ and Clipper  .............................................. 16
+  4. COMMENTS  ........................................................... 19
+     Distribution sites and how to get CLIPBBS  .......................... 19
+     How to send an article to CLIPBBS  .................................. 20
+
+                                   - - - - -
+  CLIPBBS 1-01                   Page 1                    4 Feb 1991
+
+
+  ===========================================================================
+                                   EDITORIAL
+  ===========================================================================
+
+
+  Welcome into CLIPBBS magazine,
+  
+  yes, just another Clipper magazine from set of New Clipper magazines
+  apperaring slowly in many countries. But, this one is little bit
+  different, it's used especially in BBS (Bulletin Board System)
+  environment and is distributed ONLY electronicaly. Yes, i know, here is
+  already Nantucket News or Reference for CLipper or how this two are
+  called and they are also available in electronic form, but i don't have
+  a good feeling from them because of lack of interest in pure problems
+  of new Clipper freaks and lack of reactions to some common problems.
+  
+  Few weeks ago i decided to make a new Clipper magazine. REally don't
+  know at this moment if it's good idead or how long will be alive,
+  because it's magazine of all us who are Clipper programmers or users or
+  just fans and all articles here aren't honored and must be written by
+  somebody from us.
+  
+  I really don't know at this moment how this magazine will go to you,
+  reader, but hope that i will find more people which will do uploads to
+  several bulletin boards, or distribute this magazine to any other
+  countries. Here is NOT limitation about distribiution, then feel free
+  and put this magazine whenewer do you want, only keep original files in
+  archive of any type without changing them.
+  
+  For all of you who are able to write something to this magazine, please
+  do this and don't be afraid about your bad english (mine is also not
+  quite perfect, but i'm czechoslovakian and not englishman) or other
+  things. Just send me this article, it will goes here if only little
+  readable.
+  
+  I believe this can be nice magazine with lot of reactions from side of
+  readers. I'm also keeping eye on CLIPPER echo in FidoNet, Clipper ECHO
+  in GT environment, Nantucket Bulleting Board called Clipper World, i'm
+  also a member of ClipNet, so called clipper distribution network and i
+  hope i some next month i will become as member of Compuserve also.
+  Therefore i have a quite lot of sources of information, but i don't
+  want to write all articles alone. Please do also some nice for all
+  other Clipper programmers and nice and interesting facts put here.
+  
+  Ending idea is, that this magazine will come out WEEKLY. At this
+  beginning really don't know how often will come out, but i'm thinking
+  about 14days interval between numbers, but all this depends from
+  articles coming or from time which i will have to write new ones.
+  
+  Purpose of this magazine is to inform all Clipper programmers about
+  CLipper itself. Question and Answer part of this magazine will continue
+  with putting answers for often needed question and often problems with
+  sometime getting old of them again in live because of passing out old
+  numbers. Anyway, all number and also single articles will be available
+  on my BBS or mailer for download or for request. And if anyone will
+  ask in CLIPPER echo, i will repost all this informations for everybody
+  CLIPBBS 1-01                   Page 2                    4 Feb 1991
+
+
+  using. All coming information from Nantucket (if they will) i will also
+  put here and so on. Sometime maybe also information about other xBase
+  languages, but only when it has something to do with Clipper.
+  Advertisements are welcome (commercial also!) but they MUST give
+  something nice to Clipper programmers and so on.
+  
+  I'm planning also nice serie of articles about files in ClipNet and
+  other CLipper files available in many BBS with some short or long
+  descriptions about those files, therefore everybody can collect
+  complete descriptions about available files for downloads from some
+  BBS. If anyone want to do this about own BBS, will be welcome. World is
+  open to discuss everything via modems, then why not.
+  
+  Information about commercial products will be here also, because i'm
+  missing them in Clipper echos around (they are prohibited, but i think
+  we all need them and first we need informations about them). Everyone
+  will can then compare some products and take decisions about their
+  using and buying.
+  
+  Information about how to give articles to this magazine is possible to
+  see in end of magazine.
+  
+  Have a nice reading (HANR) and see you soon.....
+  (.DD.)
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 3                    4 Feb 1991
+
+
+  ===========================================================================
+                                   ARTICLES
+  ===========================================================================
+
+
+                .PPO? OOPs, CLIPPER 5.0 has a preprocessor!
+  
+  
+  A few weeks ago i got a file called CL5IEO.ZIP inside of which was one
+  .NG and one .TXT file. Inside of those files was something for what lot
+  of us, CLIPPER 5.0 programmers, is looking a long and long time. List
+  of internal errors reported by CLIPPER 5.0. Gotcha, not developed by
+  NANTUCKET, it is assembled from COMPUSERVE comments by Terry McConnell
+  - thank to this man.
+  
+  But and But. Not every inside of this is true. One really GOLD example
+  which i'm explaining there is discovering another MAGIC function of
+  CLIPPER 5.0.
+  
+  A preprocessor. Dear reader, when you are compiling program, are you
+  thinking about preprocessor? Not? Really not? That's a biggest mistake
+  which you can make, because Nantucket prepared for you nicest game on
+  the world. Try to get your program and try to use CLIPPER /P for see
+  how funny result you can get.
+  
+  Back to point. CL5IEO.TXT is describing Internal Error #666 on
+  SetColor(). Nice example there is producing really this error on EVERY
+  run (not like as other Internal Error, sometime).
+  
+  Example:
+  
+  line := 0
+  set color to ("$$$$$$$$$$$") ; ? ++line //1
+  x := setcolor()              ; ? ++line //2
+  ? "Setcolor return ", x      ; ? ++line //3
+  set color to &x              ; ? ++line //4
+  z := "@@@@@@@@@@@@"          ; ? ++line //5
+  set color to &Z              ; ? ++line //6
+  set color to "z+/z/t/m/q"    ; ? ++line //7
+  ? setcolor()                 ; ? ++line //8
+  m = "z+/z/t+/m/q"            ; ? ++line //9
+  setcolor(m)                  ; ? ++line //10
+  set color to &m              ; ? ++line //11
+  ? setcolor()                 ; ? ++line //12
+  set color to "w/n,w/n,w/n,w/n,w/n,w/n"
+  setcolor("W/n,w/n,w/n,w/n,w/n,w/n,w/n")
+  
+  
+  Additional comments in original text is:
+  
+          Last executed line is 8, and SetColor(0) error is on line 9.
+  
+  Absolutely wrong, author of this example is not counting with magic
+  which will make preprocessor! Of course, every normal people will
+  expect translation to preprocessed source really as you can see program
+  example above. Reality is different:
+  CLIPBBS 1-01                   Page 4                    4 Feb 1991
+
+
+  line := 0
+  SetColor( "$$$$$$$$$$$" )                       ; QOut( ++line )
+  x := setcolor()                                 ; QOut( ++line )
+  QOut( "Setcolor return ", x )                   ; QOut( ++line )
+  SetColor( "&x              <end of line> ? ++line" )
+  z := "@@@@@@@@@@@@"                             ; QOut( ++line )
+  SetColor( "&Z              <end of line> ? ++line" )
+  SetColor( '"z+/z/t/m/q"    <end of line> ? ++line' )
+  QOut( setcolor() )                              ; QOut( ++line )
+  m = "z+/z/t+/m/q"                               ; QOut( ++line )
+  setcolor(m)                                     ; QOut( ++line )
+  SetColor( "&m              <end of line> ? ++line" )
+  QOut( setcolor() )                              ; QOut( ++line )
+  SetColor( '"w/n,w/n,w/n,w/n,w/n,w/n"' )         //*//
+  setcolor("W/n,w/n,w/n,w/n,w/n,w/n,w/n")
+  
+  As everybody now can see, all SET COLOR TO commands with "&" operator
+  or with direct string ("...") parameter are eating complete end of
+  line! It means, all ? ++line commands are eaten and unhappy program is
+  counting ONLY to 8 and not to 12 as author expected!
+  
+  It finally means - error is on line marked with //*// in .PPO list and
+  not in line signed with //9 in original program. Internal Error in this
+  case is on right place, because of totally crazy color string specifying
+  six color codes!
+  
+  Another question at this moment is - how Nantucket can produce
+  Preprocessor which is eating remain of line when is used operator for
+  multiple commands on line together with macro operator.
+  
+                               GOLD RULE IS
+  Never trust to your program, because is preprocessed by Cliper
+  preprocessor.
+  (.DD.)
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 5                    4 Feb 1991
+
+
+                           To be aware in 5.01?
+             Some comments about 5.01 problems and advantages
+              (very old article coming after release of 5.01)
+  
+  It's now a few weeks ago, i got long time waiting 5.01 upgrade of
+  Clipper 5.0. Thanks god, this 'upgrade' is solving most important
+  problems which had a reason for stop producing our programs in Clipper
+  5.0.
+  
+  The new release of Clipper 5.01 is not ONLY upgrade or 'bug' (anomaly)
+  fix, but it's mostly another version of Clipper and i think, numbering
+  it like 5.01 isn't really giving imagine about number of changes
+  inside.
+  
+  This article is describing few things which Clipper programmer have to
+  be aware in Clipper 5.01. First i must say, I BELIEVE in Clipper 5.01
+  like in normal and valid programming device of programmer. This same i
+  couldn't say about 5.0, because in final stage of using this i missed
+  all trust to this version. Then, don't be aware that your 5.01 will not
+  do what you need, it will do, but still is better to know where is a
+  problem hidden.
+  
+  Some from comments which i will have to Clipper 5.01 are mostly
+  'cosmetic' changes and somebody will have fun after reading them, but
+  i'm every time very critic to programs which i'm using.  Therefore i
+  will include some small things on the same way as things bigger. Some
+  comments are only WARNING not to be mistaken from your side when using
+  something and maybe can save you some time of discovering that you did
+  some kind of mistake.
+  
+                              Keyboard codes
+  
+  When received 5.01 my expectation was, that INKEY.CH was expanded to
+  some missing keyboard codes. Not only codes from extended keyboard
+  (because they are discutable), but also codes for normal keyboard
+  which weren't in 5.0 INKEY.CH.
+  
+  Truth is different, INKEY.CH is still missing extended codes and from
+  basic codes, K_SPACE ,just easy code is NOT included in INKEY.CH
+  
+       Solving:
+            update your INKEY.CH with (example):
+                 #define   K_SPACE        20
+                 #define   K_CTRL_UP      397
+                 #define   K_CTRL_DOWN    401 ....
+  
+  Another problem which somebody could expect that have to be solved is
+  fact, that all SETKEY sets aren't working when one is using INKEY()
+  function. Because INKEY() is just ONLY reading keyboard. In all other
+  places where keyboard is read are all SETKEY sets executed correctly.
+  But, when programmer will start to use INKEY() in more places, then
+  will have problem, all SETKEY sets aren't valid and programmer MUST
+  take care of them by special routines or DO CASE checks. My expectation
+  that this nonlogical fact will be corrected is wrong. INKEY() is still
+  don't recognizing SETKEY sets.
+  
+  CLIPBBS 1-01                   Page 6                    4 Feb 1991
+
+
+       Solving:
+            don't use INKEY(), you easy can all INKEY() callings
+            replace with call to new function:
+  
+            Function MyInkey(nnn)
+            local     value   := 0 , cBlock
+            while .t.
+            if valtype(nnn)!="N"
+                 value:=inkey()      // inkey WITHOUT parameter
+            else
+                 value:=inkey(nnn)   // inkey WITH parameter
+            endif
+            if (cBlock:=setkey(value))!=NIL
+                 Eval(cBlock)        // test if valid SETKEY
+                 loop                // and then continue
+            endif
+            return (value)
+  
+       This possible (and easy) solving has this advantages:
+       -    fully compatible with INKEY() function in parameter passing
+            and value returning
+       -    taking care of your SETKEY sets and executing (better
+            evaluating) them without special testings or actions
+       -    all LASTKEY() stuff is still the same because of original
+            INKEY() using
+  
+                            New RTLINK version
+                            INCREMENTAL LINKING
+  
+  Another expectation which i had - incremental linking in new version of
+  Clipper will work. Truth is again different. DO NOT use incremental
+  linking. It's working successfully only for few first links and then
+  programmer will receive nice set of error from program. Probably will
+  then start looking to errors in own program, but reality is -
+  incremental linking is NOT working.
+  
+  First, second and sometime third link is WITHOUT problems, but after
+  this you can receive errors of this kind:
+  
+       Syntax error: +
+            Be sure, that on your program line where report is reported
+            doesn't exist a "+" operation
+       Syntax error
+            Just funniest error, because it's SYNTAX error on compiled
+            and linked code. Maybe there is processor of your PC
+            reporting non existed function....
+       Cannot create overlay file: !^%#@(*
+            Really, i cannot reproduce file name reported by overlay
+            manager, because this magazine will not probably have all
+            control and graphical symbols which one can get in IBM PC
+            environment.
+  
+  All this errors you will get in part of code which was a subject of
+  changes, everything other (not changed) is still working pretty
+  perfect.
+  
+  CLIPBBS 1-01                   Page 7                    4 Feb 1991
+
+
+  FAX which i then sent to Nantucket, together with uploads of these
+  error reports to Nantucket special message area on CLIPPER WORLD BBS
+  are WITHOUT answers.
+  
+  FAX to Pocket Soft Inc., authors of RTLINK, is with answer:
+  ³    RTLINK version shipped with Clipper 5.01 is working with
+  ³    INCREMENTAL linking without problems. It passed our and Nantucket
+  ³    test suites. If you have some problems, please contact
+  ³    Nantucket.....
+  
+  Still there is one positive thing which stopped make me angry to fact
+  that Incremental isn't working. Prelinked Libraries stuff is working
+  ABSOLUTELY perfect (not in 5.0 there wasn't possible to use it) and
+  therefore my link time is just few second only for my OBJ files and all
+  other 350KB of Clipper runtime is permanently sitting on my disc.
+  Another advantage of this is of course fact, that some from small
+  utilities for my program can be long about 10 or 20 kilobytes of .EXE
+  file and that is really very nice (before between 200 and 400
+  kilobytes).
+  
+  Another stupidity of RTLINK which is making me really angry is fact,
+  that one still cannot press Ctrl Break for stop linking somewhere in
+  middle of linking. One MUST wait till RTLINK will display something to
+  screen (and this can be after 10 or 15 minutes from moment when one
+  pressed Ctrl Break). Only at moment of displaying will DOS see your
+  Ctrl Break. RTLINK will NEVER look for this key. Solving of this stupid
+  fact is only one. Use /VERBOSE:2 switch for your Rtlink and then there
+  will be continuous flow of text on screen and RTLINK will stop when you
+  will need it.
+  
+                              Sample program
+  
+  Hope you can remember that there are some sample program (directory
+  CLIPPER5\SOURCE\SAMPLES in standard installation).  Unfortunately
+  somebody can use some from them inside of programs together with own
+  code. Especially nice is sample allowing to have browsing and selecting
+  facility for files on your disc - FILEMAN.
+  
+  But be aware when you are using this program. You MUST update to new
+  version or change some lines in your old one, because this old one will
+  NOT work with new CLIPPER 5.01. Why?
+  
+  Because of change in SELECT command is no longer possible to have
+  command like this:  Select  arrray[ subscript ]
+  
+  In 5.0 this one was without problems working, in 5.01 this one is
+  giving error - ALIAS array NOT EXIST. Yes, of course, it's absolutely
+  logical, because there MUST be:
+  
+            Select (array[ subscript ])
+  
+  SELECT command syntax is:
+            SELECT area name
+            SELECT area number
+  
+  Then of course SELECT is right when is interpreting 'array' like area
+  CLIPBBS 1-01                   Page 8                    4 Feb 1991
+
+
+  name. But and but, old select did this fact different. Then be aware of
+  your select commands in your sources.
+  
+  For them which are using TBROWSE objects on basis from samples coming
+  with CLIPPER 5.0 (TBDEMO..) is there another recommendation. Take a
+  closer look to new TBDEMO, because there are few things solved more
+  better than in previous version.
+  
+  Be very carefully when using DBU supplied with Clipper 5.01. This
+  program is coming in some cases to never ending cycle of WHILE command.
+  Exactly:
+  
+       Open EMPTY database
+       Go to do BROWSE of this database
+       Start typing new values for record
+            And then wait forever.
+  
+       Point is, that you MUST first press INS key for insert NEW record.
+       But when one will forget did this?
+  
+                             CLIPPER DEBUGGER
+  
+  CLD is now great program and i'm really using it every day.  Previous
+  CLD was unusable because of memory problems of CLIPPER (no one my
+  application was able to fit in memory together with CLD.EXE nor
+  CLD.LIB). There is lot of improvements in this new debugger, but of
+  course there are same nonlogical and non working things:
+  
+       Totally new HELP system for CLD is enough descriptive, but not
+       CONTENTS SENSITIVE. When one will press F1 (Help key), then will
+       get first page of help and MUST scan through all of them to page
+       which need. In case of small memory left is this process VERY slow
+       (because of lot of disc swaps).
+  
+       Don't try to use HELP system when you are editing (for example)
+       colour codes or path string for your source files.  If one will
+       press F1 at this moment,then will get some graphics codes which
+       are equal to code of F1, but will not get help. Somebody who made
+       it forget that F1 is help and not a valid key for editing
+       characters...
+  
+       One must still be carefully when specifying command line options
+       for SPLIT and EGA/VGA screen.  CLD /S/50 and CLD /50/S is really
+       not the same for CLD..  Just use spaces between them and then it's
+       working well (CLD /S /50 is the same as CLD /50 /S)
+  
+       Be aware of using ? row() or ? col(). Both of them will return not
+       value from YOUR program, but value from inside of Debugger.
+       Debugging a program and needs to know values of cursor position is
+       at this moment totally impossible.
+  
+       Some from people using CLD will report - When i pressed F8, then
+       CLD didn't make steps through my procedure, he just did action for
+       F10 (execute procedure). Be aware at this moment if your .OBJ
+       files ALL had specified /B switch for CLIPPER command line. If
+       not, then CLD will not warning you of course, will just step
+  CLIPBBS 1-01                   Page 9                    4 Feb 1991
+
+
+       through. You can then be surprised and thinking what is wrong!
+  
+       There is IMPOSSIBILITY to debugging a code which is using #include
+       statements for include PART of CODE (not only #define and other
+       definitions). Because Clipper is allowing you to use #include for
+       normal part of program (with all commands...), then i'm expecting
+       that will be able to correct do debugging of this includes.
+       ABSOLUTELY not, when one will do this, will have a debugger step
+       cursor somewhere in .PRG file, but on wrong place of course,
+       because of mixup of line numbers. Small example of this:
+  
+       Program.prg
+       1    function Main()
+       2         #include "small.inc"
+       3         ? 'Hello this is NOT a first line of program'
+       4         ? 'and there will be a RETURN coming'
+       5    RETURN NIL
+  
+       File  SMALL.INC
+       1         ? 'This is a first line of program of course'
+       2         ? '-----------------------------------------'
+  
+       Of course, after compiling there is another program:
+       1    function Main()
+       2         ? 'THis is a first line of program of course'
+       3         ? '-----------------------------------------'
+       4         ? 'Hello this is NOT a first line of program'
+       5         ? 'and there will be a RETURN coming'
+       6    RETURN NIL
+  
+       CLD will start a debugging and display PROGRAM.PRG file on screen
+       with debugging step cursor on line "2" of PROGRAM.PRG file.
+       Executed instruction but will be a instruction from line "1" of
+       SMALL.INC. I'm so sure, that this stupid acting is possible to
+       eliminate just by better recognizing of includes and modifying
+       screen display routines of source code.
+  
+       There is of course EASY solving for this - NEVER use #include for
+       part of your code. All your code you can easy put to separate .OBJ
+       files and call them like function.  Then will CLD working GREAT.
+  
+       Possibility to use Alt-D function for stop program in working is
+       limited. If there will be for example:
+  
+            WHILE rlock()
+            ENDDO          (of course, this is a mistake. But i
+                           made it few time, just forgotten "!"
+                           negation)
+  
+       Then one will NOT be able to stop program and see what is working.
+       When i had this problem i did lot of looking what is wrong and
+       after LONG period i found that there is missing one negation for
+       condition.
+  
+  
+                             STATIC OVERLAYING
+  CLIPBBS 1-01                   Page 10                   4 Feb 1991
+
+
+  Lot from us were using static overlaying of CLIPPER 5.0 libraries to
+  solve memory problems. Roger Donnay supplied MEM50.LNK script for
+  including most bigger part of Clipper runtime to static overlays had
+  few problems (hanging because of RTLINK problems to handle memory), but
+  was working very nice.
+  
+  New CLIPPER 5.01 version of Clipper has totally changed all names of
+  function (really ALL and FULLY). The old MEM50.LNK then not working
+  because is fixed to old names. Maybe Donnay will come with new version
+  of this, but - there is NOT reason to use static overlays because
+  dynamic overlaying and memory management of RTLINK is now working and
+  your application will work probably better without static overlaying.
+  
+  Still, when somebody will try to adapt old MEM50.LNK to new names, then
+  will encounter one problem. Not problem to found new names (they are
+  easily detectable), but will receive "INTERNAL ERROR 999" which will
+  not be able to found in documentation (like all internal errors). Then
+  don't spend a time for static overlaying, there is no effect for this.
+  
+                            Memoedit() function
+  
+  A more comments i will give to MEMOEDIT() function.
+  
+  First problem which i had with Memoedit() in  Clipper 5.0 was a problem
+  that there IS NOT a way to access edited string from INSIDE of
+  Memoedit(). One can access ONLY original string, but edited (and
+  continuously changed) string is hidden somewhere in Clipper memory. I
+  reported this problem already to Nantucket a LONG time ago, the told
+  "will be solved in new version", but true is again different. And i'm
+  so sure, that this isn't so problem.
+  
+  In Clipper 5.0 there was a BIG problem with MemoEdit() function when
+  there was a very small free memory for your program (about 30KB after
+  loading program in memory). Then Memoedit in some cases did HANG of
+  whole system. Probably it had something to do with RTLINK inability to
+  handle proper overlaying when there was a small memory. This problem is
+  PARTIALLY out. One need more smaller memory to hang system with
+  Memoedit (10KB to 20KB). Hope, somebody will take care of this, because
+  to have hanging editor (yes, PE.EXE distributed with CLIPPER will hang
+  too) inside of application running just close to free memory is pity.
+  
+                            Memory(n) function
+  
+  Never take a care of value returned by Memory() function. When there is
+  30KB reported by Memory(1), then Memory(3) (run space) can report this
+  number:
+  
+            -1   (probably -1 as result of calculating)
+            768  just perfect, i have 640KB of memory in computer
+                 and RUN space is 768KB free
+  
+                              MENU functions
+  
+  One nice surprise i had after running our applications. I made a own
+  menuying system which was using FACT that cursor is staying just
+  immediately AFTER selected menu line. This one WAS true in Clipper 5.0
+  CLIPBBS 1-01                   Page 11                   4 Feb 1991
+
+
+  and this one IS NOT true in 5.01 I don't understand why 5.01 is putting
+  cursor on place of SET MESSAGE (never mind if there is MESSAGE or not)
+  and not logically to place after selected menu line.
+  
+  Then if your menu system is acting strange and you are getting sure
+  that MENU TO is still working the same, change your mind - it's
+  different.
+  
+                             STATIC functions
+  
+  Be very carefully when using STATIC functions. I had a static functions
+  used a parameter for ACHOICE() function for my own keyboard actions in
+  this MENU ACHOICE() choosing. ACHOICE is just NOT executing this
+  function when is STATIC. Unbelievable is, that there IS NOT error
+  message (not found function or ...), there is just NOT EXECUTING.
+  
+                               INCONSISTENCY
+  
+  One funny inconsistency of program language is in new Clipper 5.01
+  version. I found it when i was thinking:
+  
+       OK, there are  @ SAY .. COLOUR,  @ .. TO .. COLOUR command
+       (something new in 5.01, extension of @ command). Then there
+       OF COURSE is @ .. CLEAR .. COLOUR.
+       GOTCHA, there is NOT @CLEAR with COLOUR parameter. Maybe
+       somebody is thinking that CLEAR is without colour, but then
+       is wrong.
+  
+  
+                               COPY FILE TO
+  
+  Nice surprise of COPY FILE command is this case:
+  
+       there is a file:
+                 some text
+                 another texts
+                 lot of text
+                 <eof>
+  
+                 It means, file is ended with EOF character as is
+                 standard is DOS.
+  
+       Then is there command:
+                 COPY FILE <file> TO LPT1
+  
+       And result is:
+            Unrecoverable error: write error....
+  
+       Just, COPY FILE TO printer will NOT handle files which are
+       containing EOF character. Why? Because when COPY command is
+       writing something to printer port, then is doing this in block and
+       then is checking if returned number of really processed characters
+       is the same as return of passed character. DOS will of course NOT
+       COUNT _EOF_ character between processed characters and giving back
+       different number. And then will your program immediately fail with
+       "unrecoverable" error and return to DOS. I found this very
+  CLIPBBS 1-01                   Page 12                   4 Feb 1991
+
+
+       annoying. And from this moment i have to use RUN("copy ...")
+       command instead of normal and logical COPY FILE.
+  
+  
+  
+  (somewhere later, i want to continue with some comments about
+   compuserve list of anomalies in Clipper and some other discovered
+   problems which aren't in CIX list)
+  
+                                                                  .DD.
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 13                   4 Feb 1991
+
+
+  ===========================================================================
+                             QUESTIONS AND ANSWERS
+  ===========================================================================
+
+
+  Question:
+  
+          I'm using 4DOS with Clipper 5.01 and having problems with
+          using RUN (!) command from CLIPPER. What i have to do for
+          correct using of 4DOS?
+  
+  Answer:
+  
+          1)      take a sure, that CONFIG.SYS contains correct specs:
+  
+                  shell=c:\4dos.com /e:512 /s:d /p
+  
+                  This one is telling to boot that has to take 4DOS.COM
+                  instead of COMMAND.COM with 512 bytes for environment
+                  and swapping to disk (replace with /s:e for EMM swap)
+                  /P is telling to run AUTOEXEC.BAT for start of system.
+  
+          2)      AUTOEXEC.BAT has also to set several things:
+  
+                  path c:\;c:\4dos
+  
+                  Be sure that PATH is telling where to found all other
+                  files from 4DOS!
+  
+                  set COMSPEC=c:\4dos.COM
+                  set 4DSHELL=/S:D
+  
+                  First one is giving correct COMSPEC for all invocation
+                  of COMMAND.COM like later and other is telling again
+                  about swapping for all other copies of 4DOS.COM later.
+  
+          This two things are needed for DOS to get correctly working,
+          for CLIPPER here is needed something totally different. Clipper
+          is taking COMSPEC DOS variable to run 'command.com', then will
+          RUN without problems any internal or external DOS commands or
+          another programs. If one wants to run another session of
+          4DOS.COM, then for compatibility is best to use
+          RUN("%COMSPEC%") which is without problems.
+  
+          And last comment - ONE MUST HAVE ENOUGH MEMORY TO RUN _TWO_
+          coppies of 4DOS.COM in case of running another 4DOS.COM or
+          copy of 4DOS.COM + runned program.
+
+  ---------------------------------------------------------------------------
+
+
+  QUESTION:
+  
+      I'm looking for good books about Clipper 5.0x and also looking
+      for some newspapers about it, where i can found some from them?
+  
+  CLIPBBS 1-01                   Page 14                   4 Feb 1991
+
+
+  ANSWER:
+  
+               AVAILABLE CLIPPER BOOKS AND PERIODICALS
+  
+      BOOKS
+  
+      Clipper 5:  A Developer's Guide
+      Author:         Joseph D. Booth, Greg Lief and Craig Yellick
+      Publisher:      M&T Books
+                      501 Galveston Drive
+                      Redwood City, CA 94063-4728
+  
+      To Order:       1-800-533-4372
+                      1-800-356-2002 (in CA)
+  
+  
+      Clipper Developer's Library
+      Author:         James Occhiogrosso
+      Publisher:      Microtrend Books
+                              Slawson Communications, Inc.
+                      165 Vallecitos de Oro
+                      San Marcos, CA 92069
+  
+      To Order:       1-800-SLAWSON
+  
+  
+      Clipper Programming Guide, 2nd Edition Version 5
+      Author: Rick Spence
+      Publisher:      Microtrend Books
+                      Slawson Communications, Inc.
+                      165 Vallecitos de Oro
+                      San Marcos, CA 92069
+  
+      To Order:       1-800-SLAWSON
+  
+  
+      Illustrated Clipper 5.0, 2nd Edition
+      Author:  John Meuller
+      Publisher:      Wordware Publishing, Inc.
+                      1506 Capital Avenue
+                      Plano, TX 75074
+  
+      To Order:       1-800-229-4949
+  
+  
+      Straley's Programming with Clipper 5.0
+      Author: Stephen J. Straley
+      Publisher:      Bantam Books
+                      666 5th Avenue
+                      24th Floor
+                      New York, NY 10103
+  
+      To Order:       1-800-223-6834 ext. 9479
+                      212-492-9479
+  
+  
+  CLIPBBS 1-01                   Page 15                   4 Feb 1991
+
+
+      Using Clipper, 2nd edition
+      Author: Ed Tiley
+      Pubisher:       Que Corporation
+                      11711 North College Avenue
+                      Suite 140
+                      Carmel, IN 46032
+  
+      To Order:       1-800-428-5331
+  
+  
+      PERIODICALS
+  
+      The Aquarium
+      Publisher:      Grumpfish, Inc.
+                      PO Box 17761
+                      Salem, OR 97305
+  
+      To Order:       503-588-1815
+  
+  
+      Compass for Clipper
+      Publisher:      Island Publishing
+                      1424 Sherman Avenue
+                      Suite 300
+                      PO Box 2347
+                      Coeur d'Alene, ID 83814
+  
+      To Order:       208-667-3727
+  
+  
+      Nantucket News: The Technical Journal of Nantucket Corporation
+      Publisher:      Nantucket Corporation
+                      12555 W. Jefferson Boulevard
+                      Los Angeles, CA 90066
+  
+      To Order:       213-390-7923
+  
+  
+      Reference(Clipper): The Independent Guide to Clipper Expertise
+      Publisher:      Pinnacle Publishing
+                      28621 Pacific Highway South
+                      PO Box 8099
+                      Federal Way, WA 98003-009
+  
+      To Order:       1-800-231-1293
+                      206-941-2300
+  
+      European Nantucket Users Club Magazine - Clip a Time
+      Publisher:      The Europen Nantucket Users Club
+                      33 Nobel Square
+                      Basildon
+                      Essex SS13 1LT
+                      England
+  
+      To Order:       44-268-590955
+                      44-268-590905 (FAX)
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 16                   4 Feb 1991
+
+
+  Q&A
+  
+  Question:
+  
+    I have a problem with the DBU in Clipper 5.01. I can create a
+    dbase, but when I go to enter data, DBU hangs. No response from
+    keyboard... nothing! Running an AT (286) 10hz V/c drive VGA.
+    (Can't see any probs there) Is there a fix I should know about?
+  
+  Answer:
+  
+    You are completely right. Nantucket produced changed DBU but this
+    change is putting in DBU new error which wasn't in previous version.
+    Here is a fix (one from many):
+  
+    at line 281, change DBUEDIT.PRG to say:
+  
+          /* Edit the current field */
+            IF bof() .and. eof() .and. !lAppend
+                 keyboard chr(K_DOWN) + chr(nextkey())
+                 loop
+            ENDIF
+
+  ---------------------------------------------------------------------------
+
+
+  QUESTION:
+  
+      I encounter very often a very annoying problem which i refer to as
+      "ghost records". With no apparent regularity i find in my .dbf files,
+      usually but not always at the end, one or more records whose fielsd are
+      filled with right arrows (chr(26)'s). For sure this problem is a very
+      well known one; Can someone tell me the origin of these records and how
+      to avoid them ?  (I use clipper 87 and am starting with clipper 5.1.
+      The ghost records are visible also with dbxl interpreter and enter in
+      the total number of records of the fields).
+  
+  ANSWER:
+  
+      Sounds like a dBase III pack of a clipper .dbf file.  Or header
+      corruption where there is one more record in the filesize than the
+      header says.  Clipper reads the real filesize and gets the last record
+      which is full of end-of-file markers (^Z or ASCII 26).
+  
+      Solution : don't access the files from dBase or DBXL.  (I do it often
+      though and only stop doing it when problems arise - which has not
+      happened for a year or so now).
+
+  ---------------------------------------------------------------------------
+
+
+  QUESTION:
+  
+          I'm using for my programs combination of Turbo C++ and Clipper
+          sources and i want:
+  
+  CLIPBBS 1-01                   Page 17                   4 Feb 1991
+
+
+          1) to be able to use command line compiling of C modules
+          2) create from my objects complete library
+          3) do both first totally automatically
+  
+  ANSWER:
+  
+          Following is a example of .RMK link script file for use as
+          RMAKE #name.rmk to complete manage you created library
+  
+          Comments are added as usuall in .RMK files, therefore just
+          cut this part out, define own files and start using:
+  
+  // Example RMAKE file for combination of TCC sources and CLIPPER
+  // sources, result is going to library
+  
+  makepath[.OBJ]  := "\SOURCE\DANIEL\OBJ"
+  makepath[.PRG]  := "\SOURCE\DANIEL"
+  makepath[.C]    := "\SOURCE\DANIEL"
+  makepath[.CH]   := "\SOURCE\DANIEL"
+  makepath[.LIB]  := "\LIB"
+  //      makepath is used for telling RMAKE where to get and put
+  //      some used files
+  //      .OBJ files are ALLWAYS stored in subdirectory OBJ of main
+  //              program directory
+  //      .PRG files, .C and .CH files are in main source program
+  //              directory
+  //      .LIB files are in common lib directory, not in CL5\LIB
+  
+  #ifdef DEBUG
+  .prg.obj:
+      clipper $< /w/n/m/b /o$@
+      lib \lib\daniel -+$@;
+  #else
+  .prg.obj:
+      clipper $< /w/n/m/l /o$@
+      lib \lib\daniel -+$@;
+  #endif
+  
+  //      Above is defined how will be managed CLIPPER sources from
+  //      .PRG to .OBJ state with possibility to define /DDEBUG on
+  //      command line calling RMAKE @name.rmk /DDEBUG for include
+  //      debugger by simply one switch
+  //      LIB.EXE is coming from standard MICROSOFT C or from any other
+  //      source which is giving this program. Anyway TLIB can be also
+  //      used of course. LIB will be called for REMOVING old .OBJ from
+  //      and putting NEW inside ( -+ on beginning of name). Library
+  //      name is called DANIEL (it's my private library).
+  
+  .c.obj:
+      TCC -I\TC\INCLUDE -L\TC\LIB -C -d -ml -wmlt -K -G -O -Z -k- -c -o$@  $<
+      LIB \LIB\DANIEL.LIB -+$@;
+  
+  //      This is definition how to make .OBJ from .C sources and put
+  //      them again into library. Bunch of switches IS CASE sensitive
+  //      then please careful with using them!
+  //      And of course, later don't forget to link your CL.LIB with
+  CLIPBBS 1-01                   Page 18                   4 Feb 1991
+
+
+  //      your program, otherwise it will NEVER work......
+  
+  dd_lib1.obj:        dd_lib1.prg  dprinter.ch daniel.ch
+  dd_lib2.obj:        dd_lib2.prg  dprinter.ch daniel.ch
+  dd_lib3.obj:        dd_lib3.prg  dprinter.ch daniel.ch
+  dd_lib4.obj:        dd_lib4.prg  dprinter.ch daniel.ch
+  dd_lib5.obj:        dd_lib5.prg  dprinter.ch daniel.ch
+  dd_netw.obj:        dd_netw.prg  dprinter.ch daniel.ch
+  configer.obj:       configer.prg dprinter.ch daniel.ch
+  
+  //      This is simple, all this are CLIPPER modules with some include
+  //      .CH files which are of course also checked for changes
+  
+  cleanup.obj:        cleanup.c
+  faxlog.obj:         faxlog.c
+  isprinte.obj:       isprinte.c
+  screen.obj:         screen.c
+  wptext.obj:         wptext.c
+  wputil.obj:         wputil.c
+  
+  //      And this is definition of .C modules, they aren't checked
+  //      for includes, because includes in C are quite stabil
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 19                   4 Feb 1991
+
+
+  ===========================================================================
+                                   COMMENTS
+  ===========================================================================
+
+
+                             CLIPBBS Distribution
+  
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can take profit from dis-
+  tributing of this magazine. 
+  
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest). Please, in case of
+  your interest in CLIPBBS and possibility to became a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+  
+  At this moment (22/08/1991) here aren't distribution sites because is
+  coming first trial number.
+
+  ---------------------------------------------------------------------------
+  CLIPBBS 1-01                   Page 20                   4 Feb 1991
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Writing of articles to CLIPBBS is really easy. Write articles, max 78 
+  characters per line, long as you wish, pure ASCII text. Choose from 
+  list of extension which is describing your text, or just name it .ART 
+  as ARTicle and send it to publisher or to any distributes site (if 
+  exist already) via modem to BBS or with mailer as file attach. Article 
+  will come automatically in nearest free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          
+  That's all at this moment, probly later we will be changing this. If 
+  you have any tip about subparts of CLIPBBS, please tell us, or just 
+  write article about this.
+  
+  Daniel, publisher
+                                  
+  
+
+  ---------------------------------------------------------------------------
+

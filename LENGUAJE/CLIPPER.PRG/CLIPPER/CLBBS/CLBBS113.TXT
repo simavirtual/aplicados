@@ -1,0 +1,1352 @@
+                        ±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞
+              ∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞
+        ±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±
+     ±∞±∞±∞±€€€€∞±€€€€∞±∞±∞€€€€±∞±€€€€€€∞±€€€€€€∞±€€€€€€∞±∞€€€€±∞±∞±∞±∞±∞±
+   ∞±∞±∞±∞±€€∞±€€∞±€€∞±∞±∞±∞€€±∞±∞±€€∞±€€∞±€€∞±€€∞±€€∞±€€∞€€±∞€€±∞±∞±∞±∞±∞±∞
+  ∞±∞±∞±∞±€€∞±∞±∞±∞€€±∞±∞±∞±€€∞±∞±∞€€±∞€€±∞€€±∞€€±∞€€±∞€€±€€€±∞±∞±∞±∞±∞±∞±∞±∞
+ ∞±∞±∞±∞±∞€€±∞±∞±∞±€€∞±∞±∞±∞€€±∞±∞±€€€€€±∞±€€€€€±∞±€€€€€±∞±€€€±∞±∞±∞±∞±∞±∞±∞±∞
+ ±∞±∞±∞±∞±€€∞±∞±∞±∞€€±∞±€±∞±€€∞±∞±∞€€±∞±∞±∞€€±∞€€±∞€€∞±€€±∞±∞€€€∞±∞±∞±∞±∞±∞±∞±
+  ±∞±∞±∞±∞±€€∞±€€∞±€€∞±€€∞±∞€€±∞±∞±€€∞±∞±∞±€€∞±€€∞±€€±∞€€∞€€±∞€€±∞±∞±∞±∞±∞±∞±
+   ±∞±∞±∞±∞±€€€€∞±€€€€€€€±∞€€€€±∞±€€€€∞±∞±€€€€€€∞±€€€€€€∞±∞€€€€±∞±∞±∞±∞±∞±∞±
+     ∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞
+        ∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞
+              ±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±
+                        ∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±∞±
+ 
+   Volume 1, Number 13                                   19 November 1991
+ 
+                  (c) Daniel Doáekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    The Programmer's Guide to CLIPPER Linkers - part (10)  .................  1
+    Netware Lite or Lantastic  .............................................  5
+    Clipper is OOP, comments about OCLIP library  ..........................  7
+ 2. SOFTWARE  .............................................................. 10
+    argc and argv (argument passsed retrieving) trick  ..................... 10
+    Save and restore screen from disk  ..................................... 10
+ 3. ANOMALIES  ............................................................. 11
+    ANOMALIES reports and commets  ......................................... 11
+    LOCAL             Inline assignment clarification  ..................... 11
+    MISC              Miscellaneous clarification/anomalies  ............... 11
+    PICTURE           Comments on 5.01's PICTURE clause  ................... 12
+ 4. CLIPPER NET  ........................................................... 13
+    Index of described files in Clipper BBS Magazine  ...................... 13
+    ClipperNet - SUPER160.ARJ  ............................................. 14
+    ClipperNet - VOICE200.ARJ  ............................................. 16
+    The Clipper File-Net, Policy for ClipperNet  ........................... 16
+    Routing-Plan for ClipperNet  ........................................... 18
+ CLIPBBS 1-13       Table of Contents (...)        19 Nov 1991
+
+
+    Clipper File-Net, Application form  .................................... 20
+    ClipperNet - PAT2-2.ARJ  ............................................... 21
+    ClipperNet - BARNTX.ARJ  ............................................... 22
+    ClipperNet - CWDEMO.ARJ  ............................................... 22
+ 5. CLIPBBS  ............................................................... 23
+    CLIPBBS distribution  .................................................. 23
+    CLIPBBS, how to write an article!!!  ................................... 24
+
+                                   - - - - -
+ CLIPBBS 1-13                   Page 1                   19 Nov 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (10)
+ 
+         Case Study #4: dCLIPFLP.EXE -Flipper engine
+ 
+                          (WARPLINK and dCLIP 2.5)
+ 
+         dCLIPFLP is a development platform and runtime system for
+         Clipper applications which use the FLIPPER graphics library.
+         WARPLINK was the best choice for this application for reasons
+         of speed performance more than memory performance.  RTLINK
+         actually performed better from a memory-management point of
+         view, however, the constant "reloading" of overlay segments
+         proved to be too "disk-intensive" and very slow.  WARPLINK's
+         link "pool" management scheme produces better speed performance
+         because it keeps routines which are called most often in memory.
+ 
+         WARPLINK is an example of a "dynamic-overlay" linker which
+         has limitations on the modules which can be overlayed. It is
+         very unclear how to determine which modules CAN be overlayed
+         other than by constant trial and error.  The link file below
+         was developed after much of this trial and error.  Objects and
+         libraries which are to be overlayed are placed in ()
+         parenthesis.  Gary Prothero, the developer of Flipper is
+         currently working on breaking his libraries out into sub-
+         libraries which will allow all the (OVERLAYABLE) code to be
+         overlayed as a .LIBrary rather than many .OBJects.  This, of
+         course, makes project management simpler.
+ 
+         /r /op:62 /em (dclipflp) + ovlmgr
+         # flipper objects
+         (ARC + AREASET + ASCIISET + AT_SET + AXISCALC + AXISSET) +
+         (BEE_BOP + CALLBIOS + CLIPSET  + CLS + COLOR + COLORSET) +
+         (COM + CWAIT + DR_CURVE + EGA_HERC + ERRORSET + FALIGN) +
+         (FASTFILL + FASTLINE + FILLBOX + FIND_PEL + FLIPINIT + GETFHGT) +
+         (GETLNATT + GETLNLEN + GET_FATT) + GET_PEL + (GET_PT + GFXCLOSE) +
+         (GFXLSEEK + GFXOPEN + GFX_RDWR + GRAPHIC + GRAPHICS + HP_CLIP) +
+         (HP_PLOTS + INITSET LABELSET + LEGEND + LINE) +
+         (LINES + LN_JUST + LO_PRINT + MALOCPIC + MATHSET + MISS_SET) +
+         (MODESET + OPEN_FNT + PIC_ASM + PIECHART + PIE_CLIP + PRINT) +
+         (PSET + REGRESS + RESET + RETXYSET + ROTFCN) +
+         (ROT_180 + ROT_270 + ROT_90 + SAVEFONT + SAYMARK + SCALESET) +
+         (SCANKEY + SCL_DRAW + SCREEN + SET_XOR + TEXT + WORLDSET) +
+         (WRTCHAR + XAXISSET + XYSET + YAXISSET + _IDIV + _LINES)
+         # output file name
+         dclipflp
+         # map file name
+         dclipflp
+         # libraries
+         dclipnl+(dclip)+(dcextend)+dclipr+clipper+flip88
+ 
+ 
+ CLIPBBS 1-13                   Page 2                   19 Nov 1991
+
+
+         Case Study #5: DONNAY Accounting System
+ 
+                          (dCLIPRUN - dynamic linker)
+ 
+         Our DONNAY Software Accounting system is written entirely in
+         Clipper and handles Sales Orders, Customers, Accounts Receivable,
+         Accounts Payable, Inventory Control, General Ledger and reports.
+         Is also uses the entire SOFT.CLIP library, and has a gateway
+         system to call other programs such as FYI - Work Smarter.
+ 
+         This program was originally written in dBASE-II and has evolved
+         into a large, custom program which is about 1.5Meg of executable
+         code.  Until 1 year ago, this system consisted of several
+         .EXEcutable sub-programs.  Our accounting department was always
+         frustrated because we were reluctant to provide needed changes
+         due to the complexity of the system.  Each one was linked with
+         PLINK86 and had a sophisticated internal overlay structure.
+         Finally we decided to solve this problem by converting the
+         program into several "dynamic-libraries" and then running it
+         entirely under the dCLIPRUN "dynamic-link" system.  The conversion
+         took about 2 hours because all that was needed was to take all
+         the Clipper objects and "pre-link" them into sets of .DLB
+         (dynamic-library) files.  Now, providing simple changes is easy
+         because we simply edit and compile the desired .PRG and distribute
+         the new .OBJect file.  dCLIPRUN's incremental link system insures
+         that the new object is executed rather than the old one in the
+         dynamic library.  About every two weeks we update the dynamic
+         libraries and distribute them.
+ 
+ 
+ 
+         Case Study #6:  FYI - Work Smarter  (RTLINK/CLIPPER-5.0)
+ 
+         FYI - Work Smarter is included as a case study for both
+         ALINK/BLINKER for Clipper Summer 87 (Case Study #1) and also
+         for RTLINK and Clipper-5.0.  This application was originally
+         developed in Summer 87 but recently converted to Clipper-5.0
+         to take advantage of the new Virtual Memory Management System.
+ 
+         It took only a few days to convert our 100 program modules
+         to be compatible with Clipper-5.0, and most of the problems
+         we encountered were due to using unconventional and "undocumented"
+         features of Summer 87 such as parameter initialization and
+         calls to Clipper internals.
+ 
+         The new Clipper-5.0 executable program performs as well as the
+         Summer 87 version linked with BLINKER in the area of speed but
+         well outperforms the BLINKER/SUMMER 87 version in the area of
+         memory performance.
+ 
+         Our RTLINK/CLIPPER-5.0 link file:
+ 
+         DYNAMIC E:\FYI\FYI.OVL
+         FI hoa,hoerror,hoedit,hoprint,ho_ctphn,hopaper,hogate,horun
+         FI homain,hottrak,hodaily,homnthyr,howkbrow,hosched,hodbch__
+         FI hocontac,ho_ctsel,ho_ctscr,hoctscr3,hoctscr4,hoctscr5
+ CLIPBBS 1-13                   Page 3                   19 Nov 1991
+
+
+         FI horeport,holetter,hodbms,hodir,horedit,horedit2,horedit3
+         FI ho_adcnt,hostubs,hofunct,holedit,horprint,hofull,hoclrsel
+         FI hoproj,hopjitem,hopjmisc,hofields,ho_prof,ho_seq,hocreate
+         FI hofull2,hoimport,hoexpl,hoatnx__,hodbfile,holock,hochrsel
+         FI hocat,hotstfil,hogetv,hoblank,hocalc,homisc,homemo,hopr
+         FI ho_find,hobrowse,houtil,hotodo,hohelp,homfunct,hosetp__
+         FI horela,holprint,hof1help,hograph,homove,hopsel,portproc
+         LIB D:\DCLIP25\CLIPPER5\dclip
+         LIB D:\DCLIP25\CLIPPER5\dclipr
+         LIB D:\CLIPPER5\LIB\extend
+         LIB D:\CLIPPER5\LIB\clipper
+         LIB D:\CLIPPER5\LIB\terminal
+         LIB D:\CLIPPER5\LIB\dbfntx
+         LIB D:\CLIP87\getit
+         LIB D:\CLIP87\idl
+         LIB D:\DOSLIB\DOS87
+         LIB D:\OVERLAY\overcl
+         OUTPUT E:\FYI\fyi
+         VERBOSE
+         RELOAD FAR 200
+         BEGINAREA
+           SECTION MODULE D:\S89\EDIT\MEMOEDIT.C
+                   MODULE D:\S89\MEMO\MEMOTRAN.C
+           SECTION MODULE D:\S89\MEMO\MEMOREAD.C
+                   MODULE D:\S89\MEMO\MEMOWRIT.C
+                   MODULE D:\S89\MEMO\MEMOLINE.C
+                   MODULE D:\S89\MEMO\MLCOUNT.C
+           SECTION MODULE D:\S89\EDIT\ACHOICE.C
+                   MODULE D:\S89\ARRAY\ASCAN.C
+                   MODULE D:\S89\ARRAY\ARRAY.C
+                   MODULE D:\S89\ARRAY\DIRECTRY.C
+           SECTION MODULE D:\S89\DBCMD\DBSTRUCT.C
+                   MODULE D:\S89\DBCMD\DBCREATE.C
+           SECTION MODULE D:\S89\TERM\GETHELP.C
+           SECTION MODULE overlay.asm
+         ENDAREA
+ 
+         = About the Author =
+ 
+ 
+         Roger Donnay is the President and founder of DONNAY Software
+         Designs, a Newport Beach, California firm which specializes
+         in the development of database systems for microcomputers.
+ 
+         Roger is the creater of the SOFT.CLIP and TIME-TRAK add-on
+         libraries for Clipper, the dCLIP development platform/runtime
+         system for Clipper, and the principal software architect for
+         "FYI - Work Smarter", a home-office management system.   Roger's
+         programming background includes assembly-language in "real-time"
+         applications, basic, pascal, plz, dBASE-II, dBASE-III, Clipper
+         and miscellaneous technical support languages.  Roger holds a
+         BSEE degree from West Coast University in Southern California and
+         is a Vietnam veteran with 8-years of U.S. Navy electronics
+         background in radar and communications.
+ 
+         Roger J. Donnay
+ CLIPBBS 1-13                   Page 4                   19 Nov 1991
+
+
+         DONNAY Software Designs
+         1880 Park Newport,  Suite 104
+         Newport Beach, CA 92660
+         Voice: 714-721-6720
+         Fax  : 714-721-9495
+         BBS  : 619-728-4318 or 619-728-0633 Conference 7
+         Compuserve ID : 73227,1225
+ 
+ 
+ 
+         = Copyright Information =
+ 
+ 
+         Version 1.5
+ 
+         The information in this document is considered by the author
+         to be "public domain" information and is provided free of
+         charge.  Feel free to duplicate this information in print,
+         on magnetic media or on BBS systems, however please include
+         the complete article if you do so.
+ 
+         A booklet titled "The Programmer's Guide to Clipper Linkers"
+         is available in bulk form from Donnay Software for distribution
+         at User Group meetings or developer's conferences.  We must
+         charge $1.00 each for the booklets plus shipping to pay for
+         the cost of printing and handling.  This booklet is updated
+         quarterly with the latest developments in Clipper linking
+         technology.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 5                   19 Nov 1991
+
+
+          Netware Lite - First try of Novell in world of Peer-to-Peer
+ 
+ Don't wondering why Clipper magazine is taking a look onto typicall network
+ stuff. It has few reasons:
+ 
+     -   many from us are using any kind of networks or are just looking
+         into network world where to make a step to use it
+     -   i'm not only Clipper freak, but i'm also author of few network
+         books and highly interested in network...
+ 
+ Therefore next article will try to make a comparation of Netware Lite and
+ Lantastic (because both are very close together). Have to say, it's after ONE
+ day of playing with this network... Today (Friday) finally arrived a package
+ from Europen Novell distributor with Lite floppies and manuals.
+ 
+ Netware Lite is coming in present version 1.0 on two 5.25 floppies or one 3.5
+ floppy. Easy installation as usual with using C menuing and windowing
+ libraries is leaving computer prepared for use as server or workstation (so
+ called CLIENT in this version of Novell networking).
+ 
+ In my case there are three computers for testing, one 386/33Mhz with 104MB
+ harddisk, DOS5.0 and 4DOS 4.0, one TANDON 286/12Mhz with 2 times 30MB
+ DataPak, DOS 3.3 and 4DOS 4.0 and finally VICTOR386SX/16Mhz with 20MB
+ harddisk, DOS 3.3 and 4DOS 4.0. Connected together with Ethernet, 386/33 is
+ using Artisoft AE2 card, TANDON is using NE2000 and VICTOR is using Artisoft
+ NE3 card. All three are normally running with using of Artisoft Lantastic
+ version 4.0 and ALL are acting as full servers, TANDON is used as PRINTER
+ SERVER for PostScript printer and contains all public data, 386/33Mhz is used
+ by my for developing all Clipper,C,ASM programs and serving in other time as
+ BBS computer. Both 386 machines are using QEMM 6.0 with ST:M and are loading
+ high everything what is possible to load <grin>.
+ 
+ Netware Lite was able to run immediately after installation. Only one nice
+ surprise was coming, SERVER.EXE is impossible to load high, it must be in
+ standard memory (50KB...). Lantastic SERVER instead can be loaded HIGH
+ without any problems and any speed differences.
+ 
+ Second surprise was, that complete CLIENT+SERVER combination is taking about
+ 63KBs of memory, Lantastic configuration instead can be 10KB smaller, but it
+ depends from used card and parameters of server, redir and lanbios. But still
+ SERVER.EXE from Lantastic can be loaded high and therefore saving about 50Kbs
+ of memory for use in DOS.
+ 
+ Comparation of speed is coming to be better for Novell Netware Lite. When
+ Lantastic has speed about 60KB/sec on this ETHERNET, then Lite is coming to
+ 90KB/sec. When lantastic is about 40KB/sec (access to 286 server), then
+ Netware Lite is about 65KB/sec. And all this on exactly the same hardware,
+ the same settings of hardware and software.
+ 
+ Main difference with Lantastic is coming in way of handling network users.
+ Lantastic us using logging of USER per SERVER, Netware Lite us using way of
+ USER per NETWORK, therefore Lite is keeping user names and accounts across
+ whole network in ALL servers and automatically upgrading all servers. This
+ feature is very pitty. Command NET LOGIN DANIEL will try to login into ALL
+ available servers and can make only ingenious mess with asking for password
+ and with missing servers...
+ CLIPBBS 1-13                   Page 6                   19 Nov 1991
+
+
+ Generally is Lite working very good and very fast, it's allowing better
+ defining of printers and their initialization than Lantastic, security system
+ is much smaller than one implemented in Lantastic (of you are one who needs a
+ good secured peer-to-peer, then take a look to Lantastic), but it's not real
+ problem because planned use is just for sharing devices and there is always
+ possibility to DISABLE access somewhere.
+ 
+ Lantastic is generally step further in additional facilities like mail
+ sending, indirect files, security management, MicroSoft networks alike
+ compatibility. That's possible to expect, because Lantastic is now version
+ 4.0 and Novell Lite is 1.0. Lantastic about numbers 2.something was low under
+ Lite....
+ 
+ Lite is of course based on Novell's IPX technique with using of likable ODI
+ drivers and can be running together with Novell Netware 2.x or 3.x systems
+ without any problems and can use already installed IPX.COM file for Lite
+ big brother Netware. This cannot be told about Lantastic, because Lantastic
+ is using OWN netbios drivers and when running on the same cabling as big
+ Netware is resulting in too much wrong packets and unknown adresses.
+ 
+ Testing shows than no problems with AE2 (which is NE2000 compatible) or NE3
+ (which is WD8003 compatible) cards from Lantastic, which is very good for
+ someone who wants to make switch Lantastic->Lite or possible other directions
+ also. There is no any need of 'special' ADAPTER INDEPENDENT version as in
+ case of Lantastic which is expensive and not working on every card
+ (compatibility must be inside of some Artisoft given ranges). Just take a
+ card, take a IPX.COM or get a ODI driver and start use of it. That's big
+ advantage, because SERVER.EXE or CUSTOMER.EXE are staying exactly the same
+ (Lantastic is changing them in every version).
+ 
+ One negative fact shown out will be subject of another trying. When one from
+ three servers is going down, sometime other servers are trying to access this
+ server and it's ending with Abort/Retry/Ignore/Fail messages of MS DOS. But
+ it can be problem of some mapping or using PATH located to another server.
+ 
+ Dangerous possibility to run CHKDSK, COMPRESS, SPEEDISK or any other low
+ level utility on server when SERVER.EXE is running is mentioned only in
+ README file which i found confusing. Lantastic is in this case causing low
+ level disk program to tell about Network or just report some errors of
+ accesing which will prevent from disaster. In other case, it's nice to be
+ able run DISKEDIT when SERVER is running...
+ 
+ Our PostScript printer went crazy when WordPerfect was trying to print one
+ page out, but it was only because standard setting of CAPTURE is including
+ sending of BANNER PAGE and FORM FEED after job. Maybe later will Novell found
+ that it's not good to include disastreous options as default....
+ 
+ That's all from first impression which is at this moment good. Later
+ continuing will come with some numbers for comparing Novell Lite and
+ Lantastic because mentioned combination of three computer is just possible to
+ start with both of them still.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 7                   19 Nov 1991
+
+
+          Clipper is OOP, comments about OCLIP library
+                       by Antonio Linares
+ 
+                              alias
+ 
+      Tricks & Undocumented functions for Clipper 5.01 OOPS
+ 
+ Thanks to Peter Freese (OCLIP.ARJ) now we now much more about the
+ undocumented functions at the SEND module in CLIPPER.LIB.
+ 
+ I love OCLIP.ARJ. I bought Class(y) but I decided not to use it because
+ there is no way to let other people use my Classes. Thanks Peter. (By the
+ way, I think all of us are diying to know how you got the sintaxis of the
+ undocumented functions. All of us will like very much you to tell us. Once
+ again, thanks Peter).
+ 
+ I am using OCLIP as much as I can. Now I feel much more entusiasthic about
+ Clipper 5.01 (I will never forgive to get only 4 classes... Nantucket: Why
+ do you play with us? Don't you understand we will take Borland dBase as
+ soon as it is ready... What you are doing with us has no words. We are
+ proffesionals pogrammers, no monkeys!). I think the only question you have
+ in mind is to get the money from our pockets... Very soon you will die
+ completely!
+ 
+ Meanwhile... I have been hacking around.
+ 
+ 1.-     Clipper lets you Eval() a Block like an object. It is possible to
+         write
+ 
+          local bBlock := { || tone( 1000, 1 ) }
+ 
+          eval( bBlock )   // or
+          bBlock:Eval()
+ 
+ 2.-     If you look into OCLIP.PRG, you will see that __ClassNew() returns
+         a handle.  Peter stores that handle in a static variable. You can
+         try this to check that the handle is just a normal number:
+ 
+             ? __ClassNew( "TEST", 10 )     // Number means data elements
+ 
+ 3.-     Ok. Now (tachan!) if you call __ClassSel() with that handle as a
+         parameter, you get an ARRAY with the NAMES of ALL THE DATA and
+         METHODS!!!
+ 
+               local Get := GetNew()
+               local a := __ClassSel( 1 )
+ 
+               achoice( 0, 0, maxrow(), maxcol(), a )
+ 
+ 4.-     There is always a method for all the Classes that Clipper has and
+         for all the new Classes we make with OCLIP. It is the ClassName()
+         method.
+ 
+                local Get := GetNew()
+ 
+                ? Get:ClassName()           // will print "GET"
+ CLIPBBS 1-13                   Page 8                   19 Nov 1991
+
+
+         In fact it can be used as an extension of ValType(). If you want to
+         know if a variable is a "char", you use ValType( cVariable ). In
+         the same way if you want to know if an Object is a "get", you use
+         Object:ClassName().
+ 
+ 5.-     I found a hard problem when using OCLIP to derive the :New() method
+         for a Class. Supouse you have the following Classes
+ 
+          VISUAL CLASS ---> MENU CLASS ---> BARMENU CLASS
+ 
+         When you have just finished writting the Visual Class you remember
+         about all it's data elements. So it is very easy when you write the
+         :New() method (constructor) for a just-written class.
+ 
+         If in a couple of months you decide to derive the Class MENU, the
+         best thing you can do is to write a :New() method wich just call to
+         it's base class Visual to initialize data and then you initiaize
+         the new data you have added.
+ 
+                     CLASS Menu FROM Visual
+                        VAR ...                 // New data elements
+                        METHOD New = MnuNew
+                     ENDCLASS
+ 
+         Now you do:
+ 
+         function MnuNew()
+ 
+            ::Super:New()
+ 
+            ... initialize new data...
+ 
+         return Self
+ 
+         All this work fine. But... now you derive another class
+         called BarMenu.
+ 
+                     CLASS BarMenu FROM Menu
+                        VAR ...                // New data elements
+                        METHOD New = BmnNew
+                     ENDCLASS
+ 
+         And you think... "ok, let's do the same again"
+ 
+         function BmnNew()
+ 
+         ::Super:New()   // THIS CALLS AGAIN BmnNew(), as a never ending loop
+                         // wich makes Clipper HANG !!! :-(
+ 
+         ... Buahhh, (I thought). The final for OCLIP... :-(
+ 
+         But... :-), here comes the WorkAround !!! Great! :
+ 
+         function BmnNew()
+ 
+         local Menu := Menu()
+ CLIPBBS 1-13                   Page 9                   19 Nov 1991
+
+
+         acopy( qself(),Menu)      // I took the idea hacking around OCLIP.PRG
+         Menu:New()
+         acopy( Menu, qself() )
+ 
+         ...                         // Initialize your new data
+ 
+         THIS WORKS PERFECT!!!
+ 
+         You can do the same with the Menu Class
+ 
+         function MnuNew()
+ 
+         local Visual := Visual()
+ 
+         acopy( qself(), Visual )
+         Visual:New()
+         acopy( Visual, qself() )
+ 
+         ...
+ 
+ Well. Hope all this will help you. Soon more articles, more
+ ideas. Hope you had fun!
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 10                  19 Nov 1991
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+              argc and argv (argument passsed retrieving) trick
+                             by Antonio Linares
+ 
+ 
+ The trick is MicroSoft C (Clipper is written with it), because it embedes
+ this information into Clipper...
+ 
+ <-------------------------------------file begins---------------------------->
+             ARG.C
+ 
+             #include "extend.h"
+ 
+             extern int __argc;
+             extern char ** __argv;
+ 
+             CLIPPER nArgC()
+             {
+                 _retni( __argc );
+             }
+ 
+             CLIPPER cArgV()
+             {
+                 unsigned char ucWichOne = _parni( 1 );
+ 
+                 _retc( ucWichOne < __argc ? __argv[ ucWichOne ] : "" );
+             }
+ 
+ <---------------------------------file ends--------------------------------->
+
+ ------------------------------------------------------------------------------
+
+
+                      Save and restore screen from disk
+                             by Antonio Linares
+ 
+ SCRWRITE.PRG
+ 
+ ≥   function ScrWrite( cFileName )
+ ≥       cFileName = if( cFileName == nil, "SCR", cFileName )
+ ≥       return memowrit( cFileName, savescreen( 0, 0, maxrow(), maxcol() ) )
+ 
+ 
+ 
+ SCRREAD.PRG
+ 
+ ≥   function ScrRead( cFileName )
+ ≥       cFileName = if( cFileName == nil, "SCR", cFileName )
+ ≥       return restscreen( 0, 0, maxrow(), maxcol(), memoread( cFileName ) )
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 11                  19 Nov 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+             LOCAL             Inline assignment clarification.
+ 
+   Further, LOCAL x := 1, y := x + 2, z := y + 4  will cause a run-time
+   error: BASE/1081 Argument Error: +.
+ 
+ -----------COMMENT-----------
+ 
+     From view of languages theory it is impossible use of assigning,
+     because is NEVER known WHICH variable will be declared and assigned
+     first. It can be "X" or it can be "Z". This is not regular expression
+     and here is not defined rule of evaluation, Therefore using of
+     constructions like this is not good idea.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+
+
+          MISC              Miscellaneous clarification/anomalies.
+ 
+ 
+  10) A memory overbooked error may be caused by too many #define statements.
+ 
+ -----COMMENTS------
+ 
+      Error with "Memory overbooked" related to #define is quite normal. In
+      case of this problem is needed MORE memory for CLIPPER.EXE running.
+      Buffers for #define (or translate/command...) are allocated in
+      conventional memory and therefore if is small amount of free for
+      Clipper.EXE will come error.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 12                  19 Nov 1991
+
+
+            PICTURE           Comments on 5.01's PICTURE clause.
+ 
+   1) The PICTURE clause will not increase a variable's length.
+      Example:
+ 
+         cVar := ""
+         @ row, col get cVar PICTURE "!!!!!"   // Does not work.
+ 
+ -------COMMENTS---------
+ 
+      Comments about ad 1) - how can PICTURE clause change size of variabole
+      btw.  Anyway all other Fox, dBASE version are not doing this, picture
+      is just template to input (output) and has nothing to do with action
+      about size of TYPE of variable.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 13                  19 Nov 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ⁄ƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒ¬ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒƒƒø
+ ≥FileName     ≥Src ≥Description                                     ≥Where ≥
+ √ƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒ≈ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒƒƒ¥
+ ≥ACCESS.ARJ   ≥Cln ≥Source of speed testing program                 ≥[1-06]≥
+ ≥ACH2TB.ARJ   ≥Cln ≥Convert ACHOICE to TBROWSE                      ≥[1-05]≥
+ ≥ACHOO2.ARJ   ≥Cln ≥Replacement of ACHOICE with GET possibilites    ≥[1-06]≥
+ ≥ADHOC302.ARJ ≥Cln ≥Summer 87 inteligent report program             ≥[1-04]≥
+ ≥ASCPOS.ARJ   ≥Cln ≥replacement of ASC(substr(cString,nPosition,1)) ≥[1-11]≥
+ ≥CALC14.ARJ   ≥Cln ≥PoPup Calculator                                ≥[1-08]≥
+ ≥CL5103.ARJ   ≥Cln ≥Report of 5.01 anomaly number 3                 ≥[1-04]≥
+ ≥CL5REP6.ARJ  ≥Cln ≥5.01 replacement of REPORT command              ≥[1-04]≥
+ ≥CLIP110.ARJ  ≥Cln ≥Clipper Documentor program                      ≥[1-05]≥
+ ≥CLIPLINK.ARJ ≥Cbs ≥Complete text of R.Donnay about linkers         ≥[1-04]≥
+ ≥CLIPSQL.ARJ  ≥Cln ≥Demo of complete SQL library for CLipper        ≥[1-05]≥
+ ≥CLIPWARN.AJ  ≥Cln ≥Semaphore for convert WARNING: into ERRORLEVEL  ≥[1-11]≥
+ ≥CLPFON.ARJ   ≥Cln ≥Set of fonts for EXPAND.LIB from author         ≥[1-03]≥
+ ≥COND.ARJ     ≥Cln ≥Builder of conditional indexes like SUBNTX      ≥[1-03]≥
+ ≥DBSCN2.ARJ   ≥Cln ≥Screen designer generator                       ≥[1-05]≥
+ ≥DIAL.CLN     ≥Cln ≥Dialer with using of FOPEN()                    ≥[1-07]≥
+ ≥DOC111.ARJ   ≥Cln ≥Documentor, newer version                       ≥[1-08]≥
+ ≥ENDADD.ARJ   ≥Cln ≥replacement of incrementing last char of string ≥[1-11]≥
+ ≥GETKEY.ARJ   ≥Cln ≥Input oriented library, wordprocessing          ≥[1-12]≥
+ ≥GSR151.ARJ   ≥Cln ≥Global Search and replace for programmers       ≥[1-07]≥
+ ≥HGLASS.ZIP   ≥Cln ≥Hour glass for indication of index progression  ≥[1-04]≥
+ ≥INDXSL.ARJ   ≥Cln ≥User Fields selection builder for index generate≥[1-03]≥
+ ≥IOBASYS9.ARJ ≥Cln ≥Demo of S87 library and calling Clipper from C  ≥[1-03]≥
+ ≥IS.ARJ       ≥Cln ≥Several c sources of ISxxxx functions           ≥[1-11]≥
+ ≥JG2.ARJ      ≥Cln ≥Jumping between GET statements in READ          ≥[1-08]≥
+ ≥KF_LOKUP.ARJ ≥Cln ≥Set of program for database relations           ≥[1-07]≥
+ ≥LUTLIB.ARJ   ≥Cln ≥Another Clipper library                         ≥[1-08]≥
+ ≥MK30.ARJ     ≥Cln ≥Mouse library demo version                      ≥[1-03]≥
+ ≥MOVEGETS.ARJ ≥Cln ≥GETSYS change for moving between gets via VALID ≥[1-03]≥
+ ≥NFDESC2.ARJ  ≥Cln ≥NanForum library description list               ≥[1-06]≥
+ ≥NFLIB2.ARJ   ≥Cln ≥NanForum library main file                      ≥[1-06]≥
+ ≥NFSRC2.ARJ   ≥Cln ≥NanForum library Source files                   ≥[1-06]≥
+ ≥NOTATION.ARJ ≥Cln ≥Complete text of article about hungarian notat. ≥[1-04]≥
+ ≥OCLIP.ARJ    ≥Cln ≥Object extension, real (not #define/command)    ≥[1-12]≥
+ ≥OOPSCL5.ARJ  ≥Cln ≥Another version of pseudo objects               ≥[1-07]≥
+ ≥PACKUP.ARJ   ≥Cln ≥ASM source of PACK/UNPACK replacement SCRSAVE.. ≥[1-04]≥
+ ≥PARTIDX3.ARJ ≥Cln ≥Partial indexing                                ≥[1-12]≥
+ ≥PAT1.ARJ     ≥Cln ≥CIX NanForum Libraryy PATCH                     ≥[1-07]≥
+ ≥POPUPCAL.ARJ ≥Cln ≥Popup calender                                  ≥[1-05]≥
+ ≥POWER10.ARJ  ≥Cln ≥French library                                  ≥[1-07]≥
+ ≥PRINTSUP.AJR ≥Cln ≥Low level BIOS routines for printing            ≥[1-11]≥
+ CLIPBBS 1-13                   Page 14                  19 Nov 1991
+
+
+ ≥QS20F.ARJ    ≥Cln ≥Screen designer, demo, looks very good          ≥[1-11]≥
+ ≥READPW.ARJ   ≥Cln ≥GETSYS change for password invisible reader     ≥[1-03]≥
+ ≥SCANCODE.ARJ ≥Cln ≥Database with scan codes                        ≥[1-07]≥
+ ≥SCRSAVE.ARJ  ≥Cln ≥Screen AntiBurning utility (inactivity snake)   ≥[1-05]≥
+ ≥SHELP50A.ARJ ≥Cln ≥SuperHelp for Clipper                           ≥[1-07]≥
+ ≥SNAP497.ARJ  ≥Cln ≥Beta version of SNAP, partially compatible to 5 ≥[1-12]≥
+ ≥SOUND.ARJ    ≥Cln ≥Multiple TONE() used as one SOUND function      ≥[1-06]≥
+ ≥STATUS.ARJ   ≥Cln ≥Timer interrupt hooked status indicator         ≥[1-12]≥
+ ≥SYMBOL.ARJ   ≥Cln ≥Dumper of symbol tables of Summer87 .EXE        ≥[1-03]≥
+ ≥TBUNIQUE.ARJ ≥Cln ≥Browsing unique without unique index            ≥[1-12]≥
+ ≥TBWHL4.ARJ   ≥Cln ≥WHILE browsing using TBROWSE, well commented    ≥[1-06]≥
+ ≥TICKER.ARJ   ≥Cln ≥Real Time Clock, interrupt driven on screen     ≥[1-12]≥
+ ≥VSIX711.ARJ  ≥Cln ≥Vernon Six Clipper utilities and library        ≥[1-05]≥
+ ≥VSIX800.ARJ  ≥Cln ≥Vernon's library, lot of functions              ≥[1-12]≥
+ ≥WIPEV11.EXE  ≥Cln ≥VERY good screen manipulation library           ≥[1-11]≥
+ ¿ƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒ¡ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒƒƒŸ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - SUPER160.ARJ
+ 
+ File Name:      SUPER160.ARJ
+ Other Names:
+ 
+ File Size:      125,359 bytes
+ File Contents:
+                 SUPER.DOC         11383
+                 REGISTER.DOC        873
+                 README.DOC         3685
+                 SUPER.FUN         91514
+                 ALPHA.FUN          3932
+                 SUPER.LIB        217207
+                 SF.PRG            17087
+ 
+ This is a new version of SUPER library for CLIPPER 87. (CLIPPER 5.01 is NOT
+ supported by this library).
+ 
+ List of functions in this library is also long:
+ 
+ ABORT()         Pops up dialog box asking Abort ? Yes/No
+ ADDSPACE()      Pads string with spaces
+ ALENGTH()       Determines initialized length of an array
+ BLDARR()        Builds an array from a delimited string
+ BLDDBF()        Create a DBF from a delimited string
+ BLDNDX()        Interactively create a new index
+ CLABEL()        Menu driven module for label management
+ CLS()           Clear the screen with optional color,character
+ CTRLW()         Sends chr(23) (Control-W) to the keyboard
+ DELARRAY()      Deletes all elements of an array
+ DELREC()        Dialog box to delete/undelete current record
+ CLIPBBS 1-13                   Page 15                  19 Nov 1991
+
+
+ DOITALL()       Generic menu driven data entry module
+ DRIVE()         Gets currently selected drive letter
+ DUPLOOK()       Locates possible duplicates based on user criteria
+ EDITDB()        Customized DBEDIT() with UDF
+ EDITMEMO()      Performs a windowed memoedit() on a memo field
+ ED_G_PIC()      Returns appropriate picture for a get
+ ENHANCED()      Returns color integer for ENHANCED setting
+ FASTFORM()      Prints a selected formletter for current record
+ FGETLEN()       Get length of a field in current DBF
+ FILEREAD()      Lists a text file of unlimited size
+ FORMDATE()      Returns formatted date (i.e. September 10, 1989)
+ FORMLETR()      Interactive formletter and mailmerge utility
+ FULLDIR()       Interactively navigate directories
+ GENED()         Generic dbf editing screen
+ GENVAL()        Generic VALID clause validation with message
+ GETAKEY()       Gets intent of last keystroke
+ GLOBREP()       Performs global selective replace of a field
+ HELP()          Provides context sensitive popup help
+ HELPMOD()       Interactively build and modify help screens
+ INITCOL()       Initializes global colors for the library
+ INITSUP()       Initialized global variables and conditions
+ ISLOADED()      Determines  function is loaded or not
+ ISPART()        Determines if a number is part of a set
+ KBD_ESCAPE()    Keyboards character 27 (escape) when key pressed
+ LISTER()        Build, format and print lists to printer,screen,file
+ LOOKFLD()       Interactive locate on any field
+ LOOPER()        Emulate multiple reads with single reads
+ MAKEBOX()       Draws a shadow box on the screen, saves the screen
+ MCHOICE()       Creates a box for an Achoice call
+ MENU_V()        Vertical popup menu from variable # parameters
+ MESSYN()        Popup YesNo prompt box
+ MFIELDS()       Pops up an achoice for current dbf fields
+ MODIS()         Interactive modify or create structure
+ MSG()           Displays up to a 9 line message in a window
+ NKEY()          Gets key of an index file
+ OCCUR()         Build and display frequenty analysis for field
+ ONE_READ()      Pop-up window with 1-4 Say/Get combinations
+ PLSWAIT()       Pops up a 'Please Wait' window or removes it
+ POPEX()         Pops up an achoice for a certain filespec
+ PRNTFRML()      Prints a formletter created by formletr()
+ PULLDN()        Pulldown menu creator, handler
+ P_READY()       Determines if printer is ready, prompts user
+ QUERY()         Interactive query by example condition builder
+ SCMOD()         Maintains scroller.dbf - see scroller()
+ SCROLLER()      Hotkey lookup tables with dbf storage
+ SETCOLORS()     Interactive color setting interface
+ SMALLS()        Lookup tables on dbf - no call to dbedit <small>
+ STANDARD()      Returns color integer for standard setting
+ SUM_AVE()       Interactive sum or average on a dbf field
+ TAGIT()         Allows tagging of dbf records for later action
+ UNBOX()         Removes a box created by makebox()
+ UNSELECTED()    Returns color integer for UNSELECTED setting
+ VAR2CHAR()      Converts any type variable to character type
+ VARLENGTH()     Returns length of a variable  of any type
+ WRITEFILE()     Writes a line or lines  to a text file
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 16                  19 Nov 1991
+
+
+                            ClipperNet - VOICE200.ARJ
+ 
+ File Name:      VOICE200.ARJ
+ Other Names:
+ 
+ File Size:      39,817 bytes
+ File Contents:
+                 MVDEMO.PRG         9691
+                 MVREADER.PRG       7337
+                 MYCUSTOM.DCT        296
+                 SYSTEM01.DCT       1154
+                 MV.BIN            20700
+                 MV.DOC            27144
+                 MVCLIP87.LIB      22645
+                 MVCLIP50.LIB      21621
+                 MVREADER.TXT        467
+ 
+ Voice synthesis library for Summer87 and Clipper 5.01. Really speaking
+ library which i'm now going to test with MVDEMO.PRG.
+ 
+ OK, it's five minutes later. My portable PC has absolutely stupid speaker
+ of course, therefore result of effort of this program is something not good
+ to hear. But still with my effort, i can understand what was told!
+
+ ------------------------------------------------------------------------------
+
+
+ The Clipper File-Net, Policy for ClipperNet
+ 
+ 
+ 
+ 
+                           The Clipper File-Net
+ 
+                           Policy for ClipperNet
+ 
+ 
+ 
+ 
+ 
+                            What is ClipperNet?
+                            ===================
+ 
+         ClipperNet is a specialized network of BBS's that are
+         intrested in the subject of the dBase-Compilers Clipper,
+ |       Foxbase, FCO (Force), dBase and SQL.
+ 
+         ClipperNet was started in June 1991,
+                    by Mike Paschen, Hamburg, Germany,
+                    Clipper WorkShop BBS  (FidoNet 2:240/100)
+ 
+ 
+ 
+                          Who may join ClipperNet ?
+                          =========================
+ 
+ CLIPBBS 1-13                   Page 17                  19 Nov 1991
+
+
+         Any Node is free to join Clipper, but there is a maximum
+ |       of 2 CLN nodes in each local telephonezone (Area code in
+ |       Zone 1.)  In according with the RC (ZC) this maximum can
+         be exceeded, after rectification with CLN-HQ. The amount
+         should be in agree with the number of BBS's and users in
+ |       that telephonezone (Area code).
+ 
+         The CLN Nodes must allow FREQ's to all nodes even points
+         and unlisted ones. A free download of 30 minutes and
+ |       400 kb at 2400 Baud should be respected too.
+ 
+         There may no money asked for one of the CLN files, neither
+         for download nor for feeding downlinks without permission
+         of CLN-HQ.
+ 
+ |       No node must carry all CLN areas but a feeding node should
+ |       carry all areas to offer them for his downlinks.
+ 
+ 
+                           Who may hatch files ?
+                           ======================
+ 
+ |       Only RCs and NCs may hatch files into CLN. (Zone 1: Files
+ |       should be sent to 1:107/230 for hatching. This will change
+ |       as CLN becomes more widespread). Before hatching any CLN
+         file MUST first be checked on viruses with the latest
+         available scanner. [McAfee]
+ 
+ 
+                     What's the meaning with ClipperNet ?
+                     ====================================
+ 
+         The idea behind ClipperNet is to spread information and new
+ |       files about Clipper, dBase, Foxbase, FCO (Force), SQL.
+ 
+ 
+                                 Echo Areas ?
+                                 ============
+ 
+         File echos available for the moment are
+ 
+         CL-87           Clipper '87 Tools
+         CL-50           Clipper 5.x Tools
+         CL-DOC          Docs, Reports
+         CL-FOX          FoxBase Tools
+         CL-FCO          FCO (Force) Support
+         CL-DBASE        dBase III + IV
+         CL-TOOL         Clipper related Tools
+ |       CL-SQL          SQL related Tools
+ |       CL-DFLEX        DataFlex Tools
+ |       CL-DEMO         Limited Demos
+ 
+ 
+         Mail echos available for the moment are
+ 
+         ANNOUNCE.CLN    New Files arrived in ClipperNet
+ CLIPBBS 1-13                   Page 18                  19 Nov 1991
+
+
+         SYSOPS.CLN      Sysops talking in CLN
+ 
+ 
+                                 Packing ?
+                                 =========
+ 
+         All Files should be packed with Arj. We use Arj as a
+         standard in ClipperNet. For reaching a high transfer-rate
+ |       all TIC's should be packed with TickEcho. (Zone 1: Not
+ |       required, but not unreasonable).
+ 
+ 
+                                 Nodelist ?
+                                 ==========
+ 
+         Updates to the nodelist should be sent to 2:240/100 as
+ |       soon as possible to optimize the file-routing. (Zone 1:
+ |       Updates can be sent to 1:107/230 for routing).
+ 
+ 
+ <eof>
+
+ ------------------------------------------------------------------------------
+
+
+                       Routing-Plan for ClipperNet
+                       ===========================
+ 
+ CLN-HQ  2:240/100 Clipper WorkShop BBS (Hamburg - FRG)
+ RC 24       |
+             |
+ ZC1         |1:107/230 The Source for Source (Brentwood - NY)
+             |      |
+             |      |13/13 Backbone Collection (Bensalem - PA)
+             |      |102/531  PC Workshop (Inglewood - CA)
+             |      |116/36   Control Systems (Nashvill - TN)
+             |      |147/1007 Midwest MIDI (MWC - OK)
+             |      |    |
+             |      |    |147/17 The Southern Clipper (Oklahoma City - OK)
+             |      |
+             |      |260/338  The Reef (Syracuse - NY)
+             |      |269/310  The Hourglass BBS (Ridgewood - NJ)
+             |      |283/125  WB9MCJ BBS (Cedar Rapids - IA)
+             |      |324/121  The Business Card (Lawrence - MA)
+             |      |3629/269 Jon's LateNode (Havelock - NC)
+             |
+ RC 23       |234/64 TugBoat BBS (Glumsoe - DK)
+             |    |
+             |    |231/62 TBSM's Opus (Kolding - DK)
+             |
+             |240/1 Ramos II (Hannover - FRG)
+ NC 240      |240/102 MuM BBS (Hamburg - FRG)
+             |240/600 IGEPOS Mailbox System (Lage - FRG)
+             |241/2004 NordSee BBS (Leer - FRG)
+             |    |
+             |    |241/5302 Terrania City (Bonn - FRG)
+ CLIPBBS 1-13                   Page 19                  19 Nov 1991
+
+
+             |         |
+             |         |241/5303 NEPTUN Box (Bonn - FRG)
+             |              |
+             |              |243/93 Piano-Bar (Urbar - FRG)
+             |
+             |241/2103 H.C.C. (Hamburg - FRG)
+             |
+             |241/5609 BLM (Wermelskirchen - FRG)
+             |    |
+             |    |241/4008 Stone's Box (Haan - FRG)
+             |    |    |
+             |    |    |241/5603 Funboard (Velbert - FRG)
+             |    |         |
+             |    |         |241/4512 BS-1 (Bad Salzuflen - FRG)
+             |    |              |
+             |    |              |241/4511 MICOS BS (Bad Salzuflen - FRG)
+             |    |                   |
+             |    |                   |241/4501 Life-Box (Osnabrueck - FRG)
+             |    |
+             |    |241/5608 Pit's BBS (Wermelskirchen - FRG)
+             |
+ NC 241      |241/7605 Baden Area (Offenburg - FRG)
+             |    |
+             |    |241/7000 Popey-Box (Donaueschingen - FRG)
+             |
+             |241/8501 Avalon BBS (Roethenbach - FRG)
+             |242/47 Dungeon of Despair (Aachen - FRG)
+             |
+ NC 243      |243/29 Clipper Ship (Nieder Olm - FRG)
+             |    |
+             |    |247/31 Tritech BBS (Seelzen - FRG)
+             |    |    |
+             |    |    |247/9 Wildbox (Heidelberg - FRG)
+             |    |         |
+             |    |         |247/1 Schawott-Host (Brensbach - FRG)
+             |    |
+             |    |249/29 Guenter's Mailbox (Mainz - FRG)
+             |
+ NC 245      |245/60 Bonny's (Dortmund - FRG)
+             |    |
+             |    |241/4152 Quick!-Box (Meerbusch - FRG)
+             |    |    |
+             |    |    |242/92 Skyhigh Mailsystem (Krefeld - FRG)
+             |    |         |
+             |    |         |242/66 MINDY (Moenchengladbach - FRG)
+             |    |
+             |    |245/5 Andromeda (Hamm - FRG)
+             |    |245/9 MANNY'S BBS (Essen - FRG)
+             |    |    |
+             |    |    |245/102 WiInf_BBS (Essen - FRG)
+             |    |
+             |    |245/36 SoftStream (Dortmund - FRG)
+             |
+ NC 246      |246/15 MagicBox Munich (Muenchen - FRG)
+             |    |
+             |    |241/8007 Merlin BBS (Nuernberg - FRG)
+ CLIPBBS 1-13                   Page 20                  19 Nov 1991
+
+
+             |    |246/5 PERI-BBS (Kassel - FRG)
+             |    |246/10 Beta-System (Muenchen - FRG)
+             |    |246/26 AGS-Box (Leutkirch - FRG)
+             |    |246/32 Aischgrund Mailboxsystem (Gerhardshofen - FRG)
+             |         |
+             |         |246/12 AlphaSoft Network (Fuerth/Stadeln - FRG)
+             |
+ RC 28       |285/610 Lobster BBS (Schiedam - NL)
+             |    |
+             |    |282/510 New Age RAccess (Groningen - NL)
+             |    |285/402 AllTime Board (Koudekerke - NL)
+             |    |285/608 NETCONSULT BBS (Rotterdam - NL)
+             |    |500/223 HEKOM BBS (Harmelen - NL)
+             |    |    |
+             |    |    |283/314 KISS Software Support (Almelo - NL)
+             |    |
+             |    |500/236 Touch-One (Den Haag - NL)
+             |    |512/43  Flash BBS (Utrecht - NL)
+             |    |70:3115/0 Mad Comm BBS (Delft - NL)
+             |
+ RC 29       |296/10 BBS D.C.V.V. (Maaseik - B)
+             |    |
+ RC 20       |    |201/254 Clipper(Sweden) BBS (Vallingby - S)
+             |    |    |
+             |    |    |200/306 Lanthandelen (Kalmar - S)
+             |    |
+             |    |294/5 CIS BBS (Antwerpen - B)
+             |    |294/25 The Garden of Eden (Antwerp - B)
+             |    |296/20 H.S.P. Filedistribution (Miskom - B)
+             |
+ RC 30       |302/801 Gepard's Oracle (Zuerich - CH)
+             |    |
+             |    |302/807 SENECA (Zuerich - CH)
+             |    |    |
+             |    |    |302/804 Triton (Zuerich - CH)
+             |    |
+ RC 32       |    |321/100 Cyrielle (Montargis - F)
+             |    |
+ RC 33       |    |331/110 DB-Line (Biandronno - I)
+             |
+ RC 31       |313/9 EuroSoft Net 2 (Wien - A)
+             |
+ RC 34       |341/25 Clipper U.C.P. (Majadahonda - E)
+                 |
+                 |341/8 AlpaSoft (Madrid - E)
+                 |341/14 Rafa_STD-1 (Madrid - E)
+                 |    |
+                 |    |341/6 El Tren BBS (Guadalajara - E)
+                 |    |344/3 Kender (Bilbao - E)
+                 |
+                 |341/24 Enchufe (Madrid - E)
+                 |343/105 Replicants Factory I (Barcelona - E)
+
+ ------------------------------------------------------------------------------
+
+
+ CLIPBBS 1-13                   Page 21                  19 Nov 1991
+
+
+ Clipper File-Net, Application form
+ 
+     Followin text is brand new application form for membership in Clipper
+     File distribution Network. It's neccesity to fill this form and send
+     it to one from later described adresses. Because member of ClipperNet
+     can be only Mail node capable of mail and file sessions of FidoNet
+     standard, there is NO way how to use this form for BBS users and so on.
+ 
+ 
+                           The Clipper File-Net
+ 
+                           CLN application form
+ 
+ 
+ 
+           This information should be filled out and send via
+           netmail to Erik VanRiper (1:107/230) for Zone 1 + 3
+           or to Mike Paschen (2:240/100) for Zone 2,4,5,6.
+           Subject: CLN application
+ 
+ 
+           Name                  :
+           Board name            :
+           Board location        :
+             (City,State,Country)
+           Board phone number    :
+           Network Address       :
+           Modem brand and model :
+           Mailer Software       :
+ 
+           Certify that you have read CL-POL.nnn and agree to
+           operate as a CLN node within the policy guidelines.
+ 
+           Special information like preference of Hub and any
+           passwords for either Session level, Tic, Raid or
+           Areafix access:
+                           ___________________________________
+ 
+                           ___________________________________
+ 
+ 
+           This information will remain confidential but may
+           be shared with the hub sysop feeding your system.
+ 
+           A response to your application should be forthcoming
+           within 14 days.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - PAT2-2.ARJ
+ 
+ File Name:      PAT2-2.ARJ
+ Other Names:
+ 
+ File Size:      4,455 bytes
+ CLIPBBS 1-13                   Page 22                  19 Nov 1991
+
+
+ File Contents:
+                 FLOPTST.ASM       10273
+                 FLOPTST.OBJ         455
+                 PAT2.DOC           1254
+ 
+ Fix of function in FLOPTST.ASM which is fixing problem with wrong reporting
+ of status of last drive available instead of requested drive. \
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - BARNTX.ARJ
+ 
+ File Name:      BARNTX.ARJ
+ Other Names:
+ 
+ File Size:      1,143 bytes
+ File Contents:
+                 BARINDEX.PRG       1756
+ 
+ Function for displaying a bar indicator during indexing. Of course it is
+ after ending of indexing using hard overwriting of header of index for
+ forcing to forget existence of this function. It means, it's again the
+ same old dirty way.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - CWDEMO.ARJ
+ 
+ File Name:      CWDEMO.ARJ
+ Other Names:
+ 
+ File Size:      89,282 bytes
+ File Contents:
+                 DEMO.EXE         161792
+                 DEMO.PRG          53116
+                 README.DMO          803
+                 ORDER.FRM          3233
+                 DESCRIP.TXT        6738
+                 ORDERS.DBF         1106
+                 PEOPLE.DBF         2184
+                 HISTORY.DBF        1024
+ 
+ Demo version of ClassWorks library. it's library written with CLASS(Y)
+ library which is using REAL objects for defining object oriented extension
+ containing windows, editing, scrolling, time objects.. All of facilities
+ presented in this DEMO.EXE program are really very nice and are on
+ professional level.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 23                  19 Nov 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+   Clipper File Distrubution Network (ClipperNet, area CL-DOC))
+       Various systems around whole world
+ 
+   Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-13                   Page 24                  19 Nov 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

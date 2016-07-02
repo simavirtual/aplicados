@@ -1,0 +1,1840 @@
+                                                             
+        ²²²²   ²²      ²²²²   ²²²²²²  ²²²²²²  ²²²²²²   ²²²²    
+       ²²°°²²  ²²°      ²²°°   ²²°°²²  ²²°°²²  ²²°°²² ²²°°²²   
+      ²²°°  °° ²²°      ²²°    ²²° ²²° ²²° ²²° ²²° ²²°²²²  °°  
+      ²²°      ²²°      ²²°    ²²²²²°° ²²²²²°° ²²²²²°° ²²²     
+      ²²°      ²²°      ²²°    ²²°°°°  ²²°°²²  ²²°°²²   °²²²   
+       ²²  ²²  ²²°      ²²°    ²²°     ²²° ²²° ²²° ²²°²²  ²²°  
+        ²²²²°° ²²²²²²  ²²²²   ²²²²    ²²²²²²°°²²²²²²°° ²²²²°°  
+         °°°°   °°°°°°  °°°°   °°°°    °°°°°°  °°°°°°   °°°°   
+                                                             
+   Volume 1, Number 4                               18 February 1991
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  .............................................................  1
+    Hungarian identifier naming conventions  ..............................  1
+    DOSRCS - Revision Control System - part (2)  ..........................  6
+    The Programmer's Guide to CLIPPER Linkers - part (1)  .................  9
+ 2. SOFTWARE  ............................................................. 13
+    DANIEL.LIB - Network locking and opening  ............................. 13
+    DANIEL.LIB - Configer function  ....................................... 15
+    STRUCTURE DUMP - programmers utility  ................................. 19
+ 3. ADVERTISEMENT  ........................................................ 22
+    What was in previous number, number 03?  .............................. 22
+ 4. ECHODUMP  ............................................................. 23
+    CONFERENCE DUMP part (3)  ............................................. 23
+ 5. CLIPPER NET  .......................................................... 28
+    Index of described files in Clipper BBS Magazine  ..................... 28
+    Clipper File - CLIPLINK.ARJ  .......................................... 28
+    ClipNet - HGLASS.ZIP  ................................................. 29
+    ClipNet - NOTATION.ARJ  ............................................... 29
+    ClipNet - PACKUP.ARJ  ................................................. 29
+    ClipNet - ADHOC302.ARJ  ............................................... 30
+    ClipNet - ALTDO328.ARJ  ............................................... 30
+    ClipNet - CL5REP6.ARJ  ................................................ 31
+    ClipNet - CL5103.ARJ  ................................................. 31
+ 6. CLIPBBS  .............................................................. 32
+    CLIPBBS distribution  ................................................. 32
+ CLIPBBS 1-04       Table of Contents (...)        18 Feb 1991
+
+
+    CLIPBBS, how to write an article!!!  .................................. 33
+
+                                   - - - - -
+ CLIPBBS 1-04                   Page 1                   18 Feb 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+             Hungarian identifier naming conventions
+ 
+ Part 2
+ 
+ Variable Naming Conventions
+ ===========================
+ This is the heart of a well HUNG system. Variable names must give the
+ most amount of information possible in its name while using the minimum
+ number of characters possible.
+ 
+ Variables will have one mandatory character, the "Type Prefix". But will
+ usually have a combination of tags that will in most cases appear in this
+ order.
+ 
+ 1. A single lower case variable defining its type as returned by a Type()
+    function called a "Type Prefix".
+ 
+ 2. An Optional state called a "State Qualifier"
+ 
+ 3. A "Standard Qualifier Tag".
+ 
+ 4. An Optional "Pointer Reference".
+ 
+ 
+ Type Prefixes
+ -------------
+ a  - Array
+ b  - Code Block
+ c  - Character
+ d  - Date
+ h  - Handle
+ l  - Logical
+ n  - Numeric ( nX is optional where X is the number of decimal places )
+ o  - Object
+ v  - having a Variable type as in a macro or changing value
+ 
+ For temporary variables of distinct type or pointers this single prefix can
+ be used by itself. Consider this example.
+ 
+ for n := 1 to nFldMax
+    aFldName % [n] := Field( n )
+ next
+ 
+ 
+ Sample "State Qualifiers"
+ -------------------------
+ New  - a New state
+ Sav  - a Saved state
+ Tem  - a Temporary state
+ 
+ 
+ CLIPBBS 1-04                   Page 2                   18 Feb 1991
+
+
+ Sample "Standard Qualifier" tags
+ --------------------------------
+ Attr - Attribute
+ Ar   - Array
+ Clr  - Color
+ Crs  - Cursor
+ Dbf  - of or pertaining to a DBF
+ F    - First as in cFName
+ File - Any type of file
+ Fld  - Field
+ L    - Last as in cLName
+ Msg  - Message
+ Name - a name
+ Ntx  - of or pertaining to an Index ( or Idx|Mdx|Ndx etc. )
+ Rec  - Record Number
+ Ret  - Return value ( lRet := .f. )
+ Scr  - Screen
+ Str  - String
+ T    - Top
+ L    - Left
+ B    - Bottom
+ R    - Right
+ Row  - Row
+ Col  - Column
+ X    - Row
+ Y    - Column
+ 
+ Please note that Standard Qualifiers can be used in combinations as in the
+ following examples.
+ 
+    nTRow    - Top Row
+    cFName   - First name
+    cDbfFile - a Database file
+    cNtxFile - an Index File
+ 
+ Sample "Pointer References"
+ ---------------------------
+ 1,2,3 - State pointer references as in cSavClr1, cSavClr2, etc.
+ Max   - Strict upper limit as in nFldMax, maximum number of Fields
+ Min   - Strict lower limit as in nRecMin, minimum number of Records
+ 
+ 
+ These lists are to serve as samples and building blocks. They can and
+ should be added to. Lets look at a few examples of the conventions at work.
+ This should dispel the myth that notation conventions cannot be applied to
+ variables with a 10 character maximum length.
+ 
+ 
+ Poorly HUNG and well HUNG Examples
+ ----------------------------------
+ 
+ WRONG       RIGHT       WHY
+ ==========  ==========  ===============================================
+ nFldNum     nFld        Number is indicated by the Type Prefix making the
+                         word Num redundant and a needless use of character
+                         space.
+ CLIPBBS 1-04                   Page 3                   18 Feb 1991
+
+
+ Count       n           n serves as a temporary count index. Count has no
+                         Type Prefix.
+ Last_Name   cLName      This is one of the most horrendous mistakes. First
+                         we do not specify the variable type. Second we
+                         needlessly spell out LAST and worst of all we use
+                         up a precious character by using and underscore
+                         instead of using the upperLower combination.
+ SaveScreenA cSavScr1    No Type Prefix, needless use of characters. The
+ SaveScreenB cSavScr2    alphabetical reference is allowable though I prefer
+ SaveScreenC cSavScr3    to use a numeric reference.
+ 
+ ColorStr    cClr        No Type Prefix. Needless use of characters. Colors
+                         are indicated as a string by the Type Prefix.
+ nRecNo      nRec        The use of "No" is redundant.
+ 
+ PrintReset  cPrnReset   Also could have been shortened to cPrnRst.
+ 
+ MessageStr  cMsg        These are starting to become obvious, don't you
+                         think?
+ 
+ 
+ Lets take a look at how a function can be rewritten using the HUNG
+ conventions for xBase. Examine this Function closely. Variables, Commands
+ and Function name do not conform to "Well Hung" coding techniques. This
+ Function has been written in Clipper and is actually a Sample program
+ slightly modified. Those of you that do not understand Clipper should still
+ be able to see the benefits.
+ 
+ 
+ /***
+ *  LISTASARRY( <list_str>, <delimiter> ) --> str_array
+ *  Convert a delimited string to an array
+ 
+ */
+ FUNCTION LISTASARRAY( list_str, delimiter )
+    LOCAL position
+    LOCAL str_array := {}         // Define an empty array to return
+ 
+    IF delimiter = NIL
+       delimiter := ","
+    ENDIF
+    DO WHILE !EMPTY(position := AT(delimiter, list_str))
+       * ..... Add a new element
+       AADD(str_array, SUBSTR(list_str, 1, position - 1))
+       list_str := SUBSTR(list_str, position + 1)
+    ENDDO
+    AADD( str_array, list_str )   // Add final element
+    RETURN str_array              // Return the array
+ 
+ 
+ Now take a look at the properely formatted equivelant.
+ 
+ /***
+ *  Str2Arr( <cStr>, <cDelim> ) --> aRet
+ *  Convert a delimited string to an array
+ 
+ CLIPBBS 1-04                   Page 4                   18 Feb 1991
+
+
+ */
+ FUNCTION Str2Arr( cStr, cDelim )
+    local nPos
+    local aRet := {}     // Define an empty array
+                         // fill and return.
+    if cDelim == NIL
+       cDelim := ","
+    endif
+ 
+    do while !empty( nPos := at( cDelim, cStr ) )
+       * ..... Add a new element
+       aadd( aRet, substr( cStr, 1, nPos - 1 ) )
+       cStr := substr( cStr, nPos + 1 )
+ 
+    enddo
+ 
+    aadd( aRet, cStr )   // Add final element
+ 
+ RETURN aRet             // Return the array
+ 
+ 
+ DEBUGGING EXAMPLES
+ ==================
+ Hung Notation allows us to readily see errors in our routines that might
+ otherwise take quite a bit of hunting around.
+ 
+ Why does this snippet of code bomb?
+ 
+ * Begin Fragment
+ 
+ IF type == "EDIT"
+    LOOP
+ ENDIF
+ 
+ DO WHILE MONTH == 9
+ 
+ * End Fragment
+ 
+ Are you able to tell me? Ofcourse not, we are not given enough information.
+ If we had used Hung Notation, however, the error would have been obvious.
+ 
+ * Begin Fragment
+ 
+ if nType == "EDIT"
+    loop
+ endif
+ 
+ do while cMonth == 9
+ 
+ * End Fragment
+ 
+ Ahh, now we are getting somewhere. The program has TWO errors. It is trying
+ to evaluate the numeric <nType> against the string "EDIT". We know <nType>
+ is a numeric because of its Type Prefix. Look a little farther and we can
+ see the exact reverse of the error with the character <cMonth> being
+ evaluated against a numeric constant 9.
+ CLIPBBS 1-04                   Page 5                   18 Feb 1991
+
+
+ This paper is by no means comprehensive but should still be able to guide
+ a programmer towards a standard Typing Convention for xBase. I realize that
+ this is not for everyone but find it to be a productive method for myself.
+ If you have any questions or additions please respond to me on the DBA
+ forum at my COMPUSERVE ID# listed at the top of these Txt file.
+ 
+ 
+ Robert A. Difalco
+ Fresh Technologies
+ 
+ Special Thanks to Tom Leylan and Matt Maier
+ 
+ 
+ Revision History:
+ 
+ 11/30/90  1.00  Original Draft
+ 12/05/90  1.01  Changed Database Standards
+ 12/10/90  1.02  Added some Clipper specific examples
+ 12/13/90  1.03  Added special handling for exported instance variables
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 6                   18 Feb 1991
+
+
+             DOSRCS - Revision Control System - part (2)
+ 
+                        _____________________
+                        RCS Keywords (macros)
+                        ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ DOSRCS system is offering possibilities to use some kind of MACRO
+ codes in your programs/texts which are during CO (CheckOut)
+ operation filled with correct values connected to macro name.
+ 
+ Those macros have this syntax:
+ 
+         $macroname$
+ 
+         or
+ 
+         $macroname: value$
+ 
+ Second syntax is syntax used AFTER filling correct value from all
+ data about appropriate file.
+ 
+ Possible keywords are (correct letter casing is MANDATORY)
+ 
+         $Author$        login name of user who checked in
+                         given revision
+         $Date$          date and time when revision was checked in
+         $Header$        Standard header contains full pathname,
+                         revision number, date, author, state and
+                         locker (if locked)
+         $Id$            Stanard Id Header contains file name,
+                         revision number, date, author, state and
+                         locker (if locked)
+         $Locker$        Login name of user who locked the revision
+                         (if locked)
+         $Log$           Log messages supplied during check in,
+                         preceeded by header with file name,
+                         revision number, author, date. Existing
+                         log messages are NOT replaces, therefore
+                         this command is just inserting NEW log
+                         message - complete LOG BOOK can be created
+                         with this keyword (see example).
+         $RCSfile$       Name of RCS file without path
+         $Revision$      Revision number of this revision
+         $Source$        Full pathname of RCS File
+         $State$         State assigned to revision with "-s" option
+                         in RCS or CI command (see articles about
+                         them)
+ 
+ In case of Clipper .PRG file programmer can use following example
+ of beginning every program to put all informations from RCS system
+ in every source:
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ °³/************************************************************************³
+ °³$Author$                                                                 ³
+ °³$Date$                                                                   ³
+ °³$Revision$                                                               ³
+ CLIPBBS 1-04                   Page 7                   18 Feb 1991
+
+
+ °³$RCSfile$                                                                ³
+ °³$Source$                                                                 ³
+ °³$State$                                                                  ³
+ °³$Locker$                                                                 ³
+ °³$Log$                                                                    ³
+ °³************************************************************************/³
+  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ For displaying a example, i named above defined header as TEST.PRG
+ and used it for first CHECK IN and then CHECK OUT, result is:
+ 
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ °³/************************************************************************³
+ °³$Author: DANIEL $                                                        ³
+ °³$Date: 91/09/14 23:09:00 $                                               ³
+ °³$Revision: 1.1 $                                                         ³
+ °³$RCSfile: test.prg $                                                     ³
+ °³$Source: c:/daniel/clipbbs/rcs/test.prg $                                ³
+ °³$State: Exp $                                                            ³
+ °³$Locker: DANIEL $                                                        ³
+ °³$Log:        test.prg $                                                  ³
+ °³Revision 1.1  91/09/14  23:09:00  DANIEL                                 ³
+ °³Initial revision                                                         ³
+ °³                                                                         ³
+ °³************************************************************************/³
+  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ Now i will make some change and create NEW revisions. I will write
+ simple program of few line in our example. When used PUT, answer for
+ LOG message was filled with text prefixed with string "*  " for
+ keeping "*" characters before some informations. Result is:
+ 
+  ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ °³/************************************************************************³
+ °³$Author: DANIEL $                                                        ³
+ °³$Date: 91/09/14 23:12:14 $                                               ³
+ °³$Revision: 1.2 $                                                         ³
+ °³$RCSfile: test.prg $                                                     ³
+ °³$Source: c:/daniel/clipbbs/rcs/test.prg $                                ³
+ °³$State: Exp $                                                            ³
+ °³$Locker: DANIEL $                                                        ³
+ °³$Log:        test.prg $                                                  ³
+ °³Revision 1.2  91/09/14  23:12:14  DANIEL                                 ³
+ °³*  Added TWO lines with "?" commands and changes in header               ³
+ °³*                                                                        ³
+ °³                                                                         ³
+ °³Revision 1.1  91/09/14  23:09:00  DANIEL                                 ³
+ °³Initial revision                                                         ³
+ °³************************************************************************/³
+ °³? "Sample program"                                                       ³
+ °³? "--------------"                                                       ³
+  ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ You see? After $Log keyword is slowly created complete log book of
+ all recorded changed. And all other keywords are correctly replaced
+ with new values, revision number is now 1.2 (because of one
+ CLIPBBS 1-04                   Page 8                   18 Feb 1991
+
+
+ change).
+ 
+ This is a way how to use keywords inside of your program. Of course
+ is then possible for example use this line:
+ 
+      °³ ? "Sample program $Revision$"
+ 
+ With result of
+ 
+      °³ ? "Sample program $Revision: 1.2 $"
+ 
+ Or better in following example:
+ 
+      °³ static cRev := "$Revision:"
+      °³ cRev:=substr(cRev,12)                   //      get "1.2 $"
+      °³ cRev:=substr(cRev,1,at(" ",cRev)-1)     //      get "1.2"
+ 
+ This code will put in static variable cRev real number of complete
+ revision of your program and this can be used later in displaying
+ or any other operation. Automatic update in case of new versions is
+ nice job for little playing with string, i guess.
+ 
+ See you later....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 9                   18 Feb 1991
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (1)
+ 
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                    The Programmer's Guide to CLIPPER Linkers
+ 
+ 
+                    THE NEW DIRECTION OF CLIPPER DEVELOPMENT
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ 
+        Since the introduction of the Clipper-compiler in Winter, 1985,
+        a plethora of Clipper third-party products have flooded the
+        Clipper aftermarket.  These add-on libraries have successfully
+        extended the Clipper language into the most powerful database
+        development system for microcomputers.  Applications developed
+        with Clipper and third-party libraries are growing larger and
+        more powerful, thereby causing some new development problems:
+ 
+         1.  Slower development time
+         2.  Excessive application memory usage
+ 
+        The new direction of Clipper Add-on products is to help solve
+        these new problems.   The most popular of the new products are
+        those which work towards improving the speed of development and
+        the memory usage at runtime - "dynamic" linkers.
+ 
+        In this article, I hope to be able to convey information based
+        on my own experience as a Clipper developer.  In my opinion,
+        there is too much discussion about future products, and too
+        little discussion about products which are solving big
+        development problems - right now!  The development community
+        is moving away from software packages which promise a
+        "complete database solution" to those which offer an
+        "open architecture" so we developers are free to choose our
+        own tools, libraries and development environment.  As the
+        developer of dCLIP, a Clipper development platform, we have
+        used or are using at least 12 different Clipper linker
+        products.
+ 
+        Case studies of successful Clipper applications point to the
+        fact that the developer has learned not only to become a
+        "librarian" but is also "multi-linkeral".  The professional
+        Clipper developer is now accustomed to using more than one
+        linker in development projects.   One of our development
+        projects consists of 5 Clipper .EXE programs and uses the
+        technology of 4 different linkers.
+ 
+        The discussion of linkers raises a lot of questions.  Why can't
+        a developer use a single linker for all of his projects?  If
+        new linkers are getting better, then why not ring out the old
+        and ring in the new?   Are not linkers just a final process in
+        converting the compiled object code to be machine readable code?
+        The purpose of this article is to help dispel a lot of the myths,
+ CLIPBBS 1-04                   Page 10                  18 Feb 1991
+
+
+        hype, and (most-of-all) fears that confront the Clipper
+        developer today when it comes to the subject of linking.  I am
+        constantly amazed at the amount of time a professional Clipper
+        programmer will spend in learning the nuances and power of the
+        the Clipper language, yet that same professional probably has
+        the equivalent of a kindergarten education in the subject of
+        linking.
+ 
+        Today, the Clipper developer must be more educated about linkers
+        to remain competitive.  If you ask the Clipper programmer about
+        his biggest frustrations, he/she will virtually always answer
+        the same way - memory usage and development time.  The new
+        series of linkers are designed to address these problems and
+        many others.  Some do it better than others.  Some will use
+        "dynamic" techniques, others will use "static" techniques.  Some
+        are designed to work best with only Clipper code, others are
+        designed to work best with applications that are Clipper/C/ASM.
+        Some are designed to link very fast, others are slow but produce
+        better memory management.  Some are designed for small
+        applications, others are designed for huge applications and
+        networks.  Some are designed to help with distribution and disk
+        usage, others are designed to help with debugging.  Some are
+        designed for ease-of-use and quick-starting, others are designed
+        to solve complicated memory and symbol issues.   Some are
+        designed to work well with any combination of library and object
+        format, others will choke on just about anything.  Some linkers
+        are mature, slow and reliable, others are young, frisky and not
+        very well-behaved.
+ 
+        As a developer who creates programmer's tools, I talk to many
+        Clipper programmers every day, because I also handle technical
+        support for our product, dCLIP.  I am constantly amazed at the
+        number of Clipper programmers who still use only one linker -
+        PLINK86.  Why is this so?  Are their applications so small that
+        they don't need better memory management?  Is their time so
+        well managed that the speed of linking is not important?  Most
+        often, the answer is none of the above.  Clipper programmers,
+        like many other professionals, are afraid of making a wrong
+        choice, and feeling like a fool for spending good money on a
+        folly.  You have heard it said that "the only stupid question is
+        the one that is never asked".  Well, I my philosophy is "the only
+        folly is one that is never ventured".   My knowledge of linkers
+        came from purchasing every one and using each one.  Over the
+        years I have developed an understanding of linking by trial and
+        error and have gained quite an education.
+ 
+        To the Clipper developer, the quality of his/her end product is
+        everything, that is why Clipper is the most popular database
+        development language for microcomputers.  Choosing the right
+        linker for each job will improve the performance and quality of
+        your applications.  This article is designed to help you make
+        those choices.  It is not the intent of the author to dump a lot
+        of sophisticated "linking terms" on the reader of this article.
+        I am a Clipper programmer who has had to work out a knowledge of
+        linkers all by myself.  There is still a lot I do not understand
+        about linking, but what I have learned has helped me develop a
+ CLIPBBS 1-04                   Page 11                  18 Feb 1991
+
+
+        sufficient competitive edge and made it possible to produce a
+        product such as dCLIP.  I expect that I will learn a lot more as
+        you, the reader, responds with your own experiences and
+        knowledge, therefore I welcome any feedback.
+ 
+        Together, I think we can battle our way through this linker
+        "war zone" and emerge victorious.
+ 
+ 
+        The subject of linkers will be addressed in 5 sections:
+ 
+        1.  Introduction/Background
+            a. What is linking?
+            b. Glossary of linking terms
+ 
+        2.  Linking tips for memory management
+            a. Static Overlays
+            b. Reloadable Overlays
+            c. Dynamic Overlays
+            d. Dynamic Linking
+            e. Virtual Memory Linking (VML)
+            f. Symbol Management
+ 
+        3.  Linking tips for productivity and project management
+            a. Pre-linked Libraries
+            b. Dynamic Linking
+            c. Incremental Linking
+            d. Speed-Linking
+            e. Library-Module Linking
+ 
+        4.  Feature, price, performance comparison and chart
+            a. RTLINK, RTLINK/Clipper 5.0, RTLINKplus
+            b. PLINK86s87, PLINK86plus
+            c. BLINKER
+            d. ALINK
+            e. TLINK
+            f. MS-LINK
+            g. WARPLINK
+            h. NOLINK
+            i. dCLIP, dCLIPRUN
+ 
+        5.  Choosing a linker for your projects
+            a. Case studies of 6 projects
+ 
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                            Introduction/Background
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ 
+         = WHAT IS LINKING? =
+ 
+         Linkers are a subject which most Clipper programmers don't
+         like to talk about because of a "fear" that the technology
+ CLIPBBS 1-04                   Page 12                  18 Feb 1991
+
+
+         will be too sophisticated to understand.  The process of
+         linking is no more sophisticated than the compiler itself, it
+         is just done at a lower level and produces machine-readable
+         code.   It is really the compiler which produces the machine
+         readable code, but the linker has the responsibility of insuring
+         that the compiled code is accessible or "linked" to other
+         code segments.  Linking or "fixing up" references made by the
+         the code to external variables and functions is necessary to
+         insure that the program will address or call other programs,
+         including DOS functions.
+ 
+         Linking can be accomplished at many different stages in the
+         development or running of an application.  Most linking occurs at
+         the time that an .EXE file is created.  This is usually the most
+         sophisticated and time consuming of linking processes.  Linking
+         also occurs during "load-time" when an application is being
+         loaded into memory for execution.  Even DOS has a built-in linker.
+         It fixes up references to specific code segments in an .EXEcutable
+         file at the time that it loads the .EXE into memory.  Some linkers
+         provide additional load-time linking by using pre-link libraries
+         and fixing up references between several files at load-time.
+         Other linkers are "dynamic" and load code into memory during
+         the running of the application.   Each one of these linking
+         techniques provides a specific advantage to the developer.  If
+         you don't understand what these advantages are, your development
+         projects are probably not "state-of-the-art" and may be lacking
+         at some level of performance, usually, in the management of
+         memory at runtime.
+ 
+         A linker's basic job is to combine objects which have been
+         compiled separately.  Objects contain symbols of three types:
+ 
+         a.  PUBLIC symbols - those symbols which are callable from
+                              other objects
+ 
+         b.  STATIC symbols - those symbols which are callable only
+                              from within the same object
+ 
+         c.  UNDEFINED symbols - symbols which exist in other objects
+                              and are referenced or used by this object
+                              (also referred to as EXTERNAL symbols).
+         The linker "resolves" an object's external symbols by scanning
+         the other objects public lists either in their object files or
+         in library cross-reference indexes.  Linkers usually accomplish
+         this task in "2 passes".  The first pass is to locate all the
+         symbols by reading the symbol references into memory from all the
+         object files and libraries and assigning a segment address to
+         each symbol.  The second pass is the actual "fixing up" of the
+         symbols and generation of the .EXEcutable program.  During pass 2,
+         the linker searches all the object files and libraries again to
+         see if one contains a PUBLIC definition for each unresolved
+         symbol.  When it finds one, it links the object by assigning an
+         address or "fixing-up" the reference from the calling symbol to
+         the called symbol.  If none of an object's PUBLIC symbols are
+         referenced by another object, that object is not linked into the
+         .EXEcutable.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 13                  18 Feb 1991
+
+
+ =============================================================================
+                                   SOFTWARE
+ =============================================================================
+
+
+                  DANIEL.LIB - Network locking and opening
+ 
+ 
+ Following is well simple set of functions used for file and record locking
+ and opening databases in network environment. They are very simple (i have
+ also set of more difficult), but enough to control network application with
+ NOT often possible conflicts.
+ 
+ <------------------------code starts here----------------------------->
+ #include "inkey.ch"
+ #include "daniel.ch"
+ 
+ //
+ //  most easy application of Append Blank command (or function in 5.01)
+ //  which just MUST append record, without any other possibility
+ //
+ ***********************************************************************
+ function appendblank                //  function is appending record
+ ***********************************************************************
+     append blank                    //  till is really appended
+     while neterr()
+         DD_inkey(1)                 //  this is ONLY wait, can be also
+         append blank                //  normal INKEY(), see other sources
+     end
+ RETURN .T.                          //  always successfull in this case
+ 
+ //
+ //  record locking is more specific. It's checking user wishes about
+ //  trying to lock a record. When no problem to lock, user is not asked
+ //  when problem, user will be notified and can press Esc key for
+ //  interrupt this. In program is always used
+ //
+ //  if Reclocked()
+ //      action...
+ //  endif
+ //
+ ************************************************************************
+ FUNCTION RECLOCKED                  //  function for locking a record
+ ************************************************************************
+ local   Net_netwscr := savescreen(0,0,maxrow(),maxcol()),;
+         Net_retval := .t.           //  it's saving screen of course
+     while .t.                       //  look until lock or Escape
+         if rlock()                  //  lock, everything is OK
+             exit
+         elseif LockKO('1> Record')  //  ask a user he must take decision
+             Net_retval:= .f.        //  user asked for cancel tries
+             exit                    //  go out from while block
+         endif
+     end
+     restscreen( 0,0,maxrow(),maxcol() ,Net_netwscr)
+                                     //  put back screen for sure
+ CLIPBBS 1-04                   Page 14                  18 Feb 1991
+
+
+ return Net_retval                   //  .T. is locked, .F. is not
+ 
+ 
+ //
+ //  similar function is used for locking whole file. It's the same
+ //  engine, only different function for locking - flock()
+ //
+ ************************************************************************
+ FUNCTION FILELOCKED                 //  function for LOCK whole file
+ ************************************************************************
+ local   Net_netwscr := savescreen( 0,0,maxrow(),maxcol()),;
+         Net_retval := .t.           //  screen save
+     while .t.
+         if flock()                  //  lock whole file
+             exit
+         elseif LockKO('2> File ')   //  ask user for next tries
+             Net_retval:=.f.         //  when was ESC then go out
+             exit
+         endif
+     end
+     restscreen( 0,0,maxrow(),maxcol() , Net_Netwscr )
+                                     //  put back screen
+ return Net_retval
+ 
+ 
+ //
+ //  Function for opening file in SHARED mode. It's just interface
+ //  for USE and it's used in this way:
+ //
+ //  if UseShared("TEST.DBF")
+ //      If File("TEST1.NTX") and File("TEST2.NTX")
+ //          set index to ("TEST1.NTX"),("TEST2.NTX")
+ //      else
+ //          ..error of missing index files..
+ //      endif
+ //  else
+ //      ..error of opening database..
+ //  endif
+ //
+ ************************************************************************
+ FUNCTION USESHARED(filenaam)        //  opening database in shared
+ ************************************************************************
+ local   Net_netwscr := savescreen( 0,0,maxrow(),maxcol() ),;
+         Net_retval := .t.           //  screen saving
+     while .t.
+         if file(FileNaam) .or.;
+            file(FileNaam+'.dbf')    //  test of EXISTENCY file or .DBF
+             use (FileNaam) new shared   //  try to use this file
+             if ! neterr()               //  not error in network
+                 exit                    //  will return .T. (above)
+             elseif LockKO('3> File')    //  ask user for repeating
+                 Net_retval:=.f.         //  or pressing ESC to stop
+                 exit
+             endif
+         else
+             Net_retval:=.f.             //  file not exist, return FALSE
+ CLIPBBS 1-04                   Page 15                  18 Feb 1991
+
+
+             exit
+         endif
+     end
+     restscreen( 0,0,maxrow(),maxcol() , Net_Netwscr )
+ return Net_retval                       //  and put back screen
+ 
+ //
+ //  and of course, the same is here for EXCLUSIVE USE, it can be
+ //  joined in one common function with parameter telling if SHARED
+ //  or exclusive, but this is just mine library <grin>
+ //
+ ************************************************************************
+ FUNCTION USEEXCL(filenaam)          //  use database exclusive
+ ************************************************************************
+ local   Net_netwscr := savescreen( 0,0,maxrow(),maxcol() ),;
+         Net_retval := .t.           //  screen saving
+     while .t.
+         if file(FileNaam) .or.;
+            file(FileNaam+'.dbf')    //  test of existency of file
+             use (FileNaam) exclusive new    //  use exclusive
+             if ! neterr()                   //  no error
+                 exit
+             elseif LockKO('4> File')        //  ask user for tries
+                 Net_retval:=.f.             //  no more please
+                 exit
+             endif
+         else
+             Net_retval:=.f.                 //  file not exist at all
+             exit
+         endif
+     end
+     restscreen( 0,0,maxrow(),maxcol() , Net_netwscr )
+ return Net_retval                           //  and put back screen
+ 
+ 
+ <-----------------------end of source file----------------------------->
+ 
+ Function LockKo, DD_INKEY is part of another source file. It's coming in
+ some other article.
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+
+
+                       DANIEL.LIB - Configer function
+ 
+ In many of my applications i found a desperate NEED of configuration file
+ OUTSIDE of application which can change a parameters, defaults or just set
+ needed information for application running.
+ 
+ My trying of configuration files had several phases:
+ 
+ 1) file .MEM, just save memory variables. Configuration change
+    was written inside of program (or outside)
+ 2) kind of text file, but variables are fixed length part of this
+ CLIPBBS 1-04                   Page 16                  18 Feb 1991
+
+
+    file and are read by special routine, must have correct order and
+    so on. It was only for eliminating some side effects of .MEM
+ 3) complete ASCII, descriptive configuration file. Something like this:
+ 
+     MAIN DIRECTORY   C:\APPLICATION
+     TABULATOR SIZE   8
+     FULL PROCESSING  NO
+ 
+ Following commented code is FIRST version of this configer reader and writer.
+ It's using codeblocks as well for all definitions and is at this moment used
+ in most of my programs. It has still few limitations:
+ 
+ a) "FULL PROCESSING" cannot be used as "FULL   PROCESSING", NOTE number
+    of spaces
+ b) no error checking in case of setting wrong kind of data (string for
+    numeric for example)
+ 
+ But still, after this, it's great. Because everybody can use any editor to
+ change configuration of program.
+ 
+ <--------------------------code starts here------------------------------->
+ // i have of course my own personal .CH file
+ //  one can find it in another article i hope
+ #include "daniel.ch"
+ 
+ Function RdConfiguration(cFilename,aKeyword)
+ *****************************************************************************
+ 
+ *   Usage   RdConfiguration('CONFIG.MON',array)
+ 
+ *    array field   { "RETRY COUNT",{|x| GretryCount:=x},"N",10}
+ *                                                           default val
+ *                                                        value type
+ *                                   assigning code block
+ *                     keyword text
+ 
+ 
+ *   Configuration file then can look:
+ 
+ *   // Set number of retries
+ *   RETRY COUNT     100
+ *   USER NAME       "Peter  Van  Der  Valk     "
+ *   USER NAME       Peter Van Der Valk
+ 
+ local   cText , cLine, Cnt
+     AssignDefaults(aKeyword)                        // initialize all default
+                                                     //  values to variables
+     if file(cFilename)                              //  config file must be
+         cText:=memoread(cFileName)                  //  get complete text
+ 
+         while !empty(cLine:=GetNextLine(@cText))    //  now, get one line
+                                                     //  and do it for all
+             for Cnt:=1 to len(aKeyword)             //  scan array
+                 if ScanKey(aKeyword[Cnt],cLine)     //  for valid key
+                     aKeyword:=ADel(aKeyword,Cnt)    //  ALL FOUND KEYS
+                                                     //  are removed - SPEEDUP
+ CLIPBBS 1-04                   Page 17                  18 Feb 1991
+
+
+                     aKeyword:=ASize(aKeyword,len(aKeyword)-1)
+                                                     //  array is shrinking
+                     if len(aKeyword)==0             //  and can happend
+                         cText:=NULL                 //  that all are done
+                     endif                           //  before text is done
+                     exit
+                 endif
+             next                                    //  scanned all or found
+         end                                         //  scanned file or all
+     endif
+ return NIL
+ 
+ 
+ //  static function which is getting ONE line from cText (config file)
+ //  and making cText smaller for this one line. It's often used in places
+ //  where i'm reading text files. Incoming text is coming down, outcoming
+ //  is coming bigger, it can save memory and speed also.
+ //
+ static function GetNextLine(cText)
+ local   i,j:=""
+     i:=at(chr(13),cText)                            //  check for CR
+     if i=0                                          //  no CR
+         i:=at(chr(10),cText)                        //  then check for LF
+         if i=0
+             j:=cText                                //  LAST line is here!
+             cText:=""
+             return(j)
+         endif
+     endif
+     j:=substr(cText,1,i-1)                          //  text to CR (or LF)
+     cText:=substr(cText,i+1,len(cText))             //  cut out from big one
+     if left(cText,1)=chr(10)                        //  if LF on beginning
+         cText:=substr(cText,2,len(cText))           //  strio it out also
+     endif
+ return (j)
+ 
+ //  function for scanning one line (cLine) for one keyword (Feld)
+ //  returning .T. if was success and of course is setting if needed
+ //
+ *****************************************************************************
+ static function ScanKey(Feld,cLine)
+ *****************************************************************************
+ local   nSkipLen, vAssigner, lRetVal := FALSE
+     nSkipLen:=len(Feld[1])                          //  size of keyword
+     if UPPER(substr(cLine,1,nSkipLen))==Feld[1]     //  in case of existence
+         cLine:=ALLTRIM(Substr(cLine,nSkipLen+1,len(cLine)))
+                                                     //  extract value
+         do case
+             case Feld[3]$'Cc'                       //  should be CHAR
+                 if left(cLine,1)='"'                //  separate '"' on start
+                     cLine:=substr(cLine,2,len(cLine))
+                 endif
+                 if right(cLine,1)='"'               //  separate '"' on end
+                     cLine:=left(Cline,len(cLine)-1)
+                 endif
+                 vAssigner:=cLine                    //  CHAR of assigning
+ CLIPBBS 1-04                   Page 18                  18 Feb 1991
+
+
+             case Feld[3]$'nN'                       //  should be NUMERIC
+                 vAssigner:=val(cLine)
+             case Feld[3]$'Ll'                       //  should be LOGICAL
+                 cLine:=upper(cLine)                 //  TRUE or .T. only
+                 vAssigner:=iif('TRUE'$cLine .or. '.T.'$cLine,.T.,.F.)
+         endcase
+         Eval(Feld[2],vAssigner)                     //  assign value
+         lRetVal:=TRUE                               //  via CODEBLOCK!
+     endif
+ return lRetVal                                      //  .F. or .T.
+ 
+ 
+ *****************************************************************************
+ static function AssignDefaults(aKeyword)
+ *****************************************************************************
+ *   assigning default values for all keywords from array
+ *   just for initializing them on defualt values. Point is, that
+ *   config reader will then read text file and never mind if some
+ *   keywords are not inside. They are setted via this way to default
+ *   values (see array definition)
+ 
+     AEVAL(aKeyword,{|x| assignt(x)})
+ return NIL
+ 
+ static function Assignt(x)
+     if valtype(x[4])!="U"
+         EVAL(x[2],x[4])                     //  just assign via EVAL
+     endif
+ return NIL
+ 
+ 
+ //  this is opposite function. It's writing existing configuration into
+ //  text file. It's simple of course
+ //
+ *****************************************************************************
+ function WrtConfiguration(cFname,aKeywords)
+ *****************************************************************************
+ local   cOut := ""
+   //  whole array is stepped, record by record and will make complete
+   //  text file in Cout variable. Just like:
+   //      keyword  value  CR+LF
+   //
+   AEVAL(aKeywords,{|x| Cout:=Cout+padr(x[1],20)+WriteOne(x)+chr(13)+chr(10)})
+   memowrit(cFname,cOut)                   //  and then will write file
+ return NIL
+ 
+ //  it's needed function for convert value of keyword to string to write out
+ //  called from AEVAL above
+ static function WriteOne(feld)
+ local   value
+     value := Eval(feld[2])                  //  get value
+     do case
+         case valtype(value)='C'
+             value := value                  //  character will stay
+         case valtype(value)='N'
+             value := str(value)             //  number will come number
+ CLIPBBS 1-04                   Page 19                  18 Feb 1991
+
+
+         case valtype(value)='L'             //  logical TRUE or FALSE
+             value := iif(value,'TRUE','FALSE')
+         otherwise
+             value := "<NONE>"               //  all others not implemnted yet
+     endcase
+ return (value)                              //  back is coming text
+ 
+ <-----------------------------end of source code------------------------>
+ 
+ 
+ That's all. And using? Let see:
+ 
+ RdConfiguration(ConName, {;
+     {'RETRY INTERVAL'  ,{|x| RETRYINTERVAL:=x},'N',5} ,;
+     {'FAX LEFT MARGIN' ,{|x| FAXLMARGE    :=x},'N',7} ,;
+     {'IDDLE TIME'      ,{|x| IDLETIME     :=x},'N',3} ,;
+     {'TASK LIST'       ,{|x| TASKLIST     :=x},'C','010203040506070809'},;
+     {'COLOR1'          ,{|x| KLEUR1       :=x},'C','w/gr'} ,;
+     {'COLOR2'          ,{|x| KLEUR2       :=x},'C','w+/gr'},;
+     {'COLOR3'          ,{|x| KLEUR3       :=x},'C','w/b'},;
+     {'COLOR4'          ,{|x| KLEUR4       :=x},'C','n/g'},;
+     {'COLOR5'          ,{|x| KLEUR5       :=x},'C','rb/w'},;
+     {'COLOR6'          ,{|x| KLEUR6       :=x},'C','rb/w+'},;
+     {'COLOR7'          ,{|x| KLEUR7       :=x},'C','W+/r+'},;
+     {'COLOR8'          ,{|x| KLEUR8       :=x},'C','w/b'},;
+     {'PASSWORD OUT'    ,{|x| PWD_OUT      :=x},'C',NULL},;
+     {'PASSWORD CONFIG' ,{|x| PWD_CNF      :=x},'C',NULL},;
+     {'PRIORITY TOP'    ,{|x| OUTPRI_TOP   :=x},'C','9'},;
+     {'BATCH PROCESSING',{|x| BATCH_SEND   :=x},'C','YES'},;
+     {'LOG'             ,{|x| HistName     :=x},'C','monitor.log'},;
+     {'DEBUG LEVEL'     ,{|x| DEBUG_LEVEL  :=x},'N',0}     })
+ 
+ See you later.....
+ Daniel
+
+ -----------------------------------------------------------------------------
+
+
+                    STRUCTURE DUMP - programmers utility
+ 
+ Following is quite simple, but many times used utility. STRUDUMP.EXE created
+ from STRUDUMP.PRG will after running on any .DBF file create ARRAY definition
+ for direct use in Clipper with DBCREATE function.
+ 
+ <-----------------------------here it is coming---------------------->
+ 
+ //***************************************************************************
+ //
+ //  Clipper programmer utility              STRUCTURE DUMP
+ //
+ //  (c) Daniel Docekal, Netconsult, 1991/05
+ //
+ //  released for Public Domain by author 1991/05 ;-)
+ //
+ //      This simple function is making file DUMP.DMP which contains
+ //      COMPLETE structure definition of database (parameter of program)
+ CLIPBBS 1-04                   Page 20                  18 Feb 1991
+
+
+ //      this definition is in form of Clipper 5.0x array which can
+ //      be directly used in your program for function DBCREATE
+ //
+ //  Use:
+ //      CLIPPER /M/N/W/L STRUDUMP.PRG
+ //      RTLINK FI STRUDUMP OUTPUT STRUDUMP /PLL:BASE50
+ //          when using /PLL: final .EXE is about 10KB!!!
+ //
+ //***************************************************************************
+ 
+ //***************************************************************************
+ Function StruDump(name)
+ //***************************************************************************
+ //  definition of symbolic constants
+     #define CRLF    chr(13)+chr(10)
+     #define QUOTE   '"'
+     #define COMMA   ','
+     local aRR, TTT, i                   //  all vars are local
+ 
+     if  valtype(name)!="C"
+         ? ''
+         ? 'This program is dumping to file DUMP.DMP complete structure of'
+         ? 'database in format immediately for use in DBCREATE(name,struc)'
+         ? ''
+         ? 'Usage:'
+         ? '        STRDUMP    filename.dbf   '
+         ? ''
+         quit
+     endif
+     if !(file(name) .or. file(name+'.DBF'))
+         ? ''
+         ? 'Database file NOT exist!'
+         ? ''
+         errorlevel(1)
+         quit
+     endif
+     ?? 'Processing.'
+     use (name) shared new           //  open requested database, no check
+     aRR := DBSTRUCT()               //  get structure database
+     use                             //  close database
+     TTT := "//  definition of database "+name+CRLF
+     TTT+=  "    { ;"+CRLF
+     for i:=1 to len(Arr)            //  creating a output structure text
+         ?? '.'
+         TTT+="      { "+QUOTE+;
+              padr(arr[i,1]+QUOTE,14)+COMMA+QUOTE+arr[i,2]+QUOTE+COMMA
+         TTT+=str(arr[i,3],5)+COMMA
+         TTT+=str(arr[i,4],3)+' '
+         if i!=len(arr)
+             TTT+=      " },;"+CRLF
+         else
+             TTT+=      " }; "+CRLF
+         endif
+     next
+     TTT+=  "    }"+CRLF+CRLF        //  close structure text
+     memowrit('DUMP.DMP',TTT)        //  write it, no check for errors
+ CLIPBBS 1-04                   Page 21                  18 Feb 1991
+
+
+     ? ''
+     ? 'Done.'
+     ? ''
+ return NIL
+ 
+ <--------------------------here it ends---------------------------------->
+ 
+ And result? For example:
+ 
+ STRUDUMP \ncom\a\qbase.dbf,  created file dump.dmp
+ 
+ //  definition of database \ncom\a\qbase.dbf
+     { ;
+       { "GSN"          ,"C",    6,  0  },;
+       { "ADDRCODE"     ,"C",   12,  0  },;
+       { "PRIORITIES"   ,"C",   29,  0  },;
+       { "CURRENTQ"     ,"C",    1,  0  },;
+       { "OUTPRIOR"     ,"C",    1,  0  },;
+       { "MSGNR"        ,"C",    6,  0  },;
+       { "SDATE"        ,"D",    8,  0  },;
+       { "STIME"        ,"C",    8,  0  },;
+       { "RDYDATE"      ,"D",    8,  0  },;
+       { "RDYTIME"      ,"C",    8,  0  },;
+       { "DATUM"        ,"C",    8,  0  },;
+       { "DATUMNL"      ,"C",   20,  0  },;
+       { "DATUMENG"     ,"C",   20,  0  },;
+       { "TIJD"         ,"C",    5,  0  },;
+       { "FAILCODE"     ,"C",    6,  0  },;
+       { "STATIONID"    ,"C",   20,  0  },;
+       { "RA"           ,"C",    6,  0  },;
+       { "RI"           ,"C",   20,  0  },;
+       { "RN"           ,"C",  100,  0  },;
+       { "RL"           ,"C",    6,  0  },;
+       { "IS"           ,"C",    6,  0  },;
+       { "DU"           ,"C",    6,  0  },;
+       { "MS"           ,"C",    6,  0  },;
+       { "SS"           ,"C",    6,  0  },;
+       { "SQ"           ,"C",    6,  0  },;
+       { "LN"           ,"C",    6,  0  };
+     }
+ 
+ Simple, isn't?
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 22                  18 Feb 1991
+
+
+ =============================================================================
+                                 ADVERTISEMENT
+ =============================================================================
+
+
+                  *What was in previous number, number 03?
+ 
+      New things are coming
+      Hungarian identifier naming conventions
+      DBEVAL() or classic WHILE ! EOF() ??
+      RCS - Revision Control System
+      DANIEL.LIB - RMAKE file for build library
+      DANIEL.LIB - ISPRINTER2() universal function
+      DANIEL.LIB - SCREEN shadowing module
+      M&T Books: Clipper 5 - A Developer's Guide
+      Why is .EXE in 5.0x so big
+      What was published in previous number?
+      SOLUTION of preprocessor limitation for recursion
+      CONFERENCE DUMP part (2)
+      ClipNet - CLPFON.ARJ
+      ClipNet - COND.ARJ
+      ClipNet - INDXSL.ARJ
+      ClipNet - IOBASYS9.ARJ
+      ClipNet - MK30.ARJ
+      ClipNet - MOVEGETS.ARJ
+      ClipNet - READPW.ARJ
+      ClipNet - SYMBOL.ARJ
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 23                  18 Feb 1991
+
+
+ =============================================================================
+                                   ECHODUMP
+ =============================================================================
+
+
+                          CONFERENCE DUMP part (3)
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ -- although it's true that 5.0 is powerful and flexible,
+ I think you're underestimating the power of the Fox. BTW, I'm
+ speaking from the point of view of a Fox Beta tester who works
+ full-time as a Clipper programmer, so I do have a fair amount of
+ experience with both.
+ 
+ With C5, as you correctly point out, you can do almost anything.
+ Unfortunately, you HAVE to...  You have to either write or buy a
+ great function library (or several of them) for C5 to be able to
+ do many of the things that are built into FP.
+ 
+ A simple example of the FP built-ins versus the C5 flexibility:
+ in FP (since FP 1.0, in fact) you can say
+      @ 10,10 GET mvar VALID whatever ;
+        ERROR "Correct values are.....(whatever)"
+ and if the VALID clause evaluates to .F., you get an automatic
+ pop-up box with your custom error message in it. You COULD, with
+ a certain amount of effort, write that capability (or almost any
+ other capability) into your own custom version of GETSYS.PRG, but
+ you get it "free" with FP.  Why spend either lots of development
+ time reinventing the wheel, or lots of money buying extra ones
+ (i.e., 3rd-party libraries)?
+ 
+ Perhaps a couple of automotive analogies will make sense.
+ Automatic transmissions don't give you the fine control that a
+ five-speed stick shift will -- but just try driving a stick all
+ day in New York City traffic.  Automatics are also superior in a
+ variety of other situations, such as low traction (ice and snow,
+ for example).  But they don't put them in most race cars, do
+ they... And yet, a famous race car driver was once asked what car
+ he would pick to drive from New York to LA.  The interviewer was
+ obviously expecting him to choose a Ferrari or some other exotic.
+ The driver replied, "An air-conditioned Cadillac, of course."
+ 
+ Remember that in the end, we're selling applications, not
+ languages.  The end-user doesn't care if it's written in BASICA
+ as long as it works the way it should.  As for our preferences
+ for tools, sometimes one is best, sometimes the other.  A good
+ craftsperson can use ALL of the tools in the art, and knows WHEN
+ one is better than the others.  Sometimes that "automatic
+ transmission" (Fox) takes you through a long development session
+ where the "stick shift" (C5) would have worn you out.  Sometimes
+ you need the extra control and flexibility.  But any programming
+ in which I (or anyone else) can successfully do major application
+ development (as I can in FP) deserves a better tag than "as a
+ programming language it misses the mark."
+ 
+ CLIPBBS 1-04                   Page 24                  18 Feb 1991
+
+
+ All of the above notwithstanding, as I asked you as part of my
+ question before, do you have a well-thought-out rationale about
+ why, apparently, Clipper is THE ONE for you?  Why not C, for
+ example, if you really want power and flexibility?  Or you could
+ code in ASM....
+ 
+ But be careful.  Once you can argue for a higher-level language
+ (Clipper) over C/ASM, you have to be able to say why we should
+ all stop exactly THERE on the low-to-high-level scale, and not
+ at any other position.
+ 
+ P.S. -- one of the normal Clipper-vs.-Fox games we're constantly
+ playing where I work is "I can do this in Clipper/Fox. Can you,
+ in Fox/Clipper?"  Nobody's won one yet, _in_FUNCTIONAL_terms_!!!
+ Except that: the ONLY place where one truly wins is when someone
+ mentions a database with 500,000 or a million records, and
+ everyone looks at everyone else, and in a unison stage whisper,
+ we all say "Rushmore....."
+ 
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ First of all, I think you have missed the mark with Clipper 5 if you
+ feel that adding an ERROR clause to the GET command would be difficult
+ or time consuming.  It is very simple and would take me less than 5
+ minutes to write and test.
+ 
+ Second of all, and this is a _VERY_BIG_ pet peve of mine, is that
+ Rushmore is _NOT_ a new invention of Fox Software and that it's
+ techniques are not new to many of us who have been writing professional
+ software for any length of time.  Just because Fox was the first xBase
+ language vendor to build in this capability and give it a name
+ (Rushmore) does not mean they invented it or that it is the solution to
+ the problem of dealing with a subset of records in a large database.  My
+ report writer and query engine (written in Clipper S'87, BTW) has had
+ this capability for several years now and I'm quite confident that it is
+ more reliable in a network environment and just as fast as what Fox
+ built in, if not faster.
+ 
+ I think that one of the real benefits of Borland buying Ashton-Tate will
+ be the level of professionalism that will come to the xBase market.  I
+ have observed over the years that a great number of xBase programmers
+ are not qualified programmers at all but semi-self-taught users of dBASE
+ some of whom compile in Clipper or use Fox.  One of the big jokes of the
+ industry is the folks (I'm sure you know of a few) who claim to have
+ invented methods of doing things that are supposed to be such great
+ discoveries that they copyright them and even try to patent them only to
+ later realize that their method is identical to or inferior to a method
+ which is generally accepted by the C, ASM, FORTRAN, COBOL, etc..
+ programmers and has been used for many years and maybe even written up
+ in multiple algorithms books or journals.  I'm not knocking xBase
+ programmers here but trying to make the point that we all need to make
+ an effort to continually further our education and abilities and to look
+ beyond the xBase language for solutions to our problems.  Borland has
+ the ability to raise the common programmers awareness of other languages
+ and their abilities and to make us aware of techniques used by other
+ CLIPBBS 1-04                   Page 25                  18 Feb 1991
+
+
+ disciplines.  The biggest problem I encounter with Clipper programmers
+ is that they often treat Clipper as only a dBase compiler and don't
+ realize that it can interface with C and ASM code (you don't have to
+ make the decision to choose between them, but rather you can use them
+ together) and they often are not even aware of the language extensions
+ that Nantucket has provided.  It will be interesting to see how the new
+ Borland will affect sales of Nantucket and Fox products but I am
+ confident that it will change the way many view these products and how
+ they are used.
+ 
+ I am also compelled to respond to your comments that one needs to be
+ able to justify that their choice is the best for all programmers.  The
+ fact is that no one language is the best for everything, there are
+ tradeoffs of every language and every language has it's place.  The one
+ that gets the job completed first may not be the same one that alows you
+ to do the best job or the one that executes the fastest or the most
+ reliable or configurable, etc.. (what are you going to do if your
+ customer demands that you move or alter the behavior of that ERROR
+ window in the Fox get system?)
+ 
+ Sorry, didn't mean to ramble soo long but I just get soo frustrated when
+ I read messages containing product information that appears to be
+ misleading or incomplete (whether intentionally or because the writer
+ does not understand the product).
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ I have to disagree with you. I was also a beta tester for FoxPro and I
+ really to find the language aspect of it to be miserable. My God!
+ Everything is implicit or even explicit. Forget about gernericity or
+ modularity, chamelleon like capabilities or modularity. FoxPro is
+ overburderned. Especially the read command. What about event loops with
+ a BROWSE windows. Sheesh. You can do some great stuff with the C API and
+ events, but you really do have to use C to do some decent event driven
+ loops. Nah, give me Clipper 5.01 anytime. I can't imagine programming in
+ a language that can't even return an array much less support lexical
+ scoping or a robust ( much more than Cs ) preprocessor. Have you studied
+ OOPs much? I think you would take back some of your arguments on Fox's
+ behalf if you had. Direct support is really the kiss of death when you
+ are talking about a general language. FoxPro has direct support for just
+ about anything. Just try to create a dBaseIV compiler with FoxPro, you
+ CAN NOT, you can, however with Clipper. Why? Because it is a MUCH more
+ flexable language.
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ I think you have missed my point.  I didn't say you couldn't do
+ it, and I didn't say I couldn't do it.  I only said that in FoxPro
+ I didn't HAVE to.  Obviously, if I want one in Clipper, I will.
+ In fact, I intend to.  But sometimes, it's handy not to have to
+ continually "roll your own".
+ 
+ I'm very happy that your report writer is a quality piece of
+ software that will do all of the things that Rushmore will (such
+ as running a COUNT FOR in a million-record database in a few
+ seconds, I assume?). Please post the information about your
+ CLIPBBS 1-04                   Page 26                  18 Feb 1991
+
+
+ company so that the MIS department where I work can contact you
+ for more information (as I said in the previous message, the
+ place where I work is an all-Clipper shop).
+ 
+ As you will see if you actually read the message which you are
+ commenting on, that's what _I_ said, too -- something about good
+ developers knowing _all_ of  the tools so that they can choose
+ the best one for the job.  We don't disagree here at all.  ;->
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ Believe me, the ability to (re)create a dBase IV compiler isn't
+ real high on my list of priorities.
+ 
+ If you re-read what I said, my POINT was that while Clipper is
+ very flexible and powerful, sometimes the "pre-canned" stuff in
+ Fox comes in very handy.
+ 
+ And you were mentioning OOPs.  Don't tell me that you'd put
+ Clipper 5.01 in a class (pun intended) with a real OOP????
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ That isn't the point.  Good languages can be used to compile
+ themselves, and any language that can't is missing serious
+ functionality.
+ 
+ What does the amount of handy pre-canned stuff have to do with
+ how good the language is?
+ 
+ Using this standard you might think C is a terrible language if
+ you looked at the "bare bones" Watcom compiler, and you would
+ think C is an excellent language if you looked at the "feature
+ rich" Borland compiler.  Yet it is the exact same language, and
+ there are good reasons for Fox Software choosing to use the
+ Watcom compiler.
+ 
+ ANSI C has long been considered a language in which you can do
+ object oriented programming because it supports statics.  Of
+ course the new C++ compilers elaborate on this concept a lot, but
+ the fundamental ability to do object oriented programming was
+ always there.
+ 
+ Every hour I spend programming with Clipper 5.0 I find myself
+ saying "Thank God Clipper has static variables now."
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ 
+ No, but trying to use the stupid Summer 87 complier was enough to
+ drive me to tears.  And I would have switched to C if it had been
+ my decision.
+ 
+ It may be nice that FoxPro has this feature, but it has zero
+ impact on how good the Fox language is.
+ 
+ CLIPBBS 1-04                   Page 27                  18 Feb 1991
+
+
+     A GOOD application development package isn't necessarily a
+     GOOD language.
+ 
+ I am not giving FoxPro a bad rap.  They have a good product that
+ does what it meant to do.  But judged as a language it is
+ inferior to the summer 87 implementation of Clipper, and the
+ summer 87 language was only half a language that was only
+ released to form a bridge to the newer stuff.
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ "Good" if the application you want to create is a compiler, not
+ necessarily so good if you want to create some other application.
+ 
+ Almost ALL languages "pre-can" stuff.  ASM pre-cans some things,
+ compared to machine language.  C does, compared to ASM.  Clipper
+ does, compared to C.  FoxPro does, compared to Clipper.  Like I
+ said before, you just have to make the choice about what point in
+ that spectrum is suitable FOR THE TASK AT HAND.  Analogy: those
+ really fancy Swiss Army knives sure have a lot of stuff, but
+ sometimes they get in the way (big bulge in the pocket, too heavy
+ for the purse, whatever).
+ 
+ I think we've been discussing things from different paradigms
+ here, anyhow, (sister, can you spare a paradigm?) and all points
+ have been made on all sides.  Time to go back to coding....
+ 
+ Subj: IS CLIPPER SUITABLE?           Prvt: N          Read: N
+ 
+ Right, you are saying that you like fox better than clipper, and
+ I am saying that even if fox is better than clipper it doesn't
+ necessarily follow that fox has a better language.  It is an
+ entirely academic point.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 28                  18 Feb 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper 
+ BBS magazine in previous numbers. Purpose of this index list is to allow 
+ anybody find needed file descriptions in growing number of described files. 
+ Short description after name will give first possible close image about 
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                         Clipper File - CLIPLINK.ARJ
+ 
+ File Name:     CLIPLINK.ARJ
+ Other Names:
+ 
+ File Size:      38,148 bytes
+ File Contents:
+                 CLIPLINK.DOC     129329
+ 
+ Complete text of R.Donnay article (explanation) about linkers for Clipper.
+ Maybe it's well know for all of you, but still must be somebody who doesn't
+ know it.
+ 
+ It's for CLipper 5.0 actually, but it's still giving 90% of valid
+ informations about 5.01 also and all valid informations about linkers for
+ Clipper and way of linking.
+ 
+ This is also going to be reprinted in Clipper BBS Magazine.
+ 
+ File is located on ClipperBBS HQ system and also on Lobster BBS, Schiedam,
+ 31-10-4271432, 2:285/610, 24 hours online with other many Clipper
+ Files.
+ 
+ CLIPBBS 1-04                   Page 29                  18 Feb 1991
+
+
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - HGLASS.ZIP
+ 
+ File Name:      HGLASS.ZIP
+ Other Names:
+ 
+ File Size:      5,852 bytes
+ File Contents:
+                 go.bat             51
+                 hglass.prg      13938
+                 readme            409
+ 
+ HGLASS.PRG contained inside archive is listing of example program for
+ displaying real working Hour Glass on screen of your computer when Clipper
+ Application is creating indexes. It's alternative of status bar indicator
+ for displaying a progress of any action.
+ 
+ It's code for CLIPPER 5.0 and can be used as example, but i'm afraid not as
+ serious indicator in serious aplications. But it's nice, get it for
+ teaching how to use semigraphics symbol from IBM PC character table for
+ simulating graphics processing on screen.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - NOTATION.ARJ
+ 
+ File Name:      NOTATION.ARJ
+ Other Names:
+ 
+ File Size:      6,156 bytes
+ File Contents:
+                 HUNG.TXT  15203
+ 
+ 
+ Don't need any special additional descripting. It's original file with
+ Hungarian notation. Complete HUNG.TXT if also reprinted in Clipper BBS
+ magazine (numbers three, four and five).
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - PACKUP.ARJ
+ 
+ File Name:      PACKUP.ARJ
+ Other Names:
+ 
+ File Size:      5,958 bytes
+ CLIPBBS 1-04                   Page 30                  18 Feb 1991
+
+
+ File Contents:
+                 PACKSCRN.DOC
+                 PACKSCRN.8
+                 UPACSCRN.8
+                 PACKSCRN.OBJ
+                 UPACSCRN.OBJ
+ 
+ 
+ Two ASSEMBLER (source included in .8 files) functions for using instead of
+ SAVESCREEN and RESTSCREEN functions in Clipper. Point of this two functions
+ is, that they are using some method of packing screen for save space used
+ by string used for normal screen.
+ 
+ Everybody know, standard screen is 25lines and 80characters, it's 'only'
+ 2000 characters and then 2000 color codes for whole screen. One your saved
+ screen is 4000bytes. Imagine how often one saving screen! That's why people
+ are trying to make packers for this. This one can be very fast because
+ written in assembler.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - ADHOC302.ARJ
+ 
+ File Name:      ADHOC302.ARJ
+ Other Names:
+ 
+ File Size:      42,347 bytes
+ File Contents:
+                 DEMO.STR           1527         MAKEDEMO.BAT        764
+                 7100.PRT            133         DEMO.DBF           5272
+                 ALL.PRT             107         ADHOC.OBJ         70962
+                 AUGUST.PRT          129         READ.ME             763
+                 DEMO.PRG           2008         ADHOC.ASC         39242
+ 
+ Summer 87 report program. It's intelligent utility to generate printed
+ reports also with printer codes support and with special meaning of
+ allowing normal end user of program generate what they need with simple set
+ of menus. This file is including .OBJ version of function with demo
+ program. Source is available from autor for purchase.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - ALTDO328.ARJ
+ 
+ File Name:      ALTDO328.ARJ
+ Other Names:
+ 
+ File Size:      25,805
+ File Contents:
+                 README             3001
+ CLIPBBS 1-04                   Page 31                  18 Feb 1991
+
+
+                 ADS.EXE           42448
+                 ALTDOT.KEY         2871
+ 
+ 
+ Alt DOT is TSR utility for viewing, editing, printing .DBF files after
+ pressing one key from every place in your PC in or outside of programs.
+ It's profesionally made utility with good possibilities.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - CL5REP6.ARJ
+ 
+ File Name:      CL5REP6.ARJ
+ Other Names:
+ 
+ File Size:      7,485 bytes
+ File Contents:
+             FRMRUN.PRG        26533
+ 
+ Replacement of REPORT command for Clipper 5.0 (5.01) sixth version. It's
+ fixing several bugs in REPORT command and adding some another possibilities
+ how to control this kind of printed (generated) output.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipNet - CL5103.ARJ
+ 
+ File Name:      CL5103.ARJ
+ Other Names:
+ 
+ File Size:      28,749 bytes
+ File Contents:
+                 CL5103.NG         42241
+                 CL5103.TXT        44889
+ 
+ Well know, JO FRENCH (Compuserve, otherwise Canadian), un official report
+ of discovered anomalies (we all know already, that they are not bugs, they
+ are just anomalies..) in Clipper 5.01. Serie of closely named files is
+ available for CLipper 5.0 and was growing every week. This is only third
+ (and latest now) version of the same for Clipper 5.01 and is very small.
+ Real bugs (big ones) are still far away with comparation to 5.0 version.
+ 
+ Two files inside, one with .NG extension is popular norton guide database
+ file, second is just text version of the same file.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 32                  18 Feb 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-04                   Page 33                  18 Feb 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

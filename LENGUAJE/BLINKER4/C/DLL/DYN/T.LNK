@@ -1,0 +1,21 @@
+#
+#  96.02.08    T.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a DOS extended program
+#
+
+bli exe ext                # Create a DOS extended program
+out e:\t                   # Output file name
+fi t                       # List .OBJ files here
+
+defbegin                   # Start of module definition commands
+   name     't'            # Indicate an EXE and specify its module name
+   imports
+      _test = d.testexp    # Imports testexp from D.DLL as _test
+
+defend                     # End of module definition commands
+
+nobell                     # No irritating beep
+map s,a                    # Create a MAP file
+

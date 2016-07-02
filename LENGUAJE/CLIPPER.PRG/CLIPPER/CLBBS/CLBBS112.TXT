@@ -1,0 +1,1284 @@
+                        ±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°
+              °±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°
+        ±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±
+     ±°±°±°±ÛÛÛÛ°±ÛÛÛÛ°±°±°ÛÛÛÛ±°±ÛÛÛÛÛÛ°±ÛÛÛÛÛÛ°±ÛÛÛÛÛÛ°±°ÛÛÛÛ±°±°±°±°±°±
+   °±°±°±°±ÛÛ°±ÛÛ°±ÛÛ°±°±°±°ÛÛ±°±°±ÛÛ°±ÛÛ°±ÛÛ°±ÛÛ°±ÛÛ°±ÛÛ°ÛÛ±°ÛÛ±°±°±°±°±°±°
+  °±°±°±°±ÛÛ°±°±°±°ÛÛ±°±°±°±ÛÛ°±°±°ÛÛ±°ÛÛ±°ÛÛ±°ÛÛ±°ÛÛ±°ÛÛ±ÛÛÛ±°±°±°±°±°±°±°±°
+ °±°±°±°±°ÛÛ±°±°±°±ÛÛ°±°±°±°ÛÛ±°±°±ÛÛÛÛÛ±°±ÛÛÛÛÛ±°±ÛÛÛÛÛ±°±ÛÛÛ±°±°±°±°±°±°±°±°
+ ±°±°±°±°±ÛÛ°±°±°±°ÛÛ±°±Û±°±ÛÛ°±°±°ÛÛ±°±°±°ÛÛ±°ÛÛ±°ÛÛ°±ÛÛ±°±°ÛÛÛ°±°±°±°±°±°±°±
+  ±°±°±°±°±ÛÛ°±ÛÛ°±ÛÛ°±ÛÛ°±°ÛÛ±°±°±ÛÛ°±°±°±ÛÛ°±ÛÛ°±ÛÛ±°ÛÛ°ÛÛ±°ÛÛ±°±°±°±°±°±°±
+   ±°±°±°±°±ÛÛÛÛ°±ÛÛÛÛÛÛÛ±°ÛÛÛÛ±°±ÛÛÛÛ°±°±ÛÛÛÛÛÛ°±ÛÛÛÛÛÛ°±°ÛÛÛÛ±°±°±°±°±°±°±
+     °±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°
+        °±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°
+              ±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±
+                        °±°±°±°±°±°±°±°±°±°±°±°±°±°±°±°±
+ 
+   Volume 1, Number 12                                   12 November 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1.  EDITORIAL  ............................................................  1
+     Again back, it's of course me  ........................................  1
+ 2.  ARTICLES  .............................................................  2
+     The Programmer's Guide to CLIPPER Linkers - part (9)  .................  2
+ 3.  SOFTWARE  .............................................................  7
+     List of CLIPPER related areas on CLIPPER BBS HQ system  ...............  7
+ 4.  Q&A  ..................................................................  8
+     Q&A:4DOS, Clipper 5.01 and RUN command  ...............................  8
+     Q&A: Clipper 5.0x books  ..............................................  8
+     Q&A: DBU in Clipper 5.01 is hanging?  ................................. 11
+     Q&A:GHOST RECORDS  .................................................... 11
+ 5.  ANOMALIES  ............................................................ 12
+     ANOMALIES reports and commets  ........................................ 12
+     DBEDIT()*         Locks up with return value of 2  .................... 12
+     DOS 5.0           Using PLL's with DOS 5.0  ........................... 13
+     DOS ERROR 4       Encountered on a network  ........................... 13
+ 6.  COMMENTS  ............................................................. 15
+     How to use 4DOS for managing projects  ................................ 15
+ CLIPBBS 1-12       Table of Contents (...)        12 Nov 1991
+
+
+     NOTICE of some older articles second time  ............................ 17
+ 7.  CLIPPER NET  .......................................................... 18
+     Index of described files in Clipper BBS Magazine  ..................... 18
+     ClipperNet - TBUNIQUE.ARJ  ............................................ 19
+     ClipperNet - TICKER.ARJ  .............................................. 19
+     ClipperNet - GETKEY.ARJ  .............................................. 20
+     ClipperNet - VSIX800.ARJ  ............................................. 20
+     ClipperNet - OCLIP.ARJ  ............................................... 21
+     ClipperNet - STATUS.ARJ  .............................................. 21
+     ClipperNet - PARTIDX3.ARJ  ............................................ 22
+     ClipperNet - SNAP497.ARJ  ............................................. 22
+ 8.  CLIPBBS  .............................................................. 23
+     CLIPBBS distribution  ................................................. 23
+     CLIPBBS, how to write an article!!!  .................................. 24
+
+                                   - - - - -
+ CLIPBBS 1-12                   Page 1                   12 Nov 1991
+
+
+ ==============================================================================
+                                   EDITORIAL
+ ==============================================================================
+
+
+                         Again back, it's of course me....
+ 
+ It's nice to have readers. Eleven numbers is out and i'm slowly getting
+ some mail or notices about my magazine. Hope that sometime will also come
+ more articles from some other peoples. Thanx for all of few which were
+ coming.
+ 
+ What's new on my side of world? It's simple. The Netherlands is on autumn
+ very rainy country. Raining and raining. It's far better to leave my
+ portable at home, otherwise it will get a swimming. My company is now
+ moved into new office in different building (thanx God, that we were
+ moving only from one side of street to another). Never want to move again,
+ it's something really terrible, but it's far better. New cabling for
+ network, telephone lines for centrale, all of those needed changes
+ and new things were taking about week. That's also reason why so long
+ pause between last editorial. Company is faking busy thing and business
+ has importance before hobby (otherwise hobby will not get money for
+ existance, but i guess, it's known problem). During this time of movement i
+ got several nice programs like QEMM 6.0 with Desqview 2.40 (it's really
+ very nice), DMAKE which i hatched in ClipperNet and which seems far best
+ MAKE program which i ever seen (40lines RMAKE make file was shutted down
+ into about 10 lines only with this DMAKE...). Therefore at this moment
+ is evening and i'm sitting at home (it's now exactly 00:59am) and writing
+ this editorial after long playing with mentioned DMAKE. TV is trying to
+ satisfied watcher with "BLACK WIDOW" thriller which is as usual totally
+ loosing action and only giving nice women faces (as common).
+ 
+ How it's coming to make and publish this magazine? It's very simple. I'm
+ continuosly collecting interesting texts which i see somewhere, then i'm
+ continuosly writing sometime new articles. Scanning of all ClipperNet
+ files, testing and writing descriptions, then extracting from my database
+ of BUG reports, collecting sometime articles from other authors (it's not
+ happening very often). Then i'm starting program which i'm developing and
+ which is using collected texts to make one big magazine. Every friday it's
+ going out with some mail robot and messages to ClipperNet, PDN and
+ persons who are asking for Hold putting of every issue. Then articles for
+ made number are totally gone. One can see how they are flowing out and if
+ there is too less of them, must write new ones....
+ 
+ Simple, isn't? Of course yes if there is valid one condition. Enough time.
+ Still (it's now 5 minutes later than latest mentioned time <grin>) i'm too
+ mad to stop this, especially when i see a good future and fact that it can
+ help to you or anyone else.
+ 
+ Let stop sentimental talking <grin>, see you again on our pages...
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 2                   12 Nov 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (9)
+ 
+               Linker Comparison Chart - Productivity Features (cont.)
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄ¿
+ ³  Linker  ³ Link   ³ True   ³Dynamic ³ Debug  ³ Pro-   ³        ³        ³
+ ³          ³ Speed  ³Dynamic ³ Link   ³Library ³ filing ³        ³        ³
+ ³          ³        ³Linking ³Library ³        ³        ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³PLINK86+  ³ Slow   ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³PLINK86s87³ Slow   ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³RTLINK    ³ Slow   ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³RTLINK-5.0³Slow *6 ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³RTLINK+   ³ Slow   ³  NO    ³  NO    ³  NO    ³  YES   ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³MS LINK   ³ Medium ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³ALINK     ³ Slow   ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³BLINKER   ³V. Fast ³  NO    ³  NO    ³  NO    ³  YES   ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³WARPLINK  ³ Fast   ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³TLINK     ³V. Fast ³  NO    ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³NOLINK    ³V. Fast ³  YES   ³  NO    ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³NOLINK-KB ³V. Fast ³  YES   ³  YES   ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³DCLIPRUN  ³V. Fast ³  YES   ³  YES   ³  NO    ³  NO    ³        ³        ³
+ ÃÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ´
+ ³DCLIP     ³V. Fast ³  YES   ³  YES   ³  YES   ³  YES   ³        ³        ³
+ ÀÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÙ
+ 
+       NOTES:
+ 
+       1.  dCLIP, dCLIPRUN and NOLINK are "runtime" systems rather than
+           linkers which produce an .EXEcutable program.  dCLIP's .EXE
+           can be customized by re-creating it from the dCLIP libraries,
+           therefore dCLIP provides the advantage of using any other
+           linking technology in conjunction with their "dynamic-linking"
+           system.   This means that a dCLIP.EXE engine built with RTLINK
+           will support all the features of RTLINK .AND. all the features
+           of dCLIP.
+ 
+       2.  Dynamic overlaying of C/ASM code is tricky and can cause
+           undesirable results when the code includes data or interrupts.
+ CLIPBBS 1-12                   Page 3                   12 Nov 1991
+
+
+       3.  RTLINK seems to have occasional problems with Clipper-code
+           static overlays when the modules pass parameters.
+ 
+       4.  BLINKER allows the SET CLIPPER=<environment> to be burned
+           into the .EXEcutable program.
+ 
+       5.  dCLIP, dCLIPRUN use the SET CLIPPER=<environment> for free
+           pool memory allocation and the OBJMemory=<memory> in DCLIP.SYS
+           for object pool allocation.
+ 
+       6.  If using Incremental Linking option or pre-linked libraries
+           then speed is improved.
+ 
+       7.  Symbol reduction is accomplished by compiling your .PRGs into
+           fewer large objects, then dynamic overlaying at the procedure
+           level.
+ 
+       8.  Memory packing in RTLINK/Clipper-5.0 is unnecessary due to the
+           garbage-collection system designed into the Clipper libraries.
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                    Choosing a Linker for your Clipper Projects
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+         Selecting a linker to use for a Clipper application is not
+         always an easy task.  There are many factors which must be
+         considered before deciding which is the very best possible
+         solution.  Then again, it may not be necessary to always choose
+         the best linker,  but simply a linker which is adequate and will
+         solve the problem with the least effort.
+ 
+         To help you decide, I have chosen to use 6 real case studies,
+         in which our staff had to make a choice of a linker or linkers
+         for our different Clipper projects.
+ 
+ 
+ 
+         Case Study #1:  FYI - Work Smarter  (ALINK and BLINKER)
+ 
+         FYI - Work Smarter is a Clipper application that is almost
+         entirely written in Clipper with a few functions from
+         several third-party libraries (GET-IT, Overlay(), SMARTMEM, IDL).
+         When development started on Work Smarter, about 1-1/2 years ago,
+         the product was linked using PLINK86 and 4 "static overlay"
+         areas.   As the product evolved, memory usage went up.  No
+         matter how we managed the overlays, the symbol table grew to
+         the point where we had to use a new linker to get more memory.
+         We purchased ALINK, a "dynamic-overlay" linker and with only
+         a few hours effort reduced the memory overhead by 50k.
+         ALINK dynamically overlays ONLY Clipper-compiled .OBJ files.
+         This was not a problem for us since this project was "Clipper-
+         code" intensive.
+ 
+         With a little more effort and by compiling our application into
+ CLIPBBS 1-12                   Page 4                   12 Nov 1991
+
+
+         larger and less .OBJects we reduced the symbol count further and
+         were successful in reducing the memory overhead an additional
+         30k.  A total investment of about 24 hours of time and $179.00
+         reduced our .EXE load module from 340k to 260k.  ALINK likes
+         to fragment the Clipper memory pool and we were getting OUT OF
+         MEMORY during re-indexing, so we invested in a product named
+         SMARTMEM and made structured calls to the H_PACK() function
+         which packs the free pool.
+ 
+         As FYI - Work Smarter evolved, it grew more powerful and larger.
+         The .EXE load module increased another 10k over several months
+         and we were running into memory problems again because now
+         the program was designed to work with a 90k resident TSR.
+ 
+         Enter BLINKER, (designed by Jud Cole, the author of ALINK).
+         BLINKER uses the same basic overlaying concept as ALINK,
+         however it offers the ability to also dynamically overlay the
+         EXTEND.LIB library.  This brought the .EXE load module down
+         from 270k to 230k.
+ 
+         Our BLINKER link file:
+ 
+         FILE hoa,swapattr,resident
+         OUTPUT fyi.EXE
+         BLINKER MEMORY PACK 10
+         BLINKER OVERLAY OPSIZE 50
+         BLINKER EXECUTABLE CLIPPER V10;R32;F39
+         SECTION INTO fyi.OVL
+         BEGINAREA
+           FILE errorsys
+           FILE hoaovl1.OBJ
+           FILE hoaovl2.OBJ
+           FILE hoaovl3.OBJ
+           FILE hoaovl4.OBJ
+           FILE hoaovl5.OBJ
+           FILE hoaovl6.OBH
+           ALLOCATE overcl.LIB
+           ALLOCATE dclip.LIB
+           ALLOCATE extend.LIB
+         ENDAREA
+         LIB dclipr,getit,smartmem,clipper,idl
+ 
+ 
+ 
+ 
+         Case Study #2: FYI - LetterWriter (.RTLINK and .RTLINKplus)
+ 
+         FYI - LetterWriter is a Clipper application which is a data-
+         merging word-processor, spell-checker and thesaurus.  FYI -
+         LetterWriter is approximately 30% Clipper-compiled code and 70%
+         C/ASM code.  When this project started, about 1 year ago, it was
+         linked using PLINK86 and 5 "static overlay" areas.  After
+         many "crashes" we determined that this application was far too
+         sophisticated to be managed with "static overlays", so we
+         purchased .RTLINK, reduced our overlay areas from 5 to 3, and
+         completely eliminated computer lock-up problems while reducing
+ CLIPBBS 1-12                   Page 5                   12 Nov 1991
+
+
+         the .EXE load module by 50k.
+ 
+         The Clipper-code portion of the program was still overlayed
+         "static" so we had to be careful to structure the Clipper-code
+         segments properly to prevent lockup, however the C/ASM code was
+         all automatically reloaded simply by entering the command:
+         "RELOAD FAR 300" in our link file.
+ 
+         We tried using dynamic-overlay linkers like BLINKER and
+         WARPLINK for this project, but they could not dynamically
+         overlay the sophisticated C/ASM routines we used in the spell
+         checker and thesaurus.   During development we use RTLINK+
+         because it supports Microsoft Code-View, then we link the
+         final product with RTLINK 3.1.
+ 
+         Our link file:
+ 
+         Sorry, but this is information is proprietary
+ 
+ 
+         Case Study #3: dCLIP/dCLIPRUN (.RTLINK and NOLINK 2.1)
+ 
+         dCLIP is a development platform and runtime system for Clipper
+         which runs Clipper applications from .OBJect files or dynamic
+         libraries.  dCLIP is basically a Clipper application, however,
+         the dCLIP.EXE program contains about 5% Clipper-compiled code
+         and 95% C/ASM code.  The dCLIP dot-prompt interpreter, debug
+         system, database manager, report writer, query-builder, etc.
+         are all written in Clipper, yet none of this Clipper-code is
+         included in the DCLIP.EXE program, but instead is included in
+         a "dynamic-library" which is linked into memory only as the
+         functions are needed.
+ 
+         dCLIP and dCLIPRUN are an example of 2 linking technologies
+         working together to produce the very best memory management
+         solution.  NOLINK is a "dynamic link" library which is linked
+         into the dCLIP.EXE "engine" using .RTLINK.  The engine also
+         includes the entire CLIPPER.LIB and EXTEND.LIB libraries and
+         makes provisions for including any third-party libraries.
+ 
+         When dCLIP development started 2 years ago, we used PLINK86
+         and NOLINK version 1.2.  Our dCLIP.EXE engine load module
+         size was approximately 310k.  This left very little room for
+         the Clipper application so dCLIP version 1.0 could handle
+         only small Clipper programs or it would run out of memory.
+         Like ALINK and BLINKER, the NOLINK-1.2 "dynamic linker" used
+         the Clipper free pool to link the Clipper-compiled code.  This
+         caused memory fragmentation and eventually the program would
+         run out of memory.
+ 
+         dCLIP 2.0 used a whole new approach to the problem of overlay
+         linking.  First, we threw away "static overlays" and found that
+         we could extract modules from the CLIPPER.LIB and EXTEND.LIB
+         libraries and overlay them using .RTLINK and the "MODULE"
+         command.  The Clipper libraries are all C/ASM code, so we use
+         the "RELOAD FAR 200" command to insure that the overlayed
+ CLIPBBS 1-12                   Page 6                   12 Nov 1991
+
+
+         segments get properly reloaded.  RTLINK allowed us to overlay
+         the "dynamic-link" functions from the new NOLINK-2.1 library as
+         well, so now our DCLIP.EXE load module was reduced from the
+         original 310k to only 230k.  With this additional 80k memory
+         overhead, rewriting the "dynamic-linker" to allocate a seperate
+         object pool and including a "memory-packing" utility for memory
+         defragmentation, we improved dCLIP to now be capable of running
+         any large Clipper application without running out of memory.
+ 
+ 
+         Our link file:
+ 
+         STACK 1024
+         FI dclip.OBJ
+         LIB dclipnl,dclip,dclipr,dcextend,clipper
+         OUTPUT dclip.EXE
+         RELOAD FAR 200
+         OVERLAY CODE
+         VERBOSE
+ 
+         BEGINAREA
+           #modules from DCEXTEND.LIB
+           SECTION MODULE memoedit,memotran
+           SECTION MODULE memoline,memoread,memowrit,mlcount,mlpos
+           SECTION MODULE achoice,ascan,adir,afields,asort,ains,acopy
+                   MODULE afill,gete
+           SECTION MODULE report
+           SECTION MODULE dbedit
+           SECTION MODULE icreate,sort,sortof,examplea,examplec,recsize
+           #modules from DCLIPNL.LIB
+           SECTION MODULE c_call,global,parseobj,msg,kern,omalloc,mtbuf
+                   MODULE mtobj,screen
+           #modules from DCLIP.LIB
+           SECTION MODULE overlay,over_6,over_22,over_24
+         ENDAREA
+ 
+         BEGINAREA
+           #modules from DCEXTEND.LIB
+           SECTION MODULE ntx
+           #modules from DCLIP.LIB
+           SECTION MODULE dbgbrow,dbgio,dbgscrn,dcega43,dcvga50,videoid,dckey
+           SECTION MODULE txtstuff
+           SECTION MODULE _dcinit
+         ENDAREA
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 7                   12 Nov 1991
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+ List of CLIPPER related areas on CLIPPER BBS HQ system
+ 
+     Mentioned files are available on NETCONSULT BBS, 31-10-4157141
+     (working hours, workdays 18:00->08:00, weekends 24hours/day)
+ 
+     Speeds 1200bps -> 14400bps (V32 modem)
+ 
+     FIDONET 2:285/608, Signet 27:1331/4412
+ 
+ 
+ ÕÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+ ³ # 57 ³ CLIPPER - dBASE           *CL*              Access Level :        10 ³
+ ÃÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ °°°°°±±±±±²²²²²ÛÛÛÛÛ ³     50 KBytes in     1 Files  ³ ÛÛÛÛÛ²²²²²±±±±±°°°°° ³
+ ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ 
+ - CLIPPER NET area belong to dBASE files
+ 
+ ANOM_17.ARJ    50130 12-27-89  [000] dBASE IV BugList
+ 
+ 
+ ÕÍÍÍÍÍÍÑÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+ ³ # 59 ³ CLIPPER - FOXBASE         *CL*              Access Level :        10 ³
+ ÃÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+ ³ °°°°°±±±±±²²²²²ÛÛÛÛÛ ³     44 KBytes in     1 Files  ³ ÛÛÛÛÛ²²²²²±±±±±°°°°° ³
+ ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ FOXDCOMP.ARJ   44812 12-04-90  [0] This one is NOT a CLIPPER, but is related
+ -            several times i had a problem with crazy programmers :-)
+ -            in FoxBASE using FOXPCOMP. Now this problem is out, because
+ -            this one is FOXDCOMP. Decompiler for compiled .PRG files
+ -            from FoxBase 2.x
+ -----------------------------NEW FILES---------------------------
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 8                   12 Nov 1991
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+   Question:
+ 
+           I'm using 4DOS with Clipper 5.01 and having problems with
+           using RUN (!) command from CLIPPER. What i have to do for
+           correct using of 4DOS?
+ 
+   Answer:
+ 
+           1)      take a sure, that CONFIG.SYS contains correct specs:
+ 
+                   shell=c:\4dos.com /e:512 /s:d /p
+ 
+                   This one is telling to boot that has to take 4DOS.COM
+                   instead of COMMAND.COM with 512 bytes for environment
+                   and swapping to disk (replace with /s:e for EMM swap)
+                   /P is telling to run AUTOEXEC.BAT for start of system.
+ 
+           2)      AUTOEXEC.BAT has also to set several things:
+ 
+                   path c:\;c:\4dos
+ 
+                   Be sure that PATH is telling where to found all other
+                   files from 4DOS!
+ 
+                   set COMSPEC=c:\4dos.COM
+                   set 4DSHELL=/S:D
+ 
+                   First one is giving correct COMSPEC for all invocation
+                   of COMMAND.COM like later and other is telling again
+                   about swapping for all other copies of 4DOS.COM later.
+ 
+           This two things are needed for DOS to get correctly working,
+           for CLIPPER here is needed something totally different. Clipper
+           is taking COMSPEC DOS variable to run 'command.com', then will
+           RUN without problems any internal or external DOS commands or
+           another programs. If one wants to run another session of
+           4DOS.COM, then for compatibility is best to use
+           RUN("%COMSPEC%") which is without problems.
+ 
+           And last comment - ONE MUST HAVE ENOUGH MEMORY TO RUN _TWO_
+           coppies of 4DOS.COM in case of running another 4DOS.COM or
+           copy of 4DOS.COM + runned program.
+
+ ------------------------------------------------------------------------------
+
+
+   QUESTION:
+ 
+       I'm looking for good books about Clipper 5.0x and also looking
+       for some newspapers about it, where i can found some from them?
+ 
+ CLIPBBS 1-12                   Page 9                   12 Nov 1991
+
+
+   ANSWER:
+ 
+                AVAILABLE CLIPPER BOOKS AND PERIODICALS
+ 
+       BOOKS
+ 
+       Clipper 5:  A Developer's Guide
+       Author:         Joseph D. Booth, Greg Lief and Craig Yellick
+       Publisher:      M&T Books
+                       501 Galveston Drive
+                       Redwood City, CA 94063-4728
+ 
+       To Order:       1-800-533-4372
+                       1-800-356-2002 (in CA)
+ 
+ 
+       Clipper Developer's Library
+       Author:         James Occhiogrosso
+       Publisher:      Microtrend Books
+                               Slawson Communications, Inc.
+                       165 Vallecitos de Oro
+                       San Marcos, CA 92069
+ 
+       To Order:       1-800-SLAWSON
+ 
+ 
+       Clipper Programming Guide, 2nd Edition Version 5
+       Author: Rick Spence
+       Publisher:      Microtrend Books
+                       Slawson Communications, Inc.
+                       165 Vallecitos de Oro
+                       San Marcos, CA 92069
+ 
+       To Order:       1-800-SLAWSON
+ 
+ 
+       Illustrated Clipper 5.0, 2nd Edition
+       Author:  John Meuller
+       Publisher:      Wordware Publishing, Inc.
+                       1506 Capital Avenue
+                       Plano, TX 75074
+ 
+       To Order:       1-800-229-4949
+ 
+ 
+       Straley's Programming with Clipper 5.0
+       Author: Stephen J. Straley
+       Publisher:      Bantam Books
+                       666 5th Avenue
+                       24th Floor
+                       New York, NY 10103
+ 
+       To Order:       1-800-223-6834 ext. 9479
+                       212-492-9479
+ 
+ 
+ CLIPBBS 1-12                   Page 10                  12 Nov 1991
+
+
+       Using Clipper, 2nd edition
+       Author: Ed Tiley
+       Pubisher:       Que Corporation
+                       11711 North College Avenue
+                       Suite 140
+                       Carmel, IN 46032
+ 
+       To Order:       1-800-428-5331
+ 
+ 
+       PERIODICALS
+ 
+       The Aquarium
+       Publisher:      Grumpfish, Inc.
+                       PO Box 17761
+                       Salem, OR 97305
+ 
+       To Order:       503-588-1815
+ 
+ 
+       Compass for Clipper
+       Publisher:      Island Publishing
+                       1424 Sherman Avenue
+                       Suite 300
+                       PO Box 2347
+                       Coeur d'Alene, ID 83814
+ 
+       To Order:       208-667-3727
+ 
+ 
+       Nantucket News: The Technical Journal of Nantucket Corporation
+       Publisher:      Nantucket Corporation
+                       12555 W. Jefferson Boulevard
+                       Los Angeles, CA 90066
+ 
+       To Order:       213-390-7923
+ 
+ 
+       Reference(Clipper): The Independent Guide to Clipper Expertise
+       Publisher:      Pinnacle Publishing
+                       28621 Pacific Highway South
+                       PO Box 8099
+                       Federal Way, WA 98003-009
+ 
+       To Order:       1-800-231-1293
+                       206-941-2300
+ 
+       European Nantucket Users Club Magazine - Clip a Time
+       Publisher:      The Europen Nantucket Users Club
+                       33 Nobel Square
+                       Basildon
+                       Essex SS13 1LT
+                       England
+ 
+       To Order:       44-268-590955
+                       44-268-590905 (FAX)
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 11                  12 Nov 1991
+
+
+   Question:
+ 
+     I have a problem with the DBU in Clipper 5.01. I can create a
+     dbase, but when I go to enter data, DBU hangs. No response from
+     keyboard... nothing! Running an AT (286) 10hz V/c drive VGA.
+     (Can't see any probs there) Is there a fix I should know about?
+ 
+   Answer:
+ 
+     You are completely right. Nantucket produced changed DBU but this
+     change is putting in DBU new error which wasn't in previous version.
+     Here is a fix (one from many):
+ 
+     at line 281, change DBUEDIT.PRG to say:
+ 
+           /* Edit the current field */
+             IF bof() .and. eof() .and. !lAppend
+                  keyboard chr(K_DOWN) + chr(nextkey())
+                  loop
+             ENDIF
+
+ ------------------------------------------------------------------------------
+
+
+   QUESTION:
+ 
+       I encounter very often a very annoying problem which i refer to as
+       "ghost records". With no apparent regularity i find in my .dbf files,
+       usually but not always at the end, one or more records whose fielsd are
+       filled with right arrows (chr(26)'s). For sure this problem is a very
+       well known one; Can someone tell me the origin of these records and how
+       to avoid them ?  (I use clipper 87 and am starting with clipper 5.1.
+       The ghost records are visible also with dbxl interpreter and enter in
+       the total number of records of the fields).
+ 
+   ANSWER:
+ 
+       Sounds like a dBase III pack of a clipper .dbf file.  Or header
+       corruption where there is one more record in the filesize than the
+       header says.  Clipper reads the real filesize and gets the last record
+       which is full of end-of-file markers (^Z or ASCII 26).
+ 
+       Solution : don't access the files from dBase or DBXL.  (I do it often
+       though and only stop doing it when problems arise - which has not
+       happened for a year or so now).
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 12                  12 Nov 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+             DBEDIT()*         Locks up with return value of 2.
+ 
+   Problem Statement
+ 
+   When a UDF returns a value of 2, DBEdit locks up.
+ 
+ 
+ --------COMMENTS---------
+ 
+     Long time i was trying to get situation where DBEDIT will hang up
+     with return value of two. I did it with simple program:
+ 
+     ³     #include "inkey.ch"
+     ³
+     ³     use adres
+     ³     dbedit(0,0,maxrow(),maxcol(),,"ufun")
+     ³
+     ³     function ufun(mode,ind)
+     ³         do case
+     ³             case mode=4
+     ³                 if lastkey()=K_ENTER
+     ³                     return (0)
+     ³                 endif
+     ³                 if lastkey()=K_ESC
+     ³                     @ 0,70 say 'Ctrl A'
+     ³                     return (2)
+     ³                 endif
+     ³             case mode=0
+     ³                 @ 0,0 say '+-+'
+     ³                 return (1)
+     ³             otherwise
+     ³                 return (1)
+ CLIPBBS 1-12                   Page 13                  12 Nov 1991
+
+
+     ³         endcase
+     ³     return (1)
+ 
+     All is working perfect and actually few of other mine programs (old
+     ones) with DBEDIT are using also RETURN (2) very often. And they haven't
+     problems at all. If someone knows about sample which will cause REAL
+     hang, please give it to me.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+
+
+                 DOS 5.0           Using PLL's with DOS 5.0.
+ 
+   General Comment
+ 
+   If you encounter a problem executing an application.EXE and you are
+   using a PLL try:
+ 
+     a) LOADFIX App
+     b) Re-making the PLL file under DOS 5.0
+     c) Executing the application from a batch file which 'eats up' some
+        of the memory in the first 64Kb segment; e.g.,
+ 
+         @echo off command /e:32000 /c %1 %2 %3 %4 %5 %6 %7
+ 
+ -----------GENERAL COMMENT-------
+ 
+     It's well known problem of DOS 5.0 when used with DOS=HIGH because it's
+     leaving first 64KBs free for application and application is then starting
+     in first 64KBs. This is making some problems for some applications. And
+     it's not ONLY problem of CLIPPER. Dos 5.0 has many problems with many
+     other applications. Some from them are caused by wrong written appli-
+     cations, but some other also with some "incompatibility" of new DOS
+     to previous versions.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+
+
+                 DOS ERROR 4       Encountered on a network.
+ 
+   General Comment
+ 
+   If you encounter DOS Error 4 on a network, check that your SHELL.CFG
+   file has a sufficent number of files specified. Without a FILES=
+   statement, the default will be 40 (Novell).
+ 
+ ------ADDITIONAL COMMENT-------
+ 
+     Formulation and placing of this 'comment' between other anomalies
+     of Clipper are not very good choosen. Because it's problem only of
+     not enough knowledge of programmers writing applications for NOVELL.
+     It's common knowledge that Novell application can open FROM NETWORK
+ CLIPBBS 1-12                   Page 14                  12 Nov 1991
+
+
+     only 40 files if is not specified bigger number inside of SHELL.CFG.
+ 
+     I saw several people saying with flames "CLIPPER IS NOT ABLE TO OPEN
+     MORE THAN 40 FILES IN NOVELL, I READ IT IN REPORT FROM COMPUSERVE".
+     It's pitty and big mistake and is giving big misunderstanding.
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 15                  12 Nov 1991
+
+
+ ==============================================================================
+                                    COMMENTS
+ ==============================================================================
+
+
+ How to use 4DOS for managing projects
+ 
+          More on the theme of zipping and unzipping whole work areas to
+                              save on disk space...
+ 
+         These two let you put a whole directory branch away into a zip when
+ you aren't working on them.  The zip is in the same place that you
+ otherwise find the directory so the main structure is constant.
+ 
+ The usual sequence is:
+ 
+         cd \projects
+         open hoover
+         .... do hoover stuff
+         close
+ 
+ This works better with an alias like:
+ 
+   alias job=cd \projects ^ if not isdir %1 open %1
+ _______________________________________________________________
+ :: This is used from the directory containing the zip
+ 
+         alias open=unzip -n -d %[1].zip  %[1]\ ^ cd %1
+ _______________________________________________________________
+ :: close.bat
+ :: Fold current or named directory and subs into a zip file
+ :: one level higher.
+ :: Remove files and directories folded
+ 
+         loadbtm on
+ 
+                 :: use argument if present
+         if not "" == "%1" cdd %1
+ 
+                 :: Touch the directory to ensure pkzip has
+                 :: something to do. Avoid Error #12.
+         echo %_date >zip.log
+ 
+                 :: zip it up
+         set fspec=%[_cwps]*.*
+         set zspec=%[_cwp].zip
+         set dspec=%_cwp
+         zip -urp %zspec %fspec
+ 
+         iff errorlevel == 0 then
+                 cd ..
+                 call prune %dspec
+                 echo OK: %fspec ZIPped into %zspec
+            else
+                 echo *** Error %? *** ZIP of %fspec Failed.
+                 endiff
+ CLIPBBS 1-12                   Page 16                  12 Nov 1991
+
+
+         set fspec=
+         set zspec=
+         set dspec=
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 17                  12 Nov 1991
+
+
+             NOTICE of some older articles second time
+ 
+ After long thinking new decision is born. Sometime Clipper BBS Magazine will
+ do a REPRINT of OLD articles from old numbers if they are interesting or in
+ any way useful. This decision is based on possibility that no everyone has
+ available old numbers and maybe can easily get present ones. Therefore it can
+ be handy to have them now.
+ 
+ Therefore if you see that article is TWICE in Clipper BBS Magazine, nothing
+ bad. It's purpose.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 18                  12 Nov 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ CLIPBBS 1-12                   Page 19                  12 Nov 1991
+
+
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - TBUNIQUE.ARJ
+ 
+ File Name:      TBUNIQUE.ARJ
+ Other Names:
+ 
+ File Size:      3,397 bytes
+ File Contents:
+                 TBU.PRG            5217
+                 TBUMAKE.BAT          32
+                 VENDCOMM.DBF       1766
+ 
+ Example of possibility to browse NONunique indexed database as it is
+ indexed with UNIQUE. It is using custom skipper function for ignoring
+ duplicite keys.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - TICKER.ARJ
+ 
+ File Name:      TICKER.ARJ
+ Other Names:
+ 
+ File Size:      5,578 bytes
+ File Contents:
+                 TICKERC.C          1801     TICKER.LNK          140
+                 TICKER.PRG         2616     MSASM.ASM          1025
+                 TICKER.MAK          225     MK.BAT               18
+                 TICKER.DOC         2446     TICKERC.OBJ         770
+                                             MSASM.OBJ           219
+ 
+ THERE IT IS! Programs and sources of pushing SYSTEM timer connected
+ function into CLIPPER. If someone needs to display system CLOCK on screen
+ whenever hee is, then take this and use this!
+ 
+ However, still the same problem is appearing as in call cases of
+ redirection of interrupts. This one is using INT8 to redirect and this MUST
+ be changed BACK to original, otherwise will come mailfunction of system.
+ Thanx to gap in Clipper which isn't allowing simple this way and is able
+ just jump out without ANY executing of some user closing function.
+ Therefore in case of crash of Clipper program will redirection stay in
+ place at all.
+ 
+ However, great idea is born and can have nice future.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 20                  12 Nov 1991
+
+
+                            ClipperNet - GETKEY.ARJ
+ 
+ File Name:      GETKEY.ARJ
+ Other Names:
+ 
+ File Size:      280,043 bytes
+ File Contents:
+                 DEMO.EXE         430080         DEMWPRO.TXT        1727
+                 DEMOGET.SPT        1702         EKOT.TXT            139
+                 DEMOLD.PRG        22591         EMPH.TXT             63
+                 DEMOMAIL.PRM         21         EXP.TXT             279
+                 DEMOMAIL.SPT       1204         GETKEY.LIB       102723
+                 DEMOMAIL.TXT        637         GETKEY.OBJ        15560
+                 DEMOPEN.MEM        9226         GETKEY.PRG        31147
+                 DEMOPEN.PRM          23         KARTIS.DBF         6226
+                 DEMOPEN.SPT        1166         MANUAL.DOC        71128
+                 DEMWPRO.PRM          21         PSOURCE.LIB       29237
+                 DEMWPRO.SPT        2390         TI.CH              9488
+                 TI_MSG.DBF        24971         TI_DEFLT.DBF      18761
+                 TI_MSG.NTX         2048         TI_DEFLT.NTX       2048
+ 
+ From first moment of discovering, this looks as one good library oriented
+ for FIELD INPUT in professional manner and ideas.
+ 
+ Some facilities - integrated wordprocessor, Mail Merging, input of field
+ in virtual window, enhanced entry of date, MemoEdit() replacement, screen
+ painting. Final price of this library is $149. Available .LIB in this
+ DEMO package shouldn't be crippled in any way
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - VSIX800.ARJ
+ 
+ File Name:      VSIX800.ARJ
+ Other Names:
+ 
+ File Size:      250,040 bytes
+ File Contents:
+                 VS_DEMO.EXE       83753         VERNSIX5.LIB     139909
+                 COMPILE.BAT         140         README.BAT           29
+                 CHANGES.DOC         646         READ.ME            1823
+                 REGISTER.FRM       4229         VERNSIX.DOC       12812
+                 FUNCTION.DOC     274949         VERNSIX.NG       144692
+                 MISC.EXE           7954         CLIPBRD.DOC        4658
+                 READ.COM           4288         ERRORSYS.OBJ       7603
+                 ERRORSYS.PRG       9183         MAINTSRC.EXE      18205
+ 
+ Vern Six's library is coming in brand new version written especially for
+ CLipper 5.01.
+ 
+ It's very long list of about 140 functions for Clipper from those parts:
+ 
+ Help creating and displaying, printer support, conversion functions, screen
+ functions....
+ 
+ CLIPBBS 1-12                   Page 21                  12 Nov 1991
+
+
+ Well good documented with very good demo program. Take it and try, i'm sure
+ this is one from libraries which should come into your \LIB directory.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - OCLIP.ARJ
+ 
+ File Name:      OCLIP.ARJ
+ Other Names:
+ 
+ File Size:      13,954 bytes
+ File Contents:
+                 IVAR.ASM           5207
+                 OCLIP.DOC          9892
+                 HISTORY.TXT        2609
+                 OCLIP.PRG          3023
+                 OCLIP.LIB         10752
+                 SIVAR.ASM          5818
+                 OCLIP.CH           1476
+                 ODEMO2.PRG          449
+                 ODEMO1.PRG          243
+ 
+ Finally, this is REAL OBJECT extension for Clipper 5.01. Objects created
+ with this extension are real objects and are recognized as real objects by
+ Clipper itself.
+ 
+ Take it! Investigate! and use.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - STATUS.ARJ
+ 
+ File Name:      STATUS.ARJ
+ Other Names:
+ 
+ File Size:      8,221 bytes
+ File Contents:
+                 STATUS.MAN         5428
+                 STATUS.LIB         3615
+                 INTS.ASM           4217
+                 TIMENTXA.ASM       6800
+                 TIMENTXC.C         1272
+                 CLIPDBF.H          1295
+ 
+ Timer interrupt hooked status indicator of progress of INDEXing or any
+ database operations.
+ 
+ It's actually very nice idea, because it's eliminating manipulation with
+ index key, later hard overwriting of index header and so. Next BIG
+ advantage of this function is, that it can be used also for PACK functions,
+ COUNT, APPEND.. Just for all who are skipping through database and changing
+ recno() of it.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 22                  12 Nov 1991
+
+
+                            ClipperNet - PARTIDX3.ARJ
+ 
+ File Name:      PARTIDX3.ARJ
+ Other Names:
+ 
+ File Size:      17,406 bytes
+ File Contents:
+                 INDEX.TXT         11494
+                 PARTINDX.PRG       3757
+                 PARTIDX3.PRG       6702
+                 TEST.PRG            546
+                 POOL.DBF          26335
+                 PARTINDX.DOC       4845
+                 PARTIDX3.DOC       5785
+                 README.TXT          641
+ 
+ Partial indexing is way how to make index from only some particular records
+ in big database and get index which is small and is fast in processing and
+ was fast created. Take this if you have this need because this is at this
+ moment latest version of this great idea....
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - SNAP497.ARJ
+ 
+ File Name:      SNAP497.ARJ
+ Other Names:
+ 
+ File Size:      275,474 bytes
+ File Contents:
+ ARTFUL.KEY         4049     SNAP.DOC         178718
+ BREEZE.KEY         1127     SNAP.EXE         106912
+ CLIPPER.KEY        1427     SNAP.HLP          56578
+ CLIPPER5.KEY       1233     SNAP.MSG          28774
+ CLIPTOOL.KEY       5305     SNAP.OVR         299632
+ CLIRMA.KEY         1999     SNAPPRT.SNP        1900
+ DB2WORDS.SNP       1039     STRALEY.KEY        6409
+ DB3WORDS.SNP       6543     SWASYNC.KEY        1565
+ DB4WORDS.SNP       4622     VENDOR.DOC         1954
+ DGE.KEY            4159     BLINKER.KEY        3782
+ ESCAPE.KEY         3915     CFTS102.KEY        4343
+ FOXPRO.KEY         2253     FLEXFILE.KEY       4270
+ FUNCKY.KEY         8025     PERSONAL.KEY         73
+ GETIT.KEY          3756     PROCLIP.KEY        6136
+ GRUMP.KEY          3954     QSILVER.KEY        3075
+ NETLIB.KEY         5240     RETTIG.KEY         4258
+                             SMARTMEM.KEY       1151
+ 
+ This is DEMO version of new SNAP which is starting support CLIPPER 5.0.
+ Unfortuntaly HAS not use for programs which are REALLY using Clipper own
+ developed programming. It has big problems with #ifdef, programs which are
+ linked without any .PRG names consequence, ";" multiple command lines and
+ so on. But it's still good hope that one day there will be a SNAP for
+ CLIPPER also.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 23                  12 Nov 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+   Clipper File Distrubution Network (ClipperNet, area CL-DOC))
+       Various systems around whole world
+ 
+   Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-12                   Page 24                  12 Nov 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

@@ -1,0 +1,9 @@
+clipper dbu -m -q -l
+clipper dbuview -m -q -l
+clipper dbustru -m -q -l
+clipper dbuedit -m -q -l
+clipper dbuindx -m -q -l
+clipper dbucopy -m -q -l
+clipper dbuutil -m -q -l
+clipper dbuhelp -m -q -l
+plink86 fi dbu,dbuview,dbustru,dbuedit,dbuindx,dbucopy,dbuutil,dbuhelp lib \clipper\clipper,\clipper\extend

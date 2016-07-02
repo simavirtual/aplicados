@@ -1,0 +1,1346 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+       °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 1, Number 15                                    3 December 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    5.0 FOCUS: Linking tips for saving time - PLL's  .......................  1
+    4DOS 4.0, final version what MS DOS 5.0 should be  .....................  4
+ 2. SOFTWARE  ..............................................................  8
+    QEMM 6.0 and troubles coming with STEALTH options  .....................  8
+ 3. Q&A  ................................................................... 15
+    Q&A: Hard drive is slower under Desqview that without  ................. 15
+    Q&A: Exception 13 with Lantastic and Desqiew/QEMM  ..................... 15
+    Q&A: Desqview is hanging when used PrtScr  ............................. 15
+    Q&A: Getting additional RAM for Desqview  .............................. 15
+    Q&A: Desqview is slowing or stopping when used Communication program  .. 16
+ 4. ANOMALIES  ............................................................. 17
+    ANOMALIES reports and commets  ......................................... 17
+    REPLACE and BEGIN SEQUENCE anomaly  .................................... 17
+    SELECT misunderstanding rather than bug  ............................... 18
+    TBDEMO.PRG file bug  ................................................... 19
+ 5. CLIPPER NET  ........................................................... 20
+    Index of described files in Clipper BBS Magazine  ...................... 20
+    ClipperNet - PAT2-4.ARJ  ............................................... 21
+ CLIPBBS 1-15       Table of Contents (...)         3 Dec 1991
+
+
+    ClipperNet - SNAP50.ARJ  ............................................... 21
+    ClipperNet - SHOWANSI.ARJ  ............................................. 22
+    ClipperNet - ZIP2BAR.ARJ  .............................................. 22
+    ClipperNet - CLIPFPCX.ARJ  ............................................. 22
+    ClipperNet - SEGUE.ARJ  ................................................ 23
+ 6. CLIPBBS  ............................................................... 24
+    CLIPBBS distribution  .................................................. 24
+    CLIPBBS, how to write an article!!!  ................................... 26
+
+                                   - - - - -
+ CLIPBBS 1-15                   Page 1                    3 Dec 1991
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+             5.0 FOCUS: Linking tips for saving time - PLL's
+                            by Roger Donnay
+ 
+ 
+ You know, I really enjoy writing articles about linking.  Only a year
+ ago, if I had written this article, it probably wouldn't received as much
+ as a glance, but now with the new popularity of third-party linkers, the
+ Clipper community has found a new area of interest.  Sure, linking technology
+ may not be as exciting as OOPS or code-blocks, but may I suggest that if
+ you aren't keeping up with the latest in linking techniques, you may find
+ yourself wasting valuable time or valuable memory.
+ 
+ This article will show you how you can use Pre-Linked Libraries to save
+ time linking with Clipper-5.0.
+ 
+ 
+ WHAT ARE PRE-LINKED LIBRARIES?
+ 
+ Prelink-libraries (now commonly referred to as PLL's) were first
+ introduced to the Clipper community in 1988 in the generic version of
+ RTLINK which was a linking system for all languages.
+ 
+ Pre-linked libraries are .PLL files which are built from object files and
+ libraries into and .EXEcutable format.   The only step remaining is the
+ "fixing-up" of any references made by the code in the pre-linked library
+ to those in the rest of the application.  Unlike an .EXEcutable program,
+ a pre-linked library cannot be run from dos, but instead is used in
+ conjunction with another .EXEcutable program.
+ 
+ RTLINK developed their .PLL (prelinked-library) system with the intent of
+ saving disk-space for applications which use common routines.  For example,
+ every Summer 87 Clipper application links in about 150k of code from the
+ CLIPPER.LIB library into the .EXE program.  If you have 10 Clipper .EXE
+ programs, then this code redundancy will use up 1.5megs of disk space.
+ RTLINK allows you to build a .PLL file which pre-links this "common" code.
+ The .PLL file is then referenced when you create the .EXE program with all
+ the "unique" code.  When you run your .EXE program the pre-linked .PLL file
+ will be "fixed-up" to the rest of your application code each time you
+ startup your program.
+ 
+ The only disadvantage I have found with .PLL files is that they cannot
+ contain static reloadable overlays, so PLLs will not allow the overlaying
+ of the Clipper library modules.  See my article entitled "5.0 FOCUS:
+ Memory Management, Overlay Reloading #1" for more information about this
+ RTLINK feature.
+ 
+ 
+ USING PLL's TO SPEED-UP LINKING
+ 
+ You may be wondering how I could write about "Speed-Linking" and not
+ mention "Incremental Linking" - the technology that was developed
+ CLIPBBS 1-15                   Page 2                    3 Dec 1991
+
+
+ specifically for this purpose.  Well, the incremental linking feature
+ of RTLINK is definately NOT one of it's strong points.  Warplink, Blinker
+ and dCLIP are superior in this area, but that discussion is for another
+ article.  The objective of this article is to focus on how to be more
+ productive with RTLINK - the linker that comes with Clipper-5.0.
+ 
+ The Clipper-5.0 distribution includes a BASE50.LNK script file to create a
+ BASE50.PLL file which contains about 277k of code from the Clipper libraries
+ which is common to most Clipper applications.  When creating applications
+ with RTLINK/CLIPPER-5.0 the command /PLL:BASE50 can be inserted into your
+ .LNK response file, thereby telling RTLINK to use the BASE50.PLL file with
+ with .EXE file containing the custom application code.   You must be sure
+ to distribute the BASE50.PLL file with your application.
+ 
+ How do PLL's speed up linking?  Well, once the base code has been
+ "pre-linked" into BASE50.PLL, then only the "application" code needs to be
+ linked when it is changed.  For example, linking a "hello world" test
+ program will take about 10 seconds on a 386 machine as compared to
+ 30 seconds on the same machine without BASE50.PLL.  Since "hello world" is
+ not a practical Clipper application, I thought that a small program which
+ uses a database, index, and a few GETs would be a better method of
+ demonstrating this feature.   A regular "full-link" of my test program
+ took exactly 60 seconds without using a BASE50.PLL.  The same test program
+ linked with BASE50.PLL took only 20 seconds, thereby saving 40 seconds
+ each time I made changes to the program - a two-thirds savings.
+ 
+ 
+ USING FULLBASE.PLL FOR EVEN FASTER LINKING
+ 
+ I consider my time very valuable, so I am always looking for new ways to
+ save time.  I discovered during linking that BASE50.PLL doesn't include
+ all the code in the Clipper libraries, so while linking some test code
+ the libraries had to be accessed to link in code which was not in the
+ base PLL, for example - the supporting code for TBROWSE when using the
+ DBEDIT() function.  This took extra unnecessary time, so I decided to
+ create a base PLL ( I named it FULLBASE.PLL ) which includes every bit of
+ code in all 4 Clipper 5.0 libraries.  Now, when linking test applications
+ using FULLBASE.PLL, the libraries are not used at all during linking,
+ thereby saving an additional 10 seconds.  The same application test code
+ that linked in 60 seconds with NO PLL and 20 seconds with BASE50.PLL,
+ now links in only 10 seconds with FULLBASE.PLL.
+ 
+ 
+ Here is the FULLBASE.LNK script file for creating FULLBASE.PLL:
+ 
+ # FULLBASE.LNK
+ 
+ prelink
+ output FULLBASE
+ verbose
+ 
+ LIB \CLIPPER5\LIB\extend
+ LIB \CLIPPER5\LIB\clipper
+ LIB \CLIPPER5\LIB\terminal
+ LIB \CLIPPER5\LIB\dbfntx
+ 
+ CLIPBBS 1-15                   Page 3                    3 Dec 1991
+
+
+ refer _main
+ refer _VOPS, _VMACRO, _VDB, _VDBF, _VDBFNTX
+ refer _VTERM, _VPICT, _VGETSYS
+ refer _VDBG
+ 
+ refer __MSAVE,__MRELEASE,__SETCENTU,MEMORY,FIELDBLOCK,__INPUT
+ refer __SETFUNCT,__ATPROMPT,__DOJOINLI,__DBCONTIN,__DBCREATE
+ refer __DBCOPY,__DBJOIN,__DBSORT,__DBTOTAL,__DBUPDATE,__FLEDIT
+ refer __DBLIST,_SDFINIT,_VSDF,__DBAPPSDF,_DLMINIT,_VDELIM,__DBAPPDEL
+ refer __DIR,__COPYFILE,__TYPEFILE,__FRMLOAD,__REPORTFO,__LBLLOAD
+ refer __LABELFOR
+ 
+ refer  achoice,acopy,adel,adir,afields,afill,ains
+ refer  ascan,asort,bin2i,bin2l,bin2w
+ refer  curdir,dbedit,dbfilter,descend,diskspace,doserror
+ refer  dbrelation,dbrselect,readinsert,setcancel,readexit
+ refer  errorlevel,fclose,fcreate,ferror,fopen,fread,freadstr
+ refer  fseek,fwrite,gete,hardcr,header,i2bin,isalpha
+ refer  indexext,indexord,islower,isupper,isprinter
+ refer  l2bin,lupdate,memoedit,memoline,memoread,memotran
+ refer  memowrit,mlcount,mlpos,neterr,nextkey,left
+ refer  rat,savescreen,scroll,recsize
+ refer  setcolor,setprc,soundex,strtran,stuff,tone
+ 
+ refer  aclone,aeval,array,asize,dbcreate,dbeval
+ refer  dbstruct,directory,errorblock,ferase
+ refer  frename,isdigit,maxcol,maxrow,padl,padc,padr,qout,qqout
+ refer  readmodal,setcursor,setkey,beginpaint,endpaint
+ refer  getnew,tbrowsenew,tbrowsedb,browse,setmode,setblink,fieldput
+ refer  fieldget,dbf,getenv,version,__get,__wait
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 4                    3 Dec 1991
+
+
+                4DOS 4.0, final version what MS DOS 5.0 should be
+ 
+ 4DOS 4.0 released just few days ago is something what is exactly missed in MS
+ DOS 5.0 version. This final replacement of COMMAND.COM is something
+ recommended for EVERYBODY at EVERY place where is used something unclever
+ called COMMAND.COM.
+ 
+ First, for them who doesn't know what 4DOS is will follow short introduction
+ to name of 4DOS.
+ 
+ 4DOS is absolutely unbelievable replacement of COMMAND.COM. In previous
+ version it was offering great way of using computer memory with saving
+ several KBs with comparation to command.com, extended BATCH language with
+ possibilities to write complete programs including processing of
+ environmental variables as strings and also numeric values, command line
+ editor with complete history, command aliases, pushing keys into keyboard
+ buffer, integrated help, complete compatibility with standard DOS versions
+ including all external commands which are coming with different DOS versions,
+ extend file descriptions included in DIR command of MS DOS, extension into CD
+ command allowing to maintain Directory Stack (that's real great), multiple
+ command per one line. Extended wilcards, global command for working through
+ directories, selection command to apply any program on several files.
+ 
+ For them who know NDOS replacement of COMMAND.COM coming from Symantec with
+ Norton Utilities is needed to say that NDOS is just another version of
+ previous 4DOS.....
+ 
+ It's hard to continue because it is so much things. Actually, i had not idea
+ to write article about old 4DOS, but wanted to write about NEWS in new
+ release of 4DOS. But my final recommendation which i will present NOW:
+ 
+    ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»
+    ºTAKE IMMEDIATELY 4DOS and IF NOTHING ELSE, ONLY TRY IT. IT'Sº
+    ºSOMETHING INCREDIBLE AND REALLY NEEDED. IT'S SAVING MEMORY, º
+    ºTIME, DISK, PROGRAMS, PATIENCE...                           º
+    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼
+ 
+ OK, finally, for all of you who know old version, or are just interested
+ in what 4DOS 4.0 has as special features, see.
+ 
+   Old way handling of replace of COMMAND.COM with 2different files, one
+   loader and second main replacement (machine dependent for 8088 and
+   others) is now replaced with just one 4DOS.COM file.
+ 
+   Very good idea of setting startup options for 4DOS.COM in special
+   text file called 4DOS.INI is creating good example how to setup
+   options of COMMAND.COM replacement. Easy, readable.
+ 
+   Elimination of KEYSTACK.SYS and change into KSTACK.COM was very good
+   step because it's saving problems caused by malfunction of .SYS version
+   because of loading another keyboard drivers AFTER needed .SYS driver. Now
+   can be KSTACK loaded as LAST in many keyboard interrupt hooking programs
+   and can work properly.
+ 
+   As DOS 5.0 command.com can 4DOS load it's resident portions into UMB
+   blocks with compatibility to DOS 5.0 UMB created and ALSO (what is not
+ CLIPBBS 1-15                   Page 5                    3 Dec 1991
+
+
+   true for DOS 5.0) working without ANY problems with QRAM (QEMM is working
+   of course for both the same).
+ 
+   Secondary shell has also special section of settings in 4DOS.INI file
+   which is allowing to use different 'command.com' settings for second
+   copies of 4DOS.COM.
+ 
+   BBS operation is supported by nice /F switch for ignoring Fatal errors in
+   DOS whose normally reguiring user intervence for "Abort, Retry, Ignoer".
+ 
+   Improvement of searching speed of PATH.
+ 
+   Memory requirement for SECOND copy of shell is ONLY 1.7K, primary shell
+   requires just 3KB of your memory (compare it with COMMAND.COM).
+ 
+   DIR command can be colorized with using of special COLORDIR command. It
+   can be nice for higlihting of important or interesting files.
+ 
+   Extended (again) wild card using. Not only just *a*.* (all files with "a"
+   character inside of name), but just  *.txt;*.doc (all *.txt and all *.doc
+   files), also new is [ac-e]*.txt (all .txt files which are starting with
+   "a", "c", "d" or "e".
+ 
+   Starting of shell is first invoking 4START file, ending of copy of shell
+   is invoking 4EXIT batch file. It's allowing to do some tasks for this
+   job.
+ 
+   Executable extensions (4DOS is allowing to tell, that let say extension
+   .WP file when written on keyboard [as DOCUMENT.WP <ENTER>] should be used
+   as WP file.WP) are now allowing to use wild cards (as
+   .WP?=C:\WP51\WP.EXE)
+ 
+   Command grouping known from OS/2 is noe also part of 4DOS.
+ 
+   Microsoft's command processor based message processing scheme is
+   supported in 4DOS,therefore all "Extended error xxx" messages are
+   expanded into real error messages.
+ 
+   Command line history is now allowing to be viewed in popup WINDOW.
+ 
+   New feature called "automatic directory change" is elimination need
+   of CD command (CD \DANIEL can be just used as DANIEL\)
+ 
+   New HELP program and contents are supporting fact of existence of DOS
+   5.0, help is command sensitive.
+ 
+   Many new variable functions about memory, disk and MENUING, decimal
+   places extension into numeric variables (YES, DOS which is directly
+   supporting numeric with decimal places).
+ 
+   Improvement of SPEED of executing of .BAT files
+ 
+   ATTRIB command has new switch allowing execute this command in
+   subdirectories of current directory also.
+ 
+   COPY, MOVE and DEL command are expanded for executing in subdirectories,
+ CLIPBBS 1-15                   Page 6                    3 Dec 1991
+
+
+   do nothing (for testing), acting on Hidden or Read Only files.
+ 
+   Support of \\server\directory descriptions in DIR commands. DIR also
+   supports DOS 5.0 switches and adding some new.
+ 
+   Access of MASTER environment when changing environmental variables
+   (including powerfull EDITOR of environmental variables).
+ 
+   Direct support of DOS 5.0 load capabilities with new LH and LOADHIGH
+   commands.
+ 
+   New REBOOT command for cold or warm boot with optional verification.
+ 
+   Three available timers for use as stop watch or measurement.
+ 
+   Displaying of true name of file called TRUENAME is accesing expanding
+   file name to full form service in DOS.
+ 
+   Possibility to install new internal DOS command via new programming
+   interface.
+ 
+   Improved ANSI detection is reducing some older problems, NDOS.INI
+   file parameter is allowing to force ON that ANSI is installed if is not
+   correctly recognized.
+ 
+   4DOS is more compatible with DR-DOS, Novell Netware compatibility
+   is now improved and not causing any problems with swapping.
+ 
+   Windows 3.x is detected and 4DOS is configured according them.
+ 
+   4DOS.COM is possible to COMPRESS with PKLITE or any other .EXE/.COM
+   compressor and it will work...
+ 
+ That was a list of direct news. It's quite a lot, isn't?
+ 
+ For some better knowing of 4DOS now i will do scan through supplied manuel
+ (900KBs of ASCII text) for some interesting things and will pickup them out.
+ 
+     When 4DOS is used with loading of everything HIGH, then
+     final use of conventional memory is just only 256 bytes....
+ 
+     .BTM files which are new version of .BAT are 5 to 10 times faster than
+     usual .BAT files in any DOS version.
+ 
+     4DOS includes over 80 commands, many of them are unique to 4DOS and
+     are not in any existing DOS. All of them are included in ONLINE help
+     with set of very good examples about use.
+ 
+     Complete using of EMS, XMS memory for swapping and loading high or
+     left from common memory parts of 4DOS including environment, resident
+     portion of DOS, overlays. This is saving great parts of memory. All
+     possible also as DOS swapping.
+ 
+     Direct command function keys enhacement to access command queue,
+     file names (like writing FIL and pressing appropriate function key
+     and get immediate first file matching needs, second press will get
+ CLIPBBS 1-15                   Page 7                    3 Dec 1991
+
+
+     next file from directory matching needs).
+ 
+     Definable keys with assigned complete commands or 'batch' commands.
+ 
+     Internal timer is allowing to watch execution time of commands or
+     complete programs.
+ 
+     4DOS log file is allowing to log ALL commands executed by 4DOS with
+     command for writing user mesages into log.
+ 
+ (somewhere next, continuing)...
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 8                    3 Dec 1991
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+              QEMM 6.0 and troubles coming with STEALTH options
+ 
+      This document discusses how to diagnose and cure problems
+ occasioned by the use of the Stealth feature of QEMM-386, version 6.
+ All users should review the readq.me file that comes with QEMM-386,
+ version 6 for additional information.
+ 
+ FIRST STEP
+      The first step is to ascertain whether Stealth is involved with the
+ problem.  Remove the Stealth parameter (ST:M or ST:F) from the QEMM-386
+ line of the config.sys.  Reboot the computer and try to duplicate the
+ problem.  If the problem still happens then Stealth is not causing the
+ problem and you must address the problem by the means explained in the
+ troubleshooting section of the QEMM-386 manual.
+ 
+ SECTION 1
+ 
+     SECOND STEP
+          If Stealth is involved in the problem restore the Stealth
+     parameter (ST:M) and add XST=F000.  Reboot the computer.  If this
+     works, go to the third step;  if this does not work, go to Section
+     Two. On this step the QEMM-386 line of the config.sys should look
+     something like:
+ 
+           device=c:\qemm\qemm386.sys ram st:m xst=f000
+ 
+     THIRD STEP
+          If XST=F000 solves your problem replace it with X=F000-FFFF,
+     reboot and try again.  The QEMM-386 line of the config.sys should
+     look something like:
+ 
+           device=c:\qemm\qemm386.sys ram st:m x=f000-ffff
+ 
+          If this works, add the parameter FSTC to the qemm line, thusly:
+ 
+           device=c:\qemm\qemm386.sys ram st:m x=f000-ffff fstc
+ 
+     and reboot.  If this works continue;  if this does not work (and
+     FSTC may not work in all circumstances) then remove the FSTC
+     parameter and reboot with the previous QEMM-386 line.  See the
+     section about FSTC below for an explanation of FSTC.
+          In either case, enter Manifest and look at the QEMM-
+     386/Analysis screen.  Look at the last line:  It should look
+     something like this:
+ 
+                     Fn00 IIII IIII IIII IIOO
+ 
+     The portions of the address space with the O in them are being
+     accessed directly.  Some program or piece of hardware is trying to
+     read the contents of the ROM here directly, not merely access them
+     through interrupts.  This portion of the address space must be
+ CLIPBBS 1-15                   Page 9                    3 Dec 1991
+
+
+     allowed to be accessed directly.  This is done by excluding QEMM-386
+     from mapping this area.  In this case the target region is FE00-
+     FFFF.  The appropriate Exclude is X=FE00-FEFF. The correct QEMM-
+     386.SYS line of the config.sys is:
+ 
+          device=c:\qemm\qemm386.sys ram st:m x=fe00-ffff
+ 
+     This Exclude allows Stealth to do its job and costs you only 8K of
+     high address space.
+ 
+     FOURTH STEP
+          If XST=F000 solves your problem while X=F000-FFFF does not then
+     you should try using ST:F instead of ST:M.  You may get more high
+     ram with ST:F than with ST:M XST=F000.
+ 
+ SECTION TWO
+ 
+      This section is only for users with video ROM.  Hercules-compatible
+ monochrome and CGA systems do not have video ROM and thus this section
+ does not apply.  Some machines have their video ROM elsewhere, usually
+ E000-E7FF.  Such users should use E000 (or wherever their video ROM
+ begins) instead of C000.
+ 
+     FIFTH STEP
+          If XST=F000 does not solve your problem then try XST=C000. The
+     QEMM-386 line of the config.sys should look like:
+ 
+          device=c:\qemm\qemm386.sys ram st:m xst=c000
+ 
+     If XST=C000 does not work, go to Section Three.  If XST=C000 does
+     work, go to the next step.
+ 
+     SIXTH STEP
+          If XST=C000 solves the problem then try placing the page frame
+     at C000.  Do this only if the entire C segment is available to put
+     the page frame in.  The QEMM-386 line of the config.sys should look
+     like:
+ 
+          device=c:\qemm\qemm386.sys ram st:m fr=c000
+ 
+     If this works then this may be acceptable solution.  All the address
+     space in which high ram can be created is being used in this
+     configuration.  If this step does not work or, if you cannot put the
+     page frame at C000, go to the seventh step.
+ 
+     SEVENTH STEP
+          If XST=C000 solves the problem but you do not want to (or
+     cannot) put the page frame at C000 then try the parameter
+     FASTINT10:N, where "N" tells QEMM-386 to allow the video ROM's own
+     code to be used.  By default QEMM-386 replaces some of the video
+     ROM's code with its own video code.  This parameter tells QEMM to
+     use the ROM's code.  The QEMM-386 line of the config.sys should look
+     like:
+ 
+          device=c:\qemm\qemm386.sys ram st:m fastint10:n
+ 
+ CLIPBBS 1-15                   Page 10                   3 Dec 1991
+
+
+     If this works then all ROMs are being Stealthed.  You may choose to
+     try the eighth step as an alternative though.  If this does not
+     work, go to the next step.  There is a further discussion of
+     FASTINT10 below.
+ 
+     EIGHTH STEP
+          If XST=C000 solves the problem but FR=C000 or FASTINT10:N does
+     not (or you cannot put the page frame at C000 or do not want to use
+     FASTINT10:N) then replace XST=C000 with X=C000-C7FF.  The QEMM-386
+     line of the config.sys should look like:
+ 
+          device=c:\qemm\qemm386.sys ram st:m x=c000-c7ff
+ 
+     If this works, add the parameter FSTC to the QEMM-386 line, thusly:
+ 
+          device=c:\qemm\qemm386.sys ram st:m x=c000-c7ff fstc
+ 
+     and reboot.  If this works continue;  if this does not work (and
+     FSTC may not work in all circumstances) then remove the FSTC
+     parameter and reboot with the previous QEMM-386 line.  See the
+     section about FSTC below for an explanation.
+          In either case, enter Manifest, go to the QEMM-386/Analysis
+     screen, and look at the Cn00 line.  It should look something like
+     this:
+ 
+                        Cn00 OIII IIII OOOO OOOO
+ 
+     This indicates that the first 4K region of the C segment, in the
+     video ROM, is being accessed directly.  This portion of the address
+     space must be Excluded when QEMM-386 is Stealthing.  The appropriate
+     QEMM-386 line in the config.sys is:
+ 
+          device=c:\qemm\qemm386.sys ram st:m x=c000-c0ff
+ 
+ SECTION THREE
+ 
+      NINTH STEP
+           On some machines there are other ROMs that can be Stealthed;
+     often these are disk ROMs.  The same procedure:  trying XST=??00,
+     then replacing it with the appropriate Exclude of the old kind
+     (X=??00-!!FF) to see if the problem is related to Stealthing or just
+     not having some portion of the ROM's address space directly
+     accessible, can be used.  The trick of making the page frame begin
+     at the beginning of the disk ROM may also work here as well.  If
+     XST=??00 solves your problem, try replacing it with FR=??00,
+     presuming that there is a 64K portion of the address space free
+     beginning at ??00 and that ?? is a multiple of 16.  If some portion
+     of the address space must be Excluded for Stealth to work you should
+     check Analysis with the FSTC and X=??00-!!FF parameters on the QEMM
+     line.
+ 
+     TENTH STEP
+           Use XST=F000, XST=C000, XST=??00, and simultaneously for all
+     ROMs being Stealthed.  Then replace the XSTs one by one with the
+     appropriate regular Exclude (X=F000-FFFF, X=C000-C7FF, X=??00-
+     !!FF...), look at the QEMM-386/Analysis screen of Manifest and
+ CLIPBBS 1-15                   Page 11                   3 Dec 1991
+
+
+     discover what portions of the address space need to be directly
+     available.
+ 
+     ELEVENTH STEP
+          If ST:M does not work try ST:F instead.  If ST:F does not work
+     you should try ST:F XST=C000 (and XST=??00) for other Stealthed ROMs
+     other than the one(s) overlain by the page frame.
+ 
+     TWELFTH STEP
+          If none of these steps solve the problem please pin down
+     exactly what program is failing (and at what point), and file a
+     report with Quarterdeck.
+ 
+ INTERESTING QUESTIONS
+ 
+ WHAT IS FASTINT10:N?
+      QEMM-386, when Stealthing a video ROM, replaces some of the video
+ ROM's code with replacement code written by Quarterdeck.  This
+ replacement code is suitable for most video cards.  The FASTINT10:N
+ (which may be abbreviated F10:N) parameter tells QEMM-386 not to use its
+ own replacement code but the literal code of the video ROM.  This in no
+ way limits the amount of high RAM Stealth creates and may be acceptable
+ solution for those users who need it.  It should only be necessary on
+ unusual video cards.  If placing the page frame at the beginning of the
+ video card's ROM works or if a small regular Exclude also solves the
+ problem you may choose to use this solution instead.
+ 
+ WHAT IS FSTC?
+      The purpose of the FSTC parameter is to make the Analysis procedure
+ accurate.  Some system and video ROMs may not function properly with the
+ FSTC parameter.  If this is the case on your system you will have to
+ perform the Analysis procedure without the FSTC parameter. However, you
+ should be aware in this case that some of the Exclude statements that
+ Analysis prompts you to use may not be necessary.  You can try reducing
+ these Excludes on a trial-and-error basis if you wish.
+      When QEMM-386 Stealths a ROM certain tables may have to be stored
+ by QEMM-386 in its own data area.  This uses a few kilobytes of high
+ RAM.  When a ROM is being Stealthed but the address in which the ROM
+ resides is Excluded (as with X=C000-C7FF) then QEMM-386 cleverly figures
+ out that it does not need to make copies of these tables in its own data
+ area so it saves this memory by not making copies of the tables.  This
+ means that when you do Exclude the portion(s) of the ROM where these
+ tables are stored the ROM will be accessed directly though it would not
+ be if it were not Excluded.  This will cause Analysis to report that a
+ portion of the address space is OK when Excluded even though it would
+ not be accessed directly were it not Excluded.
+      FSTC (FORCESTEALTHTABLECOPY) forces QEMM-386 to make copies of
+ these tables so that inappropriate Excludes are not recommended for the
+ above reason.  FSTC should only be used when you are testing a portion
+ of a ROMs address space for direct access by Excluding the whole ROM.
+ It is not an appropriate parameter for a final configuration.
+ 
+ WHAT ARE ADVANCED DISK FEATURES?
+      The BIOS has a set of function calls intended for use by
+ multitasking programs.  These are Int 15, functions 90 and 91.  The
+ system ROM or disk ROM may issue the Int 15, fn 90 call while it is
+ CLIPBBS 1-15                   Page 12                   3 Dec 1991
+
+
+ waiting for the disk controller to read or write a sector, allowing
+ other programs to execute during this wait.  When the sector is
+ ready, the disk interrupt handler issues an Int 15, Fn 91, signaling
+ the multitasking program that the disk information is ready to be
+ processed by the system or disk ROM.  Some disk caches hook this call to
+ allow your system to go ahead and execute your current program while the
+ system or disk ROM is waiting for its requested sector.  Whereas these
+ caches preserve the stack and register state for the BIOS and the
+ application when doing this pseudo-multitasking, they do not preserve
+ the mapping of the page frame.  Therefore, if the BIOS uses the page
+ frame itself (as does Stealth), this could generate conflicts and system
+ failures.  Since no known disk cache does the proper page frame
+ preservation, QEMM automatically suppresses INT 15, function 90 calls
+ from the BIOS, effectively disabling advanced disk features.  Caches
+ that save and restore the page frame when using advanced disk features
+ can use a programming interface to QEMM-386 to reenable advanced disk
+ features.
+      You may defeat QEMM-386's defeating of this feature with the
+ VIRTUALHDIRQ:N (VHI:N) parameter on the QEMM-386 line of the config.sys.
+ If your cache has these "Advanced Features" and does not save and
+ restore the page frame you will crash or corrupt data on the cached
+ drive(s).
+ 
+ WHAT IF I LOAD A DRIVER THAT USES ROM BEFORE QEMM-386?
+      If you want to load a device driver before QEMM-386 and it uses a
+ ROM then QEMM-386 can still Stealth this ROM if you load the driver
+ HOOKROM.SYS before this driver.  Here is an example:
+ 
+      device=c:\qemm\hookrom.sys
+      device=c:\????????.sys
+      device=c:\qemm\qemm386.sys ram st:m
+ 
+ WHY DOES MY SYSTEM SETUP NO LONGER COME UP WITH ST:M?
+      On machines with a built-in system setup program in the BIOS ROM
+ that can be popped up at any time Stealth may make this feature
+ inaccessible after you have booted.  This is because the setup program
+ accesses the ROM directly.  In order for it to work after QEMM-386 has
+ been loaded you must Exclude the portion of the address space where it
+ is stored.  On most machines this is in F000-F7FF or thereabouts.  You
+ may decide that it is better to use the system setup only on boot and be
+ able to use this portion of the address space for high RAM when you are
+ running.  This is the way many systems are these days and you must
+ reboot to implement the changes anyway so you may consider this a fair
+ trade.
+      Machines with a setup program that loads as a regular program may
+ not present this problem.
+ 
+ WHAT IS GOING ON?
+      With ST:M Stealth is moving out of the address space all ROMs
+ accessed by means of interrupts (you can see what interrupts are being
+ handled by what ROMs in the First Meg/Interrupts screen of Manifest when
+ you are not Stealthing.)  When these interrupts are asserted, QEMM-386
+ puts the ROM code that services the interrupt into the page frame. With
+ ST:F Stealth is allowing the page frame to share the address space used
+ by the ROM, making the underlying ROM code available in the page frame
+ when an interrupt pointing into the ROM is asserted.
+ CLIPBBS 1-15                   Page 13                   3 Dec 1991
+
+
+ HOW CAN IT FAIL?
+       The Stealth technology relies on the practice of using the code in
+ ROMs only by means of interrupts.  With the exceptions listed below when
+ the code in a ROM is accessed directly the program or hardware using
+ this code (or information) will find high RAM there instead with ST:M
+ and will malfunction.  Although this is not common it does happen.
+ Sometimes programs look for identification information:  For video cards
+ this usually happens in the bottom 4K; for system BIOSes this usually
+ happens in FE00-FEFF.  Most users for whom Stealth fails can recover
+ almost all the high RAM Stealth can create with small Excludes of this
+ kind.
+      Exceptions:
+ 
+     1) QEMM-386 does not map High RAM into the last 64 bytes of the
+     system BIOS ROM because they are commonly accessed directly.
+     Accesses here do not cause Stealth a problem.
+ 
+     2)  When a ROM accesses itself directly then it should work IF the page
+     frame begins at this ROM's beginning address.  There are some video cards
+     and disk controllers that fail because the video ROM (disk ROM) does not
+     tolerate relocation.  The ready cure for this symptom is to put the page
+     frame at C000 (or whatever is the beginning of the appropriate video or
+     disk ROM) so that when an interrupt that points into the video ROM (disk
+     ROM) is asserted, and QEMM restores the contents of the video ROM (disk
+     ROM) into the page frame, the ROM code can access itself where it expects
+     to find itself; this is the purpose of step 6 of this method.
+ 
+     3) Direct accesses of one ROM to another work with ST:F.
+ 
+ Disk caches that write directly to and read directly from the page frame
+ cause Stealth to fail unless the DISKBUFFRAME=?? (DBF=??) is used.
+ 
+ Stealth relies on there being interrupts pointing into a ROM in order to
+ make it a target for Stealthing.  If there is a ROM in the address space
+ that QEMM-386 cannot detect as being used then it will not be Stealthed.
+ This may happen for some disk ROMs and for devices that use the ROM only
+ upon initialization.  If there is a ROM without an interrupt pointing
+ into it it is a suspect for being unused.  You should use the Analysis
+ feature of QEMM-386 to discover if this ROM is being used at all.  If it
+ is not then the address space it occupies may be reclaimed with an
+ INCLUDE.
+ 
+ SUMMARY
+      The Stealth technology has been exhaustively tested but the wide
+ variety of software and hardware in the PC world has surprises in it for
+ every program.  The actual Stealthing of interrupts is very successful.
+ The most common failure is due to programs (or other ROMs) trying to
+ access a portion of the ROM directly, rather than by means of interrupt.
+  For this to work the target region of this access must be in the
+ address space at the time of access. This can be achieved by an
+ appropriate exclude of the old kind, usually at a cost of only 4K or 8K
+ of the additional high RAM Stealth is creating; see steps 3 through 11
+ for a procedure to figure these Excludes out.  If the video ROM or
+ adaptor ROM is the target ROM of a problem then placing the page frame
+ over the video ROM or adaptor ROM may work; see step 6.  The "Advanced
+ disk features" that some disk caches use are incompatible with Stealth.
+ CLIPBBS 1-15                   Page 14                   3 Dec 1991
+
+
+ QEMM-386 disables these by default whenever possible if Stealth is used.
+ Some disk caches write directly to the page frame. Such caches should be
+ told to use extended memory or the DISKBUFFRAME=?? (DBF=??) should be
+ used with QEMM-386; see step 2.  If you have a problem intractable by
+ any of these means Quarterdeck would like to hear about it.
+ 
+ This technical note may be copied and distributed freely as long as it
+ is distributed in its entirety and it is not distributed for profit.
+         Copyright (C) 1991 by Quarterdeck Office Systems
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 15                   3 Dec 1991
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+ PROBLEM:   Hard-drive transfer rate much slower within DesqView.
+ 
+ SYMPTOMS:  Transfer rates for hard disk drives are much slower when using
+            DesqView than when running without DesqView.  Benchmarks may show
+            as much as a 6:1 difference.
+ 
+ SOLUTION:  The solution to this problem can usually be found in DesqView
+            Advanced Setup.  If you are not running on a network, set DOS
+            BUFFER for EMS to "0".  This should increase your transfer rate
+            substantially.  If this does not work, try to increase the number
+            until you notice an improvement.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   Exception 13 errors when using DesqView and LANtastic.
+ 
+ SYMPTOMS:  Exception 12 and Exception 13 error messages occur when running
+            DesqView under LANtastic.  You may also get a string space corrupt
+            error message.
+ 
+ SOLUTION:  Check the setting of DOS Buffers for EMS in DesqView Advanced
+            Setup.  This must NOT be set to 0 since you are running on a
+            network.  The default is 2.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   When I do a print screen in DesqView 2.26, my computer hangs.
+ 
+ SYMPTOMS:  Pressing the print screen key while using DesqView 2.26, part of
+            the screen will print and then the computer hangs up.  Even CTRL-
+            ALT-DEL will not reset the machine.
+ 
+ SOLUTION:  DesqView 2.26 uses a different method to do a printscreen.  There
+            is a patch available to change back to the old way of doing it.
+            Patch your program and the problem will go away.
+ 
+            NOTE 1:  It was not necessary to patch DesqView 2.31 on my system.
+                     Perhaps Quarterdeck returned to the old way of handling a
+                     printscreen.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   I can't seem to get enough high ram to load all the things I want
+            to load high.
+ 
+ SYMPTOMS:  Insufficient high ram available to load applications.
+ 
+ SOLUTION:  If you have a color system (EGA/VGA) and never use monochrome, use
+ CLIPBBS 1-15                   Page 16                   3 Dec 1991
+
+
+            the I=B000-B7FF switch on QEMM to include the monochrome video
+            area.  This will gain you 32K of high ram.
+ 
+            NOTE 1:  If you have a monochrome system and never use color, you
+                     may use the I=B800-BFFF switch on QEMM to include the
+                     color video area.  This too will gain you 32K of high ram.
+ 
+            NOTE 2:  Newer versions of QEMM are better at automatically
+                     including these unused video areas.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   Other DesqView windows operations grind to a halt when using a
+            communications program in the foreground.
+ 
+ SYMPTOMS:  Severe performance degradation when using a communications program
+            in another window.
+ 
+ SOLUTION:  Use Tame on your communications program to make it release the
+            clock-ticks it doesn't need.  It made about 400 cps difference on
+            my system.
+ 
+            NOTE 1:  Tame 2.30 has its defaults set differently than 2.20.
+                     This means that you may have to fine tune it to work
+                     correctly.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 17                   3 Dec 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                     REPLACE and BEGIN SEQUENCE anomaly
+ 
+ It's hard to decide WHAT is going wrong in case of coincidence of
+ using BEGIN SEQUENCE for trapping errors of replacing Field values in
+ database. What's the problem?
+ 
+ Try to set up BEGIN SEQUENCE trapper of error when NOT LOCKED record
+ is used for replacing any field in this record. Sample is here:
+ (originally submitted by someone in Fidonet Clipper echo)
+ 
+     DoError()
+ 
+     Function Doerror
+         local errobj
+         ErrorBlock( {|e| MyError(e)} )  // or Break(e) if you like
+         use test shared                 // test1 is Char 10 long
+         BEGIN SEQUENCE
+             // This line causes odd error behaviour as described
+             TEST->test1 := 'changeme'   // replace in unlocked record, eg 38
+             ? 'This line is then executed as if the replace worked!'
+             ? 'However, this line is not. '
+             // Control proceeds to the RECOVER clause
+             // BUT with NO error object passed!
+ 
+         RECOVER USING errobj
+             ? 'Errobj type is "'+valtype(errobj)+'"'  // "U"
+             if valtype(errobj) = 'O'
+                 ? 'Recovered from ',errobj:description
+                 ?
+             else
+                 ? "How did we get here without an error object?"
+                 ?
+ CLIPBBS 1-15                   Page 18                   3 Dec 1991
+
+
+             endif
+ 
+         END SEQUENCE
+         ? "Execution proceeds normally"
+         ? "And finally returns"
+     return (NIL)
+ 
+     static func MyError(e)
+         break e
+     return (e)
+ 
+ Have to say, that i was trying MANY changes to see if something is not going
+ wrong. But it's just wrong in Clipper. In case that replacement of field
+ in TEST is changed for example to line "? 10/0", then correctly is trapped
+ error "Division by zero" without any problems.
+ 
+ What is main problem?
+     1)  MyError() is called with correct set of variable e
+         to correct information
+     2)  Break (e) is executed, but _NOT_ into RECOVER statement
+         it's continuing in line AFTER replace statement (:=)
+     3)  ONE line after is executed and _THEN_ is execution
+         going to RECOVER USING
+     4)  BUT (another anomaly) errobj which has to be set to correct
+         value (equivalent to _e_ from point 1] ) is UNDEFINED at ALL
+ 
+ What to say for end? Thank you Nantucket for _GOOD_ beta testing...
+ 
+ Cheers
+ Daniel
+
+ ------------------------------------------------------------------------------
+
+
+                     SELECT misunderstanding rather than bug
+ 
+ Problem:
+ 
+     USE TEST NEW
+     ?SELECT('TEST')         && returns 1, expected 1
+     ?SELECT('ABC')          && retunrs 0, expected 0
+     ?SELECT('F:ABC')        && returns 6, expected 0
+ 
+ Answer:
+ 
+     Well, it's mostly misunderstanding between way how something should
+     work. NANTUCKET as usual is leaving something not done and latest
+     SELEC() is returning 6 because of "A"=1 "B"=2 "C"=3 "D"=4 "E"=5 and
+     "F"=6. (Aliases coming from dBASE times).
+ 
+     SELECT() has not in any case parameters as FILE DESCRIPTION, therefore
+     case of 'F:ABC' is wrong at all when looking to valid argument, but and
+     but, NAN can expect things like this and test correctly everything <GRIN>.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 19                   3 Dec 1991
+
+
+                                 TBDEMO.PRG file bug
+ 
+ There is a bug in the 'tbdemo.prg' file that comes with Clipper 5.01 which
+ affect operations that involve appending new records. I discovered the bug
+ when I tried to redefine the K_INS (insert) key to go to the bottom
+ of the file and append a new record. To fix the bug, replace all instances
+ of '(b)' with '(browse)' in the code fragment below:
+ 
+     --------------START of NANTUCKET TBDEMO.PRG----------------
+     #define TURN_ON_APPEND_MODE(b)      (b:cargo := .T.)
+     #define TURN_OFF_APPEND_MODE(b)     (b:cargo := .F.)
+     #define IS_APPEND_MODE(b)           (b:cargo)
+     -----------------------END---------------------------------
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 20                   3 Dec 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ CLIPBBS 1-15                   Page 21                   3 Dec 1991
+
+
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - PAT2-4.ARJ
+ 
+ File Name:      PAT2-4.ARJ
+ Other Names:
+ 
+ File Size:      6,432 bytes
+ File Contents:
+                 PEGS.PRG           8910
+                 PEGS.OBJ           4604
+                 PAT4.DOC           1217
+ 
+ FT_PEGS() function fix for not calling err_msg() with too long message.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - SNAP50.ARJ
+ 
+ File Name:      SNAP50.ARJ
+ Other Names:
+ 
+ File Size:      276,876 bytes
+ File Contents:
+                 SNAP.HLP          56578         ARTFUL.KEY         4049
+                 SNAP.MSG          28774         BREEZE.KEY         1127
+                 SNAP.OVR         301326         CLIPPER.KEY        1427
+                 SNAPPRT.SNP        1900         CLIPPER5.KEY       1233
+                 STRALEY.KEY        6409         CLIPTOOL.KEY       5305
+                 SWASYNC.KEY        1565         CLIRMA.KEY         1999
+                 VENDOR.DOC         1954         DB2WORDS.SNP       1039
+                 BLINKER.KEY        3782         DB3WORDS.SNP       6543
+ CLIPBBS 1-15                   Page 22                   3 Dec 1991
+
+
+                 CFTS102.KEY        4343         DB4WORDS.SNP       4639
+                 FLEXFILE.KEY       4270         DGE.KEY            4159
+                 ESCAPE.KEY         3915         PERSONAL.KEY         49
+                 FOXPRO.KEY         2253         PROCLIP.KEY        6136
+                 FUNCKY.KEY         8025         QSILVER.KEY        3075
+                 GETIT.KEY          3756         RETTIG.KEY         4258
+                 GRUMP.KEY          3954         SMARTMEM.KEY       1151
+                 NETLIB.KEY         5240         SNAP.DOC         179622
+                                                 SNAP.EXE         107360
+ 
+ Another version of SNAP. Snap is great documentor program for dBASE
+ compatible languages. It works like a charm for dBASE, FOXBase, Clipper
+ Summer. This is first version which is more compatible with Clipper 5.01,
+ but still it's only little, therefore NO ONE from my projects can be
+ documented with this program. Problem mostly is, that SNAP is not yet using
+ all new things coming in Clipper 5.01.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - SHOWANSI.ARJ
+ 
+ File Name:      SHOWANSI.ARJ
+ Other Names:
+ 
+ File Size:      1788 bytes
+ File Contents:
+                 SHOWANSI.PRG      20316
+ 
+ Function with text as parameter. Result is, that all ANSI codes used in
+ text are correctly displayed WITHOUT ANSI.SYS loaded and only with using of
+ standard Clipper I/O functions.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - ZIP2BAR.ARJ
+ 
+ File Name:      ZIP2BAR.ARJ
+ Other Names:
+ 
+ File Size:      1,171 bytes
+ File Contents:
+                 BARCODE.PRG       11113
+ 
+ Function for printing BarCode (USPS) on EPSON printer. Probably written
+ for Clipper Summer 87.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - CLIPFPCX.ARJ
+ 
+ File Name:      CLIPFPCX.ARJ
+ Other Names:
+ 
+ CLIPBBS 1-15                   Page 23                   3 Dec 1991
+
+
+ File Size:      35,149 bytes
+ File Contents:
+                 BART.PCX          39366
+                 CLFPCX.DOC         3890
+                 CLFPCX50.LIB       4096
+                 CLFPCX50.PRG       2786
+                 CLFPCX87.LIB       4096
+                 CLFPCX87.PRG       2761
+                 MINDSCAP.PCX       4777
+                 MJTITLE.PCX       25963
+                 PCX50.PRG          1253
+                 PCX87.PRG          1256
+ 
+ Clipper Summer and 5.01 functions for displaying PCX files one EGA/VGA
+ screens. It's VERY fast displayer with use for small (around 50KB) big PCX
+ files.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - SEGUE.ARJ
+ 
+ File Name:      SEGUE.ARJ
+ Other Names:
+ 
+ File Size:      402,410 bytes
+ File Contents:
+                 SEGUE_NC.EXE     539648         BD.OVL            20480
+                 NBANNER.PRG        1241         FL.OVL             7168
+                 PR_SUP_N.DOC       1086         MG.OVL             4096
+                 SUPVRLST.EXE     278528         DR.OVL            19456
+                 CT_DEMO.PRG        5082         CT.OVL             5120
+                 BD_DEMO.PRG       16835         NPRINTER.PRG       1512
+                 SEG_TECH.TXT       2402         NCLASS.PRG         1423
+                 DEMO.DBF            220         NCOPIES.PRG        1480
+                 SUPVRLST.LNK         94         NSPLLPT.PRG        1336
+                 SUPVRLST.PRG       1977         NSPLFRM.PRG        1346
+                 SEG_SUBS.LST      14664         NSPLQUE.PRG        1577
+                 README.1ST          792         NSPLSRV.PRG        1945
+                 SS_DEMO.PRG        2606         NSPLTABS.PRG       1279
+                 WE.OVL             5120         NSPLTMO.PRG        1373
+                 CTSUP.OVL          3072         NSPOOL.PRG         1640
+                 FS.OVL            25600         TT.OVL             3072
+                 PR.OVL             9216         SZ.OVL            11264
+                                                 BDSUP.OVL          9216
+ 
+ Demo version of Novell Netware Clipper interface library. I hadn't time to
+ test it, but it seems like good one. Only one is coming to my mind, 530K
+ big .EXE file distributed as demo... it's too much. maybe BASE50.PLL can
+ solve this..
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 24                   3 Dec 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 1-15                   Page 25                   3 Dec 1991
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-15                   Page 26                   3 Dec 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

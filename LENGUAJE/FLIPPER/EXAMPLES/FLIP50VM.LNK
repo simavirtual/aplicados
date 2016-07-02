@@ -1,0 +1,348 @@
+#-------------------------------------------------------------------------
+#
+#  Flipper Library Virtualization Template
+#
+#  Freeformat Auto-Response File
+#
+#-------------------------------------------------------------------------
+
+SILENT
+
+LIBRARY d:\flip50\flip5, d:\flip50\clip50
+
+VIRTUALIZE CODE
+CODECLASS CODE
+
+MODULEWARNINGSOFF
+
+#############################################################################
+#
+# ROOT MODULES
+#
+#############################################################################
+
+LOCALON
+    #########################################################################
+    #
+    # LOCAL ROOT MODULES
+    #
+    #########################################################################
+
+   Module MKTXTPIC.C
+   Module FILL.ASM
+   MODULE scankey.asm
+   MODULE magfcn.c
+   MODULE xpandch.asm
+   Module TABLET.ASM
+   Module MOUSE_0.ASM
+   Module MOUSE_1.ASM
+   Module MOUSE_2.ASM
+   Module MOUSE_3.ASM
+   Module MOUSE7_8.ASM
+   Module MOUSE_9.ASM
+   Module MOUSE_11.ASM
+   Module MISCBIOS.ASM
+   Module CAD_EXTR.C
+    #-----------------#
+    # Near references #
+    #-----------------#
+
+    #------------------#
+    # very small pages #
+    #------------------#
+
+    MODULE _idiv.asm       # in root since so small
+    MODULE findb.asm       # in root since so small
+    MODULE _gfxmove.asm    # in root since so small
+    MODULE rot_180.asm     # in root since so small
+    MODULE mv_char.asm     # in root since so small
+    MODULE findw.asm       # in root since so small
+    MODULE getlnatt.c      # in root since so small
+    MODULE gfxclose.c      # in root since so small
+    MODULE gfx_rdwr.c      # in root since so small
+
+    #-------------------------------------------------------------#
+    # Frequently called routines to reduce swapping and vectoring #
+    #-------------------------------------------------------------#
+
+    MODULE callbios.asm
+    MODULE ega_herc.asm
+
+    #---------------------------------#
+    # make critical routines be local #
+    #---------------------------------#
+
+    #----------------------------#
+    # interrupt handlers to root #
+    #----------------------------#
+    Module SETEVHND.ASM
+    Module SETKYBD.ASM
+
+    MODULE comm.asm
+
+LOCALOFF
+
+
+
+    #########################################################################
+    #
+    # NON-LOCAL ROOT MODULES
+    #
+    #########################################################################
+
+    MODULE set_xor.c       # in root since so small
+                  # non-local since refs __retni
+
+    #-------------------------------------------------------------#
+    # Frequently called routines to reduce swapping and vectoring #
+    #-------------------------------------------------------------#
+
+
+    #---------------------------------#
+    # make critical routines be local #
+    #---------------------------------#
+
+    MODULE GETEVENT.C
+    MODULE MSONLY.C
+    MODULE MSSEARCH.C
+
+LOCALUNKNOWN
+    #########################################################################
+    #
+    # AUTOLOCAL ROOT MODULES
+    #
+    #########################################################################
+
+   MODULE PIC_ASM.ASM
+   MODULE PUT_PEL.ASM
+   MODULE FIND_PEL.ASM
+   MODULE FASTLINE.ASM
+   MODULE GET_PEL.ASM
+   MODULE _LO_OVAL.ASM
+   MODULE VIDBLOCK.ASM
+   Module ARCPTS.C
+   Module SMALLERR.C
+
+    #------------------#
+    # very small pages #
+    #------------------#
+
+    MODULE gfxdel.c        # in root since so small
+    MODULE rotfcn.c        # in root since so small
+
+#############################################################################
+#
+# VIRTUAL STUFF
+#
+#############################################################################
+
+VMBEGINPAGES
+
+    SEPARATE
+
+      LOCALON
+            #################################################################
+            #
+            # LOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+
+
+   Module FLPCOLOR.C
+   Module FASTSWAP.C
+   Module LO_QSORT.ASM
+   MODULE reset.c
+   Module RE_SCALE.C
+   Module SCALESET.C
+    MODULE wrtchar.asm
+       MODULE ega_buf.asm
+       MODULE rot_90.asm
+       MODULE rot_270.asm
+       MODULE bee_bop.asm
+       MODULE gfxopen.c
+       MODULE gfxlseek.c
+
+      LOCALOFF
+
+            #################################################################
+            #
+            # NON-LOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+            Module CPAIR.C
+
+      LOCALUNKNOWN
+            #################################################################
+            #
+            # AUTOLOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+
+   Module LABELSET.C
+   Module INIT_GFX.C
+   Module BACKSCRN.C
+   Module EXTD_EGA.C
+   Module SCREEN.C
+   Module SETVPAGE.C
+   Module GET_PT.C
+   Module CURRPT.C
+   Module MOVE_TO.C
+   Module POINT.C
+   Module PSET.C
+   Module SETCSTAK.C
+   Module CLIPPAIR.C
+   Module DRAWLINE.C
+   Module FLP_BOX.C
+   Module _LINES.C
+   Module FILL_FIG.C
+   Module LINE_PAT.C
+   Module FILL_PAT.C
+   Module POLYLINE.C
+   Module POLY_DOT.C
+   Module FLP_CLS.C
+   Module LO_OVAL.C
+   Module LOPATARC.C
+   Module DR_CURVE.C
+   Module ARC_GEN.C
+   Module LO_OVARC.C
+   Module ASPECT.C
+   Module PAINT.C
+   Module FASTFILL.C
+   Module DRAW.C
+   Module GARG.C
+   Module WORLDSET.C
+   Module TRIGMATH.C
+   Module MATHSET.C
+   Module ASCIISET.C
+   Module LO_MALOC.C
+   Module CREATPIC.C
+   Module OPENPIC.C
+   Module CLOSEPIC.C
+   Module LOPIC.C
+   Module GET_FPIC.C
+   Module PUT_FPIC.C
+   Module COMPRPIC.C
+   Module DELETPIC.C
+   Module MEM_PIC.C
+   Module GET_PIC.C
+   Module MKGFXPIC.C
+   Module PUT_PIC.C
+   Module PTXT_PIC.C
+   Module PGFX_PIC.C
+   Module MALOCPIC.C
+   Module VIEW.C
+   Module MOVE_VU.C
+   Module MKVUFILE.C
+   Module PCX.C
+   Module PIC_FILE.C
+   Module MOUSER.C
+   Module MSBUTTON.C
+   Module SAVEBACK.C
+   Module FLPSCROL.C
+   Module GETS.C
+   Module CAD_CURS.C
+   Module CHKPRINT.ASM
+   Module CLOSEFNT.C
+   Module FALIGN.C
+   Module FCOLOR.C
+   Module FMAGNIFY.C
+   Module FROTATE.C
+   Module FSPACE.C
+   Module FUNDERLN.C
+   Module FPRINTFN.C
+   Module FLP_FATT.C
+   Module GETFHGT.C
+   Module GETLNLEN.C
+   Module LN_DIR.C
+   Module LN_JUST.C
+   Module LN_UNDER.C
+   Module OPEN_FNT.C
+   Module FLPPRINT.C
+   Module LO_PRINT.C
+   Module SAVEFONT.C
+   Module FTYPE.C
+   Module TEXT.C
+   Module ERRORSET.C
+   Module STROKE.C
+   Module MOUSE5_6.ASM
+   Module MOUSE_12.ASM
+   Module MOUSE_15.ASM
+   Module MOUSE_16.ASM
+   Module MOUSE_19.ASM
+   Module GS_DTA.ASM
+   Module FLIPINIT.C
+   Module INITSET.C
+   Module AXISCALC.C
+   Module XYSET.C
+   Module SAYMARK.C
+   Module SCL_DRAW.C
+   Module CLIPSET.C
+   Module PIECHART.C
+   Module GRAPHIC.C
+   Module REGRESS.C
+   Module AT_SET.C
+   Module AREASET.C
+   Module RETSCALE.C
+   Module AXS_DATA.C
+   Module COL_DATA.C
+   Module GRF_DATA.C
+   Module LEGEND.C
+   Module ADDSCALE.C
+   Module LINES.C
+   Module MODESET.C
+   Module COLORSET.C
+   Module SPLINE.C
+   Module POLY.C
+   Module PRX_EXIT.C
+   Module LD_MREC.C
+   Module LD_DREC.C
+   Module PRX_OPT.C
+   Module PRX_ASPC.C
+   Module PRX_STAT.C
+   Module PRX_PRT.C
+   Module POR_DTMX.C
+   Module PRX_LAZR.C
+   Module HPDRIVER.C
+   Module PSDRIVER.C
+   Module COM.C
+   Module COM_INTR.C
+   Module EXTENDF.ASM
+   Module CAD_MOUS.C
+   Module CAD_GRID.C
+   Module CAD_CLOS.C
+   Module CAD_LAYE.C
+   Module CAD_RETN.C
+   Module CAD_DRAW.C
+   Module CAD_OADD.C
+   Module CAD_OHOT.C
+   Module CAD_MOVE.C
+   Module CAD_SNAP.C
+   Module CAD_ODEL.C
+   Module CAD_MARK.C
+   Module CAD_COMB.C
+   Module CAD_BUFF.C
+   Module CAD_PNTS.C
+   Module CAD_SAVE.C
+   Module CAD_EDIT.C
+   Module CAD_OPEN.C
+   Module CAD_MATH.C
+
+VMENDPAGES
+
+MODULEWARNINGSON
+
+
+
+#############################################################################
+#
+# TARGET COMMANDS can reduce vectoring and make more efficient programs
+#
+#############################################################################
+
+TARGETWARNINGSOFF
+
+#include all CALLTARGET/JUMPTARGET commands here
+
+TARGETWARNINGSON
+
+

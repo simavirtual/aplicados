@@ -1,0 +1,10 @@
+#
+#  96.02.12    D52.LNK for CA-Clipper 5.2
+#
+#  This sample link file demonstrates how to link a Windows DLL containing
+#  CA-Clipper 5.2 code will be dynamically linked to a CA-Clipper code EXE.
+#
+   @d                      # Include the generic link file for all versions
+
+   fil bldclp52            # Clipper 5.2 DLL OBJ for the DLL
+

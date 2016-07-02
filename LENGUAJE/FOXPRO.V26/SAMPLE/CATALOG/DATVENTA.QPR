@@ -1,0 +1,25 @@
+
+* WIZNAME = WZ_BQUER
+* VERSION = .96
+* TIMESTAMP = 493572638.0000
+* CLIENTSERVER =
+* TABLES = C:\SAMPLE\FACTURAS.DBF
+* FIELDS = Facturas.fechfac;PEDIDOS=COUNT(Facturas.c¢dfac);VENTOTALES=SUM(Facturas.impfac)
+* SORT FIELDS = Facturas.fechfac
+* GROUP = Facturas.fechfac:1D
+* SQL = SQL Select statement for Mailmerge Wizard:
+* SELECT Facturas.fechfac,COUNT(Facturas.c¢dfac) PEDIDOS,SUM(Facturas.impfac) VENTOTALES;
+*	FROM C:\SAMPLE\FACTURAS.DBF;
+*	ORDER BY Facturas.fechfac;
+*	GROUP BY Facturas.fechfac;
+*	INTO CURSOR Consulta
+IF !USED("Facturas")
+	USE LOCFILE("C:\SAMPLE\FACTURAS.DBF","DBF","Buscar C:\SAMPLE\FACTURAS.DBF ?") AGAIN IN 0 ALIAS Facturas
+ENDIF
+SELECT Facturas.fechfac,;
+		COUNT(Facturas.c¢dfac) AS PEDIDOS,;
+		SUM(Facturas.impfac) AS VENTOTALES;
+	FROM Facturas;
+	ORDER BY Facturas.fechfac;
+	GROUP BY Facturas.fechfac;
+	INTO CURSOR Consulta

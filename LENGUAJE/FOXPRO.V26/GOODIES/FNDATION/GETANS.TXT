@@ -1,0 +1,21 @@
+
+
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+Respuestas del test de READ/Window/Menu
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+
+1.		Que se a¤adir¡a un nivel de READ cada vez que seleccione una aplicaci¢n del men£ y, por tanto, obtendr¡a un mensaje de error "Demasiados READs..." en poco tiempo.			
+
+2.		Debido a que el procedure "menuhit" est  contenido en EX1.MPR que no es parte de EX1.PRG      
+
+3.		Se encuentra en la funci¢n "stopread", que se eval£a cada vez que se hace un DEACTIVATE a una ventana de aplicaci¢n.
+
+4.		Como m ximo hay tres READs activas: el READ de Foundation, uno de los de las aplicaciones, y un READ MODAL asociado con "browser" o con "finder".
+
+5.		El procedure llamado "efface", que se llama desde el postprograma de cada pantalla, asegura que se libera el panel de control cuando se cierra la £ltima ventana de aplicaci¢n.      
+
+6.		El READ de la aplicaci¢n ha sido terminado debido a que su cl usula DEACTIVATE ha devuelto un .T. pero el READ de Foundation permanece activo.      
+
+7.		El READ de Foundation est  activo todav¡a.      
+
+8.		La primera cl usula DEACTIVATE de una aplicaci¢n devuelve un .T. y, por tanto, hace que termine ese READ de aplicaci¢n. Al terminar el READ de la aplicaci¢n se activa la cl usula VALID del READ de Foundation. Esta rutina, llamada "myhandler" detecta que WONTOP() es un nuevo READ de aplicaci¢n, y procede a ejecutar el .SPR asociado a dicha ventana.

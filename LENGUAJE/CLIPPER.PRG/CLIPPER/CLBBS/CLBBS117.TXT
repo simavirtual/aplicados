@@ -1,0 +1,2468 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ŞŞŞŞ±°ŞŞŞŞ±±±±°ŞŞŞŞ±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±°ŞŞ°°ŞŞ±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±°ŞŞ±±°°±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞŞ±±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞ±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±°Ş±±°ŞŞ±±±±°ŞŞ°°±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±±±°ŞŞŞ±±
+       °°±°°ŞŞ±±ŞŞ±°ŞŞ±°ŞŞ±±°ŞŞ±±±±°ŞŞ±±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±±°°ŞŞŞŞ±°ŞŞŞŞŞŞŞ±°ŞŞŞŞ±±°ŞŞŞŞ±±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 1, Number 17                                   17 December 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. SOFTWARE  ..............................................................  1
+    Some interesting Network and CLipper files from ClipperNet HQ system  ..  1
+ 2. Q&A  ................................................................... 36
+    Q&A: ZIP downloads are sometime slower  ................................ 36
+    Q&A: "Drive not ready" message from hard disk  ......................... 36
+    Q&A: Desqview is doing strange things  ................................. 37
+    Q&A: NATIONal support and using of PLL's  .............................. 37
+ 3. ANOMALIES  ............................................................. 39
+    ANOMALIES reports and commets  ......................................... 39
+ 4. CLIPPER NET  ........................................................... 40
+    Index of described files in Clipper BBS Magazine  ...................... 40
+ 5. CLIPBBS  ............................................................... 42
+    CLIPBBS distribution  .................................................. 42
+    CLIPBBS, how to write an article!!!  ................................... 44
+
+                                   - - - - -
+ CLIPBBS 1-17                   Page 1                   17 Dec 1991
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+    Some interesting Network and CLipper files from ClipperNet HQ system
+ 
+ 
+ Following files are to be found on CLipperNet HQ system, 2:240/100, Mike
+ Paschen. System is located in Germany (EUROPE :-) with phones
+ 
+     49-40-846986 and 49-40-846987
+ 
+ 
+ 
+ 3CBOOT  .ARJ   52.883 22.11.91* [00] NOVELL 386 NLM to boot from 3COM
+                                      Workstations
+ BTR515  .ARJ   73.687 16.11.91* [06] Btrieve 515 Patches von Novell (Upload
+                                      by: Hans Dieter Piekarek)
+ FYI491  .ARJ   74.060 22.11.91* [04] Inofficial Tips and Hints for NOVELL
+                                      Netware
+ GETFILE .ARJ   10.298 16.11.91* [05] Dateiauswahl fr Clipper 5.01 nicht
+                                      getestet (Upload by: Gerd Hussmann)
+ IPXPDI  .ARJ   11.694 17.11.91* [01] PD IPXODI Driver (additional to
+                                      PKT271.ARJ)
+ LIBRARY5.ARJ   98.018 12.11.91* [12] LIBRARY FOR CLIPPER 5.0 (Upload by:
+                                      Sebastiano Manca)
+ NCFAX   .ARJ   41.161 18.10.91  [20] Versendet Faxe aus dem Norton Commander
+                                      (Upload by: Wolfgang Diel)
+ NDSCSI  .ARJ    8.120 22.11.91* [01] For NOVELL and SCSI Devices etc. (Good
+                                      Hints & Tips)
+ PDSQL   .ARJ  133.417 25.10.91  [06] Public-Domain SQL-Interpreter von
+                                      Silvaware (Upload by: Arnold Ude)
+ PKT721  .ARJ  460.246 16.11.91* [04] CLARKSON Lan-Card Packet-Driver-Kit V.
+                                      7.21 **SUPE **SUPER**
+ QS201F  .ARJ  371.600 19.11.91* [08] Quick Screen Clipper 5.01
+                                      Bildschirmgenerator (neueste Version)
+                                      (Upload by: Michael Peters)
+ RPLFIX2 .ARJ    4.375 16.11.91* [00] Neues Rplfix fr DOS 5.00 auch fr XT
+                                      (Upload by: Hans Dieter Piekarek)
+                                      ) (Upload by: Kai Hbener)
+ UMB_DRVR.ARJ   13.375 28.10.91  [63] Super DOS 5.0 UMB Treiber !
+                                      Javier Garcia)
+ 
+ 
+ 
+ 
+ 10USER  .REL    2.733 22.09.91  [07] Ankndigung von NOVELL 386 3.11 10User
+ 896K    .ARJ    5.186 24.06.90  [02] Information about DOS using 896k
+ ADAPTE  .ARJ    3.257 20.09.91  [12] Problem DOS 5.0/EMM386/Adaptec beheben
+ IMSP-N  .ARJ    7.485 31.10.91* [13] Auflistung der verfgbaren NLM's fr
+                                      NOVELL 386
+ NOVDR   .REL    3.067 22.09.91  [05] Special Offer von NOVELL fr DR-DOS 6.0
+ 
+ 
+ CV_FIX11.ARJ    4.392 17.04.89  [01] Microsoft CodeView fixes
+ CLIPBBS 1-17                   Page 2                   17 Dec 1991
+
+
+ DOS402  .ARJ    4.037 05.10.89  [02] List of fixes available in PC-DOS 4.02.
+ DOS40MSG.ARJ   34.145 09.05.88  [02] Comments on, problems with DOS 4.0.
+ DOS41PAT.ARJ    9.880 16.06.91  [14] Patch fr DOS 4.01
+ DOS4APAR.ARJ   12.803 26.02.90  [01] Open problems w/IBM-DOS 4.0 as of
+                                      02/26/90
+ DOS4BUG .ARJ    3.700 20.08.89  [01] Info on DOS 4.0 bug and DESQview.
+ DOS5BETA.PAT    1.791 02.07.91  [27] damits ab juli 91 auch noch geht
+ DRIVRSYS.ARJ   24.472 26.11.89  [02] DRIVER.SYS facts not in PC DOS manual
+ DRVSYS  .ARJ    3.488 21.07.89  [01] DOS 3.30 DRIVER.SYS bug fix re 1.44MB
+                                      disk
+ DSKFIX  .ARJ    5.461 02.06.91  [02] Fix for speed up AT disk problem
+ DSPTCH  .ARJ    8.515 22.04.89  [03] Official fix for MS-DOS 4.01 from CIS
+ DV060388.ARJ   11.743 20.08.89  [01] Four DESQview update files from 6/3/88.
+ FAST_COM.ARJ    2.504 17.04.89  [02] Fix MSDOS to allow mode 19200 serial com
+ FIXCACHE.ARJ   34.592 26.10.91  [65] Unterdrckt die Startmeldungen von
+                                      Hyperdisk (Upload by: Dieter Kuhnke)
+ PATDOS32.ARJ   74.818 17.04.89  [01] Patches to DOS 3.2 from IBM!
+ QPATCH  .ARJ   24.302 19.07.91  [29] Patcht alle QEMM Produkte (!)
+ 
+ 
+ 
+ 
+ 
+ 43_Z_EGA.ARJ    4.949 12.12.90  [00] 43 Z. auf Ega-Bildschirm aus Clipper
+ A86LKMEM.ARJ    4.040 12.12.90  [05] Demo z.locken v. Mem-Dateien im Netzwerk
+ ACCI10  .ARJ   28.720 12.12.90  [04] Zusatz-Library. Clipper
+ ACHOICE .ARJ    4.687 12.12.90  [05] Clipper87 ACHOICE Menfhrung
+ ACOMCLIP.ARJ   11.644 31.12.88  [05] Clipper comm routines-asm source
+ ADRDBF  .ARJ    2.999 12.12.90  [02] Adressendbfs. Clipper
+ ADRESS  .ARJ   73.258 12.12.90  [07] Adressenprogramm. f. Clipper
+ AE0190  .ARJ   42.160 08.07.91  [09] Misc. low level functions including
+                                      mouse, gameport, numfloppy,numhard,
+                                      numserial,numprinter (includes network
+                                      cards), ramsize, drive type, caps/num
+                                      on/off, color, input text with wrap,
+                                      etc.
+ AE0190NG.ARJ    5.971 08.07.91  [08] Norton Guide fr AE0190 Clipper library.
+ AECLIPB .ARJ    4.299 08.07.91  [04] Clipper UDF which provides a quick menu
+                                      builder. Example PRG and OBJ, but no
+                                      source code for OBJ.
+ AECLIPD .ARJ    8.767 08.07.91  [09] Clipper S'87 library function with C
+                                      source and excellent instructions on
+                                      producing C functions for Clipper.
+ AECLIPI .ARJ    5.699 08.07.91  [07] Clipper UDF which determines index key
+                                      of dBase (NDX), Clipper (NTX), Fox
+                                      (IDX), and dBase IV (MDX) index files.
+ AECLIPM .ARJ   37.642 08.07.91  [03] 48 advanced mathematics functions for
+                                      S'87 Clipper Written in MSC5.1 for
+                                      speed. LIB and DOC included, but no
+                                      source. Fully functional demo paints
+                                      (C) notice each time function called.
+ AECLIPS .ARJ   10.910 08.07.91  [07] Library of low level functions for
+                                      determining video mode, number of
+                                      floppy's, serial ports, memory,
+                                      coprocessor presence, caps/ins/numlock
+                                      status, etc. MS-C source code included
+ CLIPBBS 1-17                   Page 3                   17 Dec 1991
+
+
+ AECLIPT .ARJ   48.723 08.07.91  [08] Library of 68 graphics primitives and
+                                      higher level graphics functions.
+                                      Elipses, circles, pies, color control,
+                                      trig functions.
+ AECLIPW .ARJ    4.544 08.07.91  [07] Clipper S'87 library for windowing.
+                                      Simplifies making and releasing windows
+                                      using Clipper's Savescreen and
+                                      Restscreen functions.
+ ANOMAL89.ARJ   26.972 12.12.90  [04] Die neuesten Anomalien, Stand 08.01.90
+ ARRAY1  .ARJ    2.360 12.12.90  [02] Beispiele zur Arry-Behandlung, Clipper
+ ARRAYDOC.ARJ    5.227 12.12.90  [03] Einige Bemerkungen zu Arrays in Clipper
+ ARRAYS  .ARJ    8.304 29.08.90  [01] 9 clipper-inspired array-handling UDF's
+ ASCSCAN .ARJ   14.404 13.01.90  [07] Clipper ASCII-read utility
+ ASC_EBC .ARJ    3.660 12.12.90  [02] Wandelt ASCII in EBCDIC Code um
+ ASR     .PRG    5.174 22.01.90  [02] Speichern von Arp., Clipper
+ A_APPEND.ARJ    2.845 12.12.90  [01] Funktion zum anh„ngen eines Datensatzes
+ BACKREST.ARJ   10.387 21.06.91  [08] Great BACKUP/RESTORE facility for Clipp
+ BAO     .ARJ    7.397 12.12.90  [03] Debugger + Monomonitor + Colorkarte
+ BAR     .ARJ    3.957 12.12.90  [07] Statuszeile bei langen Dateioperationen
+ BEF_CL87.ARJ    7.883 12.12.90  [10] Befehle Clippper 87.
+ BE_DEBUG.ARJ    6.896 12.12.90  [07] Clipper 87 der DEBUGGER
+ BLINK131.ARJ   44.520 01.01.91  [09] Update BLinker auf Version 1.31 ('87)
+ BLINK87 .ARJ   65.598 04.05.91  [08] Blinker 1.31, Demo, 5 Min.
+ BMOUSE  .ARJ    7.286 12.12.90  [03] Mouse-Treiber fr Clipper 87.
+ BMOUSE87.ARJ    8.457 12.12.90  [06] Mouse fr Clipper Sommer 87
+ BRKLNCLP.ARJ    9.411 12.12.90  [01] Bildschirminhalt in Memofeld packen cl86
+ BROWS11B.ARJ    8.925 12.12.90  [07] Browser Clipper / dBase
+ BROWSE2 .ARJ   17.794 13.01.90  [04] Clipper browse utility
+ BUG20B  .ARJ   15.510 18.10.91  [23] CLIPPER S87 SOURCE CODE DEBUGGER
+                                      (Upload by: Dietmar Hauser)
+ BUGGR   .ARJ   10.803 13.01.90  [08] Clipper source-code debugger
+ CAL-1   .ARJ    4.919 12.12.90  [09] Kalender mit Source
+ CALENDER.ARJ    4.922 12.12.90  [18] Kalender PRG fr Clipper Source
+ CAPS    .ARJ    3.893 12.12.90  [01] CapsLock On/Off dbase 3+ ASM, BIN
+ CBIN-DB .ARJ   18.945 12.12.90  [04] Diverse String Operationen Clipper
+ CC      .ARJ   64.101 03.07.91  [31] CUA/SAA Tool fuer Clipper S87 part 1
+ CCA13   .ARJ   29.673 12.12.90  [11] Erstellen von Clipper.Programmen.
+ CCE     .ARJ    7.917 15.10.91  [20] Clipper-Quellcode schnell und
+                                      automatisch einruecken (Upload by:
+                                      Andreas Raht)
+ CC_PDM  .ARJ   40.116 03.07.91  [32] CUA/SAA LIB Clipper S87 Part 2 Menugen
+ CFGCHECK.ARJ    3.734 03.06.91  [04] Clipper CONFIG, Files Buffers pruefen
+ CGOODIES.ARJ   21.915 12.12.90  [01] Manipulation Clipper Arrays in C Funk.
+ CHELPDEM.ARJ   20.682 12.12.90  [02] HELP-DEMO. Clipper
+ CI_FUVAL.ARJ    6.348 12.12.90  [10] Zinsberechnungen Dbase/Clipper
+ CL-DOSTI.ARJ    9.527 01.01.91  [02] Clipper und Dos-Tips.
+ CL86_87 .ARJ    2.938 12.12.90  [01] Clipper 86 ASM => Clipper 87
+ CLBAK87 .ARJ  121.949 08.08.91  [02] Backup Library fuer Clipper '87
+ CLCHKTIM.ARJ    3.300 12.12.90  [10] Clipper, Prft String auf Zeit-Format
+ CLDOT   .ARJ   82.307 12.12.90  [02] Interpreter fr Clipper.
+ CLEAN-1 .ARJ   17.798 12.12.90  [01] L”scht leere Zeilen aus Sourcecode
+ CLEGAVGA.ARJ   12.733 06.03.91  [03] EGA / VGA Routinen fr Clipper
+                                      (ASM-Source)
+ CLENVD  .ARJ   95.449 12.12.90  [01] Clipper Environment (Demoversion)
+ CLIP3   .ARJ    5.435 01.01.91  [07] Clipper Source aus DOS International
+                                      3/91
+ CLIPBBS 1-17                   Page 4                   17 Dec 1991
+
+
+ CLIP4   .ARJ    4.864 01.01.91  [07] Clipper Source aus DOS International
+                                      4/91
+ CLIPARRY.ARJ    4.400 12.12.90  [00] CALL with Array-Var.als Parameter in ASM
+ CLIPCAL1.ARJ    5.362 12.12.90  [13] Kalender mit Source
+ CLIPCALC.ARJ    6.237 10.09.89  [08] Clipper 87 Taschenrechner Source
+ CLIPCAT .ARJ  126.470 05.03.88  [05] Clipper Cataloger: diskette catalog
+                                      system
+ CLIPCLOK.ARJ    7.653 12.12.90  [05] Sehr gute Clipper Clock
+ CLIPDEF .ARJ   18.061 24.11.88  [04] Utilities from San Diego Clipper Users.
+ CLIPDGE .ARJ    8.644 12.12.90  [03] Grafif unter Clipper 86.
+ CLIPDIAL.ARJ   10.558 13.01.90  [09] Clipper modem interface
+ CLIPDL21.ARJ   15.211 12.12.90  [11] Phone Dailer V.2 mit Source
+ CLIPGR  .ARJ   44.534 12.12.90  [14] CLIPPER GRAFIK-LIB MIT BEISPIEL UND DEMO
+ CLIPLIB .ARJ   14.282 20.07.90  [01] Dirk Leslo Lib 1b
+ CLIPMENU.ARJ    3.145 13.01.90  [03] Clipper menu utility (PRG)
+ CLIPMN40.ARJ   27.654 31.12.88  [06] Clip Menu 4.0
+ CLIPPC  .ARJ    6.955 12.12.90  [02] Wandelt 0-9 in '0'-'9',10-35 in 'A'-'Z'
+ CLIPSTRL.ARJ  288.081 01.01.91  [13] Clipper Source Codes von Steven Straley
+ CLIPUDF .ARJ   12.468 20.07.90  [02] Verschiedene Clipper-Funktionen
+ CLIPXTEN.ARJ   14.223 12.12.90  [04] Diverse Funktionen fr Clipper
+ CLIP_C  .ARJ    5.973 27.03.90  [02] Instructions for interfacing C with
+                                      Clipper
+ CLIP_MSC.ARJ    5.712 12.12.90  [05] Clipper und Micro Soft C
+ CLIP_UT7.ARJ  192.144 01.01.91  [15] Clipper Tools Diskette von Pearl Agency
+ CLLAGER .PRG    5.378 05.09.90  [07] Programmierbeispiel fr Lagerverwaltung
+ CLMAKE  .ARJ   10.194 12.12.90  [02] Make,nur upgedatete PRG-Dat.werden compi
+ CLOCK   .COM      416 14.07.89  [05] Uhr
+ CLOCK   .OBJ    1.052 30.01.88  [05] Residente Uhr fr Clipper
+ CLPDEMO .ARJ  145.714 12.12.90  [01] Noch 'ne Demo fr Clipper
+ CLP_FOR .ARJ    7.794 14.05.89  [00] Code for Clipper-Fortran interface.
+ CLREPORT.ARJ  330.936 22.05.91  [03] Demoversion von CLreport von Dr. Huggle
+                                      & Partner
+ CLSLFLDS.ARJ    5.162 12.12.90  [02] Clipper, ver„ndert Felder in DB's
+ CLSPRRES.ARJ   13.114 01.01.91  [04] Clipper, l”scht speicherres. Programme
+ CLUDF   .ARJ   98.915 12.12.90  [05] Clipper 87 UDF fr den CLUB
+ CL_BOOTE.ARJ    3.030 05.05.91  [04] Clipper, Warm- & Kaltstart (ASM Source)
+ CL_DEMO .ARJ  114.678 12.12.90  [05] Clipper Entwicklungsumgebung V 1.21D
+ CL_EIN  .ARJ    4.835 12.12.90  [02] Beispiel fr Adressenverwaltung
+ CL_TIPS .ARJ   93.492 12.12.90  [07] Tips zu Clipper
+ CODE39  .ARJ   10.460 12.12.90  [14] Barcode 39 mit PRG und BAS fr Clipper
+ COLOR   .ARJ    2.930 12.12.90  [04] Demo prg setzt Farbumgebung f. Clipper
+ COLORSET.ARJ    3.460 12.12.90  [06] Farbgebung in Clipper
+ COMIO87 .ARJ    9.444 12.12.90  [02] Clipper 87 COM1 - ASM * Source *
+ COMM    .ARJ   33.415 12.12.90  [23] Communications mit Clipper
+ COMM1   .ARJ    3.287 12.12.90  [15] Ansprechen des COM Portes Clipper 87
+ COMM_IO .ARJ    9.405 12.12.90  [07] Kommunikationschnittstellen bedienen
+ COPYSTRU.PRG      537 26.03.90  [03] Aus dem Buch v. St.Straley
+ CRIT_ERR.ARJ    4.369 12.12.90  [02] Errorhandling, Text, Clipper
+ CROSSTAB.ARJ    6.000 12.12.90  [04] Erstellt Crossreferenztabelle f. Clipper
+ CSETCURS.ARJ    2.342 12.12.90  [03] Cursorsetzung unter Clipper
+ CURDRV  .ARJ    3.057 12.12.90  [05] Welches Drive ist da? (Clipper)
+ CURSHIDE.ARJ    7.301 12.12.90  [00] Fr DBIII+ Cursor verschwinden lassen
+ DATATYPE.ARJ    6.075 12.12.90  [01] Packen von String und Zahlen f. Clipper
+ DATETIM .ARJ    6.653 12.12.90  [10] Datum/Uhrzeit „ndern,mit ASM-Source
+ DB32TPV3.ARJ   10.164 12.12.90  [08] Zugriff in DBT Dateien in T Pascal 3.01
+ DB3DIR11.ARJ    4.228 12.12.90  [05] Lister Directory in DBF Datei
+ CLIPBBS 1-17                   Page 5                   17 Dec 1991
+
+
+ DB3READC.ARJ    4.264 12.12.90  [01] Lesen von DBF Datei mit MS C 4.0 Source
+ DBA-501 .ARJ   16.160 01.01.91  [05] Data Based Advisor Source Vol. 5 No. 1
+ DBA-502 .ARJ  143.917 01.01.91  [06] Data Based Advisor Source Vol. 5 No. 2
+ DBA-503 .ARJ   11.004 01.01.91  [04] Data Based Advisor Source Vol. 5 No. 3
+ DBA-504 .ARJ   46.414 01.01.91  [04] Data Based Advisor Source Vol. 5 No. 4
+ DBDGET  .ARJ   21.775 12.12.90  [01] Demo eines geschachtelten Gets u.v.m.
+ DBFLIS  .ARJ   12.335 12.12.90  [00] Listet DBF Struktur, Wildcats Clipper
+ DBFSTRU .ARJ    3.236 12.12.90  [02] dBASE III/IV Datenbankstruktur
+ DBF_LINE.ARJ   22.169 12.12.90  [01] Sideliner/Flowchart IF,DO While etc.
+ DBLOCK  .PRG    4.282 31.05.91  [03] Spalte beim DBEDIT "einfrieren"
+ DBLOGCRY.ARJ    7.904 01.01.91  [03] Dbase/Clipper Login ver/entschluesseln.
+ DBMAKE  .ARJ   10.013 12.12.90  [01] Anlegen DBF Dateien auáerhalb eines PRG
+ DBORDER .ARJ    2.898 12.12.90  [02] Setzt Rahmenfarbe f. Clipper
+ DBSEEK  .ARJ    8.569 12.12.90  [04] UDF in DBEDIT
+ DBSOUND1.ARJ    8.014 12.12.90  [01] Soundex Suche fr dBase
+ DBSOUNDX.ARJ    8.014 12.12.90  [03] Phonetisches suchen SOUNDEX Code.
+ DBSTRUCT.ARJ   10.059 12.12.90  [06] Strukturgenerator fr Datenbanken
+ DBTOWP  .ARJ    8.036 12.12.90  [04] Konvertiert DBF nach WordPerfect
+ DBTWEG  .ARJ    8.017 12.12.90  [02] L”schen der phy. Bindung DBF-DBT Clipper
+ DBUG_UDF.ARJ    3.140 12.12.90  [01] Anzeige Array fr debug Zwecke, Source
+ DB_WORD2.ARJ    5.649 12.12.90  [03] Dbase und Word, source
+ DCOLOR  .ARJ    8.701 12.12.90  [06] Farbeinstellung unter Clipper
+ DEDIT   .ARJ  121.239 12.12.90  [07] Editor fr dBase, Clipper Datenbanken.
+ DEMO2_EX.ARJ  133.438 12.12.90  [01] Ein Prg erstellt mit Producer als EXE
+ DESCEND .ARJ    3.835 12.12.90  [01] Funktion fr STR, Date, Num o. Log
+ DESCEND4.ARJ    4.467 12.12.90  [01] dito.. Clipper
+ DESKTOP .ARJ  144.986 12.12.90  [10] Desktopoberfl„.u.Farbeinstellung m.Demo
+ DFLOW   .ARJ   25.204 12.12.90  [09] Mengesteuerter  Flow Analyser*gut*
+ DGEDEMO .ARJ  101.186 12.12.90  [02] Eine Grafikdemo Clipper
+ DIREXIST.ARJ    3.857 12.12.90  [03] šberprft ob Dir existiert
+ DIRSEEK .PRG   13.312 09.04.89  [07] Direktory Graphisch in Clipper ACHOISE
+ DLIST   .ARJ   33.484 15.05.91  [14] Super Strukturlister fr Clipper
+ DLITE10 .ARJ  181.237 01.01.91  [01] dBase-Dateien resident laden, browsen
+ DMSCLR  .ARJ  107.441 12.12.90  [04] Farbsetzen, Printer utilities f. Clipper
+ DMSERR  .ARJ   31.737 12.12.90  [01] Verschiedene Prg und Asm fr Clipper
+ DMSOOP  .ARJ   19.864 12.12.90  [00] Error Handling util. f. Clipper
+ DPROTECT.EXE    9.344 27.05.90  [00] Dbase DBF-Dateien Schutz.
+ DRIVE7  .ARJ    6.371 12.12.90  [02] 7 Bit Treiber fr Clipper
+ DUDEN   .ARJ    3.905 02.06.91  [02] Cl87 Duden Sortierung Z „ ” 
+ DUTCH_FN.ARJ   23.515 12.12.90  [02] Gute String Funktionen
+ D_UTIL  .ARJ  184.373 12.12.90  [05] Source Code Analysator, wie Dutil DB
+ EAP_EXE .ARJ   95.033 12.12.90  [03] Einnahme / Ausgabe /berschussrechnung
+ EA_EXE  .ARJ   98.002 12.12.90  [04] noch 'ne Einnahme , Ausgabe... Clipper
+ EDITOR-1.ARJ   77.822 12.12.90  [04] [Beschreibung ging leider verloren]
+ EGA     .ARJ    6.167 12.12.90  [03] EGA Anpassung fr Clipper
+ EGAFIX  .ARJ    7.175 12.12.90  [02] 43 Zeilen Treiber fr Clipper
+ ERINV10 .ARJ   20.774 12.12.90  [01] Verschiedene Funktionen like TOM Retting
+ ERROR1  .PRG    3.340 26.03.90  [02] Beispiel fr Clipper Error-Handling
+ ERROR2  .PRG    4.596 26.03.90  [01] Noch ein Beispiel fr CL-Error-Handling
+ ERRORS  .ARJ    4.682 12.12.90  [01] Clipper Error System
+ ES-TOOLS.ARJ  146.340 12.12.90  [02] 5 Clipper power-tools , demoversion!
+ EXTENDB .ARJ    3.720 12.12.90  [01] NumLock,CapsLock,ScrollLock,Insert...
+ EZPRINT .ARJ   13.156 12.12.90  [10] Printer Manager-System f. Clipper
+ F2      .ARJ    5.079 12.12.90  [04] Rec-Nr. und Schlsselausdruck aus NTX
+ FACEIT  .ARJ   43.398 12.12.90  [02] Demo-Men-Toolbox fr Clipper
+ FASTCLIP.ARJ    3.949 12.12.90  [10] Speed-utilities f. Clipper
+ CLIPBBS 1-17                   Page 6                   17 Dec 1991
+
+
+ FEIERTAG.ARJ    3.689 20.02.91  [16] Feiertagsberechnungen,Source,5.0 + S'87
+ FENSTER .ARJ    4.505 12.12.90  [04] Fenster-Verwaltung mit Cl. und Nan-Tools
+ FFIND   .ARJ   37.175 12.12.90  [11] DBF Frindly Finder findet ALLES
+ FFUD    .ARJ   90.539 15.06.91  [04] Filefind in Unterverzeichnissen fr
+                                      Clipper 87 mit Source
+ FILEDATE.ARJ    7.048 12.12.90  [01] Demo, holt Datum und Uhrzeit aus Datei
+ FILT    .ARJ    6.858 20.06.91  [06] Filterbedingung selbst zusammenstellen,
+                                      Cl'87
+ FIND_IT .ARJ  267.028 18.05.91  [09] Clipper Tools von Nantucket aus PC-WELT
+ FOGFIND .ARJ    8.584 12.12.90  [02] Die Lesbarkeit von Dokum. verbessern
+ FORM    .ARJ   46.942 12.12.90  [04] Analysieren von PRG Clipper
+ FORMGEN .ARJ   62.927 12.12.90  [15] Formulargenerator leistungsf„hig.
+ FUNC87_1.ARJ   13.651 08.05.88  [01] Clipper Summer87 Functions
+ FUNCKY  .ARJ1.159.792 30.05.91  [06] Demoversion der FUNCky-LIB fr Clipper
+ FUNCTLST.ARJ   43.583 12.12.90  [17] Norton-Guides Datei, funktionsbersicht
+ F_INGET .PRG      889 22.01.90  [01] Get ber Inkey (bei offenen GET's)
+ GBROWSE .ARJ    8.596 12.12.90  [08] Browser f. Clipper
+ GET     .ARJ    2.905 12.12.90  [05] Benutzereingabe im Get, Source Clipper
+ GETSETS .ARJ    3.332 12.12.90  [03] Abfrage Set Schalter C Source f. Clipper
+ GFUNC   .ARJ   10.029 12.12.90  [04] Grafik funktionen f. Clipper
+ GLOVAR  .ARJ   25.698 12.12.90  [00] Treiber fr globale Variablen Source
+ GRAPH_IT.ARJ   16.726 12.12.90  [02] Funktion fr Balken Grafik, Clipper
+ HANDLE87.ARJ    6.984 12.12.90  [02] Handle table util. function
+ HANDLENO.ARJ    6.878 12.12.90  [03] Handle table expansion
+ HANDLE_C.ARJ    5.737 12.12.90  [01] ™ffenen v.mehr als 20 Prozed., C source
+ HANDNEU .ARJ    5.831 13.12.90  [03] Neues Handels fr Clipper 87 und Novell
+ HELPSYS .ARJ    6.934 12.12.90  [04] Help mit MEMOEDIT und Create Window help
+ HILFE   .ARJ    5.781 12.12.90  [07] Hilfssystem fr Clipper
+ HILFE2  .ARJ   97.914 01.07.91  [05] Hilfe Editor fr Clipper
+ HKLIB01 .ARJ   11.147 23.10.89  [04] Clipper UDF's
+ HYPER1  .ARJ  139.728 28.05.91  [08] HyperHelp fr Clipper, Demo
+ HYPER2  .ARJ   51.815 28.05.91  [11] HyperHelp fr Clipper, Lib + Doku
+ IONET   .ARJ  153.799 01.01.91  [29] Masken und Programmgenerator fr
+                                      Clipper '87
+ ISCURSOR.ARJ    6.941 12.12.90  [03] Ist Cursor on /off f. Clipper
+ ISDIR87 .ARJ    5.569 12.12.90  [01] I'wo isse denn...Clipper
+ ISPRINT .ARJ    2.962 12.12.90  [01] Ist der Drucker da? f. Clipper
+ JARGON  .ARJ   97.797 12.12.90  [01] Jargon 1.1 on-line manual fr dB/Clipper
+ JBBSPRGS.ARJ  216.957 05.06.91  [16] BBS -Source CLipper S'87 (mit Fido)
+ KEYBPUNK.ARJ    8.448 12.12.90  [01] Tasterturtreiber KEYBPUNK fr Clipper 87
+ KEYLOCK2.ARJ    3.992 12.12.90  [01] Status der Lock-Tasten, Clipper
+ KLACKER .ARJ    3.145 12.12.90  [04] Gibt Laufschrift mit "Klacken" Source
+ KUNDEN  .ARJ   36.274 12.12.90  [07] Kundenverwaltung in Clipper mit Source
+ KW      .ARJ    3.466 12.12.90  [03] Versch. Datums/Kalenderfunktionen
+ LABEL   .ARJ   14.437 01.01.91  [05] Aufkleberdruckprogramm
+ LIB-1   .ARJ   93.306 12.12.90  [12] groáe Clipper Libaray Teil 1 (Sommer 87)
+ LIB-2   .ARJ  110.288 12.12.90  [12] groáe Clipper Libaray Teli 2
+ LIB-3   .ARJ  134.051 12.12.90  [12] groáe Clipper Libaray Teil 3
+ LIB     .ARJ    3.046 12.12.90  [06] Die FUNC.LIB verschiedene Funktionen
+ LIB_1   .ARJ  138.172 12.12.90  [11] Sehr umfangreiche Lib fr Clipper  1/2
+ LIB_2   .ARJ  185.591 12.12.90  [10] Lib. Teil 2/2
+ LINE    .ARJ    8.908 12.12.90  [00] schneller Zeilennumerierer fuer Source
+ LIST    .ARJ    4.826 12.12.90  [01] Ein Lister db/Clipper
+ LISTDBF .ARJ   15.439 12.12.90  [01] Stellt dbf dar.
+ LIZENZ  .ARJ   11.134 12.12.90  [13] Schreibt Copyright in EXE
+ LOGICLP .ARJ    3.711 12.12.90  [01] AND, OR, NOT, XOR, CLIPPER
+ CLIPBBS 1-17                   Page 7                   17 Dec 1991
+
+
+ LOOK4   .ARJ   18.717 12.12.90  [04] DBF Such Util. Sucht in allen Felder.
+ LOTLIB  .ARJ    6.120 21.05.91  [09] Lotus 1-2-3 WorkSheets mit Clipper
+                                      bearbeiten
+ LSTGRF  .ARJ   10.998 12.12.90  [03] Tool fr Clipper / Quiksilver
+ LSTSCN  .ARJ   10.677 12.12.90  [01] Tool Clipper /Quicksilver
+ MAKE-HEL.ARJ   10.473 12.12.90  [03] Online-Hilfen zu erstellen, Source
+ MAKEDAT .ARJ  115.160 17.07.91  [01] Make/Linkdateien fr Clipper erstellen
+ MAKELINE.PRG    3.328 09.10.89  [01] Clipper Source, wie der Name schon sagt
+ MAKEPAT .ARJ    4.105 12.12.90  [07] Interaktives erstellen von Druckertreibe
+ MAKEPRT .ARJ    4.105 12.12.90  [08] Druckertreiber Clipper
+ MARCOPRG.ARJ    5.372 12.12.90  [02] Macro-Programm
+ MASK_CV .ARJ   95.783 18.06.91  [06] Konvertierung MGEN-Masken fr NT2
+ MATHE   .ARJ    7.026 12.12.90  [02] Verschiedene mathematischen Funktionen,
+                                      Source
+ MAUS    .ARJ    5.730 02.10.91  [03] Maus fr Clipper (Uploaded by: Bernd
+                                      Sahlke)
+ MAUS_CT .ARJ   13.908 12.12.90  [06] Mausfunktionen in Clipper
+ MEGALIB .ARJ  313.863 18.09.91  [26] CLIPPER LIB, 500 functions in SOURCE (!)
+ MEM-1   .ARJ    4.124 12.12.90  [00] Inhalt eines MEM-File listen, C-Source
+ MEMHAND .ARJ    6.103 12.12.90  [03] Speichern /laden von Variablen
+                                      in/aus.DBF
+ MEMOFIX .ARJ    8.680 12.12.90  [06] Druckt Memofelder
+ MEMOLINE.ARJ    6.500 01.01.91  [04] Extrah. von Zahlen aus Memofeldern
+ MEMOPACK.ARJ    8.867 12.12.90  [05] Packer fr Memofelder
+ MEMOPRNT.ARJ    3.226 12.12.90  [05] Druckt Memofelder
+ MEMORPT .ARJ    3.807 12.12.90  [05] Print formatted memo Felder...
+ MEMOUTIL.ARJ    6.425 12.12.90  [05] Memoline,Menofind(String in Memo suchen)
+ MENUD   .ARJ    5.173 12.12.90  [07] Men-Demo mit Source Clipper
+ METER   .ARJ    3.326 16.12.90  [15] Zeigt b. Indexieren "%" fr CLIPPER
+ MGENDEMO.ARJ    4.909 12.12.90  [01] Demo einer Toolbox f. Clipper
+ MIPA_12 .ARJ   49.575 04.02.91  [17] Library mit 102 Funktionen
+ MPACK   .ARJ    7.227 12.12.90  [03] Packt DBT's ohen DBF's zu killen
+ NANHELP .ARJ   18.241 19.11.90  [08] Nantucket Help System
+ NDX     .ARJ   12.102 12.12.90  [01] Index Key lister
+ NETFN   .ARJ    9.114 13.12.90  [08] Netz-Funktion-Novell fr Clipper
+ NETIO   .ARJ    5.056 12.12.90  [03] Netzwerkfunktion in Source f. Clipper
+ NETWORK .ARJ    3.642 12.12.90  [00] Files for ALL CHARGECARD and Network
+ NEWS_190.ARJ  259.067 19.04.91  [02] Diskette der Nantucket News 1/90
+ NEWS_290.ARJ  266.706 18.04.91  [04] Diskette der Nantucket News 2/90
+ NEWS_389.ARJ  187.223 03.09.91  [04] Nantucket News, Textverabeitung, etc.
+ NOSNOW  .ARJ    3.121 12.12.90  [00] Ersatz fr Clipper Snow-Parameter
+ NOVLIB10.ARJ  101.478 15.04.91  [09] Novell Funktionen fr Clipper
+ NSEND   .ARJ    5.268 15.04.91  [04] Clipper Interface fr Novell send
+ NT2_TEXT.ARJ  328.922 12.12.90  [04] manual fr nt2 Tools fr den club
+ NTXSHOW .ARJ    5.699 05.04.91  [15] CLIPPER Balken-Meter-Anzeige *SOURCE*
+ NTXSHOW .PRG   10.712 19.04.91  [05] Clipper, Bargraph-Anzeige beim
+                                      Indizieren
+ NUMLOCK .ARJ    2.558 12.12.90  [00] Numlock on / off , asm , obj
+ NVDB3CLP.ARJ   12.268 12.12.90  [01] Beispiel fr Netzwerkfunktion
+ OBJ_DUD .ARJ    4.285 12.12.90  [05] DUDENSORTIERUNG FšR CLIPPER
+ OFFEN   .PRG    3.493 22.01.90  [02] ”ffnen v.Dateien mit bleibenden indezes
+ OPENLPT .ARJ   38.938 12.12.90  [07] Drucker einstellen, Clipper
+ OPNMODES.ARJ    4.542 12.12.90  [02] File Open Testprogramm f. Clipper
+ PARSE   .ARJ    4.057 12.12.90  [01] Expression Parser f. Clipper
+ PASCALCL.ARJ    6.721 12.12.90  [01] Clipper A86? mit Pascal-UDF demo v. Nant
+ PCD87   .ARJ   11.783 12.12.90  [00] Siemens PCD Treiber fr Clipper
+ CLIPBBS 1-17                   Page 8                   17 Dec 1991
+
+
+ PCX     .ARJ   11.738 12.12.90  [05] Grafikfunktion fr Quicksilver
+ PC_V150 .ARJ   15.336 12.12.90  [04] Proclip Version 1.5 f. Clipper
+ PDMENU  .PRG    4.252 22.01.90  [10] Noch ein Pull Down Men, Clipper
+ PECLMENU.ARJ    4.595 12.12.90  [07] Menentwurf fr 99 Menpunkte fr
+                                      Clipper
+ PHONET  .ARJ    5.324 12.12.90  [07] Phonetische Namenssuche in Clipper
+ POCKET  .ARJ   13.797 17.12.88  [01] Pocket Calc. for Clipper
+ POPS-1  .ARJ    6.446 12.12.90  [07] PopUp-Men unter Clipper, Source
+ POPS    .ARJ    6.444 12.12.90  [04] Shell fr Achoice() f. Clipper
+ PORTIO  .ARJ    4.733 01.01.91  [08] Communikationsmodul Clipper
+ PRE     .ARJ   10.227 12.12.90  [06] Preprozessor fr Clipper
+ PRGFMT  .ARJ   13.859 12.12.90  [04] Programm-Formatier-Utilitie Clipper
+ PRINMEMO.ARJ    2.992 12.12.90  [04] Exportiert Memo->ASCII
+ PRNLIB  .ARJ   20.703 12.12.90  [05] Printer utilities Clipper
+ PROC    .ARJ    3.604 12.12.90  [02] Clipper -analysator fr PRG (Source)
+ PROCLIP1.ARJ   15.336 12.12.90  [03] Scrollen, Sound, Cursormanipulation
+ PROCLIP2.ARJ   45.060 12.12.90  [03] Cursorman.,Dir-Bearbeitung,Video,Printer
+ PSRNDPRG.ARJ    2.598 12.12.90  [01] Parse, Round f. Clipper
+ QMAC_CLP.ARJ   11.808 15.02.91  [24] QEdit Macros fuer Clipper
+ QUIKHE  .ARJ   21.622 12.12.90  [04] Schnelle Hilfe LIB fr Clipper
+ R(C)0101.ARJ  125.024 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 01
+ R(C)0102.ARJ   96.411 28.05.91  [03] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 02
+ R(C)0103.ARJ  149.315 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 03
+ R(C)0104.ARJ   88.876 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 04
+ R(C)0105.ARJ  180.487 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 05
+ R(C)0106.ARJ  148.229 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 06
+ R(C)0107.ARJ  101.880 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      1 Nummer 07
+ R(C)0201.ARJ  233.484 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 01
+ R(C)0202.ARJ  100.768 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 02
+ R(C)0203.ARJ  201.517 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 03
+ R(C)0205.ARJ   38.237 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 05
+ R(C)0206.ARJ   48.978 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 06
+ R(C)0207.ARJ   38.297 28.05.91  [03] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 07
+ R(C)0208.ARJ   41.104 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 08
+ R(C)0209.ARJ   70.663 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 09
+ R(C)0210.ARJ  142.736 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 10
+ R(C)0211.ARJ   98.811 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 11
+ R(C)0212.ARJ  124.874 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      2 Nummer 12
+ CLIPBBS 1-17                   Page 9                   17 Dec 1991
+
+
+ R(C)0301.ARJ   52.062 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 01
+ R(C)0302.ARJ  112.066 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 02
+ R(C)0303.ARJ  170.461 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 03
+ R(C)0304.ARJ   84.509 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 04
+ R(C)0305.ARJ  229.200 28.05.91  [01] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 05
+ R(C)0306.ARJ   21.516 28.05.91  [03] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 06
+ R(C)0307.ARJ   49.815 28.05.91  [04] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 07
+ R(C)0308.ARJ   91.123 02.06.91  [03] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 08
+ R(C)0309.ARJ   65.171 28.05.91  [03] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 09
+ R(C)0310.ARJ  127.210 28.05.91  [02] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 10
+ R(C)0311.ARJ  128.679 28.05.91  [03] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 11
+ R(C)0312.ARJ  203.210 28.05.91  [05] Reference(Clipper) Source Code, Volume
+                                      3 Nummer 12
+ RAINBOW .ARJ    5.681 12.12.90  [00] Treiber fr DEC-Rainbow f. Clipper
+ RAMCLEAR.ARJ    4.307 12.12.90  [04] Speicher clear f. Clipper
+ READNDX .ARJ    9.054 12.12.90  [03] Infos aus dBase Index lesen, C+EXE Datei
+ RECRUI  .ARJ   10.928 12.12.90  [01] Recruiting database for SMR&H
+ RLPATCH .ARJ    4.632 12.12.90  [00] Korrekturen und Anmerkungen zu RLFont
+ ROBCLIP .ARJ  106.012 12.12.90  [09] Clipperlibrary incl. Sourcecode
+ RODENT  .ARJ    6.810 12.12.90  [03] Noch ein Maustreiber fr Clipper
+ RS232CL .ARJ   78.472 12.12.90  [02] Clipper und die RS232
+ RS232DIV.ARJ    6.897 12.12.90  [02] Tool fr RS232 f. Clipper
+ RUN-1   .ARJ   10.496 12.12.90  [08] Externe Programm aufrufen
+ SCHATTEN.ARJ    1.796 21.09.91  [03] Schatten unter Clipper
+ SCRIPTFO.ARJ   96.264 02.10.91  [01] Fonts fr Clipper ? (Uploaded by: Bernd
+                                      Sahlke)
+ SCRPLY  .ARJ    7.288 12.12.90  [01] Versch. Objekte fr Screensteuerung
+ SELFMADE.ARJ  105.522 12.12.90  [05] Erzeugt Verwaltungprogramm f. Clipper
+ SERIAL  .ARJ   13.731 12.12.90  [04] Stamp fr Clipper -Appl.-> Seriennummer
+ SETCOLOR.ARJ    3.254 12.12.90  [01] Utilities zum Ver„ndern der Farben
+ SHOWMEM .ARJ    3.907 12.12.90  [02] Anzeigen von .MEM-Dateien im Cl-Source
+ SIG1074 .ARJ  165.381 12.12.90  [01] PC-SIG No. 1074, Las Vegas EGA Casino
+ SNAP_T2 .ARJ    4.391 12.12.90  [09] Keydatei fr SNAP 4.x:Nantucket TOOLS-II
+ SNTXDEMO.ARJ    5.222 02.10.91  [02] Demo wie man aus defekten Indexdateien
+                                      die Daten zurckgewinnt (Uploaded by:
+                                      Bernd Sahlke)
+ SORT    .ARJ    3.002 12.12.90  [01] Fehler beim Sort f. Clipper
+ SOUNDEXC.ARJ   15.953 12.12.90  [01] SOUNDEX C-Routine fr Lattice Compiler3
+ SRINFO-1.ARJ  300.053 13.05.91  [08] Datenbank und Programmgenerator, Disk 1
+ SRINFO-2.ARJ  234.021 13.05.91  [06] fr Foxbase, dBase III, Clipper, Disk 2
+ STAMP   .ARJ    3.497 12.12.90  [09] Seriennummern-Stamp als Clipper-UDF
+ STA_NUM .ARJ    2.973 12.12.90  [02] Gibt Stationsnr.einer Workstation zurck
+ STR     .ARJ   13.417 05.02.90  [00] String funcs. with source
+ STRUKT  .ARJ   93.241 12.12.90  [01] [Beschreibung ging leider verloren]
+ SUBNTX  .ARJ   35.659 06.03.91  [05] Teilindex aus NTX bilden -DEMO-
+ CLIPBBS 1-17                   Page 10                  17 Dec 1991
+
+
+ SUBSTRM2.ARJ    3.890 12.12.90  [01] Extrahiert Zahlenbereich aus Memofelder
+ SWAP2   .ARJ   10.646 12.12.90  [13] Cl'87 statt RUN jetzt SWAP => ca 500 KB
+ T-CLIP  .ARJ   14.885 12.12.90  [01] Infos ber Arrays in C bearbeiten
+ TC-DBF  .ARJ   17.843 12.12.90  [00] DBF III Dateien unter Turbo C V1.0
+ TEL-TXT .ARJ      767 11.10.91  [10] Wichtige Textdatei zu Tel.arj - hab ich
+                                      leider vergessen mit einzuarcen (Upload
+                                      by: Bernd Sahlke)
+ TEL     .ARJ  328.895 06.10.91  [10] Telefon und Fax mit Modem anwaehlen -
+                                      Mit Clipper Source (Upload by: Bernd
+                                      Sahlke)
+ TEXT    .ARJ   96.223 19.09.90  [10] Komfortable MemoEdit-UDF, Source
+ TIMETEST.ARJ    3.810 12.12.90  [02] Time test f. Clipper
+ TONE-1  .ARJ    3.675 12.12.90  [01] T”ne erzeugen, ASM-Source
+ TOPMEN  .ARJ   96.753 19.06.91  [08] Menugenerator fr clipper87
+ TOWMENU1.PRG    4.109 01.08.90  [01] Clipper 87 Menue Array 2 Dim  * GUT *
+ TRIG7DB2.ARJ   12.708 12.12.90  [01] Mehrere mathem. Funktionen
+ TRL4CL  .ARJ  317.044 06.05.91  [06] Tom Rettings Library 1.20, fr Clipper
+                                      '87 und 5.0
+ TRUE2   .ARJ   37.645 12.12.90  [06] Window Lib fr Clipper
+ TRUEWIND.ARJ   35.701 31.08.91  [04] True Windows Library
+ TWOMENU1.PRG    4.109 21.07.89  [01] 2 Dim. Men Teil I, Clipper
+ TWOMENU2.PRG    7.602 01.08.90  [01] clipper 87 2 Dim Array Menuesteuerung
+ UDF     .ARJ    3.633 12.12.90  [03] LIB fr Clipper - UDFS
+ UDFS_DOC.ARJ    6.272 01.01.91  [03] Dokumentation der UDFS f. Clipper
+ UGRAPH  .ARJ    4.946 12.12.90  [05] Grafikbalken (Funktion) Clipper
+ V4      .ARJ    3.085 12.12.90  [02] Druckertreiber fr gerades á auf HPLaser
+ VAL_MSG .ARJ    4.123 12.12.90  [04] Vaild() mit MSG, Clipper
+ VERTMENU.ARJ    6.720 12.12.90  [01] Vertikale Leutbalkenmen, Clipper
+ VERZWAHL.PRG    4.051 22.08.90  [01] Sammel und Anz.Verzeichnisse SET PATH
+ V_SYSTEM.ARJ    3.464 12.12.90  [06] Booten des Rechners f. Clipper
+ WAEHL   .ARJ    2.579 12.12.90  [06] Waehlen von Clipper aus, in C-Source
+ WESTUDF .ARJ    4.132 12.12.90  [02] Datensatz in aus Array lesen f. Clipper
+ WICLIP  .ARJ   83.775 25.05.91  [14] Windowing Lib fr Clipper
+ WILDPRC .ARJ    3.524 12.12.90  [05] Wildcart-Suche unter Clipper
+ WLD     .ARJ    7.076 12.12.90  [01] Levhenstein-Algorhythmus fr Clipper
+ WOMISPRT.ARJ    6.580 12.12.90  [01] UPDATE FšR PRN-UTILS UNTER CLIPPER
+ WORKBASE.ARJ  156.260 12.12.90  [05] DBASE/CLIPPER interactive environmenty
+ WPEDIT11.ARJ   18.223 12.12.90  [05] Emulation von WordPerfect in Clipper
+ WZOOM87 .ARJ    7.944 12.12.90  [02] Eploading Windows fr Clipper 87
+ XMO_TRAN.ARJ    3.553 12.12.90  [11] XModem-Transfer mit den Tools II
+ XREFDB3 .ARJ   10.482 12.12.90  [03] Cross Referenzlisting fr PRG-Dateien
+ XREFPRG2.ARJ   29.745 12.12.90  [04] Cross Referenzlisting fr PRG Dateien
+ ZAHLUMW .ARJ    3.554 12.12.90  [16] Wandelt einen Betrag in Wort um Source
+ ZINSPROC.ARJ    5.473 12.12.90  [04] Zinsberechnung
+ 
+ 
+ 
+  ³                     Clipper 5.0             °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: SEM01N.ARJ     Datum: 12.11.91   Size:   141.496³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ ATZ     .ARJ    8.059 17.05.91  [24] Jedes GET in einer anderen Farbe,
+                                      Clipper 5.0
+ BLIMAN15.ARJ   68.746 17.06.91  [14] Manual fr BLinker 1.50 (Clipper 5.0)
+ BLINK50 .ARJ  102.982 04.04.91  [13] Blinker, Clipper 5 Demoversion 5 Min.
+ C4N5_133.ARJ   46.062 05.05.91  [14] Clipper 4->5 konvertieren 1.33
+ CLIPBBS 1-17                   Page 11                  17 Dec 1991
+
+
+ CFTSDEMO.ARJ  170.840 22.09.91  [01] Clipper Fast text search, Demo
+ CLASSY  .ARJ   75.709 15.05.91  [64] User Defined Objects in Clipper 5
+                                      *SUPER!*
+ CLBAK50 .ARJ  112.225 08.08.91  [06] Backup Library fuer Clipper 5.0
+ CLENV150.ARJ  242.364 13.06.91  [04] Entwicklerumgebung fr Clipper 5.0, Demo
+ CLIPGR21.ARJ  141.900 06.03.91  [41] Einbau von pxc-files in Clipper5
+ CLIPPCX5.ARJ   14.339 17.05.91  [35] PCX-Files in Clipper anschauen
+ CLIPTOOL.ARJ   12.120 05.09.91  [16] Einige Funktionen fr Clipper 5.01 &
+                                      Tools II
+ CLIPTREE.ARJ    1.850 04.10.91  [04] Verzeichnisbaum unter Clipper 5.01
+                                      (Upload by: Tobaccodat Gmbh)
+ CLIP_VGA.ARJ    7.997 30.04.91  [11] verschiedene Textmodi unter Clipper 5.0
+ CLOCK   .ARJ    7.731 19.04.91  [15] Residente Uhr fr Clipper 5.0, inkl.
+                                      ASM-Source
+ COLORSYS.ARJ  181.732 22.07.91  [04] Demo fr eine Farbsystem-Lib CLipper 5
+ DDU     .ARJ   23.695 09.07.91  [16] Data-Dictionary fr Clipper 5.0x
+ DISPLAY .ARJ   27.651 04.03.91  [19] Beliebige Textfiles in Clipper listen
+ FEIERTAG.ARJ    3.704 17.06.91  [23] Feiertagsberechnung in Clipper 5.0
+ FILEMGR .ARJ   12.702 08.09.91  [03] Filemanager unter Clipper + Tools II
+ INDDUMP .ARJ  129.120 21.06.91  [11] Index Dump, Zeigt Infos ber
+                                      NTX-Dateien an, Clipper 5.0 Source
+ NEWS_191.ARJ  242.735 13.04.91  [10] Diskette der Nantucket News 1/91
+ NEWS_291.ARJ  307.531 26.06.91  [15] Diskette der Nantucket News 2/91
+ NEWS_390.ARJ  323.309 15.04.91  [04] Diskette der Nantucket News 3/90
+ NEWS_490.ARJ  337.532 15.04.91  [05] Diskette der Nantucket News 4/90
+ OBJDEMO2.EXE  118.847 04.08.91  [02] cl5.01: virtual screens, seeing is
+                                      believe
+ PROBLEM .EXE   89.600 01.01.91  [22] Gesammelte Probleme mit Cl 5.0 als
+                                      Norton Guide
+ QS20F   .EXE  454.060 21.06.91  [29] QUICKSCREEN 2.0 Farbe fr Clipper 5.01 !
+ QS20M   .EXE  453.352 21.06.91  [02] QUICKSCREEN 2.0 mono fr Clipper 5.01 !!
+ SCATTER .ARJ    4.511 14.07.91  [06] Zur Scatter-Technik in Clipper
+ SEM01   .ARJ   50.379 18.09.91  [32] Devcon K”ln 91 : Inside Tools
+ SEM01N  .ARJ  141.496 12.11.91* [04] [Neues Upload - Nicht getestet]
+ SEM02   .ARJ  265.699 18.09.91  [31] Devcon K”ln 91 : Clipper und Postscript
+ SEM02N  .ARJ   33.814 12.11.91* [04] [Neues Upload - Nicht getestet]
+ SEM03   .ARJ   52.125 18.09.91  [28] Devcon K”ln 91 : Errorhandling unter
+                                      Clipper 5.0x
+ SEM03N  .ARJ   52.218 12.11.91* [03] [Neues Upload - Nicht getestet]
+ SEM05   .ARJ  118.213 18.09.91  [24] Devcon K”ln 91 : Nantucket Tools II und
+                                      die seriel le Schnittstelle
+ SEM05N  .ARJ  117.369 12.11.91* [04] [Neues Upload - Nicht getestet]
+ SEM08   .ARJ  100.186 18.09.91  [31] Devcon K”ln 91 : UI-Programmgenerator
+ SEM09N  .ARJ  334.225 12.11.91* [05] [Neues Upload - Nicht getestet]
+ SEM12   .ARJ  123.198 18.09.91  [22] Devcon K”ln 91 : Clipper und SQL
+ SEM13   .ARJ   61.051 18.09.91  [26] Devcon K”ln 91 : Die Post geht ab (Netz)
+ SEM13N  .ARJ   88.856 12.11.91* [05] [Neues Upload - Nicht getestet]
+ SEM14   .ARJ   10.191 18.09.91  [26] Devcon K”ln 91 : Data Dictonary
+ SEM15   .ARJ    5.945 18.09.91  [21] Devcon K”ln 91 : Datenschutz und
+                                      -Sicherheit
+ SEM16   .ARJ  680.752 16.09.91  [12] Devcon K”ln 91 : Math./techn. Funktionen
+ SEM18   .ARJ   37.700 16.09.91  [21] Devcon K”ln 91 : Clipper Extend System
+ SEM19   .ARJ  209.923 18.09.91  [28] Devcon K”ln 91 : Bausteine fr SAA-Stil
+ SEM19N  .ARJ  225.512 12.11.91* [08] [Neues Upload - Nicht getestet]
+ SEM20   .ARJ  219.935 18.09.91  [26] Devcon K”ln 91 : Visible Tbrowse
+ SEM21   .ARJ   10.323 18.09.91  [26] Devcon K”ln 91 : Code Blocks revealed
+ CLIPBBS 1-17                   Page 12                  17 Dec 1991
+
+
+ SEM22   .ARJ   17.020 18.09.91  [28] Devcon K”ln 91 : The Get Class
+ SEM22N  .ARJ   36.933 12.11.91* [07] [Neues Upload - Nicht getestet]
+ SEM24   .ARJ    1.344 18.09.91  [23] Devcon K”ln 91 : Scoping Considerations
+ SEM25   .ARJ    4.352 18.09.91  [23] Devcon K”ln 91 : Low Level File
+                                      Functions
+ SEM25N  .ARJ    4.421 12.11.91* [05] [Neues Upload - Nicht getestet]
+ SEM27   .ARJ   24.935 18.09.91  [24] Devcon K”ln 91 : Error analysis and
+                                      recover
+ SEM27N  .ARJ   49.562 12.11.91* [06] [Neues Upload - Nicht getestet]
+ SEM28   .ARJ   23.375 18.09.91  [21] Devcon K”ln 91 : Developing SQL
+                                      Applications
+ SEM2930 .ARJ   10.469 18.09.91  [29] Devcon K”ln 91 : Optimizing Applications
+ TBCOLOR .ARJ    8.063 01.01.91  [18] Einzelne Spalten in TBrowse farbig
+                                      markieren
+ TBTRAIN .ARJ   15.568 01.01.91  [11] Demo zu TBrowse
+ TBWHILE .ARJ    6.709 17.06.91  [17] SET FILTER mit TBrowse realisieren
+ TELEPATH.ARJ  193.017 26.06.91  [07] Demoprogramm zur Telepathy
+                                      Kommunikations-Lib
+ 
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°              dBase III              °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: TOPCODE.ARJ    Datum: 26.09.91   Size:   100.929³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ ACCTGDB2.ARJ   54.619 12.12.90  [01] Maintain Accounts:  Payroll, Billing..
+ ADDRESB .ARJ   26.648 21.04.88  [00] [Beschreibung ging leider verloren]
+ ADR_BOOK.ARJ    6.928 12.12.90  [01] Personal Address Book for the Osborne I
+ AGS     .ARJ   72.372 06.07.88  [02] DBase Applications Generation System
+ BAR-1   .ARJ    3.084 12.12.90  [01] [Beschreibung ging leider verloren]
+ BAR     .ARJ    3.082 31.12.88  [03] Generate a 'status bar' in dBASE III/III
+ BARGRAF .ARJ    3.560 12.12.90  [01] Generates a bar graph in dBASE III+
+ BROWSE  .ARJ    4.239 31.12.88  [03] [Beschreibung ging leider verloren]
+ C2DBASE .ARJ   56.246 12.12.90  [01] dBase II Utilities w/ 'C' Pgming Sample
+ CACPO   .ARJ   71.983 12.12.90  [01] A compiled dBASE III paperwork program
+ CHKBK   .ARJ   13.014 12.12.90  [01] dBaseIII Checkbook Manager with Good
+                                      Use of Colo
+ CLIENTS .ARJ    9.050 12.12.90  [01] Keeps track of legal clients in dBASE
+                                      III
+ CLIPCONF.ARJ   81.701 12.12.90  [01] Clipper/dBASE III conferencing
+ CLIPMN22.ARJ   18.266 01.03.88  [01] [Beschreibung ging leider verloren]
+ CLIPMSG .ARJ   10.402 12.12.90  [01] Clipper/dBASE III messages
+ CLIPNOTE.ARJ   11.988 12.12.90  [01] Notes on the Clipper Compiler for dBASE
+                                      III
+ CLIPUDF .ARJ   10.158 01.03.88  [01] [Beschreibung ging leider verloren]
+ CLIPW85 .ARJ    2.599 01.03.88  [01] [Beschreibung ging leider verloren]
+ CLIPW85A.ARJ    2.193 01.03.88  [01] [Beschreibung ging leider verloren]
+ CONGRESS.ARJ   23.072 12.12.90  [01] Congressional Directory 1988 for DLITE10
+ CONVDB2 .ARJ    8.236 12.12.90  [01] Xfer Contents of one File to Another
+                                      w/Diff Stru
+ CUBS    .ARJ   14.801 12.12.90  [01] Keep Track of Your Cub Scout Troop with
+                                      dBase II
+ CURONOFF.ARJ    3.031 12.12.90  [01] Turn cursor on and off in dBASE III+
+ DB-PLUS .ARJ  172.160 12.12.90  [01] diverse Programme fr Dbase
+ DB-UTIL1.ARJ  112.790 17.06.91  [04] dBase Utilitis
+ DB-UTIL2.ARJ   99.754 12.12.90  [02] dBase Utilitis
+ CLIPBBS 1-17                   Page 13                  17 Dec 1991
+
+
+ DB-UTIL3.ARJ   96.040 12.12.90  [02] dBase utilitis
+ DB-UTIL4.ARJ  134.643 12.12.90  [02] dBase utilitis PD 218
+ DB-UTIL5.ARJ   10.658 12.12.90  [03] dBase utilitis PD 219
+ DB-UTIL6.ARJ  132.823 12.12.90  [02] dBase utilitis PD 220
+ DB-UTIL7.ARJ  162.412 12.12.90  [02] dBase utilitis PD 221
+ DB-UTIL8.ARJ  119.049 12.12.90  [02] dBase uti.PD zur Serie 1-8 in dieser Box
+ DB2IOS  .ARJ   56.184 31.12.88  [00] DBase2-Order Entry/Inventory System
+ DB2SHL20.ARJ   19.412 12.12.90  [00] dBase II Shell Provides Const.Feedb.Cnrt
+ DB2UTIL .ARJ  128.523 31.12.88  [00] Decode DbaseII runtime code
+ DB2WORD .ARJ    2.945 12.12.90  [01] Konvertieren vom dBase in Word
+ DB2_WP  .ARJ    8.036 12.12.90  [01] dBase in Wordperfect
+ DB3-GKEY.ARJ    5.689 12.12.90  [01] Courser on/off , Inkey() mit Wartezeit
+ DB3     .ARJ   55.189 12.12.90  [02] A sample account program for dBASE III
+ DB3AMORT.ARJ    6.318 12.12.90  [01] Amortization schedules for dBASE III
+ DB3ANOM .ARJ   33.337 15.01.88  [02] A-T list of known DB3 "anomalies" 11/87
+ DB3AR   .ARJ   39.386 12.12.90  [01] Accounts receivable prg. for dBASE III
+ DB3ASCII.ARJ    4.423 12.12.90  [01] A dBASE III prg.to show ASCII characters
+ DB3DD   .ARJ    7.525 12.12.90  [01] A data dictionary for dBASE III
+ DB3DEBUG.ARJ    4.379 17.06.91  [01] A dBASE III applications de-bugger
+ DB3DIREC.ARJ    6.743 12.12.90  [01] dBase III Phone Dir. Prg. with Some Doc
+ DB3FIX  .EXE   25.856 22.05.91  [04] Repair damaged dBase III files
+ DB3FIXPO.ARJ   24.312 12.12.90  [02] Fixes "Trashed" dBase III Files
+ DB3JOKE .ARJ    5.449 12.12.90  [01] Fool the boss with this dBASE III joke
+ DB3NOTES.ARJ   46.111 12.12.90  [01] dBASE III reference notes
+ DB3PDRIV.ARJ    7.241 13.12.89  [01] Print drivers for DB3
+ DB3PLSAR.ARJ   47.171 12.12.90  [01] dBASE III reference notes
+ DB3PLTTR.ARJ  147.241 12.12.90  [01] A dBASE III+ tutorial
+ DB3PLUS .ARJ    8.352 12.12.90  [01] Instruct.on making back-up of dBASE III+
+ DB3PNOTE.ARJ    3.535 12.12.90  [01] dBASE III+ technical notes
+ DB3PRT  .ARJ    2.695 31.12.88  [02] Send printer control codes from DBase 3
+ DB3REF11.ARJ   12.003 12.12.90  [01] Reference notes for dBASEIII version 1.1
+ DB3RETXT.ARJ   12.003 31.12.88  [01] Reference Notes for dBASE III Ver. 1.1
+ DB3SCR1 .ARJ    5.195 12.12.90  [01] Create boxes quickly in dBASE III
+ DB3SECUR.ARJ    6.055 12.12.90  [01] User security access prg.for dBASE III
+ DB3SGEN .ARJ   31.755 12.12.90  [01] A dBASE III screen generating program
+ DB3STOCK.ARJ   23.864 12.12.90  [01] dBaseIII Stockpile of
+                                      Procedur.,Menus,um..
+ DB3STR  .ARJ    9.828 12.12.90  [01] View dBASE files without runn dBASE prg.
+ DB3TAW  .ARJ   27.443 12.12.90  [01] Tutorial for dBase III+, Advanced,
+ DB3TECH .ARJ   40.099 12.12.90  [01] dBASE III technical notes
+ DB3TIPS1.ARJ   41.513 31.12.88  [02] DBASE TIPS VOLUME 1
+ DB3TIPS2.ARJ   21.740 04.10.88  [02] DBASE TIPS VOLUME 2
+ DB3TIPS3.ARJ   13.749 31.12.88  [01] DBASE TIPS VOLUME 3
+ DB3TIPS4.ARJ   10.474 31.12.88  [01] DBASE TIPS VOLUME 4
+ DB3UTIL .ARJ   31.483 12.12.90  [01] Miscellaneous Utilities for dBase
+ DB3V12  .ARJ    8.304 12.12.90  [01] A Review of dBASE III version 1.2
+ DB3V30  .ARJ    4.746 12.12.90  [01] Two backup programs for dBASE III
+ DB3WIND .ARJ    4.671 12.12.90  [01] A dBase III window generator
+ DB3WPERF.ARJ    8.827 31.12.88  [01] [Beschreibung ging leider verloren]
+ DB3_DD  .ARJ    7.526 12.12.90  [01] Data Dictionary Generator for dBase III
+ DB4ANOM .ARJ   16.431 02.06.91  [00] Listing of dBase IV anomalies
+ DB4_ANOM.ARJ   67.793 21.05.89  [01] dBAse IV Anomalies (latest group)
+ DBA1286 .ARJ   29.105 31.12.88  [00] Data Base Advisor Pgms Dec 86
+ DBACKUP .ARJ    3.492 12.12.90  [00] dBASE III backup program
+ DBADVAN .ARJ   20.055 12.12.90  [00] Advanced dBase II Utilities
+ DBAPG   .ARJ   90.739 12.12.90  [00] Advanced prg. guide to dBASE II and III
+ CLIPBBS 1-17                   Page 14                  17 Dec 1991
+
+
+ DBARC   .ARJ    3.488 31.12.88  [00] Access ZIP 4.30 from DB3 Menu
+ DBASE   .ARJ    4.065 12.12.90  [01] A state + ZIP code checker for dBASE II
+ DBASEACC.ARJ   54.984 12.12.90  [01] A dBASE II account program
+ DBASECAT.ARJ    8.257 31.12.88  [02] Catalog your disk with Dbase
+ DBASEIII.ARJ    7.425 12.12.90  [02] Menu and disk catalog for dBASE III
+ DBASE_1 .ARJ    2.985 31.12.88  [01] SAMPLE -- list DBase II file on screen -
+ DBASE_C .ARJ   19.313 31.12.88  [01] From TCOG CGroup, dBase II file access
+ DBASII  .ARJ   11.219 12.12.90  [00] A collection of dBASE II programs
+ DBASWIN .ARJ   17.085 22.02.88  [00] DBASE III WINDOWING UTILITY
+ DBB     .ARJ   18.751 07.11.90  [00] View dBase files
+ DBB12   .ARJ   18.729 13.09.89  [01] DB Browser 1.2. Simulates dBase browse.
+ DBBACKUP.ARJ    4.669 12.12.90  [00] Backupprg. fr gr. Datenbanken in Dbase
+ DBBOOKS .ARJ   28.310 12.12.90  [00] dBaseII Bookkeep.System Income, Checks
+ DBBROW20.ARJ   12.144 12.12.90  [00] dB III DBF Beschreibung (gut)
+ DBBUDGET.ARJ    9.438 12.12.90  [00] dBase II Household Accounting System
+ DBCBIN  .ARJ   18.922 26.11.88  [00] Utilities for dBase III/FoxBase+
+ DBCLINIC.ARJ   11.562 12.12.90  [00] Check Integr.of dBaseII Data Files w/Doc
+ DBCLOCK .ARJ    2.734 26.05.88  [00] Real time dBase3+ clock program.
+ DBCMPILE.ARJ    4.093 12.12.90  [00] A dBASE II and III compiler
+ DBCOLOR .ARJ    3.486 12.12.90  [00] Custom color utility for dBASE III
+ DBCURSOR.ARJ    5.391 07.04.88  [00] dBASEIII bin. & src. curs. cntrl.
+                                      modules
+ DBDOCTOR.ARJ   56.350 25.07.89  [00] .DBF file recovery and more!
+ DBEDIT  .ARJ  121.409 02.06.91  [05] Database file editor for DBase III,
+                                      Clippr
+ DBEDIT10.ARJ    5.679 12.12.90  [00] dBASE III command line editor
+ DBEPSON .ARJ    4.609 31.12.88  [00] DBASE III EPSON PRINTER SETUP
+ DBF2MEMO.ARJ    8.304 12.12.90  [01] Konvertieren von CHR String in dBIII DBF
+ DBFILE  .ARJ    6.003 31.12.88  [01] Compress/expand Dbase prog files
+ DBFLOW  .ARJ   21.502 12.12.90  [01] Create dBASE flow chart to screen /file
+ DBFRED37.ARJ    8.493 12.12.90  [01] Append Files with One or More Fields
+ DBFSPSS .ARJ    8.911 12.12.90  [01] Konvertiert DBase Dateien nach SPSS
+ DBGRAF  .ARJ    4.884 12.12.90  [01] Graphics Generator for dBase II
+ DBIIBOOT.ARJ    4.473 12.12.90  [01] Automatic.boot dBASE applications on RAM
+ DBIIIBBS.ARJ    3.683 12.12.90  [01] Import a BBS transfer list to dBASE III
+ DBIIICOL.ARJ    5.159 12.12.90  [01] Custom color menu selection for dBASEIII
+ DBINFO  .ARJ   13.490 14.08.88  [00] Dbase DBF view
+ DBLOOK  .ARJ   15.989 12.12.90  [01] Liest dBase Daten von Turo Pascal
+ DBMENU-1.ARJ   14.317 12.12.90  [01] [Beschreibung ging leider verloren]
+ DBMENU  .ARJ   64.435 17.06.91  [02] dBase Mengenerator
+ DBMENU40.ARJ   63.104 31.12.88  [01] DBASE III + Menu Application Generator,
+ DBMG    .ARJ  149.675 12.12.90  [04] dBase Maskengenerator
+ DBMLM   .ARJ   82.534 12.12.90  [01] [Beschreibung ging leider verloren]
+ DBNEET  .ARJ   19.482 12.12.90  [01] Cleans up your dBASE programs
+ DBPOWR44.ARJ   60.425 31.12.88  [02] Handy set of tools for dBase C source
+ DBPRETTY.ARJ   20.602 12.12.90  [01] Formatting Prg.for dBaseII Command Files
+ DBPRINT .ARJ   25.170 12.12.90  [01] Purpose Mailing List & Record Ptr/dBase
+ DBPRN12 .ARJ    4.919 12.12.90  [02] Checks printer status for dBASE III+
+ DBREP   .ARJ    6.798 12.12.90  [01] Global search+replace prg.for dBASE III
+ DBSHOP  .ARJ    8.306 12.12.90  [01] Let dBase II Help with Grocery Shopping
+ DBSQUASH.ARJ    7.753 12.12.90  [01] Compact or Squeeze dBaseII Command Files
+ DBSSTEEL.ARJ    3.640 31.12.88  [01] Read before downloading DBSTEEL Pgrms
+ DBSTEEL1.ARJ   92.654 31.12.88  [01] Dsk 1 / Integ. Multi-Func. Database Pgm
+ DBSTEEL2.ARJ   98.169 31.12.88  [01] Dsk 2 / Integ. Multi-Func. Database Pgm
+ DBSTEEL3.ARJ   96.539 31.12.88  [01] Dsk3 of Intergrated Multi Func. Pgm
+ DBSTEEL4.ARJ   98.880 31.12.88  [01] Dsk4 of Intergrated Multi Func. Pgm
+ CLIPBBS 1-17                   Page 15                  17 Dec 1991
+
+
+ DBSTPO21.ARJ   11.646 12.12.90  [01] Display dBASE file structure from DOS
+ DBTOOLS .ARJ   18.964 12.12.90  [02] Invoke dBaseIII Com.Outside of dBase Prg
+ DBUNIQ23.ARJ    9.541 12.12.90  [01] Utilit.to Purge Duplicate dBaseII Record
+ DBUTIL  .ARJ   14.803 12.12.90  [01] Miscellaneous Utilities for dBase
+ DBUTIL6 .ARJ   11.990 12.12.90  [01] dBase utilities
+ DB_FORM .ARJ    3.245 12.12.90  [02] Format.dBASE-Prg.bersichtlich/Schleife
+ DB_FRM_C.ARJ   17.845 12.12.90  [01] Read +Write dBase III Files from C Prg
+ DB_LIST .ARJ    5.871 12.12.90  [01] Komfortabler dBase-Programmlister
+ DDPRINT .ARJ    3.611 31.12.88  [01] Print dBase data dictionary
+ DECANT  .ARJ   16.221 01.03.88  [00] [Beschreibung ging leider verloren]
+ DFIXUP2 .ARJ   29.068 12.12.90  [01] dBASE II, III & III+ indent utility
+ DFLOW   .ARJ   30.915 31.12.88  [02] DBase III Program Listing Utility Demo
+ DGCLIP  .ARJ   85.843 12.12.90  [03] A dBASE III code and screen generator
+ DGENIUS .ARJ   14.136 12.12.90  [01] Collection of dBaseIII+  Assistant Prg
+ DIR2TEXT.ARJ   14.616 31.12.88  [01] Import Dir entries to your database mgr.
+ DISKSPAC.ARJ    3.826 12.12.90  [00] Check drive status &space for dBASE III+
+ DISPNDX .ARJ    4.805 12.12.90  [00] Display contents of a dBASE index file
+ DL1B    .ARJ   12.969 01.03.88  [00] [Beschreibung ging leider verloren]
+ DMENU   .ARJ   22.184 12.12.90  [00] dBASE II and III menu generator
+ DSCAR   .ARJ   46.725 12.12.90  [01] Analysiert dBase PRG recht gut
+ DSCAR1  .ARJ   43.233 12.12.90  [01] dBASE III+ syntax checker
+ DSCAR20 .ARJ   47.443 31.12.88  [01] Public Domain Version of DFLOW - SUPER!
+ DSYNTAX3.ARJ   21.643 31.12.88  [01] Db3 syntax checker
+ DTUN31PC.ARJ   26.077 12.12.90  [01] Makes dBASEII and III prg run faster
+ DYNAPACK.ARJ   15.555 31.12.88  [01] Fast pack dBase files from DOS
+ EFS     .ARJ   11.366 31.12.88  [01] Electronic Filing System (database prgm)
+ EOQPROG .ARJ    7.975 12.12.90  [01] dBase for Econ Order Qlty Catch $$$ Hamm
+ EVENT   .ARJ   10.789 31.12.88  [01] A Utility to Remind You of Important Dai
+ EZDBASE .ARJ   45.012 12.12.90  [01] dBase Screen & Menu Editor with Doc.
+ EZWIN12 .ARJ  179.392 12.12.90  [02] dBase III window generator util.ver 1.2
+ FDM     .ARJ   21.683 31.12.88  [01] File Drawer Manager (Database..untested)
+ FEXP1   .ARJ   59.284 31.12.88  [01] File Express data base mgr.V3.73 (1/4)
+ FEXP2   .ARJ   55.428 31.12.88  [01] File Express data base mgr.V3.73 (2/4)
+ FEXP3   .ARJ   68.599 31.12.88  [01] File Express data base mgr.V3.73(3/4)
+ FEXP4   .ARJ   71.062 31.12.88  [01] File Express data base mgr.V3.73(4/4)
+ FLOW    .ARJ   21.500 12.12.90  [01] A dBASE III utility to diagram prg.flow
+ FLOW1   .ARJ   21.500 31.12.88  [01] NICE DBASE III PROG LOGIC OUTLINER
+ FMREVIEW.ARJ    8.343 31.12.88  [01] Reviews of PD File Manager programs - VG
+ FONEBOOK.ARJ   13.451 31.12.88  [01] DBASE III Mailing List
+ FONEWORD.ARJ   24.618 12.12.90  [01] A dBASE III telephone management utility
+ FORCE   .ARJ  142.012 12.12.90  [02] DBASE*.prg FORCE Comp.Demo Cebit90 pk(-d
+ FORMDB2 .ARJ    7.126 12.12.90  [01] Mailing Label Utilities for dBase II
+ FOXMENU .ARJ   15.110 12.12.90  [01] Fox Module ab V 2.1 fr Popup Men
+ FRC-DEMO.ARJ  147.432 12.12.90  [01] Demo FORCE dBase-Compiler
+ FREEFILE.ARJ  119.146 31.12.88  [01] FreeFile User Supported Database Manager
+ H89_DB2 .ARJ    4.612 12.12.90  [01] Patch to Let H89 Use Keypad&Function
+ HANDEL  .ARJ   74.906 12.12.90  [01] Dbase III Plus Getr„nkehandel-Programm
+ HEADER  .ARJ   14.081 12.12.90  [01] Print dBASEIII file structure to a file
+ IMPORT  .ARJ   21.615 31.12.88  [01] Database utility
+ INDENT  .ARJ    3.229 01.03.88  [01] [Beschreibung ging leider verloren]
+ INV1    .ARJ   12.762 12.12.90  [01] An inventory program for dBASE III+
+ INVTORY .ARJ    7.304 31.12.88  [01] DB2 or 3 Inventory prgm - looks good
+ KEYLOCK .ARJ    2.674 12.12.90  [01] Access NUM Lock/CAPS Lock from dBASEIII+
+ KIT     .ARJ   14.982 31.12.88  [01] "Keep In Touch!" Notebook/Rolodex mgr.
+ KITE    .ARJ    2.733 31.12.88  [01] An interesting random color kite -- in B
+ LABELMKR.ARJ    4.319 12.12.90  [01] Label Maker Utility for dBase II
+ CLIPBBS 1-17                   Page 16                  17 Dec 1991
+
+
+ LBARGEN .ARJ   15.986 12.12.90  [01] Generat lite-bar menu codes for dBASEIII
+ LBARMENU.ARJ    3.985 12.12.90  [02] Programmierung v.Leuchtbalkenmens DB3+
+ LIBRARY .ARJ   11.220 17.06.91  [02] A library routine for dBASE II
+ LIBRDB2 .ARJ   11.568 12.12.90  [02] Library Utilities for dBase II
+ LISTSTRU.ARJ   12.614 12.12.90  [01] List structure  dBASEIII files from DOS
+ LITEBR42.ARJ   44.474 12.12.90  [01] Quick Men fr Dbase III*
+ LTTRGEN .ARJ    7.749 12.12.90  [01] A form letter generator for dBASE II
+ MAIL    .ARJ    9.310 12.12.90  [00] A dBASE II mailing label manager program
+ MAIL17  .ARJ   26.331 12.12.90  [00] Mail.List, Form Ltr Gen & More for dBase
+ MAILABLE.ARJ    9.314 12.12.90  [00] other dBASEII mailing label manager prg
+ MAILDB2 .ARJ    9.313 12.12.90  [00] Mailing List Programs for dBase II
+ MAILDB3 .ARJ   10.330 12.12.90  [00] dBaseIII+ Mailing List Menus & Sub-Menus
+ MAILII  .ARJ    9.312 31.12.88  [00] DBASE II mail list programs
+ MAILIST1.ARJ   20.415 31.12.88  [00] Mailing List Program
+ MAILMEN5.ARJ   13.775 12.12.90  [00] dBASE III personal mailing list manager
+ MASTER  .ARJ   30.735 12.12.90  [03] Personal Labeling Program and Database
+ MEMBERS .ARJ   26.900 12.12.90  [00] membership management prg.for dBASEIII+
+ MISCDB2 .ARJ    4.747 12.12.90  [00] Backup and Name Entering Prg.for dBaseII
+ MNCITIES.ARJ   74.723 31.12.88  [00] DB3+ All MN cities lat long and pop.
+ MODDBF  .ARJ    4.567 31.12.88  [01] DB3+ util .prg to modify .dbf structure
+ MRIM001 .ARJ   11.855 31.12.88  [00] Microrim Online for Rbase Database
+ MRIM002 .ARJ   17.753 31.12.88  [00] Microrim Online for Rbase #2
+ MRIM004 .ARJ   13.999 31.12.88  [00] Microrim's Online for Rbase - #4
+ MS-DB4  .ARJ   18.855 12.12.90  [02] Mouse fr dBase IV !
+ MULTIDB .ARJ    7.026 12.12.90  [00] Multi-user reference notes for dBASE III
+ MULTIDEF.ARJ    6.517 12.12.90  [00] Defines multi-user for dBASE III
+ NEW-HEAD.ARJ   12.955 12.12.90  [00] [Beschreibung ging leider verloren]
+ NEWCOLOR.ARJ    4.628 12.12.90  [01] A color selection module for dBASE III+
+ NEWHEAD .ARJ   12.954 13.12.90  [00] Reconstruct header for dBASE III & III+
+ OPTMEN  .ARJ    9.634 12.12.90  [00] An options menu processor for Clipper
+ OPTMENU .ARJ    4.230 12.12.90  [00] Adds Lotus style menus to dBASE III+
+ PAGES2  .ARJ   15.374 12.12.90  [00] A paging routine for dBASE III+
+ PARSNAM2.ARJ   29.039 12.12.90  [00] Pars Name in Components to Data Manipul.
+ PAY1PERS.ARJ   12.960 12.12.90  [00] A payroll & personnel prg. for dBASEIII+
+ PBASE   .ARJ   87.165 31.12.88  [00] Database with Query language
+ PCDBMS  .ARJ   91.938 31.12.88  [00] Public Domain Relational Database System
+ PCFMERGE.ARJ    3.318 12.12.90  [00] How to Merge to Databases Under PC-FILE
+ PCGRAPH .ARJ   57.413 31.12.88  [00] Button's graphics for PC-FILE III.
+ PCLIB   .ARJ   11.449 31.12.88  [00] Multi-disk librarian/program classifier
+ PCMAP   .ARJ    6.487 31.12.88  [00] PC-File uitlity -- in BASIC
+ PC_REPL .ARJ   54.978 12.12.90  [00] Repl.&Change Name in PC-FILE Dtbase Rec.
+ PHONE   .ARJ   15.604 31.12.88  [00] Telephone Book Search Utility - Version
+ POWRMENU.ARJ   98.409 17.06.91  [00] A technical discussion on dBASE menus
+ PRFILE  .ARJ    3.389 12.12.90  [00] Redirects dBASE print output to DOS file
+ PRNDBF  .ARJ   18.584 12.12.90  [00] Struktur-Lister fr DBF-Dateien
+ PROKEY  .ARJ    5.206 12.12.90  [00] program to backup dBASE III version 1.0
+ PROPMGR1.ARJ   59.033 12.12.90  [00] Property managem. for dBASE(part 1 of 2)
+ PROPMGR2.ARJ   71.359 12.12.90  [00] Property managem.for dBASE(part 2 of 2)
+ PSSST   .ARJ   51.105 31.12.88  [00] Suspense,priority,phone mgr. v2.0 for dB
+ PUCLMENU.ARJ    4.595 12.12.90  [00] Multi-level Clipper menus
+ RCHECK  .ARJ   17.867 31.12.88  [00] Rbase 400O Budget/check manager system
+ REBUILD .ARJ   20.074 31.12.88  [00] Rebuild damaged dBase files
+ RETRIEVE.ARJ   13.742 12.12.90  [00] A dBASE II program to retrieve articles
+ RETRVIII.ARJ   13.087 31.12.88  [00] Modifications to RETRIEVE
+ RETRV_PC.ARJ   25.953 12.12.90  [00] Input&Retrieve Author Citations from Doc
+ ROLODEX .ARJ    6.579 12.12.90  [00] dBaseII orIII Name &Address Database Prg
+ CLIPBBS 1-17                   Page 17                  17 Dec 1991
+
+
+ SCRNGRAF.ARJ    2.810 31.12.88  [00] Graphics for dbase III
+ SDB     .ARJ   59.768 31.12.88  [00] Small Data Base in C (super!!)
+ SMG51   .ARJ   28.015 31.12.88  [00] Menu generator for dbase III plus
+ SOUNDEX .ARJ    4.208 31.12.88  [00] Soundex For DBIII
+ SOUNDEX2.ARJ    3.940 31.12.88  [00] SOUND-A-LIKE SEARCHES IN DBAS   E
+ SSQL    .ARJ   67.679 12.12.90  [00] Struct.Query Language Database Vers 1.2
+ STRUKTUR.ARJ    3.455 12.12.90  [00] Strukturieren von Dbase Programmen
+ TCDBF   .ARJ   17.842 31.12.88  [03] Turbo-C functions to access Dbase files
+ TIMSAV28.ARJ   98.074 31.12.88  [00] Time and schedual manager
+ TMS     .ARJ  119.836 31.12.88  [00] CD-ROM Demo Software
+ TODAY   .ARJ    3.049 31.12.88  [01] DBASEII prg converts DATE() format
+ TOOLKIT .ARJ   26.659 31.12.88  [00] Three file related utilities
+ TOOLS-1 .ARJ   50.207 12.12.90  [00] dBase III+ Grafik Tools Teil 1
+ TOOLS2-1.ARJ   85.529 12.12.90  [00] dBase III+ Grafik Tools Teil 2
+ TOOLS2-2.ARJ   81.794 12.12.90  [00] dBase III+ Grafik Tools Teil 3
+ TOPCODE .ARJ  100.929 26.09.91  [05] Programmgenerator fr DBASE u. kompat.
+ TWENTY  .ARJ    4.532 12.12.90  [00] Open up to20 database files in dBASEIII+
+ UGRAPH  .ARJ    4.946 31.12.88  [04] Make Bar or Scatter Graphs from DB3
+ UMIND   .ARJ   34.137 31.12.88  [00] Create a custum BASIC database program
+ VAC50   .ARJ   32.213 31.12.88  [00] SCHEDULE VACATION FOR 50 PERSONS........
+ VIEWGEN .ARJ  115.493 12.12.90  [00] View the creation of a dBASE file
+ WAMPUM33.ARJ  251.143 12.12.90  [02] A dBASE III clone package
+ WILDPROC.ARJ    3.525 12.12.90  [00] Wildcard search procedures for Clipper
+ WORDWRAP.ARJ    9.865 12.12.90  [00] Word wrap article program for dBASE III+
+ WPMERGE .ARJ   17.665 12.12.90  [00] dBase to Word-Perfect Merge Format
+ XDBASE3A.ARJ    3.967 12.12.90  [00] Turbo Include File dBaseIII File Struct.
+ 
+ 
+ 
+ BLINKER .ARJ   61.561 30.03.91  [07] Norton Guides zum Blinker fr Clipper
+ BTNG    .ARJ    8.160 08.07.89  [03] Norton Guide for Btrieve
+ ERRORNG .ARJ   13.438 24.10.91  [03] Dos, Novell, NetBios Fehler als Norton
+                                      Guides
+ FD201NG .ARJ   84.124 27.09.91  [32] FrontDoor 2.01 Norton Guides
+ MSDOS5NG.ARJ   20.152 21.07.91  [49] NG zu DOS 5.00
+ NEC_P6  .ARJ   31.338 01.10.91  [02] Nec P6 Norton Guides
+ NGDB4   .ARJ  159.222 21.03.89  [11] Norton Guides fr dBase IV
+ NGPINOUT.ARJ   73.246 28.05.91  [19] Norton Guides fr verschiedene IC-Chips
+ NGPREF20.ARJ   80.373 17.10.91  [03] PAL (Paradox Language) Norton Guides
+ NG_SEAGT.ARJ   21.050 25.10.91  [09] Norton Guides ber Seagate Festplatten
+ NT250   .ARJ  266.777 18.05.91  [11] Norton Guides der Nantucket Tools 2,
+                                      Clipper 5.0
+ TOSSCAN .ARJ   29.590 17.06.91  [10] Norton Guides zu TosScan
+ 
+ 
+ 
+ 212BSH  .ARJ   96.006 01.07.91  [05] NOVELL 2.12 Bug-Fixes fr NETx.
+ 2EDISK  .ARJ   11.641 13.12.90  [05] 2. HD Controller fr Novell V 2.1X
+ 311PAT  .TXT      593 17.08.91  [06] [Beschreibung ging leider verloren]
+ 3270DEMO.ARJ   32.771 09.11.90  [01] Utility for 3270 users--Use mouse on
+                                      mainfr
+ 38631LAN.ARJ   76.851 15.04.91  [08] NOVELL 386 3.10A LAN-Adapter Server
+                                      Treiber
+ 386DCB  .ARJ   10.780 13.12.90  [04] NOVELL 386 3.0 DCB Treiber-Update
+ 386PROB .ARJ   10.832 13.12.90  [07] NW 386 3.0 Problembeschreibung
+ 3COMMC  .ARJ   53.169 06.01.90  [02] 3COM 3C523 Micro-Channel Treiber
+ CLIPBBS 1-17                   Page 18                  17 Dec 1991
+
+
+ A86LKMEM.ARJ    4.040 24.01.88  [06] Novell Netware 286/Clipper A86 .MEM
+                                      lock fn
+ ACCTCVT .ARJ   21.473 01.07.91  [01] Show Accounting Info's
+ ACCTDAT .ARJ   25.729 15.01.91  [03] Novell account --> Printer
+ ACDATA  .ARJ   25.444 01.07.91  [02] Show Accounting Info's
+ AD311   .ARJ   21.697 17.06.91  [29] ADAPTEC SCSI Treiber fr NOVELL 3.11
+ ADAPTEC .ARJ  313.691 23.12.90  [25] ADAPTEC 1540/1542 Doku. und Tools
+ ADSC215 .ARJ    7.419 02.06.91  [09] ADAPTEC SCSI Treiber fr NW 2.15
+ AET     .ARJ    7.112 01.07.91  [05] Auto Endspool Toggle Util. NOVELL
+ AFPFIX  .ARJ    5.416 17.08.91  [01] [Beschreibung ging leider verloren]
+ AHADISK .ARJ    6.350 05.06.91  [00] [Beschreibung ging leider verloren]
+ ALLEIN  .ARJ   19.673 23.12.90  [11] NOVELL Logout-Tool (C'T)
+ ALLUSE  .ARJ    5.792 05.06.91  [04] Displays Bindery + User-Info's
+ ALLUSER .ARJ    7.720 18.02.91  [02] Display all object ID & ident -> Novell
+ ALOGIN  .ARJ   15.578 30.10.89  [05] LANtastic auto login.
+ AN3110  .EXE   21.205 28.08.91  [01] [Beschreibung ging leider verloren]
+ ANETDEMO.ARJ   89.220 05.06.91  [02] DEMO fr NOVELL-Tools
+ ARC-CARD.ARJ   26.824 01.07.91  [00] THOMAS CONRAD WS-Drivers
+ ARCCARD .ARJ   26.262 15.01.91  [01] Thomas Conrad Treiber fr Novell
+ ARCD22  .ARJ   33.395 05.06.91  [07] ARCNET-Karten Testprogramm Ver. 2.20
+ ARCDIAG .ARJ   24.788 18.02.91  [10] Diagnose fr Novell ARCNET Karten
+ ARCDRVR .ARJ   82.979 17.06.91  [09] Mehrere High Performance ArcNet-Treiber
+ ARCNET  .ARJ   16.470 01.07.91  [05] PURE DATA Arcnet Treiber fr NOVELL 2.0
+ ARCSHEL .ARJ    6.307 15.01.91  [01] Hilfe f. add/interr. Probeleme ARCNET
+ ARCSHELL.ARJ    6.308 25.07.91  [05] ARCNET Shell Update fr NOVELL
+ ARCVIS  .ARJ   28.785 05.06.91  [12] ARCNET LAN Monitor fr NOVELL
+ ARGUS   .ARJ   75.146 05.06.91  [28] LAN Workstation Monitoring Tool
+ AS4CON  .ARJ    7.423 13.12.90  [11] Beschreibung zur Kopplung v. NETWARE &
+                                      AS400
+ ASCSI386.ARJ    9.043 17.12.90  [06] ADAPTEC Treiber (1542B) SCSI fr NW 386
+ AT215C  .ARJ    6.368 14.06.91  [11] AT Disk Treiber fr Novell 2.15c
+ ATTLAN  .ARJ    4.956 05.06.91  [01] AT&T Multidriver fr NOVELL NW 386
+ AVAIL   .ARJ    8.104 05.06.91  [05] Anzeige ungemappter (!) LW's NOVELL
+ BALANCE .ARJ   22.973 02.06.91  [02] Display Network accounts balances
+ BALNCE  .ARJ   21.042 05.06.91  [00] [Beschreibung ging leider verloren]
+ BARESFT2.ARJ   91.817 05.06.91  [03] NOVELL Tool fr SFT
+ BASNET  .ARJ   52.433 04.05.88  [05] Basic Interface for Novell Functions
+ BAST110 .ARJ  134.691 05.06.91  [02] [Beschreibung ging leider verloren]
+ BBUG    .ARJ   21.940 05.06.91  [01] [Beschreibung ging leider verloren]
+ BELW16  .ARJ    2.762 17.08.91  [01] [Beschreibung ging leider verloren]
+ BFIX06  .ARJ   22.591 12.06.91  [05] Tool zum reparieren von NOVELL Btrieve
+                                      Files
+ BHLP16  .ARJ  108.698 12.06.91  [01] [Beschreibung ging leider verloren]
+ BINDARC .ARJ    8.414 18.02.91  [08] Archives bindery files NetWare v2.1 v3.x
+ BINDBACK.ARJ    6.488 12.06.91  [03] BINDARC Version 1.0
+ BINDFIX .ARJ   25.488 12.06.91  [05] Bindery Repair fr NOVELL
+ BINDLO  .ARJ   80.090 12.06.91  [03] [Beschreibung ging leider verloren]
+ BK      .ARJ   29.096 12.06.91  [01] [Beschreibung ging leider verloren]
+ BOOTST  .ARJ   34.634 17.08.91  [00] [Beschreibung ging leider verloren]
+ BOPS    .ARJ   37.082 12.06.91  [00] [Beschreibung ging leider verloren]
+ BPAGE1  .ARJ    8.643 12.06.91  [04] Btrieve Page Size Utility
+ BPT510  .ARJ   28.339 12.06.91  [01] [Beschreibung ging leider verloren]
+ BRADLEY .ARJ    7.100 01.07.91  [01] Treiber fr Allen Bradley LAN Karten
+ BS145   .ARJ   44.137 12.06.91  [00] [Beschreibung ging leider verloren]
+ BSTNET  .ARJ   13.198 28.08.91  [00] [Beschreibung ging leider verloren]
+ BSTOP   .ARJ    1.067 12.06.91  [01] [Beschreibung ging leider verloren]
+ CLIPBBS 1-17                   Page 19                  17 Dec 1991
+
+
+ BSTORM  .ARJ   71.542 12.06.91  [03] Bainstorm Version 1.10 Message-Syste
+ BUFFSHEL.ARJ   68.891 01.07.91  [01] NOVELL 2.0a Shell-Buffer Tool
+ BUYERS  .ARJ  389.710 12.06.91  [00] [Beschreibung ging leider verloren]
+ BWAREFIX.ARJ   10.099 13.12.90  [06] Patch fr NW 386 3.0 (Boot-Rom)
+ CAP-NT  .ARJ   48.278 12.06.91  [00] [Beschreibung ging leider verloren]
+ CAP121  .ARJ   24.226 12.06.91  [00] [Beschreibung ging leider verloren]
+ CASTPO  .ARJ    2.139 12.06.91  [00] [Beschreibung ging leider verloren]
+ CB      .ARJ   14.364 12.06.91  [08] CB „hnliches LAN Mail-System
+ CBIS-MAX.TXT    2.837 07.08.90  [12] NETWORK-OS und 386MAX INSTALL-TIPS
+ CCOLOR  .ARJ   43.155 13.12.90  [06] Kommunikation-Tool fr LAN's etc.
+ CDFIX   .ARJ    8.572 12.06.91  [00] [Beschreibung ging leider verloren]
+ CHARON31.ARJ  220.155 28.04.91  [07] Connect a NOVELL LAN with TCP/IP Host
+ CHAT    .ARJ   14.005 12.06.91  [01] [Beschreibung ging leider verloren]
+ CHAT207 .ARJ   21.620 12.06.91  [01] [Beschreibung ging leider verloren]
+ CHATTER .ARJ   16.741 18.02.91  [04] Communikation-Send Util fr Novell
+ CHECKI  .ARJ    7.886 02.07.90  [00] Batch enquire node number on Novell
+ CHESSNET.ARJ   37.594 27.06.91  [14] Schach bers Netzwerk
+ CHKGRP  .ARJ    7.967 12.06.91  [01] [Beschreibung ging leider verloren]
+ CHKSPR  .ARJ    8.146 12.06.91  [01] [Beschreibung ging leider verloren]
+ CHKUSER .ARJ    3.693 12.06.91  [04] NOVELL Tool CHECKUSER
+ CHOWN   .ARJ   16.921 17.04.91  [08] File Owner unter Novell „ndern
+ CLASS   .ARJ   33.821 12.06.91  [05] Monitor users on Novell Network-2 user D
+ CLIB    .ARJ   78.965 12.06.91  [02] [Beschreibung ging leider verloren]
+ CLNVPACK.ARJ    4.324 24.01.88  [01] Novell Netware 286/Clipper A'86 Pack fix
+ CLPNVPR3.ARJ   10.410 24.01.88  [01] Novell Netware 286/Clipper A'86 Util.
+                                      Lib.
+ CLUP_LAN.ARJ  164.368 31.05.91  [05] [Beschreibung ging leider verloren]
+ CLUP_SU .ARJ   45.569 31.05.91  [04] [Beschreibung ging leider verloren]
+ CNEBUL  .ARJ    4.049 12.06.91  [00] [Beschreibung ging leider verloren]
+ CNSL-SIM.ARJ   40.201 12.06.91  [00] [Beschreibung ging leider verloren]
+ COMMAN  .ARJ    3.475 08.06.89  [03] ALL console commands for Novell netware
+ COMP20UP.ARJ   12.495 13.12.90  [01] Novell 2.0a Patch fr Compaq HD
+ COMP286 .ARJ   22.820 01.07.91  [00] Patch fr COMPAQ 286 + NOVELL
+ COMPAQ20.ARJ   11.185 01.07.91  [00] NOVELL 2.0a + COMPAQ HD's Patches
+ CONFIX  .ARJ   10.446 25.12.90  [01] Patch fr NOVELL NW 386
+ CONMAN  .ARJ   10.500 24.01.91  [05] Connection Manager (LAN) unter Windows 3
+ CONSOLE .ARJ   22.186 02.06.91  [02] Simulated Novell 2.15 console
+ CONTROL .ARJ   12.350 20.02.91  [32] Fernsteuern e. Workstation im LAN
+ CPQ16M  .ARJ   18.419 23.04.90  [03] Mehr als 16MB RAM fr COMPAQ & NOVELL
+ CPQ20MHZ.ARJ   11.659 01.07.91  [01] Patch fr 3COM + COMPAQ 386'er
+ CPQIDA  .ARJ    6.800 23.04.90  [01] 32Bit Treiber fr COMPAQ + NOVELL 2.1x
+ CPQVRP  .ARJ   10.439 01.07.91  [00] Patch fr COMPAQ + NOVELL VREPAIR
+ CPUCHK  .ARJ    3.016 17.06.91  [08] Prft 32Bit 386er CPU + RAM fr Novell
+                                      386
+ CQP_DSK .ARJ   10.933 17.06.91  [02] COMPAQ Disk-Treiber fr NOVELL
+ C_NETBIO.ARJ   97.553 12.06.91  [01] [Beschreibung ging leider verloren]
+ DATASPAN.ARJ    4.136 08.12.90  [00] Announcement from Northern Telecomm
+ DAVINCI .ARJ  146.705 01.10.90  [02] Da Vinci LAN eMAIL 1.1 demonstration.
+ DB-TEST .ARJ   31.552 15.01.91  [06] Test Util,Performence->Database NetWork
+ DB_TEST .ARJ   28.767 12.06.91  [00] [Beschreibung ging leider verloren]
+ DCNETCHK.ARJ   44.588 18.02.91  [10] Monitor Programm fr NOVELL
+ DELACC  .ARJ    6.302 12.06.91  [00] L”scht Accounting auf Server NW 2.1x
+ DISKSET .ARJ   11.648 12.06.91  [05] Update fr 2.0A Novell
+ DISKST  .ARJ   45.262 13.12.90  [12] NOVELL 2.15 Diskset
+ DLL     .ARJ   29.774 12.06.91  [09] "C"lib.F. NetWare Print, queue, IPX Call
+ DOS33   .ARJ   42.943 01.07.91  [01] Shell-Update fr IBM PC-DOS 3.3
+ CLIPBBS 1-17                   Page 20                  17 Dec 1991
+
+
+ DOSUP3  .ARJ  131.171 26.08.91  [24] Neueste NOVELL Shell + IPX OBJ 3.22
+ DOWNSERV.ARJ    5.518 05.10.91  [05] [Beschreibung ging leider verloren]
+ DRIVER30.ARJ  518.101 05.12.90  [03] Diverse Treiber fr NOVELL 386 3.0
+ DRIVER42.ARJ  160.373 01.07.91  [08] TREIBER fr LAN Karten mit ASM - Source
+                                      (!)
+ DRLFX1  .ARJ    7.942 25.10.91  [12] Patch fr NW 386 3.11 (250 User only)
+ DRVKIT  .ARJ  198.025 01.07.91  [00] NOVELL 2.1x LAN-CARDS Treiber
+ DS      .ARJ    9.092 12.06.91  [00] [Beschreibung ging leider verloren]
+ DSCOPE  .ARJ   30.120 23.02.89  [03] Monitor Serial Link From 3rd PC HRDWR
+                                      REQ
+ DSWIN0  .ARJ    5.571 06.05.90  [02] Novell 3.01a shell for Windows 3.0
+ DSWIN1  .ARJ  232.333 12.06.91  [01] NOVELL / WINDOWS 3.0 WS-Update Teil 1
+ DSWIN2  .ARJ  201.614 12.06.91  [02] NOVELL / WINDOWS 3.0 WS-Update Teil 2
+ DSWIN3  .ARJ  153.280 12.06.91  [02] NOVELL / WINDOWS 3.0 WS-Update Teil 3
+ DSWIN3B .ARJ  241.615 12.06.91  [02] [Beschreibung ging leider verloren]
+ DSWIN4  .ARJ  334.185 12.06.91  [01] Novell 3.01a shell for Windows 3.0
+ DSWIN5  .ARJ  131.528 01.07.91  [02] NOVELL / WINDOWS 3.0 WS-Update Teil 5
+ DSWININS.ARJ    3.638 12.06.91  [01] [Beschreibung ging leider verloren]
+ DUMPUS  .ARJ   24.036 12.06.91  [00] [Beschreibung ging leider verloren]
+ DUMPUSR .ARJ   26.766 15.01.91  [02] Dump User File-fr neuen Server
+ DUPDFX  .ARJ    7.039 17.06.91  [00] NLM-Patch fr Core-Treiber fr Novell
+                                      386 3.10
+ DVNOVELL.ARJ    4.194 12.06.91  [02] [Beschreibung ging leider verloren]
+ EASYNET .ARJ  114.570 12.01.88  [01] Shareware two-node, peer-to-peer network
+ ELINKII .ARJ   29.664 01.07.91  [02] Treiber fr 3COM LAN Karten
+ ELINKIIA.ARJ   34.239 01.07.91  [01] [Beschreibung ging leider verloren]
+ EM2000  .ARJ   48.384 12.06.91  [01] [Beschreibung ging leider verloren]
+ EM2000B .ARJ   48.729 17.12.90  [07] Electronic Mailsystem fr NOVELL
+ EM2310  .ARJ    8.855 12.06.91  [00] [Beschreibung ging leider verloren]
+ EMAIL1  .ARJ  104.294 13.12.90  [17] MAIL Programm fr NOVELL -1-
+ EMAIL2  .ARJ   96.482 13.12.90  [17] MAIL Programm fr NOVELL -2-
+ EMAIL3  .ARJ   73.941 13.12.90  [17] MAIL Programm fr NOVELL -3-
+ ENCOMPS .ARJ   31.833 13.12.90  [08] Men-Oberfl„che fr LAN's etc.
+ ENVUTI  .ARJ    7.867 12.06.91  [00] [Beschreibung ging leider verloren]
+ EPLS1194.ARJ   21.991 01.07.91  [02] Treiber Update fr 3COM 3C505
+ EPLS2012.ARJ   21.818 01.07.91  [02] Treiber Update fr 3COM 3C505
+ ERASFX  .ARJ    6.426 12.06.91  [00] [Beschreibung ging leider verloren]
+ ETHERCHX.ARJ   12.676 12.06.91  [03] GATEWAY Lan-Card Test-Programm
+ ETHERLNK.ARJ   11.791 01.07.91  [00] [Beschreibung ging leider verloren]
+ FASTLOG .ARJ   13.170 13.12.90  [16] NOVELL Login-Tool mit PAS-Source
+ FETCH   .ARJ   43.758 12.06.91  [00] [Beschreibung ging leider verloren]
+ FEWGAMES.ARJ   47.653 12.06.91  [00] [Beschreibung ging leider verloren]
+ FILESCAN.ARJ   18.889 13.12.90  [07] Zeigt alle offenen Files im Novell-Netz
+ FINFO2  .ARJ    8.363 02.06.91  [01] Netware util for server info.
+ FREEFX  .ARJ    8.564 17.08.91  [00] [Beschreibung ging leider verloren]
+ FREEN   .ARJ    4.719 13.12.90  [03] Diskmemory Report fr Novell
+ FSCAN   .ARJ   16.622 12.06.91  [01] Zeigt offene Files an
+ FSP-1   .ARJ    2.262 12.06.91  [02] Textfile ber FSP's
+ FSP     .ARJ   11.205 12.06.91  [02] Patch for available service processes
+ FTB     .ARJ    1.500 12.06.91  [04] Zeigt Handles & Files im Netz an
+ FXCOPY  .ARJ    9.381 08.07.89  [04] Fix of XCOPY for Novell. Won't hang
+                                      network
+ GENBIOS .ARJ   16.378 01.07.91  [02] GENERIC Netbios driver Update
+ GETND2  .ARJ    6.465 12.06.91  [00] [Beschreibung ging leider verloren]
+ GETUSR  .ARJ    3.397 12.06.91  [00] [Beschreibung ging leider verloren]
+ GMCOPY  .ARJ   19.602 12.06.91  [00] [Beschreibung ging leider verloren]
+ CLIPBBS 1-17                   Page 21                  17 Dec 1991
+
+
+ GO-COM  .ARJ    2.430 12.06.91  [00] [Beschreibung ging leider verloren]
+ GO      .ARJ    4.353 15.01.91  [08] Erlaubt Batch-File im Novell LoginScript
+ GPI-FIX .ARJ    8.790 12.06.91  [00] Patch for GPI Problems with 2.0a
+ GRP     .ARJ   17.067 12.06.91  [07] Scan Novell bindery for groups & users
+ GSCRIP  .ARJ   35.236 12.06.91  [00] [Beschreibung ging leider verloren]
+ GTWAY215.ARJ   21.475 01.07.91  [01] [Beschreibung ging leider verloren]
+ HELP21  .ARJ   81.115 12.06.91  [00] [Beschreibung ging leider verloren]
+ HOTSERV .ARJ   16.006 12.06.91  [15] Drucken ber andere Workstation
+ HOTVIEW .ARJ   12.815 12.06.91  [03] [Beschreibung ging leider verloren]
+ HTLOOK  .ARJ   14.741 13.12.90  [23] Andere Workstation auf eig. Monitor !
+ IDE286  .ARJ    5.833 31.10.91* [08] [Neues Upload - Nicht getestet]
+ IMENU   .ARJ  163.047 12.06.91  [01] [Beschreibung ging leider verloren]
+ IMSP_2  .ARJ   46.581 20.03.90  [00] Ongoing Novell certifications for
+                                      vendors
+ INST21  .ARJ    3.747 13.12.90  [02] Batchfile to improve NOVELL-Installation
+ INSTALL .ARJ    1.821 12.06.91  [02] [Beschreibung ging leider verloren]
+ INT9    .ARJ    4.191 12.06.91  [01] [Beschreibung ging leider verloren]
+ INTERNET.ARJ  282.192 12.06.91  [03] [Beschreibung ging leider verloren]
+ IPRINT  .ARJ   28.639 12.06.91  [01] [Beschreibung ging leider verloren]
+ IPX302  .ARJ   14.529 13.04.91  [07] IPX.OBJ Version 3.02 fr NOVELL
+ IPXDEMO .ARJ    3.179 12.06.91  [02] [Beschreibung ging leider verloren]
+ IRQXIO  .ARJ    3.403 27.05.91  [10] Novell IRQ-IO Liste
+ ISA22   .ARJ    6.363 16.05.91  [19] ISADISK Update fr Novell 2.15 / 2.20
+                                      (!)
+ ISA311  .ARJ    2.484 15.07.91  [25] Wie NOVELL 386 3.11 mit AT-BUS Platten
+                                      l„uft (!)
+ ISA386  .ARJ    6.295 27.03.91  [05] NOVELL 386 3.10 A ISADISK Update
+ ISAATBUS.ARJ    5.284 17.04.91  [20] Object fr AT-Bus-Platten unter Novell
+ ISFILE  .ARJ    5.327 12.06.91  [01] [Beschreibung ging leider verloren]
+ JIM     .ARJ  105.725 13.12.90  [19] NOVELL Spiel
+ KEEPOUT .ARJ    2.966 12.06.91  [00] [Beschreibung ging leider verloren]
+ KILLUSER.ARJ    5.556 16.02.91  [07] L”scht Stations aus dem Netz m. Source!
+ LANALY  .ARJ   41.333 28.05.91  [03] LAN Analyse fr NETBIOS Netzwerke
+ LANBENCH.ARJ   35.815 02.06.91  [08] PC Mag LAN benchmark programs.
+ LANDEM  .ARJ   93.030 12.06.91  [00] [Beschreibung ging leider verloren]
+ LANDOOR .ARJ   29.897 16.02.91  [09] Door-Games auf Netzen spielen
+ LANHIJ  .ARJ   20.666 02.06.91  [31] Workstations remote steuern
+ LANPATRL.ARJ  148.550 08.11.89  [03] LAN Patrol local-area-net monitor demo.
+ LANPERF .ARJ   23.079 08.08.89  [02] PC Tech Journal LAN benchmark prgrm
+ LANRAM  .ARJ   40.327 03.07.90  [01] Determines min. RAM for Novell Server
+ LANRP3  .ARJ   33.712 12.06.91  [00] [Beschreibung ging leider verloren]
+ LANSPOOL.ARJ  245.397 12.06.91  [00] [Beschreibung ging leider verloren]
+ LANSTAT .ARJ   17.565 12.06.91  [02] [Beschreibung ging leider verloren]
+ LANSTOR .ARJ  115.989 12.06.91  [01] [Beschreibung ging leider verloren]
+ LANTL124.ARJ   81.322 12.06.91  [00] [Beschreibung ging leider verloren]
+ LANTOOL .ARJ   82.664 13.12.90  [05] Communication Prg. fr LAN's
+ LANTOOLS.ARJ   83.249 17.06.91  [12] LANTOOLS (Statistik etc.)
+ LANTRA  .ARJ  100.548 15.04.91  [13] LANTRAFFIC Statisken des "VERKEHR'S" im
+                                      Lan
+ LANTTECH.ARJ   13.338 24.01.90  [02] LANtastic Technical Reference Manual
+ LANTUTOR.ARJ   18.765 12.06.91  [00] [Beschreibung ging leider verloren]
+ LANUT151.ARJ   62.528 01.09.90  [05] LANutils V1.51: Great utils for
+                                      LANtastic
+ LANUTILS.ARJ   43.375 26.10.89  [02] Excellent utils for LANtastic networks
+ LANWATCH.ARJ  106.898 12.06.91  [05] [Beschreibung ging leider verloren]
+ LASTLOG .ARJ   13.170 31.12.88  [03] Last time user logged in - Novell
+ CLIPBBS 1-17                   Page 22                  17 Dec 1991
+
+
+ LEAP    .ARJ    7.534 12.06.91  [00] [Beschreibung ging leider verloren]
+ LGHOTFX .ARJ    4.493 23.05.91  [01] Patch NLM fr Novell NW 386 3.10A
+ LHXSHARE.ARJ   19.612 08.07.89  [01] Network compatible LZH file viewer.
+ LIMITUSE.ARJ   29.339 12.06.91  [00] [Beschreibung ging leider verloren]
+ LINCAP  .ARJ   38.713 31.12.88  [18] Excellent Network Analysis Program
+ LISTUSER.ARJ   21.605 01.07.91  [00] List users on Novell network
+ LMBOFX  .ARJ    7.834 17.08.91  [00] [Beschreibung ging leider verloren]
+ LOADER  .ARJ   89.304 19.11.90  [06] NOVELL-Patch fr V2.15 fr HD>1024 Zyl.
+ LOCAL   .ARJ    4.155 12.06.91  [00] [Beschreibung ging leider verloren]
+ LODSFT  .ARJ    3.083 12.06.91  [00] [Beschreibung ging leider verloren]
+ LOGCOPY .ARJ   44.220 12.06.91  [00] [Beschreibung ging leider verloren]
+ LOGMSG  .ARJ    8.497 12.06.91  [01] [Beschreibung ging leider verloren]
+ LOGOFF  .ARJ    9.503 12.06.91  [00] [Beschreibung ging leider verloren]
+ MAHOST  .ARJ   18.701 12.06.91  [00] [Beschreibung ging leider verloren]
+ MAP     .ARJ   19.116 01.07.91  [00] [Beschreibung ging leider verloren]
+ MAPASS  .ARJ   16.893 12.06.91  [00] [Beschreibung ging leider verloren]
+ MASTER  .ARJ  195.800 16.01.91  [04] DISK MAESTRO fr NOVELL
+ MC192   .ARJ   78.558 12.06.91  [00] [Beschreibung ging leider verloren]
+ MENGEN  .ARJ   26.215 28.08.91  [00] [Beschreibung ging leider verloren]
+ MENU    .ARJ  165.261 12.06.91  [01] [Beschreibung ging leider verloren]
+ MENU27  .ARJ   64.985 12.06.91  [00] [Beschreibung ging leider verloren]
+ MENU34  .ARJ   68.477 12.10.91  [04] Neues Menu-System fuer Novell-Netware
+                                      (Upload by: Uwe Wenk)
+ METER   .ARJ   41.730 12.06.91  [05] Novell utility for metering software
+ METER12 .ARJ   21.088 14.07.90  [01] Software metering system for Novell
+ MGCHAT  .ARJ   21.194 12.06.91  [13] Online-Konferenzen in Novell-Netzen
+ MH200   .ARJ    5.142 13.12.90  [01] Erlaubt DOS 2.x Prg's m. SHARE (LAN'S)
+ MLCL191 .ARJ   79.691 25.01.90  [00] MailCall Elect. Mail for LANtastic
+ MONI386 .ARJ   44.448 27.03.91  [00] NOVELL 386 3.10 A Monitor-NLM Patch
+ MPROOT  .ARJ   92.380 19.05.90  [00] Make false Root Dir on Netware servers
+ MSGTOG  .ARJ    9.973 12.06.91  [00] [Beschreibung ging leider verloren]
+ MULKEY  .ARJ   46.455 13.06.91  [00] [Beschreibung ging leider verloren]
+ MULTIIPX.ARJ   56.775 17.06.91  [08] Mehrere Logins gleichzeitig unter
+                                      DesqView
+ MW2014  .ARJ   42.926 01.07.91  [01] [Beschreibung ging leider verloren]
+ MXMEN232.ARJ  250.046 15.10.91  [04] MarxMenu 2.32 - Novell Menu System
+ N386311 .ARJ   39.407 03.09.91  [10] Neueste NOVELL LAN Treiber-Update's
+ NADC11  .ARJ   24.106 13.06.91  [00] [Beschreibung ging leider verloren]
+ NAVYTIME.ARJ   17.287 04.08.90  [03] Set Clock or server Time to Naval
+                                      Observ.
+ NB215C  .ARJ   11.000 13.06.91  [00] [Beschreibung ging leider verloren]
+ NB301C  .ARJ   11.438 13.06.91  [00] [Beschreibung ging leider verloren]
+ NBCHECK .ARJ    4.594 13.06.91  [00] [Beschreibung ging leider verloren]
+ NBMON   .ARJ    5.810 13.06.91  [00] [Beschreibung ging leider verloren]
+ NBOARD  .ARJ  126.579 13.06.91  [00] [Beschreibung ging leider verloren]
+ NBSAMPLE.ARJ   26.154 13.06.91  [00] [Beschreibung ging leider verloren]
+ NBSTATUS.ARJ    6.393 13.06.91  [00] [Beschreibung ging leider verloren]
+ NCARD   .ARJ   37.604 17.10.91  [12] Zeigt Setting der Netzwerkkarte &
+                                      s„mtliche Daten
+ NCPLIMIT.ARJ    9.370 17.06.91  [04] NLM-Patch fr Novell 3.10 (Maximum
+                                      outstanding NCP NCP)
+ NCSHRE  .ARJ   62.167 28.08.91  [00] [Beschreibung ging leider verloren]
+ NDSPX   .ARJ   20.624 13.06.91  [01] Novell 2.15, mehrere SPX-Connections
+ NE2-32  .ARJ    7.438 19.02.90  [02] NOVELL Treiber fr obige Karte
+ NE20A   .ARJ   18.285 01.07.91  [00] [Beschreibung ging leider verloren]
+ NE3200  .ARJ    8.456 23.04.90  [01] NOVELL Treiber fr obige Karte
+ CLIPBBS 1-17                   Page 23                  17 Dec 1991
+
+
+ NET-SOKO.ARJ   28.425 13.12.90  [11] Netz-Version von SOKOBAN (Spiel)
+ NETARC  .ARJ  259.211 25.09.89  [01] NETARC Novell net backup demo 1/2. CGA.
+ NETARCP .ARJ  103.631 02.06.91  [01] NETARC Novell net backup demo 2/2. CGA.
+ NETBEAST.ARJ    8.389 13.06.91  [09] Netz-Version von BEAST (Spiel)
+ NETBIOS .ARJ   12.626 13.06.91  [01] [Beschreibung ging leider verloren]
+ NETCHAT .ARJ   36.844 13.06.91  [02] Chat amongst Users on Novell 286 Netware
+ NETCOM  .ARJ   21.943 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETCOMM .ARJ   21.944 13.06.91  [01] Message-Programm fr LAN's
+ NETCONF .ARJ   25.676 13.06.91  [03] Konferenzen im Novell-Netz
+ NETCOPY .ARJ    9.993 01.07.91  [00] [Beschreibung ging leider verloren]
+ NETDRV10.ARJ   14.896 08.07.91  [10] NetDrive 1.0, Novell Server setting
+                                      ver„ndern ohne NETGEN starten zu mssen
+ NETERR  .ARJ   10.433 17.08.91  [00] [Beschreibung ging leider verloren]
+ NETERRO .ARJ   10.433 22.09.91  [01] [Beschreibung ging leider verloren]
+ NETFIX10.ARJ   28.591 08.05.90  [00] Anti-viral program, use on NETWORKS.
+ NETLIGHT.ARJ    2.057 13.06.91  [01] [Beschreibung ging leider verloren]
+ NETLOOK .ARJ   30.421 13.12.90  [11] Novell File Util./wo sind Supervisor-PW
+ NETMAP  .ARJ   27.654 13.06.91  [04] Network floor-plan utility for Netware
+                                      2.x
+ NETMAPP .ARJ   29.305 13.12.90  [12] NOVELL, Anzeige des kompl. Netzwerksyst.
+ NETMGR  .ARJ  134.335 01.07.91  [02] [Beschreibung ging leider verloren]
+ NETMON  .ARJ   32.797 02.09.90  [02] Novell 2.1x FCONSOLE rplcmnt-prtr&disk
+                                      log
+ NETPAK  .ARJ   52.523 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETPATCH.ARJ   29.190 15.03.91  [02] NOVELL 2.15 Patch fr mehr Sessions
+ NETPATH .ARJ    6.145 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETREMOT.ARJ   56.241 13.06.91  [01] [Beschreibung ging leider verloren]
+ NETRIX  .ARJ   74.761 22.05.91  [12] Novell Netware Utilities - good
+                                      collection
+ NETSCAN .ARJ   18.624 13.06.91  [01] Novell File Tool
+ NETSCN75.ARJ   54.787 27.02.91  [01] Anti-Virus SCAN fr NETZE Vers. 75
+ NETSMT  .ARJ   10.517 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETSPOOL.ARJ    3.081 13.06.91  [01] [Beschreibung ging leider verloren]
+ NETUSE  .ARJ   34.493 22.09.91  [01] [Beschreibung ging leider verloren]
+ NETUSER2.ARJ   11.192 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETUSR  .ARJ    1.649 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETUTILS.ARJ   79.986 13.06.91  [00] [Beschreibung ging leider verloren]
+ NETUTL  .ARJ    5.011 28.08.91  [00] [Beschreibung ging leider verloren]
+ NETWATCH.ARJ   45.976 17.07.91  [05] MIT Netwatch 9.6 Packetdriver
+ NETWBG1 .ARJ  329.203 31.05.91  [03] NetWare Buyer's Guide on Disk Teil1
+ NETWBG2 .ARJ  376.056 31.05.91  [03] NetWare Buyer's Guide on Disk Teil2
+ NETW_EYE.ARJ    9.157 13.06.91  [00] [Beschreibung ging leider verloren]
+ NET_311 .ARJ    6.948 28.02.91  [06] Beschreibung Novell 386 3.11
+ NET_PRNT.ARJ   11.892 31.10.89  [06] Novell Print Queues with TPascal 5.5
+ NET_USER.ARJ    7.491 31.10.89  [04] Basic Netware User Info using TPascal
+                                      5.5
+ NFAU    .ARJ    7.474 13.06.91  [01] [Beschreibung ging leider verloren]
+ NFILES  .ARJ   10.405 15.07.91  [03] Zeigt im Novell-Netz Files-Owner
+ NINFO   .ARJ   25.371 13.06.91  [00] [Beschreibung ging leider verloren]
+ NLOGIN  .ARJ   14.602 13.06.91  [00] [Beschreibung ging leider verloren]
+ NMAP31  .ARJ   40.391 13.06.91  [00] [Beschreibung ging leider verloren]
+ NMDM21  .ARJ   45.085 01.07.91  [06] Network modem support for NETBIOS
+                                      networks
+ NODE    .ARJ    3.091 13.06.91  [00] [Beschreibung ging leider verloren]
+ NODEMAP .ARJ   15.772 18.05.90  [01] Arcnet node ID lister - use adding stns.
+ NOUV10  .ARJ  107.263 01.07.91  [00] [Beschreibung ging leider verloren]
+ CLIPBBS 1-17                   Page 24                  17 Dec 1991
+
+
+ NOUV13  .ARJ  110.568 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOV386  .ARJ  172.953 15.04.91  [00] Patche fr NOVELL NW 386 3.0
+ NOVAPI  .ARJ    4.092 13.06.91  [01] [Beschreibung ging leider verloren]
+ NOVBOOKS.ARJ    2.904 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVELDOC.ARJ  238.326 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVELL20.ARJ   10.511 01.11.88  [01] Run Novell 2.0A on Compaq 386 large HDs
+ NOVELLUP.ARJ    3.285 20.07.89  [00] Novell Netware upgrade prices from
+                                      Netwire
+ NOVELMON.ARJ   39.503 13.12.90  [03] Monitor area on Novell network for files
+ NOVFNC  .ARJ    5.405 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVINS  .ARJ    5.741 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVLHELP.ARJ   23.243 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVL_ELS.ARJ    3.282 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVMENU .ARJ   13.354 13.06.91  [00] [Beschreibung ging leider verloren]
+ NOVSHUP .ARJ  138.950 01.07.91  [10] NOVELL Shell + IPX Update 3.03 & 3.20
+                                      komplett
+ NOV_DOWN.ARJ    7.322 01.08.91  [02] DOWN File-Server from Work-Station (!)
+ NP600   .ARJ   18.981 01.07.91  [02] [Beschreibung ging leider verloren]
+ NQPAT1  .ARJ   12.794 13.06.91  [00] [Beschreibung ging leider verloren]
+ NREPORT .ARJ  219.705 20.12.90  [26] NOVELL Report-Programm *GUT*
+ NSEND   .ARJ    3.341 13.06.91  [00] [Beschreibung ging leider verloren]
+ NTBIODOC.ARJ   16.906 13.06.91  [00] [Beschreibung ging leider verloren]
+ NVLCALLS.ARJ    7.629 02.09.90  [00] Novell 2.1x call list in WK1 format
+ NVL_NOTE.ARJ    3.298 13.06.91  [00] [Beschreibung ging leider verloren]
+ NVL_UTIL.ARJ   27.901 13.06.91  [00] [Beschreibung ging leider verloren]
+ NVNEWS  .ARJ   14.312 23.04.90  [03] NOVELL New's -Diverse Themen-
+ NW386FIX.ARJ   18.658 17.12.90  [05] Patche fr Novell 3.10 Rev. A !!!
+ NW386PRS.ARJ    9.402 13.06.91  [00] [Beschreibung ging leider verloren]
+ NWDEMO  .ARJ   67.854 13.06.91  [00] [Beschreibung ging leider verloren]
+ NWHAT   .ARJ   17.561 01.07.91  [00] [Beschreibung ging leider verloren]
+ NWHAT4  .ARJ   17.503 13.06.91  [00] [Beschreibung ging leider verloren]
+ NXCOPY  .ARJ   28.112 13.06.91  [00] [Beschreibung ging leider verloren]
+ ODIDOS  .ARJ  126.903 13.06.91  [01] [Beschreibung ging leider verloren]
+ ONTRACKN.ARJ  225.705 13.06.91  [02] [Beschreibung ging leider verloren]
+ ON_ERR  .ARJ    7.445 13.12.90  [01] Errorhandling im Novell Netz
+ ON_ERROR.ARJ    5.520 13.06.91  [00] [Beschreibung ging leider verloren]
+ OPENFX  .ARJ    6.277 13.06.91  [01] NOVELL 386 Patch f.Server.Exe/open ERROR
+ OS211M  .ARJ   89.505 08.06.89  [02] OS/2 netware requester manual v.1.00
+ OTALK1  .ARJ  140.671 13.06.91  [00] [Beschreibung ging leider verloren]
+ OUTRID  .ARJ   69.971 13.06.91  [00] [Beschreibung ging leider verloren]
+ OWNER   .ARJ    4.877 13.06.91  [01] [Beschreibung ging leider verloren]
+ OXUTIL  .ARJ   24.634 13.06.91  [00] [Beschreibung ging leider verloren]
+ P10NW3  .ARJ    4.779 10.06.91  [00] [Beschreibung ging leider verloren]
+ PACWAR15.ARJ  124.397 29.03.91  [12] Netzwerk-Spiel -PACMAN-
+ PAPFX3  .ARJ    5.720 17.08.91  [00] [Beschreibung ging leider verloren]
+ PASNET  .ARJ   34.203 01.07.91  [00] [Beschreibung ging leider verloren]
+ PAT311  .ARJ   10.951 22.09.91  [01] [Beschreibung ging leider verloren]
+ PATMAN  .ARJ   11.913 17.08.91  [00] PatchManager als NLM fr Novell 386
+ PB310A  .ARJ   34.305 17.06.91  [07] Probleme und L”sungen fr Novell 386
+                                      3.10a
+ PC-CHALK.ARJ  106.887 13.06.91  [00] [Beschreibung ging leider verloren]
+ PCLANB20.ARJ   35.096 13.06.89  [03] PC Mag LAN Benchmarks, version 2.0
+ PCN2    .ARJ   57.612 01.07.91  [00] [Beschreibung ging leider verloren]
+ PCN80   .ARJ   30.129 13.06.91  [00] [Beschreibung ging leider verloren]
+ PCNET   .ARJ   12.293 01.07.91  [00] [Beschreibung ging leider verloren]
+ PCOPY   .ARJ   37.461 13.06.91  [00] [Beschreibung ging leider verloren]
+ CLIPBBS 1-17                   Page 25                  17 Dec 1991
+
+
+ PCSWNT  .ARJ    6.806 28.08.91  [00] [Beschreibung ging leider verloren]
+ PD11    .ARJ   17.020 13.06.91  [00] [Beschreibung ging leider verloren]
+ PDF     .ARJ    4.223 17.08.91  [00] [Beschreibung ging leider verloren]
+ PERFORM1.ARJ   47.380 02.06.91  [14] Testet Perform.v. Netzen (Novell)
+ PERFORM2.ARJ   16.181 13.06.91  [17] NOVELL LAN Benchmark
+ PJ81    .ARJ    5.605 01.12.90  [01] Programmers Journal Source - Jan 90
+ PKO10D  .ARJ   57.212 13.06.91  [00] [Beschreibung ging leider verloren]
+ PLANLAN1.ARJ    9.772 31.12.88  [03] Local Area Network planning worksheet
+ PMAIL1  .ARJ  168.332 17.12.90  [07] Pegasus Mailsystem fr Novell..gut..
+ POPSEND .ARJ   12.159 13.06.91  [02] [Beschreibung ging leider verloren]
+ POPSPL  .ARJ   22.341 11.03.89  [02] POP-UP Spooler fr LAN's
+ POPSPOOL.ARJ   22.343 13.12.90  [05] Popup print spooler control for Novell
+ PREPSFT1.ARJ   25.513 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRFIX   .ARJ    2.104 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRFRM2  .ARJ   48.588 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRINTCOP.ARJ   48.429 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRO10   .ARJ   18.603 01.07.91  [00] [Beschreibung ging leider verloren]
+ PRON10  .ARJ   58.567 01.07.91  [00] [Beschreibung ging leider verloren]
+ PROPCHEK.ARJ    4.870 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRTIME  .ARJ   12.302 13.06.91  [00] [Beschreibung ging leider verloren]
+ PRTMGR  .ARJ   24.323 13.06.91  [00] [Beschreibung ging leider verloren]
+ PS2286  .ARJ    7.731 02.06.91  [02] IBM PS/2 Disk-Treiber fr NOVELL
+ PS2386  .ARJ    7.546 23.04.90  [01] IBM PS/2 Disk-Treiber fr NOVELL
+ PSMGR1  .ARJ  140.457 13.06.91  [00] [Beschreibung ging leider verloren]
+ PSPRINT .ARJ   89.647 13.06.91  [00] [Beschreibung ging leider verloren]
+ PSUSER  .ARJ   13.941 28.07.88  [02] Novell 2.1 Printer Popup by Brightworks
+ PTF203  .ARJ  157.483 13.06.91  [00] [Beschreibung ging leider verloren]
+ PTF222  .ARJ   11.943 13.06.91  [00] [Beschreibung ging leider verloren]
+ QFIX    .ARJ    9.860 22.06.91  [01] [Beschreibung ging leider verloren]
+ QL      .ARJ    7.159 13.06.91  [00] [Beschreibung ging leider verloren]
+ QMAIL   .ARJ   13.109 13.06.91  [01] [Beschreibung ging leider verloren]
+ QMANIP  .ARJ    7.121 30.10.89  [00] LANtastic print queue manipulator.
+ QSHAR   .ARJ    2.799 27.07.89  [01] Sets ERRORLEVEL if SHARE is loaded,
+                                      NETWORK
+ QSUPR1  .ARJ  137.459 13.06.91  [00] [Beschreibung ging leider verloren]
+ QSWITC  .ARJ   13.563 13.06.91  [00] [Beschreibung ging leider verloren]
+ QUTIL   .ARJ   27.440 13.06.91  [00] [Beschreibung ging leider verloren]
+ RAMMAP  .ARJ    9.709 13.06.91  [00] [Beschreibung ging leider verloren]
+ RCNSLE  .ARJ   47.361 28.08.91  [00] [Beschreibung ging leider verloren]
+ RCON    .ARJ  191.167 17.06.91  [02] REMOTE CONSOLE fr NOVELL 386 3.0 (!)
+ RCON311 .ARJ   47.361 13.10.91  [09] RCONSOLE - Update fr NOVELL 386 3.11
+ RD13A   .ARJ  113.060 13.06.91  [00] [Beschreibung ging leider verloren]
+ RD13B   .ARJ   70.538 13.06.91  [00] [Beschreibung ging leider verloren]
+ REDRLST .ARJ    4.994 13.06.91  [00] [Beschreibung ging leider verloren]
+ REL102  .ARJ  240.351 13.06.91  [00] [Beschreibung ging leider verloren]
+ REMDEV  .ARJ   10.295 04.09.91  [01] Fixes REMDEVNM.NLM for Novell 3.11a
+ REMOTJOB.ARJ   14.599 13.06.91  [01] [Beschreibung ging leider verloren]
+ RJOB    .ARJ   16.522 02.07.91  [17] Remote-Steuerung von PC's im Novell-Netz
+ ROSESPL .ARJ   30.000 13.06.91  [00] [Beschreibung ging leider verloren]
+ RPLFX2  .ARJ    2.125 04.09.91  [03] [Beschreibung ging leider verloren]
+ RXNET   .ARJ    6.255 17.06.91  [00] RXNET-Lantreiber V1.01 fr Novell 386
+ SAP     .ARJ   16.533 13.06.91  [00] [Beschreibung ging leider verloren]
+ SAVELAN .ARJ    7.199 24.01.90  [00] Backup LANtastic Network files
+ SAVEUSER.ARJ   24.682 13.06.91  [00] [Beschreibung ging leider verloren]
+ SCANBIND.ARJ   11.676 31.10.89  [07] Scan Netware 2.1+ Bindery with TPascal
+                                      5.5
+ CLIPBBS 1-17                   Page 26                  17 Dec 1991
+
+
+ SCOPY   .ARJ   15.878 24.01.90  [02] Copy Files in the shared Network Mode
+ SEMAPH  .ARJ    4.946 13.06.91  [05] [Beschreibung ging leider verloren]
+ SERVTI  .ZIP    4.937 14.09.91  [00] [Beschreibung ging leider verloren]
+ SERVTIME.ARJ    9.539 05.06.91  [14] Serverzeit von der Workstation aus
+                                      verstellen
+ SETFIX  .ARJ    4.964 13.06.91  [00] [Beschreibung ging leider verloren]
+ SETPCON .ARJ    6.117 13.06.91  [00] [Beschreibung ging leider verloren]
+ SETUP   .ARJ  124.718 16.01.91  [02] DISK MAESTRO Setup-Disk
+ SH301E  .ARJ  197.817 17.12.90  [04] Novell 3.X, Shell 3.01 Rev E komplett
+ SHARE   .ARJ   69.038 13.12.90  [14] Direktes HD-Sharing im Novell Netzwerk
+ SHELL302.ARJ  199.891 20.03.91  [04] Neueste NOVELL Shell Version 3.02 !
+ SHMAIL  .ARJ   18.812 13.06.91  [00] [Beschreibung ging leider verloren]
+ SHOLOC  .ARJ    7.112 28.08.91  [00] [Beschreibung ging leider verloren]
+ SHPRST  .ARJ    4.649 13.06.91  [00] [Beschreibung ging leider verloren]
+ SHRETRY .ARJ    5.967 13.06.91  [00] [Beschreibung ging leider verloren]
+ SIGN13  .ARJ   88.851 13.06.91  [00] [Beschreibung ging leider verloren]
+ SIGNON  .ARJ    7.548 13.12.90  [02] SIGNON fr NOVELL
+ SMFSEAL .ARJ   40.493 13.06.91  [00] [Beschreibung ging leider verloren]
+ SOCKET  .ARJ    4.616 13.06.91  [00] [Beschreibung ging leider verloren]
+ SOSS    .ARJ  153.088 04.09.91  [02] [Beschreibung ging leider verloren]
+ SPOOLE  .ARJ   20.237 13.06.91  [00] [Beschreibung ging leider verloren]
+ SPXCHAT .ARJ   21.860 13.06.91  [01] [Beschreibung ging leider verloren]
+ SPXCON  .ARJ   17.734 13.06.91  [00] [Beschreibung ging leider verloren]
+ SPYEXE  .ARJ   49.503 12.11.89  [03] LANtastic Netbios Remote Program
+ SPYEXE13.ARJ   47.578 13.06.91  [01] [Beschreibung ging leider verloren]
+ SQL210  .ARJ    1.872 13.06.91  [00] [Beschreibung ging leider verloren]
+ SRVRDTTM.ARJ    9.406 13.06.91  [00] [Beschreibung ging leider verloren]
+ SRVTIM  .ARJ    7.610 13.06.91  [00] [Beschreibung ging leider verloren]
+ SST     .ARJ   14.326 02.12.90  [00] A Novell 2.1x utility for fast stats
+ STPK    .ARJ    1.969 13.06.91  [00] [Beschreibung ging leider verloren]
+ SUNWORM .ARJ   16.476 04.11.91* [06] Netzwerkspiel fr NOVELL
+ SUPDATE .ARJ    9.826 13.06.91  [00] [Beschreibung ging leider verloren]
+ SWALLOW .ARJ    6.083 18.01.90  [00] Clear kybd after Novell login script
+ SYS     .ARJ   33.539 13.06.91  [00] [Beschreibung ging leider verloren]
+ TALK    .ARJ  190.894 12.05.89  [00] A 2.0a Novell utility to chat between
+                                      users
+ TB001   .ARJ    6.057 13.12.90  [06] NW 386 Technical-Bulletin 001
+ TB080175.ARJ   77.003 27.02.90  [03] Novell Tech Bulletins nos. 80 - 175
+ TB176199.ARJ   59.172 27.02.90  [03] Novell Tech Bulletins nos. 176 - 199
+ TB200208.ARJ   18.257 27.02.90  [03] Novell Tech Bulletins nos. 200 - 208
+ TB210224.ARJ   11.304 02.06.91  [03] Novell Tech Bulletins nos. 210 - 224
+ TB225254.ARJ   51.729 27.02.90  [03] Novell Tech Bulletins nos. 225 - 254
+ TB257   .ARJ    6.238 27.02.90  [04] Novell Tech Bulletin no. 257
+ TB258   .ARJ    6.794 27.02.90  [04] Novell Tech Bulletin no. 258
+ TB259   .ARJ    2.673 27.02.90  [03] Novell Tech Bulletin no. 259
+ TB262   .ARJ    2.435 20.03.90  [04] Novell Tech Bulletin no. 262
+ TB263   .ARJ    2.845 20.03.90  [04] Novell Tech Bulletin no. 263
+ TB26X   .ARJ    5.967 17.06.91  [05] NOVELL Technical Bulletins 26x..
+ TBLIST  .ARJ    5.688 27.02.90  [02] List of Novell Tech Bulletins
+ TBLIST2 .ARJ    2.385 27.02.90  [02] List of more Novell Tech Bulletins
+ TCC212  .ARJ   19.996 01.07.91  [00] [Beschreibung ging leider verloren]
+ TCC386  .ARJ   76.868 13.06.91  [00] [Beschreibung ging leider verloren]
+ TCCARC  .ARJ    9.725 17.06.91  [01] Thomas Conrad LAN Treiber fr NOVELL
+ TECH    .ARJ   18.476 01.07.91  [03] LANtastic technical reference manual.
+ TECHC   .ARJ   10.214 13.06.91  [00] [Beschreibung ging leider verloren]
+ TELNET  .ARJ  826.182 16.11.91* [07] Connect a PC with TCP/IP Host
+ CLIPBBS 1-17                   Page 27                  17 Dec 1991
+
+
+ TESTNET .ARJ   22.437 13.06.91  [00] [Beschreibung ging leider verloren]
+ TKNFX   .ARJ    7.767 04.05.90  [02] Patch to Netware 386 Token Ring Driver
+ TOP_NET .ARJ  146.063 08.02.88  [03] Local Area Network OS v3.52 - Shareware
+ TPNOV6  .ARJ   46.942 13.06.91  [01] [Beschreibung ging leider verloren]
+ TPNOVA  .ARJ   21.550 13.06.91  [02] [Beschreibung ging leider verloren]
+ TRNSHELL.ARJ    2.764 13.06.91  [00] [Beschreibung ging leider verloren]
+ TSTIPX  .ARJ   11.430 28.08.91  [00] [Beschreibung ging leider verloren]
+ TTS311  .ARJ    8.315 05.10.91  [02] [Beschreibung ging leider verloren]
+ TURBOLIB.ARJ   70.628 13.06.91  [02] [Beschreibung ging leider verloren]
+ UGRAPH  .ARJ   83.451 13.06.91  [03] [Beschreibung ging leider verloren]
+ ULSORT  .ARJ   11.986 13.06.91  [02] [Beschreibung ging leider verloren]
+ UNIV-20 .ARJ   38.321 01.07.91  [00] [Beschreibung ging leider verloren]
+ UNIV21  .ARJ    6.373 01.07.91  [00] [Beschreibung ging leider verloren]
+ UNIV211 .ARJ   25.867 01.07.91  [00] [Beschreibung ging leider verloren]
+ UPDT21  .ARJ    9.470 13.06.91  [00] [Beschreibung ging leider verloren]
+ UPS22   .ARJ    2.482 25.10.91  [15] NOVELL Patch fr NW 2.20 und UPS
+ USER    .ARJ   19.171 13.06.91  [00] [Beschreibung ging leider verloren]
+ USERID11.ARJ    1.183 13.06.91  [00] [Beschreibung ging leider verloren]
+ USERS   .ARJ    7.263 13.06.91  [04] Online-Userliste fuer Novell-Netze
+ UTILITY .ARJ  194.773 13.06.91  [00] [Beschreibung ging leider verloren]
+ VAP     .ARJ   15.179 13.06.91  [02] [Beschreibung ging leider verloren]
+ VAPDOS  .ARJ   29.225 26.12.90  [08] DOS Kommandos als VAP fr 2.1x NOVELL
+ VOLGRAF .ARJ    2.157 13.06.91  [00] [Beschreibung ging leider verloren]
+ VREPAIR .ARJ   28.415 23.05.88  [01] Utility for repairing Novell disk damage
+ VREPAIR2.ARJ   26.000 13.06.91  [01] [Beschreibung ging leider verloren]
+ VREPAIR8.ARJ   26.917 13.06.91  [01] [Beschreibung ging leider verloren]
+ VREPAIRF.ARJ   40.337 13.06.91  [00] Novell ELS I volume repair utility
+ VRP215  .ARJ   68.250 13.06.91  [01] [Beschreibung ging leider verloren]
+ VSPACE  .ARJ    8.593 28.08.91  [00] [Beschreibung ging leider verloren]
+ WAN     .ARJ    6.776 28.08.91  [00] [Beschreibung ging leider verloren]
+ WATCHDOG.ARJ    9.187 13.06.91  [03] [Beschreibung ging leider verloren]
+ WD1006  .ARJ    6.542 13.12.90  [07] Patch fr WD1006  im Novell Netz
+ WD1007  .TXT    2.861 07.10.90  [10] Tips zum Einsatz vom WD1007 (Novell)
+ WD386   .ARJ   83.543 28.05.91  [06] Treiber & Doku fr NW 386 und WD
+                                      8003/8013 ...
+ WD8000  .ARJ   21.527 01.07.91  [02] [Beschreibung ging leider verloren]
+ WDNOVDR .ARJ   23.960 01.07.91  [02] [Beschreibung ging leider verloren]
+ WHO386  .ARJ   12.317 13.06.91  [02] [Beschreibung ging leider verloren]
+ WHOHAS  .ARJ   17.424 01.07.91  [02] Who else has file open on Novell 2.1+
+ WHOIS   .ARJ   14.534 15.07.91  [02] Zeigt im Novell-Netz alle eingetragenen
+                                      User
+ WIN3FIX .ARJ   30.131 17.06.91  [14] L”st Probleme von Windos 3.0 / Enhanced
+                                      Modus und und Novell 386
+ WINBRQ  .ARJ   16.775 12.06.91  [00] [Beschreibung ging leider verloren]
+ WINBRQEX.ARJ   30.168 12.06.91  [00] [Beschreibung ging leider verloren]
+ WINBTR  .ARJ   23.725 12.06.91  [00] [Beschreibung ging leider verloren]
+ WINFO1  .ARJ    8.784 28.08.91  [01] [Beschreibung ging leider verloren]
+ WOGIN   .ARJ   42.988 12.06.91  [01] Multi-Server Login, Novell <-> Windows 3
+ WSMON   .ARJ   64.499 28.08.91  [01] [Beschreibung ging leider verloren]
+ X-WATCH .ARJ   10.265 10.11.91* [01] Watchdog fr NOVELL
+ XFAX    .ARJ   41.159 13.12.90  [17] XChange / FAX - Lan Toolkit
+ XMETER  .ARJ   11.191 12.06.91  [00] [Beschreibung ging leider verloren]
+ XTP401  .ARJ   31.617 12.06.91  [00] [Beschreibung ging leider verloren]
+ XTRPRG  .ARJ   79.437 12.06.91  [00] [Beschreibung ging leider verloren]
+ ZAPBIND .ARJ    7.414 12.06.91  [02] [Beschreibung ging leider verloren]
+ 
+ CLIPBBS 1-17                   Page 28                  17 Dec 1991
+
+
+ 22ND2F  .ARJ   11.507 14.08.91  [03] Patch fixing a problem with the INT 2F
+                                      handler, No vell v2.2
+ AD311   .ARJ   20.157 17.06.91  [12] Adaptec AHA 1540/1740 for Novell 3.11
+ ADAPTEC .ZIP  140.242 13.09.91  [09] NW3.11 Complete update/replacement for
+                                      div. Adapte c drivers
+ AFPFIX  .ZIP    1.498 13.09.91  [02] NW3.11 Bugfgix for AFP.NLM in NW for MAC
+ AHA1740 .ARJ   10.704 17.06.91  [07] Adaptec EISA-Treiber fr Novell 386
+ BELW16  .ZIP    3.017 13.09.91  [06] NW3.10 FOR DMA and 24bit Adress-line
+                                      LAN-Adapters
+ BUTNLM  .ZIP   16.866 13.09.91  [03] BUTIL.NLM Bugfix V5.15a
+ CACHEFIX.ARJ    3.335 17.06.91  [02] NLM-Patch fr sofortigen CacheRead nach
+                                      Write
+ DELFIX  .ARJ    7.328 12.05.90  [02] [Beschreibung ging leider verloren]
+ DLDRFX  .ARJ    7.335 24.05.91  [01] [Beschreibung ging leider verloren]
+ DOWNSERV.ARJ    5.518 05.10.91  [05] Netware 386 NLM to schedule shutdown
+                                      fileserver
+ DRLFX1  .ARJ    9.860 06.04.91  [10] Patchmanager and first patch for Novell
+                                      3.11
+ DSWIN3  .ZIP  444.174 13.09.91  [02] NW Dos Client Utilities Update
+ DSWIN4  .ZIP  416.034 13.09.91  [01] NW Dos Client Utilities Update
+ DTTMFX  .ARJ    7.750 19.12.90  [03] [Beschreibung ging leider verloren]
+ ETHRND  .ZIP   23.670 13.09.91  [01] NW3.11 ans AS-400 via Ethernet
+ FORUM309.ZIP  287.876 09.11.91* [04] Compu$erve NOVA-File-Listing
+ FUTDISK .ARJ   89.509 26.03.91  [01] [Beschreibung ging leider verloren]
+ FXDUMP  .ARJ    9.759 22.06.91  [02] Novell 381 3.10a Patch fr Diagnostic
+                                      Dump
+ FXOPEN  .ARJ    7.795 24.05.91  [01] [Beschreibung ging leider verloren]
+ FYI391  .ARJ  217.191 14.10.91  [05] CompuServ Novell Forum Mails 3/91
+ HST     .ARJ    5.158 22.06.91  [09] Novell MHS Treiber fr US-Robotics HST
+                                      Modem
+ IBMMEM  .ZIP    6.850 22.07.91  [00] NW2.x Bugfix fuer IBM Memory Boards
+ IPXINC  .ARJ    7.040 19.12.90  [02] [Beschreibung ging leider verloren]
+ LOG_LOCK.ARJ    7.913 02.06.91  [01] Start eines beliebigen Programms mit
+                                      logischem Loc k
+ MONITR  .ARJ   44.447 19.12.90  [03] Monitor UPDATE NLM fr Novell 3.10
+ NAMEFX  .ARJ    8.110 22.11.90  [09] Patch Novell 386 V3.1 "In House Version"
+ NCPLIM  .ARJ   10.680 19.12.90  [02] Patch for 'Outstanding NCP Limit
+                                      exceeded' NW 3.10
+ NE386   .ZIP   38.680 13.09.91  [04] NExxx.LAN drivers, new versions for
+                                      NW3.1x
+ NET5    .ARJ   32.712 31.05.91  [13] Novell Shell 3.10 fuer DOS 5.x
+ NFSPATCH.ZIP   74.823 13.09.91  [03] NFS update/patch for NFS V1.1
+ NOVSHUP .ARJ  138.950 01.07.91  [08] Novell Shell Update, 3.03 and 3.20
+ PDF     .ZIP    4.711 13.09.91  [01] PDF File Update for Laser-Printer
+ PMAIL21C.ARJ  245.341 26.08.91  [03] Pegasus Mail fuer Novell
+ PRB310A .TXT   48.539 12.04.90  [01] [Beschreibung ging leider verloren]
+ PSERV122.ZIP  110.350 03.10.91  [16] PSERVER 1.22 fuer Netware 3.11 und 2.20
+                                      (NLM VAP E XE)
+ QFIX    .ARJ    9.860 22.06.91  [03] Novell 386 3.10a Patch fr "Missing
+                                      Print Job's"
+ QM10    .ZIP   18.839 13.09.91  [06] QManager V1.0, Queue Manager for NW
+                                      under WIN3
+ QVTNET21.ARJ  192.436 18.10.91  [04] [Neues Upload - Nicht getestet]
+ RPLFIX  .ARJ    3.964 14.06.91  [07] Allow 'Remote Program Load' with MSDOS
+                                      5.x and abo ve
+ RTAGFIX .ARJ   10.463 14.06.91  [02] Fixes 'Abend: Bad ressource tag
+ CLIPBBS 1-17                   Page 29                  17 Dec 1991
+
+
+                                      passed...' for Nov ell 3.10a
+ SCBFIX  .ARJ    4.395 17.06.91  [01] NLM-Patch wenn Applikation die Bindary
+                                      scant
+ SDL1    .ZIP  339.968 30.12.90  [07] Supplemental Driver Lib 1/7
+ SDL2    .ZIP  301.312 09.09.91  [02] Supplemental Driver Lib 2/7
+ SDL3    .ZIP  109.568 30.12.90  [02] Supplemental Driver Lib 3/7
+ SDL4    .ZIP  182.563 09.09.91  [02] Suplementtal Driver Lib 4/7
+ SDL5    .ZIP  238.592 30.12.90  [02] Supplemental Driver Lib 5/7
+ SDL6    .ZIP  247.808 30.12.90  [02] Supplemental Driver Lib 6/7
+ SDL7    .ZIP  226.138 09.09.91  [02] Supplemental Driver Lib 7/7
+ SEC386  .ARJ    8.174 21.01.91  [01] [Beschreibung ging leider verloren]
+ STRATEGO.ARJ   94.700 17.06.91  [06] Netzwerk-Spiel fr NOVELL
+ SYSCO366.ZIP  155.689 12.08.91  [04] Important BUG-Fix for SYSCON from
+                                      Novell !!!
+ TCPUP1  .ARJ   43.714 14.10.91  [06] Patch for Novell LAN WorkPlace and
+                                      TCP/IP Transpor t
+ TRXNETB .ARJ    7.926 22.02.91  [01] [Beschreibung ging leider verloren]
+ TTS311  .ARJ    8.315 05.10.91  [04] TTSFIX - NLM Patch for Novell 3.11
+ VRP310  .ARJ   41.849 29.01.91  [02] [Beschreibung ging leider verloren]
+ WDOGFX  .ARJ    7.118 12.05.90  [01] [Beschreibung ging leider verloren]
+ WINUP2  .ZIP  361.041 22.07.91  [04] Windows Support fuer Netware 1.03
+ 
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°          CLN - Clipper '87          °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: IS.ARJ         Datum: 29.10.91   Size:     8.909³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ ACHOO2  .ARJ    8.189 17.08.89  [07] Demo of ACHOOSE picklist featuring
+                                      insert & delete
+ ADHOC302.ARJ   43.211 31.08.91  [11] Adhoc 3.02, Clipper/xBase End-User
+                                      Report Generato r
+ ASCPOS  .ARJ    2.557 18.10.91  [06] Returns ASCII Value of cString at
+                                      nPosition (C-Sou (C-Source)
+ ASE     .ARJ  112.536 04.01.91  [03] Dr. Switch-ASE, run every Clipper-App
+                                      as a TSR-Prg , Demo
+ BITON87 .ARJ   85.291 08.08.91  [02] Clipper library for Oracle support
+ CCASE11 .ARJ  307.879 12.07.91  [17] ClipCASE 1.1, CASE-Tool fuer Clipper '87
+ CCASE11C.ARJ  347.538 14.07.91  [17] ClipCASE 1.1, Datenbanken
+ CLIPHELP.ARJ  141.585 30.07.91  [11] Fullcolor context sensitive helpsystem
+                                      for Cl '87 & 5.01
+ CLIPSQL .ARJ   27.581 22.09.91  [06] ClipSQL, Clipper Sql Server/Sybase
+                                      Interface, Beta -Demo
+ DMKEY101.ARJ    3.081 04.07.91  [10] Get keyboard language
+ DPF15A  .ARJ  118.216 01.10.91  [06] Convert DBF to WP Sec.merge, file 1 of 2
+ DPF15B  .ARJ   97.227 01.10.91  [06] Convert DBF to WP Sec.merge, file 2 of 2
+ ENDADD  .ARJ    3.372 18.10.91  [06] Increases the weight of a string
+                                      (C-Source)
+ EXPAND30.ARJ   65.991 24.08.91  [13] Clipper Library, S'87, many nice
+                                      functions
+ F_TEXT  .ARJ    6.018 04.07.91  [16] Low level file text handling routines
+                                      (c source)
+ IS      .ARJ    8.909 29.10.91* [14] Six C-Functions for string handling
+                                      (Clipper '87 & & 5.0)
+ MEM2FILE.ARJ   14.087 16.07.91  [08] Mem-file in Text-file schreiben,
+                                      C-Source
+ CLIPBBS 1-17                   Page 30                  17 Dec 1991
+
+
+ MEMOED  .ARJ    8.584 27.08.91  [16] MemoEdit function with lots of features
+ NUM2WORT.ARJ    2.171 04.08.91  [03] Wandelt Ziffern in Worte um
+ NW1_06U1.ARJ  230.462 28.06.91  [05] Nicework update 1.06 beta
+ NW1_06U2.ARJ  222.533 19.06.91  [05] Nicework Update 1.06 (disk 2)
+ NW1_06U3.ARJ  231.874 19.06.91  [05] Nicework Update 1.06 (disk 3)
+ NW_DEMO .ARJ  264.010 03.07.91  [07] Nicework Demonstration und Tutorial 1.05
+ NW_DSKMA.ARJ   31.500 10.06.91  [04] Nicework Diskmanager (Basis Applikation)
+ NW_PCINV.ARJ   50.619 10.06.91  [06] NW PC-Inventar (Hard & Softw) Basis
+                                      Appl.
+ NW_VID_C.ARJ   93.838 19.06.91  [07] NW Videotheken Verwaltung (Basis Appl)
+ NW_VID_P.ARJ   37.692 19.06.91  [09] NW Videoverwaltung (privat) Basis Appl.
+ OVERCL  .ARJ   71.527 24.07.91  [03] Overlay() 3.5, Memory swapper,
+                                      Demoversion
+ PARTINDX.ARJ    8.974 10.08.91  [12] Create filtered indexes in Clipper,
+                                      with source
+ PDXVIEW .ARJ   56.737 26.08.91  [04] Paradox (r) -Database View
+ RANGER  .ARJ   12.325 10.08.91  [06] Fast filter replacement for DBEDIT
+ SWAPDEMO.ARJ   10.040 30.07.91  [03] Memory swapper (better than RUN),
+                                      Demoversion
+ UPDATE  .ARJ   52.008 16.09.91  [10] Dbf/ntx update maintance library,
+                                      Clipper '87 & 5. 0
+ VARFILES.ARJ    8.693 26.08.91  [05] Save/Load multidimensional Arrays
+                                      to/from
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°          CLN - Clipper 5.0          °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: BUTTON.ARJ     Datum: 20.11.91   Size:     3.982³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ ACCESS  .ARJ    1.749 30.08.91  [05] Clipper 5.0 test memory access
+ ACH2TB  .ARJ   11.732 22.09.91  [08] Achoice to TBrowse, full Clipper source
+ AHELP510.ARJ  193.828 09.08.91  [18] Advanced help system for Clipper 5.x
+                                      and '87
+ ANSICLIP.ARJ    5.037 18.07.91  [13] OBJ zum Anzeigen von ANSI Files
+ AQUERY  .ARJ    6.689 04.07.91  [16] Filter-/Query Condition building demo
+ BLI150-2.ARJ   79.869 10.07.91  [23] Update Blinker 1.50 to 1.50 with time
+                                      stamp 2am
+ BLI15DEM.ARJ  152.719 01.08.91  [11] BLINKER 1.50 - Deutsche 5 min Demo
+ BUTTON  .ARJ    3.982 20.11.91* [06] Get reader - treats logical variable as
+                                      button
+ C5REP6  .ARJ    8.349 31.08.91  [06] Replacement for FRMRUN.PRG, Includes 2
+                                      patches
+ CALC14  .ARJ   23.970 26.09.91  [13] Calc v1.4, a professional calculator
+ CHDBF   .ARJ   11.870 03.07.91  [14] .ch creator for ordinal field names in
+                                      .dbf-file
+ CLIPFPCX.ARJ   35.606 10.11.91* [09] Show PCX-Files from within Clipper
+                                      (S'87 and 5.0x) 5.0x) public domain !
+ CLIPPLUS.ZIP  107.579 04.11.91* [16] Clip/++ Extension Library for CL 5.0
+ COND    .ARJ   15.847 21.08.91  [05] Create Conditional INDEX
+ COPYRITE.ARJ    4.017 31.07.91  [09] Generate Copyright symbol on
+                                      MCGA/EGA/VGA
+ CS_712  .ZIP  324.113 14.11.91* [04] CODESMITH v7.12 screen painter and
+                                      appsgen for CL 5.01
+ DBSCN2  .ARJ  163.701 22.09.91  [15] DbScreen 2.0, Screen design utility,
+                                      generates Cl 5.0x source
+ DELISLE .ARJ   12.993 16.07.91  [12] OOP for clipper, docs, Obj for
+ CLIPBBS 1-17                   Page 31                  17 Dec 1991
+
+
+                                      Mouse-support
+ DIAL    .ARJ    3.129 26.09.91  [07] simple modem dialer
+ DIRMAN  .ARJ   34.564 20.11.91* [07] Directory manager - Source
+ DOC111  .ARJ   57.985 26.09.91  [11] Doc v1.11, Source code documenter,
+                                      requires Base50 .Pll
+ DSCHWART.ARJ    8.748 16.07.91  [12] Wie sollte ein Netzprogramm ausehen,
+                                      Demosource
+ DTF102  .ARJ   12.519 10.11.91* [10] small, fast DBT-File replacement (no
+                                      longer blown up memos !)
+ ERS501  .ARJ    7.568 27.06.91  [43] Errorsys Handler
+ EXPAND52.ARJ   88.610 21.07.91  [14] Clipper 5.01 library, incl. ega/vga
+                                      font load
+ FULL501 .ARJ    2.828 27.06.91  [47] Linkfile fuer PLL, um Testfiles in
+                                      Sekunden zu lin linken
+ GETKEY  .ARJ  280.907 13.10.91  [13] Getkey v2.01, screen, string library
+ GETS    .ARJ    7.581 16.07.91  [24] Sources rund ums GET-System
+ GSR151  .ARJ  142.217 26.08.91  [09] Multifile Global Search and Replace 1.51
+ HGLASS  .ZIP    6.843 07.09.91  [10] Hour Glass as index generation
+                                      measurement
+ HORWITZ .ARJ    7.209 16.07.91  [09] 3 C-Functions, Source
+ HOTKEY  .ARJ    2.572 20.11.91* [05] Searches for an unique letter (hotkey)
+                                      in an array
+ INDXSL  .ARJ    5.492 02.09.91  [08] Index selection function written for Cl
+                                      5.0
+ IOBASYS9.ARJ   63.886 02.09.91  [08] Demo of Sub_Set() & EditMemo() Clipper 5
+ JG2     .ARJ    5.414 05.10.91  [09] Jump 2 another Get, UDC
+ KEYCODE .ARJ    4.855 18.07.91  [05] Inkey()-Codes for IBM PS/2, .ch-File
+ KF_LOKUP.ARJ   12.892 27.09.91  [10] Great LookUp function for Clipper 5.01
+ LITEMENU.ARJ   10.184 18.08.91  [14] PROMPT with hilighted Hotkey
+ LREPTC51.ARJ   69.433 16.07.91  [16] Report Writer, library
+ LUTLIB  .ARJ   11.462 05.10.91  [09] Small lib with some menu functions
+ MK30    .ARJ   19.624 03.09.91  [07] Mouse library, Demo
+ MOUSEG  .ARJ  122.475 27.06.91  [51] Maus-Support im GET-System, benoetigt
+                                      NanForum Lib
+ MOVEGETS.ARJ    5.287 02.09.91  [06] Examples of the new object GETs in Cl
+                                      5.0
+ NEWATTR .ARJ    4.162 10.08.91  [04] Change screen attributes, ASM-Source
+ NFDESC2 .ARJ    5.993 31.08.91  [21] Description of all functions in
+                                      NanForum Lib v2.0
+ NFHDRS  .ARJ    2.682 22.06.91  [47] Header-Files for NanForum Library
+ NFLIB2  .ARJ  168.594 01.09.91  [26] NanForum Library v2.0
+ NFSRC2  .ARJ  309.837 31.08.91  [24] NanForum Library v2.0, Source
+ NGRTCL50.ARJ   38.316 05.07.91  [27] NG Runtime Error Codes for CL 5.01
+ OBJS50  .ARJ   39.538 04.07.91  [19] Clipper OOP-Library with User Defined
+                                      Object
+ OCLIP   .ARJ   14.818 18.10.91  [14] o:OClip 1.0 - Object oriented extension
+                                      for Clippe Clipper 5.01
+ OGGGET  .ARJ   37.857 08.07.91  [18] Introduction to the Get System by Graig
+                                      Ott
+ OOPSCL5 .ARJ    3.690 24.09.91  [05] Clipper 5 OOPS functions and demo.
+ PACKUP  .ARJ    6.822 31.08.91  [04] Replacement for SaveScreen() &
+                                      RestScreen(), uses less memory, ASM
+ PARTIDX3.ARJ   18.270 13.10.91  [13] Partial Index v3.0
+ PAT2-2  .ARJ    5.319 26.09.91  [31] Patch #2 for NanForum Lib v2.0
+ PAT2-3  .ARJ    9.837 29.10.91* [28] Patch for TBWHILE() in NanForum Lib 2.0
+ PAT2-4  .ARJ    7.296 29.10.91* [28] Patch for FT_PEGS() in NanForum Lib 2.0
+ CLIPBBS 1-17                   Page 32                  17 Dec 1991
+
+
+ PAT2-5  .ARJ    4.724 29.10.91* [28] Patch for FT_TEMPFIL() in NanForum Lib
+                                      2.0
+ PAT2-6  .ARJ   15.002 20.11.91* [10] Patch for FT_DISPFILE() in NanForum Lib
+                                      2.0
+ PHREAD  .ARJ   15.014 30.07.91  [15] The GET-System and Mouse support
+ POPUPCAL.ARJ    7.170 22.09.91  [09] PupUp Calender
+ POSTPRNT.ARJ    3.886 05.10.91  [15] Prints ASCII-Text on postscript printer
+ POWER10 .ARJ  140.006 20.04.91  [18] GREAT lib for 5.01 (graph,comm,mouse)
+ PRINTSUP.ARJ    5.868 18.10.91  [12] Printer BIOS function for Clipper 5.01
+ PRNTSTAT.ARJ    2.658 24.07.91  [03] Check Printerstatus (ASM-Source)
+ PROFILER.ARJ    6.584 30.07.91  [07] RunTime-Profiler for Blinker and
+                                      Clipper 5.01
+ READPW  .ARJ    2.647 03.09.91  [04] Read invisible Password
+ SCHINKEL.ARJ   51.907 16.07.91  [20] Codeblocks, Descriptions, Source
+ SCRSAVE .ARJ    3.382 20.09.91  [19] SCRSAVE() 1.0 - Screensaver, a colored
+                                      Novell worm
+ SEEKFIX .ARJ    4.541 18.07.91  [26] Fixes a SEEK Bug in Clipper 5.01
+ SG2     .ARJ   13.611 19.08.91  [18] Scrolling GETS, new update to
+                                      SCROLGET.ARJ
+ SHELP50A.ARJ  125.501 13.08.91  [07] Superhelp v5.0 pour clipper 87 et 5.01
+ SHOWANSI.ZIP    3.352 11.11.91* [03] PRG to disp char MEMVAR w/embedded ANSI
+                                      codes
+ SHOWERR .ARJ    7.025 10.07.91  [11] Show instance variables in ErrorSys
+ SNAP50  .ARJ  277.740 13.11.91* [15] Snap 5.0 - Source code analyzer for
+                                      xBase language languages
+ SOUND   .ARJ    3.200 22.09.91  [07] Sound() function based on Tone(), incl.
+                                      .ch header file
+ SPACEBAR.ARJ    3.967 18.07.91  [10] Browse through GETs with SPACE-Bar
+ STATUS  .ARJ    9.085 13.10.91  [11] Status bar using timer tick
+ STRALEY .ARJ   10.868 16.07.91  [13] Array functions for Clipper 5, by S.
+                                      Straley
+ SUPER160.ARJ  125.816 12.10.91  [21] Freeware Super-Library v.1.60 (S'87 and
+                                      5.0x) come comes with lib only
+ SYMBOL  .ARJ    8.974 02.09.91  [07] Will build and print a list of all
+                                      Symbols used by a Cl EXE.
+ TBROWTU2.ARJ   41.827 10.08.91  [09] New PRGs for TBROWTUT
+ TBROWTUT.ARJ  298.728 08.07.91  [22] Demos zu TBROWSE
+ TBUNIQUE.ARJ    3.639 18.10.91  [08] Unique TBrowse without unique index
+ TBWHL4  .ARJ    6.328 22.09.91  [07] Tbrowse with WHILE condition
+ TB_MULTI.ARJ    5.202 07.08.91  [11] Multi-line TBrowse demo, switch between
+                                      one/more l ines
+ TEXLASER.ARJ   54.501 16.07.91  [15] HP Laser library for Clipper 5
+ TICKER  .ARJ    6.442 13.10.91  [11] Attach Clipper function to system clock
+ VMENUS  .ARJ  111.769 09.08.91  [16] Cl 5.01: Object menu system
+ VNTX    .ARJ    5.862 04.07.91  [31] Check index for corruption (c and
+                                      clipper source)
+ VOICE200.ARJ   40.274 16.10.91  [20] Sprachausgabe auf dem PC-Speaker fr
+                                      Clipper 5.0 u und S'87
+ VSIX802 .ARJ  288.064 20.11.91* [08] Vern Six Library 8.02 for Clipper 5.0x
+ WIERDGET.ARJ    7.126 07.08.91  [13] Great GET-system demo, GETs in
+                                      different colors, w ith shadow...
+ ZIP2BAR .ZIP    2.675 11.11.91* [03] Generates USPS barcodes from zipcodes
+                                      for Epson pr printers
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°         CLN - Clipper Dokus         °±²ÛÛ²±°³
+ CLIPBBS 1-17                   Page 33                  17 Dec 1991
+
+
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: CLBBS113.ARJ   Datum: 18.11.91   Size:    21.841³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ ALTDO328.ARJ   26.669 30.08.91  [03] Fast, small DBF file utility
+ BLZDBF  .ARJ  235.413 15.07.91  [16] DBF - Bankleitzahlen
+ CBASE5  .ARJ   38.314 15.07.91  [17] Norton Guide with a description of all
+                                      Run-Time-Er rors
+ CL-NODE .FRM    1.241 05.11.91* [08] CLN node application form
+ CL-POL  .008    3.517 16.10.91  [12] CLN policy No. 08, Wendsday, 16. Oct
+                                      1991
+ CL-ROUTE.309    6.802 03.11.91* [09] CLN routing plan, Tuesday, 05. Nov 1991
+ CL-TIC  .CFG    2.639 05.11.91* [09] CLN example tic file
+ CL5104  .ARJ   33.696 10.09.91  [19] Anomaly report No. 4 for Clipper 5.01
+ CLBBS101.ARJ   17.035 16.09.91  [12] CLIPBBS Magazine Volume 1 number 01
+ CLBBS102.ARJ   14.332 16.09.91  [11] CLIPBBS Magazine Volume 1 number 02
+ CLBBS103.ARJ   29.271 01.10.91  [12] CLIPBBS Magazine Volume 1 number 03
+ CLBBS104.ARJ   26.775 01.10.91  [09] CLIPBBS Magazine Volume 1 number 04
+ CLBBS105.ARJ   41.051 01.10.91  [09] CLIPBBS Magazine Volume 1 number 05
+ CLBBS106.ARJ   28.661 01.10.91  [16] CLIPBBS Magazine Volume 1 number 06
+ CLBBS107.ARJ   18.976 07.10.91  [15] CLIPBBS Magazine Volume 1 number 07
+ CLBBS108.ARJ   16.860 14.10.91  [15] CLIPBBS Magazine Volume 1 number 08
+ CLBBS109.ARJ   17.809 21.10.91  [01] CLIPBBS Magazine Volume 1 number 09
+ CLBBS110.ARJ   20.715 28.10.91  [20] CLIPBBS Magazine Volume 1 number 10
+ CLBBS111.ARJ   22.259 04.11.91* [13] CLIPBBS Magazine Volume 1 number 11
+ CLBBS112.ARJ   19.322 11.11.91* [05] CLIPBBS Magazine Volume 1 number 12
+ CLBBS113.ARJ   21.841 18.11.91* [05] CLIPBBS Magazine Volume 1 number 13
+ CLIP110 .ARJ   27.978 01.09.91  [07] Clip 1.10, easy MAKE for Clipper '87 &
+                                      5.0x
+ CLPFON  .ARJ   55.237 08.08.91  [02] EGA/VGA-Fonts for Expand Library
+ CTNEWS01.ARJ   21.260 14.10.91  [26] Deutsche Clipper News Ausgabe 1 von
+                                      Henry Jalbuena (2:246/14.5)
+ DRUCKER .ARJ   18.018 08.07.91  [31] Druckersequenzen fuer mehr als 300
+                                      Drucker
+ MEM501  .ARJ    3.344 16.07.91  [15] Save up to 45 Kb with RTLINK,
+                                      Link-file, Clipper 5
+ NGP     .ARJ   10.389 24.08.91  [23] Norton Guides Printer v2.0
+ NOTATION.ARJ    7.494 11.09.91  [09] Hungarian Notation for CLIPPER
+ SCANCODE.ARJ    3.018 25.09.91  [08] dbf-file with all ScanCodes
+ SQUIRES .ARJ   53.376 16.07.91  [16] Ergebnisse Clipper conference
+                                      Orlando/USA
+ 
+ 
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°         CLN - Clipper Tools         °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: CLIPWARN.ARJ   Datum: 29.10.91   Size:    14.180³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ CLIPWARN.ARJ   14.180 29.10.91* [19] ClipWarn 1.0 - Watches output of
+                                      Clipper /w switch
+ DMAKE   .ARJ  381.098 19.09.91  [16] DMAKE universal MAKE, sources
+ DMEXE   .ARJ  139.489 19.09.91  [19] DMAKE universal MAKE, .EXE and .DOC part
+ DOSRCSD4.ARJ   25.189 16.09.91  [30] Complete Revision Control System, Doc
+ DOSRCSS4.ARJ  133.814 16.09.91  [25] Revision Control System, Source
+ DOSRCSX4.ARJ  218.945 16.09.91  [27] Revision Control System, Exe
+ XREF140C.ARJ  142.440 17.10.91  [09] Clipper/dBase DBF & NTX/NDX
+ CLIPBBS 1-17                   Page 34                  17 Dec 1991
+
+
+                                      Documentation Tool
+ 
+ 
+  ³°±²ÛÛ²±°          CLN - FCO (Force)          °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: FCO_BROW.ARJ   Datum: 26.10.91   Size:    16.479³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ BLINK   .ARJ    6.249 04.07.91  [09] BLINK-Attribut An-/Ausschalten
+ BREAKOUT.EXE   16.962 04.07.91  [08] Programmabruch programmieren
+ CATALOG .ARJ   39.832 04.07.91  [12] Disk-Katalog Programm
+ COOK    .ARJ    4.087 24.08.91  [03] FORCE INTERNALS: Indirect procedure
+                                      call,
+ EMPTY   .ARJ    2.318 04.07.91  [07] Simuliert die EMPTY-Funktion
+ FCO_BROW.ARJ   16.479 26.10.91  [10] BROWSE-Library
+ FCO_FCT1.ARJ   42.602 25.09.90  [10] Force Tools Library v1.0
+ FCO_MAKR.ARJ   12.845 26.10.91  [09] ASM: &Macro simulation with source -
+                                      German descri description
+ FCO_MAUS.ARJ   10.996 26.10.91  [08] KRS Mouse Library - German description
+ FIELDS  .ARJ    2.588 04.07.91  [10] FORCE INTERNALS: Accesing DBF fields
+ FORCE-NG.ARJ  261.334 04.07.91  [23] Norton-Guide fuer FCO/Force
+ FORCECOM.ARJ  141.187 04.07.91  [22] Funktionsfaehige FCO-Demo !!
+ FPRINT  .ARJ   25.817 04.07.91  [09] Source-Code Formatierer
+ FTOSW   .ARJ   18.749 04.07.91  [09] Advert. for SAYWHAT tools?
+ FXDEMO  .ARJ  117.751 04.07.91  [08] FX-Library v1.0 - Super Tools
+ F_MACROS.ARJ   13.898 04.07.91  [09] Indirekter Funktionsaufruf - simuliert
+                                      die
+ GET_PICK.ARJ   31.033 22.07.91  [06] GET w/valid pop-up picklist example
+ INC_V11 .ARJ   26.639 04.07.91  [08] #INCLUDE - File Maker
+ INDEX   .ARJ    3.416 04.07.91  [08] FORCE INTERNALS: Information ber
+                                      FDX-Files
+ INSTALL .ARJ   21.857 04.07.91  [11] Das FORCE 2.1 Installations Program.
+                                      Dies
+ IO      .ARJ    3.921 04.07.91  [10] FORCE INTERNALS: Information ber FORCE
+ JDCDEMO .ARJ   74.280 22.07.91  [02] JD Communications Demo
+ JD_DEMO .ARJ   68.321 22.07.91  [03] Demo of Jeff Davis lib. Windowing
+                                      functions
+ JEFFDAV .ARJ    9.920 04.07.91  [07] Funktionsliste aus der Jeff Davis
+                                      Library
+ LASERLST.ARJ   12.933 04.07.91  [09] Ausdruck auf HP-Laserdruckern
+ LOOKUP  .ARJ    3.542 04.07.91  [09] Beispiel: Benutzung von @..GET..VALID
+ MEM     .ARJ    1.909 04.07.91  [08] FORCE INTERNALS: Struktur der .MEM
+                                      Files.
+ MEMOBROW.ARJ    2.045 04.07.91  [07] Memofelder ansehen aber nicht „ndern
+ MICROTCH.ARJ    4.199 04.07.91  [08] Steve Nachlas Beispielfunktionen und
+                                      Procs.
+ NOVICTIP.ARJ    3.639 04.07.91  [07] Tips fr den Umstieg von dBASE III+
+ ON_KEY_D.ARJ    2.143 04.07.91  [06] Beispiel: Benutzung von ON KEY DO
+ PASS2   .ARJ   11.621 04.07.91  [10] Zwei Passwort-Programme
+ PASSWORD.ARJ    2.517 04.07.91  [08] No-echo password entry w/ Bells &
+                                      Whistles!
+ POPLIST2.ARJ    4.907 04.07.91  [12] Popup-Liste generieren
+ PRO     .ARJ    2.355 04.07.91  [07] FORCE INTERNALS: Konventionen von Math
+ SAVESCRN.TXT      333 04.07.91  [06] Bildschirm sichern
+ SCRNREAD.ARJ    3.014 04.07.91  [06] Inhalt des Bildschirms lesen
+ SCROLL  .ARJ    1.920 04.07.91  [07] Beispiel: Benutzung der SCROLL()
+                                      procedure
+ CLIPBBS 1-17                   Page 35                  17 Dec 1991
+
+
+ SCRSAVE .ARJ   27.277 22.07.91  [10] NEW screen saver/dumper written in FORCE
+ SFMG    .ARJ   40.357 04.07.91  [09] Ein Force Mengenerator - erstellt
+ SMAKE   .ARJ   48.199 04.07.91  [14] SUPERmake v2.0 - Programm-Generator
+ SMKE_SRC.ARJ   37.666 04.07.91  [11] SUPERmake Programmgenerator SOURCE
+ SORT_DBF.ARJ   34.557 04.07.91  [09] QuickSort Routine
+ TELETOOL.ARJ   50.476 22.07.91  [02] Demo of JSofts Communication Library for
+ TSLIB   .ARJ   66.996 04.07.91  [08] Library-Manager
+ TSRCLOCK.ARJ    1.666 04.07.91  [07] Kurzes Beispiel fr eine TSR-Uhr
+ TSR_EXPL.ARJ   56.809 04.07.91  [09] Beispiel TSR-Prog und residente Uhr
+ TURBOC  .ARJ    5.052 04.07.91  [07] Das Zusammenspiel zwischen TurboC 1 & 2
+ UDFTOOL .ARJ   20.084 04.07.91  [12] Tabellen UDF's und Andere
+ XMS     .ARJ    7.947 04.07.91  [11] Ext. Mem. Support fr FORCE, dynamische
+ 
+ 
+  ³°±²ÛÛ²±°            CLN - FoxBase            °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: DB2DOC.ARJ     Datum: 09.11.91   Size:    12.868³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ DB2DOC  .ARJ   12.868 09.11.91* [06] automatic DBF-File creation with
+                                      Foxpro+ and Foxba Foxbase
+ DB2PRG  .ARJ    8.519 09.11.91* [06] DBF-File Documentation for Foxpro+ and
+                                      Foxbase
+ PS_LIB  .ARJ    4.832 06.07.91  [09] Postcript Function Library fr FoxPro
+ 
+ 
+  ³°±²ÛÛ²±°             CLN - dBase             °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: HP_NEU.ARJ     Datum: 16.07.91   Size:     7.301³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ HP_NEU  .ARJ    7.301 16.07.91  [06] Neue HP Laserjettreiber von Ashton Tate
+ LOOKDBF .ARJ   88.933 14.07.91  [07] Erkennt verschiedene DBF-Versionen
+ 
+ 
+  ÕÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¸
+  ³°±²ÛÛ²±°             CLN - Demos             °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: SEGUE.ARJ      Datum: 07.11.91   Size:   403.274³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ CWDEMO  .ARJ   90.146 03.11.91* [08] ClassWorks I Demo of Class library -
+                                      Needs Base50. Base50.pll
+ QS20F   .ARJ  314.157 25.10.91  [02] QUICKSCREEN professionell 2.0,
+                                      programm/mask/menu-
+                                      programm/mask/menu-generator demo
+                                      (german)
+ SEGUE   .ARJ  403.274 07.11.91* [06] Segue Clipper API for Novell - DEMO
+ WIPEV11 .EXE  157.418 25.10.91  [05] WIPEOUT Library V. 1.1 Screen wiping
+                                      routines (S'8 (S'87 and 5.01)
+ 
+ 
+  ³°±²ÛÛ²±°         CLN - Deutsche Files        °±²ÛÛ²±°³
+  ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+  ³Neu: HYPER2GR.EXE   Datum: 23.11.91   Size:   299.944³
+  ÔÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¾
+ HYPER2GR.EXE  299.944 23.11.91* [01] HyperHelp for Clipper v2.00
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-17                   Page 36                  17 Dec 1991
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+ PROBLEM:   Download speeds of ZIP files seem slow when using a 2400 baud MNP-5
+            modem.
+ 
+ SYMPTOMS:  When downloading from some BBS's the download speed of ZIP files is
+            about 280 cps.  From other boards only about 250 cps is possible.
+ 
+ SOLUTION:  MNP-5 compression is not effective on ZIP files.  In fact, if you
+            try to compress a ZIP file, things actually slow down.  As a
+            result, most boards disable MNP-5 compression.  You can still
+            achieve an error correcting link, but there will be no compression.
+            Under this scenario you will achieve about 280 cps download speeds
+            at the expense of screen update speed.  The screens full of menus
+            are not compressed either!  On my board, MNP-5 compression is
+            enabled.  If you call in with MNP-5 your screen updates will be
+            very fast, but your downloads of ZIP files will be in the 250 cps
+            area.  If you download Text or ASCII files, you may achieve rates
+            as high as 500 cps.  The solution is to defeat compression on the
+            callers end when you want to download ZIP files.  There is usually
+            an "AT" command to defeat MNP-5 compression.  Read your manual.  If
+            you intend to do a lot of downloading, defeat MNP-5.  If you are
+            just calling to browse, leave it on.  You now have the best of both
+            worlds.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   I get a "Drive x Not Ready" error message from my hard disk.
+ 
+ SYMPTOMS:  When doing disk intensive work in an application, a "Drive x Not
+            Ready", "Abort, Retry, Fail?" error message will occur.  By typing
+            "R" to retry, the program continues normally until the next
+            occurrence.
+ 
+ SOLUTION:  This error message occurs primarily with IDE drives, although any
+            1:1 interleaved drive may be affected.  The problem is in the
+            overhead that QEMM requires to operate.  This is a problem that
+            Quarterdeck has finally been able to reproduce, and they are
+            working on it.  If you do not have an IDE drive, you may be able to
+            reformat you hard disk to 2:1 or 3:1 interleave.  This will cause
+            the drive and controller to be less timing critical.  For an IDE
+            drive, this is not possible.  Some drives allow you to change a
+            jumper on the drive to emulate 2:1 interleave.  It is unclear
+            whether this works or not.  I have not tried this method.  There
+            are also some timing problems with some BIOS's.  An upgrade to the
+            most current revision might help the problem.  Quarterdeck also
+            suggests using Stacks=0,0 to reduce the DOS overhead.  This
+            promises to be an ongoing battle.  Stay tuned...
+ 
+            NOTE 1:  If you have a machine with AMI Bios, you might try the
+                     following:  In the advanced setup there is an entry called
+                     "16-bit AT command delay  00 00 01 01".  Change this to
+ CLIPBBS 1-17                   Page 37                  17 Dec 1991
+
+
+                     "00 01 01 01".  This is supposed to completely solve the
+                     IDE timeout problem.  I haven't verified this, since I
+                     don't have a machine with AMI Bios.
+ 
+            NOTE 2:  The above problem is actually caused by a bug in most, if
+                     not all BIOSes.  Problems have been reported in AMI,
+                     Award, and Phoenix BIOSes.  I can report that I have had
+                     this problem with DTK's BIOS as well.  The problem stems
+                     from the fact that some BIOSes initiate disk activity and
+                     then clear the "Interrupt Occurred" flag before checking
+                     for the incoming interrupt.  In this case, any interrupt
+                     which has come in before the flag was cleared will not be
+                     processed and will result in a "Drive Not Ready" error
+                     message.  Another problem is that some BIOSes lose
+                     interrupts during multi-sector reads.
+ 
+                     Quarterdeck has identified the problem and has a fix in
+                     the works.  It probably won't pay to upgrade your BIOS to
+                     try to solve this problem as the BIOS makers are not aware
+                     that the problem exists.
+ 
+            NOTE 3:  Quarterdeck has released a fix for this problem.  The
+                     program is called FIXNRE.COM.  This is a TSR that should
+                     correct the bug that exists in a number of BIOSes.  There
+                     is also a program called GENNRE.COM which attempts to
+                     generate a not ready error on your machine.  Both programs
+                     are included in a ZIP file called FIXNRE.ZIP.  This file
+                     is available on The Bertha BBS.
+
+ ------------------------------------------------------------------------------
+
+
+ PROBLEM:   I get intermittent "weird" things that happen to my computer when I
+            run DesqView.
+ 
+ SYMPTOMS:  Sometimes the system will "hang", other times it will do strange
+            things.
+ 
+ SOLUTION:  I have heard of a number of problems being solved by using the
+            NOSORT (NS) switch in QEMM 5.0.  QEMM normally "sorts" the memory
+            in your machine by speed.  Some programs have a problem with memory
+            that has been "sorted" by QEMM since the memory may not be
+            contiguous.  I use this switch with no problems, but cannot verify
+            that it solved anything.
+ 
+            NOTE 1:  You should use the NS switch in QEMM if you intend to run
+                     Windows 3.0.
+
+ ------------------------------------------------------------------------------
+
+
+ QUESTION: NATIONAL support of Nantucket cannot be used with PLLs?
+ 
+ ANSWER:
+ 
+     Try the following PLL link file, called NATION.LNK
+ CLIPBBS 1-17                   Page 38                  17 Dec 1991
+
+
+         prelink
+         output nation
+ 
+         fi XXXXXXXXX,nation.lib
+         lib clipper, extend, terminal, dbfntx
+ 
+         refer _VOPS, _VMACRO, _VDB, _VDBF, _VDBFNTX
+         refer _VTERM, _VPICT, _VGETSYS
+         refer _VDBG
+ 
+         exclude ERRORSYS
+ 
+     Where XXXXXXXXX should be changed to name of your NATION module.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-17                   Page 39                  17 Dec 1991
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-17                   Page 40                  17 Dec 1991
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ CLIPBBS 1-17                   Page 41                  17 Dec 1991
+
+
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-17                   Page 42                  17 Dec 1991
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 1-17                   Page 43                  17 Dec 1991
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 1-17                   Page 44                  17 Dec 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

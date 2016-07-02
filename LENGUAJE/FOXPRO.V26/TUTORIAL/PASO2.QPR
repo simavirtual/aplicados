@@ -1,0 +1,7 @@
+SELECT Persvent.c¢dofi, Facturas.c¢drep, SUM(Facturas.impfac);
+ FROM Facturas, Persvent;
+ WHERE Persvent.c¢drep = Facturas.c¢drep;
+ GROUP BY Persvent.c¢dofi, Facturas.c¢drep;
+ INTO CURSOR PASO2
+BROWSE NOMODIFY PREFERENCE PASO2
+

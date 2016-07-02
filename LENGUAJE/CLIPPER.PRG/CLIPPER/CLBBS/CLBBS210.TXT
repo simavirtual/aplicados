@@ -1,0 +1,2024 @@
+
+
+        °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+      °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+      °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+      °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+  Volume 2, Number 10                                      28 March 1992
+
+                 (c) Daniel Do‡ekal, All Rights Reserved
+
+     The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+
+     Some of the material used comes from scanning CLIPPER echoes
+     which are carried in various BBS throughout the World.
+     These Echoes are very often the source of the most often asked
+     Questions and Answers about Clipper.
+
+     Other material, which is fully signed or abbreviated is the
+     copyright of the appropriate persons.
+
+     The publisher is not responsible for other authors submissions....
+     Published material is not necessarily the opinion of the publisher.
+
+     Redaction:
+        Publisher...................................Daniel Docekal
+        Chief editor ...............................Daniel Docekal
+        Language editor .................................Dave Wall
+
+
+
+                               Table of Contents
+
+1.  EDITORIAL  .............................................................  1
+    Long time nothing  .....................................................  1
+2.  ARTICLES  ..............................................................  2
+    Nantucket Code Guidelines  .............................................  2
+    Starters corner (part 4)  ..............................................  6
+    NOVLIB, as promised here it is  ........................................ 11
+    Hitch Hikers Guide To The Net (7)  ..................................... 17
+    @...GET MEMO  .......................................................... 20
+    Clipper file/record locking  ........................................... 24
+    Get exit code after RUN command  ....................................... 25
+3.  SOFTWARE  .............................................................. 26
+    Novell FORUMS on Compuserve  ........................................... 26
+    What is what (1)  ...................................................... 27
+    Printing out memory file  .............................................. 32
+4.  NEWS  .................................................................. 35
+    Clipper Interface Handbook  ............................................ 35
+5.  ANOMALIES  ............................................................. 36
+    ANOMALIES reports and commets  ......................................... 36
+6.  COMMENTS  .............................................................. 37
+CLIPBBS 2-10       Table of Contents (...)        28 Mar 1992
+
+
+    Funny set SET DATE  .................................................... 37
+    __DOS_HOLD problem  .................................................... 38
+7.  CLIPPER NET  ........................................................... 39
+    Index of described files in Clipper BBS Magazine  ...................... 39
+8.  CLIPBBS  ............................................................... 41
+    CLIPBBS distribution  .................................................. 41
+    CLIPBBS, how to write an article!!!  ................................... 43
+
+                                   - - - - -
+CLIPBBS 2-10                   Page 1                   28 Mar 1992
+
+
+===============================================================================
+                                   EDITORIAL
+===============================================================================
+
+
+                             Long time nothing
+
+It's a long time i did write latest editorial and also there are many holes
+in making new versions of CLipper BBS. Problem as usual is called TIME.
+It's a nice hobby to make CLIPBBS, but it costs a lot of time. Thanx to all
+who are also contributing in magazine and i wish they will also continue,
+otherwise there will be more and more difficulties. Company in which i
+belongs has top priority over hobbies and we are now pretty busy with
+several networks. Therefore publishing of CLipper BBS magazine is slowed
+down and most probably will be slowed in future also. Also few things got
+lost during changes of servers in our company networks and i'm actually
+afraid i did skip one number which was never out, or maybe is out but i
+don't have it anymore (funny...).
+
+One important news - i have new membership on Compuserver, therefore
+Clipper BBS Magazine will come in this worldwide medium also. 100064,2343
+is Compuserver number of Daniel Docekal.....
+
+.DD.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 2                   28 Mar 1992
+
+
+===============================================================================
+                                   ARTICLES
+===============================================================================
+
+
+                          Nantucket Code Guidelines
+
+7.  Preprocessor Directives
+
+    7.1     Preprocessor directives are lowercase and are preceded by a "#"
+            sign:
+
+             #include "Inkey.ch"
+
+            COMMENTS: Absolutely agree about directive lowercasing. Prefixing
+            of them with "#" is i guess must given by syntax of CLipper
+            language and therefore can be left out of any guidelining...
+
+    7.2     Pseudo-function names follow the same conventions as
+            user-defined function and procedure names (see section 6).
+
+            COMMENTS: There is one disadvantage of this guideline. All pseudo
+            functions are UNAVAILABLE in debugger and therefore i prefer
+            making them in UPPERCASE because then one can see directly that
+            function is PSEUDO (#define or #translate made)
+
+    7.3     Manifest constants are uppercase:
+
+             #define ESCAPE 27
+             IF LASTKEY() == ESCAPE
+
+            COMMENTS: Agree, expansion a bit is. EVERYTHING defined by
+            #define or #translate should be uppercase for better recognizing.
+
+    7.4     A blank line should be placed before and after #if...#endif
+            directives:
+
+         @ 2,10 SAY "ACME Stock Control System"
+
+            #if PASSWORD
+                <Ask user for password>
+         #endif
+
+         MainMenu()
+
+            COMMENTS: Agree. It's very good and also is good to use on indent
+            level to the right more INSIDE of #if..endif construction.
+            SOmetime i'm dreaming about CLEVER editor which will be able to
+            make some kind of outlining with Clipper constructions....
+
+8.  Standard Classes
+
+    8.1     Class names follow the same conventions as user-defined
+            function and procedure names (see section 6).
+
+            COMMENTS: It's logical and useful to follow the same naming
+CLIPBBS 2-10                   Page 3                   28 Mar 1992
+
+
+            convention for classes. All clases are of course prefixed with
+            "o" letter, immediately showing that 'this is a object'.
+
+    8.2     Instance variable names begin with a lowercase letter, and
+            include uppercase letters wherever necessary to indicate new
+            words:
+
+         oError:canDefault := .T.
+
+            COMMENTS: There is one important moment. Starting of instance
+            variables with small letters is allowing to make difference
+            of them and any other names. Only one weakness is here. There
+            is no way how to present which kind of value is inside of class
+            variable.
+
+    8.3     Method names follow the same convention as instance variable
+            names (see above):
+
+         oBrowse:pageUp()
+
+    8.4     When referring to a class method in text, you must also specify
+            the class name:
+
+         To reposition the data source to bottom-of-file, use the
+         TBrowse:goBottom() method.
+
+            COMMENTS: This paragraph is talking about case that one is writing
+            documentation or book about Clipper. Because of nature, that class
+            methods (variables) belongs to specific class, is needed to write
+            down which CLASS is related to method.
+
+9.  Spaces
+
+    9.1     Whenever a list of two or more items is used, a space is placed
+            after each comma separator:
+
+            MyFunc(nChoice, 10, 20, .T.)
+
+            COMMENTS: This is rule coming about readability of program.
+            Sometime is better to not use it, because of some functions with
+            very long argument list. Then it's too long to waste space with
+            space characters between arguments.
+
+    9.2     NEVER use spaces to indent code; use tabs instead (see section
+            15).
+
+            COMMENTS: GOLDEN rule for all programs (not only in Clipper).
+            When program is formatted using SPACES, there is always problem
+            with reformating of program. Also spaces formated program is
+            BIGGER (and significantly) than TABS formatted program (TAB is
+            one character and can be in some cases replacement for 2 to 7
+            spaces).
+
+    9.3     When parameters are specified as part of a function
+            declaration, a space is placed inside each parenthesis:
+
+CLIPBBS 2-10                   Page 4                   28 Mar 1992
+
+
+         FUNCTION SayInBox( cMessage, cColor )
+
+            COMMENTS: Again readability rule. It's giving better reading of
+            parameters when definining function.
+
+    9.4     A space is placed on either side of each binary operator:
+
+            nTotal := nSubTotal + nNewCost
+
+            COMMENTS: It's good to follow this, but again. Long and complex
+            expressions flowing among more lines, are difficult to keep in
+            this way, because are coming longer and longer.
+
+10  Declarations
+
+    10.1    Each variable is declared separately on its own line:
+
+         LOCAL nSomeNum
+         LOCAL cString := ""
+
+            COMMENTS: I'm still prefering method to use ONE LOCAL statement
+            and then multiple line declarations:
+
+            LOCAL   nSomeNum ,;
+                    cString     := ""
+
+            It's question what is better, because in Nantucket's guideline,
+            there is possible to place comments after every LOCAL statement,
+            in my case it's impossible (because of buggy implementation of /*
+            and */ operators).
+
+11  Logicals
+
+    11.1    Logical values are referred to in text as follows:
+
+         true (.T.)
+         false (.F.)
+
+            The terms "true" and "false" are all lowercase unless they appear
+            at the beginning of a sentence, and are followed by the code form
+            of the logical value enclosed in parentheses.
+
+            COMMENTS: Exactly opposite. TRUE and FALSE are upper case,
+            always.  That's because they are defined as #define constants and
+            #define symbols are always uppercase in my programs (see
+            somewhere on start of guidelines comments about #define).
+
+12  Operators
+
+    12.1    The in-line assignment operator (:=) is used for assignments in
+            all Clipper 5.0 code:
+
+         lContinue := .T.
+
+            COMMENTS: 100% agree. ":=" operator is only one used in Clipper.
+            That's because of:
+CLIPBBS 2-10                   Page 5                   28 Mar 1992
+
+
+            1)  REPLACE command can be replaced with this operator
+            2)  there is possible to use this operator inside of expression
+                and mostly in if () statements...
+
+    12.2    The == operator is used for exact equality tests in all Clipper
+            5.0 code:
+
+         lDuplicate := (CustFile->CustName == cCustName)
+
+            COMMENTS: 100% agree. "==" operator is better readable than combi-
+            nation of SET EXACT and "=" operators....
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 6                   28 Mar 1992
+
+
+Starters corner                                                       Paul Ket
+===============                                                       ========
+
+Last time we left with a brand new way of storing the data in the files.  We
+created the Thirdtry.dbf. It consisted of three files. Two containing the
+real data, one is used as a reference to look-up words. In this episode we
+look at the meganisms behind our program. Now the real fun starts!
+
+Last time i've made a nasty mistake: i've forgotten to include a full
+description of THIRDTRY.DBF. Sorry about that. Complains can be send to the
+editor :-> . It is contained in the addendum of this episode.
+
+I also promised to take a closer look at the files. That can wait till an
+other time. Now is the time for the creative part of programming!
+
+What do we want?
+----------------
+
+First we have to ask ourselves what we actually want our program to do.
+Think about this at "grass-root" level. We want the program to start and
+present us the contents of de files. On the screen to be precise.
+
+Besides that we want to browse and to look up things. At the end we also want
+to make a hardcopy of the recipe. After that we sign off and go off to the
+kitchen.
+
+What does the intended user want?
+----------------------------------
+
+What we want is important. But not as important as the wishes of the user.
+Remember episode 1, in which we stated that this project was also intended to
+pay in our debt to Mum. She agreed on buying a computer with the demand for a
+good program for her recipes(A). In jargon: a novice user. Somebody who
+doesn't want to learn about fields and records. Doesn't want to spent the
+leisuretime at the keyboard. So: simplicity, clarity and easy to use are
+major demands.
+
+These demands are important because by our design with all those files we've
+created a great opportunity for making things complex. Let's not do that!
+
+Basics
+------
+
+To have something to show to anyone else, it's nice to start with the design
+of the screen. We've waited with that to make a good design for our
+datafiles, but now the time has come to do so (B)!
+
+Designing the screen
+--------------------
+We start desinging with a few questions.
+
+First: what has to be present on the screen?
+Three categories of information can be present:
+
+(1) Data
+The real data:
+CLIPBBS 2-10                   Page 7                   28 Mar 1992
+
+
+     - the name of the recipe
+     - the ingredients
+     - the presription how to prepare it.
+
+(2) Extra info
+Things commonly seen, handy, but no complaints if you leave them out:
+     - time
+     - date
+     - filepath
+     - number of the recipe
+     - number of ingredients
+
+ ÚÄþINTERMEZZOþÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Altering the database structure                                     ³
+ ³-------------------------------                                     ³
+ ³At this point in the process i get the strong urge to add extra     ³
+ ³information, extending the amound of information to store. Think of:³
+ ³     - the last time the recepe was made                            ³
+ ³     - date of data-entry                                           ³
+ ³     - names of visitors who have eaten it                          ³
+ ³     - names of family who don't like it                            ³
+ ³     - record-size                                                  ³
+ ³                                                                    ³
+ ³Why not? Go ahead!                                                  ³
+ ³Some parts can be stored in THIRDTRY.DBF, others in LOOKUP (c).     ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+(3) Directives.
+A user has a right to know where s/he is and what to do. So we have to tell
+where we are and where we can go to.
+
+These three types of information deserve a special place on the screen.
+In the pre-windows-era this was called window-ing. Each type of information
+has his own place on the screen. Now you talk about "view-ports". It means
+the same without refering to that product of Microsoft.
+
+Here's one of my favorite screen designs. It is 24 rows by 80 colums (D). You
+might have to adjust your pinter. But it shows beautifully on your screen!
+
+>---------- screen starts here --------------<
+Date:  10 jan 1992                                             Recepe:    1
+Time:  12:12                                                   Total:  1123
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                                          Breek de eieren in een beslagkom.
+Fried eggs Extra                          Roer ze goed door. Doe de boter in de
+                                          pan, smelt ze. Doe de geroerde eieren
+slices bread          3                   in de pan. Zet het vuur zo laag
+eggs                  5                   mogelijk. Doe een deksel op de pan!
+mature cheddar        50 grames           Laat het langzaam sudderen. Na 3
+butter                little              minuten de kaas op het ei doen.
+garlic                little              Kruiden naar smaak. Deksel weer op
+red pepper            1                   de pan doen. Als de kaas grotendeels
+pepper                little              gesmolten is is het ei goed. Opdienen
+                                          op de sneetjes brood.
+
+
+CLIPBBS 2-10                   Page 8                   28 Mar 1992
+
+
+ÄÄÄÄÄÄÄ< Display    >ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+F1= Help
+F5= Look-Up
+ÄÄÄÄÄÄÄ< Esc = Exit >ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+>---------- screen ends here --------------<
+
+You can see three zones in this screen. At the top the Extra information. Two
+lines. Left and right filled out. As you can see i present there the number
+of this recepe and the total amount of recepe's i've got. In the middle the
+main information. Note the absence of captions like "Name", "Ingredients"
+etc. I think those are redundant. At the bottom the user-guide. It clearly
+shows only three options and gives us information about where we are
+(Display).
+
+Techniques
+----------
+
+There is some programming necessary for getting this screen. I don't intent
+to give full listings but here's how i would do this.
+
+For a start: i have a MAIN procedure/function which contains the main
+program.  In this function there's a loop.
+
+          DO WHILE .not. <END>
+              PresentScreen()
+              GetUserKey()
+              ProcessKey()
+          ENDDO
+
+The biggest part of the screen is organised in PresentScreen(). Not all. The
+horizontal lines are not disturbed at all. So, i write them only once: at the
+start of the program.
+
+The time, presented in line 2, has to be updated -more ore less- continously.
+So, i make a small function TimeUpd() which i call in all three functions in
+the loop.
+
+The keys available to the user are dependent on the place of the user in the
+program. So, i present this information after i've processed the last
+keystroke, in the function ProcessKey().
+
+This leaves us with the thask to present the contents of THIRDTRY.DBF, the
+date, recepe number and the total number of recepes. Below you find a (buggy)
+source-listing of PresentScreen(). It depends on some unstated assumptions
+but it is only intended to give an idea of how this can be done(E).
+
+>------------------ part of PresentScreen() ----------------<
+USE THIRDTRY.DBF ALIAS Third
+USE INGRDNT.DBF ALIAS Ing
+
+@ 1,60 SAY "Recepe:" + STR(nRecepe),6)
+@ 2,60 SAY "Total: " + STR(LASTREC(),6)
+Select Third
+LOCATE FOR Third->Re_num=nRecepe
+IF found()
+     @ 4,0 SAY third->Name
+CLIPBBS 2-10                   Page 9                   28 Mar 1992
+
+
+     cDesc := third->Desc
+     Select Ing
+     LOCATE FOR ing->re_num = rRecepe
+     DO WHILE found()
+        @ A,B SAY LookUp(ing->ing_num)
+     ENDDO
+
+ENDIF
+
+>------------------ End of PresentScreen() -----------------<
+- - - - -
+
+Notes:
+
+(A) complaints are received about the sexist approach. Author likes to state
+that no harm is or was intended. Wherever wanted he can be replaced by she or
+the other way around.
+
+(B) Handbooks and people who have studied programming will get sick at this
+time. Ok, it's wrong. But it works! Let's call it prototyping.
+
+(C) What the result will be will be discussed in a forthcoming episode.
+
+(D) Because i think you'll look at it with a Word-Perfect-alike. i haven't
+made it 25 * 80. A normal screen is of course 25 * 80 but in WordPerfect you
+"only" get 24 * 80.
+
+(E) If somebody knows an equal simplistic but better way for doing the same
+job: please let me know!
+
+---------------------- ADDENDUM ------------------------------------
+
+      Name: Lookup.dbf (3)
+      ===========================
+         NAME     TYPE     LENGTH
+      1  Ing_num   N        3,0
+      2  Ing_nam   C       30
+      ---------------------------
+      TOTAL                33
+
+       Name: Ingrdnt.dbf  (3)
+       ======================
+          NAME     TYPE    LENGTH
+       1  Re_num    N     4,0
+       2  Ing_num   N     3,0
+       3  Amount    C    10,0
+       ----------------------
+       TOTAL             17
+
+       Name: THIRDTRY.DBF (3)
+       =====================
+          NAME     TYPE    LENGTH
+       1  Re_num    N       4,0
+       2  Name      C      40
+       3  Desc      M      10
+       --------------------------
+CLIPBBS 2-10                   Page 10                  28 Mar 1992
+
+
+       TOTAL               54
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 11                  28 Mar 1992
+
+
+                     NOVLIB - one complex Novell library
+
+
+As promised, it's coming. NOVLIB, one from most complex Novell libraries.
+It has not ANY other use, than pure Novell networking. Written mostly in
+Turbo C (2.0) as is visible in .LIB files is convering almost everything
+avaialable from Novell Netware. Last time (in Clipper BBS Magazine number 9,
+Volume 2) was coming review of NETLIB. This article will cover complete
+review of NOVLIB. Next coming article will compare both libraries for easiest
+way to see what is in which library.
+
+NOVLIB covers ONLY Novell Netware, nothing else. That's very important
+information. Scale of functions in NOVLIB is well spread over complete
+services of Novell Netware, all configuration and also statistic information.
+NOVLIB is coming just as two .LIB files, one with generic 2.xx and 3.xx
+functions and second with functions related only to Novell 2.xx (3.xx is
+missing all statistical services - SYSCON command in those two versions of
+Novell is therefore also different).
+
+    Bindery information and access
+
+ AccBindRd()      Returns the workstation's bindery read access security.
+ AccBindWr()      Returns the workstation's bindery write access security.
+ Bindery()        Opens & Closes the NetWare bindery.
+ BindCurrOb()     Returns current number of bindery objects. [286]
+ BindMaxOb()      Returns maximum number of bindery objects. [286]
+ BindPeakOb()     Returns peak number of bindery objects. [286]
+ BindSearch()     Searches the bindery for specified objects (users etc).
+ UserAdd()        Adds a new user to the bindery.
+ UserAddGrp()     Adds a specified user to a user group.
+ UserDelete()     Deletes a specified user.
+ UserDelGrp()     Deletes a specified user from a user group.
+ UserFName()      Returns or sets user's full name.
+ UserFree()       Returns amount of free space available to specified user.
+
+    Printing and Redirecting
+
+ BannerFlag()     Enables & disables the printing of a Banner.
+ BannerName()     Returns or sets the banner user name for printing.
+ CapBanner()      Returns or sets the banner text for printing.
+ CapCancel()      Cancels capture of the specified LPT device.
+ CapCopies()      Returns or sets the number of copies for printing.
+ CapEnd()         End capture of the specified LPT device.
+ CapFlush()       Flushes capture of the specified LPT device.
+ CapFrmFeed()     Enables & disables the form feed after printing
+ CapFrmName()     Returns or sets the form name for printing.
+ CapFrmNo()       Returns or sets the form number for printing.
+ CapKeep()        Enables & disables printing of an interupted print
+ CapMaxChar()     Returns or sets maximum characters per line for printing.
+ CapMaxLine()     Returns or sets the maximum lines per page for printing.
+ CapPrnNo()       Returns or sets the destination printer for printing.
+ CapQueue()       Directs captured printing to a specified queue.
+ CapSetup()       Sets up print capturing for the specified LPT device.
+ CapStart()       Starts capture of the specified LPT device.
+ CapTabSize()     Returns or sets the tab size for printing.
+ CapTimeout()     Returns or sets the timeout count for printing.
+CLIPBBS 2-10                   Page 12                  28 Mar 1992
+
+
+ PrnForm()        Returns or sets the form type for specified LPT device.
+ TabFlag()        Enables & Disables conversion of tabs to spaces
+
+    Print servers and printer
+
+ PrnOffline()     Checks whether the specified printer is Offline.
+ PrnServer()      Returns or sets the server printer for the LPT device.
+ PrnStopped()     Checks whether the specified LPT device is stopped.
+ PServerVer()     Returns the printer server version number.
+
+    Print Queues manipulation
+
+ QDelJob()        Deletes the specified print queue job.
+ QHalt()          Enables/disables print queue servicing.
+ QJobAdding()     Checks whether the specified print queue job is adding.
+ QJobDate()       Return print jobs entry date
+ QJobEDate()      Set or Return defered printing execute date of a print job
+ QJobDes()        Returns or sets the specified print queue job description.
+ QJobFile()       Returns the name of the specified print job's spool file.
+ QJobOpHold()     Places the print queue job on operator hold.
+ QJobPos()        Returns or sets the print job's position in queue.
+ QJobs()          Returns a list of print queue jobs.
+ QJobSize()       Returns the size of the specified print queue job.
+ QJobStn()        Returns station number which placed print job in queue.
+ QJobTime()       Return print jobs entry time
+ QJobETime()      Set or Return defered printing execute time of a print job
+ QJobUser()       Returns user ID of user who placed job in queue.
+ QJobUsHold()     Places the specified print queue job on user hold.
+ QNewJobs()       Enables/disables new jobs being added to print queue.
+ QNewServer()     Enables/disables new servers servicing print queue.
+ QueueID()        Returns the ID number for a specified print queue.
+ QVer()           Returns the queuing version number.
+
+    Accounting
+
+ AccVer()         Returns accounting system version number.
+
+    Statistics
+
+ BufferDirt()     Returns the number of dirty disk cache buffers. [286]
+ Buffers()        Returns the total number of disk cache buffers. [286]
+ BufferSize()     Returns the size of each disk cache buffer. [286]
+ CacheHits()      Returns the number of fileserver cache hits. [286]
+ CacheMiss()      Returns the number of file server cache misses. [286]
+ CurrOpen()       Returns the current number of open files. [286]
+ FatScanErr()     Returns the number of disk fat scan errors.     [286]
+ FATCurrChg()     Returns the current number of changed FAT sectors. [286]
+ FATErr()         Returns the number of FAT sector errors. [286]
+ FATErrFat()      Returns the number of fatal FAT sector errors. [286]
+ FATTotChg()      Returns the total number of changed FAT sectors. [286]
+ FileOpens()      Returns the number of file open requests. [286]
+ FileReads()      Returns the number of file read requests. [286]
+ FileWrites()     Returns the number of file write requests. [286]
+ FSProcess()      Returns the number of file server processes. [286]
+ FSUtil()         Returns file server utilisation (%). [286]
+ INBVer()         Returns Internet Bridge version.
+CLIPBBS 2-10                   Page 13                  28 Mar 1992
+
+
+ IOPending()      Returns number of disk I/Os pending. [286]
+ LogDrives()      Returns the number of logical disk drives. [286]
+ MaxConn()        Returns the maximum number of connections supported.
+ MaxOpen()        Returns the maximum number of open files. [286]
+ MaxVol()         Returns the maximum number of volumes supported.
+ MemTotal()       Returns the total amount of server memory. [286]
+ MemWaste()       Returns the amount of wasted server memory. [286]
+ PeakConn()       Returns the peak number of connections.
+ PeakOpen()       Returns the peak number of open files. [286]
+
+    LAN/server configurations
+
+ LANHostAdd()     Returns the specified LAN host address. [286]
+ LANName()        Returns the specified LAN name. [286]
+ LANNWAdd()       Returns the specified LAN network address. [286]
+ LANOption()      Returns the specified LAN option. [286]
+ LANSetting()     Returns the specified LAN setting. [286]
+ NWAppNo()        Returns the Netware Applications Number
+ NWError()        Returns the last NetWare error code.
+ NWNumber()       Returns the default network number.
+ NWSerNo()        Returns the Netware Serial Number.
+ NWVersion()      Returns the NetWare version number.
+ OSRev()          Returns the operating system revision number.
+ SecureVer()      Returns the security version number.
+ SFTLevel()       Returns the file server SFT level.
+ VAPVer()         Returns the VAP version number.
+ VConsVer()       Returns the virtual console version number.
+
+    Rights, users...
+
+ AccConsole()     Returns the workstation's Console Operator status.
+ DirAddUser()     Makes a user a trustee of a directory.
+ DirDelUser()     Deletes a user as trustee of a directory.
+ DirEffRt()       Returns workstation's effective rights to a directory.
+ IsMember()       Verifies that a user is a member of a specified group.
+ PassChange()     Changes the specified user's password.
+ PassCheck()      Checks the specified user's password.
+ UserBlocks()     Returns the number of blocks owned by specified user.
+ UserDirs()       Returns number of directories owned by a specified user.
+ UserFiles()      Returns the number of files owned by a specified user.
+ UserID()         Returns a specified user's ID number.
+ UserName()       Returns a specified user's login name.
+ UserRename()     Renames a specified user.
+
+    Directories and mapping
+
+ DirHandle()      Returns the directory handle of the current directory
+ DirMap()         Maps a specified directory to a drive letter.
+ DirMapDel()      Deletes a drive mapping.
+
+    Connections and stations
+
+ ConnClear()      Clears a specified connection number.
+ ConnID()         Returns the default connection ID number.
+ ConnNo()         Returns the current connection number.
+ Conns()          Returns connection numbers where a user is logged in.
+CLIPBBS 2-10                   Page 14                  28 Mar 1992
+
+
+ ConnUsed()       Returns if a fileserver table slot is used
+ CurrConn()       Returns the current number of active connections.
+ FSAttach()       Attaches to new fileserver.
+ FSConnNo()       Returns filserver Connection ID number.
+ FSDetach()       Detaches from a fileserver.
+ FSLogin()        Logs a specified user into the file server.
+ FSLogout()       Logs the current user out of the file server.
+ LockConn()       Returns connection number which has a record locked. [286]
+ LoginDate()      Returns the login date of current user(s).
+ LoginID()        Returns the ID number of current user(s).
+ LoginName()      Returns the login names of current user(s).
+ LoginStat()      Returns or sets the current file server login status.
+ LoginTime()      Returns the login times of current user(s).
+ NodeNumber()     Returns the workstation node number.
+ ShellRev()       Returns the workstation shell revision number.
+ ShellVer()       Returns the workstation shell version number.
+ WSLHard()        Returns the workstation long hardware type.
+ WSLocalDrv()     Returns number of logical local drives on workstation.
+ WSOS()           Returns the workstation operating system type.
+ WSOSVer()        Returns the workstation operating system version.
+ WSSHard()        Returns the workstation short hardware type.
+
+    Other...
+
+ ExclOn()         Returns CLIPPER exclusive status. (NON working BTW)
+ Strhex()         Converts number to hexadecimal string.
+
+    File server manipulation
+
+ FSDate()         Gets or Sets the file server date.
+ FSTime()         Gets or sets the file server time.
+ FSDown()         Downs the file server.
+ FSName()         Returns the file server name.
+ FSPrefID()       Returns or sets the prefered fileserver.
+ FSPrimID()       Returns or sets the primary fileserver.
+ LoginEnab()      Enables/disables file server login.
+
+    Messaging services
+
+ MsgConsole()     Sends a message to the file server console.
+ MsgGet()         Returns a message from other users.
+ MsgLogNet()      Logs a network message.
+ MsgMode()        Returns or sets the workstation's message mode.
+ MsgUser()        Sends a message to a specified connection number.
+
+    File Services
+
+ Purge()          Purges the workstation's erased files.
+
+    Semaphores
+
+ SemClose()       Closes the specified semaphore.
+ SemCount()       Returns number of users with specified semaphore open.
+ SemDec()         Decrements the specified semaphore value by 1.
+ SemInc()         Increments the specified semaphore value by 1.
+ SemOpen()        Opens the specified semaphore.
+CLIPBBS 2-10                   Page 15                  28 Mar 1992
+
+
+ SemValue()       Returns the value of the specified semaphore.
+
+    TTS
+
+ TTSAbort()       Aborts a TTS transaction.
+ TTSAppThr()      Returns or sets the TTS application thresholds.
+ TTSAvail()       Verifies that TTS is available. [286]
+ TTSBegin()       Begins a TTS transaction.
+ TTSCurrTrn()     Returns the number of current TTS transactions. [286]
+ TTSEnable()      Enables/disables TTS. [286]
+ TTSEnd()         Ends a TTS transaction.
+ TTSLevel()       Returns the file server TTS level.
+ TTSMaxTrn()      Returns the maximum number of TTS transactions. [286]
+ TTSPeakTrn()     Returns the peak number of TTS transactions. [286]
+ TTSSpace()       Returns the space currently used by TTS. [286]
+ TtsTotBo1()      Returns the number of TTS backouts by system    [286]
+ TtsTotBo2()      Returns the number of TTS backouts by workstat. [286]
+ TTSTotTrn()      Returns the total number of TTS transactions. [286]
+ TTSVolume()      Returns the volume number used for TTS workfiles. [286]
+ TTSWSThr()       Returns the TTS workstation thresholds.
+ TtsWTotTrn()    Returns the number of TTS made by workstations  [286]
+
+    Volume and disks
+
+ VolBlAvail()     Returns number of blocks available on specified volume.
+ VolBlkSize()     Returns the size of each block on a specified volume.
+ VolBlocks()      Returns the total number of blocks on specified volume.
+ VolName()        Returns the name of the specified volume.
+ VolNumber()      Returns the volume number of a specified volume.
+ VolRemove()      Verifies that the specified volume is removable.
+ PDChannel()      Returns the physical disk channel number. [286]
+ PDCont()         Returns the physical disk controller number. [286]
+ PDContDrv()      Returns the physical disk controller drive number. [286]
+ PDContType()     Returns the physical disk controller type. [286]
+ PDCyls()         Returns the number of cylinders on a physical disk. [286]
+ PDDrvSize()      Returns the physical disk size. [286]
+ PDDrvType()      Returns the physical disk type. [286]
+ PDHeads()        Returns the number of heads on a physical drive. [286]
+ PDHfxAvail()     Returns No. of Hot Fix redirection blocks available. [286]
+ PDHfxEnab()      Verifies that Hot Fix redirection is enabled. [286]
+ PDHfxSize()      Returns the size of Hot Fix redirection table. [286]
+ PDHfxStart()     Returns Hot Fix redirection table starting block. [286]
+ PDIOErrors()     Returns the number of physical disk I/O Errors. [286]
+ PDName()         Returns the physical disk name. [286]
+ PDRemove()       Verifies that the physical disk is removable. [286]
+ PDSectors()      Returns the number of sectors on a physical disk. [286]
+ PhyDrives()      Returns number of physical drives in the fileserver. [286]
+ PhyRDErrs()      Returns the number of disk read errors.         [286]
+ PhyRDReqs()      Returns the number of disk read requests.       [286]
+ PhyWtErrs()      Returns the number of disk write errors.        [286]
+ PhyWtReqs()      Returns the number of disk write requests       [286]
+ ReadReqs()       Returns the number of dos disk read requests    [286]
+ WriteReqs()      Returns the number of dos disk write requests   [286]
+
+    Quite long, isn't? I was quite impressed saw it first time. Functionality
+seems also very good. Documentation in .NG format is coming as common
+CLIPBBS 2-10                   Page 16                  28 Mar 1992
+
+
+standard, but is missing general comments (about linking), list of functions
+per library, overlaying of library functions.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 17                  28 Mar 1992
+
+
+                    Hitch Hikers Guide To The Net
+                               Episode 7
+
+ (Xaphod, Gillian, Rod, Martin, and Arnold Lint continue their descent into
+ the heart of Netrothea. Flarg Brittashik has vanished leaving only a tin
+ of Putrina Rat Chow in his stead.)
+
+ Xaphod: Wow, that was far out|
+ Martin: If you say so.
+
+ (All of a sudden, the 12" CRT on Xaphod's shoulder starts up . . .  Star
+ Wars type music kicks in . . .  Once upon a time, in a Net far, far away,
+ a band of steadfast hackers are fighting a gallant fight.  Vast swarms of
+ nauseatingly repetitious messages are swamping their news. They must
+ retaliate.  This is their story . . . This is Zar Wars. . . All the nodes
+ beginning with the letter Z have banded together, they are tired of always
+ being last because the Net does everything alphabetically. They decide to
+ stage a bold attack and make their presence known| to this end they
+ devised a cunning scheme to echo their news articles across the known Net
+ several multiple times each posting. In this way, they would be assured
+ the attention they feel they deserve. Net.landers are at this moment
+ preparing for a counterattack.  They are preparing massive Photocomplaint
+ rays, Gargantugripe bombs, and the ever deadly Superplasmicautor-
+ everberatingmegamoleculozapperdingledangledonglehyperintensified-
+ newandimprovedtimewarping complaint field generators. The last device is
+ one of the most feared (and hardest to pronounce) in the known Net. Its
+ power is so incredible that grown men have been known to pull out their
+ own livers rather than be subjected to its awesome force.)
+
+ Rod        : Turn that off
+ Xaphod     : (Doing so) Yah, what a drag.
+ Arnold Lint: Well, what do we do now.
+ Gillian    : I guess we keep going.
+ Martin     : Do we have to?
+ All        : Yes
+ Arnold Lint: Sure could go for a cup of tea.
+ Xaphod     : (Mumbling to himself) Stupid git
+ Martin     : Do you people really think this is necessary? Why can't you
+              be satisfied with things as they are? Must you always try to
+              change them - things can only get worse.
+ Xaphod     : Look you morose metal moron, we're going on so shut up. Look
+              upon this as an adventure into a whole new life.
+ Martin     : Oh no, not another.
+
+ (The stairwell they are on leads into a huge room. So huge that it defies
+ commentary, only to say that it is, in fact, bloody huge. Off in the
+ distance there is a faint light. Arnold Lint and company head for it. Two
+ weeks later they arrive. the light is being emitted from a strange kind of
+ TTY. There is a plaque nearby which reads: "For the answer to Life, the
+ Net and Everything, type in 'Help'. For dirty books or leather goods, ring
+ bell for service. The Inter-Net Megamind Exchange and Novelty Shoppe
+ thanks you for your patronage of our establishment".)
+
+ Arnold Lint: Wow, the answer to Life, the Net, and Everything
+ Xaphod     : Who cares, lets get at the dirty books
+ Rod        : Yah, I wonder if they have "Advanced Necrophilia for
+CLIPBBS 2-10                   Page 18                  28 Mar 1992
+
+
+              Scientists and Engineers" or "Yes, you can be a Toad-Sexer"?
+ Arnold Lint: Dirty books, way out here?
+ Xaphod     : Of course, depravity is the universal language.  Pornographic
+              material is generally considered legal tender anywhere in
+              the Net. I once lived for a whole year on Carnolea, just on
+              trading my old "Gland" magazines and lubricants for
+              supplies.
+ Gillian    : (Disgusted by the antics of Rod and Xaphod)Lets see
+              the answer already - boy what sicko's.
+ Xaphod     : OK, but then can we get some dirty books.
+
+ (Xaphod types in 'HELP' to the keyboard. Strange hummings and buzzings
+ start to emanate from the TTY. The cryptic characters "101010" appear on
+ the screen.)
+
+********************************************************************
+ "The Hitch Hikers Guide To The Net" points out that the number 42, when
+ viewed in it's binary representation is in fact, quite revealing.  There
+ are many theories for what it actually means. The adult magazine "Spurt"
+ suggests that it is the perfect pattern for an orgy, three males and three
+ females being the supposed ideal. The actual shape of the characters of
+ '101010' seem to bear this out.  Also the fact that it does go
+ 'boy-girl-boy . . . ' also helps. The religious magazine 'Modern Moral
+ Majority' (MMM) suggests that it is in fact a message from God. The
+ pattern indicates that two of the same sex shall not have intercourse. The
+ fact that there are equal numbers of both male and female indicates that
+ monogamous relationships are the thing to do.  Also the fact that, when
+ read, left to right, the man always comes first, really gave them an edge
+ on the ERA (who really didn't listen anyway). Most other people simply
+ wondered why everyone thought the binary sequence had anything at all to
+ do with sex.
+ ******************************************************************]
+
+ Rod        : That's it?
+ Xaphod     : Apparently.
+ Gillian    : There must be more than just 42.
+ Martin     : I certainly hope not.
+ Xaphod     : Well, lets try to get some more info|
+
+ (Xaphod once again starts typing at the TTY. Characters flash and buzzers
+ buzz. The TTY finally gives up, it types out: "All right already, if you
+ really want the answers, take the service elevator to the 127,366,247th
+ floor, then follow the green line till it meets the blue line till it
+ meets the orange line till it becomes the slightly off white line. Then
+ climb out the window, jump off and ask for Ralph.  He'll tell you the
+ whole story. Now push off, I've had a bad day. (To itself now) Where did I
+ put those Valliums. Crap, I need a drink . . .  ")
+
+ Xaphod     : Oh well, what do we have to loose.
+ Martin     : Not much really, just our lives. Of course, my life means so
+              little already, I doubt I'd mind if it were lost.
+ Rod        : Quiet.
+
+         ******************** End Of Part 7 ********************
+
+ What is the actual answer to Life, the Net, and Everything? Will Arnold
+CLIPBBS 2-10                   Page 19                  28 Mar 1992
+
+
+ Lint get his tea? Will Xaphod get his dirty book? Will the net sponsor a
+ Pot-Luck-Orgy? For the answers to these and many other pointless questions
+ . . . Tune in next time . . .  same Net-time . .  . same Net-channel.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 20                  28 Mar 1992
+
+
+                                @...GET MEMO
+                       (by Stephen Forbes in original)
+
+In recent times there have been a number of messages on the Clipper Echo
+about the use of memo fields inside a GET/READ. As a result I thought I would
+try to emulate the dBASE style using a Get object. Whilst a true Get object
+is created for the memo, this is simply used to enable the memo to be handled
+as a member of the READ (in the order it is declared), the real work is done
+by the function MemoReader().
+
+********************************* CUT HERE ********************************
+
+// GETMEMO.CH -------------------------------------------------------------
+//
+// Header file required for emulation of dBASE style memo gets in Clipper
+//
+// Written by Steve Forbes - Clipper User Group Melbourne - 1 Feb 92
+//
+// ------------------------------------------------------------------------
+
+#command @ <Top>, <Left> GET MEMO <var> [WINDOW <t>, <l>, <b>, <r>]     ;
+           [NAME <name> ]                                               ;
+           [VALID <valid>] [WHEN <when>] [SEND <msg>]                   ;
+      => SetPos( <Top>, <Left> )                                        ;
+       ; AAdd( GetList,                                                 ;
+               GetMemo( {| Val| iif( Val == NIL, <var>, <var> := Val)}, ;
+                        <(var)>, <{valid}>, <{when}>,                   ;
+                        <Top>, <Left> - 1, <t>, <l>, <b>, <r>, <name> ) )
+
+// EOF - GETMEMO.CH -------------------------------------------------------
+
+// TEST.PRG ---------------------------------------------------------------
+
+#include "Inkey.ch"
+#include "Box.ch"
+#include "Getexit.ch"
+#include "Getmemo.ch"
+
+LOCAL cName  := SPACE(20),                                              ;
+      mNotes := SPACE(100),                                             ;
+      mNotes2 := "This is some data in the memo field",                 ;
+      dDOB   := CTOD(""),                                               ;
+      cBackground := REPLICATE( "CUG Melbourne ", 8 ), i
+
+MEMVAR GetList
+
+SET DATE BRITISH
+SET SCOREBOARD OFF
+
+dDOB   := CTOD("09/03/55")
+
+SETCOLOR( "W+/B" )
+CLS
+
+// Draw Background
+
+CLIPBBS 2-10                   Page 21                  28 Mar 1992
+
+
+FOR i := 0 TO 22
+   @ i, 0 SAY SUBSTR( cBackground, i + 1, 80 )
+NEXT
+
+SETCOLOR( "N/G" )
+@ 4, 4, 11, 37 BOX B_SINGLE + " "
+@ 6, 7 SAY "Name:  " GET cName
+@ 7, 7 SAY "Notes: " GET MEMO mNotes
+@ 8, 7 SAY "DOB:   " GET dDOB
+@ 9, 7 SAY "Data:  " GET MEMO mNotes2 WINDOW 10, 6, 20, 73 NAME "Data"
+READ
+
+SETCOLOR( "W+/B" )
+
+@ 24, 1 SAY "Press any key to see the value of GETS ..."
+INKEY(0)
+CLS
+
+? "cName   -> " + cName
+? "mNotes  -> " + MEMOTRAN( mNotes, " ", " " )
+? "dDOB    -> " + DTOC( dDOB )
+? "mNotes2 -> " + MEMOTRAN( mNotes2, " ", " " )
+
+// EOF - GETMEMO.CH -------------------------------------------------------
+
+******************************** CONTINUED ********************************
+
+********************************* CUT HERE ********************************
+
+// GETMEMO.PRG ------------------------------------------------------------
+//
+// GetMemo() provides emulation of dBASE style memo gets in Clipper
+//
+// Written by Steve Forbes - Clipper User Group Melbourne - 1 Feb 92
+//
+// ------------------------------------------------------------------------
+
+FUNCTION GetMemo ( bValue, cVarName, bValid, bWhen,;
+                    nTop, nLeft, t, l, b, r,cName )
+LOCAL oGet
+
+//--- Create the get object!
+oGet := GetNew( nTop, nLeft, bValue, cVarName )
+
+IF t == NIL .OR. l == NIL .OR. b == NIL .OR. r == NIL
+   t := l := 0
+   b := MAXROW()
+   r := MAXCOL()
+ENDIF
+//--- Assign the different instance variables!
+oGet:Reader := { | oGet | MemoReader( oGet ) }
+
+IF oGet:cargo == NIL
+   oGet:cargo := DictNew()
+END
+DictPut( oGet:cargo, "MemoCoord", { t, l, b, r } )
+CLIPBBS 2-10                   Page 22                  28 Mar 1992
+
+
+DictPut( oGet:cargo, "MemoName", cName )
+
+@ oGet:row, oGet:col SAY "MEMO" COLOR ColorPair( oGet:colorSpec, 2 )
+
+return( oGet)
+
+// =======================================================================
+
+FUNCTION MemoReader( oGet )
+LOCAL nKey := 0, cBuffer, cScreen := SAVESCREEN( 0, 0, 24, 79 ), aCoords
+LOCAL cName, cColor
+DISPBEGIN()
+oGet:SetFocus()
+cBuffer := oGet:Buffer
+oGet:KillFocus()
+RESTSCREEN( 0, 0, 24, 79, cScreen )
+DISPEND()
+SETPOS( oGet:row, oGet:col )
+DO WHILE .T.
+   IF LASTKEY() == K_ESC
+      oGet:exitState := GE_ESCAPE
+      EXIT
+   ENDIF
+   nKey := INKEY(0)
+   DO CASE
+      CASE nKey == K_ENTER
+         oGet:exitState := GE_ENTER
+         EXIT
+      CASE nKey == K_UP
+         oGet:exitState := GE_UP
+         EXIT
+      CASE nKey == K_DOWN
+         oGet:exitState := GE_DOWN
+         EXIT
+      CASE nKey == K_F10
+         aCoords := DictAt( oGet:cargo, "MemoCoord" )
+         cName := IF( ( cName := DictAt( oGet:cargo, "MemoName" ) ) == NIL,;
+                        "", " " + cName + " " )
+         cScreen := SAVESCREEN( aCoords[1],     ;
+                                aCoords[2],     ;
+                                aCoords[3],     ;
+                                aCoords[4] )
+         @ aCoords[1], aCoords[2], aCoords[3], aCoords[4] BOX B_DOUBLE_TOP
+         @ aCoords[1], aCoords[2] + 2 SAY cName
+         cColor := SETCOLOR( ColorPair( oGet:colorSpec, 2 ) )
+         cBuffer := MEMOEDIT( cBuffer,        ;
+                              aCoords[1] + 1, ;
+                              aCoords[2] + 1, ;
+                              aCoords[3] - 1, ;
+                              aCoords[4] - 1, ;
+                              .t. )
+
+         oGet:varPut( cBuffer )
+         SETCOLOR( cColor )
+         RESTSCREEN( aCoords[1], aCoords[2], aCoords[3], aCoords[4], cScreen )
+         SETPOS( oGet:row, oGet:col )
+CLIPBBS 2-10                   Page 23                  28 Mar 1992
+
+
+   ENDCASE
+ENDDO
+RETURN ( NIL )
+
+//=======================================================================
+
+FUNCTION ColorPair( cColorSpec, nWhich)
+LOCAL n, cRetVal := "," + cColorSpec + ","
+FOR n := 1 TO nWhich
+    cRetVal := SUBSTR( cRetVal, AT( ",", cRetVal) + 1, LEN( cRetVal))
+NEXT
+cRetVal := LEFT( cRetVal, AT( ",", cRetVal) - 1)
+RETURN ( cRetVal)
+
+// EOF - GETMEMO.PRG ------------------------------------------------------
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 24                  28 Mar 1992
+
+
+                         Clipper file/record locking
+
+Clipper does not lock the physical record, but instead locks a 1-byte area
+offset (1000 000 000 + record number) bytes from the beginning of the file. I
+found this out by monitoring record locking on Novell 3.1.
+
+The following Borland C++ program is compatible with Clipper record locking. It
+locks the first record in the database. I works perfectly in tandem with a
+Clipper program on NW386. Locks are denied and permitted just as in a Clipper
+prog.
+
+#include <io.h>
+#include <fcntl.h>
+#include <sys\stat.h>
+#include <process.h>
+#include <share.h>
+#include <stdio.h>
+#include <conio.h>
+
+int main(void)
+
+  int handle, status;
+  long header=0x3B9ACA01,recsize=1;
+
+  handle=sopen("test.dbf",O_RDWR,SH_DENYNO,S_IREAD);
+  if (handle<0) {
+    printf("sopen failed\n");
+    exit(1);
+  }
+  status=lock(handle,header,recsize);
+  if (status==0)
+    printf("lock succeeded\n");
+  else
+    printf("lock failed\n");
+  getch();
+  status=unlock(handle,header,recsize);
+  if (status==0)
+    printf("unlock succeeded\n");
+  else
+    printf("unlock failed\n");
+  close(handle);
+  return 0;
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 25                  28 Mar 1992
+
+
+                       Get exit code after RUN command
+
+----------------------------------------
+(Asm routine to get exitcode to Clipper)
+
+.MODEL  LARGE
+
+EXTRN   __retni:FAR
+
+        PUBLIC  GETELVL
+
+.CODE
+
+GETELVL PROC    FAR
+
+        mov     ah,4dh          ; DOS function Get Return Code
+        int     21h             ; call DOS
+        push    ax              ; push Exit code on stack
+        call    __retni         ; make result available to Clipper
+        add     sp,2            ; reset stack pointer
+        RET
+
+GETELVL ENDP                    ; End of routine
+
+        END
+
+-----------------------------------------
+(Small program to test above asm routine)
+
+TEST.PRG
+
+        RUN YOUR_PROGRAM
+        exitcode := getelvl()
+        ? exitcode
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 26                  28 Mar 1992
+
+
+===============================================================================
+                                   SOFTWARE
+===============================================================================
+
+
+                        Novell FORUMS on Compuserve
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³        NOVA          ³       NOVB            ³        NOVC               ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³1) ELS NetWare        ³ 1) Servers & Workstn  ³ 1) General Info/Misc      ³
+³2) Async Communic'tns ³ 2) Backups            ³ 2) Upgrades               ³
+³3) Mini/Mainfrme Links³ 3) Printing           ³ 3) Application/Utils      ³
+³4) LAN/LAN Links      ³ 4) Disk Drives/Cntr'lr³ 4) Btrieve/XQL/SQL        ³
+³5) NetWare Macintosh  ³ 5) K-12 Networking    ³ 5) E-Mail/MHS             ³
+³6) NetWare VMS        ³ 6) Closed - Go NOVA   ³ 6) P'gramming & N'Ware    ³
+³7) Portable NetWare   ³ 7) Closed - Go NOVA   ³ 7) NetworkManagement      ³
+³8) NW NFS - TCP/IP    ³ 8) Power Monitoring   ³ 8) ProductSuggestions     ³
+³9) NetWare Lite       ³ 9) Ethernet           ³ 9) UserGroups/Train'g     ³
+³10) NSE               ³ 10) Arcnet            ³ 10) OS/2 Requester        ³
+³11) LANalyzer/LANtern ³ 11) Token-Ring        ³ 11) VAR/Dealertalk        ³
+³12) LANWrkPlaceDOS-OS2³ 12) Other LAN types   ³ 12) CNEs                  ³
+³13) UK Topic          ³ 13) Cabling/Media     ³ 13) Developers            ³
+³14)                   ³ 14) New Shells        ³ 14) On yourSoapbox!       ³
+³15)                   ³ 15) Windows           ³ 15) The LighterSide       ³
+³16)                   ³ 16)                   ³ 16)                       ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³        NETW2X        ³         NETW3X        ³       NOVLIB              ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³1) Printing           ³ 1) Printing           ³ 1) Lib Questions Only     ³
+³2) Utilities          ³ 2) Utilities          ³ 2)                        ³
+³3) Disk Drives/Cntrls ³ 3) Disk Drives/Cntrls ³ 3)                        ³
+³4) Client/Shells      ³ 4) Client/Shells      ³ 4)                        ³
+³5) LAN Driver/Cards   ³ 5) LAN Driver/Cards   ³ 5)                        ³
+³6) Empty              ³ 6) Empty              ³ 6)                        ³
+³7) Empty              ³ 7) Empty              ³ 7)                        ³
+³8) Empty              ³ 8) Empty              ³ 8)                        ³
+³9) Empty              ³ 9) Empty              ³ 9)                        ³
+³10) Empty             ³ 10) Empty             ³ 10)                       ³
+³11) Empty             ³ 11) Empty             ³ 11)                       ³
+³12) Empty             ³ 12) Empty             ³ 12)                       ³
+³13) Empty             ³ 13) Empty             ³ 13)                       ³
+³14) 2.1x & Below/OS   ³ 14) 3.x OS Specific   ³ 14)                       ³
+³15) 2.2 OS Specific   ³ 15)                   ³ 15)                       ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+Novell NOVLIB Forum Libraries Menu
+
+  1 Novell NEW Uploads
+  2 General Information
+  3 NetWare 2.X Specifc
+  4 NetWare 3.X Specifc
+  5 Client/Shell Drivrs
+CLIPBBS 2-10                   Page 27                  28 Mar 1992
+
+
+  6 NetWare Utilities
+  7 Btrieve/XQL
+  8 Mac/UNIX/LANalyzer
+  9 Comunic'tns Product
+ 10 NetWare Lite
+ 11 Techinfo/IMSP's
+ 12 CLOSED
+ 13 Other Ptch's/Drvr's
+ 14 Independent Devl'mt
+ 15 ShareWare/Demo
+ 16 Public Domain/Text
+ 17 Other NEW Uploads
+
+-------------------------------------------------------------------------------
+
+
+                           What is what (1)
+
+ADDCOMM 99
+
+        Advanced communications library for dBASE. Baud rates to 19200
+        bps, Xmodem, Xmodem-CRC, Ascii text capture to .DBF files.
+        COM1 to COM4 supports. Can operate unattended. Includes macro
+        processing
+
+ARTFUL freshWin
+
+        Database Warehouse, œ129
+
+        Windowing library, opening as many windows as you like, using
+        popup, exploding or ventian-blind methods. Drag then, size
+        them, float them, color them, say and get to them, hide them,
+        write to them even when hidden. Coded in C and assembly where
+        it counts, for insanely great speed. Complete source in 5.0 and
+        C and assembly, nguide database and manual. Based on OOP
+
+ARTFUL TWO also as ARTFUL.LIB
+
+        Database warehouse, œ285 for 5.0, œ185 for Summer 87
+
+        Rapid Application Development (RAD) for Clipper programmers:
+
+        menu designer, dictionary manager, fiel-level dynamic help
+        system, autohelp system displays help on ENTRY INTO a field,
+        report manager, user manager, relational query, relational
+        search, scrolling detail regions, scoped browsers, pusbuttongs,
+        radio buttons, check boxes, field and file selectors,
+        intelligent file maintenance objects, csrolling lookup tables,
+        enumerated fields, milti-tag list boxes, automatic multi user
+        apps, automatic file and index handling, automatic relational
+        protections, dynamically selectable menus, individual colors,
+        all text in header files for easy translations, complete source
+        code in 5.0 and C
+
+BAR CODE LIBRARY
+
+CLIPBBS 2-10                   Page 28                  28 Mar 1992
+
+
+        Offers a bar code printing facility that can be called from
+        Clipper application, it can print a variety of different
+        formats and supports most major printers. bar code reading
+        systems are available from various other manufacturers.
+
+BENCHTEST
+
+        TST program which allow recording and playback of kestrokes in
+        Clipper program. Also screen dumping, pausing with
+        optional messages, sleeping, break points, choices of playback
+        speed. Record to an easy to edit text files. Use for demos,
+        debugging or unattended testing. Requires about 44KB of memory.
+
+BITON
+
+        Allows a Clipper application use ORACLE as a data storage
+        medium through function calls. Requires Oracle 5.1b and
+        MicroSoft C alternate Math lib (LLIBCA.LIB). Basic knowledge of
+        Oracle SQL Required.
+
+BLINKER
+
+        Fast dynamic overlaylinker for Clipper. 6times faster than
+        PLINK86 with automatic overlaying and compatible with existing
+        .LNK files. also overlays well behaved C and ASM code and .LIB
+        code Included profilling functions a free pool memory packer,
+        burning in of SET CLIPPER variable and serial numbers plues
+        creating of demonstration EXEs. Now supoprots incremental
+        linking and comes with NG database.
+
+CALC(DB)
+
+        Fully functional spreadsheet library for Clipper5, Powerfull
+        spreasheet and calculation facilities. Consists of an API which
+        provieds for formula creating, Lotus 123, macro supports. Cell
+        access and control, and coversion between .DBF and .WK1
+
+
+CHYDALE DBF PROTECTOR
+
+        With the addtion of a single line to your source code stops end
+        users accessig DBF files with dBASE, DBU or other utilities,
+        while allowing your application to accessthe files normally.
+        The changes to the DBF can easily be reversed by you allowing
+        YOU total control of access to DBF files.
+
+CHYDALE DBT REPLACER
+
+        Replaces DBT file associated with DBF files. Requires very
+        little modification to any existing application to use it.
+        reduces the number of file handles required and saves loads of
+        disk psace, the DBT Replacer can be used to store variable
+        length text and Binary data
+
+CHYDALE MOUSE DRIVER
+
+CLIPBBS 2-10                   Page 29                  28 Mar 1992
+
+
+        Integrate mouse with your Colipper application using the
+        Chydale Mouse driver and avoid trouble of programming the
+        mouse. One line of code added to your source code enables mouse
+        support for MENU TO, MEMOEDIT, GETs, ACHOICE, DBEDIT and more.
+        A unique new BUTTON facility allows to associate and action
+        with a region on the screen.
+
+CHYDALE NETWORK LIBRARY
+
+        Meets the requirements of network programmers. COnsists of thwo
+        main parts, one for user entry protection and the other for
+        user monitoring, Open a view of files in one function call with
+        the view manageer,. System supervisor utility allows control of
+        users by logging their activities and password protection.
+
+CHYDALTE TEST CASE GENERATOR
+
+        Generator is designed for programmers wishing to perform
+        realisting test on systems. It fully populates data file
+        avoiding laborious typing. It produces random data which meets
+        constraints set by the programmer - such as ranger or related
+        fileds.
+
+CHYDALE PROFESSIONAL TOOLKIT
+
+        DBF Protector, DBT REPLACER, MOUSE DRIVER, NETWORK LIBRARY and
+        CASE GENERATOR
+
+CHYDALE SUPERCLASS
+
+        TRUE objects to be defined and created which operate in the
+        same manner as Clipper 5's fixed classes. Create and export
+        instance variables, assign methods just like the predefined
+        classes. Integrates fully with 5.01 debugger, some fully
+        documented sample classes included - menu, stack, image objects
+        and others.
+
+CL Professional
+
+        Database Warehouse, œ519
+        (C) Dr.Huggle&Partner Gmbh
+
+        CLTOOLS3.0 and CLREPORT 3.0 and CLTEXT 3.1 included in one
+        package.
+
+CLARINET
+
+        Transparent connectivity to Novell's Netware operating system
+        from withing datbase applications. This function library
+        provides direct interation with network without having use
+        external NEtware utilities. Fully network aware applications,
+        includes service for connectios, worskstations, directories,
+        bindery, printing....
+
+CLASSY
+
+CLIPBBS 2-10                   Page 30                  28 Mar 1992
+
+
+        Adding own real objects (classes) into Clipper. For 5.0 it was
+        shareware, for 5.01 it's classic product for buy.
+
+CLEAR+
+        Flowchars from source code, high resolution diagrams,
+        multi-level system tree charts, formatted source listing,
+        program flow simulation mode, multi-page charts with line
+        indexing, PCX and PIC file output, zooming and rotation,
+        portrait or landscape orientation. Supports dBASE II, III,
+        III+, IV, Clipper, Focbase, QuickSilver and dBXL.
+
+CLIP2EB
+
+        Advantage of POWER of EMERALD BAY without leaving the security
+        of Clipper.
+
+CLIPFPCX
+
+        Small and very fast function for displaying one .PCX file on
+        screen. Nothing else, but SHAREWARE and really very fast.
+
+CLIPPER TOOLS, also called NANTUCKET TOOLS
+
+        Supported, supplied and written by Nantucket porvides with 270+
+        useful functions covering basic windowing, serial port,
+        database functions, screen, system informations, printer...
+
+CLIPTOOLS
+
+        More than 270 functions to help with problems. Store file/field
+        details in text files and use intelligent functions to manage
+        .DBT files, powerful browser and user interface functions,
+        network, relation manipulation, menu system, virtual big screen
+        made from physical screens, low level functions, stack system,
+        full internatl network support, 500pages manual
+
+CLIPX
+
+        set of function for windowing, look-ups and popus, implode,
+        explode and slide, DBHANDLE is a powerful replacement for
+        DBEDIT, dbgen generates databases, dbseek seeks
+        first/last/next/prevous key occurence, barmenu handles 4
+        directional bar option selection, completely documented with
+        numerous examples and help for NG engine.
+
+CLIRMA
+
+        Clipper and DCA's IRMA subroutines to allow PC programs to
+        drive IBM 3270 mainframe screens via IRMA board. Requires
+        Summer 87 and MS linker v3.61 or later
+
+CLREPORT 3.0
+
+        list programming, menu driven report rafting with WYSIWYG user
+        interface, complex evaluations included in reports. Directly
+        linkable runtime modules, more than 300 pritner types, graphics
+CLIPBBS 2-10                   Page 31                  28 Mar 1992
+
+
+        and text output, screen output with horizontal and vertical
+        scrolling..
+
+CLTOOLS 3.0
+
+        Over 250 functions in 20 groups, mouse, windowing, graphics,
+        operating system, serial interface, string processing, direct
+        access to DOS background printer spooler, 43 line EGA, 256
+        windows, nested GETs
+        windows like surface, graphics library including:
+        -       window processing on graphics screens
+        -       event management for running dialog boxes
+        -       mouse support, buttons, scrollbasrs, icon menues
+        -       about every graphics element you could thing of, image
+                management, presentation graphics
+        -       PCS support, scan your pictures
+        -       unachieved results in printing
+        -       vector font, rubberbanding
+        -       printer spooler
+        -       serial interface functions
+        -       string management
+
+CLTEXT 3.1
+
+        Object oriented text processing, 80 methosd of editing, MS word
+        like in look and feel, 350 printer installations included,
+        source included (probably).
+
+123CONNECTION
+
+        Transparent connectivity to Lotus compatible spreadsheet data
+        from within database applications. Ability to access, read or
+        write existin worksheets or create entirelyt new worksheets,
+        compatible with Lotus 123 release 1.x and 2.x worksheets of
+        unlimited size. Clipper Summer 87 and 5.0 compatible
+
+CODE BASE
+
+        "C" library for datbase and screen managemet, Compatible with
+        data, index and memo files of dBASE and CLipper. Allows you to
+        buold a milti-user dBASE/Clipper compatible application with
+        pulldown menus, popup window, data entry from picklists and
+        more. Runs much faster than Clipper of FOX. Needs TurboC++,
+        Microsoft C, Zortech C++ or similar environment.
+
+COMMTOOLS
+
+        Give your application the power of communication, Commtols is
+        development tool for CLipper 5.0 and Summer87 whcih extends the
+        Clipper dialect to include comms facilities. Send Faxes, dial
+        modems, importa data via your serial port, supports numernous
+        communications protocols and variety of hardware.
+
+dANALYST GOLD
+
+        Converts from ANY single to multi-user application. Also
+CLIPBBS 2-10                   Page 32                  28 Mar 1992
+
+
+        provides blocking diagrams, cross references variables,
+        performs data type analysis and lists data structures, Works
+        with DV386 and allows creating of Windows applications. Works
+        with Clipper, dBASE, Foxbase+, QuickSilver or C
+
+DB2SC4
+
+        Utility to transcribe data from .DBF files to Supercals 4 and 5
+        formats by specifying record and field ranges and scopes.
+        Character blanks and zeros are automatically excluded. prompt
+        file paramters can automate the program from DOS. Developed in
+        Clipper, linkable object code version is available.
+
+DBDBAK
+
+        Database Warehous, œ129
+        (c) Data Base Designs
+
+        Comprehensive backup and restore library with
+        compression/decompression up to 75% with DBF files, robust disk
+        formatting routines, disk "branding", multiple directory backup
+        and file tagging, large file splitting, error handling, arhive
+        library maintenance, disc label printing, incremental file
+        backup.  Clipper source provided.
+
+DBDMOUSE
+
+        Pull down menu generator with full mouse support.Written in
+        Assembler.
+
+DBDSCRL
+
+        Provides sophisticated method of presenting data on screen with
+        light bar scrolling, mouse support and field pnning with freeze
+        capability. Can be called recursively. Source provided.
+
+-------------------------------------------------------------------------------
+
+
+                         Printing out memory file
+
+ Here's MEMDUMP program in Clipper 5.01 (converted from Rick Spence's
+ ideas). It fills an array with the contents of a .MEM file.  You would
+ simply dump the contents instead of building the array.
+
+ // #include "fileio.ch"
+#define MEM_SIZE  32
+#define CRLF chr(13)+chr(10)
+#define MNAME 1
+#define MTYPE 2
+#define MLEN  3
+#define MDEC  4
+FUNCTION memdump( fname )
+local mem_handle, mem_rec, _mem_rec := array(4)
+local csize, value, contents := {}
+    if pcount() != 1 .or. ((mem_handle := fopen(fname)) == -1)
+CLIPBBS 2-10                   Page 33                  28 Mar 1992
+
+
+        return contents
+    endif
+    mem_rec := space(32)
+    do while (fread(mem_handle, @mem_rec, MEM_SIZE) == MEM_SIZE)
+        Fill_Array(mem_rec, _mem_rec)
+        do case
+            case _mem_rec[MTYPE] == "C"
+                csize := _mem_rec[MLEN] + _mem_rec[MDEC] * 256
+                value := space(csize)
+                fread(mem_handle, @value, csize)
+            case _mem_rec[MTYPE] == "D"
+                value := space(8)
+                fread(mem_handle, @value, 8)
+                value := IEEE2real( value )
+                value := ctod('01/01/100') + value - 1757585
+            case _mem_rec[MTYPE] == "L"
+                value := space(1)
+                fread(mem_handle, @value, 1)
+                value := iif(asc(value)==0,".F.",".T.")
+            case _mem_rec[MTYPE] == "N"
+                value := space(8)
+                fread(mem_handle, @value, 8)
+                value := IEEE2real( value )
+        endcase
+        aadd(contents, { _mem_rec[MNAME], ;
+                         _mem_rec[MTYPE], ;
+                         _mem_rec[MLEN], ;
+                         _mem_rec[MDEC], ;
+                         value } )
+    enddo
+    fclose(mem_handle)
+RETURN contents
+
+PROCEDURE Fill_Array(mem_rec, _mem_rec)
+    _mem_rec[MNAME] := substr(mem_rec, 1, 11)
+    * Fix for Clipper's placement of non-null bytes after null terminator
+    _mem_rec[MNAME] := left(_mem_rec[MNAME], at(chr(0),_mem_rec[MNAME])-1)
+    _mem_rec[MTYPE] := chr( asc( substr(mem_rec, 12, 1)) - 128)  // & 127
+    _mem_rec[MLEN]  := asc(substr(mem_rec, 17, 1))
+    _mem_rec[MDEC]  := asc(substr(mem_rec, 18, 1))
+RETURN
+
+************************[ p. 1032, Lief's Book ]**************************
+FUNCTION IEEE2real(cIee)
+// note this function may have glitches on some numbers.
+local retval := 0, k, x1 := "", sign, exponent, fraction
+    if cIee <> replicate(chr(0),8)     // Are all bits set to zero?
+        * x1 will be the 8 bytes converted to it's 64 bit binary equivalent
+        * in text
+        for k := len(cIee) to 1 step -1
+            x1 += Dec2Bin(asc(substr(cIee,k,1)),8)
+        next k
+        sign     := (substr(x1,1,1) == "1")
+        exponent := Bin2dec(substr(x1,2,11)) - 1023
+        fraction := Bin2dec("1"+substr(x1,13),.t.) / (2**52)
+        retval   := if(sign,-1,1) * ( fraction * (2**exponent))
+CLIPBBS 2-10                   Page 34                  28 Mar 1992
+
+
+    endif
+RETURN retval
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 35                  28 Mar 1992
+
+
+===============================================================================
+                                     NEWS
+===============================================================================
+
+
+Clipper Interface Handbook
+
+
+There's a new book out called "The Clipper Interface Handbook" by John Mueller
+that describes all about interfacing Clipper with both C and Assembly language.
+It also includes references to DOS interrupts, tips on interfacing a mouse and
+a into a Clipper app and command/function reference for Clipper, C and ASM. The
+book covers all versions to 5.01 (but centers mainly on 5.01).
+
+Stats  :
+Title  : The Clipper Interface Handbook Version 5.x
+Author : Mueller, John
+ISBN   : 0-8306-3532-7
+Publisher : Windcrest/McGraw Hill
+Price  : $27.95 US Rec Retail
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 36                  28 Mar 1992
+
+
+===============================================================================
+                                   ANOMALIES
+===============================================================================
+
+
+                     ANOMALIES and their comments
+
+This part of Clipper BBS Magazine is dedicated to all discovered 
+anomalies and comments about them in Clipper products. Because 
+Nantucket is still unable to give own bug and anomalies reports (as 
+actually did in past with Summer 87 version) is very handy to have 
+results of many investigations done on many user places. I'm also
+doing my own investigatings, because i'm always very good when someting 
+has hidden problems. Everything what i buy will first show all problems 
+and then all normal things. This amazing part of my live is sometime 
+making me crazy, but for testing of programs it's great <grin>.
+
+Daniel
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 37                  28 Mar 1992
+
+
+===============================================================================
+                                   COMMENTS
+===============================================================================
+
+
+Funny set SET DATE....
+----------------------
+
+This is most probably of the topic, BUT
+  did you know that you could :
+  SET DATE FORMAT TO "CC-YY,MM:DD"
+
+and your dates would now display as 19-92,01:29
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 38                  28 Mar 1992
+
+
+                            __DOS_HOLD problem
+
+The __dos-Hold problem arises also when you compile with the latest
+Blinker-releases.  The problem can be solved when you put into your
+module somewhere a function :
+
+function __dos_hold
+return .t.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 39                  28 Mar 1992
+
+
+===============================================================================
+                                  CLIPPER NET
+===============================================================================
+
+
+
+Following is COMPLETE list of all published file descriptions in Clipper
+BBS magazine in previous numbers. Purpose of this index list is to allow
+anybody find needed file descriptions in growing number of described files.
+Short description after name will give first possible close image about
+file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+³FileName     ³Src ³Description                                     ³Where ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper                   ³[1-19]³
+³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+CLIPBBS 2-10                   Page 40                  28 Mar 1992
+
+
+³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+
+Src can be:
+    Cln     File is accesible on ClipperNet
+    Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 41                  28 Mar 1992
+
+
+===============================================================================
+                                    CLIPBBS
+===============================================================================
+
+
+                             CLIPBBS Distribution
+
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can make a profit from the
+  distribution of this magazine.
+
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest).
+
+  If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+
+  Distribution sites:
+
+  Clipper BBS Home system  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+      Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+      Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+      2:285/608@fidonet.org
+
+  United Kingdom   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+      Daily whole day, modem speed HST
+
+  Italy   ³
+  ÄÄÄÄÄÄÄÄÙ
+      Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+      20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+      24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+      2:334/307@fidonet.org
+
+  United States of America  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+      Daily whole day, modem speed HST
+
+      The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+      Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+
+  Canada    ³
+  ÄÄÄÄÄÄÄÄÄÄÙ
+      SYSOP Gordon Kennet, phone 1-604-599-4451 
+      Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+
+CLIPBBS 2-10                   Page 42                  28 Mar 1992
+
+
+  WORLDWIDE   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+      Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+      Various systems around whole world
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-10                   Page 43                  28 Mar 1992
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Submission of articles to CLIPBBS is really easy:
+    Maximum of 78 characters per line, as long or as short as you like
+    ASCII text.
+    Choose from the list of extension which most describes your text, or
+    just name it .ART as ARTicle and send it to publisher or to any
+    distribution site via modem to BBS or with mailer as file attach.
+    Article will come automatically appear in the next free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          ANOMALIES and their comments    .ANO
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          DUMP from conferences           .DMP
+          Clipper Net                     .CLN
+          
+  That's all at the moment, there will probably be changes later, as the
+  magazine evolves. If you have any ideas for a new section of CLIPBBS,
+  please tell us, or just write an article about it.
+  
+  Daniel, publisher
+
+-------------------------------------------------------------------------------
+

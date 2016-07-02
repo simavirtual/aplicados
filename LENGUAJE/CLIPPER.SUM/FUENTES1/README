@@ -1,0 +1,288 @@
+Copyright (c) 1992 McGraw-Hill Interamericana, S.A. Todos
+los derechos reservados. ISBN: 958-600-110-5
+
+
+Este disco contiene archivos fuentes y bases de datos de
+los ejemplos  mas  importantes  presentados  en el libro
+CLIPPER 5.01.
+
+
+
+A continuacion  se muestra la organizacion de los archivos
+que aparecen en el libro:
+
+
+
+1. BASES DE DATOS (.DBF)
+
+   =======================================================
+	Base                 Contenido
+   -------------------------------------------------------
+      CARGOS.DBF             Cargos
+      CLIENTES.DBF           Clientes
+      FATURAS.DBF            Facturas
+      FUNC.DBF               Funcionarios
+      PRUEBA.DBF             Base para ejemplo
+      SETORES.DBF            Secciones o departamentos
+  =======================================================
+
+
+
+2. ARCHIVOS MEMO (.DBT)
+
+   =======================================================
+	Archivo              Contenido
+   -------------------------------------------------------
+      CLIENTES.DBT           Clientes
+      FUNC.DBT               Funcionarios
+  =======================================================
+
+
+
+3. ARCHIVOS INDICES (.NTX)
+
+   En el capitulo 10 existe una rutina (INDICES.PRG) que
+   permite crear algunos indices, los restantes indices
+   se pueden generar a traves de la rutina de indizacion
+   del sistema de cuentas por cobrar del capitulo 20.
+
+
+
+
+4. PROGRAMAS (.PRG)
+
+   Cuando "Contenido" tiene algun nombre de programa
+   significa que "Programa" contiene otros programas.
+   Por ejemplo, dentro de TIPO_VAR.PRG existen cuatro
+   programas:  VARLOCAL.PRG, VARPRIV.PRG, VARPUBL.PRG
+   y   VARSTAT.PRG.  Naturalmente   el  lector  puede
+   separar los programas si asi lo desea.
+
+
+		      Capitulo: 2
+   =======================================================
+	  Programa                  Contenido
+   -------------------------------------------------------
+	 MENUPRIN.PRG                   -
+	 PROGPRIN.PRG                   -
+   =======================================================
+
+
+		      Capitulo: 4
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 TIPO_VAR.PRG              VARLOCAL.PRG
+				   VARPRIV.PRG
+				   VARPUBL.PRG
+				   VARSTAT.PRG
+   =======================================================
+
+
+		      Capitulo: 7
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	  EJEMPLOS.PRG             EJEMPLO1.PRG
+				   EJEMPLO2.PRG
+				   EJEMPLO5.PRG
+   =======================================================
+
+
+		      Capitulo: 8
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+      VIDEOS.PRG                   VIDEO01.PRG
+				   VIDEO02.PRG
+				   VIDEO03.PRG
+				   VIDEO04.PRG
+				   VIDEO22.PRG
+				   VIDEOBUF.PRG
+				   VIDEOCLE.PRG
+				   VIDEOCUR.PRG
+				   VIDEODDI.PRG
+				   VIDEODEL.PRG
+				   VIDEOINV.PRG
+				   VIDEOTEC.PRG
+				   VIDEOVAL.PRG
+				   VIDEOWHE.PRG
+   =======================================================
+
+
+		      Capitulo: 9
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 CAJA01.PRG                    -
+	 PANMENU2.PRG                  -
+	 PANMENU3.PRG                  -
+	 PANMENU4.PRG                  -
+	 PANMENU5.PRG                  -
+	 PANTDIGI.PRG                  -
+	 PANTGRAB.PRG                  -
+	 PANTMENU.PRG                  -
+   =======================================================
+
+
+		      Capitulo: 10
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 ARCH01.PRG                    -
+	 ARCH02.PRG                    -
+	 ARCH03.PRG                    -
+	 ARCHAREA.PRG                  -
+	 ARCHCONT.PRG                  -
+	 ARCHDELE.PRG                  -
+	 ARCHELIM.PRG                  -
+	 ARCHFIN.PRG               ARCHFIND.PRG
+				   ARCHFIN2.PRG
+	 ARCHLLAV.PRG                  -
+	 ARCHRECA.PRG                  -
+	 ARCHREL1.PRG                  -
+	 ARCHREL2.PRG                  -
+	 ARCHSEEK.PRG                  -
+	 ARCHSETD.PRG                  -
+	 ARCHSKIP.PRG                  -
+	 INDICES.PRG               INDICAMD.PRG
+				   INDICAMI.PRG
+				   INDIDECR.PRG
+				   INDIDESC.PRG
+				   INDIFECD.PRG
+				   INDIFECH.PRG
+				   INDILOGI.PRG
+				   INDINOMB.PRG
+	 INDISIN.PRG                   -
+   =======================================================
+
+
+		      Capitulo: 11
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 AYUDA1.PRG                    -
+	 AYUDA2.PRG                    -
+	 AYUDA3.PRG                    -
+	 AYUDA4.PRG                    -
+	 PROC3.PRG                     -
+	 PROCEDIM.PRG                  -
+	 PROCESIM.PRG                  -
+	 PROCPAR1.PRG                  -
+	 PROCPAR2.PRG                  -
+	 TESTE.PRG                     -
+   =======================================================
+
+
+		      Capitulo: 12
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 GRAVAMAT.PRG                  -
+	 MATRIZ1.PRG                   -
+	 MATRIZ2.PRG                   -
+	 PACLONE.PRG                   -
+	 PADEL.PRG                     -
+	 PAEVAL.PRG                    -
+	 PAFIELDS.PRG                  -
+	 PAINS.PRG                     -
+	 PASCAN.PRG                    -
+	 PASORT.PRG                    -
+	 PDBSTRU.PRG                   -
+	 PDIR.PRG                      -
+	 PDIRECT.PRG                   -
+	 PFILL1.PRG                    -
+	 PFILL2.PRG                    -
+	 PROASIZE.PRG                  -
+	 PROGLEN.PRG                   -
+	 PUDF.PRG                      -
+   =======================================================
+
+
+		      Capitulo: 13
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 BLOQUE.PRG                CB1.PRG
+				   CB2.PRG
+				   CB2M.PRG
+				   CB3.PRG
+				   CB4.PRG
+	 P_ASCAN.PRG                   -
+   =======================================================
+
+
+		      Capitulo: 14
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 FUNCSTR.PRG                   -
+	 PROGFUNC.PRG                  -
+	 PROGFUNS.PRG                  -
+   =======================================================
+
+
+		      Capitulo: 15
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 ACHOICE1.PRG                  -
+	 ACHOICE2.PRG                  -
+	 ACHOICE3.PRG                  -
+	 ACHOICE4.PRG                  -
+   =======================================================
+
+
+		      Capitulo: 16
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 MEMOFIL2.PRG                  -
+	 MEMOFIL3.PRG                  -
+	 MEMOFIL4.PRG                  -
+	 MEMOFIL5.PRG                  -
+	 MEMOFILE.PRG                  -
+	 MEMOGET1.PRG                  -
+   =======================================================
+
+
+		      Capitulo: 17
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 DBEDIT1.PRG                   -
+	 DBEDIT2.PRG                   -
+   =======================================================
+
+
+		      Capitulo: 18
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 ETIQ1.PRG                     -
+	 ETIQ2.PRG                     -
+	 REPO1.PRG                     -
+	 REPO3.PRG                     -
+   =======================================================
+
+
+		      Capitulo: 19
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 EXIBEVAR.PRG                  -
+	 MOSTRA.PRG                    -
+   =======================================================
+
+
+		      Capitulo: 20
+   =======================================================
+	  Programa                 Contenido
+   -------------------------------------------------------
+	 MENU.PRG                      -
+	 MODCLI.PRG                    -
+	 MODCON.PRG                    -
+	 MODFAT.PRG                    -
+	 MODUTI.PRG                    -
+	 RELCLI.PRG                    -
+   =======================================================

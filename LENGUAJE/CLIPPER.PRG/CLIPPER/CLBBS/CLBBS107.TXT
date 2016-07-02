@@ -1,0 +1,1305 @@
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+     °°°°°°°²²²²°°²²²²°°°°°²²²²°°°²²²²²²°°²²²²²²°°²²²²²²°°°²²²²°°°°°°°°°°°    
+   °°°°°°°°²²  ²²°°²²  °°°°°²²  °°°²²  ²²°°²²  ²²°°²²  ²²°²²  ²²°°°°°°°°°°°°  
+  °°°°°°°°²²  °°  °²² °°°°°°²² °°°°²² °²² °²² °²² °²² °²² ²²²°°  °°°°°°°°°°°° 
+ °°°°°°°°°²² °°°°°°²² °°°°°°²² °°°°²²²²²  °²²²²²  °²²²²²  °²²²°°°°°°°°°°°°°°°°
+ °°°°°°°°°²² °°°°°°²² °°²°°°²² °°°°²²    °°²²  ²²°°²²  ²²°°° ²²²°°°°°°°°°°°°°°
+  °°°°°°°°°²²°°²²°°²² °²² °°²² °°°°²² °°°°°²² °²² °²² °²² ²²°°²² °°°°°°°°°°°° 
+   °°°°°°°°°²²²²  ²²²²²²² °²²²²°°°²²²²°°°°²²²²²²  ²²²²²²  °²²²²  °°°°°°°°°°°  
+     °°°°°°°°    °°       °°    °°°    °°°°      °°      °°°    °°°°°°°°°°    
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+ 
+   Volume 1, Number 7                                     8 Octomber 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. EDITORIAL  ............................................................  1
+    Monday editorial  .....................................................  1
+ 2. ARTICLES  .............................................................  2
+    DOSRCS - Revision Control System - Part (5)  ..........................  2
+    The Programmer's Guide to CLIPPER Linkers - part (4)  .................  5
+    What is faster, FOR or AEVAL?  ........................................ 11
+    RCS - New version of PUT.BTM for 4DOS (or NDOS)  ...................... 13
+ 3. Q&A  .................................................................. 15
+    Clipper 87 books  ..................................................... 15
+ 4. ANOMALIES  ............................................................ 16
+    ANOMALIES reports and commets  ........................................ 16
+    INKEY() function anomaly with SETKEY  ................................. 16
+    Keyboard codes missing from definition of K_xxxx  ..................... 17
+    Memoedit() function  .................................................. 17
+ 5. ADVERTISEMENT  ........................................................ 18
+    WHAT WAS IN PREVIOUS NUMBER  .......................................... 18
+ 6. CLIPPER NET  .......................................................... 19
+    Index of described files in Clipper BBS Magazine  ..................... 19
+ CLIPBBS 1-07       Table of Contents (...)         8 Oct 1991
+
+
+    ClipperNet - DIAL.CLN  ................................................ 19
+    ClipperNet - GSR151.ARJ  .............................................. 20
+    ClipperNet - KF_LOKUP.ARJ  ............................................ 20
+    ClipperNet - OOPSCL5.ARJ  ............................................. 21
+    ClipperNet - PAT1.ARJ  ................................................ 21
+    ClipperNet - POWER10.ARJ  ............................................. 22
+    ClipperNet - SCANCODE.ARJ  ............................................ 22
+    ClipperNet - SHELP50A.ARJ  ............................................ 22
+ 7. CLIPBBS  .............................................................. 24
+    CLIPBBS distribution  ................................................. 24
+    CLIPBBS, how to write an article!!!  .................................. 25
+
+                                   - - - - -
+ CLIPBBS 1-07                   Page 1                    8 Oct 1991
+
+
+ =============================================================================
+                                   EDITORIAL
+ =============================================================================
+
+
+                              Monday editorial
+ 
+ Hello all again. It's monday. Yes, it's unusual because of all previous
+ ones written on mostly Sunday. Reality is always first before writing fun,
+ Satturady and Sunday i spent in optimizing one time critic application
+ (FAX/TELEX/E-MAIL server) written as combination of Clipper, C and
+ Assembler. It was last piece of Summer 87 code not fully optimized into
+ 5.01 Clipper. Thanx god that never again...
+ 
+ OK, get back to main theme. Clipper BBS magazine. Do you, reader, now what
+ is wonderfull? I'm publishing, writing and collecting magazine only by my
+ own, everybody is telling me, great work, keep it... But what's strange,
+ nobody is giving ANY articles (sorry, exception is Pepijn Smits with
+ article about his great library). Where are all Clipper freaks with ideas
+ good to publish? I'm not expecting someone from U.S. they have own
+ Reference Clipper or Nantucket News, but EUROPE? Where they are sleeping?
+ Or they are afraid to write not in own language?
+ 
+ Don't be. Own language.... My own language is Czech. It's language of few
+ millions of people (less than 10, but more than 5 millions). Country called
+ Czechoslovakia located in centre of Europe. Therefore my English is
+ sometime bad and i'm sure that some englishman can have lot of fun with
+ reading my sentencies or way of writing words. Year ago, i moved to The
+ Netherlands to work. Family including my wife, my dog and me is now trying
+ to get another language, Dutch as good as we are capable to speak and
+ understand English. Unfortunately my wife and me are also journalist and
+ there is coming a problem. For me it's easy, technical journalism is just
+ easy (writing of books also), but normal one.... Therefore don't be afraid
+ to use another strange language.
+ 
+ About what to write? About everything what one can see interesting for
+ himself or for some others. Everything what is related to Clipper. It not
+ must be real only Clipper thing. Good use of editor, DOS, .BAT files any
+ utilities which can help...
+ 
+ Somewhere later,
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 2                    8 Oct 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+             DOSRCS - Revision Control System - Part (5)
+ 
+                        _____________________
+                        RCS.EXE - Maintanence
+                        ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ 
+ RCS.EXE is maintenance utility set for controlling RCS system and
+ files. Is not very often used, but several jobs must be done via
+ this program -
+ 
+         -       unlocking of locked revision
+         -       changing/adding of users of file
+ 
+ RCS can work on files only in case, that caller of RCS is in access
+ list of file, user is superuser, or access list is empty or user is
+ owner of file or -i options is used.
+ 
+ _____________
+ SYNTAX of RCS
+ 
+           RCS [ options ] file ...
+ 
+ _______________
+ Options for RCS
+ 
+         -i
+ 
+         Creates and initializes a new RCS file, but does not
+         deposit any revision.
+ 
+         -a<logins>
+ 
+ º       Appends the login names appearing in the COMMA SEPARATED
+ º       list <logins> to the access list of the RCS file. This
+ º       command is NEEDED in network environment to allow several
+ º       programmers work on one file (not at the same time of
+ º       course..). Please note LOWER case of "-a" switch.
+ 
+         -A<oldfiles>
+ 
+ º       Appends the access list of <oldfile> to the access list of
+ º       RCS specified file. It's needed in case of neccesity make
+ º       the same access list for new file as for old one.
+ 
+ 
+         -e[<logins>]
+ 
+ º       ERASES login names appearing in COMMA SEPARATED list
+ º       <logins> from access list of RCS file. If <logins> is
+ º       omitted, ENTIRE access list is erased!
+ CLIPBBS 1-07                   Page 3                    8 Oct 1991
+
+
+         -b[<rev>]
+ 
+         Sets the default branch to <rev>. If <rev> is omitted, the
+         default branch is reset to the highest branch in the trunk.
+ 
+         -c[<string>]
+ 
+ º       Sets the comment leader to string. The COMMENT LEADER is
+ º       printer before EVERY log message line generated by the
+ º       keyword $Log$ during CheckOut. This is usefull for
+ º       programming languages without multi-lie comments or for
+ º       better keeping format of your program. During RVS -i or
+ º       initial CI, the comment leader is guessed from the suffix
+ º       of the working file.
+ 
+         -l[<rev>]
+ 
+         Locks the revision with number <rev>. If a branch is given,
+         the latest revision on that branch is locked. If <rev> is
+         omitted, the latest revision of default branch is locked.
+         Locking prevents overlapping changes. Lock is removed with
+         CI or with RCS -u.
+ 
+         -u{<rev>]
+ 
+ º       Unlock the revision with number rev. If a branch is given,
+ º       the latest revision on that branch is unlocked. If <rev> is
+ º       omitted, the latest lock held by the caller is removed.
+ 
+         Normally only locker of a revision may unlock it, but
+         sometime is needed to unlock revision without original
+         locker. If somebody else than original locker is trying to
+         unlock revision, is asked for writing message to original
+         locker. In UNIX it's probably working, but in DOS
+         environment it has not effect.
+ 
+         -L
+ 
+ ³       Sets locking for STRICT. Strict locking means that the
+ ³       Owner of an RCS file is not exempt from locking for
+ ³       checkin (normally is possible to get file without lock).
+ ³       This should be used for files that are shared. Please not
+         that -L is upper case "-L".
+ 
+         -U
+ 
+         Sets locking to non-strict. Owner of a file need not lock a
+         revision for checkin. Please DO NOT use this option for
+         file that are shared with more people.
+ 
+ º       In DOSRCS version logging is STRICT by DEFAULT.
+ 
+         -n<name>[:<rev>]
+ 
+ º       Associates SYMBOLIC name <name> with branch or revision
+ º       <rev>. RCS prints an error message if name is already
+ CLIPBBS 1-07                   Page 4                    8 Oct 1991
+
+
+ º       associated with another number. if <rev> is omitted, the
+ º       symbolic name <name> is deleted.
+ 
+         -N<name>[:<rev>]
+ 
+         Same as "-n", except that it overrides a previous
+         assignment of <name>.
+ 
+         -o<range>
+ 
+ ³       Deletes "outdated" revisions given by range. Range
+ ³       consisting of a single revision number means that revision.
+ ³       Range consisting of a branch number means the latest
+ ³       revision on that branch. Range of from <rev1>-<rev2> means
+ ³       revisions <rev1> to <rev2> on the same branch, -<rev> means
+ ³       from beginning of branch containing <rev> up to and
+ ³       including <rev> and finally <rev>- means from revision
+ ³       <rev> to the end of the branch containing <rev>. NONE of
+ ³       the outdated revisions may have branches or locks.
+ 
+         -q
+ 
+         Quite mode, diagnostics is not printed.
+ 
+         -s<state>[:<rev>]
+ 
+ ³       Sets the state attribute of the revision <rev> to <state>.
+ ³       If <rev> is a branch number, the latest revision on that
+ ³       branch is assumed. Any identifier is acceptable for state.
+ ³       A useful set of state is:
+ 
+ º       Exp     Experimental
+ º       Stab    Stable
+ º       Rel     Release
+ 
+ ³       Default CI sets the state of revision to EXP.
+ 
+ 
+         -t[<txtfile>]
+ 
+         Writes descriptive text into the RCS file (deletes existing
+         text). If <txtfile> is omitted, RCS prompt the user for
+         text, otherwise DESCRIPTIVE text is copied from the file
+         <textfile>. If "-i" is presend, text is requested even if
+         "-t" is not given.
+ 
+ That's all about this utility control program.
+ 
+ See you later..
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 5                    8 Oct 1991
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (4)
+ 
+         = VIRTUAL MEMORY LINKING (VML) =
+ 
+         Virtual Memory Linking is a technique developed by Pocket Soft,
+         Inc. and was introduced in the .RTLINK version 3.1.  They
+         originally referred to this techique as "dynamic-overlaying"
+         which led to a lot of confusion, because it was not at all
+         similar to overlaying of code and data, therefore, I proposed
+         that this type of linking be referred to as "Virtual Overlays".
+         Now, with the release of .RTLINK/Plus 4.0, Pocket Soft is
+         calling this technology Virtual Memory Linking (VML), which is
+         a much more appropriate name for the technology.
+ 
+         Unlike "dynamic overlays" which are "read-only", virtual overlay
+         managers not only overlay the CODE portion of a module, but also
+         the portion of a module which is changed during the running of an
+         application - the DATA.  The data changes are written out to disk
+         in temporary files which are managed during the running of the
+         application.
+ 
+         Virtual overlays are similar in concept to both the "dynamic-
+         overlaying" technique used in RTLINK/Clipper-5.0 when loading
+         code from disk into memory combined with the Virtual Memory
+         Manager (VMM) system which allocates virtual memory for memvars
+         and arrays.  When executing a program using virtual overlaying,
+         the code is paged from disk to memory on a "least recently used"
+         basis.  This means that code which has not been used for a while
+         is overwritten to make room for the new code, leaving frequently
+         used code in memory.
+ 
+         Virtual overlay linkers dynamically allocate the size of the
+         object pool for paging code in accordance with the memory
+         available during the start of the application.  The more memory
+         that is available, the less "disk-intensive" the application
+         and the better the speed performance.  VMM and VML systems
+         which are properly designed will automatically execute programs
+         in the available memory by making use of conventional memory,
+         expanded memory, extended memory and disk.
+ 
+         At the writing of this article, my experience with this type
+         of linking is limited to my experience with Clipper-5.0, however
+         it is very curious to me that the VML system in RTLINK-4.0 was
+         announced at "virtually" the same time the VMM system was
+         incorporated in Clipper-5.0.  It is only speculation on my
+         part, but Pocket Soft's advertising about the features of VML
+         and Nantucket's advertising about the features of VMM are so
+         similar that it appears to the casual observer that there was
+         a collaboration of efforts in the development of this technology,
+         or that Microsoft developed the technology and simply handed it
+         over to Nantucket and Pocket Soft at the same time.  It is
+         unclear at the present time, how much of Clipper 5.0's memory
+         management is handled by the Clipper Libraries and how much is
+         handled by the RTLINK linker.
+ 
+ 
+ CLIPBBS 1-07                   Page 6                    8 Oct 1991
+
+
+         = SYMBOL-MANAGEMENT =
+ 
+         Symbol Management is a technique that can greatly reduce the
+         amount of memory overhead in a linked application.  Symbol
+         management is a process in which the "symbol table" is managed
+         to prevent unneccessary symbols in the main root memory area.
+         There is usually very little that a linker can do to resolve
+         this problem because the problem is usually caused by the
+         compiler and the programmer.   Every compiled object contains
+         symbols, constants, code and data.   Overlay linkers can usually
+         do a good job of overlaying code and constants but symbols and
+         data must be treated differently.  Symbols must always be placed
+         in "root" memory for overlay managers to be able to find and load
+         the module which contains the called symbol.  Unfortunately,
+         most linkers are not sophisticated enough to eliminate the
+         "redundancy" of symbols which are placed in root memory.  For
+         example, if you reference the memvar INV_NMBR just one time in
+         each of 10 different clipper-compiled objects, there will be
+         10 different symbol-table entries for INV_NMBR, however, if
+         you compile your 10 programs into one larger object, then
+         INV_NMBR will occupy only 1 memory location in the symbol table
+         thereby greatly reducing the root memory allocation.
+ 
+         This can become a delicate balancing act, however, when trying
+         to find the proper balance of .OBJ file size verses symbol count
+         to make a difference in memory usage.  Increasing the .OBJect
+         size may increase the overlay area size thereby nullifying the
+         memory savings from the reduced symbols.  Static and reloable
+         overlay linkers do nothing to help this problem because they
+         overlay at the "object" level.
+ 
+         ALINK, BLINKER, WARPLINK, dCLIP-2.50, and NOLINK-2.50 all excel
+         in the area of symbol management.  Memory management with these
+         link systems is very efficient because they overlay code segments
+         down to the "procedure" level rather than the "module" level.
+         This means that you can now compile your large clipper application
+         into just a few huge .OBJect files, thereby greatly reducing
+         the number of symbols which are placed into "root" memory.
+         It is really this "symbol management" of ALINK, BLINKER and
+         WARPLINK which make them perform well as memory-management linkers
+         as much as their overlaying techniques.
+ 
+         NOLINK, dCLIP and dCLIPRUN provide even better symbol management
+         because they not only overlay at the procedure level (when using
+         dynamic libraries), but they only create symbols when called for
+         during the running of the application.  The symbols from a huge
+         report that is run once a week will waste valuable memory with
+         other linkers, where "true dynamic-linking" will create these
+         symbols only at the time the report is being run.
+ 
+         - PROGRAMMING TIPS FOR SYMBOL REDUCTION -
+ 
+ 
+         This article is basically intended to provide "linking" tips
+         for memory-management, however, it is incumbent upon me to
+         also offer additional tips on reducing symbol-count in your
+ CLIPBBS 1-07                   Page 7                    8 Oct 1991
+
+
+         applications which will work with ALL linkers.
+ 
+         a. USE CONSTANTS INSTEAD OF MEMVARS
+ 
+         Clipper memory variables are always treated as "symbols".
+         Refrain from using a memory variable if a constant is sufficient.
+         For example, an unnecessary symbol can be eliminated by changing
+         the code:
+ 
+            escapekey=27
+            DO WHILE INKEY()#escapekey
+              *clipper code
+            ENDDO
+ 
+         to:
+ 
+            DO WHILE INKEY()#27
+              *clipper code
+            ENDDO
+ 
+ 
+         b. USE ARRAYS INSTEAD OF MEMVARS
+ 
+         Every different Clipper memvar name creates a "symbol", whereas
+         an array name creates only ONE symbol.  The following example
+         shows how to save considerable memory in a clipper application
+         by reducing the symbol count with an array.
+ 
+         This code produces 10 symbols:
+ 
+             mname = name
+             maddress = address
+             mcity = city
+             mstate = state
+             mzip = zip
+             @ 1,1 SAY 'Name   ' GET mname
+             @ 2,1 SAY 'Address' GET maddress
+             @ 3,1 SAY 'City   ' GET mcity
+             @ 4,1 SAY 'State  ' GET mstate
+             @ 5,1 SAY 'Zip    ' GET mzip
+             READ
+             REPL name WITH mname, address WITH maddress,;
+                  city WITH mcity, state WITH mstate, zip WITH mzip
+ 
+ 
+         This code produces 6 symbols:
+ 
+             PRIVATE gets[5]
+             gets[1] = name
+             gets[2] = address
+             gets[3] = city
+             gets[4] = state
+             gets[5] = zip
+             @ 1,1 SAY 'Name   ' GET gets[1]
+             @ 2,1 SAY 'Address' GET gets[2]
+             @ 3,1 SAY 'City   ' GET gets[3]
+ CLIPBBS 1-07                   Page 8                    8 Oct 1991
+
+
+             @ 4,1 SAY 'State  ' GET gets[4]
+             @ 5,1 SAY 'Zip    ' GET gets[5]
+             READ
+             REPL name WITH gets[1], address WITH gets[2],;
+                  city WITH gets[3], state WITH gets[4], zip WITH gets[5]
+ 
+ 
+         c.  USE THE SAME NAME MEMVARS WHENEVER POSSIBLE
+ 
+         Again, every "different" Clipper memvar in a module creates
+         a symbol.  If an object contains several procedures, use the
+         same name for memvars even though they may not perform the same
+         or similar functions.   For example, procedure A and procedure B
+         both need 5 memvars.  If procedure A declares its memvars with
+         5 unique names and procedure B declares its memvars with 5
+         unique names, then 10 symbols are used in the linked application.
+         To eliminate 5 symbols, make sure that procedure B assigns the
+         same name to the memvars as procedure A.   This is not possible
+         of course, if the memvars need to be public to both procedures
+         and perform different functions, only if they are private.
+ 
+ 
+ 
+         - USING THE CLIPPER-5.0 PRE-PROCESSOR FOR SYMBOL MANAGEMENT -
+ 
+ 
+         The above techniques for symbol reduction may not be practical in
+         all programming situations because of the "cryptic" method in
+         which you must treat your memvar declarations.  Clipper 5.0 solves
+         this problem and also makes it easier to do steps 1 and 2 above by
+         including a language "pre-processor" which allows you to program
+         using non-cryptic language extensions then convert your code at
+         compile time to memory-efficient use of arrays or constants.
+ 
+         Let's look at how you would use Clipper-5.0 pre-processor
+         definitions to solve the problems in examples 1 and 2 above.
+ 
+ 
+         1. CONVERTING MEMVARS TO CONSTANTS AT COMPILE-TIME
+ 
+            #define escapekey 27
+            DO WHILE INKEY()#escapekey
+              *clipper code
+            ENDDO
+ 
+ 
+         2. CONVERTING MEMVARS TO ARRAYS AT COMPILE-TIME
+ 
+             #ifndef DEBUG  && compiling non-DEBUG version
+               PRIVATE gets[5]
+               #define mname     gets[1]
+               #define maddress  gets[2]
+               #define mcity     gets[3]
+               #define mstate    gets[4]
+               #define mzip      gets[5]
+             #endif
+ CLIPBBS 1-07                   Page 9                    8 Oct 1991
+
+
+             mname = name
+             maddress = address
+             mcity = city
+             mstate = state
+             mzip = zip
+             @ 1,1 SAY 'Name   ' GET mname
+             @ 2,1 SAY 'Address' GET maddress
+             @ 3,1 SAY 'City   ' GET mcity
+             @ 4,1 SAY 'State  ' GET mstate
+             @ 5,1 SAY 'Zip    ' GET mzip
+             READ
+             REPL name WITH mname, address WITH maddress,;
+                  city WITH mcity, state WITH mstate, zip WITH mzip
+ 
+ 
+         To compile the above code WITHOUT symbol substitution for
+         debugging purposes, compile as follows:
+ 
+           CLIPPER <my app> /rDEBUG
+ 
+         To compile the above code WITH symbol substitution for
+         your final application, compile as follows:
+ 
+           CLIPPER <my app>
+ 
+         The /rDEBUG switch has the same effect as the comand:
+ 
+           #define DEBUG
+ 
+         in your source code, however, it is much more convenient because
+         it allows you to make debug or non-debug versions of your code
+         simply from the DOS command line or .BAT files.
+ 
+ 
+         SYMBOL COMPACTION
+ 
+         Some linkers include "symbol-compaction" techniques to help
+         eliminate the problem caused by the duplicate symbols in each
+         Clipper object file.   RTLINK/Clipper-5.0 automatically
+         eliminates duplicate symbols during linking, thereby eliminating
+         the need to compile your .PRG files into larger objects using
+         .CLP files.  I experimented with a large application of mine
+         in which I compiled the source code into 100 objects, then 10
+         objects, and finally only 3 objects.  The number and size of
+         the object files made absolutely no difference in the output
+         size of the .EXE produced by RTLINK/Clipper-5.0, whereas each
+         of these models would have produced drastically differenct
+         results with any other linker.
+ 
+         WARPLINK provides a utility named SP.EXE (written by Steve
+         Klingler) which essentially performs the same task, however,
+         symbol-compaction with WARPLINK is a two-step process.  First
+         the .EXE must be created using WARPLINK.EXE, followed by
+         running SP.EXE using the following syntax:
+ 
+              SP <input file .EXE name> <output file .EXE name>
+ CLIPBBS 1-07                   Page 10                   8 Oct 1991
+
+
+         The results, in some cases can be dramatic.  In one of my
+         applications, SP.EXE removed 908 duplicate symbols from the
+         symbol table and reduced my .EXE by 15k.
+ 
+         SP.EXE will work only on .EXE files created with WARPLINK or
+         .EXE files which contain no overlays.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 11                   8 Oct 1991
+
+
+                    What is faster, FOR or AEVAL?
+ 
+ 
+ New test is here. This time we will be taking a look at AEVAL and
+ FOR cycles used in ekvivalent situations. As usual, we will see
+ that AEVAL with codeblock is again slower than classic application
+ of FOR cycle with the same effect.
+ 
+ Remember? In some previous number we did a tests of DBEVAL and FOR,
+ therefore logically is coming test of AEVAL and FOR.
+ 
+ Overwiew
+         ALL tests are using this definition of variables:
+         ³       local   aTest := ARRAY(1000) ,;
+         ³               n , start
+ 
+         ARRAY has only 1000 of values for avoiding cases of
+         disk swappings in smaller memories.
+ 
+ TEST1   is FOR and is filling array with values of value index
+         ³       start := seconds()
+         ³       for n:=1 to 1000
+         ³       aTest[n]:=n
+         ³       next
+         ³       ? 'for elapsed in ', seconds()-start
+ 
+ TEST2   is AEVAL equivalent of TEST1
+         ³       start := seconds()
+         ³       n := 1
+         ³       aeval(aTest,{|xx| xx:=n++})
+         ³       ? 'aeval elapsed in ', second()-start
+ 
+ TEST3   is FOR and is displaying complete ARRAY on screen
+         ³       start := seconds()
+         ³       for n:=1 to 1000
+         ³       QQout(aTest[n],chr(13))
+         ³       next
+         ³       ?
+         ³       ? 'for qqout elapsed in ', seconds()-start
+ 
+ TEST4   is AEVAL equivalent of TEST3
+         ³       start := seconds()
+         ³       aeval(aTest,{|xx| QQout(xx,chr(13))})
+         ³       ?
+         ³       ? 'aeval qqout elapsed in ', seconds()-start
+ 
+ TEST5   is FOR + EVAL equivalent of TEST3
+         ³       start:=seconds()
+         ³       for n:=1 to 1000
+         ³       eval({|| QQout(aTest[n],chr(13))})
+         ³       next
+         ³       ?
+         ³       ? 'for+eval elapsed in ', seconds()-start
+ 
+ 
+ All those tests i runned on AT286/16Mhz Laptop with normal memory,
+ CLIPBBS 1-07                   Page 12                   8 Oct 1991
+
+
+ no EMS, nothing special (free about 550KBs).
+ 
+ Results are:
+ 
+      ³  T1   ³  T2   º  T3   ³  T4   ³  T5   ³
+      ÃÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄ×ÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄ´
+      ³  0.28 ³  0.38 º  2.08 ³  2.20 ³  2.52 ³
+ 
+ And interpretation?
+ 
+         T1 and T2 are telling, that AEVAL is slower for 0.1 of
+         second on initialization of 1000 of values in array.
+         Actually cannot be expected nothing else, because is here
+         evaluation of code block with passing values instead of
+         just executing assig of value directly in FOR. But at all
+         NANTUCKET maybe can do something with those results...
+ 
+         T3 and T4 are telling the same, AEVAL was slower again for
+         displaying of 1000 values than the same FOR cycle.
+ 
+         T3/4 and T5 are only comparing FOR with executed command
+         and FOR with EVALuated codeblock. It's actually most
+         ekvivalent of T4. It's of course significantly slower,
+         because of overhead of EVALuating codeblock instead of
+         normal executing.
+ 
+ Cheers
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 13                   8 Oct 1991
+
+
+           RCS - New version of PUT.BTM for 4DOS (or NDOS)
+ 
+ In some cases is Clipper BBS Magazine slower than actual development which
+ i'm doing during using of some new programs. Typicall example of this case is
+ serie of BATCH files which i'm slowly upgrading for use of RCS with mine
+ installation of 4DOS (NDOS of course also for all who have Norton Utilities
+ 6.0 from Symantec).
+ 
+ PUT.BTM (.BTM is extension of fast batch file in 4DOS) is slightly changed:
+ 
+ ------------------------------<PUT.BTM>-----------------------------------
+ @echo off
+ SET P$=N
+ IFF NOT "%1"=="" THEN
+     IFF %@index[%1,*]==-1 THEN
+         IFF %@index[%1,?]==-1 THEN
+             echo þ
+             echo þ  Processing single file %1
+             echo þ
+             IFF "%2"=="" THEN
+                 call rcsput %1 R
+             ELSE
+                 call rcsput %1 %2 %3 %4 %5 %6 %7 %8 %9
+             ENDIFF
+         ELSE
+             SET P$=Y
+         ENDIFF
+     ELSE
+         SET P$=Y
+     ENDIFF
+     IFF %P$%==Y THEN
+         echo þ
+         echo þ  Processing from list defined as %1
+         echo þ
+         IFF "%2"=="" THEN
+             for %%i in (%1) do call rcsput %%i R
+         ELSE
+             for %%i in (%1) do call rcsput %%i %2 %3 %4 %5 %6 %7 %8 %9
+         ENDIFF
+     ENDIFF
+ ELSE
+     echo þ  PUT Usage:
+     echo þ      PUT filename [RFLU] rev_number [symbolic_name]
+     echo þ              filename can be with "*" and "?" signs also
+     echo þ              R = check in                [default]
+     echo þ              F = force check in
+     echo þ              L = checkin and then check out
+     echo þ              U = check in and then check out and not lock
+     echo þ
+ ENDIFF
+ SET P$=
+ ------------------<eof>----------------------------------------------------
+ 
+ File which is called from main batch file is:
+ 
+ <-------------------------<RCSPUT.BTM>------------------------------------>
+ CLIPBBS 1-07                   Page 14                   8 Oct 1991
+
+
+ @echo off
+ echo þ
+ echo þ  Processing [%1] with rev.num %3 as -%@lower[%2] %4 %5 %6 %7 %8 %9
+ echo þ
+ IFF "%4"=="" THEN
+     CI -q -%@lower[%2]%3 %1
+ ELSE
+     CI -q -%@lower[%2]%3 -N%4 %1
+ ENDIFF
+ <--------------------<EOF>----------------------------------------------->
+ 
+ 
+ And that's all. Question about 'downgrade' to normal standard .BAT files of
+ DOS is little bit problematic because of absence functions like @index which
+ are like AT() function in Clipper....
+ 
+ .DD.
+ 
+ P.S. Above is REAL BATCH FILE in simple and nice 4DOS (SHAREWARE!!!)
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 15                   8 Oct 1991
+
+
+ =============================================================================
+                                      Q&A
+ =============================================================================
+
+
+ Clipper 87 books
+ 
+ Question:   Could someone recommend Summer87 related books?
+ 
+ Answer:
+ 
+         Dynamics of Clipper
+         by: Arthur Fuller
+         pub: Dow Jones-Irwin Software Guides
+         ISBN:   1-55623-131-8
+         Date:   1989
+ 
+         Using Clipper
+         by: W. Edward Tiley
+         pub: Que Corporation
+         ISBN:   0-88022-379-0
+         Date:   1988
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 16                   8 Oct 1991
+
+
+ =============================================================================
+                                   ANOMALIES
+ =============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                  INKEY() function anomaly with SETKEY
+ 
+ Another problem which somebody could expect that have to be solved is
+ fact, that all SETKEY sets aren't working when one is using INKEY()
+ function. Because INKEY() is just ONLY reading keyboard. In all other
+ places where keyboard is read are all SETKEY sets executed correctly.
+ But, when programmer will start to use INKEY() in more places, then
+ will have problem, all SETKEY sets aren't valid and programmer MUST
+ take care of them by special routines or DO CASE checks. My expectation
+ that this nonlogical fact will be corrected is wrong. INKEY() is still
+ don't recognizing SETKEY sets.
+ 
+      Solving:
+           don't use INKEY(), you easy can all INKEY() callings
+           replace with call to new function:
+ 
+           Function MyInkey(nnn)
+           local     value   := 0 , cBlock
+           while .t.
+           if valtype(nnn)!="N"
+                value:=inkey()      // inkey WITHOUT parameter
+           else
+                value:=inkey(nnn)   // inkey WITH parameter
+           endif
+           if (cBlock:=setkey(value))!=NIL
+                Eval(cBlock)        // test if valid SETKEY
+                loop                // and then continue
+           endif
+           return (value)
+ 
+      This possible (and easy) solving has this advantages:
+      -    fully compatible with INKEY() function in parameter
+ CLIPBBS 1-07                   Page 17                   8 Oct 1991
+
+
+           passing and value returning
+      -    taking care of your SETKEY sets and executing (better
+           evaluating) them without special testings or actions
+      -    all LASTKEY() stuff is still the same because of
+           original INKEY() using
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+             Keyboard codes mising from definition of K_xxxx
+ 
+ When received 5.01 my expectation was, that INKEY.CH was expanded to
+ some missing keyboard codes. Not only codes from extended keyboard
+ (because they are disputable), but also codes for normal keyboard which
+ weren't in 5.0 INKEY.CH.
+ 
+ Truth is different, INKEY.CH is still missing extended codes and from
+ basic codes, K_SPACE ,just easy code is NOT included in INKEY.CH
+ 
+      Solving:
+           just update your INKEY.CH with (example):
+                #define   K_SPACE        20
+                #define   K_CTRL_UP      397
+                #define   K_CTRL_DOWN    401 ....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                           Memoedit() function
+ 
+ A more comments i will give to MEMOEDIT() function.
+ 
+ First problem which i had with Memoedit() in  Clipper 5.0 was a problem
+ that there IS NOT a way to access edited string from INSIDE of
+ Memoedit(). One can access ONLY original string, but edited (and
+ continuously changed) string is hidden somewhere in Clipper memory. I
+ reported this problem already to Nantucket a LONG time ago, the told
+ "will be solved in new version", but true is again different. And i'm
+ so sure, that this isn't so problem.
+ 
+ In Clipper 5.0 there was a BIG problem with MemoEdit() function when
+ there was a very small free memory for your program (about 30KB after
+ loading program in memory). Then Memoedit in some cases did HANG of
+ whole system. Probably it had something to do with RTLINK inability to
+ handle proper overlaying when there was a small memory. This problem is
+ PARTIALLY out. One need more smaller memory to hang system with
+ Memoedit (10KB to 20KB). Hope, somebody will take care of this, because
+ to have hanging editor (yes, PE.EXE distributed with CLIPPER will hang
+ too) inside of application running just close to free memory is pity.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 18                   8 Oct 1991
+
+
+ =============================================================================
+                                 ADVERTISEMENT
+ =============================================================================
+
+
+                         WHAT WAS IN PREVIOUS NUMBER
+ 
+     DOSRCS - Revision Control System - part (4)
+     The Programmer's Guide to CLIPPER Linkers - part (3)
+     Best way of making FOR cyclus, and what about WHILE cyclus
+     WHICH packing/unpacking program to choose???????
+     Will Clipper expand to graphics environment?
+     TIPS&TRICKS - how to found largest string in array
+     DANIEL.LIB - NEW version of DANIEL.RMK
+     ANOMALIES reports and commets
+     Clipper Debugger anomalies
+     INCONSISTENCY
+     New RTLINK version, INCREMENTAL LINKING
+     CONFERENCE DUMP part (5)
+     Index of described files in Clipper BBS Magazine
+     Routing-Plan for ClipperNet
+     CLN - SOUND.ARJ   30
+     CLN - TBWHL4.ARJ  . 31
+     ClipNet - NFDESC2.ARJ
+     ClipNet - NFLIB2.ARJ
+     ClipNet - NFSRC2.ARJ
+     ClipperNet - ACCESS.ARJ
+     ClipperNet - ACHOO2.ARJ
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 19                   8 Oct 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - DIAL.CLN
+ 
+ CLIPBBS 1-07                   Page 20                   8 Oct 1991
+
+
+ File Name:      DIAL.CLN
+ Other Names:
+ 
+ File Size:      1,791 bytes
+ File Contents:
+                 DIAL.PRG           4297
+ 
+ Dialer program written for CLIPPER 5.0 with many back steps coming from
+ fact that author was for sure Summer87 programmer. It's using ONLY Clipper
+ code, nothing from any other language. FOPEN is used for opening of COM
+ port, and FWRITE for putting all AT commands on this. Easy and limited
+ of course.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - GSR151.ARJ
+ 
+ File Name:      GSR151.ARJ
+ Other Names:
+ 
+ File Size:      140,879 bytes
+ File Contents:
+                 GSR.DOC           16478
+                 GSR.EXE          148300
+                 GSR.SDA            1552
+                 GSRAVOID.DBF        141
+ 
+ This, big set of files, is really needed utility of Clipper programmer.
+ Global search and replace.
+ 
+ GSR now works on ANY size file. You may select a single file, or a group of
+ files to operate on. You specify what text to look for, and what text to
+ replace it with. Your search can be either case sensitive or not. You may
+ either view each occurance, to verify the change, or have GSR automatically
+ make all replacements for you.
+ 
+ The search and/or replace string can be read from a disk file allowing you
+ to search for and replace binary or text strings made with your choice of
+ editor. In any case, if you choose to make the replacements, your original
+ file will be saved with the extension .GSR. Subsequent changes will
+ increment the .GSR extension, with up to 99 changes kept on any single file
+ name. Like .gsr .gs1 .gs2 up to .g99
+ 
+ Find all occurances of any text and replace it with other text.  Rename an
+ existing variable across many programs.  Change a copyright notice.
+ Change a client name when you are recycling code.  and many more.....
+ 
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+ CLIPBBS 1-07                   Page 21                   8 Oct 1991
+
+
+                            ClipperNet - KF_LOKUP.ARJ
+ 
+ File Name:      KF_LOKUP.ARJ
+ Other Names:
+ 
+ File Size:      12,028 bytes
+ File Contents:
+                 KF_LKUP.PRG       18889
+                 KF_PPDBF.PRG       4584
+                 KF_UTIL.PRG       13340
+                 READ.ME            4106
+ 
+ Set of lookup function related to relations between databases.
+ Documentation is too less descriptive and i hadn't enough of patience to
+ scan through source codes...
+ 
+ Contains some usefull conversion functions also and two functions for
+ saving and restoring database status on stack (made by static variable of
+ course).
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - OOPSCL5.ARJ
+ 
+ File Name:      OOPSCL5.ARJ
+ Other Names:
+ 
+ File Size:      2,826 bytes
+ File Contents:
+                 CLASSES.PRG        4387
+                 DEMO.PRG           2685
+                 OOPS.H             1465
+ 
+ Another version of _pseudo_ objects. this one is very small and very
+ simple, therefore nice to learn about how to make pseudo objects. It's
+ known, that pitty use of preprocessor can create pseudo objects which are
+ in fact array keeping all needed information.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - PAT1.ARJ
+ 
+ File Name:      PAT1.ARJ
+ Other Names:
+ 
+ File Size:      PAT1.ARJ
+ File Contents:
+                 ORIGIN.ASM         3404
+                 ORIGIN.OBJ          170
+                 PAT1.DOC           1035
+ CLIPBBS 1-07                   Page 22                   8 Oct 1991
+
+
+ PATCH number one for Nanforum Toolkit Library version 2.0.
+ 
+ ORIGIN.ASM is replacement for the same named file in sources, ORIGIN.OBJ is
+ possible just use as replace for .LIB file (LIB -+ORIGIN.OBJ).
+ 
+ Function for returning location of .EXE was returning normally garbage,
+ this is fix.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - POWER10.ARJ
+ 
+ File Name:      POWER10.ARJ
+ Other Names:
+ 
+ File Size:      138,668 bytes
+ File Contents:
+                 LISEZ.MOI          2560     POWERCOM.MEM       1706
+                 POWER.INS            95     POWER.NG         214796
+                 GO.BAT             2262     NOSILVER.OBJ       3638
+                 POWER.CH           3898     POWER.PRG         35142
+                 POWER.LIB        236419     POWERCOM.PRG      11718
+                 POWER.MEM          1706
+ 
+ Another library. Pitty is, that ALL about this library is written ONLY and
+ ONLY in FRENCH language. And i'm not so good in this (actually my knowledge
+ of french is zero). From function names it looks nice, but author could
+ choose better language for distributing library worldwide :-)
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - SCANCODE.ARJ
+ 
+ File Name:      SCANCODE.ARJ
+ Other Names:
+ 
+ File Size:      2,154 bytes
+ File Contents:
+                 SCANCODE.DBF       5719
+ 
+ Database file contains list of scan codes of keyboard for use in DOS
+ services. It is NOT the same as INKEY() codes!
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - SHELP50A.ARJ
+ 
+ CLIPBBS 1-07                   Page 23                   8 Oct 1991
+
+
+ File Name:      SHELP50A.ARJ
+ Other Names:
+ 
+ File Size:      124,163 bytes
+ File Contents:
+                 DEMO.BAT           1981     MVCLIP50.LIB      21621
+                 HINTS.TXT          3534     ORDER.FRM          1396
+                 HELP.PRG           5697     SHELP50.LIB      206279
+                 HELPCON.PRG        3742     HELPDEMO.PRG       5334
+                 SCREENS.DBT       29601     PROJECT.HLP        2727
+                 SYSHELP.DBT       76399     L.LNK               192
+                 HELPLIB.PRG        7670     HSETUP.HLP            8
+                 SUPERV25.DOC        198     CLIPPER.501          15
+                 HELPMGR.PRG        5113     VERSION.50           26
+                 SHELP.MGR           913     PROJECT.PRJ         238
+                 SCREENS.HLP         396     HELPMGR.DBF         813
+                 SYSHELP.HLP        6410     PRINT.ME          13266
+                 SYSLINK.HLP         690
+                 SHELP.REF         41809
+ 
+ Super Help for Summer87 and Clipper 5.01 both. It's able to generate field
+ or conceptual level help. Support for project management, creating help
+ screens, linking help windows, creating of help index, windowing effects...
+ 
+ Seems like very good help. Maybe later i will do some testings...
+ 
+ ------10 minutes later------
+ 
+ After trying to make a demo program included.
+ 
+ 1) authors are dreaming everybody has BLINKER and link script is
+    only for BLINKER. Must be changed
+ 2) CLIPPER compilation of programs is missing some switches and
+    bombing immediately out. +++NEEDS  /M ++++++
+ 3) List of libraries must include BOTH .LIB presented in file
+    otherwise one will get list of LOT missing....
+ 4) After this it's working, but my patience to totally strange
+    system of screens was not enough long....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 24                   8 Oct 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-07                   Page 25                   8 Oct 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

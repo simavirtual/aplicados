@@ -1,0 +1,567 @@
+			 LEAME_KD.TXT
+*************************************************************
+   Microsoft(R) FoxPro(R) Versi¢n 2.6, Edici¢n profesional
+
+	      Kit de distribuci¢n para MS-DOS(R)
+
+(C)1994 Microsoft Corporation. Reservados todos los derechos.
+*************************************************************
+
+=========
+CONTENIDO
+=========
+
+Parte	 Descripci¢n
+-----	 -----------
+  1	 Instalaci¢n
+  2	 Art°culos de la Base de conocimientos
+  3	 Cambios realizados al manual del Kit de
+	 distribuci¢n desde su impresi¢n
+  4	 Respuestas a preguntas frecuentes
+  5	 Mensajes de error
+  6	 Nota para el usuario sobre el uso del espa§ol
+
+----------------------------------------------------------
+
+====================
+Parte 1: Instalaci¢n
+====================
+
+Instalaci¢n de la Edici¢n profesional de FoxPro 2.6
+---------------------------------------------------
+La Edici¢n profesional de FoxPro 2.6 incluye los siguientes
+kits:
+
+Kit de distribuci¢n
+Kit de conectividad
+Kit de construcci¢n de bibliotecas
+Extensiones para grupos de trabajo (s¢lo en FoxPro para
+Windows)
+
+Para instalar la Edici¢n profesional de FoxPro, instale primero
+el producto principal de FoxPro y siga las instrucciones de
+instalaci¢n incluidas con cada kit individual. No importa el
+orden en que se instalen los kits.
+---------------------------------------------------------------
+
+Ahora, la versi¢n 2.6 de FoxPro incluye los Asistentes de
+FoxPro, que se encuentran en el subdirectorio WIZARDS. Con sus
+aplicaciones no debe distribuir los Asistentes de FoxPro ni el
+archivo CATALOG.APP.
+---------------------------------------------------------------
+
+
+==============================================
+Parte 2: Art°culos de la Base de conocimientos
+==============================================
+
+Si ha instalado los art°culos de la Base de conocimientos,
+puede verlos ejecutando la aplicaci¢n KBVIEW.APP. Estos
+art°culos contienen informaci¢n £til sobre diversos temas de
+FoxPro.
+---------------------------------------------------------------
+
+
+=============================================================
+Parte 3: Cambios realizados al manual del Kit de distribuci¢n
+	 desde su impresi¢n
+=============================================================
+
+En el manual del usuario del Kit de distribuci¢n, todas las
+referencias a FoxPro 2.5 deben leerse como referencias a FoxPro
+2.6. Adem†s, los usuarios de la versi¢n 2.5 de este Kit deber†n
+tener en cuenta las siguientes correcciones.
+
+Estas actualizaciones aparecen en inglÇs porque se refieren a
+actualizaciones con respecto al manual impreso inglÇs.
+---------------------------------------------------------------
+
+Chapter 1, page 2:  The first bulleted item should read:
+
+"The Distribution Kit files, in both 5.25-inch and
+3.5-inch disk formats."
+----------------------------------------------------------
+
+Chapter 2, page 10, under "Available Runtime Menus and Menu
+Options," the File menu item should read:
+
+File menu: Close, Save, Save As and Revert
+----------------------------------------------------------
+
+Chapter 2, page 11, under "Features Not Available in
+Distributed Applications," add the following section below
+the "Menus" section:
+
+Menu Pads
+
+The following FoxPro menu pads aren't available in the
+applications you distribute.
+
+SYSTEM Menu:  Macros..., Filer
+  FILE Menu:  New..., Open..., Printer setup...,
+	      Print..., Quit
+WINDOW Menu:  Color..., Command, Debug, Trace, View
+----------------------------------------------------------
+
+The files with extensions .ESL or .ESO have been renamed for
+the new version.  For example:
+
+FOXPRO.ESL is now FOXD2600.ESL
+FOXPRO.ESO is now FOXD2600.ESO
+FOXPROX.ESL is now FOXDX260.ESL
+
+The new file names impact the following pages in the
+Distribution Kit User's Guide:
+
+Chapter 1, page 5, the Distribution Kit Files table.
+
+Chapter 3, page 22, change the last sentence to read:
+
+"The .EXE Support Library consists of three files:
+FOXD2600.ESL, the standard .EXE Support Library
+FOXD2600.ESO, and the 32-bit Extended .EXE Support
+Library FOXDX260.ESL."
+
+Chapter 5, page 32, the table called Files Required on
+Distribution Disks Based on Type of Application has
+these changes:
+
+In the "You must also distribute these files" column,
+substitute the .ESL and .ESO file names with the new
+File names.
+----------------------------------------------------------
+
+Chapter 2, page 15, under the heading "Help in a Project"
+add the following information:
+
+"If your help files are included in your project but
+marked as excluded, you must distribute the .DBF and .FPT
+files with your application. These files can be changed by
+the user. If you don't want your users to have the ability
+to change the contents of your help files, include them in
+your project, but don't mark them as excluded."
+----------------------------------------------------------
+
+Chapter 5, page 33, the Files Your Application May
+Require table should include DRIVER2.PLB as a file your
+application may require.  This file contains printer
+drivers.  You must distribute this file if your
+application requires printer drivers.
+----------------------------------------------------------
+
+==========================================
+Parte 4: Respuestas a preguntas frecuentes
+==========================================
+
+Pregunta 1
+
+®QuÇ tipo de aplicaciones (monousuario, multiusuario) pueden
+crearse con el Kit de distribuci¢n?
+
+Respuesta 1
+
+Con el Kit de distribuci¢n puede crear aplicaciones monousuario
+o multiusuario.
+---------------------------------------------------------------
+
+Pregunta 2
+
+Suponga que escribo un programa para el cliente A, compilo el
+programa como un archivo .EXE compacto y doy la aplicaci¢n al
+cliente A, junto con los archivos *.ES? de biblioteca con las
+cuales se ejecuta la aplicaci¢n. El cliente A posee la
+aplicaci¢n y el copyright. Entonces, el cliente A vende la
+aplicaci¢n a otras muchas personas.
+
+Pregunta 2.1
+
+®Tiene que adquirir tambiÇn el cliente A el Kit de
+distribuci¢n?
+
+Respuesta 2.1
+
+No, el cliente A no necesita adquirir el Kit de distribuci¢n.
+S¢lo el desarrollador que utilice el Kit de distribuci¢n para
+crear el archivo .EXE original debe poseer una copia con
+licencia del Kit de distribuci¢n.
+
+Pregunta 2.2
+
+®Tiene que adquirir el cliente A el sistema de desarrollo de
+FoxPro 2.6?
+
+Respuesta 2.2
+
+El cliente A no tiene que adquirir FoxPro 2.6 porque Çl no va a
+crear su propio .EXE; el cliente A es simplemente un
+revendedor. El cliente A debe distribuir la aplicaci¢n en su
+formato original y no puede quitar los archivos runtime para
+incluir dicha aplicaci¢n con otra aplicaci¢n distinta.
+
+Pregunta 2.3
+
+®Se aplica lo anterior a archivos .EXE aut¢nomos?
+
+Respuesta 2.3
+
+S°.
+----------------------------------------------------------
+
+Pregunta 3
+
+®Por quÇ sigue atenuada la opci¢n "Generar ejecutable" despuÇs
+de instalar el Kit de distribuci¢n?
+
+Respuesta 3
+
+Puede deberse a dos razones: en primer lugar, el Kit de
+distribuci¢n debe estar instalado en el directorio de FoxPro.
+Aseg£rese de que los archivos de FoxPro no est†n marcados como
+de s¢lo lectura antes de instalar el Kit de distribuci¢n. En
+segundo lugar, el proyecto no incluye un programa definido como
+Principal. Seleccione el men£ o programa principal y, luego,
+elija "Establecer como principal" en el men£ "Proyecto".
+----------------------------------------------------------
+
+Pregunta 4
+
+Cuando compilo un archivo .EXE, el proceso se detiene con un
+mensaje de error "Imposible abrir archivo" que se refiere a un
+archivo de programa del Kit de distribuci¢n. Cuando otorgo
+todos los derechos de acceso (excepto el de eliminaci¢n) al
+directorio del programa, el programa se compila. Sin embargo,
+el proceso de compilaci¢n deja varios archivos en el directorio
+de programa con los nombres WLK02112.--A, WLK02112.--B,
+WLK02112.--C, etc. ®QuÇ son estos archivos?
+
+Respuesta 4
+
+Al compilar archivos de programa en el Kit de distribuci¢n de
+FoxPro se crean algunos archivos temporales en el directorio
+desde el que inici¢ FoxPro. La instrucci¢n TMPFILES del archivo
+CONFIG.FP no afecta a la colocaci¢n de estos archivos.
+
+Incluya la ruta de acceso completa a la unidad y el directorio
+de red donde est†n instalados los programas de desarrollo y
+distribuci¢n de FoxPro. Inicie FoxPro desde un directorio de
+usuario que tenga asignados todos los derechos, incluyendo los
+de borrado o eliminaci¢n. El proceso de compilaci¢n mediante el
+Kit de distribuci¢n crea archivos y elimina archivos del
+directorio de usuario. El administrador del sistema puede
+designar el directorio de programa como de s¢lo lectura.
+----------------------------------------------------------
+
+Pregunta 5
+
+He creado una aplicaci¢n que no me permite editar mis archivos
+tipo tabla/.DBF. ®C¢mo puedo corregir este problema?
+
+Respuesta 5
+
+Marque su tabla/.DBF como excluido del proyecto y vuelva a
+generar su aplicaci¢n. Deber† distribuir estos archivos a los
+usuarios finales. Al incluir tablas/.DBFs en el proyecto, estos
+archivos quedan marcados autom†ticamente como de s¢lo lectura.
+----------------------------------------------------------
+
+Pregunta 6
+
+®C¢mo se indica a un archivo .FXP, .APP o .EXE compacto de
+MS-DOS que se ejecute en el modo extendido desde dentro de
+Windows?
+
+Respuesta 6
+
+Cuando se ejecuten desde Windows, los archivos .FXP, .APP o
+.EXE se ejecutar†n en el modo est†ndar, aunque haya suficiente
+memoria como para que se ejecute la biblioteca de soporte del
+modo extendido. Para forzar el uso de la biblioteca de soporte
+extendido desde Windows, puede utilizar al iniciar su
+aplicaci¢n el modificador +X del cargador.
+----------------------------------------------------------
+
+===========================
+Parte 5: Mensajes de error
+===========================
+
+Mensaje: "Funci¢n no disponible"
+
+Pregunta 1
+
+Mi archivo ejecutable se ejecuta correctamente en la versi¢n de
+desarrollo de FoxPro, pero al ejecutar la aplicaci¢n aut¢noma
+aparece el mensaje de error "Funci¢n no disponible". ®C¢mo
+puedo corregir este problema?
+
+Respuesta 1.1
+
+Recibir† el mensaje de error "Funci¢n no disponible" cuando
+utilice comandos, funciones y men£s que requieran la versi¢n de
+desarrollo de FoxPro. Consulte la lista "Caracter°sticas no
+disponibles en aplicaciones runtime" (Features Not Available in
+Distributed Applications) del manual del usuario del Kit de
+distribuci¢n de FoxPro para ver una lista de estos comandos y
+funciones. Entre ellos se incluyen BUILD APP, BUILD EXE, BUILD
+PROJECT, COMPILE, FILER, CREATE/MODIFY MENU, CREATE/MODIFY
+QUERY, CREATE/MODIFY SCREEN, SET VIEW ON y SUSPEND, as° como
+funciones espec°ficas del entorno interactivo de desarrollo,
+como las ventanas Seguimiento, Depuraci¢n, Comandos y Ver.
+
+Respuesta 1.2
+
+Recibir† el mensaje de error "Funci¢n no disponible" cuando
+utilice comandos que contengan sustituci¢n macro en un archivo
+.EXE aut¢nomo. Cuando compile un archivo .EXE aut¢nomo, el
+compilador s¢lo incluir† el c¢digo necesario para ejecutar los
+comandos incluidos expl°citamente en la aplicaci¢n. Si existe
+sustituci¢n macro en cualquier lugar de una l°nea de c¢digo, se
+omitir† toda esa l°nea, ya que FoxPro no "ve" expl°citamente el
+comando mencionado por la variable sustituida por la macro. El
+resultado es que el c¢digo para ejecutar el comando sustituido
+no se incorpora al archivo .EXE.
+
+Los ejemplos siguientes ilustran dos mÇtodos para asegurarse de
+que se incluyan en su archivo .EXE compilado los comandos
+sustituidos por macros:
+
+Ejemplo 1
+
+Como desarrollador, quiz† desee permitir al usuario elegir
+informes o etiquetas almacenando la opci¢n "informe" o
+"etiqueta" en una variable de memoria llamada m.salida.
+Entonces, podr°a almacenar el nombre del archivo en la variable
+de memoria m.archivo. Deber°a incluir el comando siguiente para
+ejecutar el informe o las etiquetas en su aplicaci¢n:
+
+&salida FORM &archivo TO PRINT NOCONSOLE
+
+Si usa este c¢digo, el compilador del Kit de distribuci¢n
+crear† correctamente un archivo .EXE aut¢nomo. Sin embargo,
+cuando FoxPro intente ejecutar este comando, aparecer† un error
+"Funci¢n no disponible" en tiempo de ejecuci¢n porque el c¢digo
+de los comandos REPORT FORM y LABEL FORM no est† incluido en el
+archivo .EXE. Para evitar este problema, incluya la siguiente
+instrucci¢n If al principio de su aplicaci¢n:
+
+  IF .F.
+    REPORT FORM ficticio
+    LABEL FORM ficticio
+  ENDIF
+
+Los nombres de archivo no tienen por quÇ existir. La
+instrucci¢n IF .F. garantiza que el c¢digo nunca se ejecutar†.
+Simplemente est† haciendo visibles estos comandos ante el
+compilador.
+
+Ejemplo 2
+
+El siguiente ejemplo de c¢digo ilustra el uso de la sustituci¢n
+macro para el comando PACK. Puesto que el c¢digo no emite
+expl°citamente el comando PACK, FoxPro no incluye el c¢digo
+necesario en el archivo .EXE aut¢nomo. Cualquier intento de
+ejecutar el comando PACK desde la sustituci¢n macro fallar†.
+
+prueba ="pack"
+&prueba
+
+Para resolver esta situaci¢n, cree otro procedimiento como el
+siguiente e incl£yalo en el proyecto.
+
+procedure addon
+pack
+return
+----------------------------------------------------------
+
+Mensaje: "Dynamic memory exhausted"
+
+Pregunta 1
+
+®Cu†l es la causa y la soluci¢n de que aparezca un mensaje de
+error "Dynamic memory exhausted" (No queda memoria din†mica) al
+compilar un archivo .EXE aut¢nomo?
+
+Respuesta 1
+
+Este mensaje de error lo env°a el vinculador (linker) WATCOM,
+que es una de las herramientas del Kit de distribuci¢n de
+FoxPro empleadas para crear aplicacione aut¢nomas. El mensaje
+aparece cuando la cantidad de memoria convencional disponible
+es demasiado baja. El vinculador WATCOM (WLINK8.EXE) s¢lo
+utiliza memoria convencional.
+
+Si el archivo CONFIG.FP contiene la instrucci¢n DOSMEM=ON,
+edite el archivo para quitar dicha instrucci¢n. Si el archivo
+CONFIG.FP no contiene ninguna instrucci¢n DOSMEM, edite los
+archivos AUTOEXEC.BAT y CONFIG.SYS para quitar los
+controladores de dispositivos y las aplicaciones residentes en
+memoria que no sean necesarios, con el fin de ampliar al m†ximo
+la memoria convencional disponible.
+----------------------------------------------------------
+
+Mensaje: "Fallo en comando de v°nculo"
+
+Pregunta 1
+
+Cuando intento generar un archivo ejecutable aparece el mensaje
+de error "Fallo en comando de v°nculo" (Link command failed).
+®C¢mo puedo corregir este problema?
+
+Respuesta 1
+
+Si aparece este mensaje de error, compruebe lo siguiente:
+
+a. Aseg£rese de que dispone de suficiente memoria convencional.
+Modifique los archivos CONFIG.SYS y AUTOEXEC.BAT para liberar
+memoria convencional.
+
+b. Aseg£rese de que hay suficiente espacio en disco disponible.
+
+c. Incremente el n£mero de controladores de archivo disponibles
+para Microsoft FoxPro para MS-DOS. Con este fin, puede
+modificar la instrucci¢n FILES del archivo CONFIG.SYS para
+incrementar el n£mero de archivos disponibles. En el entorno
+NetWare de Novell, modifique la instrucci¢n FILE HANDLES del
+archivo SHELL.CFG para incrementar el n£mero de archivos
+disponibles.
+
+d. Si el archivo AUTOEXEC.BAT carga la utilidad SHARE,
+incremente los valores especificados por los par†metros /F y
+/L. Por ejemplo:
+
+   SHARE /F:5120 /L:500
+
+e. Aseg£rese de que FoxPro puede encontrar su archivo
+COMMAND.COM. Modifique la instrucci¢n SHELL del archivo
+CONFIG.SYS para especificar el modificador de opci¢n /P
+(permanente). Aseg£rese de que SHELL= o COMSPEC= est† ajustado
+para la ruta de acceso correcta para COMMAND.COM.
+
+f. Aseg£rese de que los siguientes archivos se encuentran en un
+directorio especificado en la variable de entorno PATH de
+MS-DOS dentro del archivo AUTOEXEC.BAT:
+
+   WLINK8.EXE y FOXSWAP.COM.
+
+g. Si est† ejecutando la versi¢n extendida de FoxPro, quite la
+instrucci¢n DOSMEM=ON (si est† presente) del archivo CONFIG.FP.
+----------------------------------------------------------
+
+======================================================
+Parte 6: Nota para el usuario sobre el uso del espa§ol
+======================================================
+
+Al terminar el siglo XX habr† en el mundo cerca de 500 millones
+de personas que tendr†n el espa§ol (o castellano) como lengua
+materna. Esta expansi¢n se ver†, sin embargo, envuelta en
+numerosas dificultades y conflictos idiom†ticos. Algunos de los
+peligros que acosan al espa§ol son: el influjo del inglÇs, el
+mal uso que del mismo hacen los medios de comunicaci¢n y,
+quiz†s el m†s importante y relacionado con el primero, los
+vac°os existentes en el vocabulario tÇcnico.
+
+El campo de la inform†tica o computaci¢n es un motor continuo
+de creaci¢n de nueva terminolog°a proveniente, casi en su
+totalidad, del inglÇs. A esto se suma otro problema: la
+existencia de inevitables peculiaridades y variedades
+lingÅ°sticas que caracterizan a los diversos pa°ses
+hispanoparlantes. Si bien es verdad que las diferencias son
+m°nimas y adem†s se circunscriben en su mayor parte al
+vocabulario (que es la parte que menos altera una lengua),
+tambiÇn es verdad que dichas "diferencias" pueden crear en el
+usuario la sensaci¢n de que est† leyendo un manual "hecho para
+otro pa°s" y sentirlo como ajeno.
+
+En Microsoft somos conscientes de todos estos problemas, por lo
+que a la hora de "adaptar" (y no s¢lo traducir) un programa al
+castellano, tratamos de aunar la lengua tanto como sea posible,
+buscando un espa§ol que pueda ser entendido, por ejemplo, lo
+mismo en Venezuela o Argentina que en MÇxico o Espa§a. QuÇ duda
+cabe que la b£squeda de una "norma com£n", conlleva, a menudo,
+el rechazo de numerosos usuarios que encuentran la terminolog°a
+ajena y hasta jocosa, y que preferir°an ver recogidas las
+peculiaridades lingÅ°sticas de su propio pa°s en lugar de una
+traducci¢n m†s general.
+
+As°, por ejemplo, para los usuarios de Espa§a el empleo del
+tÇrmino computadora en lugar de ordenador suena chocante e
+incluso ajeno, aunque es entendido por todos; sin embargo, el
+galicismo ordenador (Fr. ordinateur) queda bien lejos de los
+pa°ses latinoamericanos como para haber podido asentarse en
+ellos, habiÇndolo hecho en su lugar el anglicismo computadora
+(Ing. computer). Del mismo modo, un anglicismo como reporte
+(Ing. report) tan com£n en hispanoamÇrica, tiene su equivalente
+castellano informe, tambiÇn comprendido en toda AmÇrica Latina.
+
+Se tratar°a pues de elegir el tÇrmino que, aunque un poco ajeno
+o extra§o, pueda ser comprendido por todos los usuarios sin
+importar de quÇ pa°s se trate. Se recogen a continuaci¢n
+algunos tÇrminos conflictivos:
+
+InglÇs		  Espa§a		 AmÇrica Latina
+----------------  ---------------------  ----------------------
+Backup		  Copia de seguridad	 Copia de respaldo
+BBS		  Bolet°n Electr¢nico	 Tablero de mensajes
+Environment	  Entorno		 Ambiente
+File		  Fichero		 Archivo
+Mouse		  Rat¢n 		 Mouse
+Press		  Pulsar		 Presionar/Oprimir
+Plotter 	  Trazador gr†fico	 Graficador
+Word Processing   Tratamiento de textos  Procesador de palabras
+
+Aunque a primera vista pudiera parecer, viendo la tabla, que
+existen dos normas claras (Espa§a opuesta al resto de
+LatinoamÇrica), esto no es totalmente cierto. Si bien es verdad
+que tanto por la proximidad geogr†fica, como por el influjo m†s
+acusado del inglÇs sobre determinados pa°ses hispanoamericanos,
+una gran cantidad de tÇrminos se han hecho comunes en estos
+pa°ses, tambiÇn es cierto que no existe una norma com£n
+latinoamericana. As°, un usuario venezolano puede sentir una
+palabra mexicana como m†s cercana que su correspondiente
+espa§ola, pero tambiÇn puede suceder al revÇs con otro tÇrmino
+que sea propio y restringido a MÇxico. Otros pa°ses como Chile
+o Argentina, m†s alejados geogr†ficamente del influjo del
+inglÇs, pueden identificarse m†s con la terminolog°a que se
+emplea en Espa§a.
+
+Lo mismo sucede con los ejemplos que aparecen en los manuales.
+Los productos en espa§ol van destinados a todos los pa°ses
+hispanoparlantes y por ello nos tenemos que hacer eco de las
+variedades y peculiaridades existentes a la hora de elegir los
+nombres de localidades, personas, direcciones, etc.
+
+Un problema concreto, que afecta principalmente a los usuarios
+mexicanos, es el de los separadores decimales y de miles. En
+MÇxico se sigue la norma de EE.UU. de separar los decimales con
+un punto y los millares con una coma, esta norma es minoritaria
+en AmÇrica Latina y no se aplica en Espa§a. En este caso, la
+elecci¢n es clara a favor de la £ltima y, aunque el programa
+siempre deja al usuario elegir la configuraci¢n deseada, en los
+ejemplos tenemos que tomar partido por una opci¢n, por lo que
+los usuarios mexicanos deber†n tener esto es cuenta y cambiar
+adecuadamente los puntos por comas y viceversa.
+
+Otro problema que se plantea es el de los usuarios habituados a
+trabajar con las versiones inglesas. A menudo estos usuarios
+encuentran la traducci¢n de los comandos, men£s, etc.
+inadecuada o confusa respecto a su correspondiente inglesa.
+Este es un tipo de usuario que no est† acostumbrado a trabajar
+con programas en espa§ol ni a utilizar terminolog°a traducida.
+La importancia de la traducci¢n de los productos va mucho m†s
+all† del mero entendimiento de los mismos por parte del
+usuario; demuestra adem†s que cualquier lengua (y en nuestro
+caso el espa§ol) puede ser una lengua tÇcnica si se desarrolla
+suficientemente y ayuda a crear este vocabulario cient°fico-
+tÇcnico tan necesario para el futuro.
+
+Hagamos entre todos del espa§ol una lengua universal tratando
+de aunar esfuerzos con el objetivo de evitar, en la medida de
+lo posible, por una parte ese vac°o en el vocabulario tÇcnico y
+por otra el surgimiento y adopci¢n de nuevos tÇrminos en inglÇs
+sin su correspondiente adaptaci¢n al espa§ol. Somos 300
+millones de hablantes que compartimos la misma lengua y todos
+tenemos que sentirnos orgullosos y responsables de ella.
+
+		     =====================
+		     Final de LEAME_KD.TXT
+		     =====================
+

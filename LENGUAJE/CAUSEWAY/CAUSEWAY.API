@@ -1,0 +1,115 @@
+#define SUCCEED 1
+#define FAIL    0
+
+typedef unsigned int SELECTOR;
+typedef long         REGISTER32;
+typedef int          REGISTER16;
+typedef long         LINEAR;
+typedef unsigned int RMSEGMENT;
+
+typedef struct
+{
+   SELECTOR       Base0;         // Selector for 0:0, 4GB limit
+   SELECTOR       PSP;           // Selector for program's PSP
+   unsigned int   DTBSize;       // Size of DOS transfer buffer
+   unsigned int   DTBRealSeg;    // Real mode segment of DTB
+   void *         DTBAddr;       // Protected mode address of DTB
+   unsigned int   SysFlags;      // Bit-mapped system flags (see manual)
+} SYSINFO;
+
+typedef struct                   // Used by _cwGetSelDet() and _cwSetSelDet()
+{
+   LINEAR         Base;          // Linear base
+   unsigned long  Limit;         // Limit in bytes
+} SELDET;
+
+typedef struct                   // Used by _cwIntXX
+{
+   REGISTER32  EDI;
+   REGISTER32  ESI;
+   REGISTER32  EBP;
+   long        Reserved;
+   REGISTER32  EBX;
+   REGISTER32  EDX;
+   REGISTER32  ECX;
+   REGISTER32  EAX;
+   REGISTER16  Flags;
+   SELECTOR    ES;
+   SELECTOR    DS;
+   SELECTOR    FS;
+   SELECTOR    GS;
+   REGISTER16  IP;
+   SELECTOR    CS;
+   REGISTER16  SP;
+   SELECTOR    SS;
+} RMRL;
+
+typedef struct
+{
+   char cwVerMajor;
+   char cwVerMinor;
+} CWVERSION;
+
+//
+// Function prototypes are below.  Not all API functions have a C interface
+// because they're not relevant to Clipper.  They're still available via
+// ASM if you're interested.
+//
+// Most functions return SUCCEED or FAIL, except for those that need
+// to return an address or selector.  For these functions, the return
+// value will be NULL if the function failed.  A few functions are void.
+//
+
+SELECTOR    pascal   _cwAliasSel( SELECTOR Source );
+int         pascal   _cwCodeSel( SELECTOR Sel );
+void        pascal   _cwFarCallReal( RMRL * RegisterList );
+void *      pascal   _cwGetCallBack( void * CallAddr, RMRL * RegisterList );
+void *      pascal   _cwGetEVect( char VectorNumber );
+SELECTOR    pascal   _cwGetMem( long Size );
+LINEAR      pascal   _cwGetMemLinear( long Size );
+SELECTOR    pascal   _cwGetMemDOS( unsigned int Paragraphs );
+void *      pascal   _cwGetRVect( char VectorNumber );
+SELECTOR    pascal   _cwGetSel( void );
+int         pascal   _cwGetSelDet( SELECTOR Sel, SELDET * SelDet );
+void *      pascal   _cwGetVect( char VectorNumber );
+void        pascal   _cwInfo( SYSINFO * );
+void        pascal   _cwIntXX( char IntNo, RMRL * RegisterList );
+int         pascal   _cwLockMem( LINEAR Addr, long Bytes );
+void        pascal   _cwRelCallBack( void * CallAddr );
+int         pascal   _cwRelMem( SELECTOR Sel );
+int         pascal   _cwRelMemDOS( SELECTOR Sel );
+int         pascal   _cwRelMemLinear( LINEAR Addr );
+int         pascal   _cwRelSel( SELECTOR Sel );
+int         pascal   _cwResMem( SELECTOR Sel, long NewSize );
+int         pascal   _cwResMemDOS( SELECTOR Sel, unsigned int NewSize );
+int         pascal   _cwResMemLinear( LINEAR Addr, long NewSize );
+void        pascal   _cwSetEVect( char VectorNumber, void * Handler );
+void        pascal   _cwSetRVect( char VectorNumber, void * Handler );
+int         pascal   _cwSetSelDet( SELECTOR Sel, SELDET * SelDet );
+void        pascal   _cwSetVect( char VectorNumber, void * Handler );
+int         pascal   _cwUnlockMem( LINEAR Addr, long Bytes );
+
+//
+// These functions aren't part of of the "standard" API, but they may be
+// useful and have been added to the Clipper implementation of CauseWay.
+//
+
+void        pascal   _cwVersion( CWVERSION * );
+char *      pascal   _cwVersionZ( void );
+
+// The following function maps a real mode segment to a selector, which
+// is useful for accessing conventional memory in protected mode.  The
+// selector is dynamically allocated, so it should be freed when no
+// longer needed via a call to _cwRelSel().
+
+SELECTOR    pascal   _cwSegXXXX( RMSEGMENT RealModeSeg, unsigned int Limit );
+
+// The following functions make it possible to do direct video writes.
+// They provide selectors that map to various video-related real mode
+// segments.  These functions use statically allocated selectors which
+// should NOT be freed.  Multiple calls to these functions will always
+// return the same selector.
+
+SELECTOR    pascal   _cwSegA000( void );
+SELECTOR    pascal   _cwSegB000( void );
+SELECTOR    pascal   _cwSegB800( void );

@@ -1,0 +1,261 @@
+  READ.ME               Blinker 4.0 Release Notes               96.03.23
+  -------               -------------------------               --------
+
+  Welcome to Blinker 4.0. A number of important changes have been made
+  to Blinker since the printed documentation, so please read the
+  following sections carefully, and study the new sections in the
+  Windows help file BLINKER.HLP, before calling technical support.
+
+  Of particular importance are the sections on creating DOS extended
+  DLLs, since significant changes and improvements have been made in
+  this area.
+
+Contents
+--------
+  1.  General Notes
+  2.  Running Blinker under Windows.
+  3.  Instructions for specific compilers
+  4.  DOS extender notes
+  5.  New commands
+  6.  New environment settings
+  7.  New error messages
+  8.  Credits
+
+  1. General Notes
+  ----------------
+
+  Blinker fully supports the creation of 16 bit OS/2 .EXE and .DLL
+  files. To create OS/2 .EXEs and .DLLs simply create a link file as
+  documented in the manual and use the module definition file(s) from
+  your current OS/2 linker.
+
+  The examples for the IMPORTS command have been updated.
+
+  The default EXETYPE is a DOS extended program, so EXETYPE WINDOWS must
+  be included in the module definition commands for all Windows
+  programs.
+
+
+  2. Running Blinker under Windows
+  --------------------------------
+
+  Blinker automatically senses the environment in which it is being run,
+  and can run as both a Windows and a DOS program. To use Blinker from
+  the DOS command line, simply type BLINKER like any other DOS program,
+  and this will load and run BLINKER.EXE as a DOS program.
+
+  To use Blinker as a Windows program, simply set up an icon or short
+  cut for BLINKER.EXE with the appropriate command line, and Blinker
+  will run as a Windows program when the icon is selected. In addition,
+  the `Press any key' box displayed when the Windows version of Blinker
+  finishes linking can be disabled by adding the BATCH link script
+  command to the link script file or to the command line.
+
+  The automatic detection of Windows programs by Windows 95 and Windows
+  NT causes BLINKER.EXE to always run as a Windows program, even from a
+  DOS box. For this reason, the file BLINKER.COM has been provided to
+  ensure that Blinker runs as a DOS program from a DOS prompt. When
+  BLINKER is typed at the DOS prompt with no extension, DOS will load
+  and run BLINKER.COM in preference to BLINKER.EXE, since it looks for
+  .COM files before .EXE files.
+
+  Alternatively, the configuration program BLICFG.EXE can be used to set
+  the operating system flag in the BLINKER.EXE header to DOS only,
+  preventing it from ever running as a Windows program until the flag is
+  reset. Run BLICFG /XD to set the BLINKER.EXE operating system to DOS
+  only, or BLICFG /XW to reset it back to the default of Windows,
+  allowing it to run as both a Windows and a DOS program.
+
+  3. Instructions for specific compilers
+  --------------------------------------
+
+  3.1. Borland C++ 4.x
+  --------------------
+
+  SEARCHing of the Borland C++ libraries or other libraries created with
+  TLIB 4.x is no longer necessary, nor is the link command
+  NOTABLEOFCONTENTS. Blinker now fully supports these types of
+  libraries.
+
+  The OBJ subdirectory contains the .OBJ files FP7BCPxx.OBJ which must
+  be linked to any protected mode programs which use LIB FP87 instead of
+  LIB EMU to force use of the maths coprocessor for floating point
+  operations. These version specific files replace the generic
+  BLXBCP87.OBJ from previous versions of Blinker.
+
+  3.2. CA-Clipper 5.x
+  -------------------
+
+  The ONLY release versions of CA-Clipper 5.x supported by Blinker are
+  5.01a, 5.2d/e and 5.3/a. CA-Clipper versions 5.2a/b/c are not
+  supported.
+
+  CA-Clipper 5.3 Workbench link templates for real mode, dual mode and
+  extended mode programs are provided in the CLP\TPL subdirectory in
+  files BLIRMD.TPL, BLIDUA.TPL and BLIEXT.TPL respectively. Note that
+  incremental linking will default to ON when using these templates.
+
+  In order to limit the default size of the main .EXE when using
+  CA-Clipper DLLs, none of the extra libraries DBFCDX, DBFNDX, DBFNTX
+  and LLIBG are linked in automatically. The file CLDLLEXT.PRG in the
+  CLP subdirectory can be modified, compiled and linked to the main EXE
+  to force the code in these libraries to be linked in.
+
+  At least one function in the main EXE must be compiled with debugging
+  information to ensure the appropriate debugger functions are linked
+  in.
+
+  To call third party products from a CA-Clipper DLL will require two
+  .OBJ files similar to the BLxCLPnn.OBJ files provided with Blinker in
+  order to resolve the unresolved externals in the DLL and to force the
+  required functions into the main .EXE file. Blinkinc will be working
+  with the vendors to develop these as soon as possible.
+
+  The mechanisms which Clip4Win and FiveWin use for dynamically loading
+  C/ASM DLLs will not work for CA-Clipper code DLLs because CA-Clipper
+  functions do not receive C/ASM parameters and do not return C/ASM
+  values. You must always link with the BLcCLPnn.OBJ files and use the
+  BLILIBLOD() function as described in the previous section.
+
+  By default, CA-Clipper INIT functions in a statically linked DLL are
+  called when (just before) the first call to the DLL is made, rather
+  than when the INIT functions in the main .EXE are called. To force
+  them to be executed before the main program, simply call a dummy
+  function in the DLL on the first line of the main function, or even
+  from an INIT function in the main EXE. This will initialise the DLL
+  and therefore call all the INIT functions in the DLL.
+  
+  3.3. Microsoft C/C++/FORTRAN
+  ----------------------------
+
+  The Microsoft C/C++/FORTRAN graphics libraries for version 5.1 and
+  later are fully supported in protected mode.
+
+  3.4. Microsoft PASCAL
+  ---------------------
+
+  DOS extended programs can be created with Microsoft PASCAL 4.0 using
+  the protected mode library BLXMSC51.LIB (Microsoft C 5.1).
+
+  3.5. Stony Brook Compilers
+  --------------------------
+
+  When using overlays, the startup module must be in the root.
+
+  Modula 2
+
+  When using overlays, compile using the LARGE model:
+
+  m2 myprog.mod /CODE:L
+
+  Pascal+
+
+  When using overlays, compile using the LARGE model, and place constants in a separate
+  segment:
+
+  ppc myprog.pas //CODE:L //CONSTANT:L
+
+  3.6. Watcom C/C++ 10.x
+  ----------------------
+
+  Watcom C++ 10.x (16 bit) is fully supported in real mode, protected
+  mode and dual mode using the library BLXWCC10.LIB.
+
+  Note that the file FP7WCC10.OBJ MUST be explicitly linked in addition
+  to BLXWCC10.LIB when NO floating point emulation is required in a
+  protected mode program, ie when compiling with options -fpc, -fpi87,
+  -fp2 or -fpr.
+
+  The WATCOM resource compiler WRC requires the -zm option to output MS
+  format 16 bit resources which can then be used with the Blinker RC
+  command.WRC must be used for the second resource compiler pass with 32
+  bit programs, however, because it uses a non standard 32 bit resource
+  file format.
+
+  4. DOS extender notes
+  ---------------------
+
+  4.1 DOS extended DLLs
+  ---------------------
+
+  A number of important changes have been made to Blinker since the
+  printed documentation, especially in regard to creating DOS extended
+  DLLs, so please study the new sections in the Windows help file
+  BLINKER.HLP before attemting to create DOS extended DLLs.
+
+  4.2. Add on / 3rd party libraries
+  ---------------------------------
+
+  Please note that many add on libraries written in C or Assembler will
+  require updates to allow them to be used in protected mode and dual
+  mode programs.
+
+  When a library is overlaid in a Dual mode program, a special link
+  script or a root portion of the library may be required, in the same
+  way as with a normal overlaid program. Please ensure that you are
+  using the correct link script or library file.
+
+  The file 3RDPARTY.DOC on the distribution disk contains the latest
+  information we have available. The information was supplied by the
+  vendors concerned, so is provided on an as is basis and Blink, Inc
+  makes no guarantee that the information is correct.
+
+  5. New commands
+  ---------------
+
+  None
+
+
+  6. New environment settings
+  ---------------------------
+
+  None
+
+
+  7. New error messages
+  ---------------------
+
+  1218: symbol <symbolname> was not linked to the program
+
+  This message indicates that the specified symbol name was not linked
+  to the main .EXE file but was referenced from a .DLL. This message
+  will typically only occur with CA- Clipper programs.
+
+  Ensure that one of the modules linked to the main .EXE file contains a
+  reference to the specifed symbol name. The code which does so does not
+  actually have to be executed, but it must be linked in order to ensure
+  that the appropriate run time functions are included in the .EXE file.
+
+  1219: BLXCLPnn.OBJ must be linked to the main .EXE
+
+  This message indicates that the program attempted to use a CA-Clipper
+  .DLL but the appropriate BLXCLPnn.OBJ was not linked to the main .EXE
+  file. This message will only occur with CA-Clipper programs.
+
+  Add the command FILE BLXCLPnn, where nn represents the version of
+  CA-Clipper being used, at the end of the FILE commands in the link
+  script file for the main .EXE.
+
+  8. Credits
+  ----------
+
+  Blink, Inc                                      Blink, Inc Ltd.
+  8001 West Broad Street,                         P.O. Box 9
+  Richmond,                                       Penarth,
+  VA 23294,                                       South Glamorgan,
+  USA.                                            UK. CF64 5XF
+  Tel (804) 747-6700                              Tel +44 (1222) 712444
+  Fax (804) 747-4200                              Fax +44 (1222) 700888
+  BBS (804) 747-7333
+
+  The installation program used to install Blinker, INSTALL, is licensed
+  software provided by Knowledge Dynamics Corp, P.O. Box 780068, San
+  Antonio, Texas, 78278 (USA). INSTALL is Copyright c 1987-1994 by
+  Knowledge Dynamics Corp which reserves all copyright protection
+  worldwide. INSTALL is provided to you for the exclusive purpose of
+  installing Blinker. Blinkinc is exclusively responsible for the
+  support of Blinker, including support during the installation phase.
+  In no event will Knowledge Dynamics Corp provide any technical
+  support for Blinker.
+
+<--- End of file --->

@@ -1,0 +1,1137 @@
+                           LEAME.TXT
+*************************************************************
+                   Notas de revisi¢n para
+ 
+     Microsoft(R) FoxPro(R) para MS-DOS(R) Versi¢n 2.6
+
+(C)1994 Microsoft Corporation. Reservados todos los derechos.
+
+Este archivo README proporciona informaci¢n no incluida en el 
+archivo de Ayuda en pantalla ni en la documentaci¢n impresa de 
+FoxPro, y contiene correcciones a ambos. La informaci¢n de la 
+Ayuda est† m†s actualizada que la documentaci¢n impresa. 
+*************************************************************
+
+
+=========
+CONTENIDO
+=========
+
+Parte   Descripci¢n
+-----   -----------
+  1     Nuevas caracter°sticas de FoxPro 2.6
+  2     Notas sobre la instalaci¢n
+  3     Funciones y comandos nuevos y mejorados
+  4     Notas acerca del Administrador de cat†logos
+  5     Notas acerca de los Asistentes
+  6     Soporte de teclas de macro en FoxPro 2.6
+  7     FoxPro y otras aplicaciones
+  8     Recomendaciones internacionales y multiplataforma
+  9     Preguntas y respuestas sobre la instalaci¢n
+ 10     Preguntas y respuestas sobre soporte tÇcnico
+ 11     Nota para el usuario sobre el uso del espa§ol
+
+----------------------------------------------------------
+
+
+=============================================
+Parte 1: Nuevas caracter°sticas de FoxPro 2.6
+=============================================
+
+La versi¢n 2.6 de Microsoft FoxPro incluye las siguientes 
+caracter°sticas nuevas:
+
+   *  Una interfaz, el Administrador de cat†logos, que 
+proporciona un c¢modo acceso a los archivos y funciones de base 
+de datos, y que le permite convertir f†cilmente archivos de 
+dBASE(R).
+
+   *  Una colecci¢n de Asistentes para simplificar las tareas 
+comunes de base de datos.
+
+   *  Incorporaciones al lenguaje que ofrecen compatibilidad 
+con el lenguaje dBASE IV(R).
+
+FoxPro versi¢n 2.6 incluye la documentaci¢n impresa ya 
+existente de la versi¢n 2.5, as° como importantes 
+actualizaciones al archivo de Ayuda en las que se describe la 
+nueva funcionalidad de la versi¢n 2.6. Para obtener m†s 
+informaci¢n al respecto, consulte el tema de Ayuda "Novedades 
+desde FoxPro 2.5".
+
+Importante: el Administrador de cat†logos de FoxPro no est† 
+disponible en la versi¢n est†ndar de 16 bits de FoxPro. Para 
+convertir archivos de dBASE III(R) y dBASE IV en la versi¢n 
+est†ndar de 16 bits, seleccione Convertir archivos de dBASE... 
+en el men£ Ejecutar. Para obtener m†s ayuda acerca de la 
+conversi¢n de archivos, presione F1 en este cuadro de di†logo.
+----------------------------------------------------------
+
+
+===================================
+Parte 2: Notas sobre la instalaci¢n
+===================================
+
+Hay tres tipos de instalaciones para FoxPro para MS-DOS: 
+instalaci¢n normal, instalaci¢n administrativa e instalaci¢n en 
+estaci¢n de trabajo. Las instrucciones para la instalaci¢n 
+normal se incluyen en la documentaci¢n de FoxPro. Para obtener 
+informaci¢n acerca de las instalaciones administrativa y en 
+estaci¢n de trabajo, consulte el archivo INSTALL.TXT en el 
+disco 1 de FoxPro para MS-DOS.
+
+Instalaci¢n de FoxPro en el sistema operativo Microsoft Windows 
+NT(TM) 
+-------------------------------------------------
+FoxPro para MS-DOS no puede instalarse en una ventana de MS-DOS 
+dentro de Microsoft Windows NT. Para instalar FoxPro para MS-
+DOS, debe ser capaz de iniciar en una partici¢n distinta de MS-
+DOS.
+----------------------------------------------------------
+
+
+================================================
+Parte 3: Funciones y comandos nuevos y mejorados
+================================================
+Algunos comandos y funciones son nuevos en FoxPro 2.6, mientras 
+que otros se han mejorado para ofrecer mayor compatibilidad con 
+dBASE IV(R). Para obtener m†s informaci¢n acerca de estos 
+comandos y funciones, consulte el tema de Ayuda "Comandos y 
+funciones nuevos y mejorados de FoxPro". 
+
+Comandos nuevos/mejorados
+---------------------
+ON BAR
+ON EXIT BAR
+ON EXIT MENU
+ON EXIT PAD
+ON EXIT POPUP
+ON MENU
+ON MOUSE
+ON PAD
+ON POPUP
+SET CPCOMPILE
+SET CPDIALOG
+SET COLLATE
+SET DIRECTORY
+SET FIELDS
+SET FORMAT
+SET KEY
+SET NOCPTRANS
+SET VIEW
+
+Funciones nuevas/mejoradas
+--------------------------
+BARCOUNT( )
+BARPROMPT( )
+BLANK
+CPCURRENT()
+CPDBF()
+CPCONVERT()
+DESCENDING( )
+FLDCOUNT( )
+FOR( )
+FTIME( )
+HOME( )
+ID( )
+IDXCOLLATE()
+ISBLANK( )
+ISMOUSE( )
+KEYMATCH( )
+MEMORY(0)
+MEMORY(1)
+MEMORY(2)
+MEMORY(3)
+MEMORY(4)
+MEMORY(5)
+MEMORY(6)
+MEMORY(7)
+PADPROMPT( )
+PCOUNT( )
+PRTINFO( )
+RUN( )
+SET("ATTRIBUTES")
+SET("DIRECTORY")
+SET("DISPLAY")
+SET("LIBRARY")
+SET MBLOCK
+SET("MBLOCK")
+SYS(1037)
+TAG( )
+TAGCOUNT( )
+TAGNO( )
+UNIQUE( )
+WINDOW( )
+
+Variables del sistema nuevas/mejoradas
+--------------------------------------
+_ASSIST
+_SHELL
+----------------------------------------------------------
+
+
+====================================================
+Parte 4: Notas acerca del Administrador de cat†logos
+====================================================
+
+Nombres reservados en el Administrador de cat†logos
+---------------------------------------------------
+Al igual que cualquier otra aplicaci¢n de FoxPro, el 
+Administrador de cat†logos llama y ejecuta procedimientos y 
+programas cuyos nombres pueden interferir con otros 
+procedimientos y programas definidos por el usuario.
+
+Cuando ejecute un programa o procedimiento, FoxPro buscar† 
+dicho programa o procedimiento en un determinado orden. Este 
+orden incluye el archivo actual, as° como los programas que se 
+ejecutaron antes que el actual, incluyendo el propio 
+Administrador de cat†logos.
+
+A continuaci¢n se ofrece una lista de los nombres de 
+procedimientos y programas que pueden producir errores si se 
+ejecutan dentro del Administrador de cat†logos.
+
+ABORT
+ACTTHERM
+ADDALIAS
+ADDBS
+ADDFILE
+ADDTASK
+ANALYZE
+CLEANUP
+CONTROL
+DELUSER
+DUMMY
+ERRHAND
+ESCHAND
+EXECUTE
+EXPORT
+FILEEXT
+FINDFILE
+FORCEEXT
+GETSQL
+GETSTAMP
+GETWPARM
+IMPORT
+INDEX
+ISMAC
+ISSPR
+JUSTEXT
+JUSTFNAME
+JUSTPATH
+MENUPROC
+MIGRATE
+MODIFY
+MSGBOX
+ORDER
+PARSFIL
+PRINT
+REMOVE
+SAVEPREF
+SETTINGS
+SETTOPIC
+SHUTDOWN
+TOUCHED
+TRASHCAN
+UPDTHERM
+VRUN 
+
+
+Rutinas de bibliotecas API y el Administrador de cat†logos
+----------------------------------------------------------
+Si utiliza alguna rutina a la que se llama cuando se abre o 
+cierra una biblioteca API, debe tener en cuenta los siguientes 
+comportamientos del Administrador de cat†logos.
+
+El Administrador de cat†logos abre y cierra las bibliotecas API 
+en las siguientes ocasiones:
+
+* Cuando se inicia el Administrador de cat†logos se cierran 
+todas las bibliotecas API.
+
+* Cuando se ejecuta un programa desde el Administrador de 
+cat†logos se abren todas las bibliotecas API que estuvieran 
+abiertas antes de que se iniciara el Administrador de 
+cat†logos. Cuando el programa termina, se cierran las 
+bibliotecas API.
+
+* Al salir del Administrador de cat†logos se abren todas las 
+bibliotecas API que estuvieran abiertas antes de que se 
+iniciara el Administrador de cat†logos.
+----------------------------------------------------------
+
+
+=======================================
+Parte 5: Notas acerca de los Asistentes
+=======================================
+Ejecutar Asistentes en la versi¢n est†ndar de 16 bits de FoxPro
+---------------------------------------------------------------
+Para ejecutar los Asistentes de FoxPro en la versi¢n est†ndar 
+de 16 bits de FoxPro necesita tener al menos 525 KB de memoria 
+convencional libre. TambiÇn puede ejecutar los Asistentes en la 
+versi¢n extendida de 32 bits de FoxPro.
+
+Campos memo y general, y el Asistente para etiquetas
+----------------------------------------------------
+En una etiqueta creada con el Asistente para etiquetas no se 
+pueden incluir campos memo ni general. Para agregar campos memo 
+y general, debe modificar la etiqueta con el Generador de 
+informes.
+
+Modificar en Microsoft Windows NT(TM) elementos creados con un 
+Asistente
+----------------------------------------------------------
+Si est† utilizando el sistema operativo Microsoft Windows NT, 
+podr† usar los Asistentes para crear tablas, consultas, 
+pantallas, informes o etiquetas. Para modificar elementos 
+creados con un Asistente debe utilizar la herramienta avanzada 
+de FoxPro apropiada, como por ejemplo el Generador de informes, 
+el Generador de pantallas o RQBE.
+----------------------------------------------------------
+
+
+=================================================
+Parte 6: Soporte de teclas de macro en FoxPro 2.6
+=================================================
+En FoxPro 2.6, las combinaciones de teclas ALT+1 a ALT+9 no 
+pueden utilizarse para definir macros. Para ver una lista de 
+las combinaciones de teclas admitidas en FoxPro 2.6, consulte 
+el tema ON KEY LABEL de la Ayuda.
+----------------------------------------------------------
+
+
+====================================
+Parte 7: FoxPro y otras aplicaciones
+====================================
+Importar hacia FoxPro hojas de c†lculo de Microsoft Excel 
+----------------------------------------------------------
+FoxPro puede importar archivos de hoja de c†lculo desde 
+Microsoft Excel versi¢n 4.0. Para importar hojas de c†lculo 
+desde Microsoft Excel versi¢n 5.0, debe guardarlas previamente 
+como archivos de la versi¢n 4.0. En la tabla, las columnas de 
+la hoja de c†lculo se convierten en campos y las filas de la 
+hoja de c†lculo se convierten en registros. 
+
+Ejecutar aplicaciones de dBASE en FoxPro
+----------------------------------------
+Para ejecutar en FoxPro aplicaciones de dBASE III y IV, debe 
+convertir en primer lugar los componentes individuales y volver 
+a compilarlos en FoxPro.
+
+Para convertir archivos de dBASE III y dBASE IV en la versi¢n 
+extendida de 32 bits, utilice el Administrador de cat†logos de 
+FoxPro. Para obtener informaci¢n acerca de la conversi¢n de 
+archivos de dBASE en el Administrador de cat†logos, consulte el 
+tema de Ayuda "Cambiar desde dBASE".  
+
+Para convertir archivos de dBASE III y dBASE IV en la versi¢n 
+est†ndar de 16 bits, seleccione Convertir archivos de dBASE... 
+en el men£ Ejecutar. Para obtener m†s Ayuda acerca de la 
+conversi¢n de archivos, presione F1 en este cuadro de di†logo.
+----------------------------------------------------------
+
+
+=========================================================
+Parte 8: Recomendaciones internacionales y multiplataforma
+=========================================================
+Consulte el tema de Ayuda "Internacional/Multiplataforma" para 
+obtener la informaci¢n m†s actualizada acerca de las p†ginas de 
+c¢digos y las secuencias de ordenaci¢n.
+
+Marcar tablas con p†ginas de c¢digos en el Administrador de 
+cat†logos
+--------------------------------------------------
+Nota: esta secci¢n s¢lo es aplicable si est† utilizando p†ginas 
+de c¢digos para desarrollo multiplataforma.
+
+Para asegurar que los caracteres acentuados de una tabla se 
+muestran correctamente en la plataforma actual, la tabla deber† 
+estar marcada con una p†gina de c¢digos. En el Administrador de 
+cat†logos, para marcar una tabla con una p†gina de c¢digos (si 
+dicha tabla no est† marcada con ninguna p†gina de c¢digos), 
+aseg£rese de que lo siguiente es cierto:
+
+1.  SET EXCLUSIVE es ON. La configuraci¢n exclusiva puede 
+establecerse en el cuadro de di†logo Configuraci¢n del 
+Administrador de cat†logos.
+2.  El archivo de configuraci¢n (CONFIG.FP) incluye la l°nea 
+CODEPAGE = AUTO
+
+Cuando intente utilizar la tabla sin una p†gina de c¢digos en 
+el Administrador de cat†logos, aparecer† un cuadro de di†logo 
+que le permitir† especificar la plataforma en la que se cre¢ el 
+archivo. Una vez marcada una tabla con una p†gina de c¢digos, 
+no es necesario marcarla de nuevo. Si no especifica ninguna 
+p†gina de c¢digos, la tabla se mostrar† con la p†gina de 
+c¢digos de la plataforma actual. Para quitar una marca de una 
+tabla, ejecute el programa CPZERO.PRG, que se encuentra en el 
+directorio ra°z de FoxPro.
+----------------------------------------------------------
+
+
+====================================================
+Parte 9: Preguntas y respuestas sobre la instalaci¢n
+====================================================
+
+Preguntas
+---------
+
+1  ®Por quÇ la instalaci¢n de FoxPro se detiene a veces antes 
+   de permitir la instalaci¢n de componentes opcionales?
+2  ®C¢mo puedo instalar archivos adicionales que no especifiquÇ 
+   durante la instalaci¢n?
+3  ®Por quÇ se reinicia FoxPro durante el proceso de 
+   instalaci¢n?
+4  ®QuÇ instrucciones BUFFERS y FILES de MS-DOS son apropiadas 
+   para FoxPro para MS-DOS?
+5  ®Funciona FoxPro para MS-DOS con DOS Protected Mode 
+   Interface (DPMI, Interfaz DOS en Modo Protegido)?
+6  ®QuÇ factores incluyen en la velocidad de inicio de FoxPro?
+7  Aparece el mensaje de error "Demasiados archivos abiertos". 
+   ®C¢mo puedo corregir este problema?
+8  La versi¢n est†ndar de FoxPro para MS-DOS funciona 
+   correctamente en mi computadora, pero cuando cargo la 
+   versi¢n extendida de 32 bits aparece el mensaje de error 
+   "Incompatible memory manager". ®A quÇ se debe este problema?
+9  Aparece el mensaje de error "Fallo al ejecutar comando 
+   RUN/!". ®C¢mo puedo corregir este problema?
+10 ®Por quÇ hay en mi disco varios archivos que tienen la 
+   extensi¢n .TMP?
+11 Cuando intento iniciar una segunda instancia de FoxPro para 
+   MS-DOS dentro Windows, aparece el mensaje de error "Cannot 
+   Access File at this Time". Esto s¢lo ocurre cuando la 
+   versi¢n de FoxPro reside en mi unidad local.
+12 Aparece el mensaje de error "Imposible crear el archivo 
+   <ruta>\FOXPRO.EXE" durante la instalaci¢n. ®C¢mo puedo 
+   corregir este problema?
+13 ®Cu†les son los archivos m°nimos necesarios para ejecutar 
+   FoxPro?
+14 Se produce un error "CRC Error" durante la instalaci¢n. 
+   ®C¢mo puedo corregir este error?
+15 Al ejecutar INSTALL /N se produce el error "El archivo 
+   'ADDUSER.APP' no existe". ®C¢mo puedo corregir este error?
+16 Falla la parte de configuraci¢n de INSTALL /N. ®C¢mo puedo 
+   corregir este problema?
+17 ®Por quÇ INSTALL /N pide un disquete?
+18 Cuando escribo INSTALL /N en el s°mbolo del sistema dentro 
+   de Windows aparece un error de memoria. ®QuÇ puedo hacer?
+----------------------------------------------------------
+
+Pregunta 1
+
+®Por quÇ la instalaci¢n de FoxPro se detiene a veces antes de 
+permitir la instalaci¢n de componentes opcionales?
+
+Respuesta 1
+
+Algunas veces, en condiciones de poca memoria el programa de 
+instalaci¢n es incapaz de determinar si debe ejecutar la 
+versi¢n est†ndar (FOXPRO.EXE) o la versi¢n extendida de 32 bits 
+(FOXPROX.EXE) para completar la instalaci¢n. Si est† realizando 
+la instalaci¢n desde Windows, puede salir de Windows para dejar 
+m†s memoria disponible. Si tiene alg£n programa TSR residente 
+en memoria, quitarlo de la memoria puede liberar cierta memoria 
+adicional. Para obtener informaci¢n acerca de la instalaci¢n de 
+componentes opcionales despuÇs de haber instalado FoxPro, 
+consulte la Pregunta 2 en esta secci¢n.
+----------------------------------------------------------
+
+Pregunta 2
+
+®C¢mo puedo instalar archivos adicionales que no especifiquÇ 
+durante la instalaci¢n?
+
+Respuesta 2
+
+Reinicie FoxPro escribiendo FOX en el s°mbolo del sistema y 
+presionando ENTRAR. Inserte en la unidad A cualquiera de los 
+discos del producto e introduzca el siguiente comando en la 
+ventana Comandos de FoxPro:
+
+DO INSTALL
+
+Se le pedir† que inserte el disco o los discos donde se 
+encuentran los archivos adicionales que desee instalar. Si est† 
+intentando realizar la instalaci¢n desde una unidad que no sea 
+la unidad A, despuÇs del mensaje "Anular, Repetir, Descartar?" 
+se le pedir† que seleccione otra unidad de origen.
+----------------------------------------------------------
+
+Pregunta 3
+
+®Por quÇ se reinicia FoxPro durante el proceso de instalaci¢n?
+
+Respuesta 3
+
+Puede que se estÇ ejecutando un programa anti-virus, que haya 
+un conflicto de memoria o que tenga un controlador de v°deo 
+antiguo. Desactive cualquier programa anti-virus o controlador 
+de v°deo antiguo y reintente la instalaci¢n de componentes 
+opcionales seg£n se ha descrito en la Pregunta 2 anterior. 
+Aseg£rese de que est† excluyendo las †reas de memoria 
+necesarias para cargar controladores de v°deo o tarjetas de 
+red. Por ejemplo, si est† cargando EMM386 en su archivo 
+CONFIG.SYS, el par†metro "X=D800-DFFF" del siguiente comando 
+para cargar el controlador de dispositivos reservar† dichos 
+segmentos de memoria:
+ 
+   DEVICE=C:\WINDOWS\EMM386.EXE RAM 2048 X=D800-DFFF
+ 
+Si est† utilizando una versi¢n antigua de su controlador de 
+tarjeta de v°deo, p¢ngase en contacto con el fabricante o 
+utilice el Microsoft Download Service (MSDL) para obtener 
+nuevos controladores. MSDL se describe en la secci¢n "Soporte 
+tÇcnico", m†s adelante.
+
+Si est† realizando la instalaci¢n desde dentro de Windows, 
+pruebe a utilizar otro controlador de v°deo diferente (por 
+ejemplo, el controlador VGA genÇrico, VGA.DRV) y a trabajar sin 
+controladores de v°deo antiguos cargados en los archivos 
+AUTOEXEC.BAT o CONFIG.SYS.
+----------------------------------------------------------
+
+Pregunta 4
+
+®QuÇ instrucciones BUFFERS y FILES de MS-DOS son apropiadas 
+para FoxPro para MS-DOS?
+
+Respuesta 4
+
+Para conseguir el m†ximo rendimiento con FoxPro cuando est† 
+cargado el controlador de dispositivo SMARTDRV, establezca 
+BUFFERS como 10 en el archivo CONFIG.SYS. Un valor superior 
+ser°a redundante, y ocupar°a valiosa memoria que FoxPro podr°a 
+utilizar para proceso.
+
+Si no utiliza un programa de cachÇ de disco como SMARTDRV, 
+deber† asignar suficientes b£fers de MS-DOS como para almacenar 
+todas las entradas de directorio en el subdirectorio donde vaya 
+a trabajar. Normalmente es suficiente el valor 40 para BUFFERS, 
+siempre y cuando el n£mero de archivos de un subdirectorio sea 
+inferior a 250.
+
+La instrucci¢n FILES debe ser siempre al menos 10 m†s que el 
+mayor n£mero de archivos que vaya a tener abiertos a la vez. Le 
+recomendamos que establezca para FILES un valor 40 o superior.
+----------------------------------------------------------
+
+Pregunta 5
+ 
+®Funciona FoxPro para MS-DOS con DOS Protected Mode Interface 
+(DPMI, Interfaz DOS en Modo Protegido)?
+
+Respuesta 5
+
+S°. FoxPro funciona con administradores de memoria que se 
+atienen a DPMI, como Microsoft Windows y EMM386. Si utiliza un 
+administrador de memoria DPMI, podr† controlar la memoria 
+f°sica que utiliza FoxPro especificando la opci¢n MEMLIMIT en 
+su archivo CONFIG.FP. Para obtener m†s informaci¢n acerca de la 
+opci¢n MEMLIMIT, consulte el tema de Ayuda "Cambios en la 
+documentaci¢n desde su impresi¢n".
+----------------------------------------------------------
+
+Pregunta 6
+
+®QuÇ factores incluyen en la velocidad de inicio de FoxPro?
+
+Respuesta 6
+
+El tiempo necesario para cargar e iniciar FoxPro est† 
+relacionado con el tama§o f°sico de FoxPro, la longitud de la 
+ruta de acceso vigente, el n£mero de elementos que FoxPro debe 
+localizar durante el inicio y otros factores. Usted puede 
+controlar muchos de estos elementos. Para ver una explicaci¢n 
+completa de este tema, consulte la informaci¢n sobre 
+optimizaci¢n incluida en la documentaci¢n de FoxPro.
+----------------------------------------------------------
+
+Pregunta 7
+
+Aparece el mensaje de error "Demasiados archivos abiertos". 
+®C¢mo puedo corregir este problema?
+
+Respuesta 7
+
+Si aparece este mensaje de error, utilice una o varias de las 
+estrategias siguientes:
+
+* Incremente el valor de FILES en el archivo CONFIG.SYS.
+* Si est† utilizando una red Novell, incremente el valor de 
+FILE HANDLES en el archivo SHELL.CFG.
+* Si est† utilizando el programa SHARE de MS-DOS, incremente el 
+n£mero de archivos y bloqueos. Por ejemplo, podr°a utilizar 
+SHARE /F: 4096 /L:500 en el archivo CONFIG.SYS.
+----------------------------------------------------------
+
+Pregunta 8
+
+La versi¢n est†ndar de FoxPro para MS-DOS funciona 
+correctamente en mi computadora, pero cuando cargo la versi¢n 
+extendida de 32 bits aparece el mensaje de error "Incompatible 
+memory manager". ®A quÇ se debe este problema?
+
+Respuesta 8
+
+Cuando configure su administrador de memoria, verifique que 
+puede utilizar memoria extendida y que se han establecido los 
+modificadores apropiados. Para obtener m†s informaci¢n sobre la 
+versi¢n extendida de 32 bits de FoxPro, consulte la informaci¢n 
+sobre optimizaci¢n incluida en la documentaci¢n de FoxPro.
+----------------------------------------------------------
+
+Pregunta 9
+
+Aparece el mensaje de error "Fallo al ejecutar comando RUN/!". 
+®C¢mo puedo corregir este problema?
+
+Respuesta 9
+
+Aseg£rese de que el archivo CONFIG.SYS contiene la l°nea 
+siguiente:
+ 
+  SHELL = C:\<ruta>\COMMAND.COM C:\<ruta>\ /P /E:1024
+ 
+Aseg£rese tambiÇn de que la versi¢n correcta de COMMAND.COM 
+reside en el directorio especificado.
+
+Si la l°nea SHELL mostrada ya se encuentra en su archivo 
+CONFIG.SYS, este mensaje de error aparecer† porque FoxPro no 
+dispone de suficiente memoria convencional para ejecutar el 
+comando RUN. Si Çste es el caso, utilice RUN /0 DIR en lugar de 
+RUN DIR. RUN /0 carga autom†ticamente FoxSwap, que hace que 
+toda la memoria convencional disponible sea accesible para 
+FoxPro.
+Para obtener m†s informaci¢n acerca del comando RUN y de 
+FoxSwap, consulte "RUN|! (Comando)" en la Ayuda.
+----------------------------------------------------------
+
+Pregunta 10
+
+®Por quÇ hay en mi disco varios archivos que tienen la 
+extensi¢n .TMP?
+
+Respuesta 10
+
+Cada vez que usted carga FoxPro, Çste crea archivos temporales 
+(.TMP). Estos archivos se eliminan autom†ticamente al salir de 
+FoxPro mediante un cierre normal. Sin embargo, si reinicia la 
+m†quina desde FoxPro o si no tiene derechos de eliminaci¢n para 
+el directorio donde residen los archivos temporales, los 
+archivos .TMP permanecer†n all°. Salga de FoxPro y adquiera los 
+derechos necesarios para eliminar todos estos archivos. Una 
+precauci¢n: otros programas, como Windows, tambiÇn crean 
+archivos .TMP. Para mayor seguridad, compruebe que no haya 
+ninguna otra aplicaci¢n activa cuando elimine los archivos 
+.TMP.
+----------------------------------------------------------
+
+Pregunta 11
+
+Cuando intento iniciar una segunda instancia de FoxPro para MS-
+DOS dentro Windows, aparece el mensaje de error "Cannot Access 
+File at this Time". Esto s¢lo ocurre cuando la versi¢n de 
+FoxPro reside en mi unidad local.
+
+Respuesta 11
+
+El programa SHARE de MS-DOS es la causa m†s com£n de este 
+problema. Algunas formas de eludir este problema incluyen 
+marcar los archivos FOXPRO.EXE y FOXPROX.EXE de FoxPro como de 
+s¢lo lectura, ejecutar FoxPro bajo Windows para Trabajo en 
+Grupo o ejecutar una copia de FoxPro desde una red.
+----------------------------------------------------------
+
+Pregunta 12
+
+Aparece el mensaje de error "Imposible crear el archivo 
+<ruta>\FOXPRO.EXE" durante la instalaci¢n. ®C¢mo puedo corregir 
+este problema?
+
+Respuesta 12
+
+Una causa posible es que los archivos FOXPRO.EXE o FOXPROX.EXE 
+ya exista en dicho directorio y que estÇ marcado como de s¢lo 
+lectura.
+
+Para que el programa de instalaci¢n pueda realizar una 
+instalaci¢n correcta, debe cambiar el nombre del archivo .EXE o 
+bien marcarlo como de lectura/escritura. El comando ATTRIB -R 
+<ruta>\FOXPRO.EXE quitar† el atributo de s¢lo lectura del 
+archivo.
+----------------------------------------------------------
+
+Pregunta 13
+
+®Cu†les son los archivos m°nimos necesarios para ejecutar 
+FoxPro?
+
+Respuesta 13
+
+No todos los archivos que se incluyen en el disco duro durante 
+la instalaci¢n de FoxPro son absolutamente necesarios para el 
+uso del producto. Es posible iniciar FoxPro para MS-DOS con dos 
+£nicos archivos: FOXPRO.EXE y FOXPRO.OVL. En el caso de la 
+versi¢n extendida (32 bits), estos dos archivos pueden 
+reemplazarse por uno solo: FOXPROX.EXE.
+
+A continuaci¢n se enumeran los archivos m°nimos necesarios para 
+ejecutar FoxPro, utilizar los generadores de men£s y pantallas 
+y establecer controladores de impresora.
+
+NOTA: al iniciar FoxPro, Çste crear† los archivos FOXUSER.DBF y 
+FOXUSER.FPT; al generar pantallas o men£s, crear† los archivos 
+.FXP apropiados.
+
+
+Versiones 2.6 (MS-DOS)
+----------------------
+
+   Archivo         Bytes      Comentarios
+   ---------------------------------------------------------
+   DRIVER2.PLB      14029
+   FOXSWAP.COM       5971     S¢lo necesario para la versi¢n 
+                              est†ndar.
+   GENMENU.PRG      57109
+   GENPD.APP       374351
+   GENSCRN.PRG     292613
+   GENXTAB.PRG      29246     S¢lo necesario para tabulaci¢n
+                              cruzada.
+   PSAPI.PLB        24451
+   FOXPRO.EXE      411599
+   FOXPRO.OVL     1424976
+
+------------------------------------------------------------
+
+Pregunta 14
+
+Se produce un error "CRC Error" durante la instalaci¢n. ®C¢mo 
+puedo corregir este error?
+
+Respuesta 14
+
+Al leer un disco, MS-DOS realiza una comprobaci¢n de 
+redundancia c°clica (CRC) para verificar los sectores del 
+disco. CRC es una sofisticada comprobaci¢n de paridad de los 
+datos de cada sector y detectar† la mayor°a de los errores en 
+los datos, como pueden ser bits perdidos o desordenados.
+ 
+Para determinar si hay alg£n problema con los discos:
+ 
+1. Intente la instalaci¢n por segunda vez.
+
+2. Realice la instalaci¢n en una configuraci¢n "limpia" 
+(m°nima).
+
+3. Realice la instalaci¢n en otra m†quina para verificar que no 
+existe un problema de hardware. 
+
+4. Copie los disquetes a un directorio temporal del disco duro 
+y ejecute el programa de instalaci¢n desde este directorio 
+temporal.
+ 
+Si la instalaci¢n sigue fallando, llame al Servicio tÇcnico de 
+Microsoft para pedir ayuda.
+---------------------------------------------------------
+
+Pregunta 15
+
+Al ejecutar INSTALL /N se produce el error "El archivo 
+'ADDUSER.APP' no existe". ®C¢mo puedo corregir este error?
+
+Respuesta 15
+
+El comando INSTALL /N no se ha ejecutado desde el directorio 
+que contiene la instalaci¢n administrativa (INSTALL /A) de 
+FoxPro.
+
+Cuando una instalaci¢n en estaci¢n de trabajo completa la parte 
+b†sica de su instalaci¢n, llama al programa ADDUSER.APP de 
+FoxPro para configurar la estaci¢n de trabajo para el entorno 
+de red. Para que FoxPro cargue y ejecute ADDDUSER.APP, el 
+directorio activo debe ser el directorio donde realiz¢ la 
+instalaci¢n administrativa.
+
+Incluso aunque el directorio donde realiz¢ la instalaci¢n 
+administrativa estÇ en la ruta de acceso de MS-DOS, permitiendo 
+que FoxPro se inicie a s° mismo, puesto que ADDUSER.APP no es 
+un programa ejecutable de MS-DOS (.COM o .EXE), no se puede 
+localizar en dicha ruta de acceso, produciendo por tanto el 
+mensaje de error.
+
+SOLUCION
+
+Vaya a la unidad y el directorio que contenga la instalaci¢n 
+administrativa de FoxPro y escriba "INSTALL /N" (sin las 
+comillas).
+---------------------------------------------------------
+
+Pregunta 16
+
+Falla la parte de configuraci¢n de INSTALL /N. ®C¢mo puedo 
+corregir este problema?
+
+Respuesta 16
+
+El comando "INSTALL /N" (sin las comillas) no se ha ejecutado 
+desde el directorio que contiene la instalaci¢n administrativa 
+(INSTALL /A) de FoxPro.
+
+Vaya a la unidad y al directorio que contengan la instalaci¢n 
+administrativa de FoxPro y vuelva a ejecutar el comando INSTALL 
+/N.
+
+Cuando una instalaci¢n en estaci¢n de trabajo completa la parte 
+b†sica de su instalaci¢n, llama al programa ADDUSER.APP de 
+FoxPro para configurar la estaci¢n de trabajo para el entorno 
+de red. Para que FoxPro cargue y ejecute ADDDUSER.APP, el 
+directorio activo debe ser el directorio donde realiz¢ la 
+instalaci¢n administrativa.
+
+El error recibido depende del directorio desde el cual iniciara 
+INSTALL /N y de si lo est† ejecutando desde un s°mbolo del 
+sistema en Windows desde el propio MS-DOS.
+---------------------------------------------------------
+
+Pregunta 17
+
+®Por quÇ INSTALL /N pide un disquete?
+
+Respuesta 17
+
+El comando INSTALL /N no se ha ejecutado desde el directorio 
+donde se realiz¢ la instalaci¢n administrativa.
+
+Para evitar este problema, utilice una de las soluciones 
+siguientes.
+
+Soluci¢n 1: vaya al directorio donde realiz¢ la instalaci¢n 
+administrativa
+
+Vaya al directorio donde realiz¢ la instalaci¢n administrativa 
+y escriba el comando "INSTALL /N" (sin las comillas).
+
+Por ejemplo, suponiendo que la instalaci¢n administrativa se 
+encuentre en un directorio llamado N:\ADMIN, escriba los 
+siguientes comandos en el s°mbolo del sistema:
+
+   N:
+   CD\ADMIN
+   INSTALL /N
+
+Soluci¢n 2: use SUBST para reasignar la unidad local a otra 
+letra
+
+Si por razones tales como la comprobaci¢n necesita que la 
+instalaci¢n administrativa estÇ situada en un disco duro local 
+y no desea ejecutar el comando INSTALL /N desde el directorio 
+donde realiz¢ la instalaci¢n administrativa, utilice el comando 
+SUBST de MS-DOS para reasignar a otra letra de unidad el 
+directorio que contiene la instalaci¢n administrativa.
+
+Por ejemplo, suponiendo que la instalaci¢n administrativa se 
+encuentre en un directorio llamado C:\ADMIN y que desee crear 
+una instalaci¢n en estaci¢n de trabajo en un directorio llamado 
+C:\ESTAC, escriba lo siguiente en el s°mbolo del sistema:
+
+   SUBST N: C:\ADMIN
+   C:
+   CD\ESTAC
+   N:\INSTALL /N
+
+La instalaci¢n en estaci¢n de trabajo requiere haber realizado 
+previamente una instalaci¢n administrativa. Aunque pida un 
+disquete, la instalaci¢n en estaci¢n de trabajo no se puede 
+realizar mediante los disquetes de instalaci¢n.
+---------------------------------------------------------
+Pregunta 18
+
+Cuando escribo INSTALL /N en el s°mbolo del sistema dentro de 
+Windows aparece un error de memoria. ®QuÇ puedo hacer?
+
+Respuesta 18
+
+En algunos casos, una instalaci¢n administrativa no funcionar† 
+desde un s°mbolo del sistema dentro de Windows. Para ejecutar 
+una instalaci¢n en red desde un directorio que contiene la 
+instalaci¢n administrativa, quiz† tenga que salir de Windows y 
+utilizar el s°mbolo del sistema principal.
+----------------------------------------------------------
+
+
+======================================================
+Parte 10: Preguntas y respuestas sobre soporte tÇcnico
+======================================================
+
+Preguntas
+---------
+
+1  ®D¢nde puedo obtener informaci¢n adicional previa a la venta 
+   acerca de los productos Microsoft Fox, tales como precios, 
+   pol°ticas de actualizaciones, fechas de versiones, etc.?
+2  ®D¢nde puedo obtener soporte adicional para productos 
+   FoxPro?
+3  Si llamo para pedir asistencia o dejo un mensaje en el 
+   FoxForum, ®quÇ informaci¢n debo incluir?
+4  Tengo deficiencias auditivas. ®D¢nde puedo conseguir soporte 
+   adicional sobre productos FoxPro?
+5  Tengo algunos comentarios y sugerencias acerca de los 
+   productos Microsoft Fox. ®A d¢nde puedo dirigir estos 
+   comentarios?
+----------------------------------------------------------
+
+Pregunta 1
+
+®D¢nde puedo obtener informaci¢n adicional previa a la venta 
+acerca de los productos Microsoft Fox, tales como precios, 
+pol°ticas de actualizaciones, fechas de versiones, etc.?
+
+Respuesta 1
+
+En Estados Unidos, llame al 800-426-9400.
+----------------------------------------------------------
+
+Pregunta 2
+
+®D¢nde puedo obtener soporte adicional para productos FoxPro?
+
+Respuesta 2
+
+Llame a *Microsoft FastTips* para o°r respuestas grabadas en 
+inglÇs a preguntas frecuentes acerca de Microsoft FoxPro. 
+TambiÇn puede solicitar notas tÇcnicas que se le enviar†n por 
+fax. FastTips est† disponibles las 24 horas del d°a, 7 d°as a 
+la semana. Para obtener ayuda sobre FoxPro, marque el 206-635-
+7190 (en EE.UU.).
+
+Utilice los *foros de Microsoft* de CompuServe. Puede ponerse 
+en contacto con otros desarrolladores para discutir sobre temas 
+de soporte y dise§o, as° como descargar archivos de ejemplo de 
+las bibliotecas. Para obtener un kit introductorio de 
+CompuServe espec°fico para usuarios de Microsoft, llame al 
+(800) 848-8199 y pregunte por el operador 170 (en EE.UU.). Si 
+ya es miembro de CompuServe, en cualquier s°mbolo ! escriba GO 
+MICROSOFT. Para acceder a informaci¢n espec°fica de FoxPro, 
+escriba GO FOXFORUM o GO FOXUSER.
+
+Utilice el *Servicio Microsoft Download* para acceder a notas 
+tÇcnicas y archivos suplementarios que tratan temas comunes del 
+soporte tÇcnico de Microsoft. Este servicio est† disponible v°a 
+m¢dem las 24 horas del d°a, los 7 d°as de la semana, llamando 
+al (206) 936-6735 (en EE.UU.). 
+
+Llame a los *Servicios de soporte tÇcnico de Microsoft* entre 
+las 6 A.M. y las 6 P.M. hora del Pac°fico, de lunes a viernes. 
+Para obtener ayuda sobre productos Microsoft Fox para MS-DOS o 
+para Windows, llame al 206-635-7191 (en EE.UU.). Para obtener 
+ayuda sobre productos Microsoft Fox para el Macintosh, llame al 
+206-635-7192 (en EE.UU.).
+
+Los servicios de soporte de Microsoft est†n sujetos a los 
+precios, tÇrminos y condiciones de Microsoft que estÇn vigentes 
+en cada pa°s en el momento de la consulta.
+----------------------------------------------------------
+
+Pregunta 3
+
+Si llamo para pedir asistencia o dejo un mensaje en el 
+FoxForum, ®quÇ informaci¢n debo incluir? 
+
+Respuesta 3
+
+Cuando llame, deber† estar delante de su computadora y tener a 
+mano la documentaci¢n del producto. Asimismo, estÇ preparado 
+para proporcionar la siguiente informaci¢n:
+
+* El n£mero de la versi¢n y la plataforma del producto 
+Microsoft Fox que estÇ utilizando. Puede obtener esta 
+informaci¢n escribiendo ?VERSION(1) en la ventana Comandos de 
+FoxPro.
+* El tipo de hardware que estÇ utilizando, incluyendo el 
+hardware de red si procede, y el entorno operativo que estÇ 
+empleando.
+* El contenido de los siguientes archivos: CONFIG.FP, 
+CONFIG.SYS y AUTOEXEC.BAT, y de los archivos de configuraci¢n 
+de red..
+* El texto exacto del mensaje o mensajes que hayan aparecido en 
+la pantalla.
+* Una descripci¢n de lo que ha ocurrido y de lo que intentaba 
+hacer cuando se produjo el problema.
+* ®Puede reproducir el problema con un n£mero reducido de 
+pasos?
+* ®QuÇ pasos ha realizado para resolver el problema?
+----------------------------------------------------------
+
+Pregunta 4
+
+Tengo deficiencias auditivas. ®D¢nde puedo conseguir soporte 
+adicional sobre productos FoxPro?
+
+Respuesta 4
+
+Existen Servicios de soporte tÇcnico de Microsoft para personas 
+con deficiencias auditivas. Utilizando un m¢dem especial 
+TDD/TT, marque el n£mero 206-635-4948 (en EE.UU.) entre las 6 
+A.M. y las 6 P.M. hora del Pac°fico, de lunes a viernes.
+
+Los servicios de soporte de Microsoft est†n sujetos a los 
+precios, tÇrminos y condiciones de Microsoft que estÇn vigentes 
+en cada pa°s en el momento de la consulta.
+----------------------------------------------------------
+
+Pregunta 5
+
+Tengo algunos comentarios y sugerencias acerca de los productos 
+Microsoft Fox. ®A d¢nde puedo dirigir estos comentarios?
+
+Respuesta 5
+
+Nos gustar°a o°r sus comentarios acerca de los productos y 
+servicios de Microsoft Fox. Ay£denos a mejorar las futuras 
+versiones de los productos Microsoft Fox llamando por telÇfono, 
+enviando un fax, dejando una nota o enviando un mensaje por 
+correo electr¢nico. Su informaci¢n ser† considerada a la hora 
+de dise§ar las futuras versiones de Microsoft FoxPro.
+
+Llame al n£mero 206-936-9474 (en EE.UU.) y deje sus comentarios 
+utilizando un telÇfono por tonos durante las 24 horas del d°a.
+
+Env°e un fax al n£mero 206-936-7329 (en EE.UU.) y proporcione 
+comentarios detallados durante las 24 horas del d°a.
+
+Env°e una nota a la siguiente direcci¢n:
+
+Microsoft FoxPro WishLine
+One Microsoft Way
+Redmond, WA  98052
+
+Si tiene acceso a Internet, env°e correo electr¢nico a:
+
+foxwish@microsoft.com.
+
+O bien, dirija el correo por CompuServe a:
+
+>INTERNET:foxwish@microsoft.com.
+----------------------------------------------------------
+
+
+=======================================================
+Parte 11: Nota para el usuario sobre el uso del espa§ol
+=======================================================
+
+Al terminar el siglo XX habr† en el mundo cerca de 500 millones 
+de personas que tendr†n el espa§ol (o castellano) como lengua 
+materna. Esta expansi¢n se ver†, sin embargo, envuelta en 
+numerosas dificultades y conflictos idiom†ticos. Algunos de los 
+peligros que acosan al espa§ol son: el influjo del inglÇs, el 
+mal uso que del mismo hacen los medios de comunicaci¢n y, 
+quiz†s el m†s importante y relacionado con el primero, los 
+vac°os existentes en el vocabulario tÇcnico.
+
+El campo de la inform†tica o computaci¢n es un motor continuo 
+de creaci¢n de nueva terminolog°a proveniente, casi en su 
+totalidad, del inglÇs. A esto se suma otro problema: la 
+existencia de inevitables peculiaridades y variedades 
+lingÅ°sticas que caracterizan a los diversos pa°ses 
+hispanoparlantes. Si bien es verdad que las diferencias son 
+m°nimas y adem†s se circunscriben en su mayor parte al 
+vocabulario (que es la parte que menos altera una lengua), 
+tambiÇn es verdad que dichas "diferencias" pueden crear en el 
+usuario la sensaci¢n de que est† leyendo un manual "hecho para 
+otro pa°s" y sentirlo como ajeno.
+
+En Microsoft somos conscientes de todos estos problemas, por lo 
+que a la hora de "adaptar" (y no s¢lo traducir) un programa al 
+castellano, tratamos de aunar la lengua tanto como sea posible, 
+buscando un espa§ol que pueda ser entendido, por ejemplo, lo 
+mismo en Venezuela o Argentina que en MÇxico o Espa§a. QuÇ duda 
+cabe que la b£squeda de una "norma com£n", conlleva, a menudo, 
+el rechazo de numerosos usuarios que encuentran la terminolog°a 
+ajena y hasta jocosa, y que preferir°an ver recogidas las 
+peculiaridades lingÅ°sticas de su propio pa°s en lugar de una 
+traducci¢n m†s general.
+
+As°, por ejemplo, para los usuarios de Espa§a el empleo del 
+tÇrmino computadora en lugar de ordenador suena chocante e 
+incluso ajeno, aunque es entendido por todos; sin embargo, el 
+galicismo ordenador (Fr. ordinateur) queda bien lejos de los 
+pa°ses latinoamericanos como para haber podido asentarse en 
+ellos, habiÇndolo hecho en su lugar el anglicismo computadora 
+(Ing. computer). Del mismo modo, un anglicismo como reporte 
+(Ing. report) tan com£n en hispanoamÇrica, tiene su equivalente 
+castellano informe, tambiÇn comprendido en toda AmÇrica Latina.
+
+Se tratar°a pues de elegir el tÇrmino que, aunque un poco ajeno 
+o extra§o, pueda ser comprendido por todos los usuarios sin 
+importar de quÇ pa°s se trate. Se recogen a continuaci¢n 
+algunos tÇrminos conflictivos:
+
+InglÇs            Espa§a                 AmÇrica Latina
+----------------  ---------------------  ----------------------
+Backup            Copia de seguridad     Copia de respaldo
+BBS               Bolet°n Electr¢nico    Tablero de mensajes
+Environment       Entorno                Ambiente
+File              Fichero                Archivo
+Mouse             Rat¢n                  Mouse
+Press             Pulsar                 Presionar/Oprimir
+Plotter           Trazador gr†fico       Graficador
+Word Processing   Tratamiento de textos  Procesador de palabras
+
+Aunque a primera vista pudiera parecer, viendo la tabla, que 
+existen dos normas claras (Espa§a opuesta al resto de 
+LatinoamÇrica), esto no es totalmente cierto. Si bien es verdad 
+que tanto por la proximidad geogr†fica, como por el influjo m†s 
+acusado del inglÇs sobre determinados pa°ses hispanoamericanos, 
+una gran cantidad de tÇrminos se han hecho comunes en estos 
+pa°ses, tambiÇn es cierto que no existe una norma com£n 
+latinoamericana. As°, un usuario venezolano puede sentir una 
+palabra mexicana como m†s cercana que su correspondiente 
+espa§ola, pero tambiÇn puede suceder al revÇs con otro tÇrmino 
+que sea propio y restringido a MÇxico. Otros pa°ses como Chile 
+o Argentina, m†s alejados geogr†ficamente del influjo del 
+inglÇs, pueden identificarse m†s con la terminolog°a que se 
+emplea en Espa§a.
+
+Lo mismo sucede con los ejemplos que aparecen en los manuales. 
+Los productos en espa§ol van destinados a todos los pa°ses 
+hispanoparlantes y por ello nos tenemos que hacer eco de las 
+variedades y peculiaridades existentes a la hora de elegir los 
+nombres de localidades, personas, direcciones, etc.
+
+Un problema concreto, que afecta principalmente a los usuarios 
+mexicanos, es el de los separadores decimales y de miles. En 
+MÇxico se sigue la norma de EE.UU. de separar los decimales con 
+un punto y los millares con una coma, esta norma es minoritaria 
+en AmÇrica Latina y no se aplica en Espa§a. En este caso, la 
+elecci¢n es clara a favor de la £ltima y, aunque el programa 
+siempre deja al usuario elegir la configuraci¢n deseada, en los 
+ejemplos tenemos que tomar partido por una opci¢n, por lo que 
+los usuarios mexicanos deber†n tener esto es cuenta y cambiar 
+adecuadamente los puntos por comas y viceversa.
+
+Otro problema que se plantea es el de los usuarios habituados a 
+trabajar con las versiones inglesas. A menudo estos usuarios 
+encuentran la traducci¢n de los comandos, men£s, etc. 
+inadecuada o confusa respecto a su correspondiente inglesa. 
+Este es un tipo de usuario que no est† acostumbrado a trabajar 
+con programas en espa§ol ni a utilizar terminolog°a traducida. 
+La importancia de la traducci¢n de los productos va mucho m†s 
+all† del mero entendimiento de los mismos por parte del 
+usuario; demuestra adem†s que cualquier lengua (y en nuestro 
+caso el espa§ol) puede ser una lengua tÇcnica si se desarrolla 
+suficientemente y ayuda a crear este vocabulario cient°fico-
+tÇcnico tan necesario para el futuro.
+
+Hagamos entre todos del espa§ol una lengua universal tratando 
+de aunar esfuerzos con el objetivo de evitar, en la medida de 
+lo posible, por una parte ese vac°o en el vocabulario tÇcnico y 
+por otra el surgimiento y adopci¢n de nuevos tÇrminos en inglÇs 
+sin su correspondiente adaptaci¢n al espa§ol. Somos 300 
+millones de hablantes que compartimos la misma lengua y todos 
+tenemos que sentirnos orgullosos y responsables de ella.
+
+                       ==================
+                       Final de LEAME.TXT
+                       ==================
+
+

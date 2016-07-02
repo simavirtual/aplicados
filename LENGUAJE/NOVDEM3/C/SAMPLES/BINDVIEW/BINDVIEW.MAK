@@ -1,0 +1,99 @@
+# Microsoft Visual C++ generated build script - Do not modify
+
+PROJ = BINDVIEW
+DEBUG = 1
+PROGTYPE = 0
+CALLER = 
+ARGS = 
+DLLS = 
+D_RCDEFINES = /d_DEBUG 
+R_RCDEFINES = /dNDEBUG 
+ORIGIN = MSVC
+ORIGIN_VER = 1.00
+PROJPATH =
+USEMFC = 0
+CC = cl
+CPP = cl
+CXX = cl
+CCREATEPCHFLAG = 
+CPPCREATEPCHFLAG = 
+CUSEPCHFLAG = 
+CPPUSEPCHFLAG = 
+FIRSTC = BINDVIEW.C  
+FIRSTCPP =             
+RC = rc
+CFLAGS_D_WEXE = /nologo /G2 /W3 /Zi /AL /Gx- /Od /D "_DEBUG" /D "_NL_LIB" /FR /GA /Fd"BINDVIEW.PDB"
+CFLAGS_R_WEXE = /nologo /W3 /AM /O1 /D "NDEBUG" /FR /GA 
+LFLAGS_D_WEXE = /NOLOGO /NOD /PACKC:61440 /FARCALL /ALIGN:16 /ONERROR:NOEXE /CO  
+LFLAGS_R_WEXE = /NOLOGO /NOD /PACKC:61440 /STACK:10240 /ALIGN:16 /ONERROR:NOEXE  
+LIBS_D_WEXE = oldnames libw llibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
+LIBS_R_WEXE = oldnames libw mlibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
+RCFLAGS = /nologo 
+RESFLAGS = /nologo 
+RUNFLAGS = 
+DEFFILE = BINDVIEW.DEF
+OBJS_EXT = 
+LIBS_EXT = NOVIMP.LIB
+!if "$(DEBUG)" == "1"
+CFLAGS = $(CFLAGS_D_WEXE)
+LFLAGS = $(LFLAGS_D_WEXE)
+LIBS = $(LIBS_D_WEXE)
+MAPFILE = nul
+RCDEFINES = $(D_RCDEFINES)
+!else
+CFLAGS = $(CFLAGS_R_WEXE)
+LFLAGS = $(LFLAGS_R_WEXE)
+LIBS = $(LIBS_R_WEXE)
+MAPFILE = nul
+RCDEFINES = $(R_RCDEFINES)
+!endif
+!if [if exist MSVC.BND del MSVC.BND]
+!endif
+SBRS = BINDVIEW.SBR
+
+
+BINDVIEW_DEP = bindview.h
+
+
+BINDVIEW_RCDEP = bindview.h nlbv.ico
+
+
+NOVLIB_DEP = 
+
+all:	$(PROJ).EXE $(PROJ).BSC
+
+BINDVIEW.OBJ:	BINDVIEW.C $(BINDVIEW_DEP)
+	$(CC) $(CFLAGS) $(CCREATEPCHFLAG) /c BINDVIEW.C
+
+BINDVIEW.RES:	BINDVIEW.RC $(BINDVIEW_RCDEP)
+	$(RC) $(RCFLAGS) $(RCDEFINES) -r BINDVIEW.RC
+
+
+$(PROJ).EXE::	BINDVIEW.RES
+
+$(PROJ).EXE::	BINDVIEW.OBJ $(OBJS_EXT) $(DEFFILE)
+	echo >NUL @<<$(PROJ).CRF
+BINDVIEW.OBJ +
+$(OBJS_EXT)
+$(PROJ).EXE
+$(MAPFILE)
+NOVIMP.LIB+
+$(LIBS)
+$(DEFFILE);
+<<
+	link $(LFLAGS) @$(PROJ).CRF
+	$(RC) $(RESFLAGS) BINDVIEW.RES $@
+	@copy $(PROJ).CRF MSVC.BND
+
+$(PROJ).EXE::	BINDVIEW.RES
+	if not exist MSVC.BND 	$(RC) $(RESFLAGS) BINDVIEW.RES $@
+
+run: $(PROJ).EXE
+	$(PROJ) $(RUNFLAGS)
+
+
+$(PROJ).BSC: $(SBRS)
+	bscmake @<<
+/o$@ $(SBRS)
+<<
+

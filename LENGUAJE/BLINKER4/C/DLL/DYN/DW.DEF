@@ -1,0 +1,14 @@
+;
+;  96.02.08    DW.DEF
+;
+;  This sample module definition file demonstrates how to
+;  create a Windows DLL.
+;
+
+library     'd'            ; Indicate a DLL and specify its module name
+exetype     windows 3.1    ; It is for Windows 3.1 and above
+heapsize    1024           ; It requires a local heap of 1 kb
+
+exports                    ; It exports the following symbols
+   testexp = _test @ 10    ; Export _test as testexp and ordinal 10
+

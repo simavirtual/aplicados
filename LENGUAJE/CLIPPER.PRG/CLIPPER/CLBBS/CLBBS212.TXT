@@ -1,0 +1,1055 @@
+
+
+        °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+      °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+      °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+      °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+  Volume 2, Number 12                                        28 May 1992
+
+                 (c) Daniel Do‡ekal, All Rights Reserved
+
+     The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+
+     Some of the material used comes from scanning CLIPPER echoes
+     which are carried in various BBS throughout the World.
+     These Echoes are very often the source of the most often asked
+     Questions and Answers about Clipper.
+
+     Other material, which is fully signed or abbreviated is the
+     copyright of the appropriate persons.
+
+     The publisher is not responsible for other authors submissions....
+     Published material is not necessarily the opinion of the publisher.
+
+     Redaction:
+        Publisher...................................Daniel Docekal
+        Chief editor ...............................Daniel Docekal
+        Language editor .................................Dave Wall
+
+
+
+                               Table of Contents
+
+1. ARTICLES  ...............................................................  1
+   Nantucket Code Guidelines  ..............................................  1
+   Hitch Hikers Guide To The Net (9)  ......................................  3
+   COMPSPEC for diskless workstation under Novell  .........................  5
+   COMMAND.COm from RAMDISK?  ..............................................  6
+   How about FLAG them Shareable  ..........................................  7
+   Fix for SET PRINTER bug  ................................................  8
+2. SOFTWARE  ...............................................................  9
+   What is what (3)  .......................................................  9
+3. Q&A  .................................................................... 15
+   HOW to specify different stack size?  ................................... 15
+4. ANOMALIES  .............................................................. 16
+   ANOMALIES reports and commets  .......................................... 16
+   How to LINK CLD.LIB into your application?  ............................. 16
+   SET PRINTER TO hard anomaly!  ........................................... 16
+   Unrecoverable Error 5313  ............................................... 17
+5. COMMENTS  ............................................................... 18
+   Reformat text to other collumn size  .................................... 18
+6. CLIPPER NET  ............................................................ 19
+CLIPBBS 2-12       Table of Contents (...)        28 May 1992
+
+
+   Index of described files in Clipper BBS Magazine  ....................... 19
+7. CLIPBBS  ................................................................ 21
+   CLIPBBS distribution  ................................................... 21
+   CLIPBBS, how to write an article!!!  .................................... 23
+
+                                   - - - - -
+CLIPBBS 2-12                   Page 1                   28 May 1992
+
+
+===============================================================================
+                                   ARTICLES
+===============================================================================
+
+
+                          Nantucket Code Guidelines
+
+17  Comments
+
+    17.1    Comments begin with a capital letter, but have no period:
+
+         // Just like a sentence, but no period
+
+            COMMENTS: There is no reason for not to use ot to use this
+            guideline. It's just matter of personal preference. From point
+            of view of language, if sentence starts, it has capital letter
+            on beginning but it has also point on end....
+
+    17.2    For long comments spanning several lines, use the following:
+
+         * For Summer '87 code, put one of these at the start of each * line
+
+         /* This type of Clipper 5.0 comment can be as large as necessary.
+             Everything bound between the delimiters will be ignored by the
+             preprocessor
+         */
+
+            // Or you can use the double-slash (//) at the beginning of
+            // each line for large comments blocks.
+
+            COMMENTS: For Clipper 5.x is by me always prefered second way.
+            It's better for preprocessor (i hope) and also better for
+            reading).
+
+    17.3    For single-line comments, use the following // rather than *:
+
+         // This is a single-line comment in Clipper 5.0
+
+            COMMENTS: See next guideline and then it's easy to understand
+            why is better to use only one kind of comments...
+
+    17.4    For in-line comments, use // rather than &&:
+
+         USE Customer    // An in-line comment in Clipper 5.0
+
+            COMMENTS: It's far better to use Clipper // operator for
+            commenting rather than old && operator. It's again more "C" like
+            and better for readability of program.
+
+    17.5    Do not use in-line comments for large comment blocks.  Comment
+            "paragraphs" should be formatted according to rule 17.2.  If an
+            in-line comment wraps beyond the 60th column, consider placing
+            it above the code on a separate line at the current indent
+            level.
+
+         .                   // Don't make a comment
+CLIPBBS 2-12                   Page 2                   28 May 1992
+
+
+         .<statements>       // paragraph with aligned
+         .                   // in-line comments
+
+         // Make your long in-line comments like this...
+         .
+         .<statements>
+         .
+         /* ...or, like this.  But, don't place tabs inside your
+         comments. */
+
+            COMMENTS: Totally disagree. All placing of longer comments
+            outside of related code is making code less readable and can make
+            simple mistake between code and comments. Therefore i'm always
+            making aligned comments at end of code. Moslty somewhere around
+            collumns 60, 68...
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 3                   28 May 1992
+
+
+                      Hitch Hikers Guide To The Net
+                                Episode 9
+
+                              .-----------.
+                              |  _     _  |
+                            .-| /*     *\ |-.
+                             \|     O     |/
+                              |           |
+                              |  .-----.  |
+                              | '       ` |
+                              `-----------'
+                                 ||   ||
+
+                                 Martin
+
+ (The crew of the Infinity is continuing on their way to find the
+ explanation to Life, the Net, and Everything. It is a unbelievably long
+ trip. It is also notably nasty as Martin insists on droning on and on
+ about what a waste of time it all is and how it will probably be quite
+ depressing once the destination is reached and so on. Off in the distance,
+ they hear pounding type noises. The sounds appear to be getting closer.)
+
+ Gillian    : What do you think it is?
+ Arnold Lint: I don't know.
+ Xaphod     : Maybe it's some new and amazingly interesting people.
+ Martin     : I hope not.
+ Rod        : It's definitely getting closer, let's duck out of sight just
+              to be safe.
+
+ (Rod and company duck behind a nearby paperweight. The pounding sounds can
+ now be identified as the sounds of people running. Mixed in is a metallic
+ clinking sound and various shouts and yells. As the sound gets closer,
+ Arnold discerns that there is also a splatting type of sound mixed in.)
+
+ Arnold Lint: What is that?
+ Xaphod     : Could be a Rigelian Megapede.
+ Rod        : Or a Richard Simmons show.
+
+ (The source of the sound now comes into view. The first thing seen is a
+ group of seven joggers, of various ages, sexes, and creeds, running for
+ all they are worth. Close on their heels are two blokes in a Land Rover,
+ they each wield a large club and a large can of beer. They are, in fact,
+ none other than Australian Joggering champions Bruce Karnage and Bruce
+ Bludletter.)
+
+ Bruce      :  Here Bruce, get closer and I'll get another.
+ Bruce      :  Right Bruce.
+ Bruce      :  Naw, closer, Bruce.
+ Bruce      :  Pass me a beer, Bruce.
+ Bruce      :  Right Bruce.
+
+ (The Land Rover approaches the slowest jogger and Bruce pockets him in the
+ corner with a polo-like shot to the head, causing little bits of brain to
+ spurt out his ears.)
+
+ Bruce      :  That was lovely, Bruce
+CLIPBBS 2-12                   Page 4                   28 May 1992
+
+
+ Bruce      :  Thank you, Bruce.
+
+ (The joggers and the joggerers depart, the racket follows them, as well it
+ should.)
+
+ Rod        : That was great, what a shot.
+ Arnold Lint: That was awful, how vicious and cruel.
+ Martin     : I don't know, I almost enjoyed it.
+ Gillian    : What do they call that.
+ Xaphod     : That's joggering, lovely sport.
+ Rod        : Let's go already.
+ Arnold Lint: What a savage Net we live in.
+
+ [*****************************************************************************
+ "The Hitch Hikers Guide To The Net" indicates that one of the most savage
+ races in the known Net are the Incindarans. These types make the normal
+ Flamers look like choir boys. These types liked to censor shows like "8 is
+ Enough" due to it's immoral plot lines. They even went so far as to
+ publish 'G' rated versions of the Old, New, and Video Testaments (blessed
+ be the Holy Box). Legend has it that their system was kept off the Net for
+ a long period of time. Their system lords felt that this would be best in
+ light of the tendencies of those in the system. Things got so bad in
+ Incindara that the system lords decided they better find someone else to
+ fight before they wiped themselves out. So the Incindaran system was let
+ onto the Net.  They were so busy fighting amongst each other that nobody
+ noticed the portal to the Net. An errant message found its way to
+ Incindara which made them all realize that they were not alone. They
+ selected their most learned scholar, Clyd Noeitall, to investigate the
+ wondrous Net. It was the first time Incindara had taken enough time out
+ from fighting to do anything. It was indeed a great day.  He and his
+ colleagues than set out and talked with the Net for the first time.
+ Unfortunately, they came in right in the middle of the debates over Big
+ Mac's. Upon seeing this, Clyd turned to his colleague and said:  "No, it's
+ all got to go". Following this they began to systematically torch almost
+ every place in the Net. A long war followed in which the Incindarans lost
+ badly. The Net, being a bit ticked off, decided on a punishment that
+ suited the crime. They took away all the 'n' keys on every terminal in
+ Incindara. Unfortunately, they forgot to make Incindara a read-only
+ location, allowing the Incindarans to verbally flame. The few Incindarans
+ who survived can still be found flaming at will about everything they read
+ (which is everything as there are no 'n' keys). The once proud and feared
+ Incindarans have been reduced to ranting about Burger King, drunk drivers,
+ sterilizing non-supporters of ERA, and so on.  "The Hitch Hikers Guide To
+ The Net" warns all Net travellers that when such types are encountered,
+ the best course of action is to abort the debate, as it is probably
+ pointless anyway.
+ *****************************************************************************]
+
+         ******************** End Of Part 9 ********************
+
+ What is the explanation of Life, the Net, and Everything? How did Bruce
+ do? Did Bruce get his beer. Is Brooke Shields an Alien? To find out . . .
+ Tune in next time . . .  same Net-time . . . same Net-channel.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 5                   28 May 1992
+
+
+               COMPSPEC for diskless workstation under Novell
+
+Copy COMMAND.COM into a directory underneath of SYS:LOGIN...say
+SYS:LOGIN\DOS5.
+
+In your AUTOEXEC.BAT, do:
+
+   IPX
+   SET COMSPEC=F:\LOGIN\DOS5\COMMAND.COM
+   NETX
+   F:
+   LOGIN
+
+This solution has advantage that COMMAND.COM is accesible immediately after
+closing fake A: driver created by boot rom on network card. In most cases
+it's not a problem, but in some it can.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 6                   28 May 1992
+
+
+                          COMMAND.COm from RAMDISK?
+                    (originally by Tony Dunlap, FidoNet)
+
+Brilliant idea, how to BOOT your first COMMAND.COM or better 4DOS.COM
+directly from RAMDISK? Easy:
+
+You need to make an archive containing your 4dos files and use the INSTALL
+command in your config.sys to unarc them into your ramdisk. Then set SHELL=
+to the ramdisk.
+
+example:
+
+DEVICE=RAMDISK.SYS etc.
+INSTALL=C:\UTILS\ARJ E C:\4DOS\4DFILES.ARJ D:\
+SHELL=D:\4DOS.COM
+
+where 4dfiles.arj is the archive containing the 4dos files.
+
+Install is normally used to install TSRs and will complain that ARJ doesn't
+remain resident but it will work nonetheless.
+
+You could also make the archive file self-extracting. Handy if you were on a
+workstation that had to boot from a floppy, but since I keep the archiver on
+my hard drive anyway, I opted to save a couple of K in disk space.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 7                   28 May 1992
+
+
+                      How about FLAG them Shareable...
+
+
+Already long time i'm trying to teach programmers about ignoring things like
+Shareable flag for Clipper files. There are some points about flagging
+shareable any files from Novell souces:
+
+The SHAREABLE flag bypasses DOS's file/record locking capabilities and places
+an unconditional shareable access on the file...  This means that
+applications would need some external method of implementing file/record
+locking to provide secure multiple user access to the file... otherwise
+several users could open the file and the last person to make changes/saves
+of the file will be the one that controls what's in the file and this could
+lead to major corruption of the data files...
+
+The shell has a rule of thumb for caching which avoids caching any file that
+can be modified by another user.  This mainly applies to the way the file is
+opened, not how it is flagged on the disk.  That is the area that most people
+misunderstand the caching of 'shareable' data.  If a file is opened for read
+(or read/write) access and only read access is allowed for other stations
+then the file is cacheable.  If write access is allowed for other stations
+then the file is not cacheable.
+
+
+The last paragraph is most important:
+
+    When file is opened for read (read/write) and only read access is allowed
+    for other stations ------ FILE IS CACHEABLE
+
+    When other stations are allowed for WRITE --- FILE IS _NOT_ CACHEABLE
+
+Those two defintions are speaking of course about caching at place of Shell
+at workstation (NETX/IPX combo or ODI). Meaning of this is a fact, that until
+programmer is opening files as NON-EXCLUSIVE and NON-READONLY, there will be
+NO caching at workstation level. Caching at server level is out of
+significance because it's just PUBLIC extension of server harddisk. Rather
+from disk, request can be fullfilled from server memory (which is of course
+much faster).
+
+Marking file as Shareable or removing this flag has NO effect at standard
+Clipper files. Actually it's even better to NOT mark files like this, because
+what is coming from first paragraph is - files marked SHAREABLE are off tests
+for any record locks.....
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 8                   28 May 1992
+
+
+                          Fix for SET PRINTER bug
+                 (originally based on idea of Jamie Thain)
+
+
+#include "Set.ch"
+
+FUNCTION MAIN
+
+LOCAL i, v
+  v := "LPT1"
+  FOR i := 1 TO 100000
+        // Return a pointer to the stack into v
+    v := SET(_SET_PRINTER, (v) , .f.)
+        // Set the pointer to anything
+    v := ""
+        // Reset it as you choose with a returned pointer
+    v := SET(_SET_PRINTER, (v) , .f.)
+
+    ? i, MEMORY(0)
+
+  NEXT
+
+RETURN NIL
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 9                   28 May 1992
+
+
+===============================================================================
+                                   SOFTWARE
+===============================================================================
+
+
+                           What is what (3)
+
+IMS.LIB
+
+        Database Warehouse (44-268-729459, fx 44-268-590905), œ49 or
+                                œ99 (with source code) )
+
+        (c) Information Management systems 1991
+
+        menu generations system allows menus to be moved, re-sized,
+        colored and labels altered WITHOUT re-compiling. One line of
+        code needed for one menu
+
+        protects .dbf files from prying eyes with single command, locks
+        out viewing by other xbase programs/utilities
+
+        create demo programs which will either run a fixed number of
+        times, given length of time or lockout certain features. Set-up
+        easily reversed.
+
+        complete text encryption function, scrambles text stored in
+        .dbf files, even Norton can't find it.
+
+        exporta data to a WordPerfect or Wordstar compatible merge file
+
+        pop up calendar
+
+        eight different screen wipe/replace functions
+
+        single command analyses data and produces graphical
+        representation of result
+
+        password protections or entire program or individual work areas
+
+
+LAMAURA DATA DICTIONARY
+
+        'Try out' data structures and relationships before coding,
+        centralise information about fields and records, create virtual
+        or calculated fields etx. 'Project supervisor' maintains
+        security with two other levels of access. Multi user versions
+        included real time screen refresh and message facilities.
+        Available as single, 5, 25 or 99 user versions.
+
+LOGIC GEM
+
+        Unique tools that aids in the development of the login portion
+        of a computer program Useful for general applications or expert
+        system developers. Eliminate problems of incomplete, mistaken,
+        redundant or contradictory logic, common when a large number of
+        developers are working together, makes use of 'decision table'
+CLIPBBS 2-12                   Page 10                  28 May 1992
+
+
+        to allow streamlining of logic flow before coding.
+
+NETLIB
+
+        Network toolkit for the Novell environment. Performs background
+        tasks while screen input is active. automatic journals, post
+        and wait semaphore locks, encryption for data protection,
+        station to station communications, multi server print
+        management, multiple record locks in the same file, locking
+        non-dbf files, appending to sdf files etc.
+
+NOVLIB
+
+        Database Warehouse, œ289
+        (c)
+
+        Library of Novell (tm) functions for Clipper, over 190
+        functions, connection information, file server functions,
+        volume info, transaction tracking, print queues, directories,
+        physical disk informations, bindery functions, messages,
+        workstation environment, semaphores, printing, file system
+        info, lan driver info, Summer 87 and 5.0, comprehensive
+        documentation, demo program and NG databases. Compatible with
+        netware 2.1 and above.
+
+OOPS.LIB
+
+        Smart entry screens, relatinal zooms, queries, dialogue boxes
+        are all data driven, comes with multiuser clipper code.
+
+OVERLAY() library, version 3.5
+
+        Database Warehouse, œ135
+        (c) SoftDesign international Inc.
+
+        Overlay() opend the entire universe of DOS programs to Clipper,
+        It provides Clipper and C developers with a means of running
+        ANY program, regardless of its size, from within their
+        applications. Communication, spreadsheets, graphics, word
+        processing, CAD or any DOS application can be runned from
+        inside of Clipper application. Fully network compatible,
+        Overlay() provides complete control over memory swapping.
+        Overlay() is totally transparent to your users. More than 30
+        functions make up the Overlay() features, including:
+        -       use of the EXTEND sustem to ensure compatibility with
+                future versions of Clipper
+        -       EMS and extended memory use
+        -       The automation of executed programs
+        -       Complete control over DOS environment
+        -       Compatibility with dynamic linkers
+        -       Clipper 5.0 compatible
+PCX TOOLKIT
+
+        60 graphics routines for PCX format images, supported by
+        Ventura, Pagemaker and FAX boards, and endorsed by ZSoft (PC
+        PAITBRUSH), 21 video modes in 256 colours, display from
+CLIPBBS 2-12                   Page 11                  28 May 1992
+
+
+        buffers, files or image libraries, scroll large images,
+        manipulate headers, written in assembler
+
+PCX TEXT
+
+        Display text, strings, accept input, scale text, rotate text,
+        create your own fonts with font editor in any text mode.
+        Conversion program to translate most GEM files. High speed
+        bitmapped text. 256 different text styles allowed on screen at
+        the same time. Written in assembler.
+
+PCX EFFECTS
+
+        Adds special effects to programs. VGA and extended VGA as well
+        as all others. Crush. diagonal, explode, faces, roll, split,
+        spiral, random, slide, push, wipe and many more professional
+        graphics effects including sound effects. Requires PCX TOOLKIT
+
+POSTSCRIPT LIBRARY
+
+        Allows unlimited access to PS printers from Clipper. Use full
+        range of fonts along with graphing tools and special effects.
+        Print circles, boxes, rectangles, scatter graphs, shapes and
+        pie charts. Gray shades and line density ocnfigurable. Easy to
+        use programming interface.
+
+PRINTER FUNCTION LIBRARY
+
+        Professional printing utilitiy, allows the usual bold,
+        condensed, italic, underscore atc fonts plus more. Efficient
+        replacements to the PROW(), PCOL(), SAY and other commands.
+        Control margins, pagination, headers and footers. Print to disk
+        or screen (with or without printer control codes) without
+        modifying program code. COmplete 100% Clipper source code
+        inluded, 5.01 compatible. Ideal with EZ_PRINT
+
+PROCLIP
+
+        Database Warehouse, œ189
+        (c) SofDesign International, Inc.
+
+        Virtual paged windowing system, pop-up or pull-down menus,
+        resize, scroll, move, drag, caption, restore and save windows
+        to disk. Mouse sub-system to create SAA/CUA user interface.
+        Change colours of screen region, blast characters onto the
+        screen without @SAY, exchange video pages, control PrtScr
+        activity, activate interrupt-drive clock or timer, manipulate
+        cursor size, manage application environment, create, remove or
+        deelete subdirectories. DOS versions, file attributes, time
+        stamp files. Determine driver ready status, number of printer
+        and communication port check, status of CAPS, INS, SCROLL LOCK,
+        access SHARE, ASSING and APPEND. Summer 87 and 5.0 version,
+        Norton Guide and Tom Retting Help files included.
+PS_ERROR
+
+        Records critical information on errors (including internal and
+CLIPBBS 2-12                   Page 12                  28 May 1992
+
+
+        out of memory) to your own customizable log file. These include
+        total and free memory, program trace, open files, DOS MCB,
+        current screen, hardware config, data, time and memvars (to
+        memory file). Functions are included to tell you about your
+        hardware - CPU(), EMSVALID(), MONITOR(), STACKCHECK() and
+        UNDERFLOW() help detect stack problems.
+
+R&R REPORT WRITER
+
+        Complex and powerful report writing/designing tool for
+        programmers or advanced users. Designed reports or report
+        templates are executed from your application through royalty
+        free runtime sstem using the data specified. Up to 10files at
+        once, one to many relations, 254collumnsx256 lines per page,
+        donditional field/line printing, sorts, groups, preprocessed
+        totals, calculated fields, many data formulas. print to disk or
+        screen using horizontal panning or split screen windows.
+        Supports Laserjet and PostScript printers plus their fonts. 180
+        help screns, networks supported. 5.0 or 87 versions.
+
+R&R CLIPPER MODULE
+
+        Clipper & FoxBase indexes with R&R report writer. Only required
+        with S87 R&R as 5.0 includes the Clipper module.
+
+R&R CODE GENERATOR
+
+        Generates clipper source code from reports created using R&R
+        report writer. Not available for 5.0 version of R&R.
+
+RASQL/B
+
+        Clipper access to BTRIEVE data. Treat Btrieve data as you would
+        DBF files. Convert between both formats if desired. Lateer, use
+        RASQL/X and Netware SQL to access these files. Norton and
+        Rettig help included. S87 and 5.0
+
+RASQL/X
+
+        Access Netware SQL. use SQL or CLipper commands. Open multiple
+        tables and views concurrently. Requires Netware 286/386 running
+        Netware SQL, norton and Rettig help included. S87 and 5.0
+
+SCAN.A.LYZER
+
+        X-ray specs for the programmer. Lets you peer in DBF, NDX, IDX,
+        NTX, MDX, VUE, MEM, FMT, FRM and PRG. It cross refrences
+        variables, reformats and recases PRG's. Includes program lister
+        that shows line numbers, connects IF/ENDIF etc.
+
+SEZ_YOU
+
+        Embeds SET CLIPPER values into EXE files (or CLIPPER.LIB),
+        which ma be retrieved later. Includes ability to modify the
+        environment variable name and change values from DOS. Serial
+        numbers may be embedded into both EXE and DBF files and later
+CLIPBBS 2-12                   Page 13                  28 May 1992
+
+
+        accessed.
+
+SILVERCOMM
+
+        Fully interrpt driven comms library. Supports simultaneous
+        buffered I/O and control for up to 5 serial ports. Transparent
+        xon/xoff and rts/cts speed to 56k baud, xmodem and ymodem
+        checksum and crc with automatic fallback. Capture to dbf or
+        text. Comes with many useful examples on disk.
+
+SILVERPAINT
+
+        Complete graphics enhancement library. Allows creation of
+        lines, boxes, circles, complex logos, icons, even animation,
+        256 colour paletter, low overhead, pixel control, display .PCX
+        files, full range sound and ability to combine text and
+        graphics.
+
+SMARTMEM
+
+        Assists with management of Clippers free pool memory and packs
+        fragmented memory. It can also display/print a block diagram of
+        memory and store variables in up to 64k of EMS.
+
+SOFTBASEBRIDGE
+
+        Allows port Clipper/dBASE code on to UNIX and XENIX based
+        systems. Convert your Clipper code using the 'AutoBridge'
+        converter to SoftBase code. Then the runtime module SBRun will
+        run this code under UNIX or XENIX.
+
+SOFT.CLIP
+
+        Collection of 18 linkable modules. Some of them are on-line
+        help system, word processor, print manager, function key
+        manager, database manager, label manager, memo editor,
+        calculator, multi-view calender, environment manager and more.
+        100% networked Clipper SUmmer 87. Source supplied plus 280 page
+        manual.
+
+SOFTCODE
+
+        Program generator for people who hate program generators. Uses
+        template to build programs. The editor lets you change colours,
+        draw boxes, move blocks and place fields. Specify validation
+        and field types. Templates available for C, pascal, Basic and
+        dbASE which includes Clipper, Foxbase and QuickSilver.
+        Integrates with Softdemo.
+
+SOFTDEMO
+
+        Full featured, low priced demo maker, that is powerfull enough
+        for programmers yet simple enough for anybody. The script
+        editor can play musing and display screens in a choice of over
+        25 special effects. Users can enter data, pull down menus,
+        flash up windows, working with the proram without having
+CLIPBBS 2-12                   Page 14                  28 May 1992
+
+
+        aworking program. Integrates with SOFTCODE.
+
+SOS HELP
+
+        Context sensitive help creator without the need to create
+        special help procedures. Just add 1 line to your program and
+        link with the SOS HELP library. Generates either compressed
+        binary file or source code for HELP.PRG, uses pull down menus,
+        supports full colour palette and networks.
+
+SPELLCHECK ENGINE
+
+        Contains English language dictionary with over 100,000 words in
+        compressed format (350K), Supplied function calls include
+        look-up (exact match, caps difference, case difference),
+        suggested correct spelling and aux dictionary maintenance.
+        Works with Clipper and C. Price includes 25 licences.
+
+SQLBASE LIBRARY
+
+        Collection of over 150 SQL function providing interface to
+        Gupta's SQLBase server. This allows you to access popular
+        moni.mainframe databases linke IBM's DB2 DBMS and ORACLE. Low
+        memory requirement. NG included. Summer 87 and 5.0
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 15                  28 May 1992
+
+
+===============================================================================
+                                      Q&A
+===============================================================================
+
+
+                   HOW to specify different stack size?
+
+
+Question: How to specify different stack size for application
+
+Answer:
+            /STACK:1000 (hexidecimal) is the default (4KBytes).
+                (RTLINK)
+
+           STACK <size>
+                (BLINKER)
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 16                  28 May 1992
+
+
+===============================================================================
+                                   ANOMALIES
+===============================================================================
+
+
+                     ANOMALIES and their comments
+
+This part of Clipper BBS Magazine is dedicated to all discovered 
+anomalies and comments about them in Clipper products. Because 
+Nantucket is still unable to give own bug and anomalies reports (as 
+actually did in past with Summer 87 version) is very handy to have 
+results of many investigations done on many user places. I'm also
+doing my own investigatings, because i'm always very good when someting 
+has hidden problems. Everything what i buy will first show all problems 
+and then all normal things. This amazing part of my live is sometime 
+making me crazy, but for testing of programs it's great <grin>.
+
+Daniel
+
+
+
+-------------------------------------------------------------------------------
+
+
+                How to LINK CLD.LIB into your application?
+                       (answer of official from CA)
+
+
+The CLD.LIB is a load module library and as such it needs to be linked
+directly to your application .OBJs to make it immediately accessible.
+
+When .RTLink 3.13 encounters the command FILE (or 'FI' abbrv.) it is being
+told to search for .OBJs, not .LIBs and won't search SET LIB= paths.
+
+  RTLINK FI YOUR_N,C:\CLIPPER5\LIB\CLD.LIB
+
+There are some advantages and disadvantages to either CLD.EXE or CLD.LIB
+usage:
+
+1: CLD.EXE doesn't have to be linked in.
+2:    "    RESTART works.
+3:    "       won't allow more than one DOS parameter to be recognized
+   by your application executable when the .EXE is a parameter to it.
+4: CLD.LIB has to be linked in.
+5: CLD.LIB RESTART doesn't work.
+6: CLD.LIB allows your application .EXE to be passed any number of DOS
+   parameters limited only by the DOS command line length limitation.
+
+-------------------------------------------------------------------------------
+
+
+                       SET PRINTER TO hard anomaly!
+
+If you use SET PRINTER TO (v) where (v) is a character string it uses as
+much memory as your character string is counting characters, so if your
+variable has 12 characters SET PRINTER TO consumes 12 bytes each time it is
+CLIPBBS 2-12                   Page 17                  28 May 1992
+
+
+called.
+
+-------------------------------------------------------------------------------
+
+
+                         Unrecoverable Error 5313
+                           (beased on CA source)
+
+Undocumented Unrecoverable Error 5313 cannot create swapfile can be
+addressed by:
+
+1:  Increasing F:<odd> and Files = <same or more than F:<odd>>
+
+2:  Specify SWAPPATH:'<drivepath>\'
+
+3:  Check for CDRW Rights, DOS directory entries, user space restrictions,
+    actual disk space available, etc.
+
+4:  Make sure that any drivepath specifications exist, no typos, etc.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 18                  28 May 1992
+
+
+===============================================================================
+                                   COMMENTS
+===============================================================================
+
+
+                    Reformat text to other collumn size
+                      (originally msg by John Wright)
+
+
+I wrote a special word processor in Clipper that allow users to insert mail
+merge fields.  After the user saves the memo I copy it to another variable,
+search for mail merge characters, replace the text, write the memo to a
+temporary text file and then reload it using MEMOREAD.  This has been
+working fine for over a year and the text rejustifies nicely.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 19                  28 May 1992
+
+
+===============================================================================
+                                  CLIPPER NET
+===============================================================================
+
+
+
+Following is COMPLETE list of all published file descriptions in Clipper
+BBS magazine in previous numbers. Purpose of this index list is to allow
+anybody find needed file descriptions in growing number of described files.
+Short description after name will give first possible close image about
+file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+³FileName     ³Src ³Description                                     ³Where ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper                   ³[1-19]³
+³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+CLIPBBS 2-12                   Page 20                  28 May 1992
+
+
+³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+
+Src can be:
+    Cln     File is accesible on ClipperNet
+    Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 21                  28 May 1992
+
+
+===============================================================================
+                                    CLIPBBS
+===============================================================================
+
+
+                             CLIPBBS Distribution
+
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can make a profit from the
+  distribution of this magazine.
+
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest).
+
+  If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+
+  Distribution sites:
+
+  Clipper BBS Home system  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+      Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+      Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+      2:285/608@fidonet.org
+
+  United Kingdom   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+      Daily whole day, modem speed HST
+
+  Italy   ³
+  ÄÄÄÄÄÄÄÄÙ
+      Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+      20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+      24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+      2:334/307@fidonet.org
+
+  United States of America  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+      Daily whole day, modem speed HST
+
+      The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+      Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+
+  Canada    ³
+  ÄÄÄÄÄÄÄÄÄÄÙ
+      SYSOP Gordon Kennet, phone 1-604-599-4451 
+      Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+
+CLIPBBS 2-12                   Page 22                  28 May 1992
+
+
+  WORLDWIDE   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+      Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+      Various systems around whole world
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-12                   Page 23                  28 May 1992
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Submission of articles to CLIPBBS is really easy:
+    Maximum of 78 characters per line, as long or as short as you like
+    ASCII text.
+    Choose from the list of extension which most describes your text, or
+    just name it .ART as ARTicle and send it to publisher or to any
+    distribution site via modem to BBS or with mailer as file attach.
+    Article will come automatically appear in the next free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          ANOMALIES and their comments    .ANO
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          DUMP from conferences           .DMP
+          Clipper Net                     .CLN
+          
+  That's all at the moment, there will probably be changes later, as the
+  magazine evolves. If you have any ideas for a new section of CLIPBBS,
+  please tell us, or just write an article about it.
+  
+  Daniel, publisher
+
+-------------------------------------------------------------------------------
+

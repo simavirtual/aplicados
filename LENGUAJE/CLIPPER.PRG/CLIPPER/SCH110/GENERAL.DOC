@@ -1,0 +1,567 @@
+                                SCHOONER
+                         Version 1.10 Shareware
+                              User's Manual
+
+
+                         DISCLAIMER AND WARRANTY
+                             the small print
+
+  We have  done the best  to make this  a great package,  it may not be
+  perfect for you. Test it  out. If you like it then register your copy
+  and pass on another copy.
+
+       Users of SCHOONER must accept this disclaimer of warranty:
+
+       The  program  is provided  "AS  IS" without warranty of any
+       kind,  either  expressed   or  implied, including  but  not
+       limited to  the implied warranties  of merchantability  and
+       fitness  for a particular   purpose. The entire risk as  to
+       the  quality and performance   of the program is with  you.
+       Should  the program  prove defective, you (and not Jonathan
+       Cook)  assume the  entire cost of all necessary  servicing,
+       repair or correction.
+
+       Jonathan Cook does  not warrant that the function contained
+       in  the  program  will  meet your requirements or that  the
+       operation  of the  program  will be uninterrupted or  error
+       free.
+
+       In  no  event will Jonathan  Cook  be liable to you for any
+       damages  including any  lost profits, lost savings or other
+       incidental or consequential  damages arising out of the use
+       or inability  to use such  program or for  any claim by any
+       other party.
+
+
+                         DEFINITION OF SHAREWARE
+
+  Shareware distribution  gives users  a chance to  try software before
+  buying it. If you try  a Shareware program and continue using it, you
+  are expected  to register.  Individual programs differ  on details --
+  some request  registration while  others require  it, some  specify a
+  maximum trial  period. With  registration, you get  anything from the
+  simple right  to continue  using the  software to  an updated program
+  with printed manual.
+
+  Copyright laws  apply to both Shareware  and commercial software, and
+  the  copyright  holder  retains  all  rights,  with  a  few  specific
+  exceptions  as  stated  below.  Shareware  authors  are  accomplished
+  programmers, just  like commercial  authors, and the  programs are of
+  comparable quality. (In  both cases, there are  good programs and bad
+  ones!)  The main  difference is  in the  method of  distribution. The
+  author  specifically grants  the  right  to copy  and  distribute the
+  software,  either to  all  and sundry  or  to a  specific  group. For
+  example, some authors  require written permission before a commercial
+  disk vendor may copy their Shareware.
+
+  Shareware  is a  distribution  method, not  a  type of  software. You
+  should find  software that  suits your needs  and pocketbook, whether
+  it's commercial or Shareware. The Shareware system makes fitting your
+  needs easier,  because you  can try before  you buy.  And because the
+  overhead  is low,  prices are  low also.  Shareware has  the ultimate
+  money-back guarantee --  if you don't use  the product, you don't pay
+  for it.
+
+  SCHOONER 1.10 is  a "shareware program" and  is provided at no charge
+  to the user for evaluation.  Feel free to share it with your friends,
+  but please do not give  it away altered or as part of another system.
+  The  essence  of "user-supported"  software  is  to  provide personal
+  computer users with quality  software without high prices, and yet to
+  provide  incentive  for   programmers  to  continue  to  develop  new
+  products.
+
+  If you find this program  useful and find that you are using SCHOONER
+  and continue  to use  SCHOONER after  a reasonable  trial period, you
+  must make  a registration  payment of $39.95  to Jonathan  Cook.  The
+  $39.95 registration  fee will  license one  copy for  use on  any one
+  computer at any  one time.  You must  treat this software just like a
+  book.  An example is  that this software may be used by any number of
+  people and may be freely moved from one computer location to another,
+  so long as  there is no possibility of  it being used at one location
+  while it's  being used at another.  Just as a book  cannot be read by
+  two different persons at the same time.
+
+  Commercial users of  SCHOONER must register and  pay for their copies
+  of  SCHOONER  within  30  days  of  first  use  or  their  license is
+  withdrawn.    Site-License arrangements  may  be  made  by contacting
+  Jonathan Cook.
+
+  Anyone distributing SCHOONER for  any kind of remuneration must first
+  contact Jonathan  Cook at  the address below  for authorization. This
+  authorization   will  be   automatically   granted   to  distributors
+  recognized by the  (ASP) as adhering to  its guidelines for shareware
+  distributors,  and  such  distributors  may  begin  offering SCHOONER
+  immediately (However Jonathan Cook  must still be advised so that the
+  distributor  can  be  kept  up-to-date  with  the  latest  version of
+  SCHOONER.).
+
+  You are encouraged  to pass a copy of  SCHOONER along to your friends
+  for evaluation.  Please encourage them to register their copy if they
+  find that they can use  it.  All registered users will receive a copy
+  of the latest version of the SCHOONER system.
+
+  Note:  Clipper(r),  Dbase and  Foxbase  are  registered  names and/or
+  trademarks of  Computer Associates, Borland  and Microsoft. Any other
+  name references,  expressed or  implied, are  registered names and/or
+  trademarks of their respective developers/manufacturers.
+
+
+                              INTRODUCTION
+
+  Schooner is  a powerful, full  featured database programming language
+  similar to other Xbase languages.
+
+  The  Schooner development  environment  revolves around  the powerful
+  text editor.  From this  command center  you can  develop and control
+  your application.
+
+  You can write source code, create reports, create and modify database
+  structures, manipulate data and  execute your code... All from within
+  the text editor.
+
+  In addition,  when errors are  detected, they are  displayed in a red
+  box. Schooner then places the  cursor on the line where the error was
+  detected, even if  the error occurred in a  module other than the one
+  you were editing.
+
+  Command  and function  help are  just a  keypress away.  All language
+  documentation is on-line and available with the F1 help key.
+
+
+                            Getting Started.
+
+  Schooner is  very easy to use.  Simply copy the  Sch110.exe file to a
+  subdirectory and change to that subdirectory.
+
+  Decompress the Schooner files by typing:
+
+            sch110.exe
+
+  All of the files will decompress and you are ready to go.
+
+  To begin Schooner type:
+
+            Schooner
+
+  and press ENTER.
+
+  The Schooner editor will appear.
+
+  While the editor appears simple, it will reveal a great deal with the
+  F1 key.
+
+  Press F1 and the help  screen for the editor will appear. This screen
+  details all of the commands available to the editor.
+
+  You  can cut  and paste  blocks of  text, read  and write  files (and
+  blocks) to and from disk,  create and edit data files and even create
+  report templates with the report writer.
+
+  Press the F2 key from the editor help screen and a list of all of the
+  commands and functions available to the language appear.
+
+  Scroll through the list. A short description accompanies each command
+  or  function. Press  ENTER  on a  highlighted  line and  the complete
+  description for that command or function appears.
+
+  Each description  contains the command or  function name, the syntax,
+  the  use,   a  parameter   description,  return   values,  a  general
+  description and an sample piece of code.
+
+  Press ESC and  you will back out of the  help system the same way you
+  went in.
+
+
+                           Viewing an Example
+
+  An entire demo application is available for your viewing pleasure.
+
+  Press F8 and enter the file name:
+
+            DMDEMO.PRG
+
+  and press ENTER.
+
+  The program  DMDEMO will appear  on the screen.  To experienced XBASE
+  programmers the code will immediately look familiar.
+
+  Use the arrow  keys to scroll up and  down. When you are done viewing
+  the code, execute it. Press
+
+                 Alt-R
+
+  Schooner assumes  you want to  run the  code that is  loaded into the
+  editor. You will  note that the file  name has changed to DMDEMO.RUN.
+  In the blink of an eye the code has been saved and converted into the
+  RUN format for execution.
+
+  In fact all programs  (.prg) are automatically saved and converted to
+  .run format whenever  you press Alt-R (or  CTRL-W). This assures that
+  your .prg and .run are in synch at all times.
+
+  Play with  the demo. When done  press ESC from the  demo menu and you
+  will return  to the exact  location in  the editor at  which you left
+  when you pressed Alt-R.
+
+  The various programs  that make up the  demo are an excellent example
+  of  Schooner code.  As  mentioned above,  if  you have  experience in
+  Dbase(r) Foxbase(r)  or Clipper(r) you  will recognize Schooner right
+  away.
+
+
+                         Programming in Schooner
+
+  Schooner is a language  interpreter. All code that is written and run
+  is interpreted  line by line. Experience  shows that interpreters are
+  best for fast  development but slower in  execution of code. Compiled
+  software is fast in execution, but slow in development.
+
+  Schooner attempts  to find a  good compromise to  this problem. Since
+  Schooner  is   a  function  interpreter  as   opposed  to  a  command
+  interpreter, there is  very little interpretation that actually takes
+  place. Thus Schooner runs faster than other interpreters of a similar
+  design.
+
+  However, Schooner  goes one step  further. All Schooner  1.10 code is
+  Clipper(r)  Summer '87  compiler  compatible. That's  right,  you can
+  compile Schooner  code with Clipper(r). Schooner  provides all of the
+  advantages of an interpreted development environment and the speed of
+  compiled applications.
+
+  Unfortunately,  due   to  licensing   issues,  we   cannot  sell  you
+  Clipper(r). We can however  provide you with the Schooner library and
+  full  instructions  on how  to  compile  your  applications.  See the
+  additional compiler documentation below.
+
+
+                       Writing your first program
+
+  From a  blank editor screen  press F8  and enter a  new program name.
+  Call it 'TEST.prg' for this example and press ENTER.
+
+  Type in the following lines of code. Press ENTER after each line.
+
+     clearscrn()
+     superbox(00,00,24,79,.T.,"",.f.)
+     mvcount=0
+     do while mvcount<50
+       message('The counter is: '+alltrim(str(mvcount)),'OFF')
+       mvcount=mvcount+1
+     enddo
+     message('DONE!!!')
+     quit
+
+  When you are  done press ALT-R. This will  save and convert your code
+  to .RUN format. Press ENTER to accept the program to run and watch it
+  go...
+
+  This little program  simply displays a counter  on the screen. But it
+  does give  you a  good idea  of how simple  a Schooner  program is to
+  write and run.
+
+  In order to understand the  code better, press F1 then F2 and look up
+  each command and function in the on-line help.
+
+
+                    Schooner Technical Specifications
+
+  In  a nutshell,  Schooner has  virtually all  of the  capabilities of
+  Dbase III  plus(r) and  Clipper(r) Summer '87.  In addition, Schooner
+  supports a whole set of graphics functions not found in either of the
+  above languages.
+
+  System Specifications:  IBM compatible  computers with  640k bytes of
+  RAM, hard  drive, one  floppy, DOS 5.0  (developed in  5.0 but should
+  work in  version 3.30  or higher)  and a  color monitor  for graphics
+  display.
+
+  Field types:   Character........32K
+                 Numeric..........Max 19 bytes
+                 Date.............8 bytes
+                 Logical..........1 byte
+                 Memo.............Max 64k
+
+  Indexing: Schooner supports indexing with the .NTX
+            extension.
+
+  Arrays:   Single dimensional arrays. Any data type.
+            Arrays are declared with the PUBLIC command.
+
+  Files:    Database........... .dbf
+            Memos.............. .dbt
+            Labels............. .lbl
+            Reports............ .frm
+            Program modules.... .prg
+            Run modules........ .run
+
+  Procedures and  Functions: Schooner handles  procedures much the same
+  way as Dbase  III plus(r). Functions are  handled as described in the
+  on-line documentation.  Functions can  be included  in lines  of code
+  like any compiled functions  but they cannot pass parameters (this is
+  done by  declared public variables),  contain nested Schooner defined
+  functions or call other Schooner procedures.
+
+  Work Areas:  Schooner supports  9 open  files (work  areas) and index
+  combinations but not  to exceed the number  of files declared to DOS.
+  Each data file  must reside in its own  work area and can be accessed
+  by alias name or the FSELECT() function.
+
+  Public: All  variables in Schooner are  declared as public (available
+  to all  procedures and functions)  either automatically when assigned
+  (mvname='John') or with the  PUBLIC command. All variable names start
+  with the letters MV and can contain a maximum of 10 letters.
+
+  Operations:
+
+       Math:     + addition
+                 - subtraction
+                 * multiplication
+                 / division
+                 % modulus
+                 ^ raised powers
+                **   "      "
+
+       Order:    Operations are solved from left to right.
+                 Parentheses are solved first
+                 Exponentiation are solved second
+                 Multiplication and division are third
+                 Addition and subtraction are last
+
+
+       Relational:    < less than
+                      > greater than
+                      = equal
+                      <> not equal
+                      <= less than or equal
+                      >= greater than or equal
+                      $ contained within
+                      == exactly equal
+
+       Logicals: .and.
+                 .or.
+                 .not.
+
+       Strings:  + join two strings together
+                 - joins two strings together but trims any
+                   trailing spaces from the first.
+
+
+  Passing  DOS Variables  to Schooner  Applications:  You can  pass DOS
+  information  to Schooner  by declaring  a DOS  variable with  the SET
+  command.  Use  the  GETE()   function  within  Schooner  to  get  the
+  environment  variable from  DOS. Be  sure that  the DOS  variable you
+  reference in the GETE() function is upper case. See GETE().
+
+
+                            Memory Management
+
+  You can manage the  use of memory with the following standard CLIPPER
+  DOS environment variable settings:
+
+       Set CLIPPER=Vxxx;Rxxx;Fxxx;Sx;Exxx
+
+  'V' controls  memory (in kbytes) used  for tracking memory variables.
+  If not defined  then 20% of available memory  is used (up to 44k) for
+  variables. Since  only 22 bytes  are used for  each variable, you can
+  provide more memory to the  rest of the system by declaring only that
+  which is really needed for variables to Schooner.
+
+  'R'  controls the  RAM  used for  index  buffers (these  are internal
+  buffers and  not those declared  in your config.sys)  and the SHELL()
+  function. Unless  you are going  to SHELL()  to DOS, set  this to the
+  minimum 16K.
+
+  'F' overrides the files setting in Config.sys (but cannot exceed it).
+  This can be helpful in managing the number of open files Schooner can
+  use.
+
+  'S' can  help to  control snow  effects on  older monitors.  Set to 1
+  (one) will help eliminate snow.
+
+  'E' controls the amount of  Expanded memory Schooner can use, up to a
+  maximum of 1  megabyte. When available, expanded  memory is only used
+  for index buffering. Out  of memory conditions created as a result of
+  the MS DOS 5.00 and 6.00 EMM386.sys NOEMS option can be eliminated by
+  setting E to 000.
+
+  You do not need to declare the CLIPPER variable to DOS, Schooner will
+  simply use the defaults. However, in tight memory environments it can
+  help your applications manage memory better.
+
+
+                          Network Applications
+
+  Schooner  should be  compatible with  most  local area  networks that
+  recognize the Clipper(r) method  of record and file locking. However,
+  we do  not have a  LAN of our  own to test  with and cannot guarantee
+  networking compatibility.
+
+  In general, writing applications for networks is pretty easy. Observe
+  the following:
+
+  Open 'shared', all files  that reside on servers that will be shared.
+  Open other  files (especially  those that reside  on the  node PC) as
+  exclusive.
+
+  All shared files must use record or file locking in order to lock the
+  record or  file for  exclusive use by  the requesting  node. Only the
+  locking node can modify the record or file. Others, however, can read
+  the file.
+
+  Be sure to  unlock the record or file  when done so others can access
+  the record or file.
+
+  Reference the  NETERR() function when  performing network activities.
+  This can help you determine error conditions that might arise.
+
+  It  is recommended  that  you use  record  locking for  virtually all
+  network activities. This  leaves the rest of  the file open for other
+  users to  access and provides  better speed as  more users access the
+  file.
+
+  However, OPEN()  the file  exclusively for such  activities as FZAP()
+  which will delete and pack the whole file.
+
+
+                    Error Detection During Execution
+
+  As mentioned above, errors are trapped at run time and displayed in a
+  red box on the screen. Error messages are standard Clipper(r) derived
+  messages with  hooks to  the development  environment that  point the
+  Schooner editor  back to the  line of code  that generated the error.
+  This allows  Schooner to  load the file  that contains  the error and
+  place the cursor on the line of code with the error.
+
+  Error messages  generally describe  the error well.  However, not all
+  messages are  easy to trace.  For the most  part, error messages will
+  define the  function, the  internal (not Schooner)  line of offending
+  code and a description of the error.
+
+  The function described  in the error message  will most likely be the
+  Schooner named function, but it may be an internal function. If it is
+  an  internal  function,  don't panic.  The  error  is  probably  in a
+  Schooner command  or variable declaration. Let  Schooner point you to
+  the line of Schooner code and fix the error.
+
+  Though  rare, some  errors may  generate  a condition  where Schooner
+  cannot  point you  back  to the  line  of code.  These  are generally
+  database file errors that  corrupt the file handles used by Schooner.
+  This does not cause damage. It simply means you have to manually load
+  the source code file and find the error yourself.
+
+  Even more  rare are those errors  which dump you  back to DOS. Again,
+  they rarely cause damage, but you will need to restart Schooner.
+
+  Make liberal use of the  SETEXIT() function to allow you to break out
+  of infinite  loop conditions.  In emergencies use  the Alt-C command.
+  This will  kill almost  any situation and  return you  to DOS. Simply
+  restart Schooner to fix the problem.
+
+  The following are some of the more common errors:
+
+  Database Required: You attempted to access a non existent database.
+
+  Lock Required:  You tried  to perform  a function  which required the
+  file or  record to be  locked. Use  the file exclusively  or lock the
+  file or record.
+
+  Exclusive Required: Similar to above. Use the file exclusively.
+
+  Field Numeric Overflow:  You tried to write  a number into a database
+  field  where the  size of  the number  is larger  than the  field can
+  handle.
+
+  Index File Corrupted: You have a damaged index file. Reindex.
+
+  Type Mismatch: You tried to join or work on two variables that are of
+  a different type.
+
+  Subscript Range:  You tried  to use  an array  element that  does not
+  exist.  In  rare  situations this  message  may  appear  if  you have
+  unbalanced IF..ENDIF or DO WHILE..ENDDO constructs.
+
+  Zero Divide: You tried to divide by 0.
+
+  Run Error: Occurs when a SHELL() error condition arises.
+
+  Open Errors: These can occur  when an error arises during a file open
+  attempt. A number  is included with the  error that describes the DOS
+  error type.  Refer to your DOS  manual for a  full description of the
+  error type.
+
+  Print Errors: Generally occur  when the printer is off-line or out of
+  paper.
+
+  Undefined Identifier:  You tried to  use a variable  that has not yet
+  been defined.  Use the  PUBLIC command  to define  it or  assign it a
+  value. This can also occur when an IF or DO WHILE statement  tries to
+  evaluate  an expression  with an  undefined  variable (EVEN  WHEN THE
+  STATEMENT IS NESTED WITHIN  A FALSE CONSTRUCT. This can occur because
+  all IF and DO WHILE structures are evaluated in order to maintain the
+  internal structure stacks).
+
+  Not an Array: You tried to use an array element that does not exist.
+
+  Missing External: Generally refers  to misspellings in your code that
+  refer to commands or functions.
+
+  Internal Error: An ugly one. Could mean a corrupted index file.
+
+  Disk Full: Just like it sounds.
+
+  Multiple Error:  Several errors  have occurred at  once. Another ugly
+  one. You will probable get dumped back to DOS.
+
+  Out of  Memory: You have run  out of memory.  Try modifying the above
+  listed memory  management variables to  open up some  more memory. In
+  particularly  large  applications, try  running  your  code  with the
+  SCHOONRT runtime module rather than directly from the editor. This is
+  a hassle, but opens up more memory.
+
+
+                       Compiling your Applications
+
+  As mentioned before, Schooner  is code compatible with the Clipper(r)
+  Summer 87 compiler. While  we cannot supply you with the compiler and
+  Clipper(r) libraries,  we can provide you  with the Schooner specific
+  libraries and  instructions on  how to  easily compile  your Schooner
+  code.
+
+  The tools you will need are:
+
+       Schooner and your Schooner code.
+       The Clipper(r) compiler
+       The Clipper(r) and Extend libraries
+       The Schooner library
+       The Schooner Schgraph library (for graphics)
+       The Microsoft(r) 'C' 5.00 LLibca library (for graphics)
+       The Microsoft(r) 'C' 5.00 Graphics library (for graphics)
+
+  You  will note  that  for  graphics applications  you  will  need the
+  additional 'C' libraries listed above. Unfortunately we cannot supply
+  these for licensing reasons.
+
+  If you already have  the Clipper(r) tools described above and want to
+  take  advantage of  Schooner functions  (not  commands), they  can be
+  directly intermixed  with Clipper(r)  commands and  functions in your
+  Clipper(r) applications.
+
+  In  addition, the  Schooner  graphics should  be  accessible (without
+  recompiling with the Microsoft(r) libraries described above) by using
+  one of  the many third  party memory overlay  functions available. In
+  theory (We  stress theory  as we have  not done  this ourselves), you
+  should  be  able  to overlay  the  SCHOONRT  runtime  module  and use
+  Schooner  code to  create  graphics applications  in  your Clipper(r)
+  applications.
+
+  Note that  the overlay technique  described above is  not the same as
+  overlays  commonly  used   by  compilers  and  linkers.  The  overlay
+  described above  is just a  sophisticated RUN (or  Schooner SHELL() )
+  which unloads your application  and allows another application to run
+  in its place. When complete, the overlayed application is removed and
+  your original application is restored.
+
+  To order the Schooner  specific libraries send a 39.95 check or money
+  order  made out  to  'Jonathan Cook'  to  the address  listed  in the
+  README.DOC file.
+

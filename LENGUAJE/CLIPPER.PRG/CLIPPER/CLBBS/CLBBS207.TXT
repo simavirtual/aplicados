@@ -1,0 +1,824 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+       °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 2, Number 7                                    28 February 1992
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                              NELSON MANDELA FREE!
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    Hitch Hikers Guide To The Net  .........................................  1
+    Starters corner (3)  ...................................................  5
+    Nantucket Code Guidelines  ............................................. 10
+ 2. ANOMALIES  ............................................................. 13
+    ANOMALIES reports and commets  ......................................... 13
+ 3. CLIPPER NET  ........................................................... 14
+    Index of described files in Clipper BBS Magazine  ...................... 14
+ 4. CLIPBBS  ............................................................... 16
+    CLIPBBS distribution  .................................................. 16
+    CLIPBBS, how to write an article!!!  ................................... 18
+
+                                   - - - - -
+ CLIPBBS 2-07                   Page 1                   28 Feb 1992
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+                       Hitch Hikers Guide To The Net
+ 
+ 
+                        Episode 3 - The Singularans
+ 
+  (Arnold Lint and the crew of the Infinity are trying to decide what to do
+  now that they are being faced by the deadly Singularans.)
+ 
+  Xaphod: Oh wow, just when we got past the Flamers, we have to run into the
+          'Singles'. The Illogical drive won't work this time.
+ 
+  Rod:    No, and neither will evasive actions. They all talk that way|
+ 
+  Gillian:        What will we do then?
+ 
+  Arnold Lint:    I'll tell you . . . we're all going to die.
+ 
+  Xaphod: Shut your cake-hole|
+ 
+  Martin: I tried to tell you this trip would be a real downer, but would
+          you listen?
+ 
+  Rod:    Quiet|
+ 
+  Xaphod: I guess we should see what they want.
+ 
+  (Xaphod switches on the two way video telecommunicator and RadaRange.  The
+  face of the Singularan captain appears on the screen.  He is a normal
+  human wearing a T-shirt which says: "Have you ever really listened to
+  Manilow?" He is also sporting glow in the dark pants and 10 pounds of
+  silver and gold chains around his neck.)
+ 
+  Singularan:  Hey, like I'm Dirk Thawtphull. We were cruising by and saw
+               your node. Interested in some meaningful relationships, free
+               from the moral depravity that otherwise infects the net.
+ 
+  Xaphod: Well, I kind of like depravity.
+ 
+  Rod:    Yah, me too.
+ 
+  Dirk:   Wow, you'd love our S & M encounter group then, fershure|
+ 
+  Arnold Lint:    Your what?
+ 
+  Dirk:   S & M encounter group. We get together twice a week and exchange
+          recipes and beatings.
+ 
+  Arnold Lint:    How could a group like that command such a strong node?
+ 
+  Xaphod: Well, the sudden popularity of Jogging induced widespread adoption
+          of the principles of Single-ism. The subsequent rise of the sport
+ CLIPBBS 2-07                   Page 2                   28 Feb 1992
+
+
+          of 'Joggering' reduced the numbers of Singularans to normal size.
+          It appears that they may be making a come back though.
+ 
+  [The "Hitch Hikers Guide to the Net" defines 'Joggering' as a sport
+  originated in Australia to combat the sudden drop in productivity caused
+  by having everybody jogging. Australian champion Bruce Karnage describes
+  the sport: "Well, there is a different way of catching both male and
+  female joggers. If it's a male, you flush him out into the open with
+  cigarette smoke, then chase him down in your 4 x 4 Land Rover. When he's
+  tired, bump him with the fender to stun him momentarily. Then get out and
+  with your driver pick him up by all fours and run him head-first into the
+  side of the truck. If it's a female, bait a likely spot with designer
+  jogging wear and then wait for a flock to arrive. When one becomes
+  interested, sneak up behind her, very quietly. Then when you are about two
+  feet away, and you can see the sun dancing on her richly tanned flesh
+  caressing her well toned figure into a visual symphony of delight, split
+  her skull with a handy two-by-four. It's a lovely sport|" The sport later
+  became known as 'Walkmaning'.]
+ 
+  Rod:  We were on our way to Netrothea to pick up some ... uh ...  fuel,
+        yah that's it.
+ 
+  Dirk:  Well, we've got plenty of fuel, come on over and we'll let you have
+         it.
+ 
+  Xaphod:  No, it's OK.
+ 
+  Dirk:  I insist|
+ 
+  (The Singularan ship lets out a pink and purple polka-dot ray that engulfs
+  the Infinity. Arnold Lint and company find themselves in a room on the
+  Singularan ship. It is decorated right out off the floor of a K-Mart.
+  K-Tel's "Feelings" album is playing "You light up my existence" in the
+  background, on the ceiling is a gigantic mirror, and in one corner is a
+  gigantic mood-bean-bag chair.)
+ 
+  Gillian:  How awful|
+ 
+  Martin:  Actually, I kind of like it, in a depressing sort of way.
+ 
+  Rod:  Quiet.
+ 
+  Arnold Lint:  Where are we.
+ 
+  Dirk:  You're aboard the Singularan vessel "Sincerity". You will remain
+         here until you learn to develop meaningful relationships over the
+         Net.  Meaningful relationships based on honesty, truth, and having
+         nothing to do with physical appearance. Relationships which will
+         grow as you and your partner, or partners, share, or don't share,
+         things you have, or don't have, in common. You will learn how to
+         have every other  sentence include the words 'special' or
+         'meaningful relationship'.
+ 
+  Xaphod:  If he says "meaningful relationship" once more I'll have to pray
+           to the porcelain buddha.
+ 
+ CLIPBBS 2-07                   Page 3                   28 Feb 1992
+
+
+  Rod:  Sickening, isn't it.
+ 
+  Dirk:  Right, enough of this. Wait here and we'll start programming you
+         for meaningful relationships.
+ 
+  (Xaphod bends over a nearby table and vomits, the 12" CRT on his shoulder
+  starts scrolling "Uuuggghhh")
+ 
+  Gillian:  What did you mean about "programming" us?
+ 
+  Dirk:  We'll have to make you compatible with the environment and take
+         away all your inhibitions when discussing your personal life on the
+         Net. You'll be subjected to countless sessions watching repeats of
+         "The Dating Game", "The Newlywed Game", and "Celebrity Wife
+         Swapping". And that's only Stage 1|
+ 
+  [The "Hitch Hikers Guide to the Net" points out that the three old earth
+  TV shows just mentioned were actually the basis for a huge
+  inter-conglomerate stock monopolizing scheme started by The Phone Company.
+  The questions asked on these shows were actually coded messages issued by
+  The Phone Company to the conglomerates it was working with. These messages
+  told the associated conglomerates about which stocks to buy based on
+  information gained by The Phone Company by listening in on the phones of
+  important companies. The client corporations paid The Phone Company 1
+  million dollars for each such message.  The seemingly idiotic contestants
+  were, more often than not, government agents trying to break The Phone
+  Company's code.  Chuck Barris, the originator of the shows, was later
+  found to be a financial genius, rivaled only by Howard Hughes.]
+ 
+  Rod:  We gotta get put of here|
+ 
+  Xaphod:  Yah.
+ 
+  Rod:  You know what really gets Singularans put off? Rudeness and
+        crudeness|
+ 
+  Arnold Lint:  What?
+ 
+  Rod: Rudeness, if we act real crude and rude, they'll beg us to leave|
+ 
+  Xaphod:  Great, let's try it|
+ 
+  (Dirk returns with three gorgeous women and one well built female model
+  android.)
+ 
+  Rod:  (To the first girl) Wow, look at that pair|
+ 
+  Xaphod:  (To the second girl) That's a lovely grab|
+ 
+  Rod:  (To the third girl) OK love, drop 'em|
+ 
+  Martin:  (To the female android) I wave my private parts toward
+           approximate vector coordinates.
+ 
+  Gillian:  (To Dirk) Say Dirk, if you get some Saran-Wrap and chicken wire,
+            I'll get the honey and the plunger.
+ CLIPBBS 2-07                   Page 4                   28 Feb 1992
+
+
+  Dirk:  Get out of here you disgusting filthly maladjusted perverts|
+ 
+  (The three women and one android exit with great haste. The crew of the
+  Infinity is beamed back to their node.)
+ 
+  Dirk:  Good riddens. Put on the flip side of  "Feelings" and pass the
+         cheese dip. It's their loss, for only we know what true meaningful
+         relationships are. Only we know the feeling of wholeness that comes
+         from showing, or not showing, what one feels, or doesn't feel, with
+         someone special we care about. We aren't hung up on physical
+         things, we are spiritualists. At least, that's what we tell
+         everyone else.
+ 
+  Xaphod:  Right, now on to Netrothea, nothing can stop us now.
+ 
+      ******************** End Of Part 3 ********************
+ 
+  Will the crew of the Infinity reach Netrothea, or will Nothing stop them?
+  For the answers to this, and other useless questions . . . Tune in next
+  time . . .  same Net-time . . . same Net-channel.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-07                   Page 5                   28 Feb 1992
+
+
+                                Starters corner
+                                   Paul Ket
+                                   ========
+ 
+ In this episode we are going to have a look into the space saving business.
+ We ended last episode with a way to store the information which took slightly
+ more space than the first try (Firsttry.dbf).
+ 
+ Although the second try only takes more space when there are more than 7
+ ingredients in the recipe, i guess this will often be the case. A great task
+ ahead to re-organise in a way which takes less space.
+ 
+ Second problem which will occure in the long run is the time needed for
+ data-entry. In the way we organised the second try, you have to type each
+ ingredient over and over again. For one -more exotic- ingredient that might
+ not be a bore, but for more common one it sure will. So, modern User
+ Interfaces demand menu's for data-input.
+ 
+ This will be the two problems we'll discuss this episode.
+ 
+ For those who have lost track of previous episodes: the file-structures used
+ earlier are in an addendum.
+ 
+ 
+ Problem: Space saving
+ =====================
+ 
+ Below you'll find the second method of organising the information we want
+ to store. In INGRDNT.DBF we store the ingredients in a Character field.
+ 
+     Name: Ingrdnt.dbf  (2)      Name: Secondtry.dbf
+     ======================      =====================
+       NAME  TYPE    LENGTH       NAME  TYPE  LENGTH
+     1 Re_num  N     4,0         1 Re_num  N      4,0
+     2 Ingri   C     40          2 Name    C      40
+     ----------------------     3 Descri  M      10
+     TOTAL           44          ---------------------
+                                TOTAL             81
+ 
+ 
+ A typical list of the contents of INGRDNT.DBF in use will look like this
+ (faked data)
+ 
+ >-------- faked listing of INGRDNT.DBF -------------------<
+ 
+ RECNO()   RE_NUM   INGRI
+ ------    ----    -----------------------------------------
+ 1          1       Cheese, 100 gram
+ 2          1       Eggs, 8
+ 3          2       Cheese 50 gram
+ 4          2       Butter, a little
+ 5          3       Butter, 100 gram
+ 6          3       Bacon, 100 gram
+ ------    ----     -----------------------------------------
+ 
+ >-------- End listing of INGRDNT.DBF -------------------<
+ CLIPBBS 2-07                   Page 6                   28 Feb 1992
+
+
+ Except in the RECNO() colum, the line below the fieldname gives
+ the space which will be occupied by that field.
+ 
+ From this listing we can conclude:
+ -  that about 50% of the space reserved for the ingredients isn't used
+    at all. We are storing spaces. Wasting expensive diskspace.
+ -  that there might be an infinite number of ingredients, but that we
+    only use a litte part of that number.
+ 
+ Solution is to make a seperate file in which we store the ingredient-
+ names. Let's call it the LOOKUP-file.
+ 
+ 
+       Name: Lookup.dbf (3)
+       ===========================
+          NAME     TYPE     LENGTH
+       1  Ing_num   N        3,0
+       2  Ing_nam   C       30
+       ---------------------------
+       TOTAL                33
+ 
+ Done that we have to rearrange the ingredients file. We have to
+ make a connection between the ingredients and the LOOKUP.DBF.
+ This is done with the ING_NUM field. Because we only store the name of the
+ ingredient in LOOKUP, we have to create a new field which holds the amount
+ we need.
+ 
+ 
+        Name: Ingrdnt.dbf  (3)
+        ======================
+           NAME     TYPE    LENGTH
+        1  Re_num    N     4,0
+        2  Ing_num   N     3,0
+        3  Amount    C    10,0
+        ----------------------
+        TOTAL             17
+ 
+ 
+ The recipe-file is not changed. For clearity: let's rename it in
+ THIRDTRY.
+ 
+ To make the new situation clear let's make a little diagram:
+ 
+ 
+    ÚÄÄÄÄÄÄÄÄÄ¿ÚÄÄÄÄÄÄÄÄÄ¿ÚÄÄÄÄÄÄÄÄÄÄ¿
+    ³ LOOKUP  ³³ INGRDNT ³³ THIRDTRY ³
+    ÀÄÄÄÄÄÄÄÄÄÙÀÄÄÄÄÄÄÄÄÄÙÀÄÄÄÄÄÄÄÄÄÄÙ
+         \      /     \    /
+          \    /       \  /
+         ÚÄÄÄÄÄÄÄÄÄ¿ÚÄÄÄÄÄÄÄÄÄ¿
+         ³ ING_NUM ³³ REC_NUM ³
+         ÀÄÄÄÄÄÄÄÄÄÙÀÄÄÄÄÄÄÄÄÄÙ
+ 
+ It shows that the tree .DBF-files are linked together by
+ common fields. SECONDTRY and INGRDNT have REC_NUM in common, INGRDNT
+ and LOOKUP have ING_NUM in common.
+ CLIPBBS 2-07                   Page 7                   28 Feb 1992
+
+
+ How will look our recipe in this new way of organising?
+ Again, the lines show the space which the information is allowed to take.
+ 
+ >----------------- Third try listing ---------------<
+ 
+  NAME: LOOKUP.DBF
+  ================
+  Recno Ing_num Ing_nam
+        ---     ------------------------------
+   1      1     Bread
+   2      2     Eggs
+   3      3     Mature cheddar
+   4      4     Butter
+   5      5     Garlic
+   6      6     Red pepper
+   7      7     Pepper
+        ---     ------------------------------
+ 
+ 
+  NAME: INGRDNT.DBF
+  =================
+  Recno Re_num Ing_num Amount
+        ----   ---     ----------
+   1       1     1     3 slices
+   2       1     2     5
+   3       1     3     50 gram
+   4       1     4     Little pc.
+   5       1     5     Little
+   6       1     6     1,5
+   7       1     7     Little
+        ----   ---     ----------
+ 
+  Name: THIRDTRY.DBF
+  =====================
+  Recno Re_num Name                                     Desc
+        ----   ---------------------------------------- ----------
+   1       1   Fried eggs Extra                         <description>
+        ----   ---------------------------------------- ----------
+ 
+ >----------------- END Third try listing ---------------<
+ 
+ We started all this trouble because of space-saving. So let's calculate:
+ 
+    File       No of record  Recordlength  Total
+    ============================================
+    LOOKUP.DBF      7             33        231
+    INGRDNT.DBF     7             17        119
+    THIRDTRY.DBF    1             54         54
+    ============================================
+    TOTAL                                   404
+ 
+ Last episode SECONDTRY.dbf used up 389 places. So, it doesn't look like
+ an improvement. This will be true when alomost every recipe uses totally
+ new ingredients. But each time you can refer to a record already
+ in LOOKUP.DBF you'll save space.
+ 
+ CLIPBBS 2-07                   Page 8                   28 Feb 1992
+
+
+ In SECONDTRY each ingredient always took 40 places.
+ 
+ In THIRTTRY it will take 33 in LOOKUP and 13 in INGRDNT.
+ An new ingredient will take that 46 places. But an alread entered
+ ingredient only will take 13 in INGRDNT and no extra record in LOOKUP.
+ This saves 27 places in comparison to SECONDTRY.DBF for *one* ingredient.
+ 
+ 
+ Problem: data-entry
+ ===================
+ A you might guess, this way of organising the information also saves
+ time when entering data.  Each ingredient is entered just once. Entering
+ new recipes the contents of LOOKUP are presented as a menu to choose
+ from. In the episode where we will discuss designing the user interface
+ we'll come back to this subject.
+ 
+ 
+ Next
+ ====
+ Next episode we take a closer look at our files. There is a little
+ to change to avoid some nasty mistakes.
+ 
+ And because the Netherlands have won there first gold medal in the
+ Olympic Winter Games (men's skating, 10,000 meters) i'll be happy
+ to finish this episode and to switch on an other CRT!
+ 
+ ------------------ article ends here, addendum starts ---------
+     Gebakken eieren Extra.     Fried eggs Extra
+     ======================     ======================
+     3 sneetjes brood           3 slices bread
+     5 eieren                   5 eggs
+     50 gram oude kaas          50 grames mature cheddar
+     klontje boter              little butter
+     knoflook                   garlic
+     paprika                    red pepper
+     peper                      pepper
+ 
+         Breek de eieren in een
+         beslagkom. Roer ze goed
+         door. Doe de boter in de
+         pan, smelt ze. Doe de
+         geroerde eieren in de pan.
+         Zet het vuur zo laag
+         mogelijk. Doe een deksel
+     op de pan! Laat het
+         langzaam sudderen. Na 3
+         minuten de kaas op het ei
+         doen. Kruiden naar smaak.
+         Deksel weer op de pan doen.
+         Als de kaas grotendeels
+         gesmolten is is het ei
+         goed. Opdienen op de
+         sneetjes brood.
+ 
+ *.*.*.**.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+ 
+ CLIPBBS 2-07                   Page 9                   28 Feb 1992
+
+
+     Name: Firsttry.dbf
+ 
+        FIELD  TYPE  LENGTH
+     1  Name     C     40
+     2  Ingre1   C     20
+     3  Ingre2   C     20
+     4  Ingre3   C     20
+     5  Ingre4   C     20
+     6  Ingre5   C     20
+     7  Ingre6   C     20
+     8  Ingre7   C     20
+     9  Ingre8   C     20
+     10 Descri   M     10
+       ------------------
+     ** total         210
+ 
+ *.*.*.**.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+ 
+     Name: Ingrdnt.dbf  (2)      Name: Secondtry.dbf
+     ======================      =====================
+       NAME  TYPE  LENGTH         NAME  TYPE  LENGTH
+     1 Re_num  N  4,0            1 Re_num  N      4,0
+     2 Ingri   C  40             2 Name    C      40
+     ----------------------     3 Descri  M      10
+     TOTAL           44          ---------------------
+                                TOTAL             81
+ 
+ 
+ ---------------------------- that's all -----------------------------------
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-07                   Page 10                  28 Feb 1992
+
+
+                           Nantucket Code Guidelines
+ 
+ 4.  Fieldnames
+ 
+     4.1     Capitalize the first letter of fieldnames:
+ 
+              @ 10,10 SAY Branch
+ 
+             COMMENTS: Prefred way on my side is capitalize fieldnames
+             compltely and also ALWAYS prefix them with ALIAS. Otherwise, it's
+             good idea to capitalize first letter and other have lowercase,
+             because it can make difference immediate from memory variables.
+             They have first letter small.
+ 
+     4.2     Do not use leading underscores: these are used for Clipper
+             internal variable and function names.  Underscores should not be
+             used anywhere in the fieldname.  Use mixedcase for fieldnames
+             consisting of more than one word:
+ 
+              ? TotalSum, NumOfLines
+ 
+             COMMENTS: There is really good reason to NOT use underscores as
+             FIRST character of function (variable) names. They are used in
+             INTERNAL symbols of Clipper or in other third party libraries.
+             Second case of using underscores (in names for separating parts)
+             is also good to avoid, there is ALWAYS possibility use mixing of
+             upper and lower case parts for better separating of logical
+             parts.
+ 
+     4.3     Always explicitly reference fieldnames, either by using the FIELD
+             declaration or by preceding the fieldname with the file alias:
+ 
+          FIELD CustName
+          OR
+          @ 10,10 SAY CustFile->CustName
+ 
+             @ 10,10 SAY CustName
+ 
+             COMMENTS: This guideline is again little bit not clear. There is
+             no way how to specify FIELD for the same fieldname, but in TWO
+             different databases. Therefore my guideline of this kind is,
+             ALWAYS specify alias before field name.
+ 
+ 5.  Memory Variables
+ 
+     5.1     Memory variable names consist of a lowercase data type designator
+             (see section 2), followed by a mixedcase description:
+ 
+              cString := "Hello world"
+ 
+             COMMENTS: This is important guideline. It's first repeating
+             guideline for specifying first letter (letters) of variable name
+             (given by letter explaining contents of variable) and then just
+             addid name of variable after this spec. Why all of this? Simple,
+             did you ever wondering what command:
+                     ?   MyHelloNumber
+ CLIPBBS 2-07                   Page 11                  28 Feb 1992
+
+
+             Will print in reality? Number? String? Logical value. Isn't it
+             easier to use:
+                     ?   cMyHelloNumber
+ 
+ 
+     5.2     Underscores should not be used anywhere in a memory variable
+             name.  Use mixedcase for names consisting of more than one word:
+ 
+              nTotalCost := Invoices->Cost
+ 
+             COMMENTS: This is little redundant repeat of guideline 4.2...
+ 
+     5.3     Never give memory variables the same names as database fields.
+ 
+             COMMENTS: This is also very good to keep in mind. Mistake like
+             this can end in total mixup of your program data and sometime
+             with very strange overwritings of database files with strange
+             data. Expansion of this guideline is:
+ 
+             Memory variables keeping data of database fields are getting name
+             constructed from field name and prefix describing kind of data.
+             It means for example:
+ 
+                 cADDRNR     is connected with ADDRNR field
+                 cAddrNr     can be also used
+ 
+ 6.  Functions and Procedures
+ 
+     6.1     Clipper function names are uppercase, followed by parentheses:
+ 
+          You can create user-friendly menus with ACHOICE().
+ 
+             COMMENTS: Unfortunately i have exactly different rule for this.
+             All NON user-defined function and procedure (who needs procedure
+             anyway) names are LOWER case complete and only. When taking
+             logically this rule is not good when exist rule of writing
+             keywords and commands in UPPER CASE, then write functions also in
+             UPPER is making program with main names in upper. Result is
+             unreadable program.
+ 
+     6.2     User-defined function and procedure names begin with an uppercase
+             letter, followed by lowercase letters as appropriate:
+ 
+          ? Center("Please select a menu option", 80)
+ 
+             COMMENTS: 6.1 and 6.2 together are creating one result which is
+             good. Someone reading your program can decide immediate what
+             functions are coming as internals of CLipper and what are coming
+             from own program or third party libraries.
+ 
+     6.3     Do not use leading underscores: these are used for Clipper
+             internal variable and function names.  Underscores should not be
+             used anywhere in a function or procedure name.  Use mixedcase for
+             names consisting of more than one word:
+ 
+          YesOrNo("Do you wish to continue?", 10, 10)
+ CLIPBBS 2-07                   Page 12                  28 Feb 1992
+
+
+             COMMENTS: It's repeat of already TWO times used rule...
+ 
+     6.4     When parameters are specified as part of a function
+             declaration, a space is placed inside each parenthesis:
+ 
+          FUNCTION SayInBox( cMessage, cColor )
+ 
+             COMMENTS: This guideline can help better readibility of program,
+             but can also have unwanted side effect. When function has TOO
+             many parameters, FUNCTION line is coming be TOO long...
+ 
+     6.5     The RETURN statement at the end of a function or procedure is
+             indented 1 tab (see example in section 15).
+ 
+             COMMENTS: Exactly OPPOSITE is mine. RETURN statement belonging to
+             any FUNCTION statement is at THE same collumn as connected
+             FUNCTION statement. There is no reason at all to pick one TAB
+             right for RETURN statement.
+ 
+     6.6     If a subroutine does not return a value, it should be declared as
+             a PROCEDURE.  A routine that returns a value should be declared
+             as a function.  (Note that calls to both functions and procedures
+             can occur in the middle of a line with arguments listed in
+             parentheses.)
+ 
+             COMMENTS: I would like to know what is exact difference between
+             FUNCTION and PROCEDURE definition in Clipper. Nantucket as usual
+             forgot to explain this in documentation because docs are
+             decribing those two as equal. When they are really equal, there
+             is no reason to use PROCEDURE, because everything can be FUNCTION
+             (as is it in all of my programs). PROCEDURE word or any
+             equivalent does not exist in "C" languages and nobody is missing
+             it...
+ 
+     6.7     The return value of a function is enclosed in parentheses:
+ 
+          RETURN (cRetValue)
+ 
+             COMMENTS: Absolutely agree. Either i'm using RETURN (NIL) when
+             function is returning nothing. This way of using RETURN statement
+             can also eliminate some mistakes or misunderstandings of
+             expressions in RETURN statement.
+ 
+     6.8     Wherever possible, variables referenced by a function or
+             procedure should be passed as parameters.
+ 
+             COMMENTS: This is absolutely important guideline. I have lot of
+             work with some old programs using PRIVATE variables in many
+             places where function needs some variables available from
+             under_function <grin>. Clipper is missing one possibility and
+             it's declaration of function INSIDE of function as it is normal
+             in Pascal. Nantucket is trying to give a help in way of passing
+             ALL variables needed in subfunction directly as parameters. This
+             case is clever for eliminating all PRIVATE stuff, but sometime
+             hard (when function needs about 10 or 15 variables.... Anyway,
+             it's highly recommended.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-07                   Page 13                  28 Feb 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-07                   Page 14                  28 Feb 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+ ³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper                   ³[1-19]³
+ ³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+ ³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ CLIPBBS 2-07                   Page 15                  28 Feb 1992
+
+
+ ³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+ ³NFDD library for CLipper        ³[1-05]³
+ ³CLIPWARbe TOO long..d like to know what is exact difference between
+             FUN   )AeOBA
+. Thi        ³[1 FUNCxample in section 15).
+ 
+             COMMENTS: Exactly OP is exac<r progin wa                 G---------ln ³Severence betweeno knoDpIfor indicatio<e text of R.   rogram function.  (Note that ng. This way of using RE2s andER NET
+ ====orgot to explain $ in Clipper
+ BBS magazine in ]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxx§³
+ ³IOBASYS9.ARJ ³Vs. Pu------à-----à-----à-----à-----à-----à-----àve 
+ results of CLIPBBS 25                      it's declaration  their comn ³Detecti2and t            ,,e ion       two as tring,nPosition,1)) ³[1ever for S 25³[1-05]³
+ ³CLIPWARbe7$hln ³ASeverence betweeno knoDpIfor indicatio<e text of R.   rogram function.  (Note that ng. This way of using RE2s andER NET
+ ====orgot to explain $ in Clipper
+ BBS magazine in ]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources     )08]³
+ ³D      two er hi i                       ng. Thisfbetween gets via VALID ³[1-03]³
+ CLIPBBS 2-07                   Page 15              escribed èDlIS CLI°ÞÞÞÞI°ÞÞÞÞICLI°ÞÞÞÞII°ÞÞÞÞÞÞI°ÞÞÞÞÞÞI°ÞÞÞÞÞÞII°ÞÞÞÞICLibed èDlIS CL°ÞÞ°°ÞÞI°ÞÞ  escr°ÞÞICLI°ÞÞ°°ÞÞI°ÞÞ°°ÞÞI°ÞÞ°°ÞÞ°ÞÞ°°ÞÞILibed èDlIS C°ÞÞILS CL°ÞÞ  escr°ÞÞICLI°ÞÞI°ÞÞI°ÞÞI°ÞÞI°ÞÞI°ÞÞ°ÞÞÞICLILibed èDlIS C°ÞÞILescr°ÞÞICLIcr°ÞÞICLI°ÞÞÞÞÞII°ÞÞÞÞÞII°ÞÞÞÞÞII°ÞÞÞCLILibed èDlIS C°ÞÞILescr°ÞÞIC°Þcr°ÞÞICLI°ÞÞ°°CLI°ÞÞ°°ÞÞI°ÞÞ°°ÞÞIII°ÞÞÞCLibed èDlIS C°°ÞÞIIÞÞI°ÞÞI°ÞÞIr°ÞÞICLI°ÞÞIICLI°ÞÞI°ÞÞI°ÞÞI°ÞÞ°ÞÞ°°ÞÞILibed èDlIS CC°°ÞÞÞÞI°ÞÞÞÞÞÞÞI°ÞÞÞÞIC°ÞÞÞÞICL°ÞÞÞÞÞÞI°ÞÞÞÞÞÞII°ÞÞÞÞICLibed èDlIS CLC°°S CC°°°°°S CC°°°°CLC°°S CCCC°°°°°SCC°°°°°SCCC°°S CCCCibed èDlIS  CLIPBBS 2-07                   Page 15              escribed èDlIlIS                                                       ID ³[1-0Volume 2, Number 2ed èDlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlI14 January 1992ID ³[1-03]³
+
+
+
+
+
+(c) Daniel Do‡ekal, All Rights ReservedID ³[1-03]³The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAYID ³[1-03]³Some of the material used comes from scanning CLIPPER echoes³[1-03]³which are carried in various BBS throughout the World.³[1-03]³These Echoes are very often the source of the most often askedID -03]³Questions and Answers about Clipper.ID ³[1-03]³Other material,³which is fully signed or abbreviated is the³[1-03]³copyright of the appropriate persons.ID ³[1-03]³The publisher is not responsible for other authors submissions....³[1-03]³Published material is not necessarily the opinion of the publisher.ID ³[1-03]³Redaction:³[1-03]³
+Publisher...................................Daniel Docekal³[1-03]³
+Chief editor ...............................Daniel Docekal³[1-03]³
+Language editor .................................Dave WallID ³[³[³[IlIlIlIlIlIlIlIlIlIlIlIlIlIlIlITable of Contents³[³[I1. ARTICLES  ..............................................................lI1³[IlIlPGP - Pretty Good Privacy, revolution in security?  ....................lI1³[IlIlA one very nice fragment,³where is rest?  ..............................lI7³[IlIlClipper 5.01 and Microsoft C or Turbo C?  ..............................lI8³[I2. SOFTWARE  ..............................................................l17³[IlIlWHAT ISlWHAT, just take a short look intolClipper World  ...............l17³[IlIlLIST, Another Database of Files -lClipper Shareware/Public  ............ 19³[IlIl.NDX driver finaly available!!!!  ...................................... 23³[I3. Q&A  ................................................................... 24³[IlIlQ&A: How toldisplay status bar³when using INDEX ON  ....................l24³[IlIlQ&A: PCBIOS driver for Clipper 5.01  ................................... 25³[I4. ANOMALIES  ............................................................. 26³[IlIlANOMALIES reports and commets  ......................................... 26³[IlIlINTERNAL ERROR #1210 -lcoming od DATABASE operations  .................. 26³[IlIlClipper 5.01 negative GET error³when using PICTURE  .................... 26³[IlIlCLIPPER.EXE and RTLINK.EXE problems with EMS memory  ................... 27³[I5. CLIPPER NET  ........................................................... 29³[IlIlIndex of described files in Clipper BBS Magazine  ...................... 29³[I6. CLIPBBS  ............................................................... 31³[ CLIPBBS 2-02ed èDlITable of Contents (...)lIlIlIlI14 Jan 1992ID³[³[IlIlCLIPBBS distribution  .................................................. 31³[IlIlCLIPBBS, how tolwrite an article!!!  ................................... 33³[³[IlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlI-I-I-I-I-³[ CLIPBBS 2-02ed èDlIlIlIlIlIlIlIPage 1IlIlIlIlIlIlIlIlIlI14 Jan 1992ID³[³[I==============================================================================³[IlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlIlI ARTICLES³[I==============================================================================³[³[³[IlIlIlIlIlIlIPGP - Pretty Good Privacy, revolution in security?³[IlIlIlIlIlIlIlIlIlIlRA Public Key Cryptography for Masses³[1³[1³[1Non Clipper related subject,³yes. But related very well. Few months ago,³[1echos of FidoNet were barking about one subject - PGP.
+(c) by Philip³[1Zimmerman, program claiming tolbe FREEWARE is offering something really³[1unique. Public Key Cryptography for everybody. Our article will try to³[1explain WHAT is Public Key Cryptography and WHAT is aIPGP and FOR what is³[1use of this program good.ID ³[1Basics of this document is coming from original documentation for PGP, but³[1try is, make it smaller and cleaner for decision what and for PGP is.ID ³[1Did you, reader, ever needed tolsend tolsomeone crypted message or file³[1with sure, that this someone will be ONLY one tolbe able read your data?³[1Did you, reader, ever needed tolsign program or data created by you for³[1sure that noone else can garble with your data and change them? Looking for³[1program which will help you with this?ITake a PGP and go.ID ³[1PGP is high level terms is high security cryptographic software application³[1for MSDOS, it allows people exchange any data with privacy, authentication³[1and security. Data are readable from those who are intended tolread them,³[1when data are signed by you, everybody knows and can be sure, that they are³[1really coming from you. And ALL of this without any needs tolexchange³[1keywords for encrypting software.³That's result of basement upon "PUBLIC³[1KEY" cryptography.ID ³[1Generally, cryptosystem is using single key for encryption (coding) and³[1then for decryption (decoding).³This means, that SECURE channel must be³[1used for sending key from source of data toldestination, otherwise³[1decryption is impossible. Original conclusion from this of course is, why³[1tolencrypt anything,1when secure channel alreadylexist....³[1³[1Public key cryptosystem is baset on two related complimentary keys, PUBLIC³[1and SECRET key. Each key unlocks code made by other key. But there is of³[1course NOT easy way how tolmake SECRET key from PUBLIC key.... PUBLIC key³[1is in this case really published and sent across all possible communicate³[1channels, given to all your friends and all other users tolwhom you are³[1expecting sending anything crypted. SECRET key is used by recipient for³[1coding a message, PUBLIC key is used by receivers for encrypting message³[1for transceiver which can then use SECRET key for DECRYPTING them (and o

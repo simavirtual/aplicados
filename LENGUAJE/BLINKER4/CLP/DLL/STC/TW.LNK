@@ -1,0 +1,22 @@
+#
+#  96.02.25    TW.LNK for CA-Clipper
+#
+#  This sample link file is included by the TWnn link files which
+#  demonstrate how to link a Windows CA-Clipper EXE which will
+#  call a statically linked CA-Clipper Windows DLL.
+#
+   out tw                  # Output EXE name
+
+   fi t                    # List OBJ files here
+
+   defbegin                # Module definition commands
+      name tw              # Indicate an EXE
+      exetype windows 3.1  # Indicate a Windows EXE
+      imports
+         D.STATTEST        # Import the STATTEST function
+   defend                  # End module definition commands
+
+   lib C4_or_FW            # Library file(s) for Clip4Win or FiveWin
+
+   nobell                  # No irritating beep
+

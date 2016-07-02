@@ -1,0 +1,281 @@
+;*****
+; Filename: EXTENDA.MAC
+; Program.: Clipper Extended Library
+; Author..: Ralph Davis
+; Date....: June 1, 1986
+; Notice..: Placed in the public domain by Tom Rettig Associates.
+;           Clipper is a trademark of Nantucket.
+;           dBASE and dBASE III are trademarks of Ashton-Tate.
+
+; Notes...: Assembly language macros for Clipper interface.
+;
+;           Modified for use with Microsoft Macro Assembler -
+;           reflecting compatibility with Clipper Autumn86
+;           registers.   December, 1987
+; 
+;
+;
+    ;------------------------------------------------------
+    ; here the external functions are declared type FAR
+    ;------------------------------------------------------
+         EXTRN    __PARINFO:FAR
+         EXTRN    __PARC:FAR
+         EXTRN    __PARNI:FAR
+         EXTRN    __PARNL:FAR
+         EXTRN    __PARND:FAR
+         EXTRN    __PARDS:FAR
+         EXTRN    __PARL:FAR
+
+         EXTRN    __RETC:FAR
+         EXTRN    __RETNI:FAR
+         EXTRN    __RETNL:FAR
+         EXTRN    __RETND:FAR
+         EXTRN    __RETDS:FAR
+         EXTRN    __RETL:FAR
+         EXTRN    __RET:FAR
+
+
+    ;---------------------------------
+    ; data type equates from EXTEND.H
+    ;---------------------------------
+    UNDEF     EQU     0
+    CHARACTER EQU     1
+    NUMERIC   EQU     2
+    LOGICAL   EQU     4
+    DATE      EQU     8
+    ALIAS     EQU     16
+
+
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain the NUMBER OF PARAMETERS being passed.
+    ; The syntax is.....: GET_PCOUNT
+    ; Value returned in.: AX
+    ;
+    ; Example...........: GET_PCOUNT
+    ;---------------------------------------------------------------------
+    GET_PCOUNT MACRO              
+             XOR      AX,AX
+             PUSH     AX
+             CALL     __PARINFO
+             ADD      SP,2
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain the TYPE of the parameter being passed.
+    ; The syntax is.....: GET_PTYPE <expN>
+    ; Value returned in.: AX
+    ;
+    ; Example...........: GET_PTYPE 2  (get type of 2nd para)
+    ;---------------------------------------------------------------------
+    GET_PTYPE MACRO   N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARINFO
+             ADD      SP,2
+             ENDM
+    
+
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as STRING.
+    ; The syntax is.......: GET_CHAR <expN>
+    ; Address returned in.: AX:BX (segment:offset)
+    ;
+    ; Example.............: GET_CHAR 2  (get 2nd para as string)
+    ;---------------------------------------------------------------------
+    GET_CHAR MACRO    N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARC
+             ADD      SP,2
+             MOV      BX,AX
+             MOV      AX,DX
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as INTEGER.
+    ; The syntax is.....: GET_INT <expN>
+    ; Value returned in.: AX
+    ;
+    ; Example...........: GET_INT 1  (get 1st para as int)
+    ;---------------------------------------------------------------------
+    GET_INT  MACRO    N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARNI
+             ADD      SP,2
+             ENDM
+
+
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as LONG.
+    ; The syntax is.......: GET_LONG <expN>
+    ; Value returned in...: AX:BX
+    ;
+    ; Example.............: GET_LONG 2  (get 2nd para as long)
+    ;---------------------------------------------------------------------
+    GET_LONG MACRO    N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARNL
+             ADD      SP,2
+             MOV      BX,AX
+             MOV      AX,DX
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as DOUBLE.
+    ; The syntax is.......: GET_DBL <expN>
+    ; Value returned in...: AX:BX:CX:DX
+    ;
+    ; Example.............: GET_DBL 3  (get 3rd para as double)
+    ;---------------------------------------------------------------------
+    GET_DBL  MACRO    N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARND
+             ADD      SP,2
+             MOV      ES,DX
+             MOV      SI,AX
+             MOV      AX,ES:[SI]
+             MOV      BX,ES:[SI + 2]
+             MOV      CX,ES:[SI + 4]        
+             MOV      DX,ES:[SI + 6]        
+             ENDM
+    
+
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as DATE STRING.
+    ; The syntax is.......: GET_DATESTR <expN>
+    ; Address returned in.: AX:BX (segment:offset)
+    ;
+    ; Example.............: GET_DATESTR 1  (get 1st para as date string)
+    ;---------------------------------------------------------------------
+    GET_DATESTR MACRO N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARDS
+             ADD      SP,2
+             MOV      BX,AX
+             MOV      AX,DX
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to obtain a requested parameter as LOGICAL.
+    ; The syntax is.....: GET_LOGICAL <expN>
+    ; Value returned in.: AX
+    ;
+    ; Example...........: GET_LOGICAL 1  (get 1st para as int
+    ;                                     where 1=true , 0=false)
+    ;---------------------------------------------------------------------
+    GET_LOGICAL MACRO N
+             MOV      AX,N
+             PUSH     AX
+             CALL     __PARL
+             ADD      SP,2
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return a STRING.
+    ; The syntax is.....: RET_CHAR <seg_reg>,<off_reg>
+    ;
+    ; Example...........: RET_CHAR ax,bx
+    ;                     where: ax = segment
+    ;                            bx = offset
+    ;---------------------------------------------------------------------
+    RET_CHAR MACRO    REG1,REG2   
+             IRP      X,<REG1,REG2>
+             PUSH     X
+             ENDM
+             CALL     __RETC
+             ADD      SP,4
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return an INTEGER.
+    ; The syntax is.....: RET_INT <reg>
+    ;
+    ; Example...........: RET_INT ax
+    ;                     where: ax = register containing int
+    ;---------------------------------------------------------------------
+    RET_INT  MACRO    REG1        
+             PUSH     REG1
+             CALL     __RETNI
+             ADD      SP,2
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return a LONG.
+    ; The syntax is.....: RET_LONG <reg1>,<reg2>
+    ;
+    ; Example...........: RET_LONG ax,bx
+    ;                     where: ax:bx = registers containing long
+    ;---------------------------------------------------------------------
+    RET_LONG MACRO    REG1,REG2   
+             IRP      X,<REG1,REG2>
+             PUSH     X
+             ENDM
+             CALL     __RETNL
+             ADD      SP,4
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return a DOUBLE.
+    ; The syntax is.....: RET_LONG <reg1>,<reg2>,<reg3>,<reg4>
+    ;
+    ; Example...........: RET_LONG ax,bx,cx,dx
+    ;                     where: ax:bx:cx:dx = registers containing double
+    ;---------------------------------------------------------------------
+    RET_DBL  MACRO    REG1,REG2,REG3,REG4 
+             IRP      X,<REG1,REG2,REG3,REG4>
+             PUSH     X
+             ENDM
+             CALL     __RETND
+             ADD      SP,8
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return a DATE STRING.
+    ; The syntax is.....: RET_DATESTR <seg_reg>,<off_reg>
+    ;
+    ; Example...........: RET_DATESTR ax,bx
+    ;                     where: ax = segment
+    ;                            bx = offset
+    ;---------------------------------------------------------------------
+    RET_DATESTR MACRO REG1,REG2
+             IRP      X,<REG1,REG2>
+             PUSH     X
+             ENDM
+             CALL     __RETDS
+             ADD      SP,4
+             ENDM
+    
+    
+    ;---------------------------------------------------------------------
+    ; This macro is used to return a LOGICAL.
+    ; The syntax is.....: RET_LOGICAL <reg>
+    ;
+    ; Example...........: RET_LOGICAL bx
+    ;                     where: bx = register containing int
+    ;                                 (0 = false, 1 = true)
+    ;---------------------------------------------------------------------
+    RET_LOGICAL MACRO REG1
+             PUSH     REG1
+             CALL     __RETL
+             ADD      SP,2
+             ENDM
+    
+
+;
+; EOF:  EXTEND.mac
+;*****
+
+

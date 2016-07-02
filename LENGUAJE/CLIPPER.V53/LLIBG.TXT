@@ -1,0 +1,243 @@
+
+Light Lib Products Order Form                   DFL Software Inc.
+-----------------------------------------------------------------
+
+The following is a price list and order form for the Light Lib
+family of products by DFL Software, Inc. For more information on
+our products, please see our 3 page color product pamphlet which
+can be found inside the CA-Clipper 5.3 box. If you would like
+another product pamphlet, please contact us and we'll be happy to
+send one out to you.
+
+We are very proud to have our Light Lib Graphics technology
+included as part of CA-Clipper 5.3. This amazing graphics engine
+serves as the foundation for all of our Light Lib products under
+DOS. It has also enabled us to make all of our Light Lib products
+for CA-Clipper, upwardly compatible with their CA-Visual Objects
+counterparts.
+
+You can fax or mail us your CA-Clipper and/or CA-Visual Objects
+Order forms along with the Ordering Information on the following
+pages.
+
+Thank you for your support.
+DFL Software Inc.
+
+
+
+
+           "Quality products driven by innovative technology."(tm)
+
+
+
+-----------------------------------------------------------------
+(c)Copyright 1995 DFL Software, Inc.
+All trademarks are the property of their registered owners.
+CA-Clipper is a registered trademark of Computer Associates
+International, Inc. CA-Visual Objects is a trademark of Computer
+Associates International, Inc.
+
+Product Descriptions
+-----------------------------
+
+  o  Light Lib Graphics is a high performance replaceable
+     terminal driver for CA-Clipper which lets you run your
+     CA-Clipper applications in true graphics mode. Upgrading
+     from the VGA-only edition included with CA-Clipper 5.3 can
+     take you all the way up to 1280x1024 resolution with up to
+     16 million colors.
+
+  o  Light Lib Images is a complete document and image management
+     library for adding imaging support to your applications.
+     Adding advanced features such as scanning, printing,
+     display, zooming, rotating and more, has never been easier.
+
+  o  Light Lib Business is a business graphing and charting
+     library for adding graphs to your applications. Extensive
+     support functions are built in, allowing you to create
+     sophisticated graphs with only a few lines of code. The
+     architecture is fully open, enabling you to easily customize
+     the graph's behavior.
+
+  o  StarClass/G is a fully object-oriented class library which
+     provides developers with the very best Rapid Application
+     Development (RAD) environment for CA-Clipper 5.3.
+     StarClass/G has been specifically designed to harness the
+     power of CA-Clipper and the beauty of Light Lib Graphics.
+
+
+
+Light Lib Products for CA-Clipper
++=======================+===+=================================================+
+| Light Lib Graphics    |STD| From VGA up to 1280x1024 with 256 colors        |
+|                       +---+-------------------------------------------------+
+|                       |PRO| From VGA up to 1280x1024 with 16 million colors |
++=======================+===+=================================================+
+| Light Lib Images      |STD| File Formats: BMP, PCX, TIF                     |
+|                       |   | Compression: RLE, CCITT 1D                      |
+|                       +---+-------------------------------------------------+
+|                       |PRO| File Formats: BMP, PCX, TIF, GIF, JPG, BLOB     |
+|                       |   | Compression: RLE,Huffman,CCITT 1D/G3/G4,LZW,JPEG|
++=======================+===+=================================================+
+| Light Lib Business    |STD| Dynamic Graph Browsing, Auto Scaling,           |
+|                       |   | Auto Sizing, Auto Legend, 2D/3D/Bar/Line/Pie    |
+|                       +---+-------------------------------------------------+
+|                       |PRO| Dynamic Graph Browsing, Auto Scaling,           |
+|                       |   | Auto Sizing, Auto Legend, 2D/3D/Bar/Line/Pie,   |
+|                       |   | Mixed graphs, Complex columns,                  |
+|                       |   | Left & Right Y Axis, Axis rotation,             |
+|                       |   | Stock graphs, BLOBs                             |
++=======================+===+=================================================+
+| Light Lib Power Suite |STD| Standard Editions of:                           |
+|                       |   |   Light Lib Graphics and                        |
+|                       |   |   Light Lib Business and                        |
+|                       |   |   Light Lib Images                              |
+|                       +---+-------------------------------------------------+
+|                       |PRO| Professional Editions of:                       |
+|                       |   |   Light Lib Graphics and                        |
+|                       |   |   Light Lib Business and                        |
+|                       |   |   Light Lib Images                              |
++=======================+===+=================================================+
+| StarClass/G               | Object-oriented class library from              |
+|                           | Loesgen Software, Inc.                          |
++===========================+=================================================+
+
++====================================================+
+| Product                      Price   Qty    Total  |
++===========================+=========+====+=========+
+| Light Lib Graphics        | US$  99 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Images          | US$ 199 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Business        | US$ 199 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Power Suite     | US$ 299 |    |         |
++===========================+=========+====+=========+
+| Light Lib Graphics PRO    | US$ 169 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Images PRO      | US$ 249 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Business PRO    | US$ 249 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Power Suite PRO | US$ 399 |    |         |
+|---------------------------+---------+----+---------+
+| StarClass/G               | US$ 219 |    |         |
++===========================+=========+====+=========+
+| US/Canada: $10 Other: $20       Shipping |         |
+|------------------------------------------+---------+
+|                                Sub-Total |         |
++==========================================+=========+
+|                                    TOTAL |         |
++==========================================+=========+
+          * Please note: Taxes extra, as applicable. *
+
+
+
+Light Lib Products for CA-Visual Objects
+
+Note: A fully functional evaluation version is available. Please
+contact us for further information, or download it from either
+our BBS or CompuServe.
+
++=======================+===+=================================================+
+| Light Lib Images      |STD| File Formats: BMP, PCX, TIF                     |
+|                       |   | Compression: RLE, CCITT 1D                      |
+|                       +---+-------------------------------------------------+
+|                       |PRO| File Formats: BMP, PCX, TIF, GIF, JPG, BLOB     |
+|                       |   | Compression: RLE,Huffman,CCITT 1D/G3/G4,LZW,JPEG|
++=======================+===+=================================================+
+| Light Lib Business    |STD| Dynamic Graph Browsing, Auto Scaling,           |
+|                       |   | Auto Sizing, Auto Legend, 2D/3D/Bar/Line/Pie    |
+|                       +---+-------------------------------------------------+
+|                       |PRO| Dynamic Graph Browsing, Auto Scaling,           |
+|                       |   | Auto Sizing, Auto Legend, 2D/3D/Bar/Line/Pie,   |
+|                       |   | Mixed graphs, Complex columns,                  |
+|                       |   | Left & Right Y Axis, Axis rotation,             |
+|                       |   | Stock graphs, BLOBs                             |
++=======================+===+=================================================+
+| Light Lib Power Suite |STD| Standard Editions of:                           |
+|                       |   |   Light Lib Graphics and                        |
+|                       |   |   Light Lib Business and                        |
+|                       |   |   Light Lib Images                              |
+|                       +---+-------------------------------------------------+
+|                       |PRO| Professional Editions of:                       |
+|                       |   |   Light Lib Graphics and                        |
+|                       |   |   Light Lib Business and                        |
+|                       |   |   Light Lib Images                              |
++=======================+===+=================================================+
+
+
+Light Lib Products for CA-Visual Objects
++====================================================+
+| Product                      Price   Qty    Total  |
++===========================+=========+====+=========+
+| Light Lib Images          | US$ 295 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Business        | US$ 249 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Power Suite     | US$ 379 |    |         |
++===========================+=========+====+=========+
+| Light Lib Images PRO      | US$ 495 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Business PRO    | US$ 449 |    |         |
+|---------------------------+---------+----+---------+
+| Light Lib Power Suite PRO | US$ 659 |    |         |
++===========================+=========+====+=========+
+| US/Canada: $10 Other: $20       Shipping |         |
+|------------------------------------------+---------+
+|                                Sub-Total |         |
+|------------------------------------------+---------+
+| Add all taxes, as applicable       Taxes |         |
++==========================================+=========+
+|                                    TOTAL |         |
++==========================================+=========+
+
+
+
+Please send orders from North America to:
++=========================================================+
+| DFL Software, Inc.              Tel (416) 789-2223      |
+| 1712 Avenue Road, Box 54616     Fax (416) 789-0204      |
+| Toronto, ON M5M 4N5             BBS (416) 784-9712      |
+| CANADA                          CompuServe 74723,3321   |
++=========================================================+
+
+
+Please send orders from Europe and other countries to:
++=========================================================+
+| DFL Europe                      Tel (33 1) 46 05 20 66  |
+| 39-41, rue de la Saussiäre      Fax (33 1) 46 04 10 39  |
+| 92100 Boulogne                  BBS (33 1) 46 05 26 88  |
+| FRANCE                          CompuServe 100073,3174  |
++=========================================================+
+
+Important:  Please note that if you are located in a country
+---------   outside of the US or Canada, please send your
+            Light Lib Order forms to our DFL office in France.
+
+Ordering Information
++-----------------------------------------------------------+
+|                                                           |
+| Date    _______________                                   |
+|                                                           |
+| Name    _____________________________________________     |
+|                                                           |
+| Company _____________________________________________     |
+|                                                           |
+| Address _____________________________________________     |
+|                                                           |
+| Address _____________________________________________     |
+|                                                           |
+| Address _____________________________________________     |
+|                                                           |
+| Country ____________________________________              |
+|                                                           |
+| Phone   _______________  Fax _______________              |
+|                                                           |
+| Email__________________                                   |
+|                                                           |
+| Paid By: VISA/MC/AMEX # ______________________________    |
+| Expiry ______                                             |
++-----------------------------------------------------------+
+
+// end.

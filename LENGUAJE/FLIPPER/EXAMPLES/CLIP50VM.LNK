@@ -1,0 +1,661 @@
+#-------------------------------------------------------------------------
+#
+# Clipper 5.0 - CLIPPER.LIB & EXTEND.LIB Virtualization
+#
+# Freeformat Auto-Response File
+#
+#-------------------------------------------------------------------------
+
+SILENT
+
+LIBRARY clipper, extend
+
+VMALWAYS __mac_immed
+OKIFUNDEF __mac_immed
+
+
+#############################################################################
+#
+# TARGET TYPE COMMANDS
+#
+#############################################################################
+
+TARGETWARNINGSOFF
+
+# you may have to specify a full pathname for this auto-response file
+@C:\RTL\DOC\CLIP-50.TGT
+
+TARGETWARNINGSON
+
+#############################################################################
+#
+# NOTES REGARDING THIS AUTO-RESPONSE FILE:
+#
+#    This auto-response file was designed to be included in another
+#    auto-response file for the purpose of virtualizing as much of a
+#    third-party library as possible without substantial performance
+#    degradation.
+#
+#    To use this auto-response file, simply name this auto-response file
+#    after an "@" symbol in the normal auto-response file used to link your
+#    program. This would make the user's auto-response file look something
+#    like:
+#
+#       <normal link file commands>
+#       @thisname.lnk
+#
+#    That's all there is to using this auto-response file. If you don't care
+#    about the commands used in this auto-response file, (if you only
+#    care about using this auto-response file to optimally virtualize
+#    a library) that's all you'll need to read and you can skip the rest of
+#    this verbage.
+#
+#    Note that this auto-response file is very complicated. Normally, a user
+#    can virtualize a third-party library by simply using the commands:
+#
+#       VMBEGINPAGES
+#         SEPARATE
+#           LIBRARY <libname>
+#       VMENDPAGES
+#
+#    In cases where this does not work, all that is normally involved is to
+#    force interrupt handlers into root using the MODULE command. In some
+#    rare cases where data items are placed in code segments (this happens
+#    in some code which is written in assembly language), a NOSEPASM
+#    command or several VMNEVER commands must be used in order to
+#    virtualize the third party library.
+#
+#    Normally, a user would optimize a program by including the
+#    AUTOLOCAL command, and possibly by using the VMTARGET utility
+#    to obtain CALLTARGET and JUMPTARGET information.
+#
+#    This is all that is required for a user to virtualize a third party
+#    library.
+#
+#    This auto-response file is more complicated than normal because:
+#
+#       1) This auto-response file tries to implement a highly-optimized
+#          virtualization of the third party library. This implies that
+#          it will:
+#
+#            A) virtualize all the code that it can (without dramatic
+#               effects on execution speed) in order to reduce memory
+#               requirements
+#
+#            B) establish which modules and symbols are LOCAL in order to
+#               reduce vectoring
+#
+#            C) establish whether code symbols are CALLTARGETs or JUMPTARGETs
+#               in order to both reduce vectoring and enhance run-time
+#               execution speed
+#
+#          It should be noted that .RTLink/Plus can virtualize more code
+#          than other virtualizing linkers, especially because of commands
+#          such as MODULE, VMNEVER, VMALWAYS, SAVEDATA, CODECLASS,
+#          VIRTUALIZE, and others which allow a user to have extremely
+#          fine control over the linking process and decision making.
+#          Therefore, we can do a better job at A) than other linkers
+#          can because of the presence of these commands in .RTLink/Plus.
+#          Essentially, we can utilize these commands to control finer
+#          aspects of linking problem modules rather than simply forcing
+#          these modules into root (the resident section of the program).
+#          We have used these commands wherever needed in this auto-response
+#          file in order to create a virtualization of this library
+#          which will virtualize as much code as possible but still have
+#          very good performance characteristics.
+#
+#          It should also be noted that B) and C) are unique features of
+#          .RTLink/Plus which allow us to create programs which
+#          have better run-time performance. Even without the use
+#          of these features, programs produced by .RTLink/Plus normally
+#          outperform programs produced by other virtualizing linkers.
+#          Steps B) and C) help us to create programs which further
+#          out-perform our competition at run-time.
+#
+#       2) This auto-response file is intended to be included in another
+#          auto-response file and makes no assumptions regarding which
+#          commands will be placed in that including auto-response file.
+#
+#       3) This auto-response file should not produce warnings if portions
+#          of the library are not included in the program.
+#
+#       4) This auto-response file should not cause any more of the library
+#          to be linked in than will be needed by the program.
+#
+#    More specifically,
+#
+#       1) This auto-response file uses MODULE commands rather than a LIBRARY
+#          to force modules from the library into specific regions of the
+#          program.
+#
+#          This is because a user could have named the library with a LIBRARY
+#          command in his auto-response file. If we simply named the library
+#          with a LIBRARY command after a VMBEGINPAGES and SEPARATE, and if
+#          the user specified the library with a LIBRARY command in his
+#          auto-response file before he named this auto-response file,
+#          we would not necessarily place all modules from the library in
+#          virtual pages.
+#
+#          Therefore, we explicitly force all modules from the library
+#          into the either virtual pages or root as is appropriate for
+#          that module by using the MODULE command.
+#
+#       2) This auto-response file places all possible code in virtual
+#          pages if doing so will reduce memorty requirements and not
+#          substantially affect performance.
+#
+#          This implies that all problems associated with placing assembly
+#          language modules in virtual pages have been worked through rather
+#          than simply forcing the assembly language module to root.
+#          Normally, this entails the use of a few LOCALON, LOCALOFF,
+#          and especially VMNEVER commands.
+#
+#       3) This auto-response file explicitly forces any interrupt handlers
+#          into the resident (root) section.
+#
+#       4) This auto-response file forces modules which are called very
+#          frequently to root in order to reduce vectoring and page swapping.
+#
+#       5) This auto-response file uses the LOCALON command to explicitly
+#          specify LOCAL modules.
+#
+#          Normally, a user would not use the LOCALON command, but would
+#          instead use the AUTOLOCAL command in an auto-response file.
+#          The user may or may not wish to issue an AUTOLOCAL command in
+#          his auto-response file. We cannot just issue an AUTOLOCAL command
+#          in this auto-response file since the AUTOLOCAL command is global
+#          in effect and would therefore affect the entire program (including
+#          what the user specified in his auto-response file). We use
+#          LOCALON here to specify LOCAL modules without relying on the
+#          user or this response file specifying an AUTOLOCAL command.
+#
+#          Therefore, even if the user does not issue an AUTOLOCAL command,
+#          we will make the proper LOCAL assumptions for this library.
+#
+#       6) This auto-response files specifies any modules which AUTOLOCAL
+#          might erroneously identify as LOCAL but which are really NON-LOCAL
+#          after a LOCALOFF command.
+#
+#          Therefore, this auto-response file will work even if the used
+#          DOES specify the AUTOLOCAL command in his auto-response file.
+#
+#       7) Some modules have extremely small code regions. Placing these
+#          modules in virtual pages typically hurts performance since
+#          bringing them in off disk requires a disk seek and a small disk
+#          read, and the memory savings which are gained by virtualizing
+#          these modules are typically not enough to make it worth the
+#          performance hit caused by the seek and the read. These extremely
+#          small modules have been placed in root in order to create a
+#          program with good performance characteristics. See the
+#          MINSEPARATESIZE command description for more on this type of
+#          optimization.
+#
+#       8) This auto-response file identifies each code symbol which is
+#          frequently referenced as either a CALLTARGET or a JUMPTARGET.
+#          This allows greater execution speed and reduces vectoring.
+#
+#    For specifics about the steps which a third-party library manufacturer
+#    might go through in creating an auto-response file similar to this one
+#    which has the above-mentioned characteristics, see the file
+#
+#       3RDLIBVM.DOC
+#
+#    which is included on the distribution diskettes.
+#
+#############################################################################
+
+VIRTUALIZE CODE
+CODECLASS CODE
+LOCSYM _main
+RESTORETERMINATEADDRESS dbgInit
+MODULEWARNINGSOFF
+
+
+
+#############################################################################
+#
+# VMJOINREFERENCES COMMANDS
+#
+#############################################################################
+
+VMJOINREFERENCES __0ERR
+VMJOINREFERENCES __dbgcomm
+
+
+
+
+
+#############################################################################
+#
+# ROOT MODULES
+#
+#############################################################################
+
+LOCALON
+
+    #########################################################################
+    #
+    # LOCAL ROOT MODULES
+    #
+    #########################################################################
+
+    #-----------------#
+    # Near references #
+    #-----------------#
+
+    MODULE dos\crt0.asm                 # in root due to near reference
+    MODULE dos\crt0dat.asm              # in root due to near reference
+    MODULE crt0fp.asm                   # in root due to near reference
+    MODULE dos\crt0msg.asm              # in root due to near reference
+    MODULE chksum.asm                   # in root due to near reference
+    MODULE ..\fltuseda.ASM              # in root due to near reference
+    MODULE fcall.ASM                    # in root due to near reference
+    MODULE i8tmul.ASM                   # in root due to near reference
+    MODULE i8fin.ASM                    # in root due to near reference
+    MODULE i8fout.ASM                   # in root due to near reference
+    MODULE D:\S89\SUPPORT\DVDUMMY.ASM   # in root due to near reference
+    MODULE D:\S89\SUPPORT\SQUAWK.ASM    # in root due to near reference
+    MODULE D:\S89\ALLOC\OSME.ASM        # in root due to near reference
+    MODULE D:\S89\TERM\BEEP.ASM         # in root due to near reference
+    MODULE lshr.asm                     # in root due to near reference
+    MODULE dos\wrt2err.asm              # in root due to near reference
+    MODULE dos\stdenvp.asm              # in root due to near reference
+    MODULE ..\ccall.ASM                 # in root due to near reference
+                                        #   and ref from interrupt handler
+    MODULE ..\ccalle.ASM                # in root due to near reference
+                                        #   and ref from interrupt handler
+    MODULE ixcomp.ASM                   # in root due to near reference
+    MODULE ixconv.ASM                   # in root due to near reference
+    MODULE b4math.ASM                   # in root due to near reference
+    MODULE b8math.ASM                   # in root due to near reference
+    MODULE xxtran.ASM                   # in root due to near reference
+    MODULE xxpowr.ASM                   # in root due to near reference
+    MODULE bxsqr.ASM                    # in root due to near reference
+    MODULE xxhelp.ASM                   # in root due to near reference
+    MODULE xxtrhlp.ASM                  # in root due to near reference
+    MODULE xxcomm.ASM                   # in root due to near reference
+    MODULE ..\flrceil.ASM               # in root due to near reference
+    MODULE ..\fmod.ASM                  # in root due to near reference
+    MODULE dos\stdalloc.asm             # in root due to near reference
+    MODULE ..\cdisp.ASM                 # in root due to near reference
+    MODULE ..\ctran.ASM                 # in root due to near reference
+    MODULE ..\csqrt.ASM                 # in root due to near reference
+    MODULE D:\S89\SUPPORT\DVA.ASM       # in root due to near reference
+
+
+
+
+
+    #---------------------------------#
+    # make critical routines be local #
+    #---------------------------------#
+
+    MODULE dos\nmsghdr.asm              # in root to reduce vectoring
+                                        #   if not in root, crt0.asm becomes
+                                        #     non-local
+    MODULE dos\stdargv.asm              # in root to reduce vectoring
+                                        #   if not in root, crt0.asm becomes
+                                        #     non-local
+
+
+    #-------------------------------------------------------------#
+    # Frequently called routines to reduce swapping and vectoring #
+    #-------------------------------------------------------------#
+
+    MODULE D:\S89\DRV\SCR.ASM           # in root since it seems to be
+                                        #   called a lot -- efficiency
+                                        #   seems to hold lot of screen funcs
+    MODULE D:\S89\DRV\KEYBD.ASM         # in root since it seems to be
+                                        #   called a lot -- efficiency
+                                        #   seems to hold keyboard funcs
+    MODULE D:\S89\SUPPORT\ASUPPORT.ASM  # in root since it seems to be
+                                        #   called a lot -- efficiency
+    MODULE D:\S89\NUSASCII\NATION.ASM   # in root since it seems to be
+                                        #   called a lot -- efficiency
+    MODULE D:\S89\BASE\WEEDBED.ASM      # in root since it seems to be
+                                        #   called a lot -- efficiency
+
+
+
+
+
+    #------------------#
+    # very small pages #
+    #------------------#
+
+    MODULE lmul.asm                     # in root since page is so small
+    MODULE almul.asm                    # in root since page is so small
+    MODULE ulrem.asm                    # in root since page is so small
+    MODULE uldiv.asm                    # in root since page is so small
+    MODULE D:\S89\DYN\DYNA.ASM          # in root since page is so small
+    MODULE D:\S89\SUPPORT\OSDATE.ASM    # in root since page is so small
+    MODULE D:\S89\ALLOC\OSMEM.ASM       # in root since page is so small
+
+
+    #-----------------------------------#
+    # interrupt handles must be in root #
+    #-----------------------------------#
+    MODULE D:\S89\SUPPORT\FILESYS.ASM
+    MODULE D:\S89\DRV\EVE.ASM           # in root due to near reference
+                                        #   and interrupt handler
+        VMNEVER __eveEntry              # seems to be a data item in a code
+                                        #   segment -- something made an
+                                        #   assignment to it
+
+
+
+LOCALOFF
+
+    #########################################################################
+    #
+    # NON-LOCAL ROOT MODULES
+    #
+    #########################################################################
+
+    #-----------------#
+    # Near references #
+    #-----------------#
+
+    MODULE D:\S89\PLANKTON\PLANKTON.ASM # in root due to near reference
+    MODULE D:\S89\INITEXIT\HARDINIT.ASM # in root due to near reference
+
+    #---------------#
+    # exec function #
+    #---------------#
+
+    MODULE D:\S89\INITEXIT\SYSCALL.ASM  # in root due to near reference
+                                        #   and because it does an int 4B
+                                        #   non-local since does an exec
+
+
+    #-------------#
+    # EMS handler #
+    #-------------#
+
+    MODULE D:\S89\SUPPORT\LIM32.ASM     # in root since it manipulates EMS
+    MODULE D:\S89\ALLOC\VM.C            # in root since it manipulates EMS
+
+
+
+    #---------------------------#
+    # To clear error conditions #
+    #---------------------------#
+
+    MODULE D:\S89\BASE\STACK.C          # try here to get rid of internal
+                                        #   error 612 (EVAL (0))
+                                        # behavior went away
+                                        # non-local since calls __DPLANKTON,
+                                        #   __PLANKTON
+    VMMAXVECON
+    MODULE D:\S89\DEBUG\DBGINIT.ASM     # Passes address of near vector
+                                        # to outside
+    VMMAXVECOFF
+    MODULE D:\S89\INITEXIT\INITEXIT.C
+
+
+
+    #------------------#
+    # very small pages #
+    #------------------#
+
+    MODULE _READVAR                     # in root since page is so small
+                                        # non-local since calls __PLANKTON
+
+
+    #-----------------------------------#
+    # interrupt handler must be in root #
+    #-----------------------------------#
+
+    MODULE D:\S89\TERM\TEVENT.C         # called by interrupt handler
+                                        #   in event_driver_text segment
+                                        #   seems to hold ctrl-break handler
+    MODULE D:\S89\TERM\GT.C             # non-local since calls __vmPtr
+        LOCSYM __gtdbgBreakEnable
+        LOCSYM __gtkbdBreakEnable
+
+    #-------------------------------------------------------------#
+    # Frequently called routines to reduce swapping and vectoring #
+    #-------------------------------------------------------------#
+
+LOCALUNKNOWN
+
+    #########################################################################
+    #
+    # AUTOLOCAL ROOT MODULES
+    #
+    #########################################################################
+
+    #-----------------#
+    # Near references #
+    #-----------------#
+
+    MODULE D:\S89\MACRO\MPAR.ASM        # in root due to near reference
+    MODULE D:\S89\TERM\MAXROW.C         # in root due to near reference
+    MODULE D:\S89\MACRO\MACRO.C         # in root due to near reference
+
+
+    #---------------------------#
+    # To clear error conditions #
+    #---------------------------#
+
+    MODULE D:\S89\DBCMD\DBCMD.C         # try here to get rid of internal
+                                        #   error 612 (EVAL (0))
+                                        # behavior went away
+
+
+
+
+    #---------------------------------#
+    # make critical routines be local #
+    #---------------------------------#
+
+    MODULE D:\S89\INITEXIT\MAIN.C       # in root so that _main can be local
+
+
+
+    #-------------------------------------------------------------#
+    # Frequently called routines to reduce swapping and vectoring #
+    # and swapping. These routines seem to be called a lot so     #
+    # therefore they are place in root for efficiency purposes    #
+    #-------------------------------------------------------------#
+
+    MODULE D:\S89\DYN\DYNC.C
+    MODULE D:\S89\INITEXIT\UPREF.C
+    MODULE D:\S89\BASE\SYMSYS.C
+    MODULE D:\S89\ALLOC\ALLOC.C
+    MODULE D:\S89\BASE\SEND.C
+    MODULE D:\S89\TERM\OUTSTD.C
+    MODULE D:\S89\BASE\OPS.C
+    MODULE D:\S89\TERM\TERM.C
+    MODULE D:\S89\BASE\FIELD.C
+    MODULE D:\S89\TERM\COLOR.C
+
+
+
+
+
+    #------------------#
+    # very small pages #
+    #------------------#
+
+    MODULE D:\S89\TERMX\SCROLL.C        # in root since page is so small
+
+
+
+
+#############################################################################
+#
+# VIRTUAL STUFF
+#
+#############################################################################
+
+VMBEGINPAGES
+
+    SECTION = "asort"
+        # this grouping should reduce swapping (asort apparently calls
+        #   exactcmp to do its compares
+        MODULE D:\S89\BASE\EXACTCMP.C
+        MODULE D:\S89\ARRAY\ASORT.C
+
+
+
+    SECTION = "ldiv"
+        # this grouping is due to a near reference
+        LOCALON
+            MODULE ldiv.asm
+            MODULE aldiv.asm
+        LOCALUNKNOWN
+
+
+
+    #---------------------------------#
+    # Let SEPARATE do the work for us #
+    #---------------------------------#
+
+    SEPARATE
+
+        LOCALON
+            #################################################################
+            #
+            # LOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+
+            MODULE D:\S89\SUPPORT\DATE.C
+            MODULE lrem.asm
+            MODULE ..\huge.asm
+            MODULE D:\S89\NUSASCII\SORTBLOC.C
+            MODULE D:\S89\SUPPORT\GETENV.C
+            MODULE D:\S89\BASE\STARTSYM.ASM
+            MODULE D:\S89\IMP\VNONE.ASM
+            MODULE D:\S89\IMP\VOPS.ASM
+            MODULE D:\S89\IMP\VDB.ASM
+            MODULE D:\S89\IMP\VMACRO.ASM
+            MODULE D:\S89\IMP\VPICT.ASM
+            MODULE D:\S89\IMP\VTERM.ASM
+
+            # a program may be more efficient if these are in root:
+            MODULE D:\S89\ALLOC\KMAP.ASM
+            MODULE D:\S89\MEMO\LINELEN.C
+            MODULE D:\S89\SUPPORT\DVC.C
+            MODULE D:\S89\ALLOC\SUBAL.ASM
+
+
+        LOCALOFF
+
+
+            #################################################################
+            #
+            # NON-LOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+
+            MODULE D:\S89\BASE\CALL.C   # non-local since calls __vmPtr
+            MODULE D:\S89\BASE\EXTOR.C  # non-local since calls __vmPtr
+            MODULE D:\S89\DBF\SORTOF.C  # non-local since calls __vmPtr
+            MODULE D:\S89\DISKIO\DISKIO.C # non-local since calls __vmPtr
+            MODULE D:\S89\SDF\DELIM.C   # non-local since calls __vmPtr
+            MODULE D:\S89\SDF\SDF.C     # non-local since calls __vmPtr
+            MODULE D:\S89\SDF\SDFDYN.ASM # non-local since calls to SDF.C
+            MODULE D:\S89\SDF\DELIMDYN.ASM # non-local since calls to DELIM.C
+
+
+            # a program may be more efficient if these are in root:
+            MODULE D:\S89\BASE\OM.C     # non-local since calls __vmPtr
+            MODULE D:\S89\BASE\EXTEND.C # non-local since calls __vmPtr
+
+
+
+
+        LOCALUNKNOWN
+
+            #################################################################
+            #
+            # AUTOLOCAL VIRTUALIZED MODULES
+            #
+            #################################################################
+
+                MODULE D:\S89\BASE\AEVAL.C
+                MODULE D:\S89\EDIT\ACHOICE.C
+                MODULE D:\S89\TERM\SAVEREST.C
+                MODULE D:\S89\DBF\DTXDYN.ASM
+                MODULE D:\S89\DBF\DTX.C
+                MODULE dos\hdiff.asm
+                MODULE oldhdiff.asm
+                MODULE dos\diffhlp.asm
+                MODULE lshl.asm
+                MODULE ..\cfin.ASM
+                MODULE ..\cfout.ASM
+                MODULE D:\S89\SUPPORT\TXOPEN.C
+                MODULE D:\S89\DYN\DYNINA.ASM
+                MODULE D:\S89\BASE\FGET.C
+                MODULE D:\S89\BASE\TB.C
+                MODULE D:\S89\BASE\MSAVE.C
+                MODULE D:\S89\BASE\MRELEASE.C
+                MODULE D:\S89\BASE\SEQ.C
+                MODULE D:\S89\BASE\VERSION.C
+                MODULE D:\S89\ALLOC\CMEM.C
+                MODULE D:\S89\ALLOC\MEMORY.C
+                MODULE D:\S89\MACRO\XMACRO.C
+                MODULE D:\S89\MACRO\VBLOCK.C
+                MODULE D:\S89\MACRO\MACROINA.ASM
+                MODULE D:\S89\DEBUG\DBG.C
+                MODULE D:\S89\IMP\VALL.ASM
+                MODULE D:\S89\IMP\VDBG.ASM
+                MODULE D:\S89\RTL\DYNAMIC.ASM
+                MODULE D:\S89\RTL\DYNX.C
+                MODULE D:\S89\RTL\DYNXINA.ASM
+                MODULE D:\S89\TERM\OUTINA.ASM
+                MODULE D:\S89\TERM\TCVT.C
+                MODULE D:\S89\TERM\TERMINA.ASM
+                MODULE D:\S89\TERM\GTINA.ASM
+                MODULE D:\S89\TERM\TEVEINA.ASM
+                MODULE D:\S89\DBCMD\DBJUNCT.C
+                MODULE D:\S89\DBCMD\WORKAREA.C
+                MODULE D:\S89\DBCMD\DBSTRUCT.C
+                MODULE D:\S89\DBCMD\DBCREATE.C
+                MODULE D:\S89\DBCMD\JOINLIST.C
+                MODULE D:\S89\DBCMD\DBCMDINA.ASM
+                MODULE D:\S89\DISKIO\DIOINA.ASM
+                MODULE D:\S89\DBF\DBF.C
+                MODULE D:\S89\DBF\DBFDYN.ASM
+                MODULE D:\S89\MISCX\GETE.C
+                MODULE D:\S89\MISCX\PHILES.C
+                MODULE D:\S89\MISCX\COPYFILE.C
+                MODULE D:\S89\MISCX\TYPEFILE.C
+                MODULE D:\S89\MISCX\EXAMPLEA.ASM
+                MODULE D:\S89\STR\DESCEND.C
+                MODULE D:\S89\STR\RAT.C
+                MODULE D:\S89\STR\PAD.C
+                MODULE D:\S89\STR\IS.C
+                MODULE D:\S89\STR\STRTRAN.C
+                MODULE D:\S89\STR\EXAMPLEC.C
+                MODULE D:\S89\MEMO\HARDCR.C
+                MODULE D:\S89\MEMO\MEMOREAD.C
+                MODULE D:\S89\MEMO\MEMOWRIT.C
+                MODULE D:\S89\MEMO\MEMOTRAN.C
+                MODULE D:\S89\MEMO\MEMOLINE.C
+                MODULE D:\S89\MEMO\MLCOUNT.C
+                MODULE D:\S89\MEMO\MLPOS.C
+                MODULE D:\S89\MEMO\MLCTOPOS.C
+                MODULE D:\S89\ARRAY\ASCAN.C
+                MODULE D:\S89\ARRAY\ARRAY.C
+                MODULE D:\S89\ARRAY\DIRECTRY.C
+                MODULE D:\S89\EDIT\MEMOEDIT.C
+                MODULE D:\S89\EDIT\TBROWSE.C
+                MODULE D:\S89\INITEXIT\RUN.C
+
+            # a program may be more efficient if these are in root:
+                MODULE D:\S89\TERM\GETHELP.C
+                MODULE D:\S89\TERM\PICT.C
+                MODULE D:\S89\BASE\ERRSYS.C
+                MODULE D:\S89\BASE\SET.C
+
+VMENDPAGES
+
+MODULEWARNINGSON
+
+
+
+
+

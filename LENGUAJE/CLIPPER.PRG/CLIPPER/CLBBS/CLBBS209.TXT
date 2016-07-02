@@ -1,0 +1,1300 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ŞŞŞŞ±°ŞŞŞŞ±±±±°ŞŞŞŞ±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±°ŞŞ°°ŞŞ±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±°ŞŞ±±°°±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞŞ±±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞ±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±°Ş±±°ŞŞ±±±±°ŞŞ°°±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±±±°ŞŞŞ±±
+       °°±°°ŞŞ±±ŞŞ±°ŞŞ±°ŞŞ±±°ŞŞ±±±±°ŞŞ±±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±±°°ŞŞŞŞ±°ŞŞŞŞŞŞŞ±°ŞŞŞŞ±±°ŞŞŞŞ±±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 2, Number 9                                        3 April 1992
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    NETLIB What's going on there  ..........................................  1
+    Hitch Hikers Guide To The Net  .........................................  7
+    Nantucket Code Guidelines  ............................................. 11
+ 2. HOW DO WE DO...  ....................................................... 15
+    Introduction  .......................................................... 15
+ 3. ANOMALIES  ............................................................. 19
+    ANOMALIES reports and commets  ......................................... 19
+    One NON CLIPPER ANOMALY :-)  ........................................... 19
+ 4. CLIPPER NET  ........................................................... 21
+    Index of described files in Clipper BBS Magazine  ...................... 21
+ 5. CLIPBBS  ............................................................... 23
+    CLIPBBS distribution  .................................................. 23
+    CLIPBBS, how to write an article!!!  ................................... 25
+
+                                   - - - - -
+ CLIPBBS 2-09                   Page 1                    3 Apr 1992
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+                        NETLIB What's going on there...
+ 
+ NETLIB - networking library described in this review is version 5.20,
+ the newest version available for purchase from Database Warehouse in
+ England.
+ 
+ First, what is a NETLIB. NETLIB is generally NETWORKING library with
+ wide support for not only Novell network. What is it not, STRICTLY related
+ low level library for Novell. For someone wishing to have maybe more low
+ level access to Novell supporting function is maybe better to pick NOVLIB.
+ But there is always good to know WHAT is in particular library before buying
+ it, therefore this review will try to fill purpose give FULL picture of
+ abilities of NETLIB.
+ 
+ Second, CLBBS Magazine is looking for possibility to test and write the same
+ review about NOVLIB, if someone from NOVLIB developers or owners is willing
+ to cooperate in this manner, it will be greatly appreciated.
+ NETLIB is coming in Summer 87 and Clipper 5.0 version with support of Novell
+ Netware, NETBIOS and Banyan/Vines networks. Some functions related to Novell
+ Netware are not available for other networks and vice versa. Also support for
+ some features available in all networks is more easier in Novell than in
+ other networks (where lacks of services from network operating system is
+ asking for additional solving with some external files).
+ 
+ NETLIB is more complex than one can thought. Even it's offering some
+ functions having nothing to do with networks, then strictly network related
+ function and also some function offering just Clipper/databases service.
+ 
+     Some generic functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_AINIT()      Filling Array with enumerated list (it's for S87)
+ CH_RPAD()       Returns string padded with spaces to the specified length.
+ CH_SWAPCOL()    Swaps standard and enhanced colors in current setting.
+ CH_VARTYPE()    Returns data type of memory variable.
+ N_CHKSUM()      Performs standard XOR checksum on specified string.
+ N_ERROR()       Returns error code from most recent NetLib function.
+ N_NDX()         Returns name of Nth index file.
+ 
+     Keyboard related (mostly for use in Clipper Summer 87)
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_ALT()        Returning the numeric values of Alt key
+ CH_CTRL()       Returns the numeric value of the specified Ctrl+key.
+ 
+     Conversions from ASCII number representations to numbers
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_ASC1()       Retunrs Ascii value of character at specified position
+ CH_ASC2()       Returns two byte unsigned integer from string
+ CH_ASC4()       Returns four byte unsigned integer from string
+ CLIPBBS 2-09                   Page 2                    3 Apr 1992
+
+
+ CH_ASC8()       Returns 8 byte IEEE floating point from string
+ 
+     Conversions from numbers to ASCII(byte) representations
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_CHR1()       Overwrites one byte in memory-variable at position
+ CH_CHR2()       Overwrites two bytes in memory-variable with unsigned integer.
+ CH_CHR4()       Overwrites four bytes in variable with signed long integer.
+ CH_CHR8()       Overwrites eight bytes in variable with IEEE floating point.
+ 
+     Database related functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_FLDNUM()     Returns the order number of the field in area.
+ CH_ISMEMO()     Returns .T. if specified field is a memo fielrray.
+ N_GATHER()      Gathers (replaces) database fields with data from array.
+ N_SCATTER()     Scatters (stores) database fields to specified array
+ N_SELECTUP()    Selects next active area starting from specified area.
+ N_UPDATED()     Compares array values to DBF fields
+ N_USE()         Attempts to open a database file and, optionally, index files.
+ 
+     Numeric conversions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ CH_HEXFMBIN()   Converts binary string to hex string
+ CH_HEXTOBIN()   Converts hex string to binary string
+ CH_STRH()       Returns hex string from numeric value.
+ CH_VALH()       Returns numeric value from hex string.
+ 
+     Journaling functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Journaling is powerful capability of NetLib library. It offers
+         complex ability to LOG (journal) every operations upon databases
+         in program and later use those journal files for checking, backtrace
+         or even changes of remote site (case of two the same database
+         in two different places whose needed to be updated without copying
+         of complete database files. Complete process is hidden for programmer
+         because all what is required is just ask for start of transactioning
+         (journaling) and then stop it when needed.
+ 
+ JNL_CONCAT()        Concatenates journal files
+ JNL_CREATE()        Create and initialize journal files.
+ JNL_INIT()      Reinitializes primary or secondary journal file header.
+ JNL_PARSE()     Parses journal file and creates a DBF for reporting.
+ JNL_TYPE()      Returns descriptive name for journal record type.
+ J_COMMENT()     Writes a user-defined comment record to journal file.
+ J_LOG()         Writes a log-on or log-off comment record to journal file.
+ J_START()       Opens the journal file and begins NetLog journaling.
+ J_STOP()        Closes the journal file and ends NetLog journaling.
+ J_STATUS()      Checks the status of the NetLog journaling file.
+ J_TRANS()       Marks the beginning or end of a transaction.
+ N_JOURNAL()     Directs NetLib to journal files in subsequent USE's.
+ 
+     Low level network functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ CLIPBBS 2-09                   Page 3                    3 Apr 1992
+
+
+         Those functions are sometime related to specific networks services
+         or abilities (like NETBIOS related data cannot be coming from
+         Novell Netware IPX related communication)
+ 
+ N_ADDR()        Returns physical network address of the current station.
+ N_AREDIRECT()   Stores redirected devices and paths into arrays (NETBIOS)
+ N_ASERVER()     Stores list of attached servers into array.
+ N_ATTACH()      Attaches to specified server.
+ N_DATE()        Returns current system date from server.
+ N_DETACH()      Detaches from specified server.
+ N_FULLNAME()    Returns full name of user logged-in at specified station.
+ N_FVOL()        Returns the network volume name of the drive letter.
+ N_LOGIN()       Attaches and logs object in server.
+ N_LOGMSG()      Writes up to 80 characters to Novell system log.
+ N_LOGOUT()      Logs out from specified server.
+ N_MAPDRIVE()    Creates, queries or destroys a drive mapping
+ N_NETLIB()      Returns number of the NetLib driver (network type)
+ N_NETNAME()     Returns NetBios Name Table entry
+ N_REDIRECT()    Redirects device to path or cancels redirection
+ N_RIGHTS()      Queries current user's effective rights
+ N_SECONDS()     Returns current system time from server
+ N_SERIAL()      Returns the server's serial number
+ N_SERVER()      Set or get preferred server.
+ N_SERVNUM()     Returns server's connection number (1-8)
+ N_SETLOG()      Enables/disables login to specified server.
+ N_STAMAX()      Returns the number of stations on the network.
+ N_STANUM()      Returns the current station number, 1-255.
+ N_TIME()        Returns current system time ("hh:mm:ss") from server.
+ N_VERSION()     Returns server version number and other statistics
+ N_WHERE()       Returns station number where the specified is logged
+ N_WHOAMI()      Returns ID of user logged-in at specified station.
+ 
+     Network printing (NOVELL) related functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Greate set of functions to manipulate redirection (CAPTURE) of
+         printer ports directly from Clipper with COMPLETE control over
+         all (normally) CAPTURE parameters. There is NO set of functions
+         for accessing jobs in QUEUE (PRINTCON in Novell).
+ 
+ N_BANNER()      Specifies print banner page text (up to 12 characters)
+ N_CLASS()       Sets document print class (0-99).
+ N_COPIES()      Sets number of copies to printed by spooler.
+ N_PRINTER()     Sets target printer number (1-99).
+ N_PRTSC()       Prints screen contents on selected printer using INT5.
+ N_SOFTSCR()     Prints screen contents by software emulation.
+ N_SPLCPL()      Sets maximum page width for current printer
+ N_SPLDEL()      Enables | disables deletion of spooled files
+ N_SPLFRM()      Sets document print form name.
+ N_SPLLPP()      Sets maximum lines per page for current printer.
+ N_SPLLPT()      Selects local print capture device (LPT1, LPT2, etc.)
+ N_SPLNOFF()     Suppresses | enables extra form feed at end of document.
+ N_SPLQUE()      Select print capture queue name.
+ N_SPLSRV()      Selects target server for printer output.
+ N_SPLTABS()     Sets number of spaces for tab expansion.
+ N_SPLTMO()      Sets spooler timeout value in seconds.
+ CLIPBBS 2-09                   Page 4                    3 Apr 1992
+
+
+ N_SPLFRM()      Prints specified username of print banner
+ N_SPOOL()       Start or Stop spool capture, or add file to spool queue.
+ 
+     Record and filelocking functions and related
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         NETLIB is expanding Clipper ability of locking ONE record per ONE
+         file into MULTIPLE record locks in one file. It needs of course
+         new set of functions.
+ 
+ N_BADLOCK()     Returns record number that caused N_MLOCK to fail
+ N_BLIP()        Set waiting "blip" for use with N_TIMEOUT
+ N_CHECKF()      Check which stations have an RLOCK or FLOCK
+ N_CHECKR()      Check which station has record locked.
+ N_CHECKU()      Check which stations have DBF file opened.
+ N_ISEXCL()      Returns if file is open exclusively or shared.
+ N_ISFLOCK()     Returns if file is FLOCKed by current station.
+ N_ISRLOCK()     Returns if record is locked by current station.
+ N_MLOCK()       Attempt to lock multiple records (all or none)
+ N_TIMEOUT()     Set lock timeout in seconds.
+ 
+     Semaphores
+     ÄÄÄÄÄÄÄÄÄÄ
+ 
+         Semaphores are special service offering possibility to create
+         temporary Network object with given name which can be created only
+         once and another station cannot create it again unless originator
+         will release it.
+ 
+ N_CHECKS()      Check which station has semaphore locked.
+ N_ISSLOCK()     Returns if semaphore is locked at current station.
+ N_SLOCK()       Attempt to lock a "post-and-wait" semaphore string.
+ N_SUNLOCK()     Unlocks a specified semaphore, or all semaphores
+ 
+     Novell Netware Bindery manipulation
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Most dangerous part of NETLIB is allowing COMPLETE manipulation
+         of bindery (definition of all users, groups and their properties)
+         informations in Novell Netware. Because there is also possibility
+         of changing, adding and deleting bindery informations must be this
+         all used with caution.
+ 
+ N_B_CREATE()    Creates Bindery Object
+ N_B_DEL()       Deletes Bindery Object
+ N_B_ID()        Returns the bindery ID (number) of the specified Object.
+ N_B_ISMEMBER()  Returns .T. if member object is part of set.
+ N_B_LINK()      Connects Object to set
+ N_B_MEMBERS()   Stores names of set members in specified array.
+ N_B_NAME()      Returns the name of the specified bindery object.
+ N_B_PASSWORD()  Returns .T. if password is valid.
+ N_B_PRCREATE()  Creates Bindery Property
+ N_B_PRREAD()    Returns the value of the specified Property.
+ N_B_PRSCAN()    Stores names of all properties attached to Object.
+ N_B_PRTYPE()    Returns type of specified Bindery Property
+ N_B_PRWRITEE()  Modify a Bindery Item Property
+ CLIPBBS 2-09                   Page 5                    3 Apr 1992
+
+
+ N_B_SCAN()      Scans Bindery for matching Objects.
+ N_B_TYPE()      Returns the type (number) of the specified bindery object.
+ N_B_UNLINK()    Disconnects Object from Bindery Set
+ 
+     Networking/DOS/Clipper related functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Those means some kind of expansion of Clipper abilities in DOS
+         meaning. N_APPEND() is kind of very interesting service, normally
+         all text related outputs from Clipper are just OVERWRITING any
+         existing file (if there is output to file), N_APPEND() can switch
+         overwriting to APPENDING and therefore ALL completely separated
+         outputs with the same destination name can be appended to end of
+         existing files, where Communications Horizons got idea of this
+         function is really interesting....
+ 
+ N_APPEND()      Enable (ON) or disable (OFF) appending to TXT files.
+ N_DBASE()       Turns dBase compatible record locks on or off.
+ N_DBF()         Returns the name of the currently selected database file.
+ N_DBT()         Returns the name of the DBT file, open in the current area.
+ N_DEBUG()       Act as if it were on a network even when it is not.
+ N_ENVLEN()      Returns total length of root DOS Environment strings
+ N_ENVSIZ()      Returns size of root DOS Environment space.
+ N_EXCL()        Set's Clipper's Exclusive flag On or Off.
+ N_HANDLES()     Sets number of available file handles.
+ N_HOT()         Optionally turns Clipper's "hot buffer" flag off.
+ N_INDEX()       Opens or closes index files(s) in the current area.
+ N_MODENV()      Sets new environment variable
+ N_READONLY()    Files will be opened in readonly or normal read-write
+ N_RECCON()      Returns current record buffer as a string.
+ 
+     Communication BETWEEN two (or more) stations via network
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         This is NOT a using of standard SEND (or anynamed) Novell
+         command, there is just special way for establishing connection
+         between two or more stations and sending messages between them.
+         It's complete basic for anything comunicating in between, network
+         games, chating programs, controlling of remote programs....
+ 
+ N_CONNECT()     Initializes connections to a station or list of sta
+ N_DISCON()      Disconnect from a station or list of stations.
+ N_RECV()        Receives a message from a station.
+ N_SEND()        Send message to a station or list of stations.
+ 
+     Files related functions
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Finally there is a function setting Attributes of files INCLUDING
+         Novell attributes SHAREABLE, TRANSACTIONAL and INDEXED!  Also what
+         is very handy for debugging or playing nasty games with Clipper and
+         his file handles is possibility of use N_FMAP() to get filespec
+         related to file handle!
+ 
+ N_FATTR()       Sets or resets the specified file attribute.
+ N_FCOPY()       Copies one file to another.
+ CLIPBBS 2-09                   Page 6                    3 Apr 1992
+
+
+ N_FDRIVE()      Returns driveletter portion of filespec (including ":").
+ N_FEXT()        Returns extension portion of filespec.
+ N_FMAP()        Returns fiIespec associated with handle.
+ N_FNAME()       Returns 1-8 character base filename portion of filespec.
+ N_FPATH()       Returns path portion of filespec (including trailing "\").
+ N_FSPEC()       Searches Clipper SET PATH and DEFAULT for file.
+ 
+     Databases and strings crypting
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Complete background, programmer independent process for
+         crypting and decrypting databases on the fly.
+ 
+ N_CODELVL()     Queries encryption status of specified DBF file.
+ N_DECODE()      Decrypts specified DBF or DBT file.
+ N_DECODEST()    Decodes specified string with current SETKEY.
+ N_ENCODE()      Encrypt DBF or DBT file based on curremvar).
+ N_ENCODEST()    Encodes string using current SETKEY.
+ N_SETKEY()      Sets current encryption key (1-8 characters).
+ 
+     Generic TIMER function
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         This is absolutely ingenious. First, it can store in keyboard
+         buffer (like KEYBOARD command) string after some time passed and
+         nobody touched keyboard (good to exit READ when user is lunching
+         somewhere). Second it can activate periodical calling to needed
+         function (in simpliest way it can call displaying of clock on
+         screen).
+ 
+ N_SETTIME()     Stuffs string onto keyboard after has elapsed time.
+                 Calls procedure on regular interval while wait-state
+ 
+     Transaction Tracking (TTS) of Novell Netware
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+         Complete needed support for including TTS ability into Clipper
+         programs.
+ 
+ T_ROLLBACK()    Roll-back (cancel) currently active transaction.
+ T_START()       Disables implicit transactions and activates TTS
+ T_STATUS()      T_STATUS(0) returns True if TTS active.
+ T_STOP()        Re-enables implicit transactions prior to ending application.
+ T_TRANS()       Start or end a TTS transaction.
+ 
+ 
+ What to say at end? NETLIB is very interesting set of functions from more
+ parts of networking, there are some from very good ideas like multiple record
+ locking, timer function, timeout stuffing of keyboard commands, journaling
+ and other networking stuff. Final feeling is still, that ideal combination
+ would be NETLIB with NOVLIB for complete needs.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 7                    3 Apr 1992
+
+
+                       Hitch Hikers Guide To The Net
+                                Episode 6
+ 
+  (Flarg Brittashik is leading the crew of the Infinity down the contorted
+  stairway toward the interior of Netrothea.)
+ 
+ 
+ Martin: What an awful place, why do we bother to go on?
+ 
+ Xaphod: Quiet
+ 
+ Flarg:  Actually, he's right. One of the things we Netrotheans proved was
+         that the Net does not actually exist. It therefore follows that
+         nothing we do really matters at all.
+ 
+ Arnold Lint:    What?
+ 
+ Flarg:  Is that all you can say you mindless, facial emation|
+ 
+ Rod:    What do you mean "we don't exist"?
+ 
+ Flarg:  Well, first we approached the problem assuming that we were a
+         unique Net. There is none other like us in the entire domain of
+         space, right?
+ 
+ Rod:    Right . . .
+ 
+ Flarg:  Well, if we are alone, how do we know we are? Without another Net
+         to tell us we are, we may not be. We could just be the figments of
+         our imaginations. How do you KNOW that that cat over there does in
+         fact have 5 legs? You see it, but what's to say that it is actually
+         there. Do you follow?
+ 
+ ************************************************************************
+  What Flarg Brittashik was pointing out was the famed five-legged cat of
+  Felix Major. The "The Hitch Hikers Guide To The Net" indicates that the
+  myth of the five-legged cat was actually the result of the heavy drinking
+  done on Felix Major. You see, the female of the species on Felix Major is
+  covered with a blue slime which eventually dissolves her mate if contact
+  is maintained for too long. Because of this, the men on Felix Major spend
+  a lot of time in bars discussing the differences between being Kosher and
+  being a Cannibal. They tend to drink an awful lot while discussing this
+  topic. In their usually intoxicated state, it is not difficult to mistake
+  a cat for having a fifth leg if viewed  side ways (or as having one eye if
+  viewed from the rear).  The "The Hitch Hikers Guide To The Net" also
+  points out that the favorite drink on Felix Major is called the
+  'Intesto-rout'.  It is mixed as follows: Mix equal parts of gin, whiskey,
+  rye, vodka, rum, bourbon, and brandy. Add a cup of beer that has been left
+  in a gym locker for 3 days. To this add 5 Ex-Lax pills, 1 Valium, 2
+  No-Doz, and half a lid of grass. Mix it well in a Hamilton Blech mixer.
+  Now add a rotten egg, a decaying guppy, the spleen of 10 freshly killed
+  frogs, and about a fist full of goat brains. Again mix it all up. To add a
+  bit of zip to the mixture, add some Drain-O. Now put the whole mixture
+  under a dead horse for 37 hours. After it has aged, filter it through the
+  right kidney of a rabid llama and serve it in a slightly soiled bed pan
+  with an olive. Felix Major, quite obviously developed quite a drunk
+ CLIPBBS 2-09                   Page 8                    3 Apr 1992
+
+
+  driving problem. The solution arrived at was simple and logical. They
+  simply ground up offenders and added them to 'Intest-rout's. Rumor has it
+  that this extra ingredient gave the drink the full bodied taste it had
+  always been lacking.
+  ************************************************************************]
+ 
+ Arnold Lint:    It's the old "Does a falling tree make a sound if there's
+                 no one there to hear" story, right?
+ 
+ Flarg:  Ooo| 'The falling tree makes no noise|' Aren't we the
+          smart-behinded little cretins|
+ 
+ Xaphod: No, you idiot| It means . . . uh . . .
+ 
+ Flarg:  Actually, he's quite correct. We were not happy with finding out
+         that we may be alone, so we then assumed that there was the
+         possibility for an infinite number of varied Nets.
+ 
+ Gillian:        How nice.
+ 
+ Flarg:  Yes, well, it now became apparent that our one little Net was
+         entirely insignificant in the scope of things in general.
+         Mathematically, our percentage of existence amounted to 1 over
+         infinity, which is too small to even consider. Worse yet, since no
+         other Net has ever contacted us, we may REALLY not exist after all.
+         We could REALLY be mirages of the cosmic mind.
+ 
+ Xaphod: Wow, that's heavy|
+ 
+ Flarg:  Quiet, you drugged out excuse to evacuate my stomach on the
+         table|
+ 
+ Rod:    Go on already|
+ 
+ Flarg:  Well, after taking many heavy drugs, we finally arrived at a solid
+         decision.
+ 
+ Gillian:        What was it?
+ 
+ Flarg:  We agreed that our existence was so insignificant that anything we
+         did really wouldn't matter. Hence our national slogan changed to
+         "Who Cares". After all, in light of everything I've revealed to
+         you, it must be perfectly obvious that it just doesn't matter what
+         you do or say on the Net.
+ 
+ Arnold Lint:    Boy, I hope the rest of the Net doesn't hear that.
+ 
+ Flarg:  Oh, they did. That's why they attacked us and wiped out most of
+         Netrothea. They just couldn't accept that all the fuss they were
+         making really didn't amount to a damn thing.
+ 
+ [************************************************************************
+  "The Hitch Hikers Guide To The Net" points out that the Netrotheans were
+  somewhat renowned for exploding the faiths of others. Prior to their
+  non-existence fetish, they published a series of treatises titled: "Who is
+  this guy God anyway?", "Everything you always wanted to know about the
+ CLIPBBS 2-09                   Page 9                    3 Apr 1992
+
+
+  benevolent Lord, but were afraid to ask.", and "Well, that's it for God."
+  The Netrotheans had no fears of being wiped out for their bizarre views.
+  They believed that since what we call 'death' is theoretically infinite,
+  and what we call 'life' is so finite and miserable (what with everybody
+  wearing digital watches and coveting thy neighbor's bits of green-dyed,
+  processed plant matter), we must surely have gotten things backwards. They
+  therefore had no problems dealing with the after-life.
+  ************************************************************************]
+ 
+ Xaphod: Wow, that's wild|
+ 
+ Flarg:  Now if you really want to blow your mind, consider this: If the Net
+         doesn't really exist, do we exist? If we exist, what is the point
+         of our existence? What is the medium of our communication if there
+         really is no Net? What does it all mean?
+ 
+ Arnold Lint:    I don't know?
+ 
+ Rod:    That's obvious.
+ 
+ Martin: I'm kind of relieved that nothing really exists. It's sort of
+         reassuring to know that all the misery I've endured on the Net
+         really doesn't affect anything anyway.
+ 
+ Gillian: Quiet Martin. Don't you know what this all means| It means that
+          the constant day to day struggle to keep up with the Net is all
+          pointless. Posting news is futile, reading news is futile,
+          thinking about news is futile - because where ever the news came
+          from or goes to, what ever thought up the news - none of it exists
+          - and neither do we|
+ 
+ Rod:    Yah, just think. We may have been posting news to a void|
+ 
+ Xaphod: Wait a minute| We get replies to our news|
+ 
+ Flarg:  We thought of that too. But consider the odds against our
+         actual existence. They could be considered random at best. The odds of
+         other beings also existing comes down to the same random probability.
+         It follows that any communication would have to be a random
+         coincidence. Now, consider that the only communication we see is
+         simply processed electrical impulses. Consider the quantity and speed
+         of the impulses. The odds against them coming together in a logical
+         combination are astronomically bad. It follows, then, that what we
+         mistake for communication with other beings (which don't exist
+         either) are simply galactic burps in our faces, if we existed.
+ 
+ Xaphod: Wow|
+ 
+ Flarg:  Well, you wastes of space, I've got to go and kick my dog through a
+         hedge.
+ 
+  (With that Flarg disappears in a burst of purple smoke. When the smoke
+  clears, only a can of "Putrina Rat Chow" remains.)
+ 
+                  ******************** End Of Part 6 ********************
+ 
+ CLIPBBS 2-09                   Page 10                   3 Apr 1992
+
+
+  What other fantastic things (which don't exist) will be revealed on
+  Netrothea (which also doesn't exist). To find out . . . Tune in next
+  time (a bizarre concept, time) . . .  same Net-time . . . same
+  Net-channel.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 11                   3 Apr 1992
+
+
+                           Nantucket Code Guidelines
+ 
+ 7.  Preprocessor Directives
+ 
+     7.1     Preprocessor directives are lowercase and are preceded by a "#"
+             sign:
+ 
+              #include "Inkey.ch"
+ 
+             COMMENTS: Absolutely agree about directive lowercasing. Prefixing
+             of them with "#" is i guess must given by syntax of CLipper
+             language and therefore can be left out of any guidelining...
+ 
+     7.2     Pseudo-function names follow the same conventions as
+             user-defined function and procedure names (see section 6).
+ 
+             COMMENTS: There is one disadvantage of this guideline. All pseudo
+             functions are UNAVAILABLE in debugger and therefore i prefer
+             making them in UPPERCASE because then one can see directly that
+             function is PSEUDO (#define or #translate made)
+ 
+     7.3     Manifest constants are uppercase:
+ 
+              #define ESCAPE 27
+              IF LASTKEY() == ESCAPE
+ 
+             COMMENTS: Agree, expansion a bit is. EVERYTHING defined by
+             #define or #translate should be uppercase for better recognizing.
+ 
+     7.4     A blank line should be placed before and after #if...#endif
+             directives:
+ 
+          @ 2,10 SAY "ACME Stock Control System"
+ 
+             #if PASSWORD
+                 <Ask user for password>
+          #endif
+ 
+          MainMenu()
+ 
+             COMMENTS: Agree. It's very good and also is good to use on indent
+             level to the right more INSIDE of #if..endif construction.
+             SOmetime i'm dreaming about CLEVER editor which will be able to
+             make some kind of outlining with Clipper constructions....
+ 
+ 8.  Standard Classes
+ 
+     8.1     Class names follow the same conventions as user-defined
+             function and procedure names (see section 6).
+ 
+             COMMENTS: It's logical and useful to follow the same naming
+             convention for classes. All clases are of course prefixed with
+             "o" letter, immediately showing that 'this is a object'.
+ 
+     8.2     Instance variable names begin with a lowercase letter, and
+             include uppercase letters wherever necessary to indicate new
+ CLIPBBS 2-09                   Page 12                   3 Apr 1992
+
+
+             words:
+ 
+          oError:canDefault := .T.
+ 
+             COMMENTS: There is one important moment. Starting of instance
+             variables with small letters is allowing to make difference
+             of them and any other names. Only one weakness is here. There
+             is no way how to present which kind of value is inside of class
+             variable.
+ 
+     8.3     Method names follow the same convention as instance variable
+             names (see above):
+ 
+          oBrowse:pageUp()
+ 
+     8.4     When referring to a class method in text, you must also specify
+             the class name:
+ 
+          To reposition the data source to bottom-of-file, use the
+          TBrowse:goBottom() method.
+ 
+             COMMENTS: This paragraph is talking about case that one is writing
+             documentation or book about Clipper. Because of nature, that class
+             methods (variables) belongs to specific class, is needed to write
+             down which CLASS is related to method.
+ 
+ 9.  Spaces
+ 
+     9.1     Whenever a list of two or more items is used, a space is placed
+             after each comma separator:
+ 
+             MyFunc(nChoice, 10, 20, .T.)
+ 
+             COMMENTS: This is rule coming about readability of program.
+             Sometime is better to not use it, because of some functions with
+             very long argument list. Then it's too long to waste space with
+             space characters between arguments.
+ 
+     9.2     NEVER use spaces to indent code; use tabs instead (see section
+             15).
+ 
+             COMMENTS: GOLDEN rule for all programs (not only in Clipper).
+             When program is formatted using SPACES, there is always problem
+             with reformating of program. Also spaces formated program is
+             BIGGER (and significantly) than TABS formatted program (TAB is
+             one character and can be in some cases replacement for 2 to 7
+             spaces).
+ 
+     9.3     When parameters are specified as part of a function
+             declaration, a space is placed inside each parenthesis:
+ 
+          FUNCTION SayInBox( cMessage, cColor )
+ 
+             COMMENTS: Again readability rule. It's giving better reading of
+             parameters when definining function.
+ 
+ CLIPBBS 2-09                   Page 13                   3 Apr 1992
+
+
+     9.4     A space is placed on either side of each binary operator:
+ 
+             nTotal := nSubTotal + nNewCost
+ 
+             COMMENTS: It's good to follow this, but again. Long and complex
+             expressions flowing among more lines, are difficult to keep in
+             this way, because are coming longer and longer.
+ 
+ 10  Declarations
+ 
+     10.1    Each variable is declared separately on its own line:
+ 
+          LOCAL nSomeNum
+          LOCAL cString := ""
+ 
+             COMMENTS: I'm still prefering method to use ONE LOCAL statement
+             and then multiple line declarations:
+ 
+             LOCAL   nSomeNum ,;
+                     cString     := ""
+ 
+             It's question what is better, because in Nantucket's guideline,
+             there is possible to place comments after every LOCAL statement,
+             in my case it's impossible (because of buggy implementation of /*
+             and */ operators).
+ 
+ 11  Logicals
+ 
+     11.1    Logical values are referred to in text as follows:
+ 
+          true (.T.)
+          false (.F.)
+ 
+             The terms "true" and "false" are all lowercase unless they appear
+             at the beginning of a sentence, and are followed by the code form
+             of the logical value enclosed in parentheses.
+ 
+             COMMENTS: Exactly opposite. TRUE and FALSE are upper case,
+             always.  That's because they are defined as #define constants and
+             #define symbols are always uppercase in my programs (see
+             somewhere on start of guidelines comments about #define).
+ 
+ 12  Operators
+ 
+     12.1    The in-line assignment operator (:=) is used for assignments in
+             all Clipper 5.0 code:
+ 
+          lContinue := .T.
+ 
+             COMMENTS: 100% agree. ":=" operator is only one used in Clipper.
+             That's because of:
+             1)  REPLACE command can be replaced with this operator
+             2)  there is possible to use this operator inside of expression
+                 and mostly in if () statements...
+ 
+     12.2    The == operator is used for exact equality tests in all Clipper
+ CLIPBBS 2-09                   Page 14                   3 Apr 1992
+
+
+             5.0 code:
+ 
+          lDuplicate := (CustFile->CustName == cCustName)
+ 
+             COMMENTS: 100% agree. "==" operator is better readable than combi-
+             nation of SET EXACT and "=" operators....
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 15                   3 Apr 1992
+
+
+ ==============================================================================
+                                HOW DO WE DO...
+ ==============================================================================
+
+
+                  HOW DO WE.... (Part 1 - Introducing myself)
+                              By Ronald Offerman
+ 
+ I am hoping this section will be added regularly to CLBBS.
+ 
+ Purpose? It is interesting to know, especially for beginners but also for the
+ veteran users of Clipper, how other programmers work and what they use.
+ 
+ I don't want to start a discussion about which editor of linker is the best
+ to use, this is up to anyone to decided for himself. It is however nice to
+ know there are other ways to created a programming enviroment and of course I
+ am highly interested in what YOU are using.
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ 'How we do it'  ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ This is actually in two parts.
+ 
+     First how do you set your programming enviroment?
+ 
+     Second who do you solved your programming problems?
+ 
+ I think of anything a have to program as a problem to solve, but I think
+ you will understand what I mean.
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ 'What do we use'  ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ This is a short list of the tools, libraries etc. you use in programming and
+ maintaining code.
+ 
+ 
+ Ok, lets get acquainted.
+ 
+ I am Ronald Offerman. I work for a printer (Dutch:drukkerij). Clipper
+ programming is only part of my job. I support a Novell network with some 20
+ users, 2 servers (400MB and 1,2GB) with mainly (10) PC AT/386sx and some (5)
+ heavy Apple Macintoshes (FX).
+ 
+ As you might have notice my native language isn't English but I think this is
+ readable.
+ 
+ I specialise in programming database publishing applications/utilities.  My
+ second specialism besides database publishing is related, it covers the most
+ often used DeskTop and Electronic Publishing software.  This is of course a
+ must if you want to do database publishing.
+ 
+ My background
+ 
+ 1982 Sinclair ZX Spectrum
+      Developed my first database apllication in only 40K of memory. This
+ CLIPBBS 2-09                   Page 16                   3 Apr 1992
+
+
+      baby uses tape as storage so no overlays etc.
+      Learned and used Z80 Assembly, Sinclair Basic, Forth and Pascal.
+      Developed a disk editor (Norton-like) for a rare 3.5" drive (160K)
+      in Assembly with a lot of functions nowadays found in advanced
+      utilities
+ 
+ 1986 Amstrad Joyce
+      This is a dedicated wordprocessor that also runs CP/M. Again Z80
+      based. Got lots of official software for it, including several
+      programming languages (Pascal, Logo and others) and Dbase II !!
+      Developed my first Dbase application on it.
+ 
+ 1987 PC/XT
+      My first PC, sounds like my first .... (well know manufacturer of
+      Walkmans eg.). A real clone with CGA and 20MB HD. Developed my
+      first dBase application maintaining a membership database for a
+      club with 80.000 - 100.000 members. Got my first Clipper
+      experience. Data for this database was sent to and read from data
+      maintained on a mainframe. Ever try to have dBase III Plus
+      generated 3 indexes on a database this big on a regular basis? This
+      was the main reason for starting to use Clipper which was at that
+      moment a dBase compiler with interesting speed and add-ons.
+      Also did some small work in C for text conversion programs and
+      other small yet handy utilities.
+ 
+ 1989 PC/AT
+      W're in business. Got hired by a new firm, main task: database
+      publishing applications and support. Clipper '87 as the sole
+      programming language.
+ 
+      Have been using the PC/AT as my home development base since then.
+      Now have a 386 8MB/33Mhz 340MB HD and A3 screen as my business
+      development base machine. This system is also used for Windows and
+      other memory-hungry applications.
+ 
+ OK, this should have build enough credibility for taking some of the things I
+ am going to write serious. I hate so-called experts that say and write things
+ that make you wonder were in the world the got there 'knowledge' from.
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ How do I do it ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ I use Clipper as my one and only programming language. I DO KNOW how to
+ program in C, Pascal, Basic, Assembler, Forth, Lisp(some), Logo and several
+ other languages, but I have found Clipper to be very flexible and I haven't
+ met a problem in which Clipper is to slow. Of course this requires writing
+ fast Clipper code, but that is the fun (or torture) I find in programming in
+ this superb language. (OK I can get carried away about working with Clipper,
+ but please read on).
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ What do I use  ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ A list:
+   Software
+         - Clipper 5.01
+ CLIPBBS 2-09                   Page 17                   3 Apr 1992
+
+
+         - Brief with Dbrief
+         - Sourcerer's Apprentice (version control system)
+         - RTLINK
+         - Dmake
+   Libraries
+         - Funcky 1.5
+         - Nantucket Forum (NANFOR)
+         - PC Database Advisor (PCDA51)
+         - Omenu (see below)
+         - Romisc (see below)
+ 
+ The Omenu library is a library I made out of the Omenu demo program supplied
+ with Clipper. This is a great gift and a nice starting point in programming a
+ CUA-like interface.
+ 
+ It has got some bugs fixed from the orginal version like adding a second menu
+ bar. This was intended to work but it didn't.
+ 
+ I enhanced it with things like dis/enabling all menus, dis/enabling a single
+ menu, a help line for each menu option automaticly displayed on a configured
+ line etc. etc.
+ 
+ I am considering putting the modified source in Public Domain, it was a gift
+ anyway, but it isn't the way I think it should be for the moment.
+ 
+ The Romisc (Ronald Offerman Miscellaneous) Library contains functions I have
+ developed and use regularly. It also contains several of the sample functions
+ provide with Clipper eg. Environ.prg and Array.prg.  The advantage of using a
+ library to store often used functions is known (I hope). I'll get back to
+ Romisc in the future.
+ 
+ ---------------------------------------------------------------------
+ NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET
+ 
+ Did you know that there is an easy way to retrieve a value from a function
+ that returns an array?
+ 
+ OK here we go
+ 
+    @ x, y say Example(args)[anyelement]
+ 
+ Suprised?
+ 
+ If the function Example() returns an array, you can access an element of the
+ returned array by attaching an array subscript to the function call!
+ 
+ I am using this trick very often when I am printing status messages because
+ the global status of most of my applications is kept in an array. This saves
+ assigning the returned array to a temporary variable and is most affective
+ when you only need a single element of a returned array.
+ 
+ Credits to whom credits are due
+ 
+ This was pointed out to me by Matt Whelan at a Clipper Seminar.  In the
+ future articles I'll give you some other less known features in Clipper he
+ pointed out.
+ CLIPBBS 2-09                   Page 18                   3 Apr 1992
+
+
+ NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET
+ ---------------------------------------------------------------------
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ Up coming articles ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   Working environment
+   My system
+   Dmake
+   Editors
+   Other utilities
+   Database publishing
+   Importer/Exporter
+   Data Driven Application System
+   Easy home-made menuing
+   Awk and Grep?
+ 
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ Next Nugget  ³
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   C-style complex case
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 19                   3 Apr 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                           One Non Clipper Anomaly
+                                    alias
+                          What's going on in EUROPE
+                             by  Maths Pedersson
+ 
+ A suggestion for a new set of democratic rules in Z2 :-) Should be easy
+ enough for EVERYONE to understand.
+ 
+ <---------------------------------cut here---------------------------------->
+ 
+                             THE RULES:
+ 
+     1.  The ZC2 always makes THE RULES.
+ 
+     2.  THE RULES are subject to change at any time, without prior
+         notification.
+ 
+     3.  No NODE can possibly know all of THE RULES.
+ 
+     4.  If the ZC2 suspects the NODE knows all THE RULES, he must immediately
+         change some or all of THE RULES.
+ 
+     5.  The ZC2 is never wrong.
+ 
+     6.  However, if the NODE suspects that the ZC2 may be wrong, it can
+         only be due to a misunderstanding which was a direct result of
+         something the NODE said or did.
+ 
+     7.  The NODE must apologise immediately for causing the said
+         misunderstanding.
+ 
+     8.  The ZC2 may change his mind at any time.
+ CLIPBBS 2-09                   Page 20                   3 Apr 1992
+
+
+     9.  The NODE must never change his mind without the express written
+         consent of the ZC2.
+ 
+     10. The ZC2 has every right to be angry and/or upset at any time.
+         (Easily Annoyed)
+ 
+     11. The NODE must remain calm at all times. (Not to easily Annoyed)
+         (unless the ZC2 wants him to be angry and/or upset)
+ 
+     12. The ZC2 must, under no circumstances, let the NODE know whether or
+         not he wants him to be angry and/or upset.
+ 
+     13. The NODE is expected to mind-read at all times.
+ 
+     14. The NODE who does not abide by THE RULES cannot take heat; lacks
+         backbone; don't understand LOGIC and is a wimp and should not be in
+         fidonet in the first place.
+ 
+     15. Any attempt to document THE RULES could result in excommunication.
+ 
+     16. If the ZC2 has a hangover, all THE RULES are null and void.
+ 
+     17. The ZC2 can have a hangover at any time.
+ 
+     18. The NODE can have a hangover with the written consent of the ZC2.
+ 
+ <---------------------------------cut here---------------------------------->
+ 
+ And that's all. If in any case, there is clear similarity with any from
+ other so called Coordinators of your Networks (mostly Fidonet has this
+ Childish sickness of be coordinated) don't worry. Just ignore anything that
+ is happening, if your node number disappears in nodelist take another one
+ and happily live :-)
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 21                   3 Apr 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+ ³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper                   ³[1-19]³
+ ³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+ ³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ CLIPBBS 2-09                   Page 22                   3 Apr 1992
+
+
+ ³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+ ³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+ ³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+ ³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+ ³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 23                   3 Apr 1992
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+       2:285/608@fidonet.org
+       27:1331/702@signet
+       13:405/202@pnn
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   Italy   ³
+   ÄÄÄÄÄÄÄÄÙ
+       Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+       20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+       24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+       2:334/307@fidonet.org
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+ CLIPBBS 2-09                   Page 24                   3 Apr 1992
+
+
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-09                   Page 25                   3 Apr 1992
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

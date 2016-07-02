@@ -1,0 +1,45 @@
+*
+* T_EXAM18.PRG
+*                 *** Parsing the buffer ***
+*                 *** Optional PLOT() parameters ***
+*
+FLIP_INIT(6000)
+SET_SAYERR(1)
+
+nFont1 = FONT_OPEN("\FLIPPER\FONTS\SS2_42.@")
+nFont2 = FONT_OPEN("\FLIPPER\FONTS\OE2_38.@")
+
+INITDATA(2)
+
+USE T_EXAM18
+DO WHILE .NOT. EOF()
+   STORE_DATA( XCOLUMN, YCOLUMN1 )
+   SKIP
+ENDDO
+
+SET_G_FONT(nfont1)
+SET_L_FONT(nFont2)
+G_LABEL("PARSING THE BUFFER")
+X_LABEL("X Axis")
+Y_LABEL("Y Axis")
+
+SET_TYPE(1,1)
+
+PLOT(2)                       && PLOT WITH NO DATA, SCALES BASED ON ENTIRE
+                              && BUFFERS DATA.
+BUFF_LIMIT(1,6)
+PLOT(1)
+INKEY(0)
+
+SET_LN_PAT(1,2)
+BUFF_LIMIT(7,12)
+PLOT(1)
+INKEY(0)
+
+SET_LN_PAT(1,3)
+BUFF_LIMIT(13,18)
+PLOT(1)
+INKEY(0)
+
+TEXTMODE()
+

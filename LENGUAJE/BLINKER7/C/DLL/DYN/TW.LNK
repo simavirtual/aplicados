@@ -1,0 +1,24 @@
+#
+#  96.03.23    TW.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a Windows EXE.
+#
+
+output tw                  # Output file name
+file tw                    # List OBJ files here
+
+defbegin                   # Start of module definition commands
+   name        'tw'        # Indicate an EXE and specify its module name
+   exetype     windows 3.1 # It is for Windows 3.1 and above
+   heapsize    1024        # It requires a local heap of 1 Kb
+   stacksize   8192        # It requires a stack of 8 Kb
+   imports
+      _test = d.testexp    # It imports testexp from D.DLL as _test
+
+defend                     # End of module definition commands
+
+nodef                      # No default libraries
+nobell                     # No irritating beep
+map s,a                    # Create a MAP file
+

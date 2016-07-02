@@ -1,0 +1,300 @@
+       >>>>> SEE ALSO THE MS WIN WRITE FILE BLINKER.WRI <<<<<
+
+Free T-shirts and up to 50% savings!
+
+Order Blinker or NOVLIB now and choose one of our top quality
+American-made T-shirts with award-winning graphics. Each T-shirt
+features four color artwork on both sides and will be shipped as soon as
+we receive the completed registration card for your new product(s). See
+below for special offer details and use the attached order forms to
+order today!
+
+Why have over 50,000 programmers worldwide chosen the award-winning
+Blinker product and what can it do for you?
+
+If you program in CA-Clipper or C/C++, Blinker can save you time and
+help you to create more powerful software. A unique blend of
+functionality and value, Blinker combines a royalty-free DOS extender
+with the fastest available Windows linker and DOS dynamic overlay
+linker. CA-Clipper 5.3 includes a "real mode only" version of Blinker,
+but only the full Blinker product offers you incremental linking, dual
+mode, the Blinker DOS extender, the Windows linker, the swap package,
+C/C++ support and much, much more!
+
+Don't waste time waiting for your programs to link!
+
+Incrementally link real and protected mode CA-Clipper programs in less
+than a second with Blinker, the only product smart enough to relink just
+your program changes. Dramatically increase productivity and virtually
+eliminate "down time" with the fastest link times for real mode,
+protected mode and Windows programs, all in one product.
+
+Why worry about your runtime environment?
+
+Combining a dynamic overlay linker with a DOS extender offers a unique
+advantage. You can create protected mode and "dual mode" programs. No
+larger than protected mode .EXEs, dual mode programs evaluate the
+runtime environment and automatically run in either real or protected
+mode accordingly. 
+
+In real mode, dual mode programs run within the 640Kb conventional
+memory limit, automatically managing overlays so you don't need to
+design overlay structures. In protected mode, dual mode programs
+directly access up to 16Mb of extended memory and 64Mb of virtual memory
+under DOS, or in Windows and OS/2 DOS boxes.
+
+Run any program from within your application!
+
+Run a word processor, communications program or report generator from
+within your main program using the Blinker swap package for real and
+protected mode DOS. Blinker frees up all but 10Kb of the conventional
+memory used by your main program to run the new program.
+
+Start saving time and money now! Order Blinker today to receive your
+free designer T-shirt!
+
+Feature checklist
+
+Windows linker, DOS extender, dynamic overlay linker, dual mode
+capability, royalty-free, swap package (super "RUN" command), Microsoft
+C/C++, CA-Clipper, FORTRAN, Assembler, Borland C/C++ support, serial
+number encryption, EMS/XMS overlay caching, demo versions, "burn-in" of
+CA-Clipper environment variables, symbol table compression, internal or
+external overlays, comprehensive extender API, Codeview support, DPMI,
+VCPI and XMS compatibility,  Norton Guide, comprehensive technical
+reference manual, free designer T-shirt!
+
+Create NetWare-aware programs the easy way!
+
+Directly access NetWare from within your programs using NOVLIB, the
+first dual and protected mode network library for CA-Clipper. Voted Best
+Network Library in 1994 and 1995 by the readers of Data Based Advisor
+magazine, this powerful product features over 450 memory-efficient
+functions designed to be called directly from CA-Clipper.
+
+Easily integrate your programs with NetWare
+
+Why shell out to DOS to use the Novell utilities when you can do the
+same thing from within your program? A single NOVLIB command can replace
+an entire NetWare utility, such as MAP to assign network drives, or
+CAPTURE to redirect printer output. Create more user-friendly software
+and save yourself the trouble of training your end-users to operate
+NetWare!
+
+Limited only by your imagination
+
+Written in C and Assembler for maximum efficiency, NOVLIB enables you to
+create quality programs for NetWare versions 2, 3 and 4 with minimal
+memory overhead. All functions adhere strictly to NetWare security, so
+users cannot perform any task without appropriate access rights.
+Suitable for the beginner and the experienced programmer alike, NOVLIB
+offers high level commands to make NetWare programming easy, plus low
+level functions to help develop even the most comprehensive network
+programs.
+
+Take control of the NetWare environment:
+
+Keep track of who has a particular file open on the network.
+Log off users who have left for the day.
+Find out when a file was last modified and by whom.
+Send messages between workstations using NOVLIB's IPX / SPX functions.
+Disable network message receipt.
+
+Manage network printers:
+
+Defer printing.
+Print multiple copies of a document.
+Automatically locate the first available network printer.
+Move jobs to another printer to optimize printer usage.
+
+Build security into your programs:
+
+Limit access to network drives.
+List all available network resources.
+Display the user name at a specified workstation.
+Access the file server serial number for copy protection purposes.
+Limit a program to a specific number of users using semaphores.
+Back up the bindery.
+
+Monitor resources usage:
+
+Monitor the use of your programs.
+Charge a user's NetWare account for any resources, such as program use,
+connection time and disk space.
+
+Access the power of NetWare now! Order NOVLIB today to save 50% and
+receive a free designer T-shirt!
+
+Free T-shirts and up to 50% savings!
+
+Order Blinker or NOVLIB now and choose one of our top quality
+American-made T-shirts with award-winning graphics. Each T-shirt
+features four color artwork on both sides and will be shipped as soon as
+we receive the completed registration card for your new product(s). See
+below for special offer details and use the attached order forms to
+order today!
+
+Blinker for CA-Clipper 5.3 upgrade + Free T-shirt
+
+Save up to 40% and choose a free designer T-shirt if you upgrade from
+Blinker for CA-Clipper 5.3 to the full Blinker product now! 
+
+NOVLIB + Free T-shirt
+
+Give your network programs the strength, stability and security they
+deserve. Save over 50% and receive a free designer T-shirt if you order
+NOVLIB today!
+
+60 day money back guarantee
+
+Try our products risk-free. Order directly from Blinkinc today. If you
+are not entirely satisfied, return the undamaged product to us within 60
+days for a full refund of the purchase price.
+
+Important notice for existing Blinker users
+
+If you currently use Blinker versions 1.x or 2.x, please call Blinkinc
+for exclusive upgrade pricing information for Blinker 3.2. The telephone
+and fax numbers for our US and UK offices are on the order forms below!
+
+Free poster Offer !
+
+Please complete and return the following survey for a chance to win a
+free poster. Blinkinc will send a free 24" x 36" color poster in
+return for the first 250 completed surveys received each month until
+June 1996 :
+
+Name:		_________________________________________________
+Company:	_________________________________________________
+Address:	_________________________________________________
+		_________________________________________________
+		_________________________________________________
+
+Tel. number:	___________________	Fax number:__________________
+
+Do you or your company currently own Blinker? Y/N
+Blinker version#	 1.x	2.x	3.x	Blinker serial #
+If not, would you like more information and a demo disk of Blinker ? Y/N
+
+Do you or your company currently own NOVLIB? Y/N
+NOVLIB version#	1.x	2.x		NOVLIB serial number?
+If not, would you like more information and a demo disk of NOVLIB ? Y/N
+
+Do you subscribe to our newsletter and interim upgrade service? Y/N
+
+Please include your CA-Clipper 5.3 serial number:
+
+Yes, I have completed the above survey and would like a free Blinker
+poster featuring Blinkinc's award-winning artwork. I understand that
+Blinkinc will send a free color poster in return for each of the first
+250 completed surveys received each month. Only one completed survey per
+copy of CA-Clipper 5.3 will be eligible for this offer.
+
+
+                       ** Blinker/NOVLIB Order Form **
+            Valid in North and South America, Asia and Australia
+                        CA-Clipper 5.3 Customers Only
+
+Name: _______________________________________________________________________
+
+Company: ____________________________________________________________________
+
+Address: (no P.O. Boxes, please) ____________________________________________
+
+_____________________________________________________________________________
+
+City: _______________________________________________ State: ________________
+
+Zip: ______________________ Phone: (____)____-_______ Fax: (____)____-_______
+ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออัออออออออหออออออป
+บ Product                                                    ณ Price  บ Paid บ
+ฬออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออุออออออออฮออออออน
+บ Blinker 3.2 Upgrade -- Save $120 off $299 List Price       ณ$179    บ      บ
+บ (For CA-Clipper 5.3 users only)                            ณ        บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤลฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ NOVLIB 2.1  -- Save $150 off $299 List Price               ณ$149    บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤลฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ 1 Year Newsletter & Interim Upgrade Service -- Save $50    ณ$ 49    บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤมฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ VA Residents add 4.5% Sales Tax                                     บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ Enter CA-Clipper 5.3 Serial Number:                                 บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ Shipping & Handling: U.S.$12; Canada/Mexico $30; International $50  บ      บ
+บ (Newsletter price includes shipping)                                บ      บ
+ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออฮออออออน
+บ ------------------------------------------------------------> Total:บ      บ
+ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออสออออออผ
+ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ[ Method of Payment ]ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
+ณฺฤฟ                                                                         ณ
+ณณ ณ Check enclosed (Must be drawn on U.S. dollar account.                   ณ
+ณภฤู                 Please make checks payable to Blinkinc)                 ณ
+ณฺฤฟ             ฺฤฟ                                                         ณ
+ณณ ณ Mastercard  ณ ณ Visa   Exp Date: ____/____/________                     ณ
+ณภฤู             ภฤู                                                         ณ
+ณ    Card #: __ __ __ __ - __ __ __ __ - __ __ __ __ - __ __ __ __           ณ
+ณ                                                                            ณ
+ณ    Signature: _______________________________                              ณ
+ณฺฤฟ                                                                         ณ
+ณณ ณ Free Demo. I'm just looking right now. Please send a 3.5" demo          ณ
+ณภฤู diskette of BLINKER/NOVLIB to the address I have filled in above.       ณ
+ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+     Please fax this order form to Blinkinc on 1-804-747-4200 or mail to:
+         Blinkinc, 8001 West Broad Street, Richmond, Virginia, 23294
+               For more information, telephone 1-804-747-6700.
+            30 Day Money Back Guarantee. Offer expires June 1996.
+
+
+                       ** Blinker/NOVLIB Order Form **
+                 Valid in Europe, Africa, and the Middle East
+                        CA-Clipper 5.3 Customers Only
+
+Name: _______________________________________________________________________
+
+Company: ____________________________________________________________________
+
+Address: (no P.O. Boxes, please) ____________________________________________
+
+_____________________________________________________________________________
+
+City: ____________________________________________  Country: ________________
+
+Post Code: ________________ Phone: (____)____-_______ Fax: (____)____-_______
+ษออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออัออออออออหออออออป
+บ Product                                                    ณ Price  บ Paid บ
+ฬออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออุออออออออฮออออออน
+บ Blinker 3.2 upgrade (English)--Save 90 off 229 List Priceณ139    บ      บ
+บ (For CA-Clipper 5.3 users only)                            ณ        บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤลฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ NOVLIB 2.1  (English) -- Save 130 off 229 List Price     ณ 99    บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤลฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ 1 Year Newsletter & Interim Upgrade Service -- Save 40    ณ 39    บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤมฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ Shipping & Handling: U.K.:15; Other E.C.:20; Outside E.C.:25     บ      บ
+บ (Newsletter price includes shipping)                                บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ Enter CA-Clipper 5.3 Serial Number:                                 บ      บ
+วฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤืฤฤฤฤฤฤถ
+บ Residents of E.C. Countries add 17.5% V.A.T.                        บ      บ
+ฬอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออฮออออออน
+บ ------------------------------------------------------------> Total:บ      บ
+ศอออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออออสออออออผ
+ฺฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤ[ Method of Payment ]ฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฟ
+ณฺฤฟ                                                                         ณ
+ณณ ณ Cheque enclosed (Must be drawn on U.K. sterling account.                ณ
+ณภฤู                  Please make cheques payable to Blinkinc Ltd.)          ณ
+ณฺฤฟ             ฺฤฟ                                                         ณ
+ณณ ณ Mastercard  ณ ณ Visa   Exp Date: ____/____/________                     ณ
+ณภฤู             ภฤู                                                         ณ
+ณ    Card #: __ __ __ __ - __ __ __ __ - __ __ __ __ - __ __ __ __           ณ
+ณ                                                                            ณ
+ณ    Signature: _______________________________                              ณ
+ณฺฤฟ                                                                         ณ
+ณณ ณ Free Demo. I'm just looking right now. please send a 3.5" demo          ณ
+ณภฤู diskette of BLINKER/NOVLIB to the address I have filled in above.       ณ
+ภฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤฤู
+  Please fax this order form to Blinkinc Ltd. on +44-1222-700888 or mail to:
+     Blinkinc Ltd., P.O. Box 9, Penarth, South Glamorgan, CF64 5XF, U.K.
+               For more information, telephone +44-1222-712444.
+            30 Day Money Back Guarantee. Offer expires June 1996.
+

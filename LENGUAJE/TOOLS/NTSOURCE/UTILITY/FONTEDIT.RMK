@@ -1,0 +1,15 @@
+//   FONTEDIT.RMK
+//   Make file for FONTEDIT, the FONT EDITOR of Nantucket Tools II.
+//   Copyright (c) 1991, Nantucket  Corp.  All rights reserved.
+//
+.prg.obj:
+    clipper $<
+
+.obj.exe:
+    rtlink fi $**,nt2us50 lib nt250
+
+fontedit.obj:   fontedit.prg
+
+fontedit.exe:   fontedit.obj
+
+

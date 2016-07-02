@@ -1,0 +1,16 @@
+#
+#  96.03.15    T.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a DOS extended program
+#
+
+bli exe ext                # Create a DOS extended program
+out t                      # Output file name
+fi t                       # List .OBJ files here
+
+lib d                      # Import library for D.DLL
+
+nobell                     # No irritating beep
+map s,a                    # Create a MAP file
+

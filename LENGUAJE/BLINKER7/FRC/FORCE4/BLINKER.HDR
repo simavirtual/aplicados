@@ -1,0 +1,162 @@
+/**************************************************************
+*
+* Blinker 5.1 header file for Force 4.0
+*
+* Copyright (C) ASM inc, 1992-98
+*
+**************************************************************/
+
+/*
+Note:
+
+For the following functions Force-specific versions are provided:
+
+C version    Force version   Description
+
+BLISERNUM()  BLISERNUMFOR()  Get serial number
+BLIDEMDTE()  BLIDEMDTEFOR()  Get demonstration date
+BLIERRPRM()  BLIERRPRMFOR()  Get Blinker error parameter
+
+The standard C versions of these functions return pointers to strings,
+corresponding to the ptr( char ) data type in Force 4.0. The Force
+versions of the functions return the char data type.
+*/
+
+// prototypes
+
+func int BLICUROVL extern
+
+func int BLICURSIZ extern
+
+func int BLIDBGHAN extern
+param value int
+
+func int BLIDEMCAL extern
+param value int
+
+func ptr( char ) BLIDEMDTE extern
+
+func char BLIDEMDTEFOR extern
+
+func int BLIDEMMIN extern
+param value int
+
+proc BLIDISTRC extern
+
+func int BLIERRNUM extern
+
+func ptr( char ) BLIERRPRM extern
+
+func char BLIERRPRMFOR extern
+
+func long BLIOVLOPS extern
+
+proc BLIOVLRES extern
+
+func long BLIOVLSIZ extern
+
+proc BLIOVLSUS extern
+param value int
+
+func ptr( char ) BLISERNUM extern
+
+func char BLISERNUMFOR extern
+
+func int BLITOTACT extern
+
+func int BLITOTLOD extern
+
+func int BLITOTSIZ extern
+
+func int BLIVERNUM extern
+
+// swap function prototypes
+
+func int     SWPADDENV extern
+param value int
+
+func logical SWPADDSTR extern
+param const char, const char
+
+func logical SWPCURDIR extern
+param value logical
+
+func logical SWPDISMSG extern
+param value logical
+
+func logical SWPEMS320 extern
+param value logical
+
+func int     SWPERRLEV extern
+
+func int     SWPERRMAJ extern
+
+func int     SWPERRMIN extern
+
+func logical SWPGETKEY extern
+param value logical
+
+func logical SWPGETPID extern
+param const char
+
+func char    SWPGETSTRFOR extern
+
+func logical SWPKEYBRD extern
+param const char
+
+func logical SWPKEYCLR extern
+param value logical
+
+func logical SWPNOBOOT extern
+param value logical
+
+func logical SWPRUNCMD extern
+param const char, value int, const char, const char
+
+func logical SWPSETENV extern
+param const char
+
+func logical SWPSETPID extern
+param const char
+
+func logical SWPSETSTR extern
+param const char, const char
+
+func logical SWPUSEEMS extern
+param value logical
+
+func logical SWPUSEUMB extern
+param value logical
+
+func logical SWPUSEXMS extern
+param value logical
+
+func logical SWPVIDMDE extern
+param value logical
+
+// SWPMAJERR codes
+
+#define SWPNONERR 0    // No error
+#define SWPDSKFUL 1    // Disk full
+#define SWPDSKOPE 2    // Disk file open error
+#define SWPDSKERR 3    // Disk i/o error
+#define SWPDIRERR 4    // Change directory error
+#define SWPCREERR 5    // Temp file create error
+#define SWPDRVERR 6    // Change drive error
+#define SWPEMSERR 7    // EMS error
+#define SWPXMSERR 8    // XMS error
+#define SWPCMDERR 9    // SHELL error
+#define SWPHANERR 10   // Handle table too large to save
+#define SWPMEMERR 11   // Top of memory decreased error
+#define SWPMCBERR 12   // MCB chain corrupt
+#define SWPMCBCNT 13   // Too many MCBs
+#define SWPBLKERR 14   // DOS memory function call error
+#define SWPMEMRES 15   // Error reallocating segment
+#define SWPCSPERR 16   // COMSPEC variable not found
+#define SWPINTERR 254  // Internal error
+
+// Non fatal SWPERRMIN() codes when SWPERRMAJ() == 0
+
+#define SWPKILTSR 1    // TSR was removed
+#define SWPMEMINC 2    // Top of DOS memory increased
+

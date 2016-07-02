@@ -1,0 +1,20 @@
+**** PROGRAMA: CAJA01.PRG
+CLEAR
+empresa = "MEGATRON ASESORIA Y ENTRENAMIENTO"
+sistema = "CUENTAS POR COBRAR"
+programa = "INCLUSION"
+
+SET SCORE OFF
+SET DATE BRIT
+@00,00 TO 03,39 DOUBLE
+@00,40 to 03,79 DOUBLE
+@04,00 to 21,79
+@22,00 to 24,79 DOUBLE
+
+@01,02 SAY empresa
+@01,42 SAY sistema
+@01,73 SAY LEFT(TIME(),5)
+@02,42 SAY programa
+@02,70 SAY DATE()
+@23,02 SAY "MENSAJE:"
+INKEY(0)                // Solamente para detener la pantalla

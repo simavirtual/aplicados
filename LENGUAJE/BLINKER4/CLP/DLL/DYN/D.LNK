@@ -1,0 +1,21 @@
+#
+#  96.02.12    D.LNK for CA-Clipper
+#
+#  This sample link file is included by the Dnn link files which
+#  demonstrate how to link a Windows DLL containing CA-Clipper
+#  code which will be dynamically linked to a CA-Clipper code EXE.
+#
+   out d                   # Output DLL name
+
+   fi d                    # List OBJ files here
+
+   defbegin                # Module definition commands
+      library d            # Indicate a DLL
+      exetype windows 3.1
+      exports
+         DYNTEST           # Export the DYNTEST function
+   defend                  # End module definition commands
+
+   nodeflib                # No default libraries
+   nobell                  # No irritating beep
+

@@ -1,0 +1,42 @@
+//
+// 96.03.23  ALL.RMK
+//
+// This generic make file contains Blinker standard definitions which are
+// included by all the CA-Clipper example make files include with Blinker.
+//
+                              // OBJ file directory
+OBJDIR := .
+                              // EXE and DLL file directory
+OUTDIR := .
+
+COMCMD := clipper             // Compile command
+COMOPT := /m /n /o$(OBJDIR)\  // Compile options
+
+LNKCMD := blinker             // Link command
+LNKOPT := map s,a             // Link options
+
+#ifdef DEBUG                  // Determine if DEBUGging is enabled
+   COMOPT := $(COMOPT) /b
+#end
+
+.prg.obj:
+    $(COMCMD) $< $(COMOPT)
+
+#stdout ""
+#ifeq $(COMVER) 53
+#stdout "Creating CA-Clipper 5.3 version"
+#else
+#ifeq $(COMVER) 52
+#stdout "Creating CA-Clipper 5.2 version"
+#else
+#stdout "Creating CA-Clipper 5.01 version"
+#endif
+#endif
+#stdout "Change COMVER in the make file for a different version"
+#stdout ""
+
+bldclp53.obj:                 // Blinker file
+blxclp53.obj:                 // Blinker file
+bldclp52.obj:                 // Blinker file
+blxclp52.obj:                 // Blinker file
+

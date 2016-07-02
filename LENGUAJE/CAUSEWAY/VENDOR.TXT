@@ -1,0 +1,152 @@
+Following is a list of Clipper libraries and utilities which are
+known to have compatibility problems with CauseWay in past or
+current release versions.  Also included are general tips on
+using CauseWay with particular memory managers or device
+drivers.
+
+Please note, as new versions of the libraries are released, this
+list may no longer apply.  Many vendors release patches for
+their products over time.  If you experience a problem with a
+library, make sure you are using the latest protected mode
+compatible version.  If a library is not listed here, is
+protected mode compatible, and follows the documented ExoSpace
+API or uses a subset of the Rational API calls, then it should
+work with CauseWay.  This includes, but is not limited to, such
+libraries as Class(y), Grumpfish, Provision, Telepathy, and many
+others.
+
+If there are several versions of a particular vendor library
+available, and none are specified for CauseWay, use the ExoSpace
+version.  CauseWay very closely emulates ExoSpace behavior.
+
+
+386^MAX And BlueMAX Users:  You may wish to set your CauseWay
+environment variable to DPMI (SET CAUSEWAY=DPMI).  Many versions
+of 386^Max are much slower on the default VCPI memory
+allocations than DPMI.  You can burn in the CAUSEWAY environment
+variable using WARPWRAP (WW.EXE).
+
+CLIPPER TOOLS (protected mode compatible version, including
+CTP.LIB, CTUSP.OBJ and CTINTP.OBJ):  Use of this library usually
+requires setting WL32's /fx option.  The /fx option changes the
+way one object record fixup type is handled by the linker.  The
+protected mode version of CA Clipper Tools requires this
+different fixup logic to work correctly.  The new .DEF files
+included with versions of CauseWay 1.25 and later automatically
+set this option and link in CWCATOOL.OBJ.
+
+CWCATOOL.OBJ was modified in CauseWay version 1.2b to properly
+lock two hardware interrupt handlers set by Clipper Tools.  This
+could lead to unexplained lockups if the code page holding the
+interrupt handler was swapped out by virtual memory.  This is an
+error in Clipper Tools that can occur with all protected mode
+DOS extenders, although the latest CWCATOOL.OBJ corrects the
+problem through patching.
+
+COMIX:  Very early versions of Comix may cause a GPF when
+indexing files under CauseWay.  Update to the current version if
+you have problems.  Some later versions also had a bug which
+caused a GPF with CauseWay due to an overflow bug in Comix.
+CauseWay 1.3e compensates for this bug to avoid the problem and a
+fix is also expected from the Comix developers.
+
+dCLIP:  Roger Donnay reports that dCLIP version 3.52 or later is
+compatible with CauseWay.  Previous versions may not work
+correctly with CauseWay.
+
+dGE:	At last report, this library did not lock a hardware
+interrupt handler, which can cause problems when virtual memory
+is being used.  Particularly under high use virtual memory
+situations, this can lead to unexplained lockups if the code or
+data page holding the interrupt handler was swapped out by
+virtual memory.  The problem has been reported to the vendor:
+the response seemed to indicate there are no plans to correct
+the problem.  You can use SET CAUSEWAY=NOVM to shut off virtual
+memory and avoid the problem if you have sufficient physical
+memory to run your application.  This problem in dGE can occur
+with all protected mode DOS extenders.
+
+Flexfile:  Very early versions had one or more routines which
+wrote past the end of allocated memory, causing a GPF when those
+routines were used.  This error did not consistently occur with
+other extenders because of the extra memory allocation padding
+added when they allocate memory.  Contact the vendor for an
+update if you experience this problem.
+
+Flexfile does not support memo compression in protected mode.
+
+FUNCKY:  There is an error in some past versions of this
+library's protected mode detection code.  Also several routines
+require patching for use with CauseWay.  If you have problems
+using this library, link in CWFUNCKY.OBJ with your program.  The
+new .DEF files included with versions of CauseWay 1.25 and later
+automatically set this option and link in CWCATOOL.OBJ.
+
+At last report, the Funcky routines CLOCK12 and CLOCK24 are not
+fully protected mode compatible since they do not lock memory
+used by a hardware interrupt handler (the timer tick), which can
+cause problems when virtual memory is being used.  Particularly
+under high use virtual memory situations, this can lead to
+unexplained lockups if the code page holding the interrupt
+handler was swapped out by virtual memory.  The problem has been
+reported to the vendor.  You can use SET CAUSEWAY=NOVM to shut
+off virtual memory and avoid the problem if you have sufficient
+physical memory to run your application.  This problem in Funcky
+can occur with all protected mode DOS extenders.
+
+NETLIB:  Very early versions may cause GPFs.  Update to a recent
+version.
+
+OVERLAY:  This library contains several portions of
+ExoSpace-specific code outside of the documented API and it not
+currently compatible with CauseWay.  Planned vendor update
+status is unknown.  CauseWay's CWSWAP contains basic swapper
+functionality, but not all of the additional features of
+OverLay().
+
+PROCLIP:  ProClip is reported to require two linkable object
+modules to be protected mode compatible.  Contact SDI for more
+information.
+
+ProVision:Backup:  Should work correctly with CauseWay under
+CauseWay version 1.2 and later.
+
+PS_ERROR:  The file handle functions may not work correctly,
+reporting incorrect handle values.  This is a nonfatal error,
+all other reported values are correct and operation otherwise
+performs as documented.  Vendor update plans are unknown.  Use
+the ExoSpace version in the meantime.
+
+RDDKIT:  Should work correctly with CauseWay version 1.2 and
+later.
+
+SCRUTINY:  Very early versions had an error which could cause a
+GPF when using CauseWay.  Later versions have corrected this
+problem, and CauseWay 1.2 and later have also implemented
+additional parameter checking in INT86X calls to avoid the
+problem if it recurs in other libraries.
+
+SIXCDX.LIB:  Fully compatible with CauseWay.  However, a benign
+error in early release versions can generate the following
+warning from WL32:
+
+Symbol defined more than once: __SEXFPATH
+Defined in SIXCDX.LIB, duplicated in SIXCDX.LIB
+
+This warning occurs because the SIX library declares the
+__SEXFPATH symbol as both a public and communal symbol.  The
+error was been reported to SuccessWare and it has been corrected
+in later releases.
+
+SMARTLOG:  Version 3.5 is reported by MetaGroup Software to be
+fully compatible with CauseWay.
+
+
+NOTE:  Libraries which require SEARCH link behavior in the link
+file or a particular link order may necessitate setting WL32's
+/ls option when linking for proper program behavior.  The new
+definitions .DEF files use the LIBSEARCH morphing command to
+automatically set /ls when a SEARCH command is encountered.
+
+
+Last updated 02/16/96

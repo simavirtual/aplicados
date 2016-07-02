@@ -1,0 +1,982 @@
+
+
+        °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+      °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+      °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+      °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+  Volume 2, Number 14                                       28 July 1992
+
+                 (c) Daniel Do‡ekal, All Rights Reserved
+
+     The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+
+     Some of the material used comes from scanning CLIPPER echoes
+     which are carried in various BBS throughout the World.
+     These Echoes are very often the source of the most often asked
+     Questions and Answers about Clipper.
+
+     Other material, which is fully signed or abbreviated is the
+     copyright of the appropriate persons.
+
+     The publisher is not responsible for other authors submissions....
+     Published material is not necessarily the opinion of the publisher.
+
+     Redaction:
+        Publisher...................................Daniel Docekal
+        Chief editor ...............................Daniel Docekal
+        Language editor .................................Dave Wall
+
+
+
+                               Table of Contents
+
+1. ARTICLES  ...............................................................  1
+   WHY Patches, it's for nothing  ..........................................  1
+   Why update IPX/NETX/ODI?  ...............................................  7
+   Hitch Hikers Guide To The Net (11)  ..................................... 11
+2. ANOMALIES  .............................................................. 14
+   ANOMALIES reports and commets  .......................................... 14
+3. CLIPPER NET  ............................................................ 15
+   Index of described files in Clipper BBS Magazine  ....................... 15
+4. CLIPBBS  ................................................................ 17
+   CLIPBBS distribution  ................................................... 17
+   CLIPBBS, how to write an article!!!  .................................... 19
+
+                                   - - - - -
+CLIPBBS 2-14                   Page 1                   28 Jul 1992
+
+
+===============================================================================
+                                   ARTICLES
+===============================================================================
+
+
+                       WHY Patches, it's for nothing..
+                                     by
+                               Daniel Docekal
+
+Long time discussion between relation of Novell Netware and Clipper programs
+(and actually any other programs) moved me finally to write article about
+Novell Netware Patches. Basic question is in this case - Are they needed or
+not? Is it wise to install them on 3.11 server or just ignore them?
+
+In most cases firms installing Novell Netware know nearly NOTHING about some
+NetWire Novell Support, updates available for utilities, operating system and
+any other add-in software or hardware. Installers of Novell Netware are
+unfortunately in most cases satisfied with just loading server with Novell
+installation floppies, building up some case of very simple login script
+system and that's all. All technical care normally ends here. Something like
+requirement of patches for Netware 3.11 or latest revision of IPX/NETX/ODI is
+something very far from knowledge of installers. This situation is typicall
+for Europe because of lack of knowledge and good sources of informations
+about Novell, it may be better in U.S.A, but that's something i cannot
+comment because i don't have practical experience from there.
+
+PATCHES will be subject of this first article from serie related to
+Novell/Clipper and in generall Novell/application subjects. Following article
+will come to talk about IPX/NETX/ODI support for workstation which is also
+very important in any case.
+
+PATCHES are released by Novell randomly very soon after releasing of any
+revision of operating system. PATCHES are released only because ALL boxes
+with Novell Netware floppies are untouched and NEVER updated with latest
+revision of software. PATCHES of Novell Netware 3.11 how we should call them
+in full name are available from Compuserver NOVLIB or via Novell Authorized
+Dealers and via Novell Support Program (very expensive one). Just one simple
+archive file called 311PTx.ZIP where <x> is coming to be sequential number of
+patch set. Latest one was 311PT7.ZIP at time of writing of this article. The
+same exist as 310PTx.ZIP for 3.10 version of Netware, but that should be off
+interest in this case because is far better switch 3.10 Netware immediately
+to 3.11 than to play with patches to make it working.
+
+PATCHES are loaded and resident on server. Not all of them are required for
+all situations of course, but there is nothing bad on fact to load them ALL
+at once if someone doesn't want to thing. But not loading them at all can be
+VERY big mistake. There is document supplied with patches (311PT7.DOC in our
+case) which is describing complete installation and meaning of all files. It
+should be enough to read it to understand WHY those patches are so important.
+As usual most from us are lazy to read long texts, therefore i will just try
+to pick up CLIPPER/APPLICATIONs related patches which have good meaning and
+importance.
+
+ASNCRDFX NLM
+  ³ This patch fixes a problem that may occur when multiple threads do
+  ³ asyncrhonous reads.  It is possible for a thread to read data that was
+CLIPBBS 2-14                   Page 2                   28 Jul 1992
+
+
+  ³ written by another thread.  This problem has been known to occur with the
+  ³ Btrieve.nlm application if a Btrieve data file page size is not 512,
+  ³ 1024, 2048 or 4096 bytes. If the page size is not one of these sizes, the
+  ÀÄdata file may become corrupt.
+
+    What it means? Simple. IF your application is using BTRIEVE or any from
+    BTRIEVE related libraries for Clipper, this patch can be of importance
+    for you. If this patch is NOT loaded what can happend is - DATA
+    CORRUPTION. Therefore DO NOT blame your CLIPPER until this PATCH is
+    loaded and active.....
+
+BIGRFIX  NLM
+  ³ This patch allows the OS to prevent "read" requests larger than 512K from
+  ³ overrunning the stack.  This problem has been known to occur when loading
+  ÀÄlarge NLMs.
+
+    Meaning? Rare occurence but it can. Playing with .NLMs on your server?
+    Load this patch otherwise it CAN end badly as usual. Novell just made
+    error in stack allocation and if stack is overrunning? What will happen
+    with server after stack is pushing values somewhere in programs? This
+    PATCH is not so important for normal live.
+
+CROPNFX  NLM
+  ³ This patch fixes a problem found when a client makes a request to create
+  ³ or open a file.  When a user makes a CreateOpenFile request, the server
+  ³ creates the file, but the server's reply to the user gets lost.  The
+  ³ client then makes a second request to create the file, but since it has
+  ³ already been created, the user gets the error message:
+  ³
+  ³     "file already created."
+  ³
+  ³ Additionally, when a client request is made to open a file, the server
+  ³ opens the file, but its response to the client is lost. The client makes
+  ³ a second request to open the file, and the server opens the file a second
+  ³ time. This scenario can result in the server keeping the file open while
+  ³ the user thinks it has been closed. This problem becomes apparent when
+  ³ the user attempts to delete the file and receives the error message:
+  ³
+  ÀÄ    "File in use."
+
+    Having trouble with files not being opened or program refusing delete
+    files? Not seeing a reason for this. As usual, it can be one from bugs
+    in Novell Netware Operating system. Until this patch is loaded noone can
+    tell if it's your program or Novell who is making troubles. Solution is
+    simple as usual, just load this patch and be sure about fixed System
+    problem.
+
+DIRLPFIX NLM
+  ³ This patch fixes a problem in NetWare 386 v3.11 that results in an
+  ³ infinite loop when the DOS DIR command is used in a subdirectory where
+  ³ more than 65,535 files exist.  This loop will also occur with the
+  ÀÄFindFirst and FindNext DOS function calls.
+
+    Hanging Clipper application which is processing thousands of files in
+    one directory can have this reason. Bug in Netware which will manifest
+    in very rare condition (who has more than 65535 files in one directory)
+CLIPBBS 2-14                   Page 3                   28 Jul 1992
+
+
+    but it can. My application (FAX/TELEX package) can make this number of
+    files in two weeks in some installations...
+
+DOTFIX   NLM
+  ³ This patch fixes the problem of multiple directories of the same name
+  ³ being created at the SYS: (root) level.  Currently, if the user creates
+  ³ directories ending in two dots: ".." (e.g. "STATS.."), multiple
+  ³ directories of the same name will be created.  A directory listing using
+  ³ DIR will show multiple directories of the same name.  For example:
+  ³
+  ³         >DIR
+  ³
+  ³         STATS     <DIR>
+  ³         STATS     <DIR>
+  ³         STATS     <DIR>
+  ³
+  ³ DOTFIX.NLM fixes the problem so that if the user tries to create
+  ³ directories with the same name, the error message "Unable to create
+  ÀÄdirectory" appears.
+
+    Looks funny, isn't? Who will try to create directory named "STATS..",
+    believe me, users will do it not only once. And what will happend?
+    Your disk will get trashed, structure will be wrong and your files
+    from your application will be lost, your program will act like mad
+    because will see strange things with his directories...
+
+EAINFIX  NLM
+  ³ This patch fixes a problem with Extended Attributes when two or more work
+  ³ stations execute XCOPY multiple times.  The result is that after about
+  ³ ten minutes the server will ABEND with the message:
+  ³
+  ÀÄ"Free called with a memory block that has an invalid resource tag.".
+
+    Absolutely for sure is XCOPY command used often in your network, maybe
+    even your Clipper program can call it via RUN command. If not, then very
+    often users can use this command. What about two users using it at the
+    same time, it can happend very often. Is it good to lost server (and lot
+    of data) only because not loaded patch?
+
+FATFIX   NLM
+  º This patch fixes a problem with TurboFAT and FAT corruption in general,
+  ÈÍwhen multiple workstations randomly access large database files.
+
+  ÚÄ!!!!!!!!!!!!!!!!!!!!!!!!  VERY IMPORTANT  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!Ä¿
+  ³                                                                         ³
+  ³ Believe or not, database desctructions and missing data can be related  ³
+  ³ to Novell Operating system. In case or LARGE database files (but we all ³
+  ³ have large files often) corruption of FAT and TurboFAT (File Allocation ³
+  ³ Table) can occur just because more stations are accessing data. What    ³
+  ³ will be after this corruption? Some parts of file will point to some    ³
+  ³ other places then it should and your data are gone. This PATCH is VERY, ³
+  ³ VERY IMPORTANT ONE and there shouldn't be a server without this PATCH.  ³
+  ³                                                                         ³
+  ÀÄ!!!!!!!!!!!!!!!!!!!!!!!!  VERY IMPORTANT  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!ÄÙ
+
+GETQFIX  NLM
+CLIPBBS 2-14                   Page 4                   28 Jul 1992
+
+
+  ³ This patch fixes a problem which caused a large number of deleted .SRV
+  ÀÄfiles in the queue subdirectories in SYS:SYSTEM.
+
+    Not so much important of course, until your Clipper application is
+    responsible for creating hundreths of printed outputs daily. In this
+    case will server be VERY busy with keeping ALL of them in DELETED state
+    and later with purging HUNDRETHS of them. Problem is that queue manager
+    is just forgetting to PURGE those files from system, it's just DELETING
+    them without cleaning....
+
+GETSEFIX NLM
+  ³ This patch fixes a problem found when more than 31 security equivalences
+  ³ for a user or group ID are set up.  This can result in a system hang
+  ÀÄwhich may be accompanied by a message indicating a "multiple abend".
+
+    For sure, all of us know that securities are never enough for customers
+    to protect their data. What about group which has more than 31 defined
+    securities (access security to files or directories). Is it worth to have
+    abend on server? I don't think so, it's time to load another patch.
+
+GNSFIX   NLM
+  ³ This patch fixes a problem found when rebooting and attempting to get a
+  ³ connection to the file server.  If all of the connections are in use,
+  ³ (e.g. 20 for the 20-user version, 50 for the 50-user version, etc.), and
+  ³ one of the users reboots, the user will not be able to log back in to the
+  ³ server. This problem will only occur if there is only one network.  If
+  ³ the user is on an internet, a re-connection will be possible.
+  ³
+  ³ The problem is that once a user reboots, his connection is not terminated
+  ÀÄat the server until a time out limit is reached (usually 15 minutes).
+
+    Having trouble after crash of your CLipper code to get back to network
+    from workstation? Don't let customer blame your CLipper program and don't
+    try look too hard - just install this patch because Novell has small bug
+    in this area also...
+
+HTFXFX   NLM
+  ³ Corrects a problem when using disk block sizes larger than 4K and cache
+  ³ buffer sizes larger than 4K.  If a block was read from the redirection
+  ³ area while copying a file in the above circumstance, it could cause the
+  ÀÄdestination block to become corrupted.
+
+    It's hard to expect that someone will use block larger than 4K in making
+    Netware Volumes, but it can also be. In case of running Clipper
+    application it's nothing special to have corrupted database files during
+    copying them without apparent reason. But here is reason, another small
+    trouble of Network Operation system which can be solved by patch...
+
+NCPSPFIX NLM
+  ³ This patch prevents a zero-length WriteToSpool NCP from being processed.
+  ³ This problem has been known to cause an ABEND:GENERAL PROTECTION
+  ÀÄPROCESSOR EXCEPTION and corrupt an entire volume.
+
+    Rare to happend again, but to have corrupted entire volume only because
+    someone was using WriteToSpool (writing to Spool is usual way of working
+    with Spool...)? Install patch, problem is out...
+CLIPBBS 2-14                   Page 5                   28 Jul 1992
+
+
+SPXFIX1  NLM
+  ³ This patch corrects problems for certain applications that may hang due
+  ÀÄto lost ECB's.
+
+    SPX fix, as you may know, IPX/SPX is method of communication used between
+    server and workstation. Even this communication is not errors free. This
+    one is fixing HANGING of applications, who knows if your Clipper program
+    is not the one hanging because of this patch not installed.
+
+SPXFSFIX NLM
+  ³ This patch fixes a problem that results in a file server GPI in the
+  ³ SPXFindSession. This ABEND is known to occur when using Madge "Smart IPX"
+  ³ Token Ring drivers.
+  ³
+  ³ The problem is caused by a connect request SPX packet which arrives at
+  ³ the server without the system bit being set.  This causes the server to
+  ³ look up the session with ID = FFFF (session ID for system packets), but
+  ³ since the system bit isn't set, the server looks in the session table for
+  ³ a client with a corresponding ID.  This causes SPXFindSession to look
+  ÀÄbeyond the end of memory, resulting in a GPI ABEND.
+
+    This is of course only for TokenRing, but it's very often used in our
+    networks. Do we want ABEND of server because of mistake in SPX
+    communication? I have already several application which are using SPX for
+    sending data between programs. That's why i'm loading this patch always.
+
+SYNCTIME NLM
+  ³ This patch forces the server's date/time to be synchronized to the
+  ³ hardware's clock at specified intervals.  These NLM's eliminate the
+  ³ gradual loss of time experienced by the server due to "missed" clock
+  ÀÄticks while the server is in real mode.
+
+    Most from our applications are time related. Because we develop mail,
+    telx and fax gateway, time and date is cruicial element in processing.
+    It's well known that 386/486 servers are running out of time sync (behind
+    in most cases) and that's also why this patch is out. It's taking care of
+    reading time from CMOS clock instead of keeping the one made by BIOS...
+
+TTSFIX   NLM
+  ³ TTSFIX.NLM fixes a bug encountered when certain applications execute
+  ³ explicit TTS, and file locking is also used.  This results in an
+  ÀÄapplication hang at the workstation, and a GPPE ABEND at the file server.
+
+    Playing with TTS and Clipper? It can lead in even crash of complete
+    server. Not because of Clipper, but because of Bug in Novell Netware.
+    Because exetucing explicit TTS and use file locking is nothing unusual in
+    Clipper.
+
+UNKFIX   NLM
+  ³ This patch fixes a problem which was causes an ABEND on a 3.11 FILE
+  ³ SERVER.  This is caused by entering a complete file name of a valid
+  ³ NetWare file at the file server console.  This file may be located on any
+  ³ of the server's search paths.
+  ³
+  ³ FOR EXAMPLE: typing "MONITOR.NLM" at the console instead of "LOAD
+  ³ MONITOR.NLM" will cause the above condition. Typing "MONITOR" without the
+CLIPBBS 2-14                   Page 6                   28 Jul 1992
+
+
+  ÀÄ.NLM extension will not cause the ABEND.
+
+    Nothing bad, just little problem in command parser of console of server.
+    it's also kind of mistake which EVERYONE can make, even maintenance
+    technician can forget to type LOAD for .NLM file and succesfully crash
+    your server during workign hours. Prevent it? Just load this patch.
+
+XMCFIX   NLM
+  ³ This patch corrects a problem with utilities that use the SPX protocol to
+  ³ maintain communication with the server. Typically the client will loose
+  ³ the connection to the server and the following message will be displayed:
+  ³
+  ³ "No more response buffers available"
+  ³
+  ³ The most common occurrence is with a remote printer(RPRINTER.EXE) loosing
+  ³ it's connection to the print server(PSERVER.NLM), but it may happen with
+  ÀÄother utilities.
+
+    This is second most important SPX patch, without it, our SPX related
+    software can work very bad. After loading it? Problem went away...
+
+
+
+That's all from patches which are in interest of CLipper programmers (and in
+generall in programmers of any applications). There are some other patches
+which were not mentioned because of relation to other problems. In case of
+interest, write to me or just get patches and look for yourself.
+
+.DD.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 7                   28 Jul 1992
+
+
+                          Why update IPX/NETX/ODI?
+                                     by
+                               Daniel Docekal
+
+
+Second article related to Clipper/NOVELL or anyway Applications/Novell
+subjects. This time it's going to explain WHY it's very clever to have LATEST
+version of IPX, NETX or ODI programs installed at your workstations.
+
+Few words at beginning. Novell Netware workstation can be based on TWO ways
+of accesing Novell Server. First way is the OLD one which is slowly moved out
+from activity by Novell and it's called IPX/NETX. Second way is DOS ODI
+driver way which is the one having future. In general it looks like this:
+
+    First way           Second way
+
+    IPX.COM                 LSL.COM         This is for hardware
+                            xxxxx.COM
+                            IPXODI.COM
+    NETX.EXE                NETX.EXE        This is for software
+
+IPX.COM is by special program generated (LINKED in reality with Novell own
+linker) program consisting from IPX.OBJ and driver.OBJ which is highly
+related to hardware. EVERY network card _MUST_ have own driver.OBJ which is
+responsible for IPX.OBJ ability to comunicate with hardware. DOS ODI solution
+is going over this LINKING process by releasing driver.COM modules which is
+enough to just start AFTER loading LSL.COM (interface) and before loading
+IPXODI (interface). NETX.EXE is needed in both cases (can be EMSNETX, XMSNETX
+or BNETX). There are of course releases of several versions of IPX.OBJ and
+NETX.EXE (or others as mentioned). Novell Netware distribution floppies
+contain MOST RECENT version at moment of they creation - which is ALWAYS
+_the_ _old_ one at moment of using them.
+
+Why is it so important to use updated drives? For the same reason as is
+important to use Novell Netware Operating System patches. Novell is slowly
+fixing problems discovered in different versions and revisions of Shells
+(that's how all those can be named) and also releases new services required
+by newer software. Typicall example is MS WINDOWS 3.1 which will _NOT_ run
+unless it will have NEW version of IPX.OBJ. Some services used in MS WINDOWS
+Netware engine are not present in older versions of IPX... The same CAN be
+valid about Clipper.
+
+Small history of Novell Netware SHELL files is maybe good, it will be
+extended with Clipper related informations. All problems written together
+with some version of Shell should be take as FIXED in given revision, all
+Clipper possible related are marked with (*) sign:
+
+  5-8-90 3.01 Rev. A    That's where history is starting
+  6-6-90 3.01 Rev. B    Problems with hanging of SiteLock software corrected
+         3.01 Rev. C    NEVER released Shell with those corrections:
+                        - slow performance by using /PS option
+                        - MS Windows directory problems of XMS/EMSNETx
+                        - Print Configuration codes not sent in EMSNETx
+                        - Errors of handling LPT
+                        - Problems with FAKE ROOTs
+                        - XMS/EMSNETx causing hang of 286servers
+CLIPBBS 2-14                   Page 8                   28 Jul 1992
+
+
+  9-7-90 3.01 Rev. D    Public release of Rev. C named as Rev. D
+ 9-18-90 3.01 Rev. D    Problems of #command in login script corrected
+11-27-90 3.01 Rev. E    Dos service "TrueName" is returning WRONG data   (*)
+                        Microsoft Link cannot link large nr. of files    (*)
+                        Error in rename function                         (*)
+                        Errors when using X.25 connection for logout
+                        Remote boot troubles in ELS Netware
+                        Enabled file caching in EMS/XMSNETx              (*)
+ 2-06-91 3.02           File caching problems in XMTNETx                 (*)
+                        Speed of file caching improved                   (*)
+                        Hanging application using EMS/XMS
+                          with EMS/XMSNETX                               (*)
+                        CACHE BUFFERS=0 is now switching caching off     (*)
+                        Truncated output to printer                      (*)
+                        Added DOS NAME and ENVIRONMENT PAD parameters    (*)
+ 7-18-91 3.21           Generic shell NETX.COM is created from NOW
+                        Before it was NET3.COM, NET4.COM, NET5.COM ...
+                        /PS option can cause random machine hangs        (*)
+                        /C option added for NET.CFG file locating        (*)
+                        Added EMS memory handle names support            (*)
+                        Fixed problem denying access to shared file      (*)
+                        Corrected "call 5" functions
+                        Resolved problem of Btrieve corruptions          (*)
+                        Fixed Cache problem with DiskFull error          (*)
+                        Fixed DOS NAME hanging when EMS/XMSNETX used     (*)
+                        LOAD HIGH in DOS 5.0 is working properly now     (*)
+                        ATTRIB was unable find Hidden dir's on network   (*)
+ 7-31-91 3.22           Corrected remote boot in DOS 5.0
+ 2-11-92 3.26        ÚÄ¿Corrected problem with certain database
+                     ³!³applications which issue the commit file command
+                     ³!³the file was NOT properly updated on the file
+                     ÀÄÙserver disk                                      (*)
+                        Corrected DOS NAME problem with EMS/XMSNETX
+                        Corrected garbage characters from CAPTURE.EXE    (*)
+                        Corrected unreseting of COMSPEC after unload     (*)
+                        Corrected network errors when using /PS          (*)
+                        Added check to FILES=x and FILE HANDLES=y not
+                        exceeding 254 in sum (x+y)                       (*)
+
+From this VERY SHORT review of long text file supplied wiht Shell revisions
+(file DOSUPn.ZIP available in NETWIRE/NOVLIB on Compuserver or from Novell
+Authorized dealers and support sites) can give ENOUGH information to thing
+about problems of Clipper application.
+
+IMPORTANT. _ANY_ Shell of version prior to 3.26 can cause improper updates
+for your database files. Therefore it's very important to have LATEST version
+of Shell (at least 3.26 which is latest NOW). In general can be made this
+list of important problems and their relation to Shells:
+
+File destruction            3.26 3.21 3.02
+File handles missing        3.26
+Slow application            3.26
+Printing problems           3.26 3.02 3.01
+Directories/attributes      3.21
+Disk Full problems          3.21
+Refusing file access        3.21 3.01
+CLIPBBS 2-14                   Page 9                   28 Jul 1992
+
+
+Machine hangs               3.21 3.02 3.01
+Network errors              3.26
+
+It's obvious that for example Shell's ov revision prior 3.21 will NOT work
+properly with Clipper and EMSNETX combination because of numerous problems
+with EMS handling and not Name support for EMS.
+
+It's obvious that Shell's of revision prior to 3.26 will make problems for
+Clipper applications using COMMIT commands or dbcommit() functions.
+
+Next question of our issue should be what is better, IPX/NETX or DOS ODI
+combination. From point of view of Novell is answer very simple, Novell is
+NOT making any NEW approvals of IPX versions of drivers for network cards,
+therefore card manufacturers are forced to start using DOS ODI equivalents.
+It's far better to switch to DOSODI than to stay with IPX/NETX because it
+offer more possibilites:
+
+- configuration of DOS ODI is via TEXT file which can be changed in
+  any TEXT editor without need to run WSGEN and LINK new driver (as it is
+  with IPX)
+- four cards in one computer can be handled by ONE DOS-ODI combination
+  and only driver.COM program must be loaded for different cards. Even
+  different methods (IPX/SPX against TCP/IP, or Ethernet against TokenRing)
+  can coexist in one computer, therefore access to MORE network with
+  different method of connection can be made
+- ALL programs from DOS ODI set can be LOADED and UNLOADED, therefore
+  freeing of memory of computer of configuration change can be done WITHOUT
+  rebooting computer.
+- DOS ODI programs can be loaded high without troubles (not always true about
+  IPX.COM)
+- udpating of all programs is very easy, just copy new .COM file over, there
+  is no need for generating new IPX.COM with special linker and floppies
+- no need for separated IPX.COM for EVERY different configuration possibility
+  of network card, all is written in NET.CFG configuration file
+- nearly impossible configuration combination in IPX are available in .COM
+  driver of DOS ODI. Even unsupported IRQ numbers are available for let say
+  NE2000 compatible card which is allowing IRQ10 till IRQ15 to use.
+
+There is NOT any difference between functionality of computer with IPX and
+computer with LSL/driver/IPXODI. Speed is the same and from personal
+experience are DOS ODI drivers less hardware dependent and are more nice for
+all other drivers in your system.
+
+Latest questions should be related to EMSNETX, XMSNETX, NETX or BNETX. Those
+are four special versions of Shell for Novell Netware. First three are one of
+kind and last one is different special.
+
+EMSNETX, XMSNETX and NETX are standard Netware Shell programs which are
+allowing access of server services and resources after loading IPX or DOS ODI
+files. Difference between them is only little:
+
+EMSNETX is loading part of itself in EMS PAGE FRAME and therefore is using
+        less from conventional memory. There can be problem with Clipper
+        which is linked by BLINKER because Caching/Overlaying mechanism
+        of Clipper and PAGE FRAME ON option of Blinker will cause problem.
+        It's something reported by Blinker Inc. company, but it's still
+CLIPBBS 2-14                   Page 10                  28 Jul 1992
+
+
+        somethign that i cannot say it's fully true. I have PAGE FRAME ON
+        in my BLINKER 1.51 script and if i boot with EMSNETX everything
+        works fine as with BNETX or NETX. But it can be system dependent,
+        EMS driver dependent (QEMM in my case) or anything.
+
+XMSNETX is loading part of itself in available XMS memory and therefore is
+        using less from conventional memory. It _cannot_ be used in DOS 5.0
+        when DOS=HIGH is used, therefore it's out of importance in DOS 5.0
+        beause is better to have DOS=HIGH than XMSNETx (memory saving is
+        bigger for DOS=HIGH).
+
+    Both EMS/XMSNETX are of course SLOWER then standard NETX and CAN be
+    cause of ANY problems, therefore if looking for troubles with workstation
+    first try to NOT load EMSNETX nor XMSNETX
+
+NETX    is just standard Shell loading itself into conventional memory.
+        Nothing more to tell because nothign more needed to know. Can be
+        loaded high without any problems (slowing thing down a bit, but
+        can save some 50KB of memory or so).
+
+BNETX is another chapter. Nearly ago Netware started using Burst Mode Shell
+as decsription for Shell which can (when needed) request BIGGER data block
+through network. Bigger than standard given by Network protocol. It can of
+course help in case of COPYing or MOVing _big_ files because overhead of
+network protocol can be minimized. BNETX is of course using MORE memory for
+additional buffers required to store those BIG packets, but can make
+communication faster for 30% in LAN and even 300% in WAN (in very good case,
+because overhead there is very high and transfer speed slow). BNETX is
+released ONLY as conventional memory Shell because issue here is SPEED and
+EMS/XMS versions are REALLY slower. I'm succesfully loading it HIGH and it's
+still faster (for about 10%) in our office LAN but i cannot recommend use it
+on workstations for serious use, our experiences are that workstations can
+hang when BNETX is used and Clipper applications are used. Also Workstations
+can hang in other software, therefore it's not something to blame on Clipper,
+rather to blame NetWare for not yet very tested software. But it's terrible
+new and nobody has experiences with it yet on veyr high level.
+
+Therefore final recommendation?
+
+1) Use _ALWAYS_ latest versions of IPX.OBJ and NETX.COM
+2) Use DOS ODI, it's easier and more following Novell
+3) Use NETX.COM and load it high if wanted memory saving
+
+.DD.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 11                  28 Jul 1992
+
+
+                     Hitch Hikers Guide To The Net
+           Episode 11 - Life, The Net, and Everything Part 1
+
+ (Xaphod, Rod, Gillian, and Arnold Lint have just received the 'Video
+ Testament' - a scripture said to contain the answer to Life, the Net, and
+ Everything.)
+
+ Rod:           Well, go on, read it.
+ Arnold Lint:   Do you think we should?
+ Xaphod:        Yah, why not.
+ Martin:        I can think of a few reasons.
+ Gillian:       Quiet, we're going to find out what it all means. Aren't you
+                the least bit excited.
+
+ Martin:        (droning sarcastically) Oh yes, I can hardly contain myself.
+ Xaphod:        Never mind him, lets read this amazingly amazing book.
+
+ (They open the book and it speaks to them.)
+
+ Book:   Hark, who goest there.
+ Rod:    Uh, who are you?
+ Book:   I . . . am the Video Testament. The compendium of all knowledge and
+         smart stuff from the mythical age of Kubla Konthemasus.  You may
+         call me . . . Ralph.
+
+ [*****************************************************************************
+ "The Hitch Hikers Guide To The Net" has this to say about the mythical ruler
+ Kubla Konthemasus: He was reported to be from Austria or Germany. He was
+ supposed to be short and have a funny little mustache. He was supposed to
+ have died in 1945 and then be reborn in Argentina. His followers looked upon
+ him as a sort of Messiah, who would lead them to the land of Silk and Money.
+ All of this is, of course, purely hypothetical; as were Konthemasus' friends
+ Herman (Hermie) McGoering, and Crazy Joe Stalinson.
+ *****************************************************************************]
+
+ Xaphod:        Ralph?
+ Ralph:         Well, what do you expect?
+ Rod:           Well, not Ralph.
+ Gillian:       Can you tell us . . .
+ Ralph:         The answer to Life, the Net, and Everything.
+ Gillian:       . . . why yes.
+ Arnold Lint:   That's amazing.
+ Xaphod:        To you it would be.
+ Rod:           Tell us what it all means.
+ Ralph:         You won't like it.
+ Martin:        That's no surprise.
+ Xaphod:        Just ignore him.
+ Ralph:         Well, it all began sometime in the 1950's. A group of very
+                wealthy and powerful men assembled in Argentina under the
+                guidance of a man calling himself Kubla Konthemasus. This
+                group of magnates were from various political affiliations -
+                Nazis, Communists, Capitalists, and Urologists. They all
+                liked money and wanted to rule the world.  They also realized
+                that TV was going to be the tool that would give them the
+                leverage they needed.
+
+CLIPBBS 2-14                   Page 12                  28 Jul 1992
+
+
+ Xaphod:        I don't like the way this is starting to sound.
+ Rod:           Me neither.
+ Ralph:         I warned you.
+ Martin:        You should have listened  to him.
+ Arnold Lint:   Go on.
+ Ralph:         Well, they began to infiltrate the TV industry. Soon they not
+                only owned huge percentages of each network, but had also
+                emplaced their own people into many of the creative positions
+                at each network.  Then they began to manipulate things. They
+                decided to cast the world in an image that they could easily
+                control. So each little kid on TV was either predictably (and
+                sickeningly) nice and helpful, or predictably always getting
+                into trouble. Women were either predictably aggressive or
+                predictably obtuse. You see, they set up patterns of behavior
+                that they could count on. Once they could predict and control
+                how the public would react to something, they could do
+                whatever they wanted. Whenever they wanted to do something
+                really tricky (like when they took over the Mid-East oil
+                fields in the late 70's and early 80's) they made sure to get
+                the country thinking their way before hand with a massive TV
+                bombardment. If it was a topic that they knew nobody would go
+                for no matter how they publicized it, they flooded the
+                airways with those sickening human emotion type TV-movies.
+                Things like "Plight of the Forgotten Children" or "Why is
+                Daddy always angry?". The kind of stuff that makes you want
+                to blow lunch.
+
+ Rod:           Wow, that's amazing.
+ Xaphod:        Yah.
+ Ralph:         Their greatest triumph was getting a president elected. Their
+                plan was simple. They made sure that the east coast was for
+                their candidate, leaving the west coast alone. Then, on
+                election day, the TV 'predictions' claimed their candidate to
+                be a sure winner. Due to the time difference, all the people
+                on the west coast thought the election was over anyway and
+                didn't even bother to vote.
+
+ Xaphod:        Wow, imagine getting a president elected by manipulating the
+                media.
+ Ralph:         And guess what . . . he was an actor
+ Gillian:       What a coincidence.
+ Rod:           Yah, imagine that.
+ Martin:        Doesn't surprise me . . . I expect such things from humans.
+ Arnold Lint:   But what does all this have to do with the Net?
+ Gillian:       Yah, controlling TV is great but most people in the Net are
+                far too dedicated to their work to partake of anything as
+                tacky as TV. We're all thoroughly dedicated professionals.
+
+
+ (If it were possible for an android to suppress a burst of uncontrollable
+ laughter, that is what Martin could now be described as doing.)
+
+ Rod:    Yah what about the Net|?
+ Ralph:  Well . . .
+
+                 ******************** End Of Part 11 ********************
+CLIPBBS 2-14                   Page 13                  28 Jul 1992
+
+
+ What are the interests of this Neo-Nazi-Communist-Capitalist organization in
+ the Net? The answer will surprise you - unless you're a great stupid twit.
+ To find out more  . . . Tune in next time . . .  same Net-time . . . same
+ Net-channel.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 14                  28 Jul 1992
+
+
+===============================================================================
+                                   ANOMALIES
+===============================================================================
+
+
+                     ANOMALIES and their comments
+
+This part of Clipper BBS Magazine is dedicated to all discovered 
+anomalies and comments about them in Clipper products. Because 
+Nantucket is still unable to give own bug and anomalies reports (as 
+actually did in past with Summer 87 version) is very handy to have 
+results of many investigations done on many user places. I'm also
+doing my own investigatings, because i'm always very good when someting 
+has hidden problems. Everything what i buy will first show all problems 
+and then all normal things. This amazing part of my live is sometime 
+making me crazy, but for testing of programs it's great <grin>.
+
+Daniel
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 15                  28 Jul 1992
+
+
+===============================================================================
+                                  CLIPPER NET
+===============================================================================
+
+
+
+Following is COMPLETE list of all published file descriptions in Clipper
+BBS magazine in previous numbers. Purpose of this index list is to allow
+anybody find needed file descriptions in growing number of described files.
+Short description after name will give first possible close image about
+file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+³FileName     ³Src ³Description                                     ³Where ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper (-->Clipper !!)   ³[1-19]³
+³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+CLIPBBS 2-14                   Page 16                  28 Jul 1992
+
+
+³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+
+Src can be:
+    Cln     File is accesible on ClipperNet
+    Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 17                  28 Jul 1992
+
+
+===============================================================================
+                                    CLIPBBS
+===============================================================================
+
+
+                             CLIPBBS Distribution
+
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can make a profit from the
+  distribution of this magazine.
+
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest).
+
+  If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+
+  A BIG NEWS is that also Compuserve messages are welcome:
+
+     Daniel Docekal,  100064,2343
+
+  Distribution sites:
+
+  Clipper BBS Home system  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+      Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+      Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+      2:285/608@fidonet.org
+
+  United Kingdom   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+      Daily whole day, modem speed HST
+
+  Italy   ³
+  ÄÄÄÄÄÄÄÄÙ
+      Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+      20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+      24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+      2:334/307@fidonet.org
+
+  United States of America  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+      Daily whole day, modem speed HST
+
+      The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+      Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+
+  Canada    ³
+CLIPBBS 2-14                   Page 18                  28 Jul 1992
+
+
+  ÄÄÄÄÄÄÄÄÄÄÙ
+      SYSOP Gordon Kennet, phone 1-604-599-4451 
+      Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+
+  WORLDWIDE   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+      Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+      Various systems around whole world
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-14                   Page 19                  28 Jul 1992
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Submission of articles to CLIPBBS is really easy:
+    Maximum of 78 characters per line, as long or as short as you like
+    ASCII text.
+    Choose from the list of extension which most describes your text, or
+    just name it .ART as ARTicle and send it to publisher or to any
+    distribution site via modem to BBS or with mailer as file attach.
+    Article will come automatically appear in the next free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          ANOMALIES and their comments    .ANO
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          DUMP from conferences           .DMP
+          Clipper Net                     .CLN
+          
+  That's all at the moment, there will probably be changes later, as the
+  magazine evolves. If you have any ideas for a new section of CLIPBBS,
+  please tell us, or just write an article about it.
+  
+  Daniel, publisher
+
+-------------------------------------------------------------------------------
+

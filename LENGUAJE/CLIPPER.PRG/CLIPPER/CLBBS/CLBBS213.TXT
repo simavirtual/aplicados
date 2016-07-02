@@ -1,0 +1,1359 @@
+
+
+        °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+      °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+      °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+      °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+  Volume 2, Number 13                                       28 June 1992
+
+                 (c) Daniel Do‡ekal, All Rights Reserved
+
+     The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+
+     Some of the material used comes from scanning CLIPPER echoes
+     which are carried in various BBS throughout the World.
+     These Echoes are very often the source of the most often asked
+     Questions and Answers about Clipper.
+
+     Other material, which is fully signed or abbreviated is the
+     copyright of the appropriate persons.
+
+     The publisher is not responsible for other authors submissions....
+     Published material is not necessarily the opinion of the publisher.
+
+     Redaction:
+        Publisher...................................Daniel Docekal
+        Chief editor ...............................Daniel Docekal
+        Language editor .................................Dave Wall
+
+
+
+                               Table of Contents
+
+1. ARTICLES  ...............................................................  1
+   Hitch Hikers Guide To The Net (10)  .....................................  1
+   Magic of SET DELETED  ...................................................  4
+   How do we.... (2)  ......................................................  5
+   How to detect available file handles?  .................................. 10
+   Starters corner (4)  .................................................... 12
+   How to read DOS serial number?  ......................................... 16
+2. SOFTWARE  ............................................................... 17
+   What is what (4)  ....................................................... 17
+3. Q&A  .................................................................... 20
+   What's address of Pinnacle Publishing?  ................................. 20
+   Q&A:What to do in Windows for open more than 10 files?  ................. 20
+   Q&A:How to send mail to Internet from FidoNet?  ......................... 20
+4. ANOMALIES  .............................................................. 22
+   ANOMALIES reports and commets  .......................................... 22
+   //STDERR another undocumented switch!  .................................. 22
+5. CLIPPER NET  ............................................................ 23
+   Index of described files in Clipper BBS Magazine  ....................... 23
+6. CLIPBBS  ................................................................ 25
+CLIPBBS 2-13       Table of Contents (...)        28 Jun 1992
+
+
+   CLIPBBS distribution  ................................................... 25
+   CLIPBBS, how to write an article!!!  .................................... 27
+
+                                   - - - - -
+CLIPBBS 2-13                   Page 1                   28 Jun 1992
+
+
+===============================================================================
+                                   ARTICLES
+===============================================================================
+
+
+                    Hitch Hikers Guide To The Net
+                             Episode 10
+
+ (Xaphod, Rod, Gillian, and Marvin are still on their way to find out more
+ about Life, the Net, and Everything. From off in the distance they hear a
+ hollow roar punctuated by gunfire. Before they have a chance to grasp the
+ situation, a huge battle tank screeches to a halt in front of them. It is
+ a fearsome device with great nasty teeth painted on it. The cannon looks
+ as if it could punch a hole through a small planet. A hatch opens and a
+ rightly uniformed man steps out, crushing a passing cat under his boot.)
+
+ Cat        : (splat)
+ Rod        : Wh . . . who are you?
+ Roarin' George: I'm General Roarin' George Pahton. I heard there was
+         some Singularans around here. Thought I'd do some American style
+         joggering.
+ Xaphod     : Oh yeah, they went that a way.
+ Arnold Lint: Why does everyone pick on the Singularans? They only seek
+              meaningful personal relationships with people they find
+              special.
+
+ Roarin' George: Right, that's it, we're gonna have some order around
+         here. No more of these damn cliches. From here on out, the following
+         rules will apply: Anyone who uses the phrases 'special', 'personal
+         relationship', or 'meaningful relationship' WILL be fined twenty
+         dollars for the first offense. Subsequent offenders will have their
+         genitalia removed with a sharp rock. Anyone who corrects the spelling
+         of another, WILL be fined 100 dollars. I won't stand for any
+         namby-pamby intellectuals checking spelling when there's so much to
+         do. Anyone caught agreeing with anything an oppositely gendered
+         personnel says in an obvious attempt to make points, WILL have both
+         kneecaps shattered with a ball-pean hammer. Likewise, anyone saying
+         things which are right out of soap operas with the intentions
+         mentioned above WILL also have his (or her) kneecaps shattered with a
+         ball-pean hammer. Remember, this is the NET, it's tough out there.
+         Keep your emotions to yourself, do you want a bunch of commies to
+         read that gooey crap? Why they'll think we're wimps, then they'll
+         invade. They've started infiltrating already - ever been to one of
+         the dating service places? They're all commies, draining away our
+         precious bodily fluids. Now, get back to work|
+
+ (With that, he climbs back into the tank and drives off, casually blowing
+ a 4 foot hole in a nearby wall. Just then, the 12" CRT on Xaphod's
+ shoulder springs to life. On it is a man in a white suit with a bible in
+ one hand and a microphone in the other. He speaks:  "Friends. Why are we
+ here today? We are here to hear the words - (Amen) - to hear the holy
+ words from the Holy Box - (Amen). Oh blessed be the Holy Box, and it's
+ disciples: Prophet Ronko, Prophet K-Dul, and the Prophet Popeel - (Amen
+ Amen Amen). Yes, they lead is to immaculate spending. We here at the
+ Church of the Divine Vision believe in Johnny and Merv and Mike. TV is the
+ reflection of life, and life is a reflection of reality, therefore TV IS
+CLIPBBS 2-13                   Page 2                   28 Jun 1992
+
+
+ REALITY.  Yes, Mrs Olson may be a Nazi, but if you buy Foljers, you can
+ bake just like her. And Robert Yung may have multiple personalities and a
+ penchant for farm animals, but if you drink his coffee, you can remain
+ calm in the midst of a nuclear explosion . . . ")
+
+ Rod        : Shut that OFF.
+ Xaphod     : Bloody religious fanatics.
+ Arnold Lint: What an odd religion, worshiping a TV, seems hard to
+              believe.
+ Martin:      Not really, just another awful attempt to deal with this
+              miserable Net. It's all a cop out. You can't understand
+              something so you pretend that there is something else in
+              control. It's all rubbish.
+ Gillian    : Quiet. Of course there's a supreme being.
+ Martin     : If you say so, but if God didn't already exist, he would have
+              to be invented.
+ Rod        : It's hopeless talking to him.
+
+ [*****************************************************************************
+ "The Hitch Hikers Guide To The Net" indicates that the members of the
+ Church of the Divine Vision are basically agnostics. They prefer to
+ believe what they see on the tube to what some half starved people wrote
+ about over 2000 years ago. They can't meet God, but if the TV gives them
+ trouble, they can always replace it. Their belief led to the writing of
+ the Video Testament, which is the gospel for all believers in the Holy
+ Box. Although it seems unlikely, the Church of the Divine Vision was
+ supposed to have formed some amazing concepts as to how the Net exists.
+ *****************************************************************************]
+
+ Gillian    : Let's go.
+ Martin     : Do we have to?
+
+ (They all ignore Martin and press on. Two days later they arrive at their
+ destination. In front of them is a rather bug-eyed looking lizard.)
+
+ Xaphod     : Hey man, are you the one with the dope on Life, the Net, and
+              Everything.
+ Lizard     : Yes, I am Teddy the Wonder Lizard. I know all there is to
+              know about Life, the Net, and Everything.
+ Rod        : Well, tell us|
+ Gillian    : Please do|
+ Teddy      : You won't like it.
+ Martin     : (sarcastically) Now that's a real surprise.
+ Teddy      : Are you sure you want to know?
+ Arnold Lint: Yes, what is it, got to more than forty-bloody-two.
+ Teddy      : Yes, that was the answer we told the Net. We figured that the
+              real answer was so awful, they'd rather get something vague
+              and argue about it forever.
+ Xaphod     : Well, out with it.
+ Teddy      : It's all here, in the Video Testament|
+
+ (He hands Xaphod an old looking book, pops about a dozen valiums, and then
+ switches on a nearby TV set. He is watching 'Real People'.)
+
+ Xaphod     : Well, that should finish him off.
+ Arnold Lint: The drugs?
+CLIPBBS 2-13                   Page 3                   28 Jun 1992
+
+
+ Rod        : No, 'Real People', lowers the IQ so much that the brain just
+              packs it in and you die.
+ Gillian    : Find the answer already|
+ Xaphod     : Okay, now lets see . . .
+
+                 ******************** End Of Part 10 ********************
+
+ What is the answer to Life, the Net, and Everything? Why are we here?  Are
+ we here? And why is it that vampires never attack Jewish neighborhoods?
+ For the answers to some of these questions . . . Tune in next time . . .
+ same Net-time . . . same Net-channel.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 4                   28 Jun 1992
+
+
+							Magic of SET DELETED?
+
+1)  SET DELETED ON
+    USE DATABASE      // 20s+ to open
+
+2)  SET DELETED OFF
+    USE DATABASE      // 0.39s to open
+
+  Tests have been performed on 16Mhz AT.
+
+  SET DELETED ON behaves like SET FILTER TO. My theory is that when opening
+  file, CLipper is trying to find first record in database and is ending up
+  processing a whole file !! What is going to happen with 40,000 records ! :-)
+
+  My routine to save invoices took 30s+ and more as file grew with deleted
+  records.
+
+  I have just used magic statement SET DELETED OFF and saving took only 4s.
+
+  Was fighting with this little bugger for days and was blaming everything
+  on VMM but SET DELETED ON was the culprit.
+
+  Good to know that there is a catch with SET DELETED ON !
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 5                   28 Jun 1992
+
+
+                               Ronald Offerman
+                                How do we ...
+                     How do we do it and what do we use
+
+                           Working environment ...
+
+'Late(st) news'___________________________________________________________
+  Now is the time to... get Clipper for Windows, fast!
+  After having installed Windows 3.1 and seeing it zip by on my system
+  I think it's time for Nantucket to release a Windows version of Clipper
+  fast. The Windows environment now looks fast enough to use it for both
+  a serious programming environment and fast Windows database applications.
+  Please remember that I'm also into Database Publishing and the use of
+  OLE and DDE is very interesting when doing this. Of course the question
+  remains if this Aspen project (the 'official' codename for the Windows
+  version) is allowed to be finished now CA has taken over.
+
+'REAL Latest news'________________________________________________________
+  Have just received CA Statement of direction. Aspen is going to be the
+  end goal for Clipper and dbFast. Beta release dates were stated for
+  Clipper 5.2 and Aspen. Final delivery dates however were nowhere to be
+  found. If you read it you'll find something peculiar. Clipper 5.2
+  WON'T be the fully object oriented Clipper. This will be versie 5.X.
+  If however beta tests for 5.2 and Aspen will be ready before the end
+  of this year but no 5.X this means Aspen will be released before 5.X.
+  Aspen looks and sounds GREAT!! But can they deliver, w'll have to wait
+  and see. 'Seeing is believing'
+
+'Working environment'_____________________________________________________
+I promised, so lets begin.
+I use two approaches in what you might call the 'programming enviroment'.
+I.  Based in each 'root' directory for a project is a controlling Norton
+    Commander menu (NC.MNU) containing options to start the editor,
+    compile, start the program with or without the debugger
+II. Working in 'plain' DOS I use Brief's state restore and the dBrief
+    application dictionary to edit the source; in addition each 'root'
+    directory contains 3 batch files: MK.BAT ; make application using
+    PLL's (there is a MKP.BAT MaKePlain to make the final version
+    without using PLL's) DB.BAT ; debug application GO.BAT ; run
+    application without the debugger
+
+    This provides me with 2 letter commands for all 'environment
+    functions' The Norton Menu actually calls the same batch files but
+    also contains options to backup, print, copy the source.
+
+  Currently I occasionly try using Windows 3.1 as a multitasking
+  enviroment. Each part of the proces is in a separate window and using
+  a virtual desktop (provided by the PD BigDesk) is works fine.
+  Advantage is you can kill a runaway application without rebooting the
+  complete system and you can monitor output while it is being
+  generated.
+
+  In the past I tried using DesqView but I like to have several complete
+  (eg. 80x25) windows on DOS. This proved to be quit impossible. Even
+  with the A3 screen in 50x132 mode I can't fit 2 complete DOS windows
+  on screen.
+CLIPBBS 2-13                   Page 6                   28 Jun 1992
+
+
+MK.BAT   this batch file calls either Dmake or Rmake with the
+         appropriate make file with parameters like DEBUG or USEPLL.
+         There is ONE make file to make both the final and debug
+         versions with the option of using a PLL.
+
+DB.BAT   Only difference between these two is that DB.BAT loads CLD.
+GO.BAT   I never have a problem passing parameters because the are
+         either automaticly read from a default ASCII parameter file or
+         a single parameter is passed being the name of a different
+         parameter file to be used.
+
+         I think in most cases it's better to provide a file for the
+         parameters most important reason being bypassing the DOS
+         commandline limit.
+
+         Do not however confuse the parameter file with something like a
+         configuration file containing all kinds of values used in the
+         program. I always store 'configuration' values in a
+         multidimensional array which is written to disk from within the
+         program and can't be edited with ASCII editors.
+
+  Next time I'll let you have a closer look at the Make files and
+  directory structures used for the projects.
+
+'SIDELINE'________________________________________________________
+S   Telemate is a superb Telecomm program using multithreading    S
+I   so you can have the modem dialing while you view a log file   I
+D   at the same time copy interesting things to an other file     D
+E   while you reconfigure part of the program while you jump to   E
+L   a dos window for a simple command to view a compressed file.  L
+I   You actualy can have a Backscroll, Edit, View and Dos window  I
+N   active at the same time even when the modem is dialling or    N
+E   maybe more important, when you are downloading. It's GREAT!!  E
+
+'Programming'_____________________________________________________________
+Ok, this is a new subsection I hope will appear in each article. It will
+discuss programming problems and solutions I found; when needed I will
+also show the development path it took to get to the current solution
+I'm using. Remember I think of anything I have to program as a problem
+to solve.
+
+  Menuing in Clipper
+  ------------------
+  Development path (in SEMI PSEUDO code so errorprone!! and sometimes
+  shorthand or 5.01-like code for '87)
+  (Started in Clipper '87)
+      @ 1,1 prompt "Search" Message "Search for a record"
+      @ 2,1 prompt "Add" Message "Add a record"
+      @ 3,1 prompt "Delete" Message "Delete a record"
+      @ 4,1 prompt "Quit" Message "Quit program"
+      menu to x
+      do case
+      ...
+      endcase
+    __Disadvantage: Fixed menu; insert, move and delete options is difficult
+                    and clumsy
+CLIPBBS 2-13                   Page 7                   28 Jun 1992
+
+
+    Refinement:
+      x = 1
+      y = 1
+      @ x,y prompt "Search" Message "Search for a record"
+      x=x+1
+      @ x,y prompt "Add" Message "Add a record"
+      x=x+1
+      @ x,y prompt "Delete" Message "Delete a record"
+      x=x+1
+      @ x,y prompt "Quit" Message "Quit program"
+      menu to x
+      do case
+         case x == 1
+            ....
+         case x == 2
+            ....
+      endcase
+    __Advantage: easy move of menu options
+    __Disadvantage: do case has to be update with each modification
+
+    Refinement:
+      DisplayMnu( Main, 1, 2, 4 )
+      // param: Menu_ID, start x, start y, increment
+      menu to x
+      ExecMnu( Main, x )
+      // param: Menu_ID, menu option
+
+      function DisplayMnu( menu_id, x, y, z )
+      do case
+         case menu_id == main
+            @ x,y prompt "Search" Message "Search for a record"
+            x := x + z
+            @ x,y prompt "Add" Message "Add a record"
+            x := x + z
+            @ x,y prompt "Delete" Message "Delete a record"
+            x := x + z
+            @ x,y prompt "Quit" Message "Quit program"
+         case menu_id == search
+            ...
+      endcase
+      return (.t.)
+
+      function ExecMnu( menu_id, option )
+      do case
+         case ( menu_id == main ) .and. ( option == 1 ) // Search
+            ...
+         case ( menu_id == main ) .and. ( option == 2 ) // Add
+            ...
+            ...
+         case ( menu_id == search ) .and. ( option == 1 ) // ...
+            ...
+      endcase
+      return (.t.)
+    __Advantage: got rid of do case in main program; menu configuration
+                 is easy
+    __Disadvantage: do case (ExecMnu) has to be update with each
+CLIPBBS 2-13                   Page 8                   28 Jun 1992
+
+
+                    modification
+
+    Refinement:
+      Public aArr1, aArr2, aArr3
+      MnuConfig( main )
+      nChoice := aChoice( aArr1, aArr2 )
+      DO &aArr3[]nChoice]
+
+      function MnuConfig( menu_id )
+      // in super shorthand '87 code
+      do case
+         case ( menu_id == main )
+            aArr1 := { "Search", "Add", "Delete", "Quit"}
+            aArr2 := { .t.,      .t.,    .f.       .t.}
+            aArr3 ;= { "FncSrch",  "FncAdd", "FncDel", "FncExit"}
+         case ( menu_id == search )
+            ...
+      endcase
+      return ( aArr )
+    __Advantage: enabling/disabling options through parallel array and
+                 security can easily be added because w're using aChoice
+   __ Disadvantage?: using macro compiler
+
+    (Clipper 5.01)
+    Refinement:
+      aArr := MnuConfig( main )
+      nChoice := aChoice( aArr[ OPTIONS ] )
+      ExecMnu( main, aArr[ CODEBLOCKS, nChoice ] )
+
+      MnuConfig returns a multidimensional array
+      assignment example: aArr[1] := { "Search", .t., { || FncSrch } }
+
+    __Advantage: uses multidimensional arrays uses codeblocks instead of
+      macro compiler strings so parameter passing to functions is easy
+      Disadvantage: ?
+
+    Refinement:
+      ExecMnu() uses constants defined in .ch and a codeblock array
+      Advantage: no macro compiler needed
+
+  Current: using omenu (it's free and "easy" to modify) and execmnu with
+  predefined constants; menu defined external in datafile Advantage: no
+  recompile needed when reconfiguring with existing functions
+
+I hope my menuing adventures are to your advantage; I'd like to repeat
+that the above code is SUPER SEMI PSUEDO!! Hope this item will be
+shorter too in the next article!
+
+'By the way...'___________________________________________________________
+  Something About Norton Guides
+  'Peter (Norton) when will we get an update for the guides that like
+  Tom Rettig's Help uses XMS/EMS, pastes a template/example into the
+  source, has categories? Don't tell us Dos is dead and w'll have to
+  move to Windows to get advanced (programmers) help.' I.D. Use
+  Desqview/Windows multitasking to copy/paste NG text into source!
+  It's a temporary be workable solution using Win 3.1
+CLIPBBS 2-13                   Page 9                   28 Jun 1992
+
+
+--------------------------------------------------------------------------
+  NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET
+
+  'C-style complex Case'
+  Although you might think that the Clipper Do Case statement can
+  only execute ONE of the cases, this isn't entirely TRUE.
+  The keyword is TRUE. Case expects a statement the either is True or
+  False, SO
+  Do Case
+     Case AnyFunc()
+     ...
+     Case OtherFunc()
+     ...
+     Case x == y
+     ...
+  end
+  The function AnyFunc() will be first executed. This function should
+  either return TRUE in which case the Do Case will end or return FALSE
+  in which case OtherFunc() will be executed that should either return
+  TRUE or FALSE and so on.
+
+  The functions AnyFunc() and OtherFunc() can actually execute something
+  and depending on the result end the Do Case or have it continuing
+  execution. This provides you with a Semi C-style 'case' in which you
+  have to actualy 'break' form the case to end it. Using Do Case this
+  way has enormous potential. Try it and think about ways to have Do
+  Case work for you!
+
+Credits to whom credits are due
+The idea came from Matt Whelan at a Clipper Seminar. He used it in
+a different way, but he did initiate the idea.
+
+  NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET NUGGET
+--------------------------------------------------------------------------
+'Next Nugget'
+  Dos Nugget? 'Novell-style' path
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 10                  28 Jun 1992
+
+
+                    How to detect available file handles?
+                           originally by Jim Lynch
+
+ What's a problem? One, how to get knowledge of REALLY available FILE HANDLES
+ for your CLIPPER program. How to do it?
+
+ I prefer this solution. You could FREAD() the config.sys, but end up fooled
+ by systems (such as mine) that have a minimum FILES= in config.sys, and the
+ rest loaded high in AUTOEXEC. Or on a network, you could have a big FILES=
+ in config.sys, but be limited by NetWare SHELL.CFG......
+
+ Heres my function to report available handles. Comes in handy when you're
+ developing, you can run it from the debugger and see how many handles you
+ have left.
+
+
+*---------------------------------------------------------------------*
+*                                                                     *
+* Function:   Handles_()                                              *
+*                                                                     *
+* Purpose:    To determine the number of available file handles.      *
+*                                                                     *
+* Syntax:     Handles_()                                              *
+*                                                                     *
+* Returns:    A numeric integer equal to the number of AVAILABLE      *
+*             file handles.                                           *
+*                                                                     *
+* Usage:      Useful for a startup routine to determine if there is   *
+*             enough file handles to run the application.             *
+*                                                                     *
+* Example:    if Handles_() < 15                                      *
+*                 ? "Sorry, Not enough FILE HANDLES"                  *
+*                 quit                                                *
+*             endif                                                   *
+*                                                                     *
+*             Remember that DOS uses the first 5 handles for itself.  *
+*             On a system booted with a FILES=20 in CONFIG.SYS,       *
+*             Handles_() will return 15 assuming the application      *
+*             has not opened any files.                               *
+*                                                                     *
+* Note:       A temporary file F???????.$$$ is created and repeatedly *
+*             opened to get the  number of available handles.         *
+*                                                                     *
+*             NUL was *not* used, because on Novell Netware, NUL is   *
+*             a local file, and therefore does not use up a           *
+*             SHELL.CFG handle when it is opened.                     *
+*---------------------------------------------------------------------*
+function Handles_
+private x,y,z,h,random,tempfile
+
+do while .t.
+    random   = lpad0_(right(strtran(str(seconds()),".",""),7),7)
+    tempfile = "F"+m->random+"$$$"
+    if ! file(m->tempfile)
+        exit
+    endif
+CLIPBBS 2-13                   Page 11                  28 Jun 1992
+
+
+enddo
+
+z = fcreate(m->tempfile)
+if m->z < 0
+    return 0
+endif
+
+h = 1        && counter of handles opened
+x = m->z     && save highest handle we opened
+
+do while .t.
+    y = fopen(m->tempfile)
+    if ferror() != 0
+        exit
+    endif
+    x = m->y        && save the highest handle we opened
+    h = m->h+1      && increment the count of opened handles
+enddo
+
+&& close all the handles we opened,
+&& starting with the highest, working
+&& down to the lowest
+
+if m->h = 1
+    fclose(m->x)
+else
+    for y = m->x to m->z step -1
+        fclose(m->y)
+    next
+endif
+
+erase (m->tempfile)
+return m->h
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 12                  28 Jun 1992
+
+
+                             Starters corner (4)
+                                     by
+                                  Paul Ket
+
+Last time we left with a brand new way of storing the data in the files.  We
+created the Thirdtry.dbf. It consisted of three files. Two containing the
+real data, one is used as a reference to look-up words. In this episode we
+look at the meganisms behind our program. Now the real fun starts!
+
+Last time i've made a nasty mistake: i've forgotten to include a full
+description of THIRDTRY.DBF. Sorry about that. Complains can be send to the
+editor :-> . It is contained in the addendum of this episode.
+
+I also promised to take a closer look at the files. That can wait till an
+other time. Now is the time for the creative part of programming!
+
+What do we want?
+----------------
+First we have to ask ourselves what we actually want our program to do.
+Think about this at "grass-root" level. We want the program to start and
+present us the contents of de files. On the screen to be precise.
+
+Besides that we want to browse and to look up things. At the end we also want
+to make a hardcopy of the recipe. After that we sign off and go off to the
+kitchen.
+
+What does the intended user want?
+----------------------------------
+What we want is important. But not as important as the wishes of the user.
+Remember episode 1, in which we stated that this project was also intended to
+pay in our debt to Mum. She agreed on buying a computer with the demand for a
+good program for her recipes(A). In jargon: a novice user. Somebody who
+doesn't want to learn about fields and records. Doesn't want to spent the
+leisuretime at the keyboard. So: simplicity, clarity and easy to use are
+major demands.
+
+These demands are important because by our design with all those files we've
+created a great opportunity for making things complex. Let's not do that!
+
+Basics
+------
+To have something to show to anyone else, it's nice to start with the design
+of the screen. We've waited with that to make a good design for our
+datafiles, but now the time has come to do so (B)!
+
+Designing the screen
+--------------------
+We start desinging with a few questions.
+
+First: what has to be present on the screen?
+Three categories of information can be present:
+
+(1) Data
+The real data:
+     - the name of the recipe
+     - the ingredients
+CLIPBBS 2-13                   Page 13                  28 Jun 1992
+
+
+     - the presription how to prepare it.
+
+(2) Extra info
+Things commonly seen, handy, but no complaints if you leave them out:
+     - time
+     - date
+     - filepath
+     - number of the recipe
+     - number of ingredients
+
+ ÚÄþINTERMEZZOþÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³Altering the database structure                                     ³
+ ³-------------------------------                                     ³
+ ³At this point in the process i get the strong urge to add extra     ³
+ ³information, extending the amound of information to store. Think of:³
+ ³     - the last time the recepe was made                            ³
+ ³     - date of data-entry                                           ³
+ ³     - names of visitors who have eaten it                          ³
+ ³     - names of family who don't like it                            ³
+ ³     - record-size                                                  ³
+ ³                                                                    ³
+ ³Why not? Go ahead!                                                  ³
+ ³Some parts can be stored in THIRDTRY.DBF, others in LOOKUP (c).     ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+(3) Directives.
+A user has a right to know where s/he is and what to do. So we have to tell
+where we are and where we can go to.
+
+These three types of information deserve a special place on the screen.
+In the pre-windows-era this was called window-ing. Each type of information
+has his own place on the screen. Now you talk about "view-ports". It means
+the same without refering to that product of Microsoft.
+
+Here's one of my favorite screen designs. It is 24 rows by 80 colums (D). You
+might have to adjust your pinter. But it shows beautifully on your screen!
+>---------- screen starts here --------------<
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Date:  10 jan 1992                                             Recepe:    1
+Time:  12:12                                                   Total:  1123
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                                       Breek de eieren in een beslagkom.
+Fried eggs Extra                       Roer ze goed door. Doe de boter in de
+                                       pan, smelt ze. Doe de geroerde eieren
+slices bread          3                in de pan. Zet het vuur zo laag
+eggs                  5                mogelijk. Doe een deksel op de pan!
+mature cheddar        50 grames        Laat het langzaam sudderen. Na 3
+butter                little           minuten de kaas op het ei doen.
+garlic                little           Kruiden naar smaak. Deksel weer op
+red pepper            1                de pan doen. Als de kaas grotendeels
+pepper                little           gesmolten is is het ei goed. Opdienen
+                                       op de sneetjes brood.
+
+
+
+
+CLIPBBS 2-13                   Page 14                  28 Jun 1992
+
+
+ÄÄÄÄÄÄÄ< Display    >ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+F1= Help
+F5= Look-Up
+ÄÄÄÄÄÄÄ< Esc = Exit >ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+>---------- screen ends here --------------<
+
+You can see three zones in this screen. At the top the Extra information. Two
+lines. Left and right filled out. As you can see i present there the
+number of this recepe and the total amount of recepe's i've got. In the middle
+the main information. Note the absence of captions like "Name", "Ingredients"
+etc. I think those are redundant. At the bottom the user-guide. It clearly
+shows only three options and gives us information about where we are (Display).
+
+Techniques
+----------
+There is some programming necessary for getting this screen. I don't intent
+to give full listings but here's how i would do this.
+
+For a start: i have a MAIN procedure/function which contains the main program.
+In this function there's a loop.
+
+          DO WHILE .not. <END>
+              PresentScreen()
+              GetUserKey()
+              ProcessKey()
+          ENDDO
+
+The biggest part of the screen is organised in PresentScreen(). Not all. The
+horizontal lines are not disturbed at all. So, i write them only once: at
+the start of the program.
+
+The time, presented in line 2, has to be updated -more ore less- continously.
+So, i make a small function TimeUpd() which i call in all three functions
+in the loop.
+
+The keys available to the user are dependent on the place of the user in
+the program. So, i present this information after i've processed the last
+keystroke, in the function ProcessKey().
+
+This leaves us with the thask to present the contents of THIRDTRY.DBF, the
+date, recepe number and the total number of recepes. Below you find a
+(buggy) source-listing of PresentScreen(). It depends on some unstated
+assumptions but it is only intended to give an idea of how this can
+be done(E).
+
+>------------------ part of PresentScreen() ----------------<
+USE THIRDTRY.DBF ALIAS Third
+USE INGRDNT.DBF ALIAS Ing
+
+@ 1,60 SAY "Recepe:" + STR(nRecepe),6)
+@ 2,60 SAY "Total: " + STR(LASTREC(),6)
+Select Third
+LOCATE FOR Third->Re_num=nRecepe
+IF found()
+     @ 4,0 SAY third->Name
+     cDesc := third->Desc
+CLIPBBS 2-13                   Page 15                  28 Jun 1992
+
+
+     Select Ing
+     LOCATE FOR ing->re_num = rRecepe
+     DO WHILE found()
+        @ A,B SAY LookUp(ing->ing_num)
+     ENDDO
+
+ENDIF
+
+>------------------ End of PresentScreen() -----------------<
+- - - - -
+Notes:
+(A) complaints are received about the sexist approach. Author likes to
+state that no harm is or was intended. Wherever wanted he can be replaced
+by she or the other way around.
+
+(B) Handbooks and people who have studied programming will get sick at
+this time. Ok, it's wrong. But it works! Let's call it prototyping.
+
+(C) What the result will be will be discussed in a forthcoming episode.
+
+(D) Because i think you'll look at it with a Word-Perfect-alike. i haven't
+made it 25 * 80. A normal screen is of course 25 * 80 but in WordPerfect
+you "only" get 24 * 80.
+
+(E) If somebody knows an equal simplistic but better way for doing the
+same job: please let me know!
+
+---------------------- ADDENDUM ------------------------------------
+
+      Name: Lookup.dbf (3)
+      ===========================
+         NAME     TYPE     LENGTH
+      1  Ing_num   N        3,0
+      2  Ing_nam   C       30
+      ---------------------------
+      TOTAL                33
+
+       Name: Ingrdnt.dbf  (3)
+       ======================
+          NAME     TYPE    LENGTH
+       1  Re_num    N     4,0
+       2  Ing_num   N     3,0
+       3  Amount    C    10,0
+       ----------------------
+       TOTAL             17
+
+       Name: THIRDTRY.DBF (3)
+       =====================
+          NAME     TYPE    LENGTH
+       1  Re_num    N       4,0
+       2  Name      C      40
+       3  Desc      M      10
+       --------------------------
+       TOTAL               54
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 16                  28 Jun 1992
+
+
+                       How to read DOS serial number?
+                        originally by Eric J. Givler
+
+Here's how to read the DOS serial number.  This function assumes you have the
+NanForum library (for the intterupt code) and you have some data conversion
+functions, ie. Dec2Hex().  This function (and about 200 others) are in my
+POTLUCK.LIB
+
+#include "ftint86.ch"
+PROCEDURE MAIN()
+LOCAL midlabel := space(29), regs[12], r_ax, label_fat
+
+    // these calls are Nantucket Forum ToolKit.
+    Regs[AX] := 17421
+    Regs[BX] := 0
+    Regs[CX] := 2150
+    Regs[DS_STRING] := Register( DX ) + midlabel
+    FT_INT86( 33, Regs )
+    r_ax := Regs[AX]
+    do case
+    case r_ax = 1 .or. r_ax = 2 .or. r_ax = 5  // an error occurred
+        label_fat := .f.                       // probably wrong dos?
+    otherwise
+        label_fat := .T.
+    endcase
+    midlabel := regs[DS_STRING]               // info is in here.
+    if label_Fat
+        ? 'Volume: ' + substr(midlabel, 7, 11)
+        ? 'FAT:    ' + substr(midlabel, 17, 8)
+        ? 'Serial: ' + VolSerial(substr(midlabel,3,4))
+    endif
+
+RETURN
+
+
+FUNCTION VOLSERIAL( FOUR_BYTES )
+LOCAL nval := bin2l( four_bytes )
+LOCAL n1, n2, c1, c2
+    n1 := nVal % 65536
+    n2 := (nVal - n1) / (2^16)
+    c1 := Dec2Hex(n1)              // Returns HEX of a word value (IDL 2.0)
+    c2 := Dec2Hex(n2)              // Returns HEX of a word value (IDL 2.0)
+RETURN (c2 + "-" + c1)
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 17                  28 Jun 1992
+
+
+===============================================================================
+                                   SOFTWARE
+===============================================================================
+
+
+                           What is what (4)
+
+STAGE
+
+        Sysstem development tool. Helps build screens and reports using
+        template language. Supports arrays and virtual pages using 255
+        page objetcs.
+
+STEVE STRALEY'S TOOLKIT
+
+        Steven Straley's Toolkit contains a lot of routines and tools
+        for program development. Allows changing of says, gets, reads,
+        pictures, colours without recompiling. Windowing, menus, array
+        functions, backup and restore, database generation, DBT
+        packing, word processing, report writer, source code debugger,
+        560 page manual, free reader for Tom Rettigs Help.
+
+SUBNTX()
+
+        Fast and unique set of functiuons for thos who want much more
+        speed and flexibility from indexes. Creates a subset of an
+        index based upon your conditions or wildcards. Eliminates time
+        delays caused by skipping unwanted records in an index. Ideal
+        for reporting. Never use SET FILTER AGAIN.
+
+SUPER.LIB Professional for Clipper
+
+        database Warehouse, œ198
+        (c) Functional Software Inc.
+
+        Complete drop-in procedures, compatible with Summer 87 and 5.0,
+        all major clipper libraries, european data formats supported.
+        100% source code, commented, readable and included at no extra
+        charge. Organized, cross-referenced manual with examples for
+        all function plus a NG database for fast reference. Over 100K
+        of sample programs, 30days phone support, unlimited BBS
+        support, Compuserver. No royalties. Included:
+
+        -       report writter
+        -       query/filter builder
+        -       form letters
+        -       mailing lables
+        -       data driven data entry
+        -       lookup tables
+        -       help system
+        -       frequency analysis
+        -       duplicate checking
+        -       selective global field replacement
+        -       expression building
+        -       record tagging
+        -       calendar, calculator and TODO list utilities
+CLIPBBS 2-13                   Page 18                  28 Jun 1992
+
+
+        -       user definable pull down menus
+        -       selective copying and appending
+        -       text file browsing
+        -       directory tree
+        -       popup boxes and menus
+        -       production analysis (data sensitive)
+        -       interactive DBF and index building
+T-BASE
+
+        Work with pictures in databases in grand style. Scanned
+        photographs, documents and pictures generated by drawing
+        packages adn other soruces such as vide frame grabbers can be
+        displayed alongside and active text screen at any [position
+        scalled and resized. Saves in popular PCX format.
+
+TELEPATHY
+
+        Complete powerful serial communications library, easy to use
+        and highly efficient. all the usual transfer protocols, high
+        baud rate operation plus a notification mechanism for
+        background comms.
+
+THE LIBRARY (PLANET)
+
+        Over 360 functuions covering 20 areas including arrays, date,
+        disk, DOS, file, financial, graph, graphics, keyboard, memory,
+        mouse, network, printer, screen, SQL API, statistical, time and
+        trigonometric. Includes a complimentary copy of Gupta SQLBASE
+        single user engine. Documentation only on disk.
+
+TIME TRAK
+
+        Multiple users and resource scheduling program with 100%
+        Clipper source supplied. Includes simultaneous view of multiple
+        calendars, recurring and rescheduling appointments, 4display
+        formats (daily, weekly, monthly, 6month) things to do pad,
+        alarm clock, password protection. 140 page manual.
+
+UI2
+
+        Powerful development environment which includes an editor for
+        designing screens and reports as well as template drive
+        applications generators, templates can generate Clipper, dbIII,
+        dbIV, Fox, QS, dbXL and C programs.
+
+UI2 TOUCH&GO
+
+        Designed to generate complete systems using a few keystrokes
+        and the supplied templates. The build in screen editor allows
+        build own input and output screens. Multi user, interactive
+        query system, scrolling input screens, easy customisation using
+        template directives and integration with your own source code.
+
+VALKYRIE
+
+        Reverse engineer an EXE file back into its various PRG files.
+CLIPBBS 2-13                   Page 19                  28 Jun 1992
+
+
+        Works with S87. Lots of user configurable source code
+        formatting options plus symbol and cross referencing. Comments
+        cannot be reocevered, there is a password protection feature.
+
+WARPLINK
+
+        Very fast DOS compatible dynamic overlay linker for use wiuth
+        any language that produces .OBJ files. Detailed map info and
+        online error handler provide debugging help. Incremental
+        linking and enhanced memory management. Includes ability to
+        create COM files.
+
+WIPEOUT
+
+        Screen wipping routines, available as SHAREWARE (hope will stay
+        some time). Serie of very nice and good working functions for
+        clearing/displaying screens in many ways. Quite useful for
+        producing demos.
+
+WORDWRAPPER
+
+        Alternative to using memo fields and .DBT files. Avoids file
+        bloat by storing data to a .DBF file. Allows word wrapping,
+        copy, zoom in.out, window size and position., Clipper source
+        supplied.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 20                  28 Jun 1992
+
+
+===============================================================================
+                                      Q&A
+===============================================================================
+
+
+QUESTION: What's address of Pinnacle Publishing?
+
+ANSWER:
+
+            Pinnacle Publishing, Inc.
+            28621 Pacific Hwy. So.
+            P.O. Box 8099
+            Federal Way, WA 98003
+            (206) 941-2300
+            (800) 231-1293
+            Fax: (206) 946-1491
+
+-------------------------------------------------------------------------------
+
+
+QUESTION: What to do in Windows for open more than 10 files?
+
+ANSWER:
+
+        If you must run in the enhance mode, you must tell Windows to allow
+        more than 10 files to be opened per window (10 is the default).
+        The way you do that is in the SYSTEM.INI file under the 386en
+        section add the following statement:  pervmfile=xx where xx is the
+        number of files you need to open.  Make it reasonable, don't go
+        overboard with it or you will slow down the system.  Hope it
+        helps...
+
+-------------------------------------------------------------------------------
+
+
+QUESTION: How to send mail to Internet from FidoNet?
+
+
+To send from fidonet to internet you must use a gateway.  one such gateway
+is fidonet address 1:114/15. To use this gateway.  send mail to user "uucp"
+at 1:114/15 from any fidonet system.  In the first line of the text, you
+put the internet style address followed by 2 returns. for example to my
+internet address "larry@panix.com"
+
+To: larry@panix.com
+<cr>
+<cr>
+
+to go from internet to fidonet you shoud send the message to user
+"uucp"
+first.lasttname.lastname.@fnet.nf107.n10.z1.fidonet.org
+where f107 is the net 107, n2603 is node 2603, and z1 is zone 1.
+
+(note this is the address of "MORE")
+
+using the fidonet to internet gateway you can also send mail to
+CLIPBBS 2-13                   Page 21                  28 Jun 1992
+
+
+other systems like compuserve and  america on line
+nnnn,nnnn@compuserve.com
+screenname@aol.com
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 22                  28 Jun 1992
+
+
+===============================================================================
+                                   ANOMALIES
+===============================================================================
+
+
+                     ANOMALIES and their comments
+
+This part of Clipper BBS Magazine is dedicated to all discovered 
+anomalies and comments about them in Clipper products. Because 
+Nantucket is still unable to give own bug and anomalies reports (as 
+actually did in past with Summer 87 version) is very handy to have 
+results of many investigations done on many user places. I'm also
+doing my own investigatings, because i'm always very good when someting 
+has hidden problems. Everything what i buy will first show all problems 
+and then all normal things. This amazing part of my live is sometime 
+making me crazy, but for testing of programs it's great <grin>.
+
+Daniel
+
+
+
+-------------------------------------------------------------------------------
+
+
+                   //STDERR another undocumented switch!
+
+       application.exe //INFO //STDERR >>file.ext
+
+That simple line will take a care of:
+
+1) redirecting Clipper normally hardscreen coded output of //INFO to
+   stderr device
+2) redirect stderr device to file
+
+Result? Copy of wanted information from //INFO into your FILE!
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 23                  28 Jun 1992
+
+
+===============================================================================
+                                  CLIPPER NET
+===============================================================================
+
+
+
+Following is COMPLETE list of all published file descriptions in Clipper
+BBS magazine in previous numbers. Purpose of this index list is to allow
+anybody find needed file descriptions in growing number of described files.
+Short description after name will give first possible close image about
+file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+³FileName     ³Src ³Description                                     ³Where ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper (-->Clipper !!)   ³[1-19]³
+³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+CLIPBBS 2-13                   Page 24                  28 Jun 1992
+
+
+³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+
+Src can be:
+    Cln     File is accesible on ClipperNet
+    Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 25                  28 Jun 1992
+
+
+===============================================================================
+                                    CLIPBBS
+===============================================================================
+
+
+                             CLIPBBS Distribution
+
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can make a profit from the
+  distribution of this magazine.
+
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest).
+
+  If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+
+  Distribution sites:
+
+  Clipper BBS Home system  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+      Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+      Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+      2:285/608@fidonet.org
+
+  United Kingdom   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+      Daily whole day, modem speed HST
+
+  Italy   ³
+  ÄÄÄÄÄÄÄÄÙ
+      Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+      20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+      24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+      2:334/307@fidonet.org
+
+  United States of America  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+      Daily whole day, modem speed HST
+
+      The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+      Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+
+  Canada    ³
+  ÄÄÄÄÄÄÄÄÄÄÙ
+      SYSOP Gordon Kennet, phone 1-604-599-4451 
+      Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+
+CLIPBBS 2-13                   Page 26                  28 Jun 1992
+
+
+  WORLDWIDE   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+      Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+      Various systems around whole world
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-13                   Page 27                  28 Jun 1992
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Submission of articles to CLIPBBS is really easy:
+    Maximum of 78 characters per line, as long or as short as you like
+    ASCII text.
+    Choose from the list of extension which most describes your text, or
+    just name it .ART as ARTicle and send it to publisher or to any
+    distribution site via modem to BBS or with mailer as file attach.
+    Article will come automatically appear in the next free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          ANOMALIES and their comments    .ANO
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          DUMP from conferences           .DMP
+          Clipper Net                     .CLN
+          
+  That's all at the moment, there will probably be changes later, as the
+  magazine evolves. If you have any ideas for a new section of CLIPBBS,
+  please tell us, or just write an article about it.
+  
+  Daniel, publisher
+
+-------------------------------------------------------------------------------
+

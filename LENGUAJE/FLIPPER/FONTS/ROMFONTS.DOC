@@ -1,0 +1,7 @@
+The romfonts.exe utility can be used to copy the fonts in your rom to a
+disk file that is accessable by flipper.
+
+To run, type:
+
+C:>romfonts
+

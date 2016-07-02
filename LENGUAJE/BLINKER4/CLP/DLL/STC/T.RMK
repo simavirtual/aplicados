@@ -1,0 +1,36 @@
+//
+// 96.03.15  T.RMK
+//
+// This sample make file demonstrates how to create a CA-Clipper DOS
+// extended EXE and Windows EXE which use a statically linked DLL.
+//
+// Before creating the Windows EXE you will need to update the TW.PRG,
+// D.PRG and TW.LNK files to be correct for either Clip4Win or FiveWin.
+//
+
+                                        // CA-Clipper compiler version number
+COMVER := 53
+
+#include "..\..\all.rmk"                // Standard make file definitions
+
+"$(OUTDIR)\t.exe" :  "$(OBJDIR)\t.obj" \
+                     t.lnk \
+                     "t$(COMVER).lnk"
+          $(LNKCMD) @t$(COMVER) out $@ $(LNKOPT)
+
+"$(OUTDIR)\tw.exe" : "$(OBJDIR)\tw.obj" \
+                     tw.lnk \
+                     "t$(COMVER).lnk"
+          $(LNKCMD) @t$(COMVER) out $@ $(LNKOPT)
+
+"$(OUTDIR)\d.dll"  : "$(OBJDIR)\d.obj" \
+                     d.lnk \
+                     "d$(COMVER).lnk"
+          $(LNKCMD) @d$(COMVER) out $@ $(LNKOPT)
+
+"$(OBJDIR)\d.obj"  : d.prg
+
+"$(OBJDIR)\t.obj"  : t.prg
+
+"$(OBJDIR)\tw.obj" : tw.prg
+

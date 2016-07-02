@@ -1,0 +1,16 @@
+//   NANSPEED.RMK
+//   Make file for NANSPEED, the performance test program of
+//   Nantucket Tools II.
+//   Copyright (c) 1991, Nantucket  Corp.  All rights reserved.
+//
+.prg.obj:
+    clipper $< /l /m /v
+
+.obj.exe:
+    rtlink fi $**,nt2us50 lib nt250
+
+nanspeed.obj:   nanspeed.prg
+
+nanspeed.exe:   nanspeed.obj
+
+

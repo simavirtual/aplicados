@@ -1,0 +1,51 @@
+# WARPWRAP.DEF
+# example WARPWRAP environment variable definitions file
+#
+#
+#
+# add string to environment variable block if doesn't exist, ignore if
+# the environment variable string already exists
+~NEW
+#
+INCLUDE=C:\CPP\INCLUDE
+CLIPPER=BADCACHE;
+CAUSEWAY_IS_GREAT=TRUE
+# preceding whitespace is optional
+    SCANDISK=OFF
+#
+#
+#
+# replace existing environment variables if exist, add if not
+~REPLACE
+#
+PROMPT=$P$G
+#
+# 'SET ' is optional, can be used before ~<environment variable>
+#  or #<environment variable> so environment variable is not confused with
+# WARPWRAP comment or command
+SET #1SAFETYNET=ON
+#
+# make environment variable adds/replaces/removes case sensitive
+ ~SAVECASE
+#
+# you do not see many lowercase environment variables in DOS
+lowercase=on
+#
+#
+#
+# delete existing environment variables
+#
+~DELETE
+# trailing '=' is optional
+LIB
+# because of preceding SAVECASE, only deleted if lowercase network e-var found
+network=
+#
+# restore to default all uppercase
+~NOSAVECASE
+#
+#
+#
+# clear uninitialized program memory words to 00a5h hexadecimal
+#
+~CLEAR a5

@@ -1,0 +1,76 @@
+*       зддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+*       Ё                                                         Ё
+*       Ё 06/24/91             LASERM.MPR               07:59:33  Ё
+*       Ё                                                         Ё
+*       цддддддддддддддддддддддддддддддддддддддддддддддддддддддддд╢
+*       Ё                                                         Ё
+*       Ё Wayne Lampel                                            Ё
+*       Ё                                                         Ё
+*       Ё Copyright (c) 1991 Fox Software                         Ё
+*       Ё 134 W. South Boundary                                   Ё
+*       Ё Perrysburg, OH  43551                                   Ё
+*       Ё                                                         Ё
+*       Ё Descripci╒n:                                            Ё
+*       Ё Este programa lo ha generado autom═ticamente GENMENU.   Ё
+*       Ё                                                         Ё
+*       юддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+
+
+*       зддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+*       Ё                                                         Ё
+*       Ё                        Preprograma                      Ё
+*       Ё                                                         Ё
+*       юддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+*
+
+push menu _msysmenu
+set sysmenu automatic
+public skipvar
+skipvar = .f.
+
+*       зддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+*       Ё                                                         Ё
+*       Ё                    Descripci╒n del menё                 Ё
+*       Ё                                                         Ё
+*       юддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+*
+
+SET SYSMENU TO
+
+SET SYSMENU AUTOMATIC
+
+DEFINE PAD _pwk0h4qb5 OF _MSYSMENU PROMPT "\<Sistema" COLOR SCHEME 3 ;
+	KEY ALT+S, "ALT+S"
+DEFINE PAD _pwk0h4qc6 OF _MSYSMENU PROMPT "\<Edici╒n" COLOR SCHEME 3 ;
+	KEY ALT+E, ""
+DEFINE PAD _pwk0h4qcx OF _MSYSMENU PROMPT "Ta\<bla" COLOR SCHEME 3 ;
+	KEY ALT+B, ""
+DEFINE PAD _pwk0h4qdo OF _MSYSMENU PROMPT "E\<ntorno" COLOR SCHEME 3 ;
+	KEY ALT+N, "ALT+N"
+ON SELECTION PAD _pwk0h4qb5 OF _MSYSMENU *
+ON SELECTION PAD _pwk0h4qc6 OF _MSYSMENU *
+ON SELECTION PAD _pwk0h4qcx OF _MSYSMENU *
+ON SELECTION PAD _pwk0h4qdo OF _MSYSMENU *
+
+
+*       зддддддддддддддддддддддддддддддддддддддддддддддддддддддддд©
+*       Ё                                                         Ё
+*       Ё                 Postprograma y procedimientos           Ё
+*       Ё                                                         Ё
+*       юддддддддддддддддддддддддддддддддддддддддддддддддддддддддды
+*
+
+for i = 1 to cntbar('enviro')
+	do case
+	case prmbar('enviro',i) = 'Barra de estado'
+		set mark of bar i of enviro to  set('status') = 'ON'
+	case prmbar('enviro',i) = 'Reloj'
+		set mark of bar i of enviro to  set('clock') = 'ON'
+	case prmbar('enviro',i) = 'V║deo extendido'
+		set mark of bar i of enviro to  srow() > 25
+	case prmbar('enviro',i) = 'Menёs estables'
+		set mark of bar i of enviro to  set('sticky') = 'ON'
+	endcase
+endfor
+
+

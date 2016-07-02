@@ -1,0 +1,686 @@
+                         FLIPPER README FILE
+                               10/1/91
+
+At the time the manual was printed the product was still under
+development and some additional features have been added since that
+time. The Norton Guides database should always have the latest
+information. Any changes or bug fixes will be available on the BBS -
+(503)-567-0363 - with an updated Norton Guides.
+
+
+********************************************************************
+As of 11/1/91 FLIP5.LIB date: The norton guides have the latest
+                              documentation. N_GUIDES.ZIP
+
+1. A library called FLPDEBUG.LIB has been included with this version
+   which will determine if you are getting a stack overflow. Some
+   libraries use the stack heavily and strange problems can occur. Two
+   functions determine how much of the Stack has been used during the
+   operations of the program:
+
+      MARK_STACK() - places a byte in all positions on the stack.
+      nStackLeft = CHK_STACK() - checks to see how much of the
+                   stack has been overwritten.
+
+********************************************************************
+As of 10/1/91 FLIP5.LIB date: The norton guides have the latest
+                              documentation. N_GUIDES.ZIP
+
+1. OBJ_ROTATE( nRotation )
+         nRotation          - rotate object in tenths of degrees
+
+********************************************************************
+As of 8/1/91 FLIP5.LIB date: The norton guides have the latest
+                              documentation. N_GUIDES.ZIP
+
+1. PS_ROTATE has been enhanced again allowing you to set the p1 and p2
+   points and now return the current values. See C_EXAM7A.PRG.
+
+      a. To set orientation and size of image:
+
+         nOrientation = PS_ROTATE([nOrientation] [,p1x, p1y, p2x, p2y] )
+
+      b. To return the values, pass parameters by reference:
+
+         PS_ROTATE( @nOrientation] ,@p1x, @p1y, @p2x, @p2y )
+
+2. The color palette will now be set for PCX pictures automatically. This
+   changes the default color palette set when flipper goes into graphics
+   mode.
+
+********************************************************************
+As of 7/23/91 FLIP5.LIB date: The norton guides have the latest
+                              documentation. N_GUIDES.ZIP
+
+1. The screen drivers for Clipper 5.01 are ready for testing. Look at
+   example G_EXAM43.PRG. This is an examples of implementing the
+   screen drivers for Clipper 5.01. Since Nantucket has not yet
+   released the screen driver API information, I had to modify the
+   screen driver source code.  However  FLIPTEXT.OBJ should run
+   Clipper 5.01 in graphics mode transparently.
+
+   SETMODE(43,80) or SETMODE(50,80) can be used to extend the rows for
+   the screen drivers. At this time time you can only display 80
+   columns, this should change when the API is released.
+
+   FLIPTEXT.OBJ should be linked in as a FI in the script file
+
+   DRV_BEGIN()    - Starts the screen drivers. Must be in graphics mode
+   DRV_END()      - Ends the screen drivers. Allows Clipper to run in
+                    text mode.
+   DRV_FONT(fh)   - Set the font to be used for the screen drivers
+   DRV_CURSOR(fg) - Set the color for the cursor.
+
+2. The palette conversion for displaying a pcx picture has been correctly
+   has been fixed.
+
+3. The scroll bars will now work with a viewport. See C_DEMO.PRG
+
+4. The MENU_EDIT function will unhighlight a button if the fourth parameter
+   is zero.
+
+5. SCANNER.LIB in the library subdirectory will scann from an HP ScanJet
+   and ScanJet+ scanner. See S_EXAM01.PRG and S_EXAM02.PRG.
+
+********************************************************************
+As of 6/13/91 FLIP5.LIB date: The norton guides have the latest
+                              documentation. N_GUIDES.ZIP
+1. Scroll bar stuff changed:
+   a. nScrollNum = SCRL_OPEN(nOrientation,nStart,nEnd,nLocation,nItems
+                              [,nStartItem])
+            color set with current MENU_COLOR
+   b. SCRL_CLOSE( nScrollNum )
+   c. SCRL_WAKE( nScrollNum [,nStartItem])
+   d. SCRL_SLEEP( nScrollNum )
+   e. SCRL_HOT( nScrollNum )
+   f. SCRL_SET( nScrollNum, nStartNum )
+
+   The other SCROLL function have been replaced by these. See C_EXAM04.PRG
+   in EXAMPLES.ZIP. Also in EXTRA.ZIP. You can have up to 10 scroll bars
+   open at the same time. They are now also 3d.
+
+2. MENU_EDIT now has a fourth optional parameter called nMemuItem. You can
+   change the menu item that is highlighted under program control rather
+   than just with the mouse. See C_EXAM04.PRG in EXAMPLES.ZIP or EXTRA.ZIP.
+
+3. MENU_OPEN nType now has an additional number 4 type. This will add a
+   scroll bar to the right side of a menu. See C_EXAM04.PRG.
+
+4. BUTTON_ADD can now take an optional 10th parameter that will allow you
+   to place a SAY_FMT string that will be placed where you wish on the
+   screen for a button. See C_EXAM04.PRG in EXAMPLES.ZIP or EXTRA.ZIP for
+   the Map menu.
+
+5. MPRT_OPEN has a third optional parameter which sets the maximum memory
+   you wish to be allocated for a background screen. If you need other
+   memory for an area graph, the allocation for the background screen
+   may take so much that you will be out of memory for the area fills.
+   The usual starting value is 60k. You could reduce in to 16 or 32 which
+   will increase the number of swaths only.
+
+      MPRT_OPEN( nXinches, nYinches [,nMaxBuffer] )
+
+6. Error in the manual for SAY_FMT. AC instead of AM, A should be
+   A_  (<-underbar). This did not make it in the norton guides- sorry.
+
+********************************************************************
+As of 5/1/91 FLIP5.LIB date:
+1. PS_LNWIDTH now PS_LNSTYLE(nCol, nWidth, nPen)
+   HP_LNWIDTH now HP_LNSTYLE(nCol, nWidth, nRed, nGreen, nBlue/Gray, color)
+
+   Allowed you to set the color to pen translation for HP and
+   colors and gray scaling for Postscript printers.
+
+********************************************************************
+As of 5/29/91 FLIP5.LIB date:
+
+Fixes: These were problems reported to ProWorks that were fixed. You
+       may not have run into these problems yet.
+
+1. HPGL printing when combined with screen printing. See C_EXAM07.PRG
+2. Found some allocations that were not releasing.
+3. Fixed the scroll bar. Would bomb if more than 150 items. Now works.
+   Colors follow the menu color set at the time the scroll bar is
+   drawn.
+
+Enhancements:
+
+1. BUTTON_ADD now has a 10th optional parameter that allow you to put
+   in a SAY_FMT string to say text as the button is wakened.
+   See C_EXAM04.PRG
+
+2. For those who have HP SCANNERS, we have a scanner module that allows
+   you to support the HP scanners.
+
+********************************************************************
+As of 4/23/91 FLIP5.LIB date:
+
+Fixes: These were problems reported to ProWorks that were fixed. You
+       may not have run into these problems yet.
+
+1. ABS_TO_Y function.
+2. SET_YSPACE function
+3. FLIP_INIT(0,0) gave error.
+4. Postscript printing
+5. Long menu labels off cut off to soon.
+6. SET_OLAP function
+7. GET_GET now works inside a viewport
+8. PRT_EDIT fixed for black and white screens.
+
+Additional enhancements:
+
+1. FPOLY_LINE added optional parameter for number of points passed so
+   one array could serve for many polygons.
+
+      FPOLY_LINE( nX, nY, aPoints, nColor [,nNumPoints] )
+
+2. HP 7550 plus added for HPGL/2 support.
+3. Any letter can be highlighted in the menu label by placing a ^ in
+   front of the letter.
+4. Support added for dual screens with the mono screen used for
+   clipper text and the color screen used for the graphics.
+5. AUTO_SCALE will determine the correct graph scale values without
+   being in graphics mode.
+6. SPLINE function enhanced. Three optional parameters added.
+
+      SPLINE( nYColumn [,nType] [,nIncrement] [nTension] )
+
+         Type      - 0 passes close to the points
+                     1 passes through the points  (default)
+         Increment - number of segments in the curve
+
+                     segments=1.0/Increment
+
+                     0.2  =   5 segments
+                     0.1  =  10 segments
+                     0.05 =  20 segments (default)
+                     0.01 = 100 segments
+
+         For type 1 only:
+         Tension   - 0 to 1: default is 0.5.
+
+7. Gray scaling and color have been added to the postscript driver.
+
+      nIsColor = 0:
+         PS_LNWIDTH(nColor,[nWid], *na*, *na*, [nGray],[nIsColor] )
+      nIsColor = 1:
+         PS_LNWIDTH(nColor,[nWid],[nRed],[nGreen],[nBlue],[nIsColor] )
+      nIsColor = 2:
+         PS_LNWIDTH(nColor,[nWid],[nHue],[nSat],[nBright],[nIsColor])
+
+         IsColor=0
+            nGray       Level of gray for black and white device
+                           (0-black, 100-no gray)
+         IsColor=1
+            nRed        Level of red
+            nGreen      Level of green
+            nBlue       Level of blue
+
+         IsColor=2
+            nRed        Hue
+            nGreen      Saturation
+            nBlue       Brightness
+
+   The gray scaling can be set with the fifth parameter. The default is all
+   colors black and gray scaling. The gray scaling is 0 for all black, 100
+   for no color, and everything in between. Each color from 0-15 can be set
+   independently.
+
+   There are two methods for representing colors in postscript printers.
+   nIsColor 1 is the percentage of red, green, blue. nIsColor 2 is the hue,
+   saturation, and brightness method. The ranges are from 0 to 100%.
+
+8. PS_ROTATE has been enhanced to allow you to set the p1 and p2 points.
+
+         nOrientation = PS_ROTATE([nOrientation] [,p1x, p1y, p2x, p2y] )
+
+         nOrientation Sets the orientation of the page.
+                      0 - Portrait [Default]]
+                      90 - Landscape
+
+   This function sets the orientation of the page to either Portrait or
+   Landscape.  It also defaults the P1 and P2 positions so that the aspect
+   ratio will be square.
+
+   The size of the postscript screen on the printer is setable with the
+   optional parameters p1x, p1y, p2x, & p2y. The position is in 1/72nds of
+   an inch.
+
+         The default size is:    Landscape      Portrait
+                                 ---------      --------
+                           p1x      36             36
+                           p1y      36            345
+                           p2x     750            576
+                           p2y     572            750
+
+9. Pattern filling has been enhanced:
+
+   PAT_SETFIL( nPatternNo [,nSolidColor,nPatternColor,nBGColor])
+
+         nPatternNo     Internal setable pattern number. (2-10)
+         nSolidColor    Reset default solid fill color. Default is edge
+                        color.
+         nPatternColor  Reset default pattern color. Default is the edge
+                        color.
+         nBGColor       Reset default background color. Default is
+                        transparent.
+
+   The default pattern fill colors can be changed by entering the three
+   optional parameters. Pattern 1 is will normally fill an object with a
+   solid color. This fill color can be changed by changing nSolidColor. A
+   filled pattern will normally fill the object with the edge color and the
+   background of the pattern will be transparent. These to colors can be
+   changed by reseting nPatternColor and nBGColor.
+
+10. PAT_SETLIN( nPatternNo [,nNewPattern] )
+
+   nNewPattern - integer value where each bit represents the
+                 pattern.
+
+11. EVENTCALL is called each time the KEY_PRESS() go through an internal
+    loop. The function in the library simply returns without any action. You
+    can write a UDF that will be called internal to keypress that will allow
+    you to do something while the KEY_PRESS is waiting for an event to
+    occur. This function will probably slow down the KEY_PRESS event.
+
+12. BUTTONCALL is called each time a menu item is highlighted. The function
+    in the library simply returns without any action. You can write a UDF
+    that will be called internal to the menu system each time a new
+    button is highlighted. This can be used to display a description
+    of the highlighted menu item.
+
+13. MENU_COLOR() enhanced with color of hot letter set with a ^.
+
+         MENU_COLOR( nUnFgColor, nUnBgColor, nSelFgColor, nSelBgColor,
+                     nNonFgColor, nNonBgColor, nBoxBg, n3dOnOrOff,
+                     nBorderType, nBorderColor, nBorderThickness,
+                     nShadowType, nShadowColor, nShadowThickness,
+                     n3d_fg_color, n3d_bg_color,
+                     nFg_letter_color, nBg_letter_color )
+
+         nUnFgColor       Sets the low light foreground.
+         nUnBgColor       Sets the low light background.
+         nSelFgColor      Sets the highlight foreground.
+         nSelBgColor      Sets the highlight background.
+         nNonFgColor      Sets the non selected foreground.
+         nNonBgColor      Sets the non selected background.
+         nBoxBg           Sets the inside box color.
+         n3dOnOrOff       Sets the menus to be 3D.
+                          0 - 3D off.
+                          1 - 3D on.
+         nBorderType      Set the border type.
+                          0 - border off.
+                          1 - show border.
+         nBorderColor     Sets the border color.
+         nBorderThickness Sets the border thickness in pixels.
+         nShadowType      Set the shadow on or off.
+                          0 - shadow off.
+                          1 - show shadow.
+         nShadowColor     Sets the shadow color.
+         nShadowThickness Sets the shadow thickness in pixels.
+         n3d_fg_color     Sets the 3d effect highlight color.
+         n3d_bg_color     Sets the 3d effect lowlight color.
+         nFg_letter_color Sets the selected highlight letter color.
+         nBg_letter_color Sets the unselected highlight letter color.
+
+14. Parameter 2 added to nHighlight.
+
+         MENU_OPEN( nFont, nGap, nViewport, nDefaultActive,
+                           nHighlight, nType, nSaveBackground )
+         MENU_EDIT( nMenuNum, nHighlight, nOnOrOff )
+         BUTTON_ADD( nMenuNum, nLeft, nTop, nRight, nBottom,
+                           nKeyCode, nKeyType, nHighlight, nColor )
+
+         nHighlight  Sets the highlight on or off.
+                     0 = Don't highlight when mouse hits button.
+                     1 = Highlight when mouse hits button.
+                     2 = Highlight only if mouse cursor on button
+
+15. Enhanced search methods for closed objects.
+
+         LAYER_OPEN( nDefaultColor,[nBox],[nPoly],[nCircle])
+         LAYER_ON( nLayer,[nActiveStatus],[nBox],[nPoly],[nCircle] )
+         HOT_METHOD( nMethod )  Already know the object type.
+
+         nBox              Default search for box method (type 1)
+         nPoly             Default search for polygon method (type 2)
+         nCircle           Default search for circle method (type 10-17)
+
+   The default search method can be set for new objects created on a layer.
+   nBox sets the default search method for a box. If you set it to a -1,
+   then it will not be found at all. The default is to find the object by
+   touching the mouse cursor on the edge of the object. A setting of 1 will
+   find a closed object, polygon or box, when the mouse is anywhere inside
+   the object. nPoly and nCircle set the default search method for Polygons
+   and Circles.
+
+********************************************************************
+As of 3/15/91 FLIP5.LIB date:
+
+A. Fixed color printing on dot matrix printers
+
+********************************************************************
+As of 3/2/91 FLIP5.LIB date:
+
+A. Fix menu 3d, remove gap on long text
+B. Add type 2 to highlight button so highlighting button turns off
+   when mouse is removed from the button. C_EXAM04.PRG
+C. MENU_WAKE( nMenuNumber [,default] ) Added default button when
+   waking menu.
+D. Two additional colors setting added to MENU_COLOR. There is now
+   16 colors. The last two are fg_3d_color and Bg_3d_color. These
+   are the left and right 3d effect colors. (Default 15, 0)
+E. SCAN_CONV added to allow you to enter a scan key and convert it
+   to the high byte of an integer for CAD_SETUP.
+         nScanCode = SCAN_CONV( nScanKey )
+F. CIRCLE_3PT function added so three points can define a circle. Used
+   in OBJ_ADD to convert 3 points to a circle. A 3 point circle can
+   also be drawn with MS_OBJECT. Will be defined in the new Norton
+   Guides.
+
+
+********************************************************************
+As of 2/25/91 FLIP5.LIB date:
+
+A. Fix point styles 7,8, 10
+B. BUFF_LIMIT for PIE, and Character BARS fixed.
+C. PRT_OPTS : Novell print spooler. new 6th parameter, see C_EXAM07.PRG
+              in EXAMPLES.ZIP
+D. LEGEND bug when printed to background screen.
+E. MS_OBJECT:  1) add three point circle
+               2) polygon is now type 2, polyline is type 4.
+               3) branch key (default: insert) and pen up key
+                  (default: PGUP) is now implemented in type 4 polyline.
+               4) type 2 polygons automatically close and can be filled.
+
+********************************************************************
+As of 2/11/91:
+
+A. PRT_LIST( cString ) can now pass a character string with the path
+   and name of the PRX_TBL.BIN or and file with some other name:
+
+         FUNCTION SEL_PRINT
+         number = PRT_LIST("C:\FLIPPER\LIBRARY\PRX_TBL.BIN")
+         DECLARE PRINT_NAME[number]
+         PRT_LIST( PRINT_NAME )
+         @ 3, 9 TO 22, 41 DOUBLE
+         M_printer = ACHOICE(4,10,21,40,PRINT_NAME)
+         IF M_printer > 0
+            RETURN( VAL( SUBSTR( PRINT_NAME[M_printer], 1, 4 ) ) )
+         ENDIF
+         RETURN(0)
+
+   EXAMPLE: G_EXAM41.PRG
+
+B: The background screen will now SAVE SCREEN, RESTORE SCREEN,
+   winbuff = SAVESCREEN( t, l, b, r ), RESTSCREEN( t, l, b, r, winbuff ),
+
+   EXAMPLE: G_EXAM28.PRG
+
+
+********************************************************************
+As of 2/4/91:
+
+A: PCX image display enhanced. Now black and white images can be
+   displayed on a EGA/VGA 16 color card.
+
+     FPCX_PUT( nX, nY, cAction, cFileName [ nFg, nBg ] )
+
+     a. 16 colors PCX picture on EGA/VGA screen - nFg, nBg has no effect
+
+     b. Mono PCX picture on EGA/VGA screen      - nFg is color of foreground,
+                                                  nBg color of background
+
+     c. 16 color PCX on Mono screen             - nFg selects video plane to
+           nFg 15 = 00001111 (All planes)         display. The bit position
+                4 = 00000100 (Plane 3)            determines which planes
+                3 = 00000011 (Plane 1&2)          will be displayed.
+                9 = 00001001 (Plane 4&1)
+           The first plane is placed with cAction, and the remaining planes
+           are OR'd to the previous image.
+
+B: Filling now works for objects created in the cad system.
+
+C: The background screen will print faster in portrait mode.
+
+********************************************************************
+As of 1/11/91:
+
+A. Use Flipper with Summer '87 and Clipper 5.0
+
+   Flipper can work with both 5.0 and Summer '87 Clipper. The
+   FLIP5.LIB library is used with both Clipper's. The SUMMER87.LIB
+   should be linked with Summer '87 Clipper. The CLIP50.LIB should be
+   linked with Clipper 5.0. Two small batch files included in the
+   examples directory - C87.BAT & C50.BAT - can help you when first
+   compiling the examples.
+
+   The Summer '87 version contains a modified Clipper screen driver
+   allowing you to do GET's, SAY's, DBEDIT on the graphics screen.
+   The previous beta version of the screen drivers has been modified
+   to scroll. This special documentation for the screen drivers can
+   be found in the Flipper Functions menu item on the Norton Guides
+   main menu. Nantucket has not yet provided the screen drivers for
+   the Clipper 5.0 version. When those become available I will
+   incorporate them into the CLIP50.
+
+   The Clipper 5.0 serial interface did not work as well as the
+   Summer '87 version so I added an interrupt driven communications
+   module to download the HPGL commands. These functions start with
+   ICOM_. Because of this, the HP_SETUP function was separated into
+   HP_SETUP and COM_SETUP functions.
+
+B. Changes or additions not in the manual. These changes are
+   documented in the Norton Guides database.
+
+   Chapter 4.
+      AUTO_SCALE  Additional parameters added for zooming a data set.
+
+   Chapter 7.
+      PRT_LIST    Returns the ID and Names of the printers in the
+                  driver table.
+
+      HP_LNWIDTH  Set a line width array for a LaserJet III HPGL device.
+      PS_LNWIDTH  Set a line width array for a postscript device.
+
+      ICOM_CLOSE  Interrupt drivers for serial communications with
+      ICOM_OPEN   plotter.
+      ICOM_READ
+      ICOM_WRITE
+      ICOM_ERROR
+
+   Chapter 8.
+      FRET_TYPE   Takes optional font handle parameter.
+
+   Chapter 10.
+      FCIRC_CLOS  Draws a closed arc.
+      FOVAL_CLOS  Draws a closed oval arc.
+      LINE_WIDTH  Replaced by HP_LNWIDTH and PS_LNWIDTH Page 10-26
+
+C. Moving from Flipper IV to Flipper 5.0
+
+   1. New manual
+
+      The manual was the most criticized aspect of Flipper IV. We tried
+      to incorporate all of the changes suggested by our users - a)
+      functions in alphabetical order, b) one function on a page, c)
+      tutorial, d) more explanation on each page. You will have to
+      tell us if we improved the manual. Because of these changes, we
+      felt we had to rename some functions so like functions would
+      start with the same name and appear close to each other in the
+      manual. For example, SAY_LEGEND was changed to LEGEND_SAY.
+
+   2. Program changes
+
+      a. The printing capabilities have been enhanced:
+
+         1- Print driver expands images 10 times faster.
+
+         2- New background screen to print images at the resolution
+            of the screen.  Lets you print a true 300 dot/inch image
+            on a HP LaserJet II at 8 by 10 inches in size.
+
+         3- Vector Postscript printing for generating true scaleable
+            publication quality images.
+
+         4- Support for internal fonts on the HP LaserJet III in HPGL mode.
+
+         5- Interrupt driven IO drivers which allows you to return
+            information from the plotter such as digitized points.
+
+         6- Support for color printers such as Epson LQ2550, HP PaintJet
+            and HP PaintJet-XL.
+
+      b. Data storage buffer changes.
+
+         1- Removed the 7 data column limitation. Now you can set the
+            column number to any value. The number of rows still
+            depends on the size of the FLIP_INIT.
+
+         2- The data in the buffer can be auto scaling before
+            printing, or an axis can be placed down without plotting
+            the data.
+
+         3- RESET has been changed to FLP_RESET.
+
+      c. Many small requested changes
+
+         1- Color control: You can now set the color of the inside of
+                           the graph frame or the inside of the
+                           legend frame.
+
+         2- Missing value: You can now include the X axis as part of
+                           the missing data.
+
+         3- Styles: The point and fill styles have been changed to
+                    reflect the additional number of columns
+                    available.
+
+         4- Graph types: An area graph has been added as SET_TYPE 2.
+                         The point type has been moved to SET_TYPE 5.
+
+         5- Log charts:  The log charts will now set the minimum and
+                         maximum values manually so they can be less
+                         than one cycle.
+
+         6- Limit buffer: New function to limit the range of data you
+                          plot from the buffer - BUFF_LIMIT(),
+                          AUTO_SCALE().
+
+         7- PIE:  The parameters are now in percent of screen
+                  distance.
+
+         8- PLOT: limit parameters moved to BUFF_LIMIT.
+
+         9- SAY_LEGEND, SET_LEGEND -> LEGEND_SAY, LEGEND_SET. Also,
+            new parameters added- justification, alignment, frame
+            line and distance between labels.
+
+         10-SPLINE now uses previous data when the set is limited by
+            BUFF_LIMIT.
+
+      d. Fonts handling
+
+         1- Stroke fonts have been added so fonts can be scaled up
+            and down and rotate to any angle.
+
+         2- Any bit mapped font can be compiled directly into the
+            program so you won't have disk fonts all over the place.
+            Please contact ProWorks to get the compiled fonts.
+
+         3- SAY_FIXED allows you to print a font as a fixed space
+            font rather than proportionally spaced so tables will
+            align correctly.
+
+         4- The third font handle is a 8 wide by 16 high available on
+            EGA & VGA cards. The first disk font loaded will be font
+            handle 4.
+
+      e. Picture stuff.
+
+         1- Direct PCX to screen display - FPCX_PUT.
+
+         2- Saving images to background video pages.
+
+      f. Drawing stuff
+
+         1- New functions - see chapter 10
+
+         2- FLINE now split into FLINE and FBOX.
+
+         3- CAP_MOVE can return and set the last end point for a
+            drawing function.
+
+         4- Fill of any closed figure with PAT_SETFIL
+
+         5- FPOLY_LINE function added.
+
+      g. Viewports
+
+         1- The SET_WORLD now takes the place of all logical coordinate
+            setting.
+
+      h. Mouse driver
+
+         1- Totally re-written event driven mouse driver. You can
+            detect events such as keyboard presses, mouse buttons,
+            region crosses, timer events, and many others depending
+            on which functions you're using.
+
+         2- Cursor position can be shown on the screen.
+
+         3- Graphical menus have been added to select items in
+            graphics mode with the mouse or keyboard - Chapter 13.
+
+         4- CAD-like functions have replaced the MS_OBJECT functions.
+
+      i. General Changes
+
+         1- Most RET_ functions have disappeared and the function
+            used to set the function also returns the current value.
+            This was to reduce the number of functions in the
+            library.
+
+         2- The library has been made more granular, linking only
+            functions referenced in your program.
+
+   3. Linking - Please make sure the subdirectories within these batch file
+                are directed correctly for your system.
+
+      a. RTLINK Clipper5.0  - see C50.BAT & FLIP50.LNK in examples
+                              subdirectory.
+
+      b. PLINK Summer 87 -  see C87.BAT & FLIP87 in examples.
+                            subdirectory.  (You must combine FLIP5.LIB &
+                            SUMMER87.LIB with a LIB.EXE library manager)
+                            [ i.e. LIB FLIP5 +SUMMER87 ]
+
+      c. WARPLINK - see WL.BAT and WARPLINK.LNK in examples
+                    subdirectory. Uses WARPROOT.LIB for those
+                    functions required to be in the root.
+
+      d. BLINKER - see B50.BAT & BLINK50.LNK and B87.BAT & BLINK87.LNK.
+
+      e. LINK    - see L.BAT is a batch file for using LINK.EXE 3.61 or
+                   later.
+
+If you have a problem with a function, try to find an example that
+uses that function and compile and run it. Since CLIPPER 5.0 is not
+totally solid yet, we're not sure what problems we may run into.
+However, if you should have a problem that you can not correct, the
+best way to get help is to develop a small example PRG that shows the
+problem and send it to ProWorks VIA compuserve mail ID: 71247,1432,
+or upload it to our BBS.
+
+Flipper has been through a major rewrite and will possibly contain
+problems that we are not currently aware of. Once we are aware that
+we have a problem and can demonstrate it, we will proceed as quickly
+as possible to correct it. The latest version of our software will
+always be on the BBS for authorized users to download.
+
+Sincerely,
+
+Gary Prothero
+Developer
+ProWorks
+

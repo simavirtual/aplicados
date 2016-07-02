@@ -1,0 +1,122 @@
+HELPSYS 2.0
+
+(c)1994 - Jeff Lewis
+
+------------------------------------------------------------------------
+
+HelpSys 2.0 Function Library
+
+	This product is being released as a Shareware product.  This 
+means that this version of the program may be freely copied and 
+evaluated by anyone.  If you decide that this product will suit your 
+needs, simply send a $30.00 donation to us and we will send you a more 
+powerful version of the software that lets you have more control.  Also 
+included will be several functions that allow window manipulation, 
+printing and video stack saving.  These will be documented and include 
+sample programs on usage.
+
+	This HelpSys module was designed for quick and easy help 
+screens without adding a single line of code to your Clipper 5.01 or 
+Clipper 5.2 application.  Simply link in the object file, include the 
+HELPSYS2.LIB file and create your help text file.  That's all there is to 
+it. You'll have field level help with out much work or effort on your 
+part.
+
+	The Shareware version does NOT contain any of the help 
+control modules or window printing modules.  This version is also 
+slightly crippled, when pressing F1 to invoke the help screen(s), you 
+can only bring up the help screens a total of 10 times per application 
+execution.  This should be more than sufficient for your testing.  Also, 
+upon registering, for an additional $10.00 I will send you full source 
+code that you can modify as needed.  I know that when developing, I 
+always feel more comfortable about my application when using libraries 
+that I have control over.  You will not be allowed to distribute the 
+source code or object code for the registered version of this software.
+
+	Registered users of HelpSys 1.1 can upgrade for the difference 
+price ($10.00).  Also, upon registering, if you’ve received source code 
+for HelpSys 1.1, you will also receive source code for 2.0 for no 
+additional cost to you.
+
+Features:
+	Press F1 for help from ANY screen and field
+	On-Line help without ANY additional programming
+	Field Level Help with a professional look
+	Procedural level help for non-field entries
+	Capable of Several Screens of help per field, not just one line
+	Intelligent help window moving when help window covers the current field
+	Multi-level Help
+	Automatic  Help Topics index is displayed when no further help
+	           is available
+	Toggle between Development and User modes while developing on-line help
+
+Additional Features after registering:
+	Window and Text Color Control
+	Window Positioning Control
+	Generic Window functions that can be used in your own programs
+	(including printing within a window)
+	Video Stack function calls
+	Database Stack function calls
+	Quick Alert Printing function
+	DOCUMENTATION
+	[Optional Source Code written entirely in Clipper]
+
+
+Why should I register?
+
+	I feel that after all this work and effort, $30.00 is a minimal 
+charge for providing such capabilities (+ $10.00 if you want the source 
+code).  There are several other routines that I've written over the past 
+several years that I'll plan on releasing as Shareware (including software 
+security routines).  This is to everyone’s advantage.
+
+	When registering, please provide me with your Compuserve or 
+Internet account name or address if you have one.
+
+Jeff Lewis
+P.O. Box 441456
+Indianapolis, Indiana  46244
+
+CIS: 70711,3030                      INTERNET: 
+JLEWIS@INDYCMS.IUPUI.EDU
+
+
+HelpSys 2.0 - For the Developer
+
+	Initially you will need to tell HelpSys 2.0 that you are a 
+developer.  You can do this by setting the environment variable 
+HELPMODE to any value at the command prompt.
+
+	i.e.
+
+	SET HELPMODE=DEVELOPER
+
+	Once this has been entered and HelpSys2 is invoked (via the 
+F1 key) you will see a message appear in the upper left corner of the 
+screen [Developer Mode].  This enables you to press F1 anytime you 
+want to edit existing help or create additional help screens.  When a 
+new help screen is created, you will be notified via an alert.  You can 
+then edit the help (or blank help window) and press ESC when done.  It 
+will automatically be saved at that point.
+
+	The F2 key is available to toggle between Developer mode and 
+User mode.  When in Developer mode, you can add Help Screens.  
+When in the User mode, when no more help is available, a Help Topics 
+list will automatically appear or all available help.  Also, since the 
+HELPMODE was defined you can delete unwanted Help Screens by 
+pressing the DEL key on the highlighted help topic and confirming the 
+‘Are you sure you want to delete this entry?’ question.
+
+	The Help Topics list will appear when no help is available 
+while HELPMODE has not been assigned (no deleting will be allowed 
+if HELPMODE is not defined) or while in User mode.  The help topic 
+is ALWAYS the FIRST LINE IN THE HELP SCREEN.
+
+Program Notes:
+
+	When Linking include HELPSYS.OBJ with your program and 
+include HELPSYS2.LIB
+
+RTLINK FILE TEST.OBJ,HELPSYS.OBJ LIB HELPSYS2
+or
+BLINKER FI TEST.OBJ HELPSYS.OBJ LIB HELPSYS2

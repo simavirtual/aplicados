@@ -1,0 +1,13 @@
+#
+#     95.06.22    INTMAIN.LNK
+#
+file intmain      # Main function
+file inthand      # Interrupt handlers
+nobell            # No beep at end of link
+bli exe extended  # Extended mode only
+echo
+echo Change the following line to your compiler library name
+lib blxxxxnn      # Compiler language library
+defbegin
+   segment inthand_text fixed
+defend

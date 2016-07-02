@@ -1,0 +1,11 @@
+prelink
+output CT
+
+file ctus
+lib ct, clipper, extend, dbfntx, terminal
+
+refer _VOPS, _VMACRO, _VDB, _VDBF, _VDBFNTX
+refer _VTERM, _VPICT, _VGETSYS
+refer _VDBG
+
+exclude ERRORSYS

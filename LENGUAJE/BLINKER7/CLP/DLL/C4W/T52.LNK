@@ -1,0 +1,10 @@
+#
+#  96.03.23    T52.LNK for CA-Clipper 5.2
+#
+#  This sample link file demonstrates how to link a Clip-4-Win
+#  5.2 EXE which will call a statically linked CA-Clipper Windows DLL.
+#
+   @t                       # Include the generic link file for all versions
+
+   file blxclp52            # Clipper 5.2 DLL OBJ for the EXE
+

@@ -1,0 +1,29 @@
+#
+#  96.03.15    DBUDLL.LNK
+#
+#  This sample link file demonstrates how to place
+#  the whole DBU utility into a DOS extended DLL
+#
+   bli exe ext          # Create DOS extended DLL
+   out dbudll           # The DLL name
+
+   fi dbu               # List .OBJ files here
+   fi dbuview
+   fi dbucopy
+   fi dbuedit
+   fi dbuhelp
+   fi dbuindx
+   fi dbunet
+   fi dbustru
+   fi dbuutil
+
+   fi bldclp53          # Clipper 5.x DLL initialisation
+
+   defbegin             # Module definition commands
+      library dbu       # Indicate a DLL
+      exports
+         DBU            # Export the DBU function
+   defend
+   nodeflib             # No default libraries
+   nobell               # No irritating beep
+

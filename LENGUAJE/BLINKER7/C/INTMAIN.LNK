@@ -1,0 +1,17 @@
+#
+#     96.11.12    INTMAIN.LNK    Link file for dual interrupt handler example
+#
+file intmain      # Main function
+file inthand      # Interrupt handlers
+nobell            # No beep at end of link
+bli exe extended  # Extended mode only
+dosseg            # Default except for WATCOM C/C++ which requires it
+
+echo
+echo Change the following line to your compiler library name
+
+lib blxcccnn      # Compiler language library
+
+defbegin
+   segment inthand_text fixed    # Ensure handler is in real mode DOS memory
+defend

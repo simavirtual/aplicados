@@ -1,0 +1,220 @@
+ PACKING.LST              Blinker 4.0 packing list                   96.03.23
+ -----------              ------------------------                   --------
+
+  This file contains a list of all the files which will be installed and
+  their functions.
+
+BLINKER directory
+-----------------
+
+  3RDPARTY.DOC      3rd party library compatibility chart
+  BLICFG.EXE        Blinker 4.0 configuration program
+  BLIGPF.EXE        Blinker 4.0 GPF dump reader
+  BLILIB.EXE        Blinker 4.0 import librarian
+  BLINKER.COM       Driver to force BLINKER to run as a DOS program
+  BLINKER.EXE       Blinker 4.0 executable
+  BLINKER.NG        Blinker 4.0 Norton Guide online reference
+  BLINKER.HLP       Blinker 4.0 Windows Help online reference
+  BLINKMEM.EXE      Blink Inc. XMS and UMB memory test program
+  DEBUG.DOC         Latest debugging notes
+  PACKING.LST       Installation files (this file)
+  READ.ME           Last minute notes and amendments to the printed manual
+  README.WRI        Last minute notes and amendments to the printed manual
+  TFFAX.TXT         Instructions for the Blink Inc Technical Fast Fax
+
+
+ASM subdirectory
+----------------
+
+  BLERRPRG.ASM      Assembly language source for Blinker error handler
+  LIMERICK.ASM      Sample program in Assembly language (part 1)
+  TEST.ASM          Sample program in Assembly language (part 2)
+  TESTOVL.LNK       Sample link file with overlays
+
+
+BAS subdirectory
+----------------
+
+  BLERRPRG.BAS      BASIC source for Blinker error handler
+  LIMERICK.BAS      Sample program for MS BASIC PDS 7.1 (part 1)
+  TEST.BAS          Sample program for MS BASIC PDS 7.1 (part 2)
+  SWAPDEMO.BAS      Program demonstrating the Blinker swap function
+  BLINKER.BI        Include file for Blinker functions
+  TESTOVL.LNK       Sample link file with overlays
+
+
+C subdirectory
+--------------
+
+  INTHAND.ASM       Protected mode interrupt handler example
+  SETALL.BAT        Batch file called by SETxxx batch files
+  SETBCP.BAT        Set environment for Blinker Borland C++ examples
+  SETDEL.BAT        Delete Blinker examples environment settings
+  SETMVC.BAT        Set environment for Blinker Microsoft Visual C++ examples
+
+  APITST.C          Blinker DOS extender API test program
+  BLERRPRG.C        C language source for Blinker error handler
+  GPFHAN.C          Replacement GPF handler example
+  INTMAIN.C         Protected mode interrupt handler main program
+  LIMERICK.C        Sample C program (part 1)
+  TEST.C            Sample C program (part 2)
+  SELDMP.C          Selector dump program
+  SWAPDEMO.C        Program demonstrating the Blinker swap function
+  XMS.C             Real mode interrupt sample program
+  BLINKER.H         C/C++ include file for Blinker API functions
+  BLX286.H          C/C++ include file for Blinker DOS extender functions
+  INTMAIN.LNK       Protected mode interrupt handler link file
+  TESTOVL.LNK       Sample link file with overlays
+  ALL.MAK           Make file included by example make files
+
+
+C\DLL subdirectory
+------------------
+
+  Example programs for DOS extended and Windows DLLs
+
+
+CLP subdirectory
+----------------
+
+  SETCLP.BAT        Set environment for CA-Clipper examples
+  SETDEL.BAT        Delete Blinker examples environment settings
+
+  BLINKER.CH        Blinker API function header
+  BLERRC50.PRG      Clipper 5.0 Blinker error handler
+  BLERRPRG.PRG      Clipper S'87 Blinker error handler
+  BLFRGPRG.PRG      Clipper S'87 Fragmentation demonstration
+  PROFILER.PRG      Blinker Profiler program
+
+  SAMPLE87.LNK      Example script for Summer '87
+  SAMPLE5X.LNK      Example script for Clipper 5.x
+  TESTOVL.LNK       Sample link file with overlays
+  SWAPDEMO.PRG      Program demonstrating the Blinker swap function
+  LIMERICK.PRG      Sample Clipper program (part 1)
+  TEST.PRG          Sample Clipper program (part 2)
+
+  ALL.RMK           Make file included by example make files
+
+
+CLP\DLL subdirectory
+--------------------
+
+  Example programs for DOS extended and Windows DLLs
+
+
+CLP\LNK subdirectory
+--------------------
+
+  CL501MIN.LNK      Clipper 5.01 CLIPPER/EXTEND standard overlay script
+  CL501MID.LNK      Clipper 5.01 CLIPPER/EXTEND medium overlay script
+  CL501MAX.LNK      Clipper 5.01 CLIPPER/EXTEND maximum overlay script
+
+  CL520MIN.LNK      Clipper 5.2  CLIPPER/EXTEND standard overlay script
+  CL520MID.LNK      Clipper 5.2  CLIPPER/EXTEND medium overlay script
+  CL520MAX.LNK      Clipper 5.2  CLIPPER/EXTEND maximum overlay script
+  CDX520.LNK        Clipper 5.2  DBFCDX overlay script
+  MDX520.LNK        Clipper 5.2  DBFMDX overlay script
+  NDX520.LNK        Clipper 5.2  DBFNDX overlay script
+  NTX520.LNK        Clipper 5.2  DBFNTX overlay script
+
+  CL530MID.LNK      Clipper 5.3  CLIPPER/EXTEND medium overlay script
+  CL530MAX.LNK      Clipper 5.3  CLIPPER/EXTEND maximum overlay script
+
+  CL87MIN.LNK       Clipper S'87 CLIPPER/EXTEND standard script
+  CL87MID.LNK       Clipper S'87 CLIPPER/EXTEND medium overlay script
+  CL87MAX.LNK       Clipper S'87 CLIPPER/EXTEND maximum overlay script
+
+
+CLP\TPL subdirectory
+--------------------
+
+  BLIDUA.TPL        CA-Clipper 5.3 template for Blinker dual mode program
+  BLIEXT.TPL        CA-Clipper 5.3 template for Blinker extended mode program
+  BLIRMD.TPL        CA-Clipper 5.3 template for Blinker real mode program
+
+
+FOR subdirectory
+----------------
+
+  LIMERICK.FOR      Sample FORTRAN program (part 1)
+  TEST.FOR          Sample FORTRAN program (part 2)
+  SWAPDEMO.FOR      Program demonstrating the Blinker swap function
+  BLINKER.FI        FORTRAN include file for Blinker API functions
+  BLX286.FI         FORTRAN include file for Blinker DOS extender functions
+  TESTOVL.LNK       Sample link file with overlays
+
+
+FRC subdirectory
+----------------
+
+  BLINKER.HDR       FORCE include file for Blinker functions
+  TESTOVL.LNK       Sample link file with overlays
+  BLERRPRG.PRG      FORCE language source for Blinker error handler
+  LIMERICK.PRG      Sample FORCE program (part 1)
+  TEST.PRG          Sample FORCE program (part 2)
+  SWAPDEMO.PRG      Program demonstrating the Blinker swap function
+
+
+LIB subdirectory
+----------------
+
+  BLXBCP31.LIB      Borland C++ 3.1 dual mode library
+  BLXBCP40.LIB      Borland C++ 4.0 dual mode library
+  BLXBCP45.LIB      Borland C++ 4.5 dual mode library
+  BLXCLP50.LIB      CA-Clipper 5.01a dual mode library
+  BLXCLP52.LIB      CA-Clipper 5.2d dual mode library
+  BLXCLP53.LIB      CA-Clipper 5.3 dual mode library
+  BLXMSF51.LIB      Microsoft Fortran 5.1 extended mode library
+  BLXMSC51.LIB      Microsoft C 5.1 dual mode library
+  BLXMSC60.LIB      Microsoft C 6.0a dual mode library
+  BLXMSC70.LIB      Microsoft C/C++ 7.0 dual mode library
+  BLXMVC10.LIB      Microsoft Visual C++ 1.0 dual mode library
+  BLXMVC15.LIB      Microsoft Visual C++ 1.5 dual mode library
+  BLXRATEX.LIB      Rational Extender / EXOSPACE protected mode library
+  BLXSCP60.LIB      Symantec C/C++ 6.0 dual mode library
+  BLXSCP61.LIB      Symantec C/C++ 6.1 dual mode library
+  BLXSCP70.LIB      Symantec C/C++ 7.0 dual mode library
+  BLXWCC10.LIB      Watcom C/C++ 10.0 dual mode library
+
+
+MOD subdirectory
+----------------
+
+  BLERRHAN.DEF      Modula 2 include file for Blinker error handler
+  BLINKER.DEF       Modula 2 include file for Blinker functions
+  BLERRHAN.MOD      Modula 2 language source for Blinker error handler
+  SWAPDEMO.MOD      Program demonstrating the Blinker swap function
+
+
+OBJ directory
+-------------
+
+  BLDCLP50.OBJ      CA-Clipper 5.01 DLL handler for each DLL
+  BLDCLP52.OBJ      CA-Clipper 5.2 DLL handler for each DLL
+  BLDCLP53.OBJ      CA-Clipper 5.3 DLL handler for each DLL
+  BLXCLP50.OBJ      CA-Clipper 5.01 DLL handler for main EXE
+  BLXCLP52.OBJ      CA-Clipper 5.2 DLL handler for main EXE
+  BLXCLP53.OBJ      CA-Clipper 5.3 DLL handler for main EXE
+  BLXSHFTR.OBJ      Link for real mode values for __AHSHIFT, __AHINCR
+  BLXSHFTP.OBJ      Link for protected mode values for __AHSHIFT, __AHINCR
+  C0LP31.OBJ        Borland C++ 3.1 Large model dual mode startup
+  C0HP31.OBJ        Borland C++ 3.1 Huge model dual mode startup
+  C0LP40.OBJ        Borland C++ 4.0 Large model dual mode startup
+  C0HP40.OBJ        Borland C++ 4.0 Huge model dual mode startup
+  C0LP45.OBJ        Borland C++ 4.5 Large model dual mode startup
+  C0HP45.OBJ        Borland C++ 4.5 Huge model dual mode startup
+  FP7BCP31.OBJ      Borland C++ 3.1 emulator stub when using FP87.LIB
+  FP7BCP40.OBJ      Borland C++ 4.0 emulator stub when using FP87.LIB
+  FP7BCP45.OBJ      Borland C++ 4.5 emulator stub when using FP87.LIB
+  FP7WCC10.OBJ      Watcom C/C++ 10.0 emulator stub when using MATH87.LIB
+
+
+PAS subdirectory
+----------------
+
+  BLINKER.INC       PASCAL include file for Blinker API functions
+  TESTOVL.LNK       Sample link file with overlays
+  LIMERICK.PAS      Sample Pascal program (part 1)
+  TEST.PAS          Sample Pascal program (part 2)
+  SWAPDEMO.PAS      Program demonstrating the Blinker swap function
+

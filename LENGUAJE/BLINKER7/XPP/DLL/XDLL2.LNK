@@ -1,0 +1,15 @@
+#
+#  XDLL2.LNK   Blinker link file for Xbase++ DLL example
+#
+fi xdll2             # Main DLL file
+lib xdll1            # Import library from XDLL1
+out xdll2            # Output file name
+map s,a              # MAP file
+code                 # Include debugging information
+nobell               # No irritating beep
+
+deffile xdll2        # Include Xbase++ generated DEF file
+
+defbegin
+   exetype nt subsystem console
+defend

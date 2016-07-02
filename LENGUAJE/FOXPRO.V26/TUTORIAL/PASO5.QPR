@@ -1,0 +1,17 @@
+*
+* Este ejemplo es una consulta sobre 6 tablas y sirve
+* de paso previo a un informe relativamente complejo.
+*
+SELECT Oficinas.ciudad, Persvent.nombre, Clientes.c¢dcli, Clientes.empresa,;
+  Facturas.c¢dfac, Partes.descripc, Detalles.cantidad, Detalles.precio;
+ FROM Persvent, Oficinas, Facturas, Clientes, Partes, Detalles;
+ WHERE Oficinas.c¢dofi = Persvent.c¢dofi;
+   AND Facturas.c¢drep = Persvent.c¢drep;
+   AND Clientes.c¢dcli = Facturas.c¢dcli;
+   AND Detalles.c¢dfac = Facturas.c¢dfac;
+   AND Partes.c¢dpart = Detalles.c¢dpart;
+ ORDER BY Oficinas.ciudad, Persvent.nombre, Clientes.empresa, Facturas.c¢dfac,;
+  Partes.descripc;
+ INTO CURSOR PASO5
+REPORT FORM PASO5.FRX PREVIEW
+

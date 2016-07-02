@@ -1,0 +1,5 @@
+**** PROGRAMA: ETIQ1.PRG
+CLEAR
+USE func
+LABEL FORM func
+USE

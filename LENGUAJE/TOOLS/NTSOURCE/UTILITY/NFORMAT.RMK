@@ -1,0 +1,16 @@
+//   NFORMAT.RMK
+//   Make file for NFORMAT, the disk format utility of
+//   Nantucket Tools II.
+//   Copyright (c) 1991, Nantucket  Corp.  All rights reserved.
+//
+.prg.obj:
+    clipper $<
+
+.obj.exe:
+    rtlink fi $**,nt2us50 lib nt250
+
+nformat.obj:   nformat.prg
+
+nformat.exe:   nformat.obj
+
+

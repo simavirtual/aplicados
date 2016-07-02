@@ -1,0 +1,90 @@
+Using Blinker 5.1 with Force compilers
+
+
+(1) Force versions
+
+Two sets of example files are provided, to reflect syntax differences
+between Force versions 2.x and 4.0. The respective subdirectories are
+\frc\force2 and \frc\force4.
+
+
+(2) Compiling
+
+The provided Blinker header file, blinker.hdr, contains prototypes for
+Blinker functions. Force programs that call these functions must refer
+to this header file by a #include directive in the source file.
+
+Linking Force modules with Blinker does not require or contradict the
+use of any particular Force compiler switch.
+
+
+(3) Linking
+
+The first module specified in a FILE statement in the link script must
+be the application's main module. The main module is the one that
+contains the function main() (in the case of Force 4.0), or the function
+force_main (in Force 2.x).
+
+It is not necessary to explicitly specify the standard Force language
+runtime library (force.lib) in a LIB statement of the link script,
+provided the LIB environment variable is set up to point to the disk
+location of force.lib. The installation program of Force 4.0 offers to
+set this environment variable in the autoexec.bat file.
+
+
+(4) Overlaying
+
+Modules compiled with Force are overlayable with Blinker in most cases.
+Even the main module can generally be overlayed, as the actual startup
+module is provided by the Force runtime system. Many modules in
+force.lib can be overlayed as well. Example link scripts can be obtained
+from Force user support (see URLs in the end of this document).
+
+
+(5) Protected mode
+
+The Force runtime libraries up to version 4.00 are not fully protected
+mode compatible. The use of the Blinker DOS extender for producing
+protected mode Force applications is possible, as long as any call to
+the non-compatible Force library functions is avoided. For more
+information on protected mode compatibility issues, contact the Force
+user support (see URLs in the end of this document).
+
+
+(6) Windows programs
+
+Blinker is the Windows linker, recommended by ENforce Developments
+(manufacturers of Force compilers), for producing Windows executables
+and dynamic link libraries written in Force. Note that the restrictions
+mentioned above, with regard to protected mode incompatibility, apply
+to Windows applications.
+
+
+(7) Force anomaly
+
+When overlayed with Blinker version 3.0 and later, the Force runtime
+system presents an anomaly that may result in system crash. The object
+modules in the \frc\force2\obj directory correct this problem. The
+objects provided correspond to the following Force versions:
+
+Force 2.1e      fmm21e.obj
+Force 2.4c      fmm24c.obj
+Force 2.4e      fmm24e.obj
+Force 4.0       see below
+
+To apply the fix, link the application with the object module
+corresponding to the Force version in use.
+
+The fix for the latest Force release, Force 4.00, can be obtained from
+Force user support (see URLs in the end of this document).
+
+
+(8) Force user support
+
+Further information on using Force with Blinker, as well as related
+product updates and files, can be obtained from the following sources:
+
+Force web site:     http://force.szolnex.hu
+Force user support: mailto:support@end.szolnex.hu.
+
+

@@ -1,0 +1,658 @@
+ 
+ 
+         ∞±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       ∞∞±±±∞ﬁﬁﬁﬁ±∞ﬁﬁﬁﬁ±±±±∞ﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±
+       ∞∞±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ∞ﬁﬁ∞∞ﬁﬁ±±
+       ∞∞±∞ﬁﬁ±±∞∞±±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ∞ﬁﬁﬁ±±±±±
+       ∞∞±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁ±±±±
+       ∞∞±∞ﬁﬁ±±±±±±∞ﬁﬁ±±∞ﬁ±±∞ﬁﬁ±±±±∞ﬁﬁ∞∞±±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ±±±∞ﬁﬁﬁ±±
+       ∞∞±∞∞ﬁﬁ±±ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±±∞ﬁﬁ±±±±∞ﬁﬁ±±±±±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ∞ﬁﬁ∞∞ﬁﬁ±±
+       ∞∞±±∞∞ﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±
+       ∞∞±±±∞∞∞∞±±∞∞∞∞∞∞∞±±∞∞∞∞±±±∞∞∞∞±±±±∞∞∞∞∞∞±±∞∞∞∞∞∞±±±∞∞∞∞±±±±
+       ∞∞∞±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
+ 
+   Volume 2, Number 1                                      7 January 1992
+ 
+                  (c) Daniel Doáekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published WEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                                 HAPPY NEWYEAR!
+
+
+                               Table of Contents
+
+ 1. SOFTWARE  ..............................................................  1
+    WHAT IS WHAT, just take a short look into Clipper World  ...............  1
+    LIST, Another Database of Files - Clipper Shareware/Public  ............  3
+ 2. ANOMALIES  .............................................................  8
+    ANOMALIES reports and commets  .........................................  8
+ 3. CLIPPER NET  ...........................................................  9
+    Index of described files in Clipper BBS Magazine  ......................  9
+ 4. CLIPBBS  ............................................................... 11
+    CLIPBBS distribution  .................................................. 11
+    CLIPBBS, how to write an article!!!  ................................... 13
+
+                                   - - - - -
+ CLIPBBS 2-01                   Page 1                    7 Jan 1992
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+           WHAT IS WHAT, just take a short look into Clipper World
+ 
+ 
+ CL Professional
+ 
+         Database Warehouse, ú519
+         (C) Dr.Huggle&Partner Gmbh
+ 
+         CLTOOLS3.0 and CLREPORT 3.0 and CLTEXT 3.1 included in one
+         package.
+ 
+ CLARINET
+ 
+         Transparent connectivity to Novell's Netware operating system
+         from withing datbase applications. This function library
+         provides direct interation with network without having use
+         external NEtware utilities. Fully network aware applications,
+         includes service for connectios, worskstations, directories,
+         bindery, printing....
+ 
+ CLASSY
+ 
+         Adding own real objects (classes) into Clipper. For 5.0 it was
+         shareware, for 5.01 it's classic product for buy.
+ 
+ CLEAR+
+         Flowchars from source code, high resolution diagrams,
+         multi-level system tree charts, formatted source listing,
+         program flow simulation mode, multi-page charts with line
+         indexing, PCX and PIC file output, zooming and rotation,
+         portrait or landscape orientation. Supports dBASE II, III,
+         III+, IV, Clipper, Focbase, QuickSilver and dBXL.
+ 
+ CLIP2EB
+ 
+         Advantage of POWER of EMERALD BAY without leaving the security
+         of Clipper.
+ 
+ CLIPFPCX
+ 
+         Small and very fast function for displaying one .PCX file on
+         screen. Nothing else, but SHAREWARE and really very fast.
+ 
+ CLIPPER TOOLS, also called NANTUCKET TOOLS
+ 
+         Supported, supplied and written by Nantucket porvides with 270+
+         useful functions covering basic windowing, serial port,
+         database functions, screen, system informations, printer...
+ 
+ CLIPTOOLS
+ 
+ CLIPBBS 2-01                   Page 2                    7 Jan 1992
+
+
+         More than 270 functions to help with problems. Store file/field
+         details in text files and use intelligent functions to manage
+         .DBT files, powerful browser and user interface functions,
+         network, relation manipulation, menu system, virtual big screen
+         made from physical screens, low level functions, stack system,
+         full internatl network support, 500pages manual
+ 
+ CLIPX
+ 
+         set of function for windowing, look-ups and popus, implode,
+         explode and slide, DBHANDLE is a powerful replacement for
+         DBEDIT, dbgen generates databases, dbseek seeks
+         first/last/next/prevous key occurence, barmenu handles 4
+         directional bar option selection, completely documented with
+         numerous examples and help for NG engine.
+ 
+ CLIRMA
+ 
+         Clipper and DCA's IRMA subroutines to allow PC programs to
+         drive IBM 3270 mainframe screens via IRMA board. Requires
+         Summer 87 and MS linker v3.61 or later
+ 
+ CLREPORT 3.0
+ 
+         list programming, menu driven report rafting with WYSIWYG user
+         interface, complex evaluations included in reports. Directly
+         linkable runtime modules, more than 300 pritner types, graphics
+         and text output, screen output with horizontal and vertical
+         scrolling..
+ 
+ CLTOOLS 3.0
+ 
+         Over 250 functions in 20 groups, mouse, windowing, graphics,
+         operating system, serial interface, string processing, direct
+         access to DOS background printer spooler, 43 line EGA, 256
+         windows, nested GETs
+         windows like surface, graphics library including:
+         -       window processing on graphics screens
+         -       event management for running dialog boxes
+         -       mouse support, buttons, scrollbasrs, icon menues
+         -       about every graphics element you could thing of, image
+                 management, presentation graphics
+         -       PCS support, scan your pictures
+         -       unachieved results in printing
+         -       vector font, rubberbanding
+         -       printer spooler
+         -       serial interface functions
+         -       string management
+ 
+ CLTEXT 3.1
+ 
+         Object oriented text processing, 80 methosd of editing, MS word
+         like in look and feel, 350 printer installations included,
+         source included (probably).
+ 
+ 123CONNECTION
+ CLIPBBS 2-01                   Page 3                    7 Jan 1992
+
+
+         Transparent connectivity to Lotus compatible spreadsheet data
+         from within database applications. Ability to access, read or
+         write existin worksheets or create entirelyt new worksheets,
+         compatible with Lotus 123 release 1.x and 2.x worksheets of
+         unlimited size. Clipper Summer 87 and 5.0 compatible
+ 
+ CODE BASE
+ 
+         "C" library for datbase and screen managemet, Compatible with
+         data, index and memo files of dBASE and CLipper. Allows you to
+         buold a milti-user dBASE/Clipper compatible application with
+         pulldown menus, popup window, data entry from picklists and
+         more. Runs much faster than Clipper of FOX. Needs TurboC++,
+         Microsoft C, Zortech C++ or similar environment.
+ 
+ COMMTOOLS
+ 
+         Give your application the power of communication, Commtols is
+         development tool for CLipper 5.0 and Summer87 whcih extends the
+         Clipper dialect to include comms facilities. Send Faxes, dial
+         modems, importa data via your serial port, supports numernous
+         communications protocols and variety of hardware.
+ 
+ dANALYST GOLD
+ 
+         Converts from ANY single to multi-user application. Also
+         provides blocking diagrams, cross references variables,
+         performs data type analysis and lists data structures, Works
+         with DV386 and allows creating of Windows applications. Works
+         with Clipper, dBASE, Foxbase+, QuickSilver or C
+ 
+ DB2SC4
+ 
+         Utility to transcribe data from .DBF files to Supercals 4 and 5
+         formats by specifying record and field ranges and scopes.
+         Character blanks and zeros are automatically excluded. prompt
+         file paramters can automate the program from DOS. Developed in
+         Clipper, linkable object code version is available.
+
+ ------------------------------------------------------------------------------
+
+
+         LIST, Another Database of Files - Clipper Shareware/Public
+ 
+       DB3STR.ARJ      9828 CL-DB     View dBASE files without
+                                      runn dBASE prg.
+       DB3TAW.ARJ     27443 CL-DB     Tutorial for dBase III+
+       DB3TECH.ARJ    40099 CL-DB     dBASE III technical notes
+       DB3TIPS1.ARJ   41513 CL-DB     DBASE TIPS VOLUME 1
+       DB3TIPS2.ARJ   21740 CL-DB     DBASE TIPS VOLUME 2
+       DB3TIPS3.ARJ   13749 CL-DB     DBASE TIPS VOLUME 3
+       DB3TIPS4.ARJ   10474 CL-DB     DBASE TIPS VOLUME 4
+       DB3UTIL.ARJ    31483 CL-DB     Miscellaneous Utilities for dBase
+       DB3V12.ARJ      8304 CL-DB     A Review of dBASE III version 1.2
+       DB3V30.ARJ      4746 CL-DB     Two backup programs for dBASE III
+       DB3WIND.ARJ     4671 CL-DB     A dBase III window generator
+ CLIPBBS 2-01                   Page 4                    7 Jan 1992
+
+
+       DB3WPERF.ARJ    8827 CL-DB     [Beschreibung ging leider verloren]
+       DB3_DD.ARJ      7526 CL-DB     Data Dictionary Generator for
+                                      dBase III
+       DB4ANOM.ARJ    16431 CL-DB     Listing of dBase IV anomalies
+       DB4_ANOM.ARJ   67793 CL-DB     dBAse IV Anomalies (latest group)
+       DBA-501.ARJ    16160 CL-87     Data Based Advisor Source Vol. 5 No. 1
+       DBA-502.ARJ   143917 CL-87     Data Based Advisor Source Vol. 5 No. 2
+       DBA-503.ARJ    11004 CL-87     Data Based Advisor Source Vol. 5 No. 3
+       DBA-504.ARJ    46414 CL-87     Data Based Advisor Source Vol. 5 No. 4
+       DBA1286.ARJ    29105 CL-DB     Data Base Advisor Pgms Dec 86
+       DBACKUP.ARJ     3492 CL-DB     dBASE III backup program
+       DBADVAN.ARJ    20055 CL-DB     Advanced dBase II Utilities
+       DBAPG.ARJ      90739 CL-DB     Advanced prg. guide to dBASE II and III
+       DBARC.ARJ       3488 CL-DB     Access ZIP 4.30 from DB3 Menu
+       DBASE.ARJ       4065 CL-DB     A state + ZIP code checker for dBASE II
+       DBASEACC.ARJ   54984 CL-DB     A dBASE II account program
+       DBASECAT.ARJ    8257 CL-DB     Catalog your disk with Dbase
+       DBASEIII.ARJ    7425 CL-DB     Menu and disk catalog for dBASE III
+       DBASE_1.ARJ     2985 CL-DB     SAMPLE -- list DBase II file on screen
+       DBASE_C.ARJ    19313 CL-DB     From TCOG CGroup
+       DBASII.ARJ     11219 CL-DB     A collection of dBASE II programs
+       DBASWIN.ARJ    17085 CL-DB     DBASE III WINDOWING UTILITY
+       DBB.ARJ        18751 CL-DB     View dBase files
+       DBB12.ARJ      18729 CL-DB     DB Browser 1.2. Simulates dBase browse.
+       DBBACKUP.ARJ    4669 CL-DB     Backupprg. fÅr gr. Datenbanken in Dbase
+       DBBOOKS.ARJ    28310 CL-DB     dBaseII Bookkeep.System Income
+       DBBROW20.ARJ   12144 CL-DB     dB III DBF Beschreibung (gut)
+       DBBUDGET.ARJ    9438 CL-DB     dBase II Household Accounting System
+       DBCBIN.ARJ     18922 CL-DB     Utilities for dBase III/FoxBase+
+       DBCLINIC.ARJ   11562 CL-DB     Check Integr.of dBaseII Data
+                                      Files w/Doc
+       DBCLOCK.ARJ     2734 CL-DB     Real time dBase3+ clock program.
+       DBCMPILE.ARJ    4093 CL-DB     A dBASE II and III compiler
+       DBCOLOR.ARJ     3486 CL-DB     Custom color utility for dBASE III
+       DBCURSOR.ARJ    5391 CL-DB     dBASEIII bin. & src. curs. cntrl.
+                                      modules
+       DBDGET.ARJ     21775 CL-87     Demo eines geschachtelten Gets u.v.m.
+       DBDOCTOR.ARJ   56350 CL-DB     .DBF file recovery and more!
+       DBDWIND2.ARJ   24769 CL-50     Windows for Clipper - fast ASM routines
+       DBE2TB.ARJ     30593 CL-50     This ZIP file contains about 30
+                                      examples
+       DBEDIT.ARJ    121409 CL-DB     Database file editor for DBase III
+       DBEDIT10.ARJ    5679 CL-DB     dBASE III command line editor
+       DBEPSON.ARJ     4609 CL-DB     DBASE III EPSON PRINTER SETUP
+       DBF2MEMO.ARJ    8304 CL-DB     Konvertieren von CHR String in dBIII
+                                      DBF
+       DBFILE.ARJ      6003 CL-DB     Compress/expand Dbase prog files
+       DBFLIS.ARJ     12335 CL-87     Listet DBF Struktur
+       DBFLOW.ARJ     21502 CL-DB     Create dBASE flow chart to screen /file
+       DBFRED37.ARJ    8493 CL-DB     Append Files with One or More Fields
+       DBFSPSS.ARJ     8911 CL-DB     Konvertiert DBase Dateien nach SPSS
+       DBFSTRU.ARJ     3236 CL-87     dBASE III/IV Datenbankstruktur
+       DBF_LINE.ARJ   22169 CL-87     Sideliner/Flowchart IF
+       DBGRAF.ARJ      4884 CL-DB     Graphics Generator for dBase II
+       DBIIBOOT.ARJ    4473 CL-DB     Automatic.boot dBASE applications on
+                                      RAM
+ CLIPBBS 2-01                   Page 5                    7 Jan 1992
+
+
+       DBIIIBBS.ARJ    3683 CL-DB     Import a BBS transfer list to dBASE III
+       DBIIICOL.ARJ    5159 CL-DB     Custom color menu selection for
+                                      dBASEIII
+       DBINFO.ARJ     13490 CL-DB     Dbase DBF view
+       DBLOCK.PRG      4282 CL-87     Spalte beim DBEDIT  einfrieren
+       DBLOGCRY.ARJ    7904 CL-87     Dbase/Clipper Login ver/entschluesseln.
+       DBLOOK.ARJ     15989 CL-DB     Liest dBase Daten von Turo Pascal
+       DBMAKE.ARJ     10013 CL-87     Anlegen DBF Dateien au·erhalb eines PRG
+       DBMENU.ARJ     64435 CL-DB     dBase MenÅgenerator
+       DBMENU-1.ARJ   14317 CL-DB     [Beschreibung ging leider verloren]
+       DBMENU40.ARJ   63104 CL-DB     DBASE III + Menu Application Generator
+       DBMG.ARJ      149675 CL-DB     dBase Maskengenerator
+       DBMLM.ARJ      82534 CL-DB     [Beschreibung ging leider verloren]
+       DBNEET.ARJ     19482 CL-DB     Cleans up your dBASE programs
+       DBOBJECT.ARJ  126224 CL-50     5.0x Sample how to create NEW
+                                      OBJECTs (pseudo)
+       DBORDER.ARJ     2898 CL-87     Setzt Rahmenfarbe f. Clipper
+       DBPOWR44.ARJ   60425 CL-DB     Handy set of tools for dBase C source
+       DBPRETTY.ARJ   20602 CL-DB     Formatting Prg.for dBaseII
+                                      Command Files
+       DBPRINT.ARJ    25170 CL-DB     Purpose Mailing List & Record
+                                      Ptr/dBase
+       DBPRN12.ARJ     4919 CL-DB     Checks printer status for dBASE III+
+       DBREP.ARJ       6798 CL-DB     Global search+replace prg.for
+                                      dBASE III
+ [1-05]DBSCN2.ARJ    162837 CL-50     DbScreen 2.0
+       DBSEEK.ARJ      8569 CL-87     UDF in DBEDIT
+       DBSHOP.ARJ      8306 CL-DB     Let dBase II Help with Grocery
+                                      Shopping
+       DBSM_20.ARJ   192829 cl-50
+       DBSOUND1.ARJ    8014 CL-87     Soundex Suche fÅr dBase
+       DBSOUNDX.ARJ    8014 CL-87     Phonetisches suchen SOUNDEX Code.
+       DBSQUASH.ARJ    7753 CL-DB     Compact or Squeeze dBaseII Command
+                                      Files
+       DBSSTEEL.ARJ    3640 CL-DB     Read before downloading DBSTEEL Pgrms
+       DBSTEEL1.ARJ   92654 CL-DB     Dsk 1 / Integ. Multi-Func. Database Pgm
+       DBSTEEL2.ARJ   98169 CL-DB     Dsk 2 / Integ. Multi-Func. Database Pgm
+       DBSTEEL3.ARJ   96539 CL-DB     Dsk3 of Intergrated Multi Func. Pgm
+       DBSTEEL4.ARJ   98880 CL-DB     Dsk4 of Intergrated Multi Func. Pgm
+       DBSTPO21.ARJ   11646 CL-DB     Display dBASE file structure from DOS
+       DBSTRUCT.ARJ   10059 CL-87     Strukturgenerator fÅr Datenbanken
+       DBTOOLS.ARJ    18964 CL-DB     Invoke dBaseIII Com.Outside of
+                                      dBase Prg
+       DBTOWP.ARJ      8036 CL-87     Konvertiert DBF nach WordPerfect
+       DBTWEG.ARJ      8017 CL-87     Lîschen der phy. Bindung DBF-DBT
+                                      Clipper
+       DBUG_UDF.ARJ    3140 CL-87     Anzeige Array fÅr debug Zwecke
+       DBUNIQ23.ARJ    9541 CL-DB     Utilit.to Purge Duplicate dBaseII
+                                      Record
+       DBUTIL.ARJ     14803 CL-DB     Miscellaneous Utilities for dBase
+       DBUTIL6.ARJ    11990 CL-DB     dBase utilities
+       DB_FORM.ARJ     3245 CL-DB     Format.dBASE-Prg.Åbersichtlich/
+                                      Schleife
+       DB_FRM_C.ARJ   17845 CL-DB     Read +Write dBase III Files from C Prg
+       DB_LIST.ARJ     5871 CL-DB     Komfortabler dBase-Programmlister
+       DB_WORD2.ARJ    5649 CL-87     Dbase und Word
+ CLIPBBS 2-01                   Page 6                    7 Jan 1992
+
+
+       DCBETA2.ARJ   292777 CL-50     (yet  to be descriped)
+       DCOLOR.ARJ      8701 CL-87     Farbeinstellung unter Clipper
+       DDPRINT.ARJ     3611 CL-DB     Print dBase data dictionary
+       DDU.ARJ        23695 CL-NONe   Data-Dictionary fÅr Clipper 5.0x
+       DECANT.ARJ     16221 CL-DB     [Beschreibung ging leider verloren]
+       DEDIT.ARJ     121239 CL-87     Editor fÅr dBase
+       DEDIT100.ARJ  125057 CL-TOOL   Database Structure Editor. Create/
+                                      modify DBFs
+       DELISLE.ARJ    12993 CL-50     OOP for clipper
+       DEMO2_EX.ARJ  133438 CL-87     Ein Prg erstellt mit Producer als EXE
+       DESCEND.ARJ     3835 CL-87     Funktion fÅr STR
+       DESCEND4.ARJ    4467 CL-87     dito.. Clipper
+       DESKTOP.ARJ   144986 CL-87     DesktopoberflÑ.u.Farbeinstellung
+                                      m.Demo
+       DEV.ARJ        22377 CL-50     Clipper development environment.
+       DFIXUP2.ARJ    29068 CL-DB     dBASE II
+       DFLOW.ARJ      25204 CL-87     MenÅgesteuerter  Flow Analyser*gut*
+       DFLOW.ARJ      30915 CL-DB     DBase III Program Listing Utility Demo
+       DGCLIP.ARJ     85843 CL-DB     A dBASE III code and screen generator
+       DGEDEMO.ARJ   101186 CL-87     Eine Grafikdemo Clipper
+       DGENIUS.ARJ    14136 CL-DB     Collection of dBaseIII+  Assistant Prg
+ [1-07]DIAL.ARJ        1791 CL-50     simple modem dialer
+       DIR2TEXT.ARJ   14616 CL-DB     Import Dir entries to your database mgr.
+       DIREXIST.ARJ    3857 CL-87     öberprÅft ob Dir existiert
+       DIRMAN.ARJ     33700 CL-50     Directory manager - Source
+       DIRSEEK.PRG    13312 CL-87     Direktory Graphisch in Clipper ACHOISE
+       DISKSPAC.ARJ    3826 CL-DB     Check drive status &space for dBASE III+
+       DISPLAY.ARJ    27651 CL-NONe   Beliebige Textfiles in Clipper listen
+       DISPNDX.ARJ     4805 CL-DB     Display contents of a dBASE index file
+       DKCOLOR.ARJ    95786 CL-50     5.0? Nice Color Utility.
+       DL1B.ARJ       12969 CL-DB
+       DLB208.ARJ     84636 CL-50     (yet  to be descriped)
+       DLDBEVAL.ARJ    1842 cl-50     5.0x How to combine ACHOICE with DBEVAL
+       DLIST.ARJ      33484 CL-87     Super Strukturlister fÅr Clipper
+       DLITE10.ARJ   181237 CL-87     dBase-Dateien resident laden
+       DMAKE.ARJ     523774 CL-TOOL   DMAKE universal MAKE
+       DMENU.ARJ      22184 CL-DB     dBASE II and III menu generator
+       DMEXE.ARJ     138623 CL-TOOL   DMAKE universal MAKE
+       DMGLOBAL.ARJ    2369 CL-TOOL   DMAKE.EXE global definition
+                                      startup file example
+       DMSCLR.ARJ    107441 CL-87     Farbsetzen
+       DMSERR.ARJ     31737 CL-87     Verschiedene Prg und Asm fÅr Clipper
+       DMSOOP.ARJ     19864 CL-87     Error Handling util. f. Clipper
+       DOC110.ARJ    203513 CL-50     Doc v1.10
+ [1-08]DOC111.ARJ     57121 CL-50     Newer version of Clipper documentor
+       DOSRCSD4.ARJ   25189 CL-TOOL   Complete Revision Control System
+       DOSRCSS4.ARJ  133814 CL-TOOL   Revision Control System
+       DOSRCSX4.ARJ  218945 CL-TOOL   Revision Control System
+       DPF15A.ARJ    117350 CL-87     Convert database files to WordPerfect
+       DPF15B.ARJ     96361 CL-87     merge files (BTW
+       DPROTECT.EXE    9344 CL-87     Dbase DBF-Dateien Schutz.
+       DRAWCLIP.ARJ    6517 CL-87     Utility to make Clipper logo's
+       DRIVE7.ARJ      6371 CL-87     7 Bit Treiber fÅr Clipper
+       DRUCKER.ARJ    18018 CL-TEXT   Druckersequenzen fuer mehr
+                                      als 300 Drucker
+       DSCAR.ARJ      46725 CL-DB     Analysiert dBase PRG recht gut
+ CLIPBBS 2-01                   Page 7                    7 Jan 1992
+
+
+       DSCAR1.ARJ     43233 CL-DB     dBASE III+ syntax checker
+       DSCAR20.ARJ    47443 CL-DB     Public Domain Version of DFLOW - SUPER!
+       DSCHWART.ARJ    8748 CL-50     Wie sollte ein Netzprogramm ausehen
+       DSTRUCT.ARJ    14892 CL-50     5.0x  Util that creates 5.0 .CH
+                                      for databases
+       DSYNTAX3.ARJ   21643 CL-DB     Db3 syntax checker
+ [1-14]DTF102.ARJ     11181 CL-LIB    small
+       DTUN31PC.ARJ   26077 CL-DB     Makes dBASEII and III prg run faster
+       DUDEN.ARJ       3905 CL-87     Cl87 Duden Sortierung Z Ñ î Å
+       DUTCH_FN.ARJ   23515 CL-87     Gute String Funktionen
+       DYNAPACK.ARJ   15555 CL-DB     Fast pack dBase files from DOS
+       D_UTIL.ARJ    184373 CL-87     Source Code Analysator
+       EAP_EXE.ARJ    95033 CL-87     Einnahme / Ausgabe /Åberschussrechnung
+       EA_EXE.ARJ     98002 CL-87     noch 'ne Einnahme
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-01                   Page 8                    7 Jan 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-01                   Page 9                    7 Jan 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ⁄ƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒ¬ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒƒƒø
+ ≥FileName     ≥Src ≥Description                                     ≥Where ≥
+ √ƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒ≈ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒƒƒ¥
+ ≥ACCESS.ARJ   ≥Cln ≥Source of speed testing program                 ≥[1-06]≥
+ ≥ACH2TB.ARJ   ≥Cln ≥Convert ACHOICE to TBROWSE                      ≥[1-05]≥
+ ≥ACHOO2.ARJ   ≥Cln ≥Replacement of ACHOICE with GET possibilites    ≥[1-06]≥
+ ≥ADHOC302.ARJ ≥Cln ≥Summer 87 inteligent report program             ≥[1-04]≥
+ ≥ASCPOS.ARJ   ≥Cln ≥replacement of ASC(substr(cString,nPosition,1)) ≥[1-11]≥
+ ≥BARNTX.ARJ   ≥Cln ≥Displaying bar indication during indexing       ≥[1-13]≥
+ ≥BUTTON.ARJ   ≥Cln ≥@GET in form of BUTTON                          ≥[1-14]≥
+ ≥CALC14.ARJ   ≥Cln ≥PoPup Calculator                                ≥[1-08]≥
+ ≥CL5103.ARJ   ≥Cln ≥Report of 5.01 anomaly number 3                 ≥[1-04]≥
+ ≥CL5REP6.ARJ  ≥Cln ≥5.01 replacement of REPORT command              ≥[1-04]≥
+ ≥CLIP110.ARJ  ≥Cln ≥Clipper Documentor program                      ≥[1-05]≥
+ ≥CLIPFPCX.ARJ ≥Cln ≥Fast .PCX displayer for CLipper                 ≥[1-15]≥
+ ≥CLIPLINK.ARJ ≥Cbs ≥Complete text of R.Donnay about linkers         ≥[1-04]≥
+ ≥CLIPPLUS.ZIP ≥Cln ≥Object extension for CLIPPER 5.0                ≥[1-14]≥
+ ≥CLIPSQL.ARJ  ≥Cln ≥Demo of complete SQL library for CLipper        ≥[1-05]≥
+ ≥CLIPWARN.AJ  ≥Cln ≥Semaphore for convert WARNING: into ERRORLEVEL  ≥[1-11]≥
+ ≥CLPFON.ARJ   ≥Cln ≥Set of fonts for EXPAND.LIB from author         ≥[1-03]≥
+ ≥COND.ARJ     ≥Cln ≥Builder of conditional indexes like SUBNTX      ≥[1-03]≥
+ ≥CWDEMO.ARJ   ≥Cln ≥Classworks lib written in CLASS(Y)              ≥[1-13]≥
+ ≥DBSCN2.ARJ   ≥Cln ≥Screen designer generator                       ≥[1-05]≥
+ ≥DIAL.CLN     ≥Cln ≥Dialer with using of FOPEN()                    ≥[1-07]≥
+ ≥DOC111.ARJ   ≥Cln ≥Documentor, newer version                       ≥[1-08]≥
+ ≥DTF102.ARJ   ≥Cln ≥.DBT files replacement, fully functional        ≥[1-14]≥
+ ≥ENDADD.ARJ   ≥Cln ≥replacement of incrementing last char of string ≥[1-11]≥
+ ≥GETKEY.ARJ   ≥Cln ≥Input oriented library, wordprocessing          ≥[1-12]≥
+ ≥GSR151.ARJ   ≥Cln ≥Global Search and replace for programmers       ≥[1-07]≥
+ ≥HGLASS.ZIP   ≥Cln ≥Hour glass for indication of index progression  ≥[1-04]≥
+ ≥HOTKEY.ARJ   ≥Cln ≥Makin unique hot key letter for every arrat el. ≥[1-14]≥
+ ≥INDXSL.ARJ   ≥Cln ≥User Fields selection builder for index generate≥[1-03]≥
+ ≥IOBASYS9.ARJ ≥Cln ≥Demo of S87 library and calling Clipper from C  ≥[1-03]≥
+ ≥IS.ARJ       ≥Cln ≥Several c sources of ISxxxx functions           ≥[1-11]≥
+ ≥JG2.ARJ      ≥Cln ≥Jumping between GET statements in READ          ≥[1-08]≥
+ ≥KF_LOKUP.ARJ ≥Cln ≥Set of program for database relations           ≥[1-07]≥
+ ≥LUTLIB.ARJ   ≥Cln ≥Another Clipper library                         ≥[1-08]≥
+ ≥MK30.ARJ     ≥Cln ≥Mouse library demo version                      ≥[1-03]≥
+ ≥MOVEGETS.ARJ ≥Cln ≥GETSYS change for moving between gets via VALID ≥[1-03]≥
+ ≥MSWIN.ARJ    ≥Cln ≥Detection of Windows mode when running Clipper  ≥[1-14]≥
+ ≥NFDESC2.ARJ  ≥Cln ≥NanForum library description list               ≥[1-06]≥
+ ≥NFLIB2.ARJ   ≥Cln ≥NanForum library main file                      ≥[1-06]≥
+ ≥NFSRC2.ARJ   ≥Cln ≥NanForum library Source files                   ≥[1-06]≥
+ ≥NOTATION.ARJ ≥Cln ≥Complete text of article about hungarian notat. ≥[1-04]≥
+ CLIPBBS 2-01                   Page 10                   7 Jan 1992
+
+
+ ≥OCLIP.ARJ    ≥Cln ≥Object extension, real (not #define/command)    ≥[1-12]≥
+ ≥OOPSCL5.ARJ  ≥Cln ≥Another version of pseudo objects               ≥[1-07]≥
+ ≥PACKUP.ARJ   ≥Cln ≥ASM source of PACK/UNPACK replacement SCRSAVE.. ≥[1-04]≥
+ ≥PARTIDX3.ARJ ≥Cln ≥Partial indexing                                ≥[1-12]≥
+ ≥PAT1.ARJ     ≥Cln ≥CIX NanForum Libraryy PATCH                     ≥[1-07]≥
+ ≥PAT2-2.ARJ   ≥Cln ≥Fix for FLOPTST.ASM in Nanforum Library         ≥[1-13]≥
+ ≥PAT2-3.ARJ   ≥Cln ≥TBWHILE improvement for Nanforum libray         ≥[1-14]≥
+ ≥PAT2-4.ARJ   ≥Cln ≥FT_PEGS() patch for NFLIB                       ≥[1-15]≥
+ ≥POPUPCAL.ARJ ≥Cln ≥Popup calender                                  ≥[1-05]≥
+ ≥POSTPRNT.ARJ ≥Cln ≥Postscript printing from inside of Clipper      ≥[1-14]≥
+ ≥POWER10.ARJ  ≥Cln ≥French library                                  ≥[1-07]≥
+ ≥PRINTSUP.AJR ≥Cln ≥Low level BIOS routines for printing            ≥[1-11]≥
+ ≥QS20F.ARJ    ≥Cln ≥Screen designer, demo, looks very good          ≥[1-11]≥
+ ≥READPW.ARJ   ≥Cln ≥GETSYS change for password invisible reader     ≥[1-03]≥
+ ≥SCANCODE.ARJ ≥Cln ≥Database with scan codes                        ≥[1-07]≥
+ ≥SCRSAVE.ARJ  ≥Cln ≥Screen AntiBurning utility (inactivity snake)   ≥[1-05]≥
+ ≥SEGUE.ARJ    ≥Cln ≥Novell library - demo                           ≥[1-15]≥
+ ≥SHADO.ARJ    ≥Cln ≥Creating shadow on screen                       ≥[1-14]≥
+ ≥SHELP50A.ARJ ≥Cln ≥SuperHelp for Clipper                           ≥[1-07]≥
+ ≥SHOWANSI.ARJ ≥Cln ≥Displaying a ANSI from inside CLIPPER no ANSI.SY≥[1-15]≥
+ ≥SNAP497.ARJ  ≥Cln ≥Beta version of SNAP, partially compatible to 5 ≥[1-12]≥
+ ≥SNAP50.ARJ   ≥Cln ≥dBASE/CLIPPER documentor supporting 5.01 little ≥[1-15]≥
+ ≥SOUND.ARJ    ≥Cln ≥Multiple TONE() used as one SOUND function      ≥[1-06]≥
+ ≥STATUS.ARJ   ≥Cln ≥Timer interrupt hooked status indicator         ≥[1-12]≥
+ ≥SUPER160.ARJ ≥Cln ≥SUPER.LIB for Summer87                          ≥[1-13]≥
+ ≥SYMBOL.ARJ   ≥Cln ≥Dumper of symbol tables of Summer87 .EXE        ≥[1-03]≥
+ ≥TBUNIQUE.ARJ ≥Cln ≥Browsing unique without unique index            ≥[1-12]≥
+ ≥TBWHL4.ARJ   ≥Cln ≥WHILE browsing using TBROWSE, well commented    ≥[1-06]≥
+ ≥TICKER.ARJ   ≥Cln ≥Real Time Clock, interrupt driven on screen     ≥[1-12]≥
+ ≥VOICE200.ARJ ≥Cln ≥VOICE synthetizing library for Clipper          ≥[1-13]≥
+ ≥VSIX711.ARJ  ≥Cln ≥Vernon Six Clipper utilities and library        ≥[1-05]≥
+ ≥VSIX800.ARJ  ≥Cln ≥Vernon's library, lot of functions              ≥[1-12]≥
+ ≥WIPEV11.EXE  ≥Cln ≥VERY good screen manipulation library           ≥[1-11]≥
+ ≥ZIP2BAR.ARJ  ≥Cln ≥Printing BAR (USPS) code on EPSON printer       ≥[1-15]≥
+ ¿ƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒ¡ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒƒƒŸ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-01                   Page 11                   7 Jan 1992
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ≥
+   ƒƒƒƒƒƒƒƒƒƒŸ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒŸ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 2-01                   Page 12                   7 Jan 1992
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-01                   Page 13                   7 Jan 1992
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

@@ -1,0 +1,74 @@
+ DEBUG.DOC                BLINKER 3.3 debugger notes                 96.03.23
+ ---------                --------------------------                 --------
+
+  Blinker environment setting /DI3
+  --------------------------------
+
+  Setting /DI3 (DEBUG INT 3) in the BLINKER environment variable causes
+  a debug interrupt 3 to be created just before the far jump to the
+  first byte of the actual program. This is after both the extender and
+  the Blinker Kernel have loaded and initialised. This instruction can
+  be stepped into in the normal way to take you to the first byte of the
+  actual program.
+
+  In high level language programs this will be the library start up
+  code, so to skip over the library start up to the start of your
+  program (function MAIN) type 'G MAIN' or its equivalent.
+
+
+  NuMega Soft-Ice/W support
+  -------------------------
+
+  Blinker 3.3 includes full support for the Soft-Ice/W debugger (from
+  NuMega Technologies) for real, protected, dual and Windows programs on
+  a SINGLE MACHINE. Soft-Ice/W actually loads and runs Windows and sits
+  at the lowest system level, so it can debug anything at the source
+  level, including VxDs and DOS protected mode programs.
+
+  To use Soft-Ice/W with DOS real mode or protected mode programs simply
+  open a DOS box, link for CODEVIEW with CVV 5, run WLDR xxxx.SYM (A SYM
+  file is not actually needed) to load the symbols, source files etc and
+  then run the program xxxx.EXE directly or WLDR xxxx.EXE. Do not use
+  WLDR xxxx with no extension as DOS extended programs cannot currently
+  be loaded at the same time as their symbols.
+
+  To enable the interception of the INT 3 debugging interrupt by Soft-
+  Ice/W use the command 'I3HERE ON' at the Soft-Ice/W command line (pop
+  up Soft-Ice/W using Ctrl D), or by including it in the INIT line in
+  the Soft-Ice/W initialisation file WINICE.DAT.
+
+  Soft-Ice/W will then pop up when it encounters an INT 3 in the code,
+  when a Control D is pressed, or it can be forced to pop up at the very
+  start of the program by setting the value /DI3 in the BLINKER
+  environment variable as described in the previous section. Soft-Ice/W
+  will then pop up on a far JMP to the very first line of the real
+  program, which can be stepped into with F8. As noted above, for high
+  level languages the command 'G MAIN' will take you to start of the
+  main program.
+
+  Turbo Debugger support in real mode
+  -----------------------------------
+
+  Blinker support for Turbo debugger currently consists of real mode
+  programs, displaying module source code with line numbers, public data
+  symbols and non-overlaid public code symbols. We do not currently
+  support overlaid code under the Turbo Debugger, but plan to in a
+  subsequent release. TDCONVRT handles non-overlaid programs fine.
+
+  If a program contains C or ASM overlays then the -c option must be
+  used to create an external .TDS file, otherwise a Blinker 1203 error
+  will occur at run time. This is because TDCONVRT places the debugging
+  information directly after the root of the .EXE file. It also creates
+  unusually large .TDS files with overlaid programs due to some internal
+  confusion, but they appear to function correctly for the root part of
+  the program.
+
+  Overlaid programs will otherwise run correctly, but breakpoints on
+  overlaid code will be ignored and display meaningless code at the
+  symbol addresses.
+
+  Turbo Debugger does not currently recognise the _main symbol as output
+  from Blinker and TDCONVRT, so when running a program under the
+  debugger select GOTO (Ctl G) and enter "main" to locate the start of
+  the program.
+

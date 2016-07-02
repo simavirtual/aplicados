@@ -1,0 +1,143 @@
+SYMANTEC LOCALISATION GROUP IRELAND
+
+README.TXT--
+Copyright 1993 Symantec Corp. Reservados todos los derechos.
+
+EL COMANDANTE NORTON
+Versi¢n 4.0
+
+≠Bienvenido al Comandante Norton versi¢n 4.0 !
+----------------------------------------------
+Por favor lea este documento cuidadosamente, ya que contiene informaci¢n 
+importante no incluida en la documentaci¢n.
+
+     Los t¢picos cubiertos por este documento incluyen:
+
+     * Archivos incluidos en el Comandante Norton 4.0
+     * Compresi¢n de archivos desde el Panel †rbol
+     * Editor interno y visualizadores
+     * Archivos comprimidos con protecci¢n de contrase§a
+     * Clonaci¢n usando SHARE.EXE
+     * Filtros
+     * Visualizadores
+     * Caracteres especiales
+     * Variables de entorno del Comandante Norton
+     * Limitaciones en el cambio de unidades
+
+Archivos incluidos en el Comandante Norton 4.0
+----------------------------------------------
+
+Los siguientes archivos son suministrados en los disquetes del Comandante
+Norton versi¢n 4.0 :
+
+Disquete 1 : Disquete de programa
+
+install.exe	Programa de instalaci¢n
+leame.txt	Informaci¢n £til no incluida en el manual
+
+nc_arc.exe	Archivo comprimido conteniendo:
+
+	4372ansi.set	Tabla de conversi¢n de CP437 a ANSI
+	8502ansi.set	Tabla de conversi¢n de CP850 a ANSI
+	ansi2437.set	Tabla de conversi¢n de ANSI a 437
+	ansi2850.set	Tabla de conversi¢n de ANSI a 850
+	nc.cfg		Archivo de configuraci¢n para Filtros y Visualizadores
+	cn.exe		Cargador del Comandante Norton V4.0
+	nc.hlp		Archivo de ayuda del Comandante Norton V4.0
+	nc.ico		Icono del Comandante Norton V4.0
+	ncedit.exe	Editor del Comandante Norton V4.0
+	ncmain.exe	Gestor de archivos del Comandante Norton V4.0
+	nczip.exe	Compresor del Comandante Norton V4.0
+	packer.exe	IntÇrprete del compresor del Comandante Norton V4.0
+	packer.set	Archivo de programa para PACKER.EXE
+
+nc_arcv1.exe	Archivo comprimido conteniendo los visualizadores 
+		del Comandante Norton V4.0
+
+
+Compresi¢n de archivos desde el Panel †rbol
+-------------------------------------------
+Una potente opci¢n se ha a§adido al Comandante Norton versi¢n 4.0 que no est†
+documentada en el Manual de usuario. Es la capacidad de seleccionar un direc-
+torio en el Panel †rbol y luego comprimirlo usando Compresi¢n Comandante u
+otro empaquetador definido en PACKER.SET.
+
+Editor interno y visualizadores
+-------------------------------
+No hay editor interno incluido en NCMAIN.EXE en el Comandante versi¢n 4.0. El
+editor del Comandante est† ahora en el archivo NCEDIT.EXE. En cualquier caso 
+un visualizador interno simple todav°a funciona en el archivo NCMAIN.EXE. 
+Use ALT+F3 para invocar Çste.
+
+Archivos comprimidos con protecci¢n de contrase§a
+-------------------------------------------------
+Al igual que en cualquier sistema de archivos con contrase§a, si ha protegido sus
+archivos comprimidos con contrase§a, no puede descomprimirlos sin especificar
+Çsta correctamente. Si olvida su contrase§a no podr† descomprimir los archivos
+correctamente.
+
+Clonaci¢n usando SHARE.EXE
+--------------------------
+Existe un problema al intentar clonar hacia un puerto COM en una m†quina que
+tiene SHARE.EXE instalado. Se da un conflicto entre el programa de clonaci¢n
+al abrir el dispositivo COMX y SHARE garantizando derechos exclusivos de este
+puerto para el cargador de clonaci¢n Bootstrap. Esto da lugar a errores de
+violaci¢n de compartici¢n durante la sesi¢n de clonaci¢n. Para evitar este
+problema use el comando CTTY AUX en lugar de CTTY COM1:.
+
+Filtros
+-------
+La definici¢n de los filtros para el Comandante Norton versi¢n 4.0 est† en el
+archivo NC.CFG. El cuadro de di†logo de filtros puede ser variado modificando 
+este archivo. Un buen ejemplo es el uso de este archivo para crear un filtro
+para archivos de programa. (pe archivos con extensi¢n CXX, HPP, C y H ). Para 
+crear un filtro como Çste simplemente teclee los siguientes datos en el 
+archivo NC:CFG en la secci¢n de filtros :-
+
+		!Program Files
+		;DevFiles
+		:*.c??
+		:*.h??
+
+El texto que sigue ! aparece en el cuadro de di†logo Selecci¢n de filtros. 
+El texto que sigue ; es el texto que aparece en la barra t°tulo del panel. 
+êsta es muestra cuando el filtro es operativo. Las especificaciones de
+archivo que siguen : son los tipos de archivos que se asocian con este 
+filtro. Se permiten todos los comodines v†lidos en el DOS. 
+
+Visualizadores
+--------------
+Todos los visualizadores soportados por el Comandante Norton versi¢n 4.0 
+est†n definidos en el archivo NC.CFG. Puede modificar la lista de archivos 
+que est†n asociados con visualizadores; por ejemplo, si los documentos de su
+procesador de texto tiene una extensi¢n de archivo .DCC, puede cambiar la
+lista de los que maneja wpview.exe, simplemente a§adiendo esta especificaci¢n 
+a la lista de los que est†n definidos bajo WPVIEW.EXE.
+
+Caracteres especiales
+---------------------
+Para introducir caracteres especiales europeos, es necesario usar a veces las
+teclas CTRL+Q primero, seguidas del car†cter que desea introducir. Por ejemplo,
+para introducir el car†cter alem†n p†rrafo, teclee CTRL+Q seguido de MAY+3. 
+
+Variables de entorno del Comandante Norton
+------------------------------------------
+El Comandante Norton busca en su entorno las tres siguientes variables de 
+entorno para determinar d¢nde localizar y almacenar archivos de trabajo 
+temporales :- TEMP, TMP, NC
+
+Limitaciones en archivos comprimidos
+------------------------------------
+Si el panel actual contiene un archivo comprimido abierto, no se puede cambiar 
+entonces de unidad en ese panel. Este archivo comprimido debe cerrarse y 
+luego seleccionarse la unidad de forma normal.
+
+Debido a la amplia gama de diferentes utilidades de compresi¢n en el mercado hoy
+y las grandes diferencias en su comportamiento, puede encontrar que algunas
+opciones del Comandante Norton son imposibles de implementar usando la utilidad
+de compresi¢n. Esto es especialmente cierto en algunas utilidades que no
+soportan la descompresi¢n de archivos en un destino diferente al actual
+directorio. Adem†s no todas las utilidades de compresi¢n soportan el guardar
+los nombres completos de las v°as de acceso y directorios.
+
+

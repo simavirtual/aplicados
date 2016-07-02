@@ -1,0 +1,159 @@
+Do not tamper with this file!  For F1 help screens only.
+
+/Run Help
+The Run menu is the command to format the file(s)
+specified in the source file field.  The format
+will be based on the current format configurations
+as displayed on the screen.
+~
+/Edit Help
+The Edit menu is the command to edit the Source and
+Target fields, the format configurations, and the
+Run Mode.
+~
+/Color Help
+The Color menu is the command to change the back-
+ground and foreground colors of the main screen.
+~
+/Phone Help
+The Phone menu is the command to get the phone and
+address of Invariant Software for technical support
+or general information.
+~
+/Help Help
+The Help menu is the command to see more infor-
+mation about CleanClipper Version 1.0.  It provides
+an on-line user's guide.
+~
+/Quit Help
+The Quit menu is the command to exit CleanCliper.
+Any changes made to the format configurations will
+be saved as the current default values in the file
+CLEANCL.DAT.
+~
+/Files Help
+Use this section to specify the source and target
+files for formatting.  Syntax:
+   Source file(s): [drive:][path]source file
+   Target file(s): [target file]
+You may use wildcards in either filename option.  The
+brackets '[]' denote optional input.  If the target
+file already exists, it will be replaced with the newly
+formatted file.  If the target file is left blank, the
+source file will be overwritten with the newly fomatted
+file.  See 'Help' for more information.
+ 
+ARROWS : move cursor to field position.
+ENTER : move to next field.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Procedure Style Help
+Use this section to specify the indentation of
+statements within procedures and functions, and
+the indentation of the end-of-function
+delimiter ('return ---').
+
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  'x:=0' or 'return x'.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Control Style Help
+Use this section to specify the indentation of
+statements within control statements, and the
+indentation of the control-statement delimiter
+('endif', 'enddo', ...).
+ 
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  'x:=0'  or 'endif'.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Function Spacing Help
+Use this section to specify the spacing of certain
+characters within a function call or definition.
+(i.e. commas, parenthesis...)
+ 
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  space characters (^).
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Operator Spacing Help
+Use this section to specify the spacing of assign-
+ment, boolean, relational, and math operators
+in your source file.
+  
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  space characters (^).
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Code Block Spacing Help
+Use this section to specify spacing for code blocks.
+(i.e. '{', '|', ',' ...).
+ 
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  space characters (^).
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Array Initialization Spacing Help
+Use this section to specify spacing for array
+initializations (i.e. '{', ',').
+ 
+ARROWS : move cursor to space character.
+SPACE BAR/BACKSPACE : change position of
+  space characters (^).
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Comment Position Help
+Use this section to specify the placement of comments
+which are on the same line as code.  Lines which begin
+with a comment will be indented appropriately.  Note
+that only one field can be filled.
+ 
+ARROWS : move cursor in edit fields.
+'0'..'9' : input in edit fields.
+ENTER : go to next field.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Parentheses Help
+Use this section to specify if you wish to have all
+assignment and control expressions altered by minimi-
+zing or maximizing parentheses.  Choose 'no change'
+to leave untouched.  Only parentheses for binary
+operators are considered.
+ 
+ARROWS : move cursor around choices.
+SPACE BAR : select choice.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Reserved Word Help
+Use this section to specify the 'case' consistency
+for all reserved words.  To add or delete reserved
+words, edit the file CLEANCL.RSV.
+ 
+ARROWS : move cursor around choices.
+SPACE BAR : select choice.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Preprocessor Directives Help
+Use this section to specify the indentation or non-
+indentation (1st column) of preprocessor directives.
+ 
+ARROWS : move cursor around choices.
+SPACE BAR : select choice.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+/Mode Help
+Use this section to specify the run mode for Clear-
+Pascal.  Manual mode will always wait for the user's
+input before formatting.  Auto mode formats immedi-
+ately provided a 'source file' was given.
+ 
+ARROWS : move cursor around choices.
+SPACE BAR : select choice.
+TAB/SHIFT-TAB : go to next/previous section.
+~
+

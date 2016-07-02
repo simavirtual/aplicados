@@ -1,0 +1,467 @@
+CAUSEWAY
+The 386 DOS Extender for Clipper
+Version 1.3
+User Manual Supplement
+ASCII version
+
+
+Copyright 1992-1995 by Michael Devore.  All rights reserved.
+
+All company and/or product names are trademarks and/or registered
+trademarks of their respective holders.  Michael Devore and the product
+CauseWay are not endorsed by and have no affiliation with Computer
+Associates.  Replacement libraries written by Ted Means.
+
+Last document revision 11/28/95, Michael Devore and Judy Cammelot. 
+Information contained within this document is subject to change without
+notice.
+
+
+
+This supplement provides information about new features that have been
+added to CauseWay for CA-Clipper version 1.3.  Late versions of 1.2
+CauseWay also contain many of these features so you may already be
+familiar with them.   In particular, this supplement describes how to use
+CauseWay with CA-Clipper version 5.3.
+
+
+
+USING CAUSEWAY WITH CA-CLIPPER 5.3
+
+The CauseWay configuration definition (*.DEF) files are preset to use the
+CauseWay CA-Clipper 5.2 runtime library CWCLP52.LIB or
+LSCLP52.LIB.  These definition files are easily changed for CA-Clipper
+5.3 use by typing USECL53.  This command runs a batch file named
+USECL53.BAT which renames the CauseWay .DEF files from the
+alternate configuration for CA-Clipper 5.3 (the *.DF3 files) to the default
+.DEF files.
+
+As with previous CA-Clipper versions, link in the CauseWay runtime
+library, named CWCLP53.LIB for CA-Clipper 5.3, prior to other
+libraries.  There is no LSCLP53.LIB library for CA-Clipper 5.3, since
+CWCLP53.LIB replaces only what is required for all 5.3 applications. 
+You may still need to use the WL32 /ls option for other libraries, but it is
+not a requirement when linking in CWCLP53.LIB.  (See also the new
+configuration definitions file morphing command: LIBSEARCH.)
+
+
+
+CAUSEWAY ENVIRONMENT VARIABLE
+
+The CAUSEWAY environment variable controls operation of the DOS
+extender at application runtime.  Seven options are supported, although
+they are ignored in a Windows or OS/2 DPMI environment.  Use any
+combination of the seven options in the following format:
+
+SET CAUSEWAY=[setting_1;][setting_2;][setting_n;]
+
+Items in brackets ([ ]) are optional.  Do not actually type the brackets if
+you use the optional items.  Items in italics should be replaced with actual
+values, separated by semicolons.  Following is a description of the seven
+valid settings:
+
+DPMI                   Force DPMI rather than default VCPI usage whenever
+                       possible (recommended for 386^Max and BlueMax
+                       users).  The memory manager must support DPMI or
+                       else this setting is ignored.
+
+EXTALL                 Force CauseWay to use all extended memory and sub-
+                       allocate memory from the bottom up instead of the
+                       default top-down approach.  This setting is most useful
+                       for processor intensive environments which have a
+                       small hardware CPU cache.  Use of this setting means
+                       that no extended memory will be available for other
+                       programs while the application is loaded (including
+                       shelling to DOS).
+
+HIMEM:nnn              Set maximum physical (conventional plus extended)
+                       memory that can be consumed by CauseWay.  nnn is
+                       the decimal number of kilobytes that can be consumed. 
+                       If memory allocation requests exceed this figure,
+                       CauseWay will use virtual memory, even if additional
+                       physical memory is present.  If the HIMEM memory
+                       value exceeds available physical memory, then memory
+                       allocations operate normally.  For example,
+                       HIMEM:2048 on a 4M machine would force virtual
+                       memory use after 2M of memory allocations (including
+                       loading the executable file).  The remaining 2M of
+                       memory could be used by other applications while the
+                       CauseWay application is active.
+							
+LOWMEM4:nnn            Set DOS (conventional) memory to restrict it from use
+                       by CauseWay.  This memory is in addition to the
+                       default 32K low DOS memory block reserved by
+                       CauseWay for use by any applications which need to
+                       allocate DOS memory.  nnn is the decimal number of
+                       kilobytes to reserve.  If there is not enough
+                       conventional memory to satisfy the nnn request value,
+                       then CauseWay will leave all conventional memory
+                       free that is not required by the extender to operate.
+                       Note that this option does not guarantee the amount of
+                       free DOS memory, just how much needs to be free
+                       before CauseWay will consume DOS memory after
+                       exhausting all extended memory.  For example,
+                       LOWMEM:200 will attempt to reserve 200K of DOS
+                       memory, even if CauseWay has exhausted all extended
+                       memory and is using conventional memory to fill
+                       memory allocation requests.
+
+MAXMEM:nn              Set maximum linear address space provided by
+                       CauseWay.  nn is the decimal number of megabytes of
+                       linear address space. This setting is similar to HIMEM
+                       except that it includes any virtual memory.  For
+                       example, MAXMEM:32 on a 16M memory system
+                       restricts VMM disk space usage to 32M, even if more
+                       disk space is present.  MAXMEM:8 on the same
+                       system would restrict the application to 8M of memory
+                       (all physical).  Note that the setting is in megabytes,
+                       rather than kilobytes used in the LOWMEM and
+                       HIMEM options.
+
+NOVM                   Disable all virtual memory use by CauseWay.  If
+                       physical memory is exhausted, CauseWay will fail 
+                       further memory allocation requests.
+
+SWAP:path              Set CauseWay's virtual memory manager swap file
+                       path.  This path takes precedence for choosing the
+                       location of a swap file over the TEMP and TMP
+                       environment variables.
+
+
+
+NEW MORPHING COMMANDS 
+
+The following morphing commands are now supported:
+
+//<any text>
+
+The // command allows insertion of comments or temporary removal of a
+pre-existing command in the DEF file.  All text on the line following // is
+ignored by WL32.  The slashes must be placed at the beginning of a line.
+
+ISLIB
+
+Force an object module to be linked as a library file.  This command is
+useful for switching library files in the object module list back to library
+status.  For example:
+
+CLD.LIB=ISLIB
+
+<file name>=LIBSEARCH
+
+Specify a library file to be linked into a program whenever the
+configuration definitions file is used.  The library file will be added to the
+library file list as soon as it is encountered in the configuration file.  If
+the library file is not present in the current directory or cannot be found
+in a directory listed via the LIB environment variable, WL32 terminates
+with a file not found error.
+
+This command is very similar to LIBNAME, but additionally it specifies
+library SEARCH logic (as with WL32 /ls option).  It is useful for
+translating RTLink SEARCH commands without having to explicitly set
+the /ls option.
+
+<file name>=OBJAPPEND
+
+Specify an object module file or files that are to be linked at the end of
+the object module list, rather than at the beginning as with OBJADD. 
+Since Clipper balks at non-Clipper object modules being linked ahead of
+Clipper object modules, this allows you to easily link in a non-Clipper
+object module automatically via the configuration files. 
+
+If the object module is not present in the current directory and cannot be
+found using the OBJ environment variable, WL32 terminates with a file
+not found error.
+
+Multiple OBJADD morphing commands are supported by WL32.
+
+<filename>=+<WL32 option>
+
+Turn on <WL32 option> if <filename> is encountered in the link file
+as an object module or library.  A path specification is not necessary for
+<filename>.  For example:
+
+CTP.LIB=+/fx
+
+turns on the WL32 /fx option if CTP.LIB is encountered in a link or
+response file.
+
+<filename>=+OBJ:<OBJ filename>
+
+This command is the same as OBJAPPEND, except linking of 
+<OBJ filename> is conditional based upon the presence of
+<filename>.  Useful for linking in an additional patch object module if
+a library is present.  If no file extension is given for <OBJfilename>,
+the default is used: .OBJ.  For example:
+
+FUNCKY52.LIB=+OBJ:CWFUNCKY
+
+links in CWFUNCKY.OBJ if FUNCKY52.LIB is encluntered in a link or
+response file.
+
+<environment variable setting>=@<linkfile>
+
+Process <linkfile> only if <environment variable setting> is properly
+set.  Multiple <linkfile> commands are processed in order listed in the
+.DEF file following the initial command line, link file, and DEF file
+processing.  This command is potentially very powerful and allows you
+to structure and control the link process almost entirely through the
+environment variable settings.
+
+Example:
+
+COW=MOO=@MILK.LNK
+
+In this example, WL32 will process MILK.LNK if the environment
+variable COW is set to MOO.  Extraneous letters following the MOO
+setting will also match, i.e., SET COW=MOON will trigger MILK.LNK
+link file processing.  Remember that the environment variables are case
+sensitive. SET COW=moo will not trigger MILK.LNK file processing.
+
+This command is most useful for FREEFORMAT link file processing,
+since it would be difficult to optionally process files and libraries in the
+positional link file format.
+
+NOTES
+
+Previously, morphing filename commands were not stackable.  They
+matched on the first command and any following command associated
+with that filename would be ignored.  Two morphing filename commands
+are now stackable, FILEDELETE and ISLIB.  This lets you delete a file
+and add a replacement automatically or specify that an object module is a
+library and still bring in a patch file.  For example:
+
+CLD.LIB=ISLIB
+CLD.LIB=+OBJ:CWUSECLD
+
+will force CLD.LIB to be linked as a library and CWUSECLD.OBJ to be
+linked as an object module.  The commands:
+
+OLD.OBJ=+OBJ:NEW.OBJ
+OLD.OBJ=FILEDELETE
+
+will remove OLD.OBJ from link processing and add NEW.OBJ into link
+processing.
+
+Do not try to stack any other commands besides ISLIB and
+FILEDELETE.  The second command will either be ignored or cause
+inappropriate behavior, and possibly a general protection fault (GPF)
+when linking with WL32.
+
+
+
+WL32 OPTIONS
+
+The following options are now supported:
+
+/3p       Create protected mode 3P format executable without DOS
+          extender.
+
+This option creates a protected mode executable file, but without the DOS
+extender being attached to the file.  The resulting file may not be directly
+executed, but can be used for DLLs and applications-handling loading
+through the CauseWay API functions cwLoad or cwExec.
+
+
+/fl       Use fast load EXE file DOS extender features.
+
+This option optimizes the load format of the executable so that it will load
+more quickly at startup.  Fast load has no effect on the application after it
+has begun execution.  Startup times will decrease from 20-80% over
+applications that are not linked with fast load.  You may not compress
+fast load executables with CWC since compression and the fast load
+format are incompatible.
+
+/nwd       No warning on duplicate symbols.
+
+This option directs WL32 not to return a warning when duplicate
+symbols are encountered during linking.  This feature is available for use
+with replacement or third party libraries when you do not desire such
+warnings because more than one module resolves the same symbol. 
+Remember that all such warnings are eliminated, so use this option with
+care.  There may be circumstances in which a duplicate symbol warning
+is appropriate and useful.  If you have any unexplained problems, remove
+the /nwd option and check that the duplicate symbol warnings are benign.
+
+
+
+USING DLLS WITH WL32
+
+Overview
+
+DLLs are useful for sharing the same code across multiple applications.
+The code in DLLs may be written using C, C++, or assembly language.
+Do not place Clipper-compiled code in a CauseWay DLL file. DLL files
+are only for DLL-compliant C and assembly language routines.  To be
+DLL-compliant, C and assembly language code must not make any
+external references to routines or data.  All code and data used by DLL
+routines must be present within the same DLL module.
+
+It is recommended that you understand and familiarize yourself with the
+basic operation of Windows DLLs before using them with CauseWay
+under DOS.  CauseWay DLLs are very similar in behavior to the
+Windows DLLs.  Also, carefully study the DLL example code provided
+on the CauseWay distribution disk in the ZIP file archive:
+CDLLTEST.ZIP.
+
+A DLL file is created by linking one or more object modules with WL32
+using the /3p option.  This WL32 option strips the DOS extender out of
+the resulting file, leaving only a binary image of the protected mode file
+and its header.  Since a DLL file is not executable as a stand-alone file,
+the DOS extender should not be attached.
+
+Create the DLL file without a name extension by specifying an executable
+name followed by a single period.  For example, to create a DLL file
+called IMADLL from USEME.OBJ, use the following command:
+
+WL32 /3p USEME,IMADLL.
+
+Do not use an extension because the DLL module name used to build the
+DLL does not require a built-in extension.  After building the DLL, you
+should then rename it with an EXE or DLL extension.  Since the module
+name is already set internally in the DLL without the extension after
+linking, the rename does not affect the internal DLL structure.
+
+CauseWay loads DLLs when the application being loaded has references
+to external modules in the DLL.  CauseWay searches the execution path
+for any file with a DLL or EXE extension (in that order) which has the
+proper internal module name.
+
+Imports
+
+An application sees one or more DLLs by use of an import library.  An
+import library utility creates import libraries from a DLL.  The
+CauseWay import library utility is called 3PLIB.EXE.  To create the
+import library, first run the 3PLIB.EXE utility with the /i option,
+specifying the DLL module name and the output object module name. 
+For example, to create an import library out of TESTDLL with an import
+library name of TESTIMP.OBJ, you would use the following command:
+
+3PLIB /i TESTDLL.DLL TESTIMP.OBJ
+
+The second step is to link in the import library when creating your
+application.  Note that CauseWay's import libraries are actually object
+modules.  3PLIB creates an OBJ-format file, not a LIB-format file.  If
+you wish to make the file a library, use the Microsoft LIB or similar
+utility to change the OBJ file to a LIB file, and link the resulting LIB in
+the library file list.
+
+There is one substantive difference between linking the import
+information as an object module or a library.  If the imports are not used
+in the application, the DLL linked as a library will not be loaded at
+runtime.  If linked as an object module, the DLL will always be brought
+in, even if the DLL routines do not resolve any of the application's
+references.  This behavior is just like linking any other object module,
+where the code is always linked in when an object module, but only
+linked in from a library when a public symbol it resolves is used in the
+application. 
+
+Notes:
+
+You can create imports in your own source code, assuming the compiler
+or assembler version supports it.  This avoids the need for the 3PLIB
+utility or linking in an import library. 
+
+3PLIB creates imports by ordinal number, not name.  WL32 and
+CauseWay do support imports by name that are created within
+source code.
+
+Entry Points
+
+All DLLs must have an entry point.  This entry point is called twice by
+CauseWay, once at program startup and once at program termination. 
+The 32-bit CPU register EAX is set to 0 when CauseWay calls the entry
+routine during initialization and it is set to 1 when called during
+termination, so the two conditions can be differentiated.  The entry
+routine must return an EAX value of 0 for the initialization routine to
+indicate no errors.  Any other EAX value returned by the DLL entry
+routine during initialization indicates to CauseWay that an error has
+occurred and loading should be terminated.  If any nonzero error
+condition is returned to CauseWay, it is up to the DLL to display an
+error message prior to returning.  CauseWay will simply report a load
+error for the DLL file.
+
+Uncompress CDLLTEST.ZIP and study the example code for a better
+understanding of using DLLs.  Run the CLIPDLL.BAT batch file for a
+simple demonstration of using DLLs with CauseWay.
+
+
+
+MEMORY AND CLIPPER APPLICATION PERFORMANCE
+
+The best way to increase runtime performance of CauseWay applications
+is to provide sufficient physical memory to meet all of a program's
+needs.  As a general rule, the more memory available, the better an
+application's performance.  At a bare minimum, try to have enough free
+physical memory to load the application at startup without accessing
+virtual memory -- approximately the size of the uncompressed executable
+file plus or minus 100-200K. Otherwise, virtual memory will kick in
+during application loading, severely impacting startup times.  If loading
+time is still an issue and you do not need CWC compression, consider
+using the WL32 /FL option for faster executable loading. 
+
+When using a disk cache program, be sure not to allocate too much
+extended memory to it.  Although a disk cache program can be extremely
+beneficial to both an application and overall system performance,
+allocating too much memory to it can deprive CauseWay of required
+extended memory, forcing earlier use of virtual memory and subsequent
+degradation of application performance.  The same is true when using
+RAM disks.
+
+DOS memory allocation under a CauseWay-extended program is fairly
+simple.  CauseWay supplies memory from conventional and extended
+memory to Clipper as requested and creates disk-based virtual memory if
+all physical memory is exhausted.  CA-Clipper requests a varying amount
+of memory, depending on how much is available.  CauseWay can report
+very large amounts of free memory including integrated virtual memory.
+Under heavy use of object memory or indexing, Clipper may request
+enough memory that an immoderate amount of virtual memory is in use,
+negatively affecting application performance.  In this case, you can limit
+total memory use by CauseWay through the MAXMEM and NOVM
+settings of the CAUSEWAY environment variable.
+
+MAXMEM limits the total number of megabytes that CauseWay will
+report as available to the Clipper application.  In this way, the use of
+virtual memory can be limited.  NOVM is a more extreme approach,
+shutting off virtual memory entirely.  NOVM is not recommended unless
+you are sure that enough physical memory is present to met all of the
+Clipper application's needs.  Too little memory can also negatively affect
+the Clipper application's performance, even if the application does not
+run out of memory. Try to avoid using either too little or too much
+virtual memory.
+
+Keep in mind that virtual memory is part of total memory when using
+CauseWay.  If your default drive, or the drive pointed to by the TEMP,
+TMP or CAUSEWAY=SWAP environment variables have little free
+space, this will be reflected in the total memory available to the
+CauseWay application.  In the same vein, a very large hard drive will
+provide CauseWay with very large amounts of (virtual) memory.
+
+When using a network, ensure that the TEMP, TMP, or
+CAUSEWAY=SWAP environment variables point to a local hard drive
+in order to use the local hard drive for virtual memory. Otherwise, all
+virtual memory accesses will travel over the network to and from the
+workstation, thereby crippling performance.
+
+Remember that all environment variables settings may be "burned-in" to
+the executable file by using the WARPWRAP utility.
+
+Memory allocation under Windows 3.x, Windows '95, and OS/2 is more
+complex.  These environments are native DPMI hosts, and their internal
+memory management overrides all CauseWay environment variable
+settings.
+
+Windows 3.x memory available to a CauseWay application is the sum of
+physical memory plus the Windows swap file, less any memory already
+in use by Windows and other applications.  If you run short of memory
+with CauseWay, you may need to increase your Windows swap file size
+or close other applications.  As with DOS, an oversized swap file can
+actually hurt performance, leading to significant virtual memory use,
+since Clipper will attempt to use the large amounts of memory available
+to it.
+
+With Windows '95 and OS/2, memory available to an application can be
+tightly controlled via the application DPMI setting.  If this setting is too
+small, your application may run out of memory or execute very slowly. 
+If it is extremely large, an inordinate amount of virtual memory may be
+used by your Clipper application, also affecting performance.

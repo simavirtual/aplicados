@@ -1,0 +1,45 @@
+*
+* T_EXAM08.PRG  ( Page 1-21 )
+*
+FLIP_INIT(1000)
+SET_SAYERR(1)
+
+nFont1 = FONT_OPEN("\FLIPPER\FONTS\OE3_22.@")
+nFont2 = FONT_OPEN("\FLIPPER\FONTS\RMN8_30.@")
+
+INITDATA(3)
+
+SET_YSIDE(2,2)
+
+SET_TYPE(1,1)
+SET_TYPE(2,1)
+STORE_DATA("IBM",    10000, 253)
+STORE_DATA("MAC",    9000,  12)
+STORE_DATA("COMPAQ", 5000,  348)
+STORE_DATA("AMIGA",  7000,  409)
+STORE_DATA("EPSON",  4000,  643)
+
+SET_YMAN(1)
+SET_YMAX(11000)
+
+SET_G_FONT(nFont2)
+SET_L_FONT(nfont1)
+
+G_LABEL("Computer Companies")
+X_LABEL("The Companies")
+Y_LABEL("Computers Sold")
+Y_LABEL("Other Stuff Sold",2)
+
+SET_LN_PAT(1,1)
+SET_LN_PAT(2,2)
+
+LEGEND_SET( 1, "Computers Sold")
+LEGEND_SET( 2, "Other Stuff Sold")
+
+PLOT()
+
+LEGEND_SAY( ATX( 3, 1 ), ATY( 12, 2 ), 1 )
+
+INKEY(0)
+TEXTMODE()
+

@@ -1,0 +1,19 @@
+#
+#  DBU.LNK     Blinker link file for linking Xbase++ DBU
+#
+fi dbu               # OBJ files
+fi dbuutil
+fi dbuhelp
+fi dbuview
+fi dbuindx
+fi dbuedit
+fi dbucopy
+fi dbustru
+fi dbunet
+out dbu.exe          # Output file name
+map s,a              # MAP file
+nobell
+defbegin
+   name dbu
+   exetype nt subsystem console
+defend

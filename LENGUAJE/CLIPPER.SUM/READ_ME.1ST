@@ -1,0 +1,480 @@
+************************* READ_ME.1ST **************************
+*           C L I P P E R   -   S U M M E R   ' 8 7            *
+****************************************************************
+
+Below is a list of files found on the Clipper 5 1/4 inch disks.
+
+Readme.PRG allows you to view this or any other textfile
+"online".  The syntax is:
+
+	C>README [<filename>]
+
+************************* FILES *******************************
+
+                   *** DISK 1 ***
+
+READ_ME.1ST        This file, containing the latest
+                   info on this version of Clipper.
+
+CL.BAT             Batch file for compiling and linking your
+                   programs on a hard disk system.
+
+CLD.BAT            Batch file for including the Clipper Debugger
+                   when compiling and linking your programs on a
+                   hard disk system.
+  
+CLIPCOPY.BAT       Batch file for installing Clipper to a hard disk.
+
+CLIPCOPY.HLP       Help file for CLIPCOPY.BAT.
+
+CLIPPER.EXE        The Clipper compiler.
+
+DEBUG.OBJ          The Clipper debugger.
+
+EXTEND.LIB         Library of extended Clipper functions.
+
+OVERLAY.LIB        Library of overlay support routines for PLINK86.
+
+PLINK86.EXE        PLINK86plus, the overlay linker from Phoenix
+                   Technology Limited.
+
+
+                   *** DISK 2 ***
+
+CLIPCOPY.BAT       Batch file for installing Clipper to a hard disk.
+
+CLIPPER.LIB        The link time library.  It needs to be
+                   available to the linker NOT THE COMPILER.
+
+ME.PRG             Textfile editor using MEMOEDIT().
+
+NDX.OBJ            Link this module to your applications to provide
+                   dBASE III PLUS compatible indexes.
+		   
+		   
+                   *** DISK 3 ***
+
+CLIPCOPY.BAT       Batch file for installing Clipper to a hard disk.
+
+
+DBU.PRG            These files make up the source code for DBU.EXE.
+DBUCOPY.PRG
+DBUEDIT.PRG
+DBUINDX.PRG
+DBUHELP.PRG
+DBUSTRU.PRG
+DBUUTIL.PRG
+DBUVIEW.PRG
+DBU.HLP
+MAKEDBU.BAT        To make DBU.EXE, execute this batch file.
+
+README.PRG         Program to view text and program files.
+
+RLDIALOG.PRG       These files make up the source code for RL.EXE.
+RLFRONT.PRG
+RLBACK.PRG
+MAKERL.BAT         To make RL.EXE, execute this batch file.
+
+LINE.EXE           Utility for listing programs to the screen and
+                   printer with line numbers.
+SWITCH.EXE         Allows you to "chain" executable files.
+
+
+                   *** DISK 4 ***
+
+APNDXJ.PRG         Sample user-defined functions from Appendix J.
+
+ANSI.OBJ           Driver for use with machines running
+                   ANSI standard terminal I/O.
+
+CLIPCOPY.BAT       Batch file for installing Clipper to a hard disk.
+
+DOT.PRG            Sample program that provides a "dot prompt"
+                   or inter-active mode.  DOT can be very useful
+                   for quick testing of expressions, creating
+                   indexes, querying files or using any of the
+                   commands listed when you press F1.
+
+ERRORSYS.PRG       Source code for user-defined functions called
+ALTERROR.PRG       by Clipper's runtime error system.
+
+EXAMPLEA.ASM       Sample assembly code for the Extend System interface.
+
+EXAMPLEC.C         Sample C code for using the Extend System interface.
+
+EXAMPLEP.PRG       Sample Clipper code for user-defined functions.
+
+EXTEND.H           C header file for the Extend System.
+
+EXTENDA.INC        Assembler macros for use with the Extend System.
+EXTENDA.MAC
+
+IBMANSI.OBJ        Driver for use with IBM PC's running
+                   ANSI standard terminal I/O with cursor and
+                   function key support.
+
+INDEX.PRG          Sample program for creating index files.
+
+LOCKS.PRG          User-defined functions for LAN aplications.
+
+MAKE.EXE           Creates batch files to streamline the compile
+                   and link cycle.
+
+MENU.PRG           Sample program for @...PROMPT, MENU and KEYBOARD.
+
+NANDEF.H           C header file for the Extend System.
+
+NETWORK.PRG        Sample program demonstrating workstation
+                   inter-action during shared file programming.
+
+PCBIOS.OBJ         Driver for use in environments that expect
+                   screen writes to go through BIOS calls.
+
+PHILES.PRG         Sample program demonstrating low-level file
+                   I/O functions.
+
+****************** PLINK86 ************************
+
+When creating overlays, Chapter 7 uses the PLINK86 command
+"OVERLAY PROG, $CONSTANTS" .  This should be changed to 
+"OVERLAY CODE".
+
+If PLINK86 is having difficulty finding CLIPPER.LIB, place the
+command "SET LIB=\CLIPPER"  in your AUTOEXEC.BAT file.
+
+Much faster linkers are available if you do not need the PLINK86
+ability to create overlayed applications.  Microsoft languages 
+come with fast linkers and TLINK that is shipped with Borland's 
+Turbo C is the undisputed fastest.
+
+
+****************** EXTEND.LIB ************************
+
+Functions found in EXTEND.LIB
+-----------------------------
+ACHOICE()               FERROR()             MEMOWRIT()     
+ACOPY()                 FKLABEL()            MLCOUNT()      
+ADEL()                  FKMAX()              MLPOS()        
+ADIR()                  FOPEN()              MOD()          
+AFIELDS()               FREAD()              NEXTKEY()      
+AFILL()                 FREADST()            OS()           
+AINS()                  FSEEK()              PAD()          
+ALLTRIM()               FWRITE()             RAT()          
+AMPM()                  GETE()               READKEY()      
+ASCAN()                 GET_PIC()            RECSIZE()      
+ASORT()                 HARDCR()             RESTSCREEN()   
+BIN2I()                 HEADER()             RIGHT()        
+BIN2L()                 I2BIN()              SAVESCREEN()   
+BIN2W()                 ISALPHA()            SCROLL()       
+BROWSE()                ISLOWER()            SECS()         
+CLEAR_GETS()            ISPRINTER()          SETCOLOR()     
+CURDIR()                ISUPPER()            SOUNDEX()      
+DAYS()                  L2BIN()              STATLINE()     
+DBEDIT()                LEFT()               STRTRAN()      
+DBF()                   LENNUM()             STRZERO()      
+DESCEND()               LUPDATE()            STUFF()        
+DISKSPACE()             MEMOEDIT()           TONE()         
+ELAPTIME()              MEMOLINE()           TSTRING()      
+FCLOSE()                MEMOREAD()           VERSION()      
+FCREATE()               MEMOTRAN()           XBROWSE()
+
+Functions found in EXTEND.LIB with source code provided
+-------------------------------------------------------
+
+EXAMPLEP.PRG                       EXAMPLEC.C
+------------                       ----------
+AMPM()                             DISKSPACE()      
+BROWSE()                           SOUNDEX()        
+CLEAR_GETS()                       STUFF()          
+DAYS()              
+DBF()                              EXAMPLEA.ASM  
+ELAPTIME()                         -----------   
+FKLABEL()                          BIN2I()       
+FKMAX()                            BIN2L()       
+GET_PIC()                          BIN2W()       
+LENNUM()                           CURDIR()         
+MOD()                              I2BIN()          
+OS()                               ISPRINTER()      
+PAD()                              L2BIN()          
+READKEY()                          TONE()           
+SECS()                                
+STATLINE()                            
+STRZERO()                             
+TSTRING()           
+VERSION()           
+XBROWSE()
+
+
+Note that BROWSE() is a full featured browse that allows you to
+determine the size and location of the edit window.
+
+SYNTAX:       BROWSE([t,l,b,r])
+
+ARGUMENTS:    t,l,b,r are the optional top, left, bottom and right
+              corners of the edit window. 
+
+
+****************** OUTSTANDING ANOMALIES *************
+
+The following is a listing of known "bugs":
+===========================================
+
+
+It used to be that some commands accept macros that evaluate to
+a null or blank space. Now, we get an:
+
+            "expression error (in MACRO)"
+
+error message.
+
+e.g.
+    clear
+    use DBF00010
+    F1 = "FLD1"
+    F2 = "FLD2"
+    F3 = ""
+    F4 = "FLD4"
+    display all off &F1, &F2, &F3, &F4      && error on &F3
+    ?
+    return
+
+
+WORKAROUND:
+    - establish memvar with NULL value
+    - use that memvar as dummy fill
+        e.g.
+            clear
+            use DBF00010
+            SKIP_IT = ""            && dummy_fill memvar
+
+            F1 = "FLD1"
+            F2 = "FLD2"
+            F3 = "SKIP_IT"          && filler
+            F4 = "FLD4"
+            display all off &F1, &F2, &F3, &F4      && error on &F3
+            ?
+            return
+
+-----------------------------------
+
+The hard-coded colour settings in DEBUG and DBU are causing 
+illegibilty on the following hardware configuration:
+
+            - CGA color card + monochrome monitor.
+
+
+WORKAROUND:
+    - force monochromatic execution of DBU by typing in " /m" 
+      after the application name, as in:
+
+            C> DBU /M
+
+-----------------------------------
+
+The Compiler's (Clipper.exe) "-v" switch is not working on
+the GET fields. That is, if you are GETting into DBF fields,
+NO memory variable counterpart (m->) for that field is being made.
+You are still GETting INTO the DBF fields!
+
+-----------------------------------
+
+If you pass out-of-bounds coordinates to DBEDIT(), you will get
+an:
+                "out of memory"
+
+error message.
+
+e.g.
+    clear
+    use DBF
+    dbedit(10, 10, 09, 50)      && error due to 3rd parameter
+
+------------------------------
+
+The Compiler is now rejecting the following syntax with a
+"Fatal at 0: PHASE error" message:
+
+        for X = 1 to 20 step if(X < 10, 1, 2)
+            ? X
+        next
+
+
+Workaround:
+===========
+        for X = 1 to 20 step UDF(X)
+            ? X
+        next
+        return
+
+        function UDF
+        parameters P1
+        return(if(P1 < 10, 1, 2))
+
+-----------------------------------
+
+If you type in a string that traversed the full width of a small
+MEMOEDIT() window, wrapped unto the next line, then saved it,
+a re-display of that string, in a wider MEMOEDIT() window, will
+show a space break where it automatically wrapped in the smaller
+window.
+
+e.g.
+        narrow window:      wider window:
+    
+        |           |       |                       |
+        |qwertyuiopa|   =   |qwertyuiopa sdfg       |
+        |sdfg       |       |                       |
+        |           |       |                       |
+
+-----------------------------------
+
+With the NDX.OBJ, doing a FIND on a NUMERIC or DATE type data
+will return:
+
+            internal error 21
+
+e.g.
+
+        1.  - using NDX.OBJ
+            - index on a NUMERIC field
+            - FIND a numeric
+
+            e.g.
+                use DBF
+                index on NUMERIC_FIELD to NDX1
+                find 0000000222                     && error 21
+
+
+        2.  - using NDX.OBJ
+            - index on a DATE field
+            - FIND a date
+
+            e.g.
+                  index on DATE_FIELD to NDX1
+                  find 19880503                     && error 21
+
+
+WORKAROUND:
+    - use SEEK
+
+-----------------------------------
+
+The last line of RL.EXE's Header Box does not get centred.
+
+-----------------------------------
+
+Fixes to the RL.EXE utlility:
+
+FIX 1:  About the 712th line of RLFRONT.PRG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+REPLACE:
+
+    ...
+    total_fields   = frm_colcount
+    ...
+
+with:
+
+    ...
+    total_fields   = INT(frm_colcount)
+    ...
+
+
+FIX 2:  About the 788th line of RLFRONT.PRG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+INSERT:
+
+    CASE M->key > 27 .AND. M->key < 255
+
+between:
+
+    ...
+    CASE M->key == 27 .OR. M->key == 18 .OR. M->key == 3
+    * define your own special 'read-exit' keys here, if needed
+
+and:
+
+    OTHERWISE	&& the function keys
+    form_state = VAL(SUBSTR(LTRIM(STR(M->key)),2))	&& get the new state
+    ...
+
+
+FIX 3:  About the 806th line of RLFRONT.PRG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+REPLACE:
+
+...
+frm_pagehdr = TRIM(phdr_lines[1]) + ";" + TRIM(phdr_lines[2])+";" + ;
+  TRIM(phdr_lines[3]) + ";" + phdr_lines[4]
+...
+
+with:
+
+...
+frm_pagehdr = IF(!EMPTY(phdr_lines[1]), TRIM(phdr_lines[1]) + ";", SPACE(60)) +;
+              IF(!EMPTY(phdr_lines[2]), TRIM(phdr_lines[2]) + ";", SPACE(60)) +;
+              IF(!EMPTY(phdr_lines[3]), TRIM(phdr_lines[3]) + ";", SPACE(60)) +;
+              IF(!EMPTY(phdr_lines[4]), TRIM(phdr_lines[4]) + ";", SPACE(60))
+...
+
+
+FIX4:  About the 194th line of RLDIALOG.PRG
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+REPLACE:
+
+...
+    achoice(... , "ch_func", 0, ...)
+...
+
+with:
+
+...
+    achoice(... , 0, "ch_func", ...)
+...
+
+
+-----------------------------------
+===================================
+
+********************** WATCH - OUTS ******************
+
+The Compiler (Clipper.exe) will issue an error message for some
+command lines that are greater than 256 characters long. These
+commands are:
+    - VALIDs
+    - SET FILTERs
+    - GETs
+    - INDEX ONs
+    - SET RELATIONs,
+    - LOCATE FORs
+
+-----------------------------------
+
+Besides EXIT, the LOOP command will also behave the same way to
+FOR/NEXT clauses, as they do to DO/WHILEs.
+
+-----------------------------------
+
+For Assembler routines:
+    Some directives assume that the direction flag is 
+    cleared before execution. So if you set the direction (STD),
+    make sure that you clear it (CLD) before calling any of Clipper's
+    Extend system functions.
+
+-----------------------------------
+
+Do not use letters A - J as alias names. 
+    e.g.
+        select A
+        use DBF alias B         && <--- don't do!
+
+-----------------------------------
+===================================
+
+
+Good Luck 'n' Happy Clipping!!!
+
+
+* eoRead_Me.1st
+**************************************************************************
+

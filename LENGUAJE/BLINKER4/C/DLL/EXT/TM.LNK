@@ -1,0 +1,11 @@
+#
+#  96.03.15    TM.LNK
+#
+#  This sample link file demonstrates how to create a DOS extended
+#  test program to use a DOS extended DLL with Microsoft Visual C/C++
+#
+
+@t                         # Include generic link file
+
+lib blxmvc15               # Blinker DOS extender library for Visual C/C++
+

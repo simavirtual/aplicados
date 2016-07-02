@@ -1,0 +1,307 @@
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³         A SIMPLE GUIDE TO MULTILINGUAL PROGRAMMING        ³
+        ³                                                           ³
+        ³                 Marc Gagnon (c) 1993-94                   ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+1. INTRODUCTION
+
+Programming the same software for users speaking a diffent language
+than our own home language is rarely an issue.  Until some shiny day
+the boss walks in and asks "pronto" a version of the software in
+some foreign language: a hefty distribution aggrement accompagnied by
+a nice check!
+
+
+2. MULTILINGUAL SUPPORT
+
+So a decision needs to be made quickly, we need a strategy for
+translating the software.  The translation itself is not the real
+problem.  The problem is how the source code will be maintained afterwards.
+
+  o Will we simply copy all source files to a new directory, hire a
+    translator, show him/her how to use a text editor and recognize strings
+    and bingo! le tour est jou‚?
+  o Will we create defines for each string?
+  o Will we create memory arrays for each string?
+  o Will we create a table (DBF) or a text file with all strings in it?
+  o Will we use conditional compiling and simply duplicate the portions
+    of code containing string?
+  o Will we embed the translation directly into on single source?
+
+
+Consider the following four methods of implementing multilingual
+support in your systems.  I have tried them all and prefer the
+last one (D) by far.  There are also many other ways to support
+multiple languages, but these are the most common:
+
+
+A) Single language (hard coded)
+
+Well this method is the most common.  When it was never forseen in
+advance that multilingual support would ever be an issue.  The marketing
+folks suddenly have the brillant idea of expanding the territory for
+sales and surprise! surprise! surprise! .... foreign languages in
+foreign countries (or provinces for Qu‚bec and some bilingual Atlantic
+provinces; taking Canada as an example).  The worst solution to support
+the need for multiple language is to copy all source code into another
+directory and simply translate all strings into the desired language.
+Imagine supporting 3 languages, means three version of the source to
+maintain at all times; the smallest new release can become a nightmare!
+
+Single language (hard coded):
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³C:\PROJECT\ENGLISH\CLIENT.PRG                                               ³
+ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ
+³                                                                            ³
+³ FUNCTION Client()                                                          ³
+³                                                                            ³
+³   @ 0, 0 SAY "Client #" GET lcNumber                                       ³
+³   @ 1, 0 SAY "Name   :" GET lcName                                         ³
+³   @ 2, 0 SAY "Address:" GET lcAddr                                         ³
+³   @ 3, 0 SAY "City   :" GET lcCity                                         ³
+³   @ 4, 0 SAY "Phone #:" GET lcPhone                                        ³
+³                                                                            ³
+³   READ                                                                     ³
+³                                                                            ³
+³ RETURN( NIL )                                                              ³
+³                                                                            ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+³C:\PROJECT\FRENCH\CLIENT.PRG                                                ³
+ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ
+³                                                                            ³
+³ FUNCTION Client()                                                          ³
+³                                                                            ³
+³   @ 0, 0 SAY "N§ client:" GET lcNumber                                     ³
+³   @ 1, 0 SAY "Nom      :" GET lcName                                       ³
+³   @ 2, 0 SAY "Adresse  :" GET lcAddr                                       ³
+³   @ 3, 0 SAY "Ville    :" GET lcCity                                       ³
+³   @ 4, 0 SAY "T‚l‚phone:" GET lcPhone                                      ³
+³                                                                            ³
+³   READ                                                                     ³
+³                                                                            ³
+³ RETURN( NIL )                                                              ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+B) Data driven (array driven and #DEFINE driven are the same)
+
+In this form of implementation, the programmer must setup a database, text
+file, #DEFINE, array, or other storage format to contain all tokens
+and messages enclosed in the software.  This method also requires a
+unique key identifier to be assigned to each token/message.  Uniqueness
+can be implemented with a combination of two (2) columns ( "cTxtNo + cLng" )
+or directly in the "cTxtNo" column by padding the language code a prefix
+or a suffix to the text number (CL01E, CL01F where "E" stands for "English"
+and "F" for french).
+
+This method is very convenient if you want to allow users to switch from
+one language to another on the fly.  But, on the other hand, if your
+system is used only in one language at a time (users do not start going
+mental -toggling from one language to another- as if they were flipping
+(no zapping) channels on TV; you are actually taxing heavily your users.
+The system need to load the strings each time you start it up.  Also,
+using this approach, your source code becomes a little cryptic.  No more
+strings appear in your PRG's that usually reveal a lot about what is
+actually programmed in a given fragment of code.  All strings are refered
+as codes or number, in fact you normally end up keeping a copy of the
+string in your home language as a comment next to each line using a data-
+driven string, for readability.  Maintaining such a setup means that you
+must exit or shell to DOS, enter DBU and lookup the table periodically
+for getting an existing code, creating one and so on....  You can print
+a report of all your strings; which is pretty nice! but it can be easly
+outdated.  For the programmer, this techology means continuosly switching
+back and forth between the source (PRG) and DBU (file containg the strings).
+If you use a text file, no need for DBU anymore.  But you still need
+cyphering techniques in your PRG.
+
+Data driven:
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³CLIENT.PRG                               ³LNGTXT.PRG                        ³
+ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍØÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ
+³FUNCTION Client()                        ³STATIC sc Lng := "E"              ³
+³                                         ³                                  ³
+³  @ 0,0 SAY GetTxt( "CL01" ) GET lcNumber³FUNCTION SetLng( pcLng )          ³
+³  @ 1,0 SAY GetTxt( "CL02" ) GET lcName  ³  IF pcLng # NIL                  ³
+³  @ 2,0 SAY GetTxt( "CL03" ) GET lcAddr  ³    scLng := pcLng                ³
+³  @ 3,0 SAY GetTxt( "CL04" ) GET lcCity  ³  ENDIF                           ³
+³  @ 4,0 SAY GetTxt( "CL05" ) GET lcPhone ³RETURN( scLng )                   ³
+³  READ                                   ³                                  ³
+³                                         ³FUNCTION GetTxt( pcTxtNo )        ³
+³RETURN( NIL )                            ³  Txt->( dbSeek( pcTxtNo + scLng )³
+³                                         ³RETURN( Txt->cTxt )               ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ Txt.dbf        ÚÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                ³cTxtNo³cLng³cTxt              ³
+                ÃÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
+                ³CL01  ³E   ³Client  #:        ³
+                ³CL01  ³F   ³# Client :        ³
+                ³CL02  ³E   ³Name     :        ³
+                ³CL02  ³E   ³Nom      :        ³
+                ³CL03  ³E   ³Address  :        ³
+                ³CL03  ³F   ³Addresse :        ³
+                ÀÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+C) Basic conditional compiling
+
+With CA-Clipper 5.x, we now have a built-in preprocessor.  By using
+#IFDEF...#ELSE...#ENDIF schemes, multilinguistic requirements can be
+achieved.  This means all ressources for the program in the PRG
+(as opposed to the data-driven technique).  But this method requires
+a lot of cut & paste and is synonym of major headaches for code that
+needs revision.  If your code imbeds 4 languages, your will have to
+maintain 4 fragments of the same code (oh! sh**!).
+
+Basic conditional compiling:
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³CLIENT.PRG                                                                  ³
+ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ
+³                                                                            ³
+³ FUNCTION Client()                                                          ³
+³   :                                                                        ³
+³   :                                                                        ³
+³   #IFDEF ENGLISH                                                           ³
+³      @ 0, 0 SAY "Client #" GET lcNumber                                    ³
+³      @ 1, 0 SAY "Name   :" GET lcName                                      ³
+³      @ 2, 0 SAY "Address:" GET lcAddr                                      ³
+³      @ 3, 0 SAY "City   :" GET lcCity                                      ³
+³      @ 4, 0 SAY "Phone #:" GET lcPhone                                     ³
+³   #ENDIF                                                                   ³
+³                                                                            ³
+³   #IFDEF FRENCH                                                            ³
+³      @ 0, 0 SAY "N§ Client:" GET lcNumber                                  ³
+³      @ 1, 0 SAY "Nom      :" GET lcName                                    ³
+³      @ 2, 0 SAY "Adresse  :" GET lcAddr                                    ³
+³      @ 3, 0 SAY "Vile     :" GET lcCity                                    ³
+³      @ 4, 0 SAY "T‚l‚phone:" GET lcPhone                                   ³
+³   #ENDIF                                                                   ³
+³                                                                            ³
+³   READ                                                                     ³
+³                                                                            ³
+³ RETURN( NIL )                                                              ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+D) Embedded linguistic clauses
+
+This technique uses CA-Clipper's preprocessor in areas not explored
+by many people.  I use the #xTRANSLATE directive to enhance all
+commands, statements, functions and expressions in CA-Clipper.  It is
+as if all commands <inherit> from the embedded linguistic clauses.  By
+simply including "LNGMULTI.CH", all commands, statements and expressions
+in CA-Clipper are open to the power of embedded multilingual programming.
+
+Syntax:
+
+   IN <IdLanguage> <xExpression>
+ [ IN <IdLanguage2> <xExpression2>...] => <xExpression?>
+
+Arguments:
+
+  <IdLanguage> is the language identifier for the expression to follow.
+  This identifier is case sensitive because there is an underlying
+  #DEFINE (normally uppercase is used).  This identifier must be present
+  and handles in "LNGMULTI.CH".
+
+  <Expression> is any CA-Clipper expression.  The type of the expression
+  depends of the value required for the clause in the command, the
+  parameter in the function call, etc...
+
+Yields:
+
+  <xExpression> in the language defined at compile time.  ALL OTHER
+  LANGUAGES and expression for those languages will be nullified and
+  GENERATE NO CODE.  When no language is defined at compile time, the
+  home language, a defined in "LNGDEF.CH", is used and only the
+  expressions pertaining to the home language will be compiled. Only
+  the expressions the the language defined at compile time will be
+  compiled.
+
+Description:
+
+  This clause can be used in any command, expression or function call.
+  Yes, not only commands can have clauses! so can function calls and
+  expressions.  This is a concept I like to call the UDEC (User Defined
+  Expression Clause).
+
+  This release, includes support for three (3) languages :
+
+         o FRENCH
+         o ENGLISH
+         o SPANISH
+
+ -Defining language at compile time:
+
+  o CLIPPER <PrgName> /d<IdLanguage>      ex.: CLIPPER Client /dFRENCH
+  o SET CLIPPERCMD=/m/n/w/d<IdLanguage>   ex.: SET CLIPPERCMD=/m/n/w/dFRENCH
+
+ -Adding new languages:
+
+  If you need to support more or different languages, you can simply edit
+  "LNGMULTI.CH" an setup your new languages.  For each new language there
+  are two steps to do in editing "LNGMULTI.CH":
+
+  A) The portion that sets the default language needs to check if the
+     new language is not defined.  You need to simply embed an additional
+     #IFNDEF <IdNewLanguage> ... #ENDIF.
+
+  B) Add a language support section for your new language.  You can
+     copy the code for another language and simply replace the language
+     identifier expression be the new language identifier.
+
+ *Note: Always use upper case to define your languages; because #DEFINE
+        is case sensitive.
+
+Example:
+
+Embedded lingustic support:
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³CLIENT.PRG                                                                  ³
+ÆÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍµ
+³ #INCLUDE "LngMulti.ch"                                                     ³
+³                                                                            ³
+³ FUNCTION Client()                                                          ³
+³   :                                                                        ³
+³   @ 0, 0 SAY IN ENGLISH "Client #" IN FRENCH "N§ client:" GET lcNumber     ³
+³   @ 1, 0 SAY IN ENGLISH "Name   :" IN FRENCH "Nom      :" GET lcName       ³
+³   @ 2, 0 SAY IN ENGLISH "Address:" IN FRENCH "Adresse  :" GET lcAddr       ³
+³   @ 3, 0 SAY IN ENGLISH "City   :" IN FRENCH "Vile     :" GET lcCity       ³
+³   @ 4, 0 SAY IN ENGLISH "Phone #:" IN FRENCH "T‚l‚phone:" GET lcPhone      ³
+³                                                                            ³
+³   READ                                                                     ³
+³   :                                                                        ³
+³   @ ( IN ENGLISH 22 IN FRENCH 23), 0 SAY IN ENGLISH "Press any key..."    ;³
+³                                          IN FRENCH  "Appuyez une touche..."³
+³   :                                                                        ³
+³   Alert( IN ENGLISH "Select report output?"                        ;       ³
+³          IN FRENCH  "Veuillez choisir la destination du rapport?", ;       ³
+³          IN ENGLISH { "LPT1", "Screen", "File"    }                        ³
+³          IN FRENCH  { "LPT1", "cran" , "Fichier" }                        ³
+³        )                                                                   ³
+³                                                                            ³
+³   laColor := IN ENGLISH { "Blue", "Red"  , "White", "Yellow" }     ;       ³
+³              IN FRENCH  { "Bleu", "Rouge", "Blanc", "Jaune"  }             ³
+³                                                                            ³
+³ RETURN( NIL )                                                              ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+3. CONCLUSION
+
+I tried to cover the most important techniques for multilingual support
+in programming.  I hope that this paper will help some with decisions
+that need to be made now or in the futur and ultimately help elaborating
+a better stategy.
+
+
+ABOUT THE AUTHOR
+
+Marc Gagnon works for a medical software company.  He has been
+programming with Clipper since Winter 85.  Object oriented
+programming, preprocessor techniques are among his fields of
+interest.  He likes music, jokes, sci-fi...  He is qualified as
+mental by his co-workers (singing and drumming out loud listening
+to his walk-man !@#$).  He also pratices annoying linguistic
+exercices such as the "detachable first letter" for every work
+he says (example: T-Oday, T-Here was a P-Retty B-Ig B-Lizzard
+on M-Ontr‚al....) it drives everyone in the O-Ffice N-Uts.  In
+fact some are C-Atching it like a V-Irus.  Also this disease has
+been recently named as "Hot-Keyitis".  He is also President and
+co-founder of the GUCM (Montr‚al Clipper User's Group) since 1990.

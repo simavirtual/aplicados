@@ -1,0 +1,14 @@
+#
+#  MAIN.LNK    Blinker link file for Xbase++ DLL example
+#
+fi main              # Main EXE file
+lib xdll1            # Import library from XDLL1
+out main             # Output file name
+map s,a,x            # MAP file
+code                 # Include debugging information
+nobell               # No irritating beep
+
+defbegin
+   name main
+   exetype nt subsystem console
+defend

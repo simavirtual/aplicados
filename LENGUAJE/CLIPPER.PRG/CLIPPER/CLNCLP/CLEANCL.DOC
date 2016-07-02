@@ -1,0 +1,297 @@
+                   Online User's Guide
+ 
+CONTENTS
+ 
+WHAT IS CleanClipper
+CUSTOMER SERVICE
+REGISTRATION and BENEFITS
+INSTALLING CleanClipper
+USING CleanClipper
+NOTES ON CleanClipper
+DISCLAIMER
+ 
+WHAT IS CleanClipper
+ 
+CleanClipper is a Clipper 5.0+ soure code formatter.  The
+program handles such things as indentation, operator spacing,
+function statement spacing, control statement spacing, code-
+block spacing, comment positioning, parentheses min/max,
+reserved word case, and more.  CleanClipper is a great tool for
+programmers who have to maintain or review Clipper programs
+developed by others.  
+ 
+CUSTOMER SERVICE
+ 
+ Contacting Invariant Software
+ 
+   Address: Invariant Software        Phone: 509-328-9542
+            P.O. Box 10206            Email: CIS 73501,1643
+            Spokane, WA  99209
+ 
+REGISTRATION and BENEFITS
+ 
+By registering CleanClipper you will receive the latest
+version, a printed user's guide, free support, and a free
+upgrade.  Please use the file REGISTER.DOC.  Thanks for the
+support!
+ 
+INSTALLING CleanClipper
+ 
+ What is Required to Run CleanClipper
+ 
+ CleanClipper 1.0 requires an IBM-compatible computer, a minimum
+ of 512k RAM, and MS-DOS 3+.
+ 
+ Installing CleanClipper
+ 
+ To make CleanClipper the most useful, copy the following files
+ to a directory that is pointed to by the PATH statement used by
+ your DOS.
+   CLEANCL.EXE      Executable file.
+   CLEANCL.DOC      User's Guide.
+   CLEANCL.HLP      Text file for F1 help screens.
+ The following files will be created once CleanClipper is run:
+   CLEANCL.DAT      File to save default format parameters.
+   CLEANCL.RSV      File for reserved word listing.
+   REGISTER.DOC     Registration file.
+ 
+USING CleanClipper
+ 
+ Calling from DOS
+ 
+ At the DOS prompt use the following syntax:
+   CLEANCL [DRIVE:][PATH][filename1] [filename2]
+   where filename1 = source file
+         filename2 = target file
+ The brackets '[]' designate optional arguments.
+ 
+ Examples:
+  cleancl                       { allows configuration changes }
+                                { regardless of the run mode   }
+  cleancl file1.prg             { formats one file in current  }
+                                { directory                    }
+  cleancl c:\src\file1.prg      { formats one file in given    }
+                                { path                         }
+  cleancl *.prg                 { formats all files with an    }
+                                { extension of 'prg'           }
+  cleancl file1.prg file1.fmt   { formats one file and places  }
+                                { result in file 'file1.fmt'   }
+  cleancl r??.prg s??.fmt       { formats number of files and  }
+                                { places results in new files  }
+  cleancl c:\src\*.prg *.fmt
+  cleancl src\*.prg *.fmt
+  cleancl \src\*.prg *.fmt
+  cleancl *.prg *.e
+  cleancl r*.* s*.*
+  cleancl ?.prg *.fmt
+ 
+ Online Help
+ 
+ HELP is available to you at almost any point in the program.
+ If you are uncertain how to continue or just want some
+ information, press F1.  In addition, the HELP menu command
+ allows you to peruse an online user's guide.
+ 
+ Using the Menu
+ 
+ You have two options to select your choice from a menu.  First,
+ you can use the arrow keys to move the cursor to the choice you
+ want, then press ENTER.  Secondly, you can simply type the
+ first letter of your choice.  It doesn't matter which item the
+ cursor is on, and there is no need to press ENTER.  Press F1
+ for a description of the menu selection.
+ 
+ Run Command
+ 
+ Use this command to actually run the formatting on the files
+ specified in the 'Source' and 'Target' fields.
+ 
+ Edit Command
+ 
+ Use this command to make changes to the format configuration
+ parameters, the Source and Target file fields, and the Run
+ Mode.
+  
+  general rules
+ 
+  Space characters are denote by '^' and can be moved with the
+  SPACE BAR or BACKSPACE keys.  Format selections, denoted by
+  ( ), can be selected with the space bar.  Use the following
+  keys to navigate the edit screen:
+    TAB : go to the next section.
+    SHIFT-TAB : go to the previous section.
+    F10 : return to the menu.
+ 
+  source and target file fields
+ 
+  Use this section to specify the source and target files for
+  formatting.  The syntax for the two fields are:
+    Source : [drive:][path]filename1
+    Target : [filename2]
+  You may use wildcards in either filename option.  The brackets
+  '[]' denote optional input.  If the target file is left blank
+  the source file(s) will be overwritten with the formatted
+  file.  If the target file already exists it will be replaced
+  with the formatted file.  The target file is always placed in
+  the same path as the source file path.
+ 
+  procedure style
+ 
+  Use this section to specify the indentation of statements
+  within subroutines and functions.
+ 
+  control style
+ 
+  Use this section to specify the indentation of statements
+  within the control statements DO WHILE, DO CASE, FOR, and IF.
+  For example, the various styles could be, but are not
+  limited to:
+ 
+  if x==1          if x==1       if x==1
+    x:=0             x:=0            x:=0
+  endif              endif         endif
+ 
+  The position of 'x:=0' determines the indentation of state-
+  ments within control statements.
+ 
+  procedure/function spacing
+ 
+  Use this section to specify the spacing for procedure or
+  function calls and definitions.  The space characters are
+  denoted with a '^' and include parentheses and commas.
+  Possible styles include:
+    function compare(p1, p2)
+    function compare( p1,p2 )
+    function compare( p1, p2 )
+ 
+  operator spacing
+ 
+  Use this section to specify spacing for assignment, boolean,
+  relational, and math operators.  Space characters are denoted
+  by a '^'.  The operator spacing is limited to the following:
+    assignment : :=, +=, -=, *=, /=, %=, **=, ~=
+    boolean    : .and., .or.
+    relational : <, >, <=, >=, ==, !=, $
+    math       : **, ^, *, /, %, +, -
+ 
+  code block spacing
+ 
+  Use this section to specify the spacing for code blocks.  The
+  space characters are denoted with a '^'.  Possible styles
+  include:
+    { | a, b | a++, a+b }
+    { |a,b| a++, a+b }
+    {|a,b| a++,a+b}
+ 
+  array initializaion spacing
+ 
+  Use this section to specify the spacing for array intiiali-
+  zation statements.  The space characters are denoted with a
+  '^'.  Possible styles include:
+    arry := {a, b}
+    arry := { a,b }
+    arry := { a, b }
+ 
+  comment positioning
+ 
+  Use this section to specify the placement of code-line
+  comments - comments which come after a line of code (i.e.
+  'x=0  // comment').  Lines which begin with a comment will be
+  indented appropriately.  You can specify if the comment should
+  be placed at certain column, or placed a number of spaces
+  after the end of code.
+ 
+  parentheses in expressions
+ 
+  Use this section to specify if you wish to have all assignment
+  (:= only) and control expressions (except FOR) altered by min-
+  imizing or maximizing the parentheses for binary characters.
+  Choose 'no change' if you wish to leave the expression un-
+  touched.  Only binary operators and their associated operands
+  are considered.  Unary operators are not affected.  Paren-
+  theses will be added or deleted in accordance with the follow-
+  ing binary operator rules of precedence:
+    Operators                              Precedence
+    ---------                              ----------
+    **, ^                                  First
+    *, /, %                                Second
+    +, -                                   Third
+    <>, !=, #, <, <=, ==, >, >=, $, =      Fourth
+    .and.                                  Fifth
+    .or.                                   Sixth
+    :=, +=, -=, *=, /=, %=, **=, ~=        Seventh
+ 
+  preprocessor directives positioning
+ 
+  Use this section to specify whether you wish to indent prepro-
+  cessor directives, or place the directives at the first
+  column.
+ 
+  reserved word case
+ 
+  Use this section to specify how reserved words should be
+  altered as regards case.  The possible selections are 'no
+  change', 'while', 'While', and 'WHILE'.  To add or delete
+  reserved words, use a word processor to edit the file CLEANCL.
+  RSV.  You may add words at any location as long as each word
+  has its own line.  CleanClipper will sort the changed file and
+  save the changes in the new CLEANCL.RSV file.  If the file
+  CLEANCL.RSV is accidentally deleted, CleanClipper will create
+  a new file with a limited number of reserved words.
+ 
+  run mode
+ 
+  Use this section to specify the mode to run CleanClipper.
+  'Manual' mode always allows the user to edit the format
+  parameters and file fields before running format.  'Auto' mode
+  does not allow editing and begins formatting immediately.
+  Auto mode is useful if you have already specified the format
+  parameters you prefer (the last configuration is always saved
+  in CLEANCL.DAT) and know the files you wish to format.  Auto
+  mode only works when at least a 'source' file is specified at
+  the DOS prompt.  Auto mode, for example, could also be used
+  for a batch file which archives program files.
+ 
+ Color Command
+ 
+ Use this command to change the background and/or foreground
+ colors of the main screen.  The possible colors for each are
+ blue, green, cyan, magenta, brown, black, red, and white.
+ Simple select the 'background' or 'foreground' menu command
+ and the screen color will change in the above order.
+ 
+ Phone Command
+ 
+ Select this command for information to contact Invariant 
+ Software by phone or mail.
+ 
+ Help Command
+ 
+ Select this command for the online user's guide.
+ 
+ Quit Command
+ 
+ Select this command to quit CleanClipper.
+ 
+NOTES ON CleanClipper
+ 
+* All files must be ASCII text files.
+* Only code within a function or procedure is affected.
+* CleanClipper does recognize the 'REPEAT...UNTIL' control
+  statement which many programmers use via preprocessor
+  directives.
+* Program comments are not affected except for positioning.
+* If syntax errors exist in a file, an error message may be
+  displayed and the program will be stopped.  Source files
+  should be compiled-error-free!
+ 
+DISCLAIMER
+ 
+Invariant Software disclaims all warranties, expressed or
+implied, relating to this product as to the merchantability and/
+or fitness for a particular purpose.  Invariant Software shall
+not be liable for any damages whether they be direct, indirect,
+special, consequential, or indirectly by the use of this
+program.  THE PERSON USING THIS SOFTWARE ASSUMES ALL RISK AS TO
+THE QUALITY AND PERFORMANCE OF THIS SOFTWARE.
+~

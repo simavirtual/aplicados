@@ -1,0 +1,23 @@
+#
+#  96.03.23    T.LNK
+#
+#  This sample link file demonstrates how to create a DOS extended
+#  program to use the DBUDLL.DLL file
+#
+   bli exe ext          # Must be DOS extended program
+   output t             # The EXE name
+
+   file t               # List OBJ files here
+   file cld.lib         # Link the debugger if required
+
+   file blxclp53        # Clipper 5.3 EXE initialisation
+   lib blxclp53         # Clipper 5.3 extender override library
+
+   defbegin             # Module definition commands
+      name t            # Indicate an EXE
+      imports
+         DBUDLL.DBU     # Import the DBU function
+   defend
+
+   nobell               # No irritating beep
+

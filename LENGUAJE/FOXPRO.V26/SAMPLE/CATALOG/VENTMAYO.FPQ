@@ -1,0 +1,54 @@
+
+* WIZNAME = WZ_BQUER
+* VERSION = .96
+* TIMESTAMP = 493573908.0000
+* CLIENTSERVER =
+* TABLES = D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF
+* FIELDS = Facturas.c¢dfac;Facturas.fechfac;Facturas.impfac
+* FILTER = 0;0;Facturas.fechfac;5;{5/1/90};0
+* FILTER = 0;0;Facturas.fechfac;2;{6/1/90};0
+* SORT FIELDS = Facturas.c¢dfac
+* GROUP = 
+* SQL = SQL Select statement for Mailmerge Wizard:
+* SELECT Facturas.c¢dfac,Facturas.fechfac,Facturas.impfac;
+*	FROM D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF;
+*	WHERE (Facturas.fechfac >= {5/1/90} AND Facturas.fechfac < {6/1/90});
+*	ORDER BY Facturas.c¢dfac;
+*	INTO CURSOR Consulta
+IF !USED("Facturas")
+	SELECT 0
+	USE (LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF","DBF","Buscar Facturas.DBF ?")) AGAIN ALIAS Facturas
+ELSE
+	SELECT Facturas
+	SET RELATION TO
+	SET SKIP TO
+	SET ORDER TO
+	SET FILTER TO
+ENDIF
+*Sort order
+m.i=1
+DO WHILE !EMPTY(KEY(m.i))
+	IF NORMALIZE(KEY(m.i))="CàDFAC"
+		SET ORDER TO m.i ASCENDING
+		EXIT
+	ENDIF
+	m.i=m.i+1
+ENDDO
+IF EMPTY(SET("ORDER"))
+	IF SYS(2011)#"Exclusive"
+		USE DBF(ALIAS()) EXCLUSIVE AGAIN ALIAS (ALIAS())
+	ENDIF
+	INDEX ON c¢dfac TAG c¢dfac
+ENDIF
+*Filter
+IF EMPTY(SET("FILTER"))
+	SET FILTER TO (Facturas.fechfac >= {5/1/90} AND Facturas.fechfac < {6/1/90})
+ELSE
+	PRIVATE m.mfilt
+	m.mfilt=SET("FILTER")
+	SET FILTER TO &mfilt AND (Facturas.fechfac >= {5/1/90} AND Facturas.fechfac < {6/1/90})
+ENDIF
+LOCATE
+SET FIELDS GLOBAL
+SET FIELDS TO
+SET FIELDS TO Facturas.c¢dfac,Facturas.fechfac,Facturas.impfac

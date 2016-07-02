@@ -1,0 +1,18 @@
+# This is an example link script file for use when linking real mode
+# NOVLIB programs with CA-Clipper
+#
+# The module i5 is associated with the Print Server & IPX/SPX
+# functions and must be linked into the root because it contains
+# internal real time event functions.
+# These non-overlayable modules are small and represent very little
+# overhead to the application.
+# All other modules can be overlayed.
+
+module i5
+
+beginarea
+   lib novlibcl
+   lib novlib
+   lib novdos
+endarea
+

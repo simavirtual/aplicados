@@ -1,0 +1,28 @@
+//////////////////////////////////////////////////////////////////////
+//                                                                  //
+//                    Blinker Script for PCONSOL2                   //
+//                A Novell Utility Written with NOVLIB              //
+//                                                                  //
+//////////////////////////////////////////////////////////////////////
+
+BLINKER INCREMENTAL OFF
+BLINKER PROCEDURE DEPTH 100
+
+NOBELL
+
+// My PRGs
+	FILE PCONSOL2, NWI
+
+// NOVLIB
+	@NOVLIB30.LNK
+
+// Blinker protected mode material
+	#BLINKER EXECUTABLE EXTENDED
+	#BLINKER EXECUTABLE DUAL
+	#SEARCH BLXCLP52
+
+// CA-Clipper
+	@CL520MAX
+
+OUTPUT PCONSOL2
+MAP A,S

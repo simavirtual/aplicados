@@ -1,0 +1,25 @@
+#   Autor    : INFO-SPC LTDA Servicios Proyectos y Consultor¡a Ltda
+#   Fecha    : Santaf‚ de Bogot , Junio de 1993
+#   Archivo  : "PRUEBA.lnk"
+#   Prop¢sito: Especificaciones para el encadenador "rtlink"
+#   Sintaxis : Rtlink @PRUEBA
+#   --------------------------------------------------------
+#
+#Genera ejecutable de nombre "NEL.exe"
+output NEL
+#Resident hace que los modulos que siguen queden residentes en memoria
+resident
+fi PRUEBA
+#Dynamic hace que los modulos sgtes se mangen como overlays dinamicos
+dynamic	into NEL
+fi \aplica.nel\clipper.fun\funcsdbf
+fi \aplica.nel\clipper.fun\funcsnel
+fi \aplica.nel\clipper.fun\classnel
+fi \aplica.nel\clipper.fun\archinel
+#Usa libreria Prelink BASE50.pll que debe estar presente
+#con SET PLL=c:\CLIPPPER5\PLL
+#Usar base52 para versi¢n 5.2, base50 para ver 5.0 y 5.01
+#pll base52
+#Linkeo incremental. Para ahorrar tiempo habilitar l¡nea sgte
+#incremental
+#EOF PPAL.LNK

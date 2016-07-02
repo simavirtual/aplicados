@@ -1,0 +1,228 @@
+ PACKING.LST           NOVLIB 3.0 Demo packing list                96.06.20
+ -----------           ----------------------------                --------
+
+  This file contains a list of the NOVLIB files and their functions.
+
+  NOVLIB installation directory
+  -----------------------------
+
+  packing.lst       This file
+  readme.txt        Last minute information not in the manual (Write format)
+
+  C\OBJ directory
+  ---------------
+
+  nwatcom.obj       OBJ required when linking NOVLIB.LIB with Watcom C/C++
+
+
+  C\SAMPLES\BINDVIEW directory
+  ----------------------------
+
+  binddlg.h         Sample Bindery Viewing program for C/C++
+  bindview.c
+  bindview.def
+  bindview.h
+  bindview.mak
+  bindview.rc
+  make.bat
+  nlbv.ico
+  resource.h
+
+
+  C\SAMPLES\USERLIST directory
+  ----------------------------
+
+  make3.bat         Sample program to list users for C/C++
+  userlist.c
+  userlist.mak
+
+
+  C\SAMPLES\WHO directory
+  -----------------------
+
+  make4.bat         Sample program to display users and open files for C/C++
+  resource.h
+  who.c
+  who.def
+  who.h
+  who.ico
+  who.mak
+  who.rc
+  whoami.c
+  whoamid.c
+
+
+  C\SAMPLES\WHOAMI directory
+  --------------------------
+
+  make5.bat         Two 'WHOAMI' sample programs for DOS and Windows
+  nlwho.ico
+  resource.h
+  whoami.c
+  whoami.def
+  whoami.mak
+  whoami.rc
+  whoami.res
+  whoamid.c
+  whoamid.mak
+
+
+  CLIPPER directory
+  -----------------
+
+  novlib50.prg      Support code for CA-Clipper 5.x
+  novlib87.prg      Support code for CA-Clipper Summer '87
+
+
+
+  CLIPPER\SAMPLES\ACCOUNT directory
+  ---------------------------------
+
+  account.prg       Sample program to display account balances
+
+
+  CLIPPER\SAMPLES\BINDDUMP directory
+  ----------------------------------
+
+  binddump.dat      Sample program to display the Bindery
+  binddump.prg
+  prop.dbf
+
+  CLIPPER\SAMPLES\DEMO directory
+  ------------------------------
+
+  demo.prg          Sample NOVLIB demo program (Clipper 5.x)
+  demo87.prg        Sample NOVLIB demo program (Clipper S'87)
+
+
+  CLIPPER\SAMPLES\IPXSPX directory
+  --------------------------------
+
+  ipxchat.prg       IPX communications sample program
+  spxchat.prg       SPX communications sample program
+
+
+  CLIPPER\SAMPLES\MISC directory
+  ------------------------------
+
+  cj.prg            Sample program to start a capture
+  ddir.prg          Sample program to list deleted files
+  dlist.prg         Sample program to list directories
+  dlist87.prg       Sample program to list directories (Clipper S'87)
+  drvtest.prg       Sample to list drive types
+  flist.prg         Sample program to list files (Clipper 5.x)
+  flist87.prg       Sample program to list files (Clipper S'87)
+  gp.prg            Sample code to find least busy printer
+  ireset.prg        Program to reset an account
+  mdir.prg          Program similar to Novell's NDIR
+  ndir.prg          Another program similar to Novell's NDIR
+  prttest.prg       Sample code to select a network printer
+  slist.prg         Sample program to list servers
+  who.prg           WHOAMI sample program
+  whoami5x.prg      WHOAMI for Clipper 5.x
+
+  CLIPPER\SAMPLES\PCONSOLE directory
+  ----------------------------------
+
+  make.bat          PCONSOLE Clone demonstration program
+  nwi.prg
+  pc2_read.me
+  pconsol2.lnk
+  pconsol2.lnr
+  pconsol2.lnx
+  pconsol2.prg
+  pconsol2.rmk
+
+
+  DELPHI directory
+  ----------------
+
+  make.bat          Batch file to recompile NOVLIB.PAS
+  novlib.dcu        Compiled version of NOVLIB.PAS
+  novlib.pas        NOVLIB declarations for Delphi
+
+  DELPHI\SAMPLES\DEMO directory
+  -----------------------------
+
+  demo.dpr          Delphi demonstration program
+  demo.opt
+  demo.res
+  novdemo.dfm
+  novdemo.ico
+  novdemo.pas
+  novdemo.res
+
+  HELP directory
+  --------------
+
+  novlib.hlp        NOVLIB Windows Help file
+
+  INCLUDE directory
+  -----------------
+
+  novlib.ch         Header file for CA-Clipper 5.x
+  novlibc.h         Header file for C (C calling convention)
+  novlibp.h         Header file for C (Pascal calling convention)
+
+
+  LIB directory
+  -------------
+
+  novdos.lib        Dos specific library
+  novimp.lib        Import library
+  novimpcl.lib      Import library for CA-Clipper Windows programs
+  novlib.dll        Windows DLL
+  novlib.lib        Main library
+  novlib30.lnk      Link script for Blinker/RTLink
+  novlibcl.lib      Clipper interface library
+  novlibvo.dll      CA-Visual Objects 'non-strict' DLL
+  novwin.lib        Windows specific library
+
+
+  VB directory
+  ------------
+
+  novlib.bas        NOVLIB declarations for Visual Basic
+
+
+  VB\SAMPLES\DEMO directory
+  -------------------------
+
+  boxlist.frm       Sample program for Visual Basic
+  chgsrvr.frm
+  conninfo.frm
+  fsinfo.frm
+  jobinfo.frm
+  mainmenu.frm
+  messages.frm
+  plswait.frm
+  pqinfo.frm
+  sendmsg.frm
+  userinfo.frm
+  vb_wdemo.bas
+  vb_wdemo.frm
+  vb_wdemo.mak
+  volinfo.frm
+
+  VB\SAMPLES\IPXCHAT directory
+  ----------------------------
+
+  ipxchat.frm       Sample IPX communications program for Visual Basic
+  ipxchat.mak
+  ipxvars.bas
+
+  VO directory
+  ------------
+
+  novlib.aef        'Relaxed' syntax AEF for CA-Visual Objects
+  novlibs.aef       'Strict' syntax AEF for CA-Visual Objects
+
+
+  VO\SAMPLES directory
+  --------------------
+
+  userlist.aef      Sample User listing program
+  who.aef           Sample program
+  whoami.aef        Sample 'WHOAMI' program
+
+

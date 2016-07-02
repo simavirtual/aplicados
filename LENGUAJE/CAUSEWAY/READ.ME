@@ -1,0 +1,273 @@
+
+Notes On CauseWay for Clipper 5 Version 1.3
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+This READ.ME file contains important information about CauseWay
+for Clipper 5 which does not appear in the CauseWay User Manual.
+Please read this file before contacting technical support with
+any questions or problems.
+
+CauseWay is an active and evolving product.  If you need support
+for a DOS extender feature that is not present in your copy of
+CauseWay, please contact technical support.  We may already have
+released a maintenance update which adds the feature (minor
+maintenance updates are always free).  If not, we do add
+features based on customer feedback, often with a very short
+turn-around time.
+
+
+Installing CauseWay
+===================
+
+CauseWay requires no special configurations, directories, or
+installation.  Simply copy those files you desire from the
+system disk onto your desired hard drive directory(ies).  Please
+remember to make a backup of your system disk to guard against
+losing your copy of CauseWay should something happen to the
+original disk.
+
+If you want to use an object module or library on the CauseWay
+distribution disk without copying it into your current working
+directory, remember to set the OBJ or LIB environment variable
+appropriately
+
+
+Requirements
+============
+
+A minimum of 500K of total free physical memory (of which
+100K-150K is the minimum for conventional DOS memory) is
+recommended for CauseWay applications.  Programs can run on
+less, down in the 300K range, but CauseWay application
+performance will decline significantly.  The more physical
+memory is present, the better a program's performance.
+
+
+CauseWay Files
+==============
+
+The following files should be on your system disk:
+
+    CAUSEWAY.API - C interface header file for Clipper-relevant
+    CauseWay functions.
+
+    CWPLOCK.ASM - Source and documentation to cwplock() routine.
+
+    SHOWEVAR.ASM - Example source file for WARPWRAP.
+
+    BLINKER.BAT - Batch file uses BLINKER.DEF to emulate Blinker.
+    
+    EXOSPACE.BAT -  Batch file uses EXOSPACE.DEF to emulate ExoSpace.
+    
+    RTLINK.BAT - Batch file uses RTLINK.DEF to emulate RTLink.
+
+    USECL501.BAT - Changes linker definition files for Clipper
+    5.01 use.
+
+    USECL52.BAT - Changes linker definition files for CA-Clipper
+    5.2 use.
+
+    USECL53.BAT - Changes linker definition files for CA-Clipper
+    5.3 use.
+    
+    WARPLINK.BAT - Batch file uses WARPLINK.DEF to emulate WarpLink.
+
+    CWSAMPLE.C - Sample Clipper-callable functions demonstrating use
+    of the CauseWay C API.
+
+    BLINKER.DEF - Blinker emulation configuration file for WL32.
+
+    EXOSPACE.DEF - ExoSpace emulation configuration file for WL32.
+
+    RTLINK.DEF - RTLink emulation configuration file for WL32.
+
+    WARPLINK.DEF - WarpLink emulation configuration file for WL32.
+
+    WARPWRAP.DEF - Example definitions file for WARPWRAP.
+
+    BLINKER.DF1 - CA-Clipper 5.01 Blinker emulation configuration file.
+
+    EXOSPACE.DF1 - CA-Clipper 5.01 ExoSpace emulation configuration file.
+
+    RTLINK.DF1 - CA-Clipper 5.01 RTLink emulation configuration file.
+
+    WARPLINK.DF1 - CA-Clipper 5.01 WarpLink emulation configuration file.
+
+    BLINKER.DF2 - CA-Clipper 5.2 Blinker emulation configuration file.
+
+    EXOSPACE.DF2 - CA-Clipper 5.2 ExoSpace emulation configuration file.
+
+    RTLINK.DF2 - CA-Clipper 5.2 RTLink emulation configuration file.
+
+    WARPLINK.DF2 - CA-Clipper 5.2 WarpLink emulation configuration file.
+
+    BLINKER.DF3 - CA-Clipper 5.3 Blinker emulation configuration file.
+
+    EXOSPACE.DF3 - CA-Clipper 5.3 ExoSpace emulation configuration file.
+
+    RTLINK.DF3 - CA-Clipper 5.3 RTLink emulation configuration file.
+
+    WARPLINK.DF3 - CA-Clipper 5.3 WarpLink emulation configuration file.
+
+    CWC.EXE - CauseWay file compressor.
+
+    CWD.EXE - CauseWay symbolic debugger for C and assembly
+    language routines.
+
+    WL32.EXE - CauseWay protected mode linker.
+
+    WW.EXE - CauseWay environment variable burn-in utility.
+
+    CW.INC - Assembly language include file for CauseWay API.
+
+    CWCLP52.LIB - Replacement library for CA-Clipper 5.2
+
+    LSCLP52.LIB -  Replacement library for CA-Clipper 5.2, only
+    works when WL32 /ls option is specified, only links in those
+    replacement modules required by the program.  May decrease
+    final EXE size at the expense of reduced link speed.  There
+    is no runtime operational difference between LSCLP52.LIB and
+    CWCLP52.LIB.  Failure to link with the /ls option when using
+    this library will lead to program failure.
+
+    DBU.LNK - Sample link file for DBU using WL32's native link
+    configuration (no configuration file specified using the /lc
+    option).
+
+    READ.ME  - This file.
+
+    CAUSEWAY.NG - Norton Guides file for CauseWay.
+
+    CWCATOOL.OBJ - Linable object module patch file needed for
+    proper operation of several CA-Clipper Tools routines.
+
+    CWFUNCKY.OBJ - Linkable object module patch file needed for
+    some Funcky library versions for use with CauseWay.
+
+    CWPLOCK.OBJ - Linkable object module with cwplock() routine
+    callable from a Clipper application to lock EXE image in
+    memory.
+
+    CWSAMPLE.OBJ - Linkable object module compiled CWSAMPLE.C.
+
+    CWSWAP.OBJ - Linkable object module containing memory swap
+    function.
+
+    CWSWRET.OBJ - Linkable object module containing alternate
+    memory swap function that returns program exit code.  The
+    name of the swap function is CWSWAP as with CWSWAP.OBJ, that
+    is, only the operation of the routines change, not their
+    names.
+
+    CWUSECLD.OBJ - Linkable object module file needed to use
+    CLD.LIB with CauseWay.  Link CLD.LIB as a library, not a
+    file, after the CauseWay replacement library.
+
+    SHOWEVAR.OBJ - Linkable example source file for WARPWRAP.
+
+    CWD.OVL - file needed by CWD, the CauseWay debugger.
+
+    VENDOR.TXT - Vendor specific information about using CauseWay.
+
+    C501LIBS.ZIP - ZIP-compressed CA-Clipper 5.01 replacement
+    libraries, CWCLP501.LIB and LSCLP501.LIB.
+
+    CDLLTEST.ZIP - ZIP-compressed set of tools and examples for using
+    DLLs with CauseWay.
+
+    CWTOOLS1.ZIP - ZIP-compressed optional add-on tools package
+    for CauseWay and CA-Clipper.  Use PKUNZIP or similar utility to
+    uncompress.
+
+
+Recent changes and corrections in CauseWay
+==========================================
+
+12/11/95 NG updated to reflect new 1.3 features.
+
+12/15/95 Module updated in 5.01 and 5.2 replacement libraries to
+correct problem using Clipper's GetEnv (5.3 and other library
+GetEnv versions work okay).
+
+02/16/96 Updated DOS extender, changes follow:
+
+         - Removed mouse driver resets at application startup
+           and shutdown.
+
+         - Corrected bug in Int 21h, DOS function 59h, Get
+           Extended Error Information, where ES and DI could be
+           modified by the call.
+
+         - Several internal modifications and fixes to low-level
+           DPMI function and interrupt handling that won't
+           affect 99.99% of Clipper users, unless they directly
+           call DPMI information functions and hook exception
+           handlers, etc.
+
+         - Better compatibility with Windows 95 when running one
+           applications from another and with Windows NT when
+           using the mouse.
+
+         - MAXMEM environment variable setting was not always being
+           used by CauseWay and has been corrected.
+
+02/16/96 Change to virtual memory module to work around an error
+in some versions of Comix which could lead to a GPF.
+
+
+CauseWay Manual Errata
+======================
+
+LSCLP501.LIB and CWCLP501.LIB are now compressed in the ZIP file
+C501LIBS.ZIP in order to conserve space, so that the CauseWay
+package can still fit on one disk.
+
+See the included printed supplement or unformatted ASCII text
+file SUPP13.TXT for information on using CauseWay with
+CA-Clipper 5.3, and the latest features.
+
+
+Known Incompatibilities
+=======================
+
+Libraries which are specifically supplied by linker vendors for
+use with their linker probably will not work with CauseWay,
+including EXOSPACE.LIB and BLXCLP52.LIB.  However, you should
+not need to use them.  You can remove them automatically by
+specifying a FILEDELETE configuration definitions file morphing
+command.
+
+See VENDOR.TXT for information about using CauseWay with various
+third party libraries and machine configurations.  If a library
+is not listed in VENDOR.TXT, is protected mode compatible,
+follows the documented ExoSpace API standard or uses the basic
+subset of Rational DOS extender API calls, it should be
+compatible with CauseWay.
+
+If you have problems using CauseWay, first try linking and
+running a one-line program that simply prints "Hello".  This
+will help establish if the problem is a basic incompatibility
+with CauseWay and your system setup, or if the error may lie
+elsewhere (e.g. a third party library).  If the application
+operates correctly, try linking and running DBU.  This may help
+narrow down the problem further, since DBU does not require
+third party libraries but does more fully exercise the
+CA-Clipper runtime routines.  Another approach if you have
+sufficient physical memory is to turn off virtual memory by
+SETting the environment variable CAUSEWAY=NOVM, to ensure that
+virtual memory is not causing a problem.
+
+If you continue to have problems, link CWPLOCK.OBJ into your
+application and then call CWPLOCK() at the beginning of your
+application to lock the entire EXE image into memory. See
+CWPLOCK.ASM for full documentation and source to the routine.
+
+Please report your results when contacting technical support.
+As a first step to resolving a problem, technical support
+usually requests your link or response file, a MAP file (WL32 /m
+option), and the CW.ERR and CALLSTAK.ERR files, if any.
+Technical support frequently also requests detailed information
+about the machine environment that is having the problem.
+
+
+Last updated 02/16/96

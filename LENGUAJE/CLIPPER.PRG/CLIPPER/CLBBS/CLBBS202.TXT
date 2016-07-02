@@ -1,0 +1,1769 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ŞŞŞŞ±°ŞŞŞŞ±±±±°ŞŞŞŞ±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±°ŞŞ°°ŞŞ±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±°ŞŞ±±°°±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞŞ±±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±±±±±°ŞŞ±±±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞŞŞ±±°ŞŞŞ±±±±
+       °°±°ŞŞ±±±±±±°ŞŞ±±°Ş±±°ŞŞ±±±±°ŞŞ°°±±±°ŞŞ°°ŞŞ±°ŞŞ°°ŞŞ±±±°ŞŞŞ±±
+       °°±°°ŞŞ±±ŞŞ±°ŞŞ±°ŞŞ±±°ŞŞ±±±±°ŞŞ±±±±±°ŞŞ±°ŞŞ±°ŞŞ±°ŞŞ°ŞŞ°°ŞŞ±±
+       °°±±°°ŞŞŞŞ±°ŞŞŞŞŞŞŞ±°ŞŞŞŞ±±°ŞŞŞŞ±±±°ŞŞŞŞŞŞ±°ŞŞŞŞŞŞ±±°ŞŞŞŞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 2, Number 2                                     14 January 1992
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    PGP - Pretty Good Privacy, revolution in security?  ....................  1
+    A one very nice fragment, where is rest?  ..............................  7
+    Clipper 5.01 and Microsoft C or Turbo C?  ..............................  8
+ 2. SOFTWARE  .............................................................. 17
+    WHAT IS WHAT, just take a short look into Clipper World  ............... 17
+    LIST, Another Database of Files - Clipper Shareware/Public  ............ 19
+    .NDX driver finaly available!!!!  ...................................... 23
+ 3. Q&A  ................................................................... 24
+    Q&A: How to display status bar when using INDEX ON  .................... 24
+    Q&A: PCBIOS driver for Clipper 5.01  ................................... 25
+ 4. ANOMALIES  ............................................................. 26
+    ANOMALIES reports and commets  ......................................... 26
+    INTERNAL ERROR #1210 - coming od DATABASE operations  .................. 26
+    Clipper 5.01 negative GET error when using PICTURE  .................... 26
+    CLIPPER.EXE and RTLINK.EXE problems with EMS memory  ................... 27
+ 5. CLIPPER NET  ........................................................... 29
+    Index of described files in Clipper BBS Magazine  ...................... 29
+ 6. CLIPBBS  ............................................................... 31
+ CLIPBBS 2-02       Table of Contents (...)        14 Jan 1992
+
+
+    CLIPBBS distribution  .................................................. 31
+    CLIPBBS, how to write an article!!!  ................................... 33
+
+                                   - - - - -
+ CLIPBBS 2-02                   Page 1                   14 Jan 1992
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+             PGP - Pretty Good Privacy, revolution in security?
+                    RA Public Key Cryptography for Masses
+ 
+ 
+ Non Clipper related subject, yes. But related very well. Few months ago,
+ echos of FidoNet were barking about one subject - PGP. (c) by Philip
+ Zimmerman, program claiming to be FREEWARE is offering something really
+ unique. Public Key Cryptography for everybody. Our article will try to
+ explain WHAT is Public Key Cryptography and WHAT is a PGP and FOR what is
+ use of this program good.
+ 
+ Basics of this document is coming from original documentation for PGP, but
+ try is, make it smaller and cleaner for decision what and for PGP is.
+ 
+ Did you, reader, ever needed to send to someone crypted message or file
+ with sure, that this someone will be ONLY one to be able read your data?
+ Did you, reader, ever needed to sign program or data created by you for
+ sure that noone else can garble with your data and change them? Looking for
+ program which will help you with this? Take a PGP and go.
+ 
+ PGP is high level terms is high security cryptographic software application
+ for MSDOS, it allows people exchange any data with privacy, authentication
+ and security. Data are readable from those who are intended to read them,
+ when data are signed by you, everybody knows and can be sure, that they are
+ really coming from you. And ALL of this without any needs to exchange
+ keywords for encrypting software. That's result of basement upon "PUBLIC
+ KEY" cryptography.
+ 
+ Generally, cryptosystem is using single key for encryption (coding) and
+ then for decryption (decoding). This means, that SECURE channel must be
+ used for sending key from source of data to destination, otherwise
+ decryption is impossible. Original conclusion from this of course is, why
+ to encrypt anything, when secure channel already exist....
+ 
+ Public key cryptosystem is baset on two related complimentary keys, PUBLIC
+ and SECRET key. Each key unlocks code made by other key. But there is of
+ course NOT easy way how to make SECRET key from PUBLIC key.... PUBLIC key
+ is in this case really published and sent across all possible communicate
+ channels, given to all your friends and all other users to whom you are
+ expecting sending anything crypted. SECRET key is used by recipient for
+ coding a message, PUBLIC key is used by receivers for encrypting message
+ for transceiver which can then use SECRET key for DECRYPTING them (and only
+ him can encrypt, because no one else has SECRET key).
+ 
+ Data encrypted by sender with SECRET key are marked with signature which
+ can be confirmed by using PUBLIC key of sender. This way can remove any
+ troubles coming with falsificating sources of data...
+ 
+ Combination of signing data with own SECRET key and then encrypting
+ this signed message with recipient's PUBLIC key. Recipient then uses own
+ SECRET key for decryption and then can check signature with your PUBLIC
+ CLIPBBS 2-02                   Page 2                   14 Jan 1992
+
+
+ key. All this automatically by software called PGP...
+ 
+ RSA PUBLIC key encryption algorithm is very slow, encryption is in case o
+ PGP done by using high fast conventional encryption algorithm to encipher
+ data. Original data are in this case called "plain text". PGP is taking
+ this "plain text" data and by using temporary random key created only for
+ this session is using conventional encipher of "plain text" data. After
+ this is PUBLIC key of recipient (receiver) used to encipher random
+ conventional key. Enciphered conventional key is sent together with
+ enciphered text "cipher text" to recipient. Recipient is using own SECRET
+ key for recovering temporary session key and then running fast conventional
+ decpehring the large "cipher text" data into "plain text" original data.
+ 
+ PGP program is using two data files for storing PUBLIC and SECRET keys,
+ those "database" files are called "public key ring" and "secret key ring".
+ SECRET keys are stored with their OWN password.
+ 
+ Prevention of data changing is done by using of signature of message which
+ is 128-bit long one-way hash function. Functionally it's similar to CRC
+ function which we all know, but possibility to change message and product
+ the same MD4 Message Digest Algorithm (name of this function) is
+ computationally infeasible.
+ 
+ Every signed document (it can be text or just ANY data) are signed by
+ prefixing them with signature certificates, which contains key ID of used
+ key for sign, RSA-signed message digest of document and timestamp of
+ creating signature. Key ID is used by receiver for look-up into sender's
+ public key to check signature.
+ 
+ Encrypted files are prefixed by key ID of public key used to encrypt them.
+ Receiver uses this key ID for look into SECRET key for decryption of
+ message.
+ 
+ All PUBLIC and SECRET keys are in appropriate key-ring files. PUBLIC keys
+ received from other users are added into PUBLIC key ring and are ready to
+ use for encryptions. SECRET own keys are stored in SECRET key ring and used
+ for all encryptions.
+ 
+ That's about principles. Now about reality of use.
+ 
+ PGP is coming in simple archive which should be dearchived in let say
+ C:\PGP directory and prepared for use by following installation
+ instructions. After this is PGP program ready for use.
+ 
+ 
+                              ENCRYPT a MESSAGE
+ 
+ For encrypting "plain text" file is needed recipient's PUBLIC key and use
+ of this command:
+ 
+     PGP -e textfile public_id
+ 
+ result of this command will be ciphertext file called "textfile.ctx".
+ public_id is a ID of key which will be searched in PUBLIC key ring
+ (keyring.pub) and key which contains string used as public_id will be used
+ for encryption.
+ CLIPBBS 2-02                   Page 3                   14 Jan 1992
+
+
+ PGP will also compress "plaintext" file for reducing possibility to
+ cryptanaysis.
+ 
+ 
+                              SIGNING a MESSAGE
+ 
+ For signing a "plaintext" file is needed YOUR SECRET key and using of this
+ command>
+ 
+     PGP -s textfile Your_ID
+ 
+ Result of this will be file called "textfile.ctx". Secret key-ring
+ "keyring.sec" is searched for secret key which contain string used as
+ Your_ID and then is used for signing a message.
+ 
+                         SIGNING and then ENCRYPTING
+ 
+ For signing a "plaintext" file and then encryption are needed:
+ First, YOUR SECRET key, second RECIPIENT'S PUBLIC key. And then this
+ command:
+ 
+     PGP -es texfile public_id Your_ID
+ 
+ Result os playing with your disc will be nested ciphertext file called
+ "textfile.ctx", both keys are looked up in public and secret keyrings. And
+ Again will be used compression for making file smaller and harder to
+ analyze.
+ 
+ 
+                           CONVENTIONAL ENCRYPTION
+ 
+ Conventional cryptography is allowing to encrypt file with password which
+ then must be used for decrypting file. Command for this is:
+ 
+     PGP -c textfile
+ 
+ Result of disc smashing is file called "textfile.ctx" crypted by phrase
+ given by you when program is asking for it. This phrase is needed for
+ DEcrypting and without it, there is no way how get back original!
+ 
+                     DECRYPTING and CHECKING SIGNATURES
+ 
+ For decrypting and checking of RECEIVED file is needed to own PUBLIC key(s)
+ of sender and running this command:
+ 
+     PGP ciphertextfile [plaintextfile]
+ 
+ Result is decrypted and unsigned file (depends what was used) with the same
+ name as ciphertextfile without extension or with name given as second
+ parameter. PGP will automatically process all nesting signing, encrypting
+ and son on if keys are available in keyring or available in PGP directory.
+ Also what can program ask is a password for your secret key (this one was
+ given when generated secret key and must be rebembered because is just used
+ for checking). Also when there was conventional cryptography used, PGP will
+ ask for pgrase to decode back into normal data.
+ 
+ CLIPBBS 2-02                   Page 4                   14 Jan 1992
+
+
+                     GENERATING of your own pair of keys
+ 
+ This will be first action after installation of PGP into your system. Just
+ type command:
+ 
+     PGP -k
+ 
+ All other is only to follow questions of PGP program, choose size of key
+ (long means better security, but lot of time for generation) and also
+ filling password for your SECRET key - write this password somewhere down
+ to your memory, otherwise your secret key will become secret also for you.
+ This phrase password can be anything what do you like, but it is case
+ sensitive and there is no way how to use SECRET key without filling in this
+ phrase...
+ 
+ Result will be .PUB and .SEC files with your public and secret key with
+ given filename and with your selected user ID, most usually your own name
+ with some additional informations (like FidoNet address or similar).
+ 
+ PUBLIC key in .PUB file should be after this stored in keyring and then
+ send to all your friends and possible users of crypted messages with you.
+ SECRET key must stay only on your disc and should be protected from
+ stealing and misusing (phrase password is doing this also very well).
+ 
+                           ADD a key into KEYRING
+ 
+ Simple operation of managing new keys into your keyring is done by using
+ following command:
+ 
+     PGP -a keyfile [keyringname]
+ 
+ The same works for both public and secret keys, of course with difference
+ of .SEC or .PUB extensions for both filenames. If keyring name is not
+ specified, will be used "keyring.pub" or "keyring.sec".
+ 
+ Already existing keys are not added into keyring, keyfile can contain MORE
+ keys and all of them are processed and added into keyrings, but duplicate
+ check is used only on first key from keyfile.
+ 
+ Also, when keyring contains YOUR OLD key and you want to add new one, first
+ DELETE old one from keyring and THEN add new one, otherwise it will most
+ probably come as two different keys (because of difference in keys).
+ 
+                          REMOVE a key from KEYRING
+ 
+ Existing keys are removable from keyring with command:
+ 
+     PGP -r userid [keyring]
+ 
+ Command will search for anything that match "userid" used as spec of key
+ for remove and then it will remove from keyring.
+ 
+ 
+                     LOOK which keys are in your KEYRINGs
+ 
+ Command:
+ CLIPBBS 2-02                   Page 5                   14 Jan 1992
+
+
+     PGP -v [userid] [keyring]
+ 
+ will take a look into keyring (keyring.pub by default, or if specified,
+ then in specified) and will list all keys mathing used "userid". If userid
+ is not used, it will list complete contents of keyring.
+ 
+ 
+                        RISC of PUBLIC keys existence
+ 
+ PUBLIC keys are widely available to everyone who can tamper with them
+ without troubles and can make keys which are not really appearing to you,
+ but they look lite so.
+ 
+ Let's take sample situation from original documentation for PGP...
+ 
+ You want send private message to ALICE. ALICE's public key is downloaded
+ from BBS and then your letter is encrypted with THIS public key and sent to
+ Alice via electronic post..
+ 
+ But and but, someone else made PUBLIC key with Alice's user ID attached to
+ it (what is of course possible). And oops, he was able to replace PUBLIC
+ key in Alice's BBS with this black copy... And what happend, you used of
+ course this bogus key...
+ 
+ This clever user is therefore able to get YOUR message and can decipher it
+ and read. He can even this deciphered message re-encrypt again with
+ original PUBLIC key of Alice and send it to her. Nobody can see it!
+ 
+ How to get rid of this risc? Simple. Don't even allow anyone to tamper with
+ PUBLIC keys. And get PUBLIC keys ONLY from reliable sources. Those reliable
+ sources can use their secret keys for signing other keys for check that
+ they are correct. For getting final Alice key is therefore needed other
+ PUBLIC key of someone else, but possibility to tamper with all of them is
+ less probably, especially when this someone else is known to you. And
+ anyway, signatures are based on SECRET keys, therefore no one else can make
+ signature. Signature must be true.
+ 
+                     SEPARATING SIGNATURES from MESSAGES
+ 
+ Signature certificate is attached to signed text. Sometime this is not good
+ and is needed to have signature stored outside of signed text. Combination
+ of "b" option in command:
+ 
+     PGP -sb textfile.txt your_userid
+ 
+ Result will be textfile.ctx file with isolated signature and untouched
+ textfile.txt file. .CTX file must be send together with text file to which
+ belongs. Recipient then use .CTX file for checking and PGP sees that there
+ is not needed text in .CTX file and will prompt for filename where is text.
+ Or before this ask can use command:
+ 
+     PGP textfile.ctx textfile.txt
+ 
+ Keeping separated certificate from original file is useful for checking of
+ files from tampering or virus infections. Also one file can be signed by
+ more parties, because of no need to nest signatures.
+ CLIPBBS 2-02                   Page 6                   14 Jan 1992
+
+
+ ...TO BE CONTINUED...
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 7                   14 Jan 1992
+
+
+                   A one very nice fragment, where is rest?
+ 
+ 
+ Somewhere in messages from my original country Czechoslovakia i found
+ fragment of one VERY nice text. Unfortunately there was not continuing, but
+ it's so nice beginnig of computer story, that i have to give it to you. And
+ maybe, somebody knows where to get complete this story. Therefore, please IF
+ you KNOW where is lying complete store from which is following fragment, give
+ me a help to get it.
+ 
+ 
+                                 Alice in UNIX Land
+ 
+ 
+     Alice was reading the message on her monitor and beginning to suspect
+     that everything was not as it should be.  "Program too big to fit in
+     memory," it read.
+ 
+            "Curiouser and curiouser," she said, "All I did was load
+     fourteen TSRs before starting my word processor.  With four megabytes,
+     I wish I could use more than 640K."
+ 
+            "At that moment, a small white consultant ( a very white
+     consultant) ran across the room.  "Oh my coat and necktie," he said,
+     "I'm going to be late for my appointment.  And at one fifty an hour,
+     too."  Before Alice could say anything, he leaped into her monitor and
+     disappeared behind her operating system.
+ 
+            Alice thought that she had never seen anyone leap into a monitor
+     before; and certainly not go clean through the operating system.  But
+     then, she had been told that DOS was very shallow.  Without hesitating
+     a moment, she leaped in after him.
+ 
+ And that is end of fragment, but for sure there is continuing. PLEASE, PLEASE
+ if you have it, give it to me.......
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 8                   14 Jan 1992
+
+
+                   Clipper 5.01 and Microsoft C or Turbo C?
+ 
+ 
+ Somewhere in past i got big trouble. As old fan of Borland products, i
+ started long time ago with Turbo C my programming in C languages. Later it
+ becomes Turbo C++ and later again Borland C++. All of my "C" written
+ additions for Clipper were of course written in Borland's version of "C".
+ Some of them were independent from libraries of Turbo C, but some of them ver
+ using functions from libraries. Everything was very fine, until one specific
+ moment.
+ 
+ I got some Microsoft C libraries for supporting a FAX communication with some
+ hardware and i had to implement new functions for Clipper with use of those
+ functions. Microsoft C and Turbo C (Borland C) of ANY kind are INCOMPATIBLE
+ at all when is reached level od standard ANSI C definition. Those MSC
+ libraries were supplied without sources, therefore thinking about rewriting
+ them (which is anyway really TERRIBLE because of differences between those
+ two languages, way MSC->TC is still more possible than other one) was
+ absolutely hopeles action.
+ 
+ Also what happend few weeks later was that i got some MSC written sources of
+ functions for Clipper and new reason for using MSC was coming. First i
+ decided switch completely to MSC environment (5.0 version actually because of
+ Clipper) and rewrite old functions written in TC(++) into MSC. Troubles
+ started when trying to rewrite some functions really based on libraries of
+ Turbo C which are filled with MANY more functions that Microsoft C.
+ 
+ Simple solution arrived slowly. At this moment i have both "C" installed on
+ my harddisks and my make files are reflecting existency of dual type of
+ sources. All is working fine without any troubles. Also when is needed i can
+ switch from complete TurboC environment to MicrosoftC environment. How is it
+ done, i would like to show to you, because it can easily come to everyone
+ else.
+ 
+ ÄÄ¿
+ 1)³ on start of system there is decided which "C" is main and
+ ÄÄÙ environmental variables are set for this "C" language.
+ 
+     SET WHICHC=MSC          or          SET WHICHC=TC
+ 
+ ÄÄ¿
+ 2)³ there is universal batch file called SETS.BTM (or SETS.BAT if you like)
+ ÄÄÙ which is setting environment for CLIPPER/TC/MSC combo:
+ 
+         @echo off
+         : GLOBAL setting used in some batch files
+     1)  set MACHINENAME=PORTABLE
+         : CLIPPER settings needed
+     2)  IFF .%WHICHC%.==.MSC. THEN
+             echo -------------------------MICROSOFT C------------------------
+     3)      set INCLUDE=c:\cl5\include;c:\msc\inc;c:\gpi44
+     4)      set LIB=c:\lib;c:\msc\lib;c:\gpi44
+     5)      set OBJ=c:\cl5\obj;c:\msc\bin;c:\obj
+         ELSE
+             echo --------------------------TURBO C---------------------------
+     6)      set INCLUDE=c:\cl5\include;c:\tc\include
+ CLIPBBS 2-02                   Page 9                   14 Jan 1992
+
+
+     7)      set LIB=c:\lib;c:\tc\lib
+     8)      set OBJ=c:\cl5\obj;c:\tc\bin;c:\obj
+         ENDIFF
+         : standard settings
+     9)  set PLL=c:\cl5\pll
+     10) set RTLINKCMD=/FREEFORMAT /VERBOSE:1
+         : settings for RCS system
+     11) set USR=DANIEL
+         : settings for...
+     12) set TZ=PST8
+ 
+     Small explanations can be helpfull i guess:
+ 
+         1)  first SET command is just used in some other batch files.
+             on my second (work) computer it is MACHINENAME=386. This
+             sample is from portable PC with 8028, 1MB RAM and 40MB
+             harddisk.
+ 
+         2)  For those who doesn't know 4DOS replacement of COMMAND.COM
+             it's simple, it' just IF..ELSE..ENDIF command from CLIPPER
+             but available in BATCH programming.
+ 
+         3)  setting of path for INCLUDE commands of Clipper, MSC
+             C:\CL5\INCLUDE          it's just default Clipper include
+             c:\MSC\INC              it's just default MSC include dir
+             C:\gpi44                there is some library with lot of
+                                     includes and i'm too lazy write them
+                                     every time with PATH
+ 
+         4)  setting of path where to look for all .LIB files when not
+             given exact path.
+             c:\lib                  CLIPPER libraries and other .LIBs
+             c:\msc\lib              standard MSC libraries
+             c:\gpi44                specialized library
+ 
+         5)  setting where to look for .OBJ files when not given a path
+             or not found in current directory
+             c:\cl5\obj              CLIPPER default, NATION.OBJ,
+                                     ASEHEAD.OBJ and some others are here
+             c:\msc\bin              MSC reference, actually there is
+                                     nothing stored
+             c:\OBJ                  ALL my compilings are storing their
+                                     result in ONE directory immediate
+                                     under root directory
+ 
+         6)  The same purpose as 3), but it is for TURBO C, third one
+             for MSC is passed away because it's only MSC library!
+             c:\cl5\include          this is of course the same
+             c:\tc\include           where are .h of TC stored
+ 
+         7)  The same purpose as 4) but it is for TURBO C, third one
+             for MSC is passed away because it's only MSC library.
+             c:\lib                  clipper and other common libraries
+             c:\tc\lib               Turbo C libraries
+ 
+         8)  The same purpose as 5) but it is for TURBO C
+ CLIPBBS 2-02                   Page 10                  14 Jan 1992
+
+
+             c:\cl5\obj              CLIPPER default, NATION.OBJ,
+                                     ASEHEAD.OBJ and some others are here
+             c:\tc\bin               TC reference, actually there is nothing
+                                     needed stored
+             c:\OBJ                  ALL my compilings are storing their
+                                     result in ONE directory immediate
+                                     under root directory
+ 
+         9)  Setting of path where PLL's are stored
+             set PLL=c:\cl5\PLL      just standard setting
+ 
+        10)  Setting of defaults for RTLINK to don't need set them every
+             time in make files.
+             /FREEFORMAT             command format is freeformat
+             /VERBOSE:1              display everything what is happening,
+                                     then can be used Ctrl Break or CtrlC
+ 
+        11)  Because i'm using RCS system for all revisions, set USR is
+             needed for setting a name of user for RCS.
+ 
+        12)  Some time dependent MSC applications are asking for this,
+             therefore it's permanently set
+ 
+ 
+     OK, that's sample of BATCH file for switching when one needs to use
+     Microsoft C or Turbo C for programmign in THEM only.
+ 
+ ÄÄ¿
+ 3)³ Few word about what is on my disk and how.
+ ÄÄÙ
+     It's important to know of course how is organized disk with those two
+     "C" languages and which files are in. What i will show is MINIMAL
+     version which i'm running on my home (and travel) portable with only
+     40MB harddisk (where is sitting also WordPerfect and some from my
+     books). It's configuration for using both "C"s with Clipper and when
+     needed use them alone, but only with LARGE memory module or SMALL
+     memory module (this one can be actually eliminated also).
+ 
+ 
+     Following is part of tree of my harddisk:
+ 
+         C:\
+         ÃÄÄÄ$TEMP$                          temporary files only, swap files
+         ÃÄÄÄNG                              .ng engine and all databases
+         ÃÄÄÄLIB                             clipper and other libraries
+         ÃÄÄÄTC                              TURBO C++
+         ³   ÃÄÄÄBIN                         objects and .EXE files
+         ³   ÃÄÄÄINCLUDE                     include files
+         ³   ³   ÀÄÄÄSYS
+         ³   ÀÄÄÄLIB                         libraries of Turbo C
+         ÃÄÄÄOBJ                             generated .OBJ files
+         ÃÄÄÄCL5                             Clipper 5.01
+         ³   ÃÄÄÄBIN                         .EXE files and utilities
+         ³   ÃÄÄÄINCLUDE                     .CH files
+         ³   ÃÄÄÄOBJ                         public .OBJ files
+         ³   ÃÄÄÄPLL                         .PLL files
+ CLIPBBS 2-02                   Page 11                  14 Jan 1992
+
+
+         ³   ÀÄÄÄSOURCE
+         ³       ÀÄÄÄSYS                     sources of 5.01 system
+         ÃÄÄÄBAT                             all batch files
+         ÃÄÄÄMSC                             MICROSOFT C 5.0
+         ³   ÃÄÄÄBIN                         .EXE and .OBJ files
+         ³   ÃÄÄÄLIB                         libraries
+         ³   ÃÄÄÄINC                         Include files
+         ³   ³   ÀÄÄÄSYS
+         ³   ÀÄÄÄBOUND                       .EXE files
+         ÃÄÄÄGPI44                           FAX libraries and files
+         ÃÄÄÄETC                             global text files
+         ÀÄÄÄSOURCE                          Sources global
+             ÃÄÄÄNCOM                        FAX/TELEX package   (TC+Clipper)
+             ³   ÀÄÄÄRCS                         with revisions
+             ÃÄÄÄLANTLIB                     Lantastic Library   (TC+Clipper)
+             ³   ÀÄÄÄRCS                         with revisions
+             ÃÄÄÄINST                        Installation program (TC)
+             ³   ÀÄÄÄRCS
+             ÃÄÄÄKERSSEN                     Accounting package (Clipper)
+             ³   ÀÄÄÄRCS
+             ÃÄÄÄDTOOLS                      DTOOLS library (TC+MSC+Clipper)
+             ³   ÃÄÄÄRCS
+             ³   ÀÄÄÄNG
+             ÀÄÄÄTEST                        Testing directory
+ 
+     How you like it? Maybe not, but it's well functional scheme (you see
+     only part of it) which is much bigger on main computer server which
+     i have in my work.
+ 
+ ÄÄ¿
+ 4)³ Important - WHAT is in directories
+ ÄÄÙ
+     Now is coming most important step. All software (MSC, CLIPPER, TC) was
+     installed in standard way as FULL installed version and then eliminated
+     only to needed configuration. Therefore:
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     C:\CL5              is empty as usual
+     C:\CL5\BIN          CLD.EXE                 Clipper debugger
+     ³  826,535 bytes   şCLIPPER.EXE             CLIPPER compiler
+     ³                   DBU.EXE                 .PLLed DBU with BASE50.PLL
+     ³                   RL.EXE                  .PLLED RL  with BASE50.PLL
+     ³                   RMAKE.EXE               sometime used RMAKE
+     ³                   RTLINK.DAT              .dat file for RTLINK.EXE
+     ³                   RTLINK.EXE              RTLINK, yes i'm using it
+     ³                   RTLINK.HLP              <actually can be killed>
+     ³                   RTLINKST.COM            <actually can be killed>
+     ³                   STRUDUMP.EXE            .PLLed clipper util
+     ³                   ZAPALL.EXE              .PLLed clipper util
+     C:\CL5\INCLUDE      standard contents without change
+     C:\CL5\PLL          BASE50.LNK              link for BASE50.PLL
+     ³  956,265 bytes    BASE50.PLL              linked BASE50.PLL
+     ³                   BASE50.PLT              data file for BASE50.PLL
+     ³                   FULLBASE.LNK            link for FULLBASE.PLL
+     ³                   FULLBASE.PLL            linked FULLBASE.PLL
+     ³                   FULLBASE.PLT            data file for FULLBASE.PLL
+     ³                   MEM501.LNK              static overlaying of libs
+ CLIPBBS 2-02                   Page 12                  14 Jan 1992
+
+
+     C:\CL5\OBJ          ASEHEAD.OBJ             Dr.Switch Ase heading
+     ³    4,846 bytes    DUTCH.OBJ               National link module
+     C:\CL5\SOURCE       empty directory
+     C:\CL5\SOURCE\SYS   standard contents without change
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+         (files marked with ş are packed with PKLITE!)
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     C:\TC               empty as usual
+     C:\TC\BIN           TC.EXE                  i like this environment of TC
+     ³ 2,138,261 bytes   TCC.EXE                 command line compiler
+     ³                   TCHELP.TCH              and i like to have help in TC
+     ³                   TCINST.EXE              for changing configurations
+     ³                  şTCMAKE.EXE              RENAMEd make.exe of TC
+     ³                  şTLIB.EXE                TC librarian
+     ³                  şTLINK.EXE               TC linker
+     ³                   <some data files>       plus some other data files
+     C:\TC\INCLUDE       standard contents with addition of CXL libraries
+     C:\TC\INCLUDE\SYS   standard contents
+     C:\TC\LIB           C0L.OBJ                 needed for Large model
+     ³  509,822 bytes    C0S.OBJ                 needed for Small model
+     ³                   CL.LIB                  Large model main library
+     ³                   CS.LIB                  Small model main library
+     ³                   EMU.LIB                 math emu library
+     ³                   FP87.LIB                floating point library
+     ³                   GRAPHICS.LIB            graphics library
+     ³                   MATHL.LIB               math Large model library
+     ³                   MATHS.LIB               math Small model library
+     ³                   OLDSTRML.LIB            old streams version
+     ³                   OLDSTRMS.LIB            old streams version
+     ³                   OVERLAY.LIB             Swapping/overalying library
+     ³                   WILDARGS.OBJ            arguments passing
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+         (some libraries in \TC\LIB are additional librarues - as OVERLAY
+          and don't have to be there, also can be eliminated SMALL model,
+          because for Clipper is needed only LARGE and possible ALL math
+          or graphics related libraries)
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     C:\MSC\BIN          C1.ERR                  data file for C1.EXE
+     ³  940,560 bytes    C1.EXE                  parts of compiler
+     ³                   C1L.EXE                 parts of compiler
+     ³                   C2.EXE                  parts of compiler
+     ³                   C3.EXE                  parts of compiler
+     ³                   C23.EXE                 data file for them
+     ³                   CL.ERR                  data file for CL.EXE
+     ³                   CL.EXE                  MSC Command Line compiler
+     ³                   CL.HLP                  help file for CL.EXE
+     ³                   CV.EXE                  MSC debugger
+     ³                   CV.HLP                  MSC debugger help file
+     ³                  şLINK.EXE                MSC standard linker
+     C:\MSC\LIB          GRAPHICS.LIB            graphics libraru
+     ³  859,365 bytes    LLIBCA.LIB              Large model
+     ³                   LLIBCE.LIB              Large model
+     ³                   LVARSTCK.OBJ            Large, stack needed
+     ³                   SLIBCA.LIB              Small model
+     ³                   SLIBCE.LIB              Small modem
+     ³                   SVARSTCK.OBJ            Small, stack needeed
+ CLIPBBS 2-02                   Page 13                  14 Jan 1992
+
+
+     C:\MSC\INC          standard contents with addition of CXL library
+     C:\MSC\INC\SYS      standard contents
+     C:\MSC\BOUND        LIB.EXE                 MSC librarian
+     ³  88,274 bytes     MAKE.EXE                MSC standard make
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+         ( from MSC\LIB is possible eliminate LLIBCE, SLIBCE and if is
+           not used MSC for generating any .EXE file also both .OBJ files.
+           PKLITEd is only one file because MSC\BOUND are written for
+           OS/2 and are impossible to compress and MSC\BIN are mostly
+           internally overlayed and are giving erratic result)
+     ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+     C:\LIB              ASE.LIB                 Dr'Switch Ase library
+     ³ 1,579,660 bytes   CL.LIB                  copy of CL.EXE from TC\LIB
+     ³                   CLD.LIB                 Clipper standard
+     ³                   CLIPPER.LIB             Clipper standard
+     ³                   CXLMSS.LIB              Small CXL for MSC
+     ³                   CXLTCS.LIB              Small CXL for TC
+     ³                   DBFNTX.LIB              Clipper standard
+     ³                   DTOOLS.LIB              (c) myself library
+     ³                   EXPAND.LIB              Great Pepijn Smits library
+     ³                   EXTEND.LIB              Clipper standard
+     ³                   NANFOR.LIB              NanForum Toolkit II (great!)
+     ³                   RTLUTILS.LIB            Clipper standard
+     ³                   TERMINAL.LIB            Clipper standard
+     ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ 
+     This structure is at this moment latest tested and working minimal
+     configuration of TC+MSC+CLIPPER in minimal possible space. Sum of
+     space used by those three compilers is about 9MB. It's quite a lot
+     of course, but what one can do....
+ 
+ ÄÄ¿
+ 5)³ Last one, how is it coming to be compiled
+ ÄÄÙ
+ 
+     Last rule needed for managing all sources is:
+ 
+     CLIPPER programs are            .PRG
+     MicroSoft C programs are        .C
+     Turbo C programs are            .TC
+ 
+     Because i'm using DMAKE.EXE instead of stupid RMAKE, is part of my
+     global STARTUP.RMK (located in \ETC directory):
+ 
+         # Standard C-language command names and flags
+     1)  CC      := cl                                # C-compiler and flags
+         CFLAGS  +=
+ 
+         # Standard Turbo-C language command names and flags
+     2)  TCC     := tcc
+         TCCFLAGS+=
+ 
+         # Standard Clipper command names and flags
+     3)  CP      := clipper                           # Clipper and flags
+         .IF $(DEBUG)==$(NULL)
+ CLIPBBS 2-02                   Page 14                  14 Jan 1992
+
+
+     4)      CPFLAGS += /W/N/M/L                      # version without debug
+         .ELSE
+     5)      CPFLAGS += /DDEBUG /W/N/M/B              # version with debuggin
+         .END
+ 
+         # .OBJ <- .C                                    <<MicroSoft C>>
+         #
+     6)  %$O : %.c ;  $(CC) $(CFLAGS) /c /AL /Od /Zl /Zi /FPa
+                     /Gs /W3 /Fo$(OBJDIR)\$* $(SRCDIR)\$<
+ 
+         # .OBJ <- .TC                                   <<Turbo C>>
+         #
+     7)  %$O : %.tc ; $(TCC) $(TCCFLAGS) -I\TC\INCLUDE
+                     -L\TC\LIB -C -d -ml -wmlt -K -G -O
+                     -Z -k- -c -o$(OBJDIR)\$* $(SRCDIR)\$<
+ 
+         # .OBJ <- .PRG
+         #
+     8)  %$O : %$P ; +$(CP) $(SRCDIR)\$* $(CPFLAGS) /o$(OBJDIR)\$*
+ 
+     For all of you using RMAKE or any other make, i will try to give
+     good explanation what is going on for posting the same into other
+     make files.
+ 
+     1)  definition of macro with name of CL.EXE and macro with possible
+         flag for this CL.EXE. Actually all hardcoded macros are given
+         later and this macro CLFLAGS is not used, but it can be.
+ 
+     2)  definition of macro with name of TCC.EXE and macro with possible
+         flags for this TCC.EXE.
+ 
+     3)  definition of macro with name of CLIPPER.EXE
+ 
+     4)  dependent if macro with name DEBUG was defined from command line
+         will be set up different way of CLIPPER.EXE compiling .PRG.
+         In this case is DEBUG undefined, it means it will compile into
+         full live version - /W/N/M/L flags are defined in documentation...
+ 
+     5)  in this case will IF command of DMAKE let define /W/N/M/B flags
+         for compiling into Debugging version of clipper program.
+ 
+     6)  This is DIFFICULT, it's just telling HOW to make .OBJ (%$O) from
+         .C which is MicroSoft C source program. In this article it's
+         written as THREE lines, but WARNING - IT MUST BE ONLY ONE LINE
+         which is just calling CL.EXE
+ 
+         Followint definition is ASSUMING that STANDARD setting of environment
+         if for MSC (SET WHICHC=MSC and SETS.BAT runned).
+ 
+       CL.EXE /c /AL /Od /Zl /Zi /FPa /Gs /W3 /Fo\OBJ\name.obj srcdir\srcname
+ 
+         This is expansion of command given with some other macros. Be aware,
+         that switches /something ARE case sensitive and giving other values
+         can give unexpected result.
+ 
+         /c      compile only, do not call for LINK.EXE
+ CLIPBBS 2-02                   Page 15                  14 Jan 1992
+
+
+         /AL     compile for "L"arge model
+         /Od     disable optimization of code
+         /Zl     supress the selection of default libraries
+         /Zi     generate debugging information for CodeView
+                 (this SHOULD be removed when not needed testing)
+         /FPa    generate calls and use alternate math library
+         /Gs     disable stack probe ckecking
+         /W3     warnings level to level 3
+         /Fo     where will be stored .OBJ file
+ 
+         latest without switch is always source name
+ 
+     7)  The same as 6) is coming for TURBO C sources and generating .OBJ
+         ALSO again WARNING, it IS only ONE line and not three lines, this
+         article should fit on your screen and printer, therefore one line
+         was divided.
+ 
+         TCC -I\TC\INCLUDE -L\TC\LIB -C -d -ml -wmlt -K -G -O
+                 -Z -k- -c -o\OBJ\name.obj \srcpath\srcname
+ 
+         This is expansion what will become out from defined line. ALL
+         switches are CASE SENSITIVE, please do not mixup them...
+ 
+         -I      where to look for INCLUDE files, it's needed because
+                 is assumed that sets are coming for MSC as standard
+         -L      where to look for .LIB files, it's needed because
+                 is assumes that sets are coming for MSC as standard
+         -C      allow nested comments (i like them)
+         -d      Merge duplicate string (it can save space)
+         -ml     Generate LARGE model
+         -wmlt   warning control, actually ALL warnings
+         -K      default char is unsigned
+         -G      generate for speed
+         -O      optimize jumps
+         -Z      optimize register usage
+         -k-     switch off stack frame
+         -c      compile only, not .EXE linking
+         -o      where to store .OBJ file
+         and finaly last one is again name of source file (.TC is extension)
+ 
+     8)  Latest one is way how to compile .PRG into .OBJ files:
+ 
+         CLIPPER.EXE srcdir\file.prg flags /o\OBJ\file.obj
+ 
+         _flags_ were discussed in 4) and 5), first parameter is of course
+         .PRG name and latest is specification where to store .OBJ file
+ 
+ ÄÄ¿
+ 6)³ And now, how we link them together
+ ÄÄÙ
+     For linking, there is not anythign special, just standard RTLINK
+     putting together all .OBJ and .LIB needed for particular project.
+     One from project looks for example like this:
+ 
+     rtlink @$(LNK) output $(EXEDIR)\$(EXE) $(PLLFULL)
+ 
+ CLIPBBS 2-02                   Page 16                  14 Jan 1992
+
+
+     $(LNK) is expanded into .LNK file name (is generated) and contains
+             list of all .OBJ and .LIB needed for projext
+ 
+     $(EXEDIR)\$(EXE) expands into complete destination .EXE
+ 
+     $(PLLFULL) expands mostly in /PLL:FULLBASE or /PLL:BASE50 or if
+             not wanted .PLL then just into empty string.
+ 
+ 
+ 
+ Hope i did not forget anything important. If so, please let me know and i
+ will help you with any particular problems of setting up TC+MSC+CLIPPER
+ environment.
+ 
+ Happy compiling and linking
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 17                  14 Jan 1992
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+           WHAT IS WHAT, just take a short look into Clipper World
+ 
+ DBDBAK
+ 
+         Database Warehous, œ129
+         (c) Data Base Designs
+ 
+         Comprehensive backup and restore library with
+         compression/decompression up to 75% with DBF files, robust disk
+         formatting routines, disk "branding", multiple directory backup
+         and file tagging, large file splitting, error handling, arhive
+         library maintenance, disc label printing, incremental file
+         backup.  Clipper source provided.
+ 
+ DBDMOUSE
+ 
+         Pull down menu generator with full mouse support.Written in
+         Assembler.
+ 
+ DBDSCRL
+ 
+         Provides sophisticated method of presenting data on screen with
+         light bar scrolling, mouse support and field pnning with freeze
+         capability. Can be called recursively. Source provided.
+ 
+ DBDTALK
+ 
+         Provides a visual anlyst of the prograss of commands INDEX,
+         COUNT, SUM, AVERAGE and TOTAL with ascending/descending number
+         or a horizontal bar.
+ 
+ DBDWIND
+ 
+         Collection of assembly language routines allowing add windowing
+         function and special effects.
+ 
+ dBEST TOOLBOX
+ 
+         Over 130 functions in native language. Array, convert, maths,
+         pop-ups calculator, calendar, typewriter, color utility,
+         index..
+ 
+ DBFTRIEVE
+ 
+         Interface between Clipper and BTRIEVE which contains all the
+         tools and utilities needed to do productive work with BTRIEVE.
+         Manipulated data directly or converts to/from DBF format.
+         Includes over 50 functions, Clipper source code and
+         comprehensive reference manual, Summer 87 and 5.0 compatible,
+         also FOX compatibles.
+ 
+ CLIPBBS 2-02                   Page 18                  14 Jan 1992
+
+
+ dbPUBLISHER
+ 
+         Report publisher which can produce professional quality
+         catalogues, price lists and all kinds of reports from within an
+         application. Complete typographics control plus bar code
+         generation. Accepts data from major database, spreadsheet, word
+         processing and graphics programs. Supports more than 1000
+         fonts, postscript compatible printers, HP Laserjet Plus,
+         Linotronic image setter and Phototypestter. Stacks of other
+         features.
+ 
+ dCLIP
+ 
+         Programmers tools providing a complete interactive development
+         environment for Clipper 5.0, dCLIP uses a 'dot' prompt program
+         which supports nearly every Clipper command and function.
+         Includes an assist system, report writer and interactive
+         debuger. Now compatible witl all linkers, tested with many
+         third party libraries, 80 more commands, support for 288
+         printers.
+ 
+ DELTAFILE
+ 
+         File updating system. Allows compare two files and extract
+         changed, producing a change file. Then execute the change file
+         against any old version to create a brand new files - thus one
+         can ship only the changes to existing users of package. Save on
+         disk space and time. Operated under a mouseable integrated
+         environment. Works on any file type.
+ 
+ DESQVIEW API LIBRARY
+ 
+         Over 200 functions that gives a Clipper program full access to
+         DV environment. Display information in windows and change the
+         colour size, postiion and ordering Handle keyboard and mouse
+         input, schedule processing, spawn subtasks, communicate with
+         various tasks, modify the DV user interface, library manul and
+         examples supplied.
+ 
+ DESQVIEW API TOOLKIT
+ 
+         DESQVIEW API LIBRARY plus debugger, panel designer and DV
+         itself.
+ 
+ DGE 4.0
+ 
+         Probably best database graphics package available. over 90
+         hi-res functions including pie&bar (2 and 3D) line, scatter,
+         high-low-close, polar, time series. Mouse supports, Print to
+         dot matrix, laser, inkjet or any HP-GL ploter. Comex with dGX a
+         graphics  design centre producing source code and gfont - a
+         font creater/editor. Reads/writes PCX images. Requires 50K,
+         overlayable with Blinkers. Works with over eight other db
+         systems and C. Royalty free
+ 
+ DGE ICON LIBRARY
+ CLIPBBS 2-02                   Page 19                  14 Jan 1992
+
+
+         Selection of over 1000 icons for DGE 4.x. Symbols for
+         computers, periperals, office equipment, desk accessories,
+         application classes...
+ 
+ DGE Font Library
+ 
+         Collection of over 100 fonts in over 50 type faces for DGE 4.x.
+         The fonts cover a wide range of needs, each one hand created,
+         oncludes some foreign language fonts (Greek, Hebrew, Cyrillic),
+         fonts can be sized using a supplied utility.
+ 
+ dONETWOTHREE
+ 
+         Compiled 1-2-3 functions for Clipper. Reads and writes WKS, WK1
+         and WR1 (SYMPHONY) files. View and worksheet without leaving an
+         application, use @SAYGET to enter data into a workshet. Browse,
+         create, modify cell format. Lots of calc functions.
+ 
+ dQUERY 4.0
+ 
+         Query management systems. Allows you to use SQL and QBE to do
+         ad-hox queries and report writing against dBASE, Symphony and
+         Lotus 1-2-3 files. Build canned query and report systems. Query
+         Lotus and dBASE files simultaneously using relational joins.
+         Automatic file and record locking. Works with dBASE, FOX and
+         Clipper files. Unlimited developers license $600, iunlimited
+         end user licence per network $500
+ 
+ DR.Switch
+ 
+         Memory switching utility that runs any size program from within
+         Clipper through a function call. Lightning fast, on memory
+         resident, network aware and royalty free, requires 4K
+
+ ------------------------------------------------------------------------------
+
+
+         LIST, Another Database of Files - Clipper Shareware/Public
+ 
+ This serie is based mostly on Clipper Distribution Network and then on some
+ other Public BBS systems which are offering Clipper files. I'm slowly
+ collecting THOUSANDS of names with descriptions, sizes, dates and areas and
+ planning to wrote for them some other descriptions (as i'm already doing with
+ ALL ClipperNet coming files in CLIPBBS MAgazine).
+ 
+ Followint is just first version of this list which has THREE sources:
+ 
+ Clipper Net worldwide
+ Mike Paschen's own BBS (Clipper Net HQ system 2:242/100) in Germany
+ NETCONSULT BBS (my own BBS, 2:285/608) in Holland
+ 
+ Format of this list is little bit more than 80 characters, therefore please
+ don't try to print it out, it's just for scanning file. Collumns are:
+ 
+ Clipper BBS Description available
+        File Name
+ CLIPBBS 2-02                   Page 20                  14 Jan 1992
+
+
+                     File Size
+                             ClipperNet area
+                                       Description (sometime VERY LONG)
+ ÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÁÄÁÄÄÄÄÄÁÄÁÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄ
+       3PX50.ARJ      65134 CL-LIB    Another Library for Clipper
+       43_Z_EGA.ARJ    4949 CL-87     43 Z. auf Ega-Bildschirm aus
+                                      Clipper
+       50NGCH.ARJ      9583 CL-TEXT   Norton Guide for Clipper 5.0
+                                      header files
+       A86LKMEM.ARJ    4040 CL-87     Demo z.locken v. Mem-Dateien im
+                                      Netzwerk
+ [1-06]ACCESS.ARJ       411 CL-50     Clipper 5.0 test memory access
+       ACCI10.ARJ     28720 CL-87     Zusatz-Library. Clipper
+       ACCTGDB2.ARJ   54619 CL-DB     Maintain Accounts:  Payroll
+ [1-05]ACH2TB.ARJ     10868 CL-50     Achoice to TBrowse
+       ACHOICE.ARJ     4687 CL-87     Clipper87 ACHOICE Menfhrung
+ [1-06]ACHOO2.ARJ      6851 CL-87     Demo of ACHOOSE picklist featuring
+                                      insert
+       ACOMCLIP.ARJ   11644 CL-87     Clipper comm routines-asm source
+       ADDRESB.ARJ    26648 CL-DB
+ [1-04]ADHOC302.ARJ   42347 CL-87     Adhoc 3.02
+       ADRDBF.ARJ      2999 CL-87     Adressendbfs. Clipper
+       ADRESS.ARJ     73258 CL-87     Adressenprogramm. f. Clipper
+       ADR_BOOK.ARJ    6928 CL-DB     Personal Address Book for the
+                                      Osborne I
+       AE0190.ARJ     42160 CL-87     Misc. low level functions including
+       AE0190NG.ARJ    5971 CL-87     Norton Guide fr AE0190 Clipper
+                                      library.
+       AECLIPB.ARJ     4299 CL-87     Clipper UDF which provides a quick
+                                      menu builder. Example PRG and OBJ
+       AECLIPD.ARJ     8767 CL-87     Clipper S'87 library function with C
+                                      source and excellent instructions on
+                                      producing C functions for Clipper.
+       AECLIPI.ARJ     5699 CL-87     Clipper UDF which determines index key
+                                      of dBase (NDX)
+       AECLIPM.ARJ    37642 CL-87     48 advanced mathematics functions for
+                                      S'87 Clipper Written in MSC5.1 for
+                                      speed. LIB and DOC included
+       AECLIPS.ARJ    10910 CL-87     Library of low level functions
+                                      for determining video mode
+       AECLIPT.ARJ    48723 CL-87     Library of 68 graphics primitives
+                                      and higher level graphics functions.
+                                      Elipses
+       AECLIPW.ARJ     4544 CL-87     Clipper S'87 library for windowing.
+                                      Simplifies making and releasing
+                                      windows using Clipper's Savescreen
+                                      and Restscreen functions.
+       AGS.ARJ        72372 CL-DB     DBase Applications Generation System
+       AHELP5.ARJ    197215 CL-LIB    Complete Linkable (.LIB) help
+       AHELP510.ARJ  193828 CL-50     Advanced help system for Clipper
+                                      5.x and '87
+       ALTDO328.ARJ   25805 CL-TEXT   Fast
+       ANOMAL89.ARJ   26972 CL-87     Die neuesten Anomalien
+       ANOMALY.ARJ    16816 CL-87     Anomaly report
+       ANOM_17.ARJ    50130 CL-DB     dBASE IV BugList
+       ANSICLIP.ARJ    5037 CL-50     OBJ zum Anzeigen von ANSI Files
+ CLIPBBS 2-02                   Page 21                  14 Jan 1992
+
+
+       AQUERY.ARJ      6689 CL-50     Filter-/Query Condition building demo
+       ARRAY1.ARJ      2360 CL-87     Beispiele zur Arry-Behandlung
+       ARRAYDOC.ARJ    2405 CL-87     Text about using arrays in CLIPPER
+       ARRAYS.ARJ      8304 CL-87     9 clipper-inspired array-handling UDF's
+ [1-11]ASCPOS.ARJ      1693 CL-87     Returns ASCII Value of cString at
+       ASCSCAN.ARJ    14404 CL-87     Clipper ASCII-read utility
+       ASC_EBC.ARJ     3660 CL-87     Wandelt ASCII in EBCDIC Code um
+       ASR   .PRG      5174 CL-87     Speichern von Arp.
+       ATZ.ARJ         8059 CL-NONe   Jedes GET in einer anderen Farbe
+       A_APPEND.ARJ    2845 CL-87     Funktion zum anh„ngen eines
+                                      Datensatzes
+       BACKREST.ARJ   10387 CL-87     Great BACKUP/RESTORE facility
+                                      for Clipp
+       BAO.ARJ         7397 CL-87     Debugger + Monomonitor + Colorkarte
+       BAR.ARJ         3082 CL-DB     Generate a 'status bar' in
+                                      dBASE III/III
+       BAR.ARJ         3957 CL-87     Statuszeile bei langen
+                                      Dateioperationen
+       BAR-1.ARJ       3084 CL-DB
+       BARGRAF.ARJ     3560 CL-DB     Generates a bar graph in dBASE III+
+ [1-13]BARNTX.ARJ      1143 CL-87     Function to display Bar Index when
+       BEF_CL87.ARJ    7883 CL-87     Befehle Clippper 87.
+       BE_DEBUG.ARJ    6896 CL-87     Clipper 87 der DEBUGGER
+       BLI150-2.ARJ   79869 CL-50     Update Blinker 1.50 to 1.50 with
+                                      time stamp 2am
+       BLI15DEM.ARJ  152719 CL-50     BLINKER 1.50 - Deutsche 5 min Demo
+       BLIMAN15.ARJ   68746 CL-NONe   Manual fr BLinker 1.50 (Clipper 5.0)
+       BLINK.ARJ       6249 CL-FCO    BLINK-Attribut An-/Ausschalten
+       BLINK131.ARJ   44520 CL-87     Update BLinker auf Version 1.31 ('87)
+       BLINK50.ARJ   102982 CL-NONe   Blinker
+       BLINK87.ARJ    65598 CL-87     Blinker 1.31
+       BLINKER.ARJ    57558 CL-87     BLINKER linker for S87
+       BLZDBF.ARJ    235413 CL-TEXT   DBF - Bankleitzahlen
+       BMOUSE.ARJ      7286 CL-87     Mouse-Treiber fr Clipper 87.
+       BMOUSE87.ARJ    8457 CL-87     Mouse fr Clipper Sommer 87
+       BREAKOUT.EXE   16962 CL-FCO    Programmabruch programmieren
+       BREEZE.ARJ     45372 CL-87     BREEZE LIBRARY FOR Windowing
+       BRKLNCLP.ARJ    9411 CL-87     Bildschirminhalt in Memofeld
+                                      packen cl86
+       BROWS11B.ARJ    8925 CL-87     Browser Clipper / dBase
+       BROWSE.ARJ      4239 CL-DB
+       BROWSE2.ARJ    17794 CL-87     Clipper browse utility
+       BUG20B.ARJ     15510 CL-87     CLIPPER S87 SOURCE CODE DEBUGGER
+       BUGGR.ARJ      10803 CL-87     Clipper source-code debugger
+ [1-14]BUTTON.ARJ      3118 CL-50     Get reader - treats logical variable
+                                      as button
+       C2DBASE.ARJ    56246 CL-DB     dBase II Utilities w/ 'C' Pgming
+                                      Sample
+       C4N5_133.ARJ   46062 CL-NONe   Clipper 4->5 konvertieren 1.33
+       C50001.ARJ      2308 CL-50only Notes about installing 5.0
+       C50002.ARJ      4126 CL-50only Notes about installing 5.0
+       C5REP2.ARJ     12597 CL-50only Clipper 5.0 REPORT command with some
+       C5REP6.ARJ      7485 CL-50     Replacement for FRMRUN.PRG
+       CACPO.ARJ      71983 CL-DB     A compiled dBASE III paperwork
+                                      program
+       CAL-1.ARJ       4919 CL-87     Kalender mit Source
+ CLIPBBS 2-02                   Page 22                  14 Jan 1992
+
+
+       CALC.ARJ       34679 CL-50     CALCULATOR
+ [1-08]CALC14.ARJ     23106 CL-50     Calculator (as .OBJ)
+       CALENDER.ARJ    4922 CL-87     Kalender PRG fr Clipper Source
+       CAPS.ARJ        3893 CL-87     CapsLock On/Off dbase 3+ ASM
+       CATALOG.ARJ    39832 CL-FCO    Disk-Katalog Programm
+       CBASE5.ARJ     38314 CL-TEXT   Norton Guide with a description of
+                                      all Run-Time-Er rors
+       CBIN-DB.ARJ    18945 CL-87     Diverse String Operationen Clipper
+       CC.ARJ         64101 CL-87     CUA/SAA Tool fuer Clipper S87 part 1
+       CCA13.ARJ      29673 CL-87     Erstellen von Clipper.Programmen.
+       CCASE11A.COM   23632 CL-87     Computer Aided Software Engineering
+       CCASE11B.ARJ  252858 CL-87     Computer Aided S. Engineering - 2 of 3
+       CCASE11C.ARJ  224071 CL-87     Computer Aided S. Engineering - 3 of 3
+       CCE.ARJ         7917 CL-87     Clipper-Quellcode schnell und
+                                      automatisch einruecken
+       CCSYMTBL.ARJ    6837 CL-87     Some nice tips how to little bit
+       CC_PDM.ARJ     40116 CL-87     CUA/SAA LIB Clipper S87 Part 2 Menugen
+       CFGCHECK.ARJ    3734 CL-87     Clipper CONFIG
+       CFOS_001.ARJ  176315 CL-LIB    ?S87? Clipper Modem Control Library.
+       CFTSDEMO.ARJ  170840 CL-NONe   Clipper Fast text search
+       CGOODIES.ARJ   21915 CL-87     Manipulation Clipper Arrays in C Funk.
+       CHDBF.ARJ      11870 CL-50     .ch creator for ordinal field names
+                                      in .dbf-file
+       CHELPDEM.ARJ   20682 CL-87     HELP-DEMO. Clipper
+       CHKBK.ARJ      13014 CL-DB     dBaseIII Checkbook Manager with
+                                      Good Use of Colo
+       CI_FUVAL.ARJ    6348 CL-87     Zinsberechnungen Dbase/Clipper
+       CL-DOSTI.ARJ    9527 CL-87     Clipper und Dos-Tips.
+       CL-NODE.FRM     1241 CL-TEXT   CLN node application form
+       CL-POL.005      2980 cl-50     CLIPPER         CLIPNET policy
+       CL-POL.007      3319 CL-TEXT   CLN policy No. 07
+       CL-POL.008      3517 CL-TEXT   CLN policy No. 08
+       CL-ROUTE.228    2872 CL-50     CLIPPER         Clipper routing of
+                                      ClipNet
+       CL-ROUTE.263    4499 CL-TEXT   CLN routing plan for Friday
+       CL-ROUTE.270    5109 CL-TEXT   CLN routing plan for Friday
+       CL-ROUTE.286    5686 CL-TEXT   CLN routing plan for Sunday
+       CL-ROUTE.309    6802 CL-TEXT   CLN routing plan
+       CL-TIC.CFG      2639 CL-TEXT   CLN example tic file
+       CL.ARJ          1103 CL-50     CLIPPER
+       CL50PRG.ARJ    25684 CL-TEXT   Discussion about 5.0 from CW on
+                                      Nantucket
+       CL5102.ARJ     23571 CL-50     version of report of bug
+ [1-04]CL5103.ARJ     28749 CL-TEXT   Anomaly report No. 3 for Clipper 5.01
+       CL5104.ARJ     33696 CL-TEXT   Anomaly report No. 4 for Clipper 5.01
+       CL513.ARJ      56686 CL-50only Clipper NonNantucket report about bugs
+       CL5IE4.ARJ     23915 CL-50only CLIPPER (5.0) internal errors
+ [1-04]CL5REP6.ARJ          CL-50     CLIPPER REPORT command upgraded
+                                      and fixed
+       CL86_87.ARJ     2938 CL-87     Clipper 86 ASM => Clipper 87
+       CLASSY.ARJ     73895 CL-50only GREAT - ADD YOUR REAL OWN OBJECTS
+       CLBAK50.ARJ   112225 CL-NONe   Backup Library fuer Clipper 5.0
+       CLBAK87.ARJ   121949 CL-87     Backup Library fuer Clipper '87
+       CLBBS101.ARJ   17035 CL-TEXT   CLIPBBS Magazine Volume 1 number 01
+       CLBBS102.ARJ   14332 CL-TEXT   CLIPBBS Magazine Volume 1 number 02
+       CLBBS103.ARJ   29271 CL-TEXT   CLIPBBS Magazine Volume 1 number 03
+ CLIPBBS 2-02                   Page 23                  14 Jan 1992
+
+
+       CLBBS104.ARJ   26775 CL-TEXT   CLIPBBS Magazine Volume 1 number 04
+       CLBBS105.ARJ   41051 CL-TEXT   CLIPBBS Magazine Volume 1 number 05
+       CLBBS106.ARJ   28661 CL-TEXT   CLIPBBS Magazine Volume 1 number 06
+       CLBBS107.ARJ   18976 CL-TEXT   CLIPBBS Magazine Volume 1 number 07
+       CLBBS108.ARJ   16860 CL-TEXT   CLIPBBS Magazine Volume 1 number 08
+       CLBBS109.ARJ   17809 CL-TEXT   CLIPBBS Magazine Volume 1 number 09
+       CLBBS110.ARJ   20715 CL-TEXT   CLIPBBS Magazine Volume 1 number 10
+       CLBBS111.ARJ   22259 CL-TEXT   CLIPBBS Magazine Volume 1 number 11
+       CLBBS112.ARJ   19322 CL-TEXT   CLIPBBS Magazine Volume 1 number 12
+
+ ------------------------------------------------------------------------------
+
+
+                      .NDX driver finaly available!!!!
+ 
+ 
+ Finally, long time expected .NDX driver for 5.01 Clipper is available FREE
+ for REGISTERED users from Nantucket. For EUROPEN users it mean, that they
+ can write to:
+ 
+         Nantucket sa/nv
+         Customer Service
+         16 Boileau Avenue
+         B-1040 Brussels, Belgium
+         Tel: +32-2-732.50.80
+         Fax: +32-2-732.55.91
+ 
+ Serial number of your Clipper package is expected to be in your call, fax
+ or letter
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 24                  14 Jan 1992
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+             Q&A: How to display status bar when using INDEX ON
+ 
+ 
+ Question:
+ 
+     How to make that my Clipper program will for every creating of
+     index display on screen status bar and i will not have to play
+     with hard overwriting of index files?
+ 
+ Answer:
+ 
+     Greg Lief's "Best of Aquarium" column in the December, 1991,
+     issue of DMBS magazine addressed this isuue, assuming that you're
+     using 5.01.  Richard Low summarized the technique on CIS a week or
+     so ago:
+ 
+         The INDEX ON ... TO ... command translates into a call to the
+         Clipper dbCreateIndex() function.  The syntax accepts an
+         optional code block to use when evaluating the index key
+         expression.  If you omit the code block, the function simply
+         converts the text index key into one.  So, the trick is to
+         supply a code block in addition to the index key.  The index
+         key (text) is what's stuck in the .NTX file header, but the
+         code block is what is evaluated.
+ 
+         To the point, by way of example:
+ 
+             // the old way
+         USE employee
+         INDEX ON lastname+firstname TO junk
+ 
+             // do it this way
+         USE employee
+         dbCreateIndex( "junk.ntx", "lastname+firstname",;
+                         {|| IndexMeter(), lastname+firstname} )
+ 
+             // more code
+ 
+             // here's the meter function
+ 
+         FUNCTION IndexMeter()
+ 
+         // prevent divide by zero when file is empty
+ 
+         IF RECNO() > 1
+             @ 24,0 SAY STR(RECNO() / LASTREC() * 100,3,0) + ;
+                 "% complete."
+         ENDIF
+         RETURN NIL
+ 
+         The trick is that the code block contains two expressions
+ CLIPBBS 2-02                   Page 25                  14 Jan 1992
+
+
+         that are evaluated from left to right.  The first expression,
+         the IndexMeter() function, is evaluated, and the index
+         percent complete status is displayed.  Then the index key is
+         evaluated AND returned, because the return value from
+         EVALuating a code block is the last expression evaluated.
+ 
+         My IndexMeter() example is only a simple example.  You could
+         employ status bars, dots, blips, beeps... you name it -- just
+         don't move the record pointer <g>.  Depending on the number
+         of records in the database, sometimes you will not get a
+         final 100% displayed so you might want to build in some logic
+         to test for the last record, then display something like
+         "Done".  The sky's the limit!
+
+ ------------------------------------------------------------------------------
+
+
+                    Q&A: PCBIOS driver for Clipper 5.01
+ 
+ 
+ Question:
+ 
+     Where is PCBIOS driver from Summer 87 in Clipper 5.01 package. I
+     desprately need from Clipper 5.01 to use BIOS calls for displaying
+     all outputs to screen?
+ 
+ Answer:
+ 
+     1) Clipper does indeed use direct screen writes, rather than writing
+        through the BIOS.
+ 
+     2) A driver to support BIOS screen writes is under development and
+        should be available in the near future.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 26                  14 Jan 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+            INTERNAL ERROR #1210 - coming od DATABASE operations
+ 
+ 
+ Internal error 1210 was a nightmare of 5.0 version of Clipper where was reason
+ of end of many Clipper developed application at some level of expansion. It
+ was caused by bug in Clipper and this bug was for sure fixed in 5.01 version.
+ 
+ This error is sometime on some cases coming out in Clipper 5.01 also. What can
+ be reason of this error is in all cases something really unknown and magic.
+ If it is not just error of database or indexes, which is easy to check by
+ reindexing, then try to look for another reson which come out from one of
+ FidoNet users after nights of trying to solve problems.
+ 
+     LOADING of SHARE.EXE in your autoexec (CONFIG.SYS) is sometime
+     reason of troubles with Internal Error 1210. There is some dependence
+     of order in which SHARE and some other utilities/programs are loaded.
+     Why is this happenning is very hard to find, but most probably will
+     be problem in some utilities which are not existing correctly
+     together with SHARE when SHARE is loaded __AFTER__ them.
+ 
+     When Internal error 1210 is coming, try to reorganise way of loading
+     SHARE.EXE as most FIRST program in your AUTOEXEC.BAT or CONFIG.SYS.
+
+ ------------------------------------------------------------------------------
+
+
+             Clipper 5.01 negative GET error when using PICTURE
+ 
+ Problem
+ 
+     Using of this code fragment with GET command and PICTURE clause:
+ 
+ CLIPBBS 2-02                   Page 27                  14 Jan 1992
+
+
+         number := 0
+         @ 10,10 say 'Number ' get number pict '999,999,999.99'
+         @ 11,10 say "result="+str(number)
+         read
+ 
+     will cause:
+ 
+         After filling "123-45789.88" will return "123.00"
+ 
+     When there will be positioned "-" sign inside of number, it will cause
+     lost rest of filled number after minus and result will be only part
+     before minus.
+ 
+ Comment
+ 
+     Actually, i have feeling it's way of TYPO mistake which is hard to
+     decide what is a result. Someone was in past complaining about this,
+     but was using GET cString and not GET nNuber. In this complained case
+     i was not able to found problem at ALL, because it was working as
+     expected. In case with number there can be found a misunderstanding of
+     input of number.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ --- Maximus 2.00
+  * Origin: HongKong PC User Group Software Library (6:700/8)
+ 
+ @PATH: 700/1 62/1 13/13 12/12 243/1 512/0 280/0 285/1 60
+
+ ------------------------------------------------------------------------------
+
+
+             CLIPPER.EXE and RTLINK.EXE problems with EMS memory
+ 
+ 
+ Problem example:
+ 
+     1)  I run Clipper 5.01 (r1.29) on a Zenith 386/SX 16mhz under DOS 5.0
+         utilizing QEMM 6.01 as its memory manager.
+ 
+             The problem: CMOS blown away, HD reports"Not Ready"...
+ 
+     2)  CLIPPER.EXE is running and compiling LARGE .PRG with more included
+         parts with many #define, #command... Used is QEMM for EMS management
+ 
+             The problem: cursor is starting running on screen
+                          hardcopies of screen are printed on printer
+                          computers is frozen
+                          computers suddenly reboot without reason
+ 
+ CLIPBBS 2-02                   Page 28                  14 Jan 1992
+
+
+ Comments:
+ 
+     First case is coming from one of FidoNet users. It's followed with some
+     other comments:
+ 
+         Compiling an application is fine,  The problem arises when
+         RTLinking the app.  The machines CMOS is blown away and when I
+         reboot the machine, reset CMOS, and reboot..the machine reports
+         "Drive not ready, press ESC to continue", I press ESC and the
+         machine starts normally, form the HD it said wasn't ready.
+ 
+     The solution: Reformat HD, set RTLEMSOFF environment variable...
+ 
+         A call to Nantucket resulted in an environment variable called
+         RTLEMSOFF being set to 1, this prevents RTLink from using EMS
+         memory to link apps, I had to reformat the HD ( and repartition it)
+         to lose the "Drive not ready" message.  To me this isn't a "real"
+         solution, RTLink being slow as it is, is only slower when EMS
+         memory can't be used, not to mention the HD getting blown away. I
+         can't believe Nantucket would allow such a thing to happen.  The
+         problem apparently is with QEMM 6.01 and Clipper.  I also have apps
+         locking up for no reason from time to time when using QEMM.  There
+         was not problem when using QEMM 5.1...I rather not go back to 5.1
+         if I can help it, but now that I think about it, some Clipper apps
+         locked up under 5.1 also, but no problem with RTLinking.
+ 
+     Second case is the same, when started using QEMM 6.0 problems occured,
+     just ONCE, TWICE per week, nothing more.
+ 
+     Most probably, new STEALTH technology of QEMM 6.x is causing problems
+     for RTLINK and also for CLIPPER.EXE because this problem was not ex-
+     perienced in other nonQEMM environments.
+ 
+     Suggestion with undocumented SET RTLEMSOFF=1 variable is really inte-
+     resting because it's really undocumented feature at all.
+ 
+     After short looking into RTLINK.EXE there is ANOTHER undocumented
+     SET similar to forst one   SET RTLXMSOFF=1 is evidently switching off
+     using of XMS memory. Thank you Nantucket and Pocket Soft for some
+     interesting hidden features....
+ 
+     Back to the problem, QEMM 6.x is using really revolutional techonology
+     of stealing all system ROMs, moving them definitely to place where no
+     one can see them and redirecting all referers to them when needed.
+     Thanx to this, we can have more than 200KBs of additional RAM for our
+     hungry TSR, buffers and files. All this has one negative side effect,
+     software written with little bit unclean managing of pointers and
+     calls can sometime blow up because of expecting something somewhere
+     where it is not. Best solving for this is CONTACT Quarterdeck about
+     QEMM rather that Nantucket (or Pocket Soft) for Clipper.exe or
+     RTLINK.EXE. Quarterdeck is extensively trying to upgrade Stealth
+     technology to be absolutely safe and can be more thankful for all
+     reports of incompatibilities.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 29                  14 Jan 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+ ³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ CLIPBBS 2-02                   Page 30                  14 Jan 1992
+
+
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+ ³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+ ³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+ ³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 31                  14 Jan 1992
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet
+ 
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+       Programmers Distribution Network (PDN, area PDNDBASE)
+       Various systems around whole world
+ CLIPBBS 2-02                   Page 32                  14 Jan 1992
+
+
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-02                   Page 33                  14 Jan 1992
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

@@ -1,0 +1,16 @@
+#
+#  96.02.08    DW.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a Windows DLL
+#
+
+out d                      # Output file name
+fi d                       # List OBJ files here
+
+deffile dw                 # Windows DLL definition file
+
+nodef                      # No default libraries
+nobell                     # No irritating beep
+map s,a                    # Create MAP file
+

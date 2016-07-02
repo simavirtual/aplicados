@@ -1,0 +1,21 @@
+# TESTOVL.LNK
+
+# 50kb overlay area
+BLINKER OVERLAY OPSIZE 50
+
+# Run overlays in pageframe
+BLINKER OVERLAY PAGEFRAME ON
+
+BLINKER MESSAGE WINK    # Only wink one eye
+
+BEGINAREA               # Start of overlays
+FILE test               # This file is overlaid
+FILE limerick           # This file is overlaid
+ENDAREA                 # End of overlays
+
+LIB force               # Force library not overlaid
+
+OUTPUT t                # Output .EXE name
+STACK 4096              # Stack size of 4 kb
+MAP A,S                 # Create MAP file
+

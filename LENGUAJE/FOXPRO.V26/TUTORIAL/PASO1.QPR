@@ -1,0 +1,6 @@
+SELECT Facturas.c¢drep, SUM(Facturas.impfac);
+ FROM Facturas;
+ GROUP BY Facturas.c¢drep;
+ INTO CURSOR PASO1
+BROWSE NOMODIFY PREFERENCE PASO1
+

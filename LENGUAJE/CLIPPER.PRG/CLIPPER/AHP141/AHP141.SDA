@@ -1,0 +1,65 @@
+AHELP 1.41  Advanced Help Library for Clipper   Registration $95
+PDNLANG JAN94 CA CLIPPER HELP LIBRARY DATABASE INDEX DBASE <ASP>
+FILES: AHP141.SDN
+
+Authors: Stan Gardner (Capella), Jim Hass (MicroFox) [ASAD] <ASP> {STAR}
+
+This help system, for use with your Clipper applications, provides
+both context-sensitive and generalized help windows. Features included
+with version 1.4 of AHELP (shareware) are:
+
+*  control whether help windows have no border, a single-line border, or
+   a double-line border.
+*  control whether the cross-bars drawn inside the help windows have no
+   line, a single line, or a double line.
+*  automatically determines the appropriate intersections.
+*  control what colors AHELP will use for the help window border, title,
+   content, and highlight bar in the help index window.
+*  control whether or not the end user has the ability to create or
+   modify help windows.
+*  control whether or not the help windows have drop shadows.
+*  automatically positions the help window immediately below the screen
+   position of the input variable (e.g., a GET variable) if the window
+   will fit there; otherwise, the window appears immediately above the
+   input variable.
+*  provides a help index; whenever any help window is on the screen,
+   the user may press F1 to see the help index.  The help index is
+   another window with a scrolling alphabetic listing of help subjects.
+   The user uses the cursor control keys to highlight the subject of
+   interest, and presses Enter to see the corresponding help window.
+   The user may also type the first letter of the subject to move the
+   highlight bar immediately to the first occurrence of that letter.
+*  is sensitive to the Clipper environment.  If the cursor is off when
+   help is invoked, it will be off when control returns to your
+   application.  Conversely, if the cursor is on when help is invoked,
+   it will be on when control returns to your application.  The same
+   principle applies to colors, function keys, insert status, work area,
+   and the status of SET CONSOLE, DELETED, ESCAPE, and SCOREBOARD.
+*  does not use any "wait state" commands (READ, WAIT, ACCEPT, INPUT,
+   MENU TO), to avoid conflicts with any pending GETs.  It uses the
+   INKEY() function for all keyboard input, with two exceptions: it
+   calls DBEDIT() for the help index window and MEMOEDIT() for
+   displaying/editing help text.
+
+When the user presses the help key while your application is in any wait
+state, Clipper automatically calls AHELP with three parameters: the name
+of the procedure in control when the key was pressed, the line number
+that was executing, and the name of the wait state input variable. AHELP
+uses the first and third parameters to construct a "seek key".  It opens
+the help file and performs a seek for that key.
+
+If the key is found, AHELP5 opens a help window and displays the help
+text. The window is opened as close as possible to the input variable
+screen position. If the key is not found, AHELP5 opens a smaller help
+window in the center of the screen and notifies the user that no help
+is available. Either window will show available options at the bottom
+of the window: Escape to cancel help, F1 to call up the help index, and
+F4 to edit or create the help display (if editing is enabled).
+
+The registered version contains full source code and additional features.
+
+Hardware Requirements: IBM compatible computer, 512K RAM.
+
+Other Requirements: Clipper Summer '87 or CA-Clipper version 5.x
+
+

@@ -1,0 +1,2674 @@
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+     °°°°°°°²²²²°°²²²²°°°°°²²²²°°°²²²²²²°°²²²²²²°°²²²²²²°°°²²²²°°°°°°°°°°°    
+   °°°°°°°°²²  ²²°°²²  °°°°°²²  °°°²²  ²²°°²²  ²²°°²²  ²²°²²  ²²°°°°°°°°°°°°  
+  °°°°°°°°²²  °°  °²² °°°°°°²² °°°°²² °²² °²² °²² °²² °²² ²²²°°  °°°°°°°°°°°° 
+ °°°°°°°°°²² °°°°°°²² °°°°°°²² °°°°²²²²²  °²²²²²  °²²²²²  °²²²°°°°°°°°°°°°°°°°
+ °°°°°°°°°²² °°°°°°²² °°²°°°²² °°°°²²    °°²²  ²²°°²²  ²²°°° ²²²°°°°°°°°°°°°°°
+  °°°°°°°°°²²°°²²°°²² °²² °°²² °°°°²² °°°°°²² °²² °²² °²² ²²°°²² °°°°°°°°°°°° 
+   °°°°°°°°°²²²²  ²²²²²²² °²²²²°°°²²²²°°°°²²²²²²  ²²²²²²  °²²²²  °°°°°°°°°°°  
+     °°°°°°°°    °°       °°    °°°    °°°°      °°      °°°    °°°°°°°°°°    
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+ 
+   Volume 1, Number 5                                    25 February 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1.  EDITORIAL  ...........................................................  1
+     SUNDAY's editorial  ..................................................  1
+ 2.  ARTICLES  ............................................................  3
+     SUMMARY OF HUNGARIAN NOTATION  .......................................  3
+     RCSDOS - Revision Control System - part (3)  .........................  4
+     The Programmer's Guide to CLIPPER Linkers - part (2)  ................  7
+     IS SHARE.EXE really needed and for what then?  ....................... 12
+     Speed of Clipper 5.01 and free memory, what a relation  .............. 14
+ 3.  SOFTWARE  ............................................................ 16
+     NANFORUM library!!!!!!!!!!!!!!!!  .................................... 16
+     Expand Library  ...................................................... 22
+ 4.  Q&A  ................................................................. 28
+     Clipper 5.01 memory requirements  .................................... 28
+ 5.  ANOMALIES  ........................................................... 29
+     ANOMALIES reports and commets  ....................................... 29
+     .PPO? OOPs, CLIPPER 5.0 has a preprocessor!  ......................... 29
+     COPY FILE TO is not working in one case  ............................. 31
+     DBU is hanging  ...................................................... 31
+ CLIPBBS 1-05       Table of Contents (...)        25 Feb 1991
+
+
+ 6.  ADVERTISEMENT  ....................................................... 33
+     What was in previous number, number 04?  ............................. 33
+     CLIPPER WRITTEN FAX/TELEX/MAIL APPLICATION  .......................... 33
+ 7.  WANTED  .............................................................. 35
+     WANTED! WANTED! WANTED!  ............................................. 35
+ 8.  COMMENTS  ............................................................ 36
+     Another DBEVAL x WHILE comments  ..................................... 36
+ 9.  ECHODUMP  ............................................................ 37
+     CONFERENCE DUMP part (4)  ............................................ 37
+ 10. CLIPPER NET  ......................................................... 43
+    Index of described files in Clipper BBS Magazine  .................... 43
+    WHAT IS <<Clipper Net>>??  ........................................... 43
+    CLN - CLIP110.ARJ  ................................................... 45
+    CLN - VSIX711.ARJ  ................................................... 45
+    CLN - ACH2TB.ARJ  .................................................... 46
+    CLN - CLIPSQL.ARJ  ................................................... 47
+    CLN - DBSCN2.ARJ  .................................................... 47
+    CLN - POPUPCAL.ARJ  .................................................. 48
+    CLN - SCRSAVE.ARJ  ................................................... 48
+ 11. CLIPBBS  ............................................................. 50
+    CLIPBBS distribution  ................................................ 50
+    CLIPBBS, how to write an article!!!  ................................. 51
+
+                                   - - - - -
+ CLIPBBS 1-05                   Page 1                   25 Feb 1991
+
+
+ =============================================================================
+                                   EDITORIAL
+ =============================================================================
+
+
+                             SUNDAY's editorial
+ 
+ As usual, i'm writing editorial on Sunday. Sitting before TC and watching
+ TV and writing this editorial.
+ 
+ What's new in this issue? Let see:
+ 
+ -   new part of issue called "ANOMALIES and THEIR REPORTS" was added
+     just few minutes ago. Reason for this is, that i have several mine
+     investigations about bugs, Jo French report has some also, but i
+     have several important comments to Jo French Anomaly report and
+     some other people have another reports. Why not to put all this
+     stuff in Clipper BBS Magazine. It's nice place for it, i guess.
+ 
+     I have also somewhere old buglist for Summer 87, therefore later
+     i'm planning to put it here also. For old stone programmers using
+     S87 it can be nice, for 5.01 programmers it can be useful to com-
+     pare Summer and 5.01 anomalies.
+ 
+ -   currently now, i'm investigating NANFOR.LIB and i have to say, it's
+     great library. I'm immediately including this library to my \LIB
+     directory and starting using of it, because it's offering just what
+     i'm still missing in some other libraries. Therefore list of my
+     libraries is bigger now (EXPAND, DANIEL, NANFOR, CL, LANTLIB). And
+     article about NANFOR will come very soon of course.
+ 
+ -   Long serie of articles about CLipper and Linking from pen :-) of
+     R.Donnay is succesfully continuing now and has more than 10 coming
+     parts.
+ 
+ -   Still in some phases of investigating RCS (revision control system)
+     will become as sources for some other articles about RCS. Also
+     planning some .C written program to make menu interface with all
+     needed possibilites on press-a-key basis.
+ 
+ -   For MULTIEDIT users is prepared small serie of usefull macros in
+     Clipper environment including database viewer and compiling macro
+     for Clipper 5.0x program from inside of MultiEdit
+ 
+ That's list of some news, if you are interested in them. Now a list of some
+ old things, mostly problems.
+ 
+ I'm still looking for some other authors. It's very simple. I have limited
+ time to manage Clipper BBS Magazine of course, and therefore number of ar-
+ ticles from me is also limited. Therefore Clipper BBS magazine needs some
+ other subscribers. Don't worry about english (mine is also not perfect as
+ many real english speaking readers can see and spell checker cannot check
+ all my mistakes) or about some other things, just write about your program,
+ experiences, investigations or about any other and send it via modem, come
+ as user in mine BBS or in any distribution site BBS. Some comments about
+ writing are in last parts of magazine, go and see there.
+ CLIPBBS 1-05                   Page 2                   25 Feb 1991
+
+
+ Also what i'm looking for are another distribution sites. Clipper BBS
+ magazine is easy accesible via Clipper Net or via FidoNet PDN, but it's
+ not optimal. What we all need are special distribution points, best one
+ per country, where will be allways available latest issue and of course
+ all old issues. I cannot of course send issues to those points, they
+ have to poll me (if FidoNet capable mailers) or just login into BBS and
+ get all from reserved directory. And also, sometime, get new articles
+ from subscribers and send them to me (or upload if only BBS).
+ 
+ Nice possibility, which i can offer to also COMMERCIAL programs. Just
+ write your own adverisement and send it to me as another article. Result
+ will be, that your advertisement will become into Clipper BBS Magazine and
+ then will go to many, many hands. All free, or if you want to contribute
+ with expenses coming with Clipper BBS Magazine, then i will be of course
+ lucky man. But, there aren't pricelists. And all advertisements are equal,
+ commercial, non-commercial or personal. For all of them is here space.
+ 
+ Yours,
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 3                   25 Feb 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+                  SUMMARY OF HUNGARIAN NOTATION
+ 
+ Type prefixes (first character of name)
+  ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄ·
+  ³Char  ³ Type       º   ³Char  ³ Type       º   ³Char  ³ Type      º
+  ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+  ³  a   ³ Array      º   ³  b   ³ Code Block º   ³  c   ³ Character º
+  ³  d   ³ Date       º   ³  h   ³ Handle     º   ³  l   ³ Logical   º
+  ³  n   ³ Numeric    º   ³  o   ³ Object     º   ³  v   ³ anything  º
+  ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍ¼
+ 
+ State qualifier (next part of name)
+  ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄ·
+  ³Chars ³ Type       º   ³Chars ³ Type       º   ³Chars ³ Type      º
+  ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+  ³ New  ³ new state  º   ³ Sav  ³ saved stateº   ³ tem  ³ temporary º
+  ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍ¼
+ 
+ 
+ Standard Qualifier (next coming part of name)
+  ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄ·   ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄ·
+  ³Chars ³ Type       º   ³Chars ³ Type       º   ³Chars ³ Type      º
+  ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄ¶   ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄ¶
+  ³ Attr ³ Attribute  º   ³ Ar   ³ Array      º   ³ Clr  ³ Color     º
+  ³ Crs  ³ Cursor     º   ³ Dbf  ³ related dbfº   ³ F    ³ First     º
+  ³ File ³ Any File   º   ³ Fld  ³ field      º   ³ L    ³ Last      º
+  ³ Msg  ³ Message    º   ³ Name ³ Name       º   ³ Ntx  ³ Ntx rel.  º
+  ³ Rec  ³ Rec.number º   ³ Ret  ³ return val.º   ³ Scr  ³ Screen    º
+  ³ Str  ³ String     º   ³ T    ³ Top        º   ³ L    ³ Left      º
+  ³ B    ³ Bottom     º   ³ R    ³ Right      º   ³ Row  ³ Row       º
+  ³ Col  ³ Column     º   ³ X    ³ Row        º   ³ Y    ³ Column    º
+  ³ Max  ³ Maxim.valueº   ³ Min  ³ Min.value  º   ³      ³           º
+  ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍÍ¼   ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÍÍÍ¼
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 4                   25 Feb 1991
+
+
+             RCSDOS - Revision Control System - part (3)
+ 
+                         __________________
+                         Setting user names
+                         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ DOSRCS needs for work user name. If is not supplied, is using
+ standard name. Normal of course is, that every user is using own
+ name. Setting of user name is well simple:
+ 
+       ³ SET USR=user_name
+ 
+ DOS SET command is setting environment variable to value of your
+ used user name. In my case it's SET USR=DANIEL.
+ 
+                         __________________
+                         CHECK OUT - CO.EXE
+                         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ Check out is first program which i will try to explain little bit
+ from point of view of use for Clipper programmer. Yes, i know, with
+ RCS is coming complete documentation in one from archives filled
+ with .MAN files (MANuals). But this is very short explanation about
+ everything and who know, maybe you have ONLY .EXE files (another
+ archives) and manuals aren't on your place yet or never. Therefore
+ i will try to give complete description what i discovered in DOSRCS
+ package with also some examples how i'm using those programs.
+ 
+ Check Out program called CO.EXE is used for getting sources/texts
+ stored in RCS back for normal use with some additional actions.
+ CO.EXE is controlled with many switches, but for basic using is
+ enough to know only form used in GET.BAT file:
+ 
+                 CO -l RCS\%1
+ 
+ That's only for explanation now.
+ 
+ Extensive informations are required for doing additional job,
+ mainly for case of getting not LATEST version, but some from
+ previous  versions. This is needed often in case, that programmer
+ made a changes in program and after them find, that they are not OK
+ and wants to go back to original state. Without DOSRCS it's a big
+ problem (canbe solved only by keeping backup copies), with DOSRCS
+ it's simple, just ask and get it. And still available changed
+ 'wrong' version....
+ 
+ 
+ Syntax of CO command is:
+ 
+         CO [options] file ...
+ 
+ 
+ Available options for use:
+ 
+         -r[<nrev>]
+ 
+ CLIPBBS 1-05                   Page 5                   25 Feb 1991
+
+
+         asking for latest revision whose number is less than or
+         equal to <nrev>. If <nrev> indicates a branch, the latest
+         revision of that branch is retrieved. If <nrev> is not
+         used, is retrieved latest revision from default branch (-b
+         option!).
+ 
+         <nrev> is in ALL cases and in ALL programs composed from
+         one or more numeric or symbolic fields separated with ".".
+         Symbolic field must have numeric equivalent give with "-n"
+         option of CI or RCS command.
+ 
+         This way of retrieving revision is NOT LOCKING this
+         revision and everybody else can get it. It can be used ONLY
+         for process of viewing/compiling, but NEVER for process of
+         making changes in file!
+ 
+         -l[<nrev>]
+ 
+         It's doing the same as -r, but IT IS LOCKING retrieved
+         revision for caller. Nobody else is then able to retrieve
+         this revision and do changes on it. This switch is also
+         used in our GET command, because i'm assuming EVERY time
+         lock revision.
+ 
+         Example:
+ 
+         In this case is good to give small example. Let say, that i
+         want to get revision 1.1 of TEST.PRG used in previous
+         article, then i can use:
+ 
+                 CO -l1.1 TEST.PRG
+ 
+ 
+         -u[<nrev>]
+ 
+         It's equivalent of "-r", but it's UNLOCKING retrieved
+         revision (if it was locked before by caller). In case of
+         <nrev> ommited, it's retrieving latest revision which is
+         locked by caller!
+ 
+         -f[<nrev>]
+ 
+         In case, that working source/text file already exist, this
+         switch will force CO.EXE to overwrite this file. Usually
+         it's combined with "-q" switch for quiet automatic mode.
+ 
+         -p[<nrev>]
+ 
+         Prints retrieved version on standard output rather than
+         storing (creating) into working source/text file. With this
+         switch is possible use CO.EXE as part of pipes or
+         redirections.
+ 
+         -q[<nrev>]
+ 
+         Quite mode is supressing printing of diagnostics
+ CLIPBBS 1-05                   Page 6                   25 Feb 1991
+
+
+         informations and also some questions normally given by
+         program.
+ 
+         -d<date>
+ 
+         retrieves latest revision on selected branch whose checkin
+         date/time is LESS or EQUAL that <date>. <date> can have one
+         from following formats:
+                      "22-April-1982, 17:20-CDT"
+                      "2:25 AM, Dec. 29, 1983"
+                      "Tue-PDT, 1981, 4pm Jul 21"       (free format)
+                      "Fri, April 16 15:52:25 EST 1982" (output of ctime).
+ 
+                      For example, the date 20,10:30 defaults to
+                          10:30:00 of the 20th of current month and
+                                                  current year.
+ 
+         Please, be aware of using dates less than year 1970, there
+         is warning about wrong work of this.
+ 
+         -s<state>
+ 
+         Retrieves the latest revision on the selected branch whose
+         state is set to <state>.
+ 
+         -w[<cLogin>]
+ 
+         Retrieves the latest revision on the selected branch which
+         was checked in by the user with login name <cLogin>. Unused
+         argument is equal to own user name.
+ 
+         -j<joinlist>
+ 
+         For save your time, see this warning. DOSRCS IS NOT ABLE TO
+         DO THIS COMMAND BECAUSE OF NOT SUPPORT IN DOS FOR JOIN OPE-
+         RATIONS. RCS is coming from UNIX where is direct support of
+         operating system for this operation. Therefore please DON'T
+         TRY TO PLAY WITH THIS, IT'S WASTE OF TIME ONLY. IT'S NOT
+         IMPLEMENTED HERE.
+ 
+ 
+ All switches is possible to combine together (for example dates
+ with login names..) for getting best possible revision which will
+ meet all this conditions.
+ 
+ See you later....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 7                   25 Feb 1991
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (2)
+ 
+         = GLOSSARY of Linking Terminology =
+ 
+ 
+         .EXEcutable file - A linked program that the operating system
+                            can execute.
+ 
+         OBJECT file - A file produced by the compiler used as an input
+                       file by the linker.  Also referred to as a
+                       relocatable file because it contains code that can
+                       be modified by the linker to execute at any memory
+                       address.
+ 
+         MODULE -      Another term of reference for an OBJECT.  A module
+                       name is assigned by the compiler to each object
+                       so it can be referenced in libraries.
+ 
+         SECTION -     A section is a unit of linked, executable code for
+                       handling by the overlay manager.  A section is
+                       usually an overlay - a portion of the executable
+                       file that is loaded into memory as a single unit.
+ 
+         SEGMENT -     A piece of code or data that is manipulated by the
+                       linker as an indivisble unit.
+ 
+         PUBLIC  -     Segments of code or data that can be combined
+         SEGMENTS      with other segments of the same segment and class
+                       name to occupy adjacent locations in memory.
+ 
+         PRIVATE -     Segments of code or data that cannot be
+         SEGMENTS      combined with other segments to occupy adjacent
+                       memory locations.
+ 
+         OVERLAY -     A section of code or data that shares all or part
+                       of its memory allocation with other sections.
+ 
+         LIBRARY -     A file containing relocatable modules which are
+                       individually available to the linker.   Libraries
+                       usually include indexes of PUBLIC symbols.
+ 
+         SYMBOL -      The assigned name for a value that is a constant
+                       (absolute symbol) or the address of a program
+                       component (relative symbol).
+ 
+         PUBLIC -      A symbol whose relative address is designated by
+         SYMBOL        the compiler to be available for modules other than
+                       the module that defines it.
+ 
+         STATIC -      A symbol whose relative address is designated by
+         SYMBOL        the compiler to be available only for the module
+                       that defines it.
+ 
+         EXTERNAL -    A symbol that is not defined in a module that
+         SYMBOL        references it.  The linker "fixes" these references
+                       when their values become known.
+ CLIPBBS 1-05                   Page 8                   25 Feb 1991
+
+
+         OVERLAY -     A preallocated memory area where code segments are
+         POOL          loaded side-by-side during program execution.
+ 
+         PRE-LINKING - A feature of some linkers which allows linking of
+                       portions of a program that are not subject to
+                       change in advance of creating an .EXEcutable file
+                       and using the Pre-link library with the .EXE file.
+ 
+         INCREMENTAL - A feature of some linkers which detects only the
+         LINKING       modules which have been changed and relink those
+                       modules, thus resulting in faster linking.
+ 
+         STATIC      - Segments of code which are placed into overlay
+         OVERLAYS      sections that occupy the same memory space at
+                       runtime.  When a new overlay is loaded in a
+                       static overlay, the old code is discarded.
+ 
+         RELOADABLE  - Segments of code which are placed into overlay
+         OVERLAYS      sections that occupy the same memory space at
+                       runtime.  When a new overlay is loaded in a
+                       reloadable overlay, the old code is temporarily
+                       discarded then reloaded when needed.
+ 
+         OVERLAY -     A portion of a linked program that contains the
+         FILE          overlay segments which are loaded into memory
+                       for execution during runtime.
+ 
+         INTERNAL -    Overlay segments which are placed into the
+         OVERLAY       main .EXEcutable file.
+ 
+         EXTERNAL -    Overlay segments which are placed into an
+         OVERLAY       .OVL (overlay) file which is accessed from the
+                       main .EXEcutable program.
+ 
+         POSITIONAL -  A command interface to the linker which requires
+         SYNTAX        that linker commands be issued in a proper order
+                       at the dos command line or a script file.
+ 
+         FREEFORMAT -  A command interface to the linker which allows
+         SYNTAX        linker commands to be issued in any order and
+                       is usually associated only with a script file.
+ 
+         MAP FILE -    An ASCII file usually with the .MAP extension
+                       which contains information about symbol and
+                       segment addresses within the memory image of the
+                       linked program.  Map files are created during
+                       linking.
+ 
+         WARNING -     Messages issued by the linker during the link
+         MESSAGES      process which states that a link process was
+                       attempted which could not be completed.  Warnings
+                       usually mean that the .EXEcutable program was
+                       created and is executable, but does not necessarily
+                       conform to the specifications in the link script.
+ 
+         FATAL -       An error message issued by the linker during the
+ CLIPBBS 1-05                   Page 9                   25 Feb 1991
+
+
+         ERRORS        link process which states that the .EXEcutable
+                       program could not be created due to inability to
+                       find files, libraries, code segments, etc.
+ 
+ 
+ 
+ 
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                       Linking Tips for Memory-Management
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ 
+         In almost all cases, memory management is accomplished by the
+         use of "overlays".   Many Clipper programmers have been reluctant
+         to use overlay linkers because they heard how difficult they are
+         to manage.  This may have been true in the past, but overlay
+         managers have become much more sophisticated in the past two
+         years.  In order to understand how to choose a linker for memory
+         management, we must first examine the methods in which linkers
+         accomplish this task.  They are as follows:
+ 
+         1. Static Overlays
+         2. Reloadable Overlays
+         3. Dynamic Overlays
+         4. Dynamic Linking
+         6. Symbol Management
+         7. Memory Packing
+         8. Memory Allocation
+         9. Virtual Memory Linking (VML)
+ 
+ 
+         = STATIC OVERLAYS =
+ 
+         "Static overlays" are segments of code which are placed into
+         overlay sections that occupy the same memory space at runtime.
+         Static overlay segments usually look like this in your link
+         file:
+ 
+           # area 1
+           BEGINAREA
+             SECTION FILE A
+             SECTION FILE B
+             SECTION FILE C
+           ENDAREA
+ 
+           # area 2
+           BEGINAREA
+             SECTION FILE D
+             SECTION FILE E
+             SECTION FILE F
+           ENDAREA
+ 
+         If your linker uses static overlays (PLINK86, PLINK86plus),
+ CLIPBBS 1-05                   Page 10                  25 Feb 1991
+
+
+         then you must be sure that you properly place your objects in
+         the overlay segments to prevent computer "lock-up" or "crashing"
+         at runtime.  In the above example, any procedure or function in
+         FILE A may call any procedure or function in FILE D - F because
+         they are in different areas, however if a function in FILE A
+         calls a procedure or function in FILE B, then your program will
+         crash as soon as the program returns to FILE A because FILE A
+         was removed from memory to load FILE B.
+ 
+         Overlay management with "static overlays" is the most time-
+         consuming because it requires extensive analysis of the
+         structure of the program to insure that the modules are placed
+         properly in the overlay areas.
+ 
+ 
+ 
+         = RELOADABLE OVERLAYS =
+ 
+         "Reloadable overlays" are segments of code which are placed
+         into overlay sections that occupy the same memory space at
+         runtime, however the "calling  module" is automatically
+         "reloaded" into memory when returning from the "called module".
+ 
+         Reloadable overlay segments usually look like this in your link
+         file:
+ 
+           RELOAD FAR 200
+           # area 1
+           BEGINAREA
+             SECTION FILE A
+             SECTION FILE B
+             SECTION FILE C
+           ENDAREA
+ 
+           # area 2
+           BEGINAREA
+             SECTION FILE D
+             SECTION FILE E
+             SECTION FILE F
+           ENDAREA
+ 
+         If your linker allows reloadable overlays (RTLINK, RTLINK+,
+         RTLINK/CLIPPER-5.0) then you are not in danger of "lockup" in
+         the event that a procedure or function in FILE A calls a function
+         or procedure in FILE B because FILE A will be reloaded into
+         memory on return from FILE B.
+ 
+         Your application will experience slowing, however, if overlays
+         are not structured properly, because each time an overlay is
+         reloaded the application must go to disk.  In the above example
+         if a function in FILE A repetitiveley calls a function in FILE B
+         then your application will be very "disk intensive" and will run
+         slowly.  If a function in FILE A repetitively calls a function
+         in FILE D there will be no slowing at all because both modules
+         will remain in memory.
+ 
+ CLIPBBS 1-05                   Page 11                  25 Feb 1991
+
+
+         Overlay management with "reloadable overlays" is the less time-
+         consuming than "static overlays" and provides an additional
+         advantage of allowing more modules to be overlayed, thereby
+         saving additional memory usage.  Overlay managers which provide
+         "RELOAD" commands usually limit the automatic reloading to
+         either "NEAR" or "FAR" calls.  The Clipper-compiler mixes both
+         near and far calls therefore Clipper-compiled code cannot be
+         overlayed in this manner.  The generic versions of RTLINK,
+         RTLINK+, PLINK86plus and the Clipper-5.0 version of RTLINK all
+         support overlay reloading, but the modules overlayed in this
+         manner must be C/ASM modules from the CLIPPER/EXTEND libraries or
+         third-party libraries, NOT clipper-compiled objects.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 12                  25 Feb 1991
+
+
+          DOS 4.01 SHARE Service Question
+          ===============================
+ 
+ I know the purpose of SHARE in multi-user, multi-tasking and network
+ environments.  But MS-DOS 4.01 seems to feel that SHARE must be loaded just
+ because a Large-Partition is defined.  It may be loaded either via the
+ INSTALL command in the CONFIG.SYS file or as a TSR in the AUTOEXEC.BAT
+ file.  But if you have a DOS partition over 32 MB's and you don't install
+ SHARE you generate a DOS  "WARNING....."  message.  DOS even goes so far
+ that if you have not installed SHARE it will search the root directory for
+ it and then AUTO-LOAD it !!  Now THAT is a real first !  Why...
+ 
+ I ran without it for months on a 100MB partition with absolutely no
+ problem.  Then I got afraid of that constant boot-up warning and put it
+ back in my CONFIG file.  Of course it is a pain at times because it can
+ interfere with reasonable desired file access- such as backing up a file
+ that has not been openned with the proper Shared Read access by the owning
+ TSR program.  Not that you want to actually back that file up but that it
+ causes an error msg and requires an operator response to continue.  That's
+ all fine for the original intended purpose of SHARE but now what does it do
+ for partitions over 32 MB that is not needed in <32 MB partitions ?
+ Anybody know ?
+ 
+ Remember it's NOT required to operate with Large Partitions.  I've run for
+ months without it...  what was I missing ?
+ 
+ ----------------------------------------------
+ 
+ Well like so many I made the trek to COMDEX a few weeks ago and gave some
+ effort to finding the answer to this profound question of life and the need
+ to SHARE.  Microsoft didn't know the answer.  IBM was staffed by a techie
+ who said "I really don't know the answer to that, I just include it too."
+ So I insisted and persisted and made many at the IBM stand feel
+ increasingly squirmy as nobody knew the answer.  How stupid they must have
+ felt that somebody was here asking a dumb DOS question when "we" all knew
+ it nolonger mattered...  that OS/2 was now the Real Thing.
+ 
+  THEN one day they gave a freebie day at COMDEX to an original DOS
+ programmer who worked on DOS 4.01 !  He quietly and completely explained
+ the answer...  It's VERY interesting.
+ 
+ If you use "modern" programs all the time, you may have never run into
+ problems using Large-Partitions (over 32MB) without SHARE loaded.  But
+ beware...
+ 
+  The deal is that the old file FCB's cannot hold pointer information in it's
+ "reserved fields", on files that are located on disk locations past 32MB's.
+ When used in a Large-Partition environment, FCB's can be okay as long as
+ the file is physically WITHIN the 32MB range of the partition.  However if
+ part of the file is past the 32MB range, say in the 38th megabyte area of
+ the partition, the FCB doesn't chuck-up or give an error, it just rolls the
+ pointer value over, thru zero, and gives DOS a new garbage value as an
+ internal disk pointer.  The next disk read gives junk to your program, the
+ next disk write corrupts your disk.  It's Great Fun.
+ 
+ The reason SHARE is the solution is because it was already doing the
+ CLIPBBS 1-05                   Page 13                  25 Feb 1991
+
+
+ required fix for a different reason in small partitions.  To give file
+ sharing protection in multi-user environments SHARE would make a copy of a
+ program's FCB in a new local copy within SHARE and perform the file open
+ from SHARE's copy of the FCB.  In so doing, it technically owned
+ the file and could effectively perform traffic-cop duty regarding
+ multi-access activity on the file.
+ 
+  Since old programs using hard coded FCB's had to be given a way to run in
+ Large-Partitions something had to be done to the FCB disk pointer problem.
+ The solution was to copy the original FCB from within the program to a new
+ "extended" format of the FCB that would be in control by the operating
+ system.  The extended form of the FCB with larger fields would be able
+ to support Large-Partitions, and any other extensions in the future.
+ 
+ This FCB copy capability was already in existance in the current SHARE
+ facility.  SHARE was just upgraded to not just copy the FCB into it's own
+ area for file access control but to copy it into an extended FCB format,
+ when applicable, for Large-Partition access.
+ 
+ As nobody knows the internal code of the program's they run everyday, you
+ can never be positive if a program is using File Handles via Extended File
+ IO or old FCB's.  (Actually, if you can specify a path, it's 99.44% likely
+ to be extended file IO using a File Handle.)  Since the use of FCB's in
+ Large-Partions, when accessing the disk area past 32 MB will corrupt the
+ poor user's disk, IBM said:  "this is serious",  and even forced the
+ bootup process to automatically search for SHARE in the root directory if
+ it had not been explicitly loaded in the config file.
+ 
+  Ahhhh.... and that explains why such "modern" people as myself who had used
+ only "modern" programs with File Handles (no FCB's) never had any problems.
+ Right.  But not completely safe.
+ 
+ Just lucky.  The reason SHARE is an ABSOLUTE NECESSITY in systems using
+ Large-Partitions is this:
+ 
+      My IBM DOS programmer says that even today DOS itself still uses some
+      old FCB's internally for some unspecified internal disk functions !
+ 
+      God help us, Microsoft sure didn't.
+ 
+      DOS still runs some original DOS 1.1 file access code that REQUIRES
+      SHARE in order not to, on some day, wipe out your hard disk !!!
+ 
+ So if you're getting the SHARE WARNING at bootup friends, stick it back in
+ your config file, or just put it in the root directory of you're C drive,
+ and just eat the bytes it takes in memory...  Fact is, we've got no choice.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 14                  25 Feb 1991
+
+
+      Speed of Clipper 5.01 and free memory, what a relation...
+ 
+ Second from serie of test trials dedicated to discovery relations
+ between speed of clipper and some other conditions. This time, we
+ are looking how is Clipper touched with lack of free memory for
+ executing program. On on very simple program we can see a result of
+ decreasing free memory....
+ 
+ First, let see test program:
+ 
+    º    local cString1 := space(1000) ,;
+    º    cString2 := space(1) ,;
+    º    nStart   := 0 ,;
+    º    n ,;
+    º    n1       := 0
+    º
+    º    ? ' testing in progress, memory() values are:'
+    º    ? '(0)=',memory(0),' (1)=',memory(1),' (2)=',memory(2)
+    º    ?
+    º    nStart = seconds()
+    º
+    º    for n:=1 to len(cString1)
+    º            n1 := n1 + asc(substr(cString1,n))
+    º            ?? n,chr(13)
+    º    next
+    º    ?
+    º    ? ' first part of test passed after ',seconds()-nstart,' seconds'
+    º    ?
+    º    for n:=1 to 1000
+    º            cString2 := cString2 + "."
+    º            ?? n,chr(13)
+    º    next
+    º    ?
+    º    ? '  wholetest passed after      ',seconds()-nstart,'  seconds'
+    º    ?
+ 
+ 
+ Next, see conditions of testing:
+ 
+         1)      used with FULLBASE.PLL for limiting link time and
+                 also because it's increasing disk access sometime
+         2)      PC AT286, 16Mhz, 610KB free originally because of
+                 QRAM and all stuff loaded high
+ 
+ And result:
+       ÚÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄÄÄ·
+       ³      ÃÄÄÄÄÄÄÄMemory()ÂÄÄÄÄÄÄ´ DOS    ³  first ³ whole  º
+       ³      ³  (0)  ³  (1)  ³  (2) ³  memory³  [s]   ³ [s]    º
+       ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ¶
+       ³ TEST1³  223  ³  64   ³  213 ³ ~600KB ³  2.58  ³ 5.16   º
+       ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ¶
+       ³ TEST2³   42  ³  28   ³   34 ³ ~300KB ³  2.91  ³ 5.54   º
+       ÃÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÅÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄ¶
+       ³ TEST3³   17  ³  17   ³    9 ³ ~275KB ³  4.76  ³ 9.23   º
+       ÔÍÍÍÍÍÍÏÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÏÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍÏÍÍÍÍÍÍÍÍ¼
+ 
+ CLIPBBS 1-05                   Page 15                  25 Feb 1991
+
+
+ Decisions:
+ 
+         First, test program was very simple and was using really
+         less memory, because of strings allocated only small.
+         Initially i was trying to operate with strings about 30KBs,
+         but it was TOO slow to my patience, therefore i made it
+         only about 1KB, because result of test is not too much
+         different.
+ 
+         Then i used MEMHOG utility for allocating memory out and
+         running this program several times. TEST1 was in memory
+         about 600KB free, TEST2 about 300KB free, TEST3 about 275KB
+         free. Less free was not possible, because program was
+         flowing out from memory.
+ 
+         Decision is simple. When small memory, big slowness is
+         coming. When enough memory free, program is much faster.
+         All that because of needed disk swapping and overlaying
+         starting also in very small program.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 16                  25 Feb 1991
+
+
+ =============================================================================
+                                   SOFTWARE
+ =============================================================================
+
+
+                      NANFORUM library!!!!!!!!!!!!!!!!
+ 
+ 
+ NANFORUM TOOLKIT, or NANFORUM library is public-domain, user-supported
+ library coming from Compuserver (what a dream of many europeans
+ clipperist).
+ 
+ Great project begun in 1990 and went into at this moment really great and
+ profitable library collected from hundreths of function from several users.
+ Perfectly documented and suiting exact needs which Clipper programmer can
+ have very often is available only for price of download and is free for use
+ by all of us. Library is currently written for any Clipper 5.0x compiler,
+ but because of sources and future upgrades will be coming step by step with
+ new Clipper version (if any will come <grin>).
+ 
+ At this moment is maybe good point, that there is naming convention used
+ for this library and all future versions will keep this naming convention:
+ 
+ NFLIBxx.xxx         .NG and .LIB
+ NFSRCxx.xxx         all sources
+ 
+ There is also very good system of submitting sources and documentation with
+ maximal use of RCS (Revision Control System) described also here in Clipper
+ BBS magazine (and all sources can be nice example of use RCS!).
+ 
+ Another good idea used by keepers of this library is fact, that all
+ submitted code must be tested and approved with two independent people and
+ only after this (and filling documentation and way of writing conditions)
+ is function included in library. This can grant checks of buggy functions
+ and excluding them from processing.
+ 
+ OK, stop talking and come on with list of functions in library (version
+ 2.0 currently) with some comments:
+ 
+ Array related functions
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_AADDITION()  Add elements unique of source array to target array
+ FT_AAVG()       Average numeric values in an array
+ FT_ADESSORT()   Sort an array in descending order
+ FT_AEMAXLEN()   Find longest element within an array
+ FT_AEMINLEN()   Find shortest element within an array
+ FT_AMEDIAN()    Find middle value in array, or average of two middle values
+ FT_ANOMATCHES() Find the number of array elements meeting a condition
+ FT_AREDIT()     2 dimensional array editing function using TBrowse
+ FT_ASUM()       Sum the elements of an array
+ FT_RESTARR()    Restore a Clipper array from a disc file
+ FT_SAVEARR()    Save Clipper array to a disc file.
+ 
+ 
+ Any kind of conversion function
+ CLIPBBS 1-05                   Page 17                  25 Feb 1991
+
+
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_BYT2BIT()    Convert byte to string of 1's and 0's
+ FT_BYT2HEX()    Convert byte to hexadecimal version of its binary value
+ FT_D2E()        Convert decimal to scientific notation
+ FT_DEC2BIN()    Convert decimal to binary
+ FT_E2D()        Convert scientific notation string to a decimal
+ FT_ESCCODE()    Convert Lotus style escape codes
+ FT_HEX2DEC()    Convert a hex number to decimal
+ FT_INVCLR()     Get the inverse of a color
+ FT_NTOW()       Translate numeric value to words
+ FT_SQZN()       Compress a numeric value into a character string
+ FT_STOD()       Convert a date string to a Clipper date data type
+ FT_UNSQZN()     Uncompress a numeric compressed by FT_SQZN()
+ FT_XTOY()       Convert from any data type to any other data type
+ 
+     Especially latest function is nice. It's very handy to have function
+     like this, because it's quite normal that application need universal
+     conversion function.
+ 
+ 
+     Another nice is FT_ESCCODE(), it's allowing to have printer control
+     codes defined in way as in Lotus program (as \999) into real codes
+     for printing into printer.
+ 
+ 
+ DOS and BIOS related
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_CHDIR()      Change the current directory
+ FT_DEFAULT()    Retrieve and optionally change the current default drive
+ FT_DOSVER       Return the current DOS major and minor version as a string
+ FT_DSKFREE()    Return the amount of available disk space
+ FT_DSKSIZE()    Return the maximum capacity of a fixed disk
+ FT_FLOPTST()    Test diskette drive status
+ FT_HANDCNT()    Count number of available DOS (not network) file handles
+ FT_INP()        Retrieve a byte from a specified I/O port
+ FT_INT86()      Execute a software interrupt
+ FT_ISPRINT()    Check printer status
+ FT_ISSHARE()    Determine if DOS "Share" is installed
+ FT_MKDIR()      Create a subdirectory
+ FT_OUTP()       Write a byte to a specified I/O port
+ FT_PEEK()       Retrieve a byte from a specified memory location.
+ FT_POKE()       Write a byte to a specified memory location
+ FT_REBOOT()     Force a warm or cold boot
+ FT_RMDIR()      Delete a subdirectory
+ FT_SETDATE()    Set the DOS system date
+ FT_SETTIME()    Set the DOS system time
+ FT_SYSMEM()     Determine the amount of conventional memory installed
+ FT_TEMPFIL()    Create a file with a unique name
+ 
+     Interesting should be function FT_INT86() because via this is possible
+     to call ANY interrupt in your PC from inside of Clipper with passing
+     values in registers. Some other functions from NANFOR.LIB are using
+     also this function.
+ 
+ CLIPBBS 1-05                   Page 18                  25 Feb 1991
+
+
+     FT_TEMPFIL() is another long time expected function. It's giving unique
+     DOS name for temporary (or any other unique) files. It's calling DOS
+     service, therefore name is really coming from your PC and not from some
+     time/date constructor.
+ 
+ 
+ Database related function
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_FDEC()       Return the number of decimals in a numeric (type "N") field
+ FT_FEMPTY()     Determine if a field is empty, i.e., contains no value.
+ FT_FEXIST()     Check for the existence of a field.
+ FT_FLEN()       Return a field's length.
+ FT_FNUM()       Return a field's ordinal position given the field name.
+ FT_FPLACE()     Write a new value to a field.
+ FT_FTYPE()      Return a field's type, given field name or ordinal position
+ FT_FVAL()       Return the value of a field.
+ FT_FVALLEN()    Return the length of the value in a field.
+ 
+ 
+ Date and Time
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_ACCTADJ()    Adjust beginning or ending fiscal pd. dates to acctg. dates
+ FT_ACCTMONTH()  Return accounting month data
+ FT_ACCTQTR()    Return accounting quarter data
+ FT_ACCTWEEK()   Return accounting week data
+ FT_ACCTYEAR()   Return accounting year data
+ FT_ADDWKDY()    Return true number of days to add given number of workdays
+ FT_CALENDAR()   Display date/time calendar, find a date, return calendar date
+ FT_CIV2MIL()    Convert usual civilian format time to military time.
+ FT_DATECNFG()   Set beginning of year/week for FT_ date functions
+ FT_DAYOFYR()    Return calendar, fiscal or accounting day data
+ FT_DAYTOBOW()   Calculate no. of days between date and beginning of week
+ FT_DOY()        Find number of day within year
+ FT_EASTER()     Return the date of Easter
+ FT_ELAPMIN()    Return difference, in minutes, between two mil format times
+ FT_ELAPSED()    Return elapsed time between two days and/or times
+ FT_ELTIME()     Compute difference between times in hours, minutes, seconds.
+ FT_FDAY()       Return first day of the month
+ FT_LDAY()       Return last day of the month
+ FT_MADD()       Add or subtract months to/from a date
+ FT_MIL2CIV()    Convert time in military format to civilian format.
+ FT_MIL2MIN()    Convert time in military format to number of minute of day
+ FT_MIN2DHM()    Convert numeric minutes to days, hours and minutes.
+ FT_MIN2MIL()    Convert minute of day to military format time.
+ FT_MONTH()      Return Calendar or Fiscal Month Data
+ FT_QTR()        Return Calendar or Fiscal Quarter Data.
+ FT_SYS2MIL()    Convert system time to military time format.
+ FT_WEEK()       Return calendar or fiscal week data
+ FT_WORKDAYS()   Return number of work days between two dates
+ FT_WOY()        Find number of week within year
+ FT_YEAR()       Return calendar or fiscal year data
+ 
+     What i found nice here is FT_ELTIME() for counting differences between
+     time values (why NANTUCKET didn't included also data type TIME..), and
+ CLIPBBS 1-05                   Page 19                  25 Feb 1991
+
+
+     FT_DOY() for getting DAY number. FT_DOY() can be great for use in case
+     of creating DAILY files.
+ 
+ Environment related
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_COM3OR4()    Enable use of COM3 and/or COM4 on IBM/PC compatables
+ FT_DIR2DB()     Create .DBF of directory files, using DOS filespec
+ FT_EXIST()      Test for existence of drive and/or subdirectory
+ FT_GETE()       Return the entire current environment
+ FT_LINKED()     Determine if a function was linked in
+ FT_ORIGIN()     Report the drive, path and filename of the executing program
+ FT_RESTSETS()   Restore status of all SET command settings
+ FT_SAVESETS()   Save the status of all the SET command settings
+ FT_SETCENTURY() Check/Set the CENTURY Setting
+ FT_TREE()       Locate all directories and subdirectories on a drive
+ FT_WHEREIS()    Locate all occurrences of a filespec on a drive
+ 
+     Really interesting functions are located here. First, environment
+     function FT_GETE() and FT_ORIGIN() are very often asked problem in
+     FidoNet echo as i know, then FT_TREE and FT_WHEREIS are high level
+     sofisticated file oriented function given in DOS case by programs like
+     FILEFIND, NDD and so on. Now inside in clipper also!
+ 
+ 
+ FILE input and output
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ 
+ FT_DFCLOSE()    Close file displayed by FT_DISPFILE()
+ FT_DFSETUP()    Set up parameters for FT_DISPFILE()
+ FT_DISPFILE()   Browse a text file
+ FT_FEOF()       Determine when end of text file is encountered
+ FT_FGOBOT()     Go to the last record in a text file
+ FT_FGOTO()      Move record pointer to specific record in a text file
+ FT_FGOTOP()     Go to the first record in a text file
+ FT_FLASTREC()   Determine the no. of records in the currently selected text
+ FT_FREADLN()    Read a line from the currently selected text file
+ FT_FRECNO()     Return the current record number of a text file
+ FT_FSELECT()    Select a text file workarea
+ FT_FSKIP()      Move the record pointer to a new position in a text file
+ FT_FUSE()       Open or close a text file for use by the FT_F* functions
+ 
+     And here finally i found something LONG time wanted to write (but i was
+     of course too lazy to do this). FT_DISPFILE() function is great browser
+     in text file without any restriction of size of this file. Good bye
+     MEMOEDIT() with limitation of 64KBs (and memory problems) and needs to
+     display 200KB big .TXT file generated by REPORT command :-)
+ 
+     Another piece of perfect work, FT_READLN(), FT_SELECT(), FT_FUSE()...
+     Functions which are for TEXT file as USE, SKIP, GOTO are for database.
+     Just imagine your text file is coming RECORD/RECORD on your screen
+     (records are of course lines) with possibility to browse, go to
+     particular line.....
+ 
+ YES, and games are also included
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ CLIPBBS 1-05                   Page 20                  25 Feb 1991
+
+
+ FT_PEGS()       FT_PEGS GAME (all work and no play...)
+ 
+     Yes, it's funny game which one can include in own programs!....
+ 
+ Keyboard and mouse
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ FT_ALT()        Determine status of the Alt key
+ FT_CAPLOCK()    Determine and optionally change the status of CapLock key
+ FT_CTRL()       Determine status of the Ctrl key
+ FT_MBUTPRS()    Retrieve button press status
+ FT_MBUTREL()    Get mouse button release information
+ FT_MCURSOR()    Set the mouse cursor
+ FT_MDBLCLK()    Return true if a double click was detected
+ FT_MDEFCRS()    Define the mouse cursor
+ FT_MGETPOS()    Get mouse cursor position and button status
+ FT_MGETX()      Get mouse cursor row position
+ FT_MGETY()      Get mouse cursor column position
+ FT_MHIDECRS()   Decrement internal mouse cursor flag and hide mouse cursor
+ FT_MINREGION()  Test if the mouse cursor is in the passed region
+ FT_MMICKEYS()   Get mickeys
+ FT_MRESET()     Reset mouse driver and return status of mouse
+ FT_MSETPOS()    Position the mouse cursor
+ FT_MSHOWCRS()   Increment internal cursor flag and display mouse cursor
+ FT_MXLIMIT()    Set vertical bounds of mouse travel
+ FT_MYLIMIT()    Set horizontal bounds of mouse travel
+ FT_NUMLOCK()    Return status of NumLock key
+ FT_PRTSCR()     Enable or disable the Print Screen key
+ FT_PUTKEY()     Stuff a keystroke into the keyboard buffer
+ FT_SCANCODE()   Wait for keypress and return keyboard scan code
+ FT_SETRATE()    Set the keyboard delay and repeat rate on PC/AT & PS/2
+ FT_SHIFT()      Determine status of shift key
+ FT_SINKEY()     Replacement for INKEY() that tests for SET KEY procedures
+ 
+     WOW! Low level functions for test of SHIFT, CTRL, NUMLOCK, complete
+     low level mouse checking (curious if someone will can compare it with
+     Pepijn Smits mouse functions). FT_PRTSCR() can be also handy because of
+     lot of funny users pressing PrtScr many times for nothing...
+ 
+ And now some high mathematic
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ FT_GCD()        Calculate greatest common divisor of two numbers
+ FT_NETPV()      Calculate net present value
+ FT_RAND1()      Generate a random number
+ FT_ROUND()      Rounds a number to a specific place
+ 
+ MENUS and PROMPTS
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ @...PROMPT      Define a menu item for use with MENU TO
+ FT_ACH2TB()     Replace ACHOICE() with a Tbrowse object
+ FT_ADDER()      Pop up a simple calculator
+ FT_BLINK()      Display a blinking message on the screen
+ FT_BRWSWHL()    Browse an indexed database limited to a while condition
+ FT_CLRSEL()     User Selectable Colour Routine
+ FT_DISPMSG()    Display a message and optionally waits for a keypress
+ FT_FILL()       Declare menu options for FT_MENU1()
+ FT_MENU1()      Pulldown menu system
+ CLIPBBS 1-05                   Page 21                  25 Feb 1991
+
+
+ FT_MENU2()      Vertical lightbar menu
+ FT_MENUTO()     Execute light bar menu using prompts created with FT_PROMPT()
+ FT_PENDING()    Display same-line pending messages after a wait.
+ FT_PICKDAY()    Picklist of days of week
+ FT_PROMPT()     Define a menu item for use with FT_MENUTO()
+ FT_XBOX()       Display a self-sizing message box and message
+ MENU TO         Execute light bar menu using prompts created with @...PROMPT
+ 
+     Complete replacement of MENU TO and @PROMPT command is also coming in
+     NANFOR.LIB together with some high level function to select days,
+     calculator, display messages on screen...
+ 
+ Novell Netware
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ FT_ENDCAP()     Cancel a specific NetWare print queue capture
+ FT_LOGOUT()     Logout from all currently connected NetWare file servers
+ FT_NOVDMP2()    Determine Novell server's dynamic memory area 2 availability
+ FT_NOVPURGE()   Purge all deleted files on a Novell server
+ FT_NWLSTAT()    Return the current Novell NetWare logical station number
+ FT_NWSEMCLOSE() Close a NetWare semaphore
+ FT_NWSEMEX()    Examine a NetWare semaphore's value and open count
+ FT_NWSEMLOCK()  Perform a semaphore "lock"
+ FT_NWSEMOPEN()  Open or create a NetWare semaphore
+ FT_NWSEMSIG()   Signal a NetWare semaphore (increment)
+ FT_NWSEMWAIT()  Wait on a NetWare semaphore (decrement)
+ FT_NWUID()      Return the current Novell NetWare User ID
+ FT_PFLUSH()     Flush a NetWare capture buffer
+ FT_TTSABORT()   Abort explicit and implicit NetWare TTS transactions
+ FT_TTSAVAIL()   Check whether default Novell file server supports TTS
+ FT_TTSBEGIN()   Begin explicit transaction under NetWare's TTS
+ FT_TTSEND()     End explicit or implicit transaction under NetWare's TTS
+ FT_TTSSTAT()    Verify if TTS transaction has been written to disk
+ 
+     Some functions for controlling Novell Netware. Nice is, that is
+     included complete SEMAPHORE controlling and controlling of TTS
+     (transactional system for databases especially).
+ 
+ String function
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ FT_AT2()        Find position of the nth occurrence of a substring
+ FT_BITCLR()     Clear (reset) selected bit in a byte
+ FT_BITSET()     Set selected bit in a byte
+ FT_BYTEAND()    Perform bit-wise AND on two ASCII characters (bytes)
+ FT_BYTENEG()    Perform bit-wise negation on an ASCII character
+ FT_BYTENOT()    Perform bit-wise NOT on an ASCII character (byte)
+ FT_BYTEOR()     Perform bit-wise OR on two ASCII characters (bytes)
+ FT_BYTEXOR()    Perform bit-wise XOR on two ASCII characters (bytes)
+ FT_FINDITH()    Find the "ith" occurrence of a substring within a string
+ FT_ISBIT()      Test the status of an individual bit
+ FT_ISBITON()    Determine the state of individual bits in a number
+ FT_METAPH()     Convert a character string to MetaPhone format
+ FT_NOOCCUR()    Find the number of times one string occurs in another
+ FT_PCHR()       Convert printer control codes
+ FT_PROPER()     Convert a string to proper-name case
+ 
+     BIT operations (FT_BYTExxx functions) are something missed again in
+ CLIPBBS 1-05                   Page 22                  25 Feb 1991
+
+
+     Nantucket set of functions and operators. Now they are here.
+ 
+     FT_NOOCCUR() is also handy. Many time i needed to count number of
+     FormFeeds to tell how much pages has some messages....
+ 
+     FT_PCHR() is best function for entering and converting printer control
+     codes which i ever seen. Also including complete definition of EPSON
+     codes in symbolic!
+ 
+ Video functions
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ FT_ADAPTER()    Report the type of video adapter installed
+ FT_CLS()        Clear screen
+ FT_GETMODE()    Get the video mode
+ FT_GETVCUR()    Return info about the cursor on a specified video page
+ FT_GETVPG()     Get the currently selected video page
+ FT_RESTATT()    Restore the attribute bytes of a specified screen region
+ FT_REVATTR()    Reverse colors of specified screen coordinates
+ FT_REVCHR()     Reverse the color of a single character on the screen
+ FT_RGNSTACK()   Push or pop a saved screen region on or off the stack
+ FT_RSTRGN()     Restore region of the screen saved with FT_SAVRGN()
+ FT_SAVEATT()    Save the attribute bytes of a specified screen region
+ FT_SAVRGN()     Save a screen region for later display
+ FT_SETATTR()    Change color attributes of screen region
+ FT_SETMODE()    Set the video mode
+ FT_SETVCUR()    Set the cursor position on a specified video page
+ FT_SETVPG()     Set the current video page
+ FT_SHADOW()     Draw a non-destructive shadow on the screen
+ FT_VIDSTR()     Display string on screen in specified attribute
+ FT_WRTCHR()     Display character on screen
+ 
+     Some handy functions for recognizing and setting parameters of your
+     screen. Also included FT_SHADOW() for making shadow for your windows.
+     In case of this function i want to pick up only fact, that it's using
+     CLIPPER INTERNALs for doing a job, which is not by my opinion very
+     handy, especially when it can be done with different way.
+ 
+ OK.
+ 
+ That's all at this moment. Maybe i will later write some other articles
+ about NANFOR with some sample how i'm (or maybe someone else will do?)
+ using this library.
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+
+
+                               Expand Library.
+                                Pepijn Smits
+ 
+ When Daniel asked me to write an article for his next issue of CLIPBBS, I
+ didn't hesitate. The possibility for me to write for a large amount of
+ people about the Expand library is always interesting, if not for you,
+ surely it is for me. This article therefore, intends to discuss both latest
+ versions of the Expand library (Summer '87 and Clipper 5.01), and is
+ CLIPBBS 1-05                   Page 23                  25 Feb 1991
+
+
+ interesting for anyone working seriously with Clipper and seeking some more
+ possibilities out of Clipper. I gather it is also interesting for the ones
+ already familiar with the Library, as it discusses how I ever came to
+ developing it.
+ 
+ 
+ Introduction:
+ -------------
+ 
+ Two years ago, I was developing a big application using Clipper Summer '87.
+ At the company where I was doing this, they didn't believe much in buying
+ Libraries (you know the type; got to get through a huge bureacracy, at
+ least 3 signatures and 3 weeks before a new PC product was bought, my PS/2
+ 70 didn't even have QEMM installed! "Not necessary", they said).
+ 
+ So we sticked to Summer '87 with Plink86. During development, everything
+ went smoothly. But, suddenly we had a great need for a ChDir() function in
+ our application. Reluctantly, I looked up the Extend documentation, and
+ found out that interfacing Assembly with Clipper (being already familiar
+ with Assembly) wasn't at all that hard. So I wrote ChDir() (RmDir() and
+ MkDir() in the mean time) and that file was always linked in.
+ 
+ Slowly, more and more of those general Assembly routines where included
+ (which I wrote in my own time), and I decided it was a good idea to put
+ them in a Library, which I called Expand, just as a logical extension to
+ Extend, because I thought those functions should have been included anyway
+ in the first place. Anyway, Expand v1.00 was born, and I did spent quite
+ some on the documentation, of which I think it is very important.
+ 
+ Once the Library was more or less completed, with Demo, Norton Guide etc..
+ I uploaded it to several Bulletin Boards in the Netherlands, for it to be
+ of some usage to other Clipper programmers.
+ 
+ 
+ Expand Library:
+ ---------------
+ 
+ I got a lot of enthousiastic reports, and currently quite some people are
+ using the Library in their applications. I can't give any numbers, but
+ probably around one thousend in the Netherlands alone, and a few Hundred in
+ the world "out there". Hoping that the use outside the Netherlands will
+ grow!
+ 
+ When Clipper 5.0 came out, I was quite fast with a release of Expand for
+ Clipper 5.0 (I even had to remove some functions, as Nantucket had added
+ similar ones to their Libraries). Currently, The latest version of Expand
+ for Clipper Summer '87 is 3.02, the latest version of Expand for Clipper
+ 5.01 is v2.01. And they are more or less developing in different ways,
+ where I must add that Clipper 5.01 is getting 80% of my attention these
+ days.
+ 
+ The Expand library for Summer '87 is Public Domain, meaning that you may
+ use it freely, without mentionning it. The Expand library for Clipper 5.01
+ is Shareware, just to make it easier for me (and to motivate me) to
+ continue developing the Library. It is not a gold mine, and I also have the
+ impression that people outside the Netherlands see registering in the
+ CLIPBBS 1-05                   Page 24                  25 Feb 1991
+
+
+ Netherlands as a burden, which, of course, need not be ;-)... When you
+ consider registering, just simply mail me or phone me, paying is required
+ only after I invoiced and have sent the diskettes.
+ 
+ Note that, when you register, you can optionally buy the Clipper sources,
+ or even the complete sources of the Library. They provide a good insight in
+ programming the Mouse and, respectively, Assembly programming for Clipper.
+ This is a feature generally not available in other libraries. Registered
+ users also get free cq. reduced updates, and, of course full support.
+ Buying a Fax is high on my list of priorities (just a few more
+ registrations, and I will).
+ 
+ The Expand library is quite compact. This is achieved by extensive use of
+ Assembly. More than 80% of the functions in the Library are written in
+ Assembly, and the other functions are written in Clipper, but generally
+ some (internal) Assembly written routines to achieve their task. Currently,
+ no C is being used (Assembly instead), but a few routines written in C
+ might be added in future versions. The "Granularity" of the Library is
+ quite good (But I have plans for improvement), this means that the Linker
+ will include less redundant code, when only using a few routines from
+ the Library. When using Blinker, The Library can safely be Allocated to a
+ dynamic overlay area, although there is something to say about putting it
+ in the root, as Assembly only requires a fractional amount when compared to
+ Clipper code.
+ 
+ The Expand library is quite "Low Level". It leaves as much as possible
+ freedom to the programmer, never directly interacting with the screen
+ (except when otherwise mentionned).
+ 
+ 
+ 
+ Expand Documentation:
+ ---------------------
+ 
+ I think it is very important for a Library to have good and concise
+ documentation with it. The Expand library always comes with a Norton Guide
+ [a way over 100Kb (s87) or 150Kb (5.01)] and with a program to print the
+ documentation.
+ 
+ Providing such extensive documentation makes it easy for people to use the
+ library, and is probably a main reason of the relative "succes" of the
+ Expand library. The Norton Guide Instant Acces Engine even became more
+ popular when 5.01 came out.
+ 
+ 
+ Expand Features:
+ ----------------
+ 
+ A discussion of a library cannot be without a discussion of the main
+ features of the library, I won't list them all (it's too much), but just
+ discuss the main ones:
+ 
+       Disk Functions:
+ 
+       Some general Disk/Drive functions: Such as ChDir(), SetDisk() but
+       also: GetDrive(), see if drive A: was last accesed as Drive A:,
+ CLIPBBS 1-05                   Page 25                  25 Feb 1991
+
+
+       otherwise you might get a msg from DOS, this can thus be suppressed.
+       Total Disk space, Fixed disk test etc..
+ 
+       File Functions:
+ 
+       Complete FindFirst/Next functions; make scanning the full directory
+       tree easy. Setting Date/Time of a file, deleting files using
+       wildcards (much faster!), Also , Qualify a file to it's full name.
+ 
+       DOS Functions:
+ 
+       Getting version, Getting full CommandLine, getting full EXE name,
+       interface to APPEND and to KEYB.
+ 
+       MOUSE Functions:
+ 
+       Expand provides a good Mouse interface, where it is possible to use
+       low level of high level routines. These functions are being under
+       further development for the Clipper 5.01 version.  Examples are
+       MouseMenu(), MouseEdit(), MouseChoice() etc...
+ 
+       PRINT Interface:
+ 
+       Expand provides a complete interface to DOS' PRINT, very interesting
+       when one wants seamless background Printing, which works on any
+       computer with DOS 3.10+, and PRINT in autoexec or whatever.
+ 
+       Miscellanous:
+ 
+       Easy to use Voice Dialing, Rebooting, Some keyboard routines, Nice
+       (and small) Banner display routine..
+ 
+       Screen functions:
+ 
+       Shadowing (who didn't include this?), Getting screen regions, very
+       fast screen packing/unpacking.
+ 
+       String Functions:
+ 
+       Some general string functions, quite fast as written in Assembly.
+       Plans exist here for some extensions. a quite fast Encoding function
+       is included here, for instance.
+ 
+       Machine Identification Routines:
+ 
+       Expand provides some functions for identification of the machine
+       where the program is being run. ROMid() and ROMdate() are standard.
+       Exotic is the ROMscan() function, which will look for a brand name in
+       your computer. This makes it possible to have applic's that run only
+       on COMPAQs, or TULIPs, or whatever. Another function, CPUval(),
+       returns a number indicating the CPU installed (86,286 or 386). A
+       future extension is planned for test of a 486, when I have had the
+       chance to test the function.
+ 
+       Lotus interface:
+ 
+ CLIPBBS 1-05                   Page 26                  25 Feb 1991
+
+
+       Expand provides functions to create (and not read) Lotus 1-2-3 .WK1
+       files. Always very interesting.
+ 
+       Date & time functions:
+ 
+       there is a number of Date and time functions, of which the (fast)
+       packing routines are interesting. Getting the CMOS time, for
+       instance, is also nice..
+ 
+       Environment variables editing:
+ 
+       Expand provides functions to Edit (!) the Environment variables, add
+       or delete. This makes it possible to shell to DOS with a different
+       prompt, or alter the PATH, or add an environment variable. This is
+       truly a nice feature.
+ 
+       EGA/VGA support:
+ 
+       Expand provides some specific functions for the EGA/VGA users.
+       Examples are the loading of other fonts (in the future, an Editor
+       will be supplied) in text modes, quite nice and popular too. Other
+       functions set the different colours active (on EGA you can select out
+       of 64 colors, on VGA over 250.000!). An extra file provides quite
+       some fonts for the EGA/VGA.
+ 
+       Joystick:
+ 
+       Last and probably also least, Expand provides contol over one or two
+       Joysticks (and I've even heard of someone who is programming a game
+       in Clipper using these routines!).
+ 
+ By the way, these are the features of Expand for 5.01, The summer '87
+ version has some less features.
+ 
+ 
+ Future Versions:
+ ----------------
+ 
+ I gather development for Clipper Summer '87 is soon going to be even more
+ reduced. I do support the latest version of course. The latest is 3.02 (a
+ minor bug correction over 3.00/3.01). The other versions had problems with
+ Blinker due to use of an old Librarian and a minor bug. There are no plans
+ for much new functions here, but at the end of the year, I will probably
+ release a version 3.50, possibly being the latest.
+ 
+ On the Clipper 5.01 side, I have more plans and some functions ready here.
+ Also at the end of the year, I plan to release 2.50, with quite some new
+ features, but development won't stop there (unless there is no feedback). I
+ will also dig in more deeply in the different possible Linker to use (eg. a
+ PLL file for RTlink users, or a Root and Allocatable version for Blinker).
+ 
+ 
+ Getting Expand:
+ ---------------
+ 
+ If you are interested in the Expand library after this article, you may get
+ CLIPBBS 1-05                   Page 27                  25 Feb 1991
+
+
+ the latest versions and judge for yourself. The latest versions of the
+ Library are always available for f'req at Hekom BBS (Alias CDGN BBS), node
+ number is 2:500/223, use magic name EXPAND for latest version for Clipper
+ 5.01, use magic name EXPAND87 for latest version for Clipper '87. The
+ latest version are of course also available on ClipperNet (I'll try to
+ always post them there), and of course, always at NetConsult BBS (The
+ origin of CLIPBBS Magazine). In the US, you could try out any Clipper BBS
+ really, I Know for sure that The Southern Clipper (Jerry Pults) and Crow's
+ Nest have the Library.
+ 
+ I regurlarly scan the Fido Clipper *World* Echo, so mail received there is
+ always read. NetMail can also be sent to 2:500/233.
+ 
+ If you wan to contact me directly, write to:
+ 
+ Pepijn Smits,
+ Helene Swarthstraat 1b
+ 3061 cj Rotterdam
+ The Netherlands.
+ 
+ Phone: (31-10)4135422
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 28                  25 Feb 1991
+
+
+ =============================================================================
+                                      Q&A
+ =============================================================================
+
+
+ Question:
+ 
+     Clipper 5.01 is using more memory than Summer 87?!
+ 
+ Answer:
+ 
+     Comparing Summer and 5.01 version of Clipper from point of view
+     of memory use is very difficult. Generally is possible to say;
+ 
+     -   Clipper 5.01 program will RUN IN LESS MEMORY than the
+         same program linked with Summer version
+     -   Clipper 5.01 will ALLOCATE more memory than Summer 87
+         when this memory is available.
+ 
+     This two rules are giving explanation why 5.01 program is using
+     more memory than the same program under Summer 87. 5.01 version
+     is just using complete available memory. When memory is less,
+     then will just use less memory. .EXE file with sizes many times
+     bigger than available memory will still run in small memory and
+     not bother you with memory overflowing errors as Summer 87.
+ 
+     Point is, that Clipper 5.01 linked with RTLINK is using method
+     of dynamic overlaying of Clipper code and therefore can work
+     in smaller memory than Summer 87 (which was not using overlaying
+     at all). Summer 87 code was possible to overlay only statically
+     with lot of effort from side of programmer to do this.
+ 
+     If 5.01 application will have LOT of memory (and also lot of
+     expanded memory) then will run more faster than with less
+     memory. Our magazine will try to make some speed test in some
+     article with comparation of the same program in small or big
+     amount of memory.
+ 
+     Big memory is reducing swappings and overlaying - disk operations.
+     Also is allowing to allocate more buffers for databases and using
+     kind of CACHE memory for all databases accesses.
+ 
+     If you are still wondering if 5.01 is better than Summer 87, then
+     answer is simple. Yes, it is in all cases, and also in memory
+     management very well.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 29                  25 Feb 1991
+
+
+ =============================================================================
+                                   ANOMALIES
+ =============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ -----------------------------------------------------------------------------
+
+
+               .PPO? OOPs, CLIPPER 5.0 has a preprocessor!
+ 
+ 
+ A few weeks ago i got a file called CL5IEO.ZIP inside of which was one .NG
+ and one .TXT file. Inside of those files was something for what lot of us,
+ CLIPPER 5.0 programmers, is looking a long and long time. List of internal
+ errors reported by CLIPPER 5.0. Gotcha, not developed by NANTUCKET, it is
+ assembled from COMPUSERVE comments by Terry McConnell - thank to this man.
+ 
+ But and But. Not every inside of this is true. One really GOLD example
+ which i'm explaining there is discovering another MAGIC function of CLIPPER
+ 5.0.
+ 
+ A preprocessor. Dear reader, when you are compiling program, are you
+ thinking about preprocessor? Not? Really not? That's a biggest mistake
+ which you can make, because Nantucket prepared for you nicest game on the
+ world. Try to get your program and try to use CLIPPER /P for see how funny
+ result you can get.
+ 
+ Back to point. CL5IEO.TXT is describing Internal Error #666 on SetColor().
+ Nice example there is producing really this error on EVERY run (not like as
+ other Internal Error, sometime).
+ 
+ Example:
+   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+   ³     line := 0                                            ³
+   ³     set color to ("$$$$$$$$$$$") ; ? ++line //1          ³
+   ³     x := setcolor()              ; ? ++line //2          ³
+   ³     ? "Setcolor return ", x      ; ? ++line //3          ³
+   ³     set color to &x              ; ? ++line //4          ³
+   ³     z := "@@@@@@@@@@@@"          ; ? ++line //5          ³
+   ³     set color to &Z              ; ? ++line //6          ³
+ CLIPBBS 1-05                   Page 30                  25 Feb 1991
+
+
+   ³     set color to "z+/z/t/m/q"    ; ? ++line //7          ³
+   ³     ? setcolor()                 ; ? ++line //8          ³
+   ³     m = "z+/z/t+/m/q"            ; ? ++line //9          ³
+   ³     setcolor(m)                  ; ? ++line //10         ³
+   ³     set color to &m              ; ? ++line //11         ³
+   ³     ? setcolor()                 ; ? ++line //12         ³
+   ³     set color to "w/n,w/n,w/n,w/n,w/n,w/n"               ³
+   ³     setcolor("W/n,w/n,w/n,w/n,w/n,w/n,w/n")              ³
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ Additional comments in original text is:
+ 
+         Last executed line is 8, and SetColor(0) error is on line 9.
+ 
+ Absolutely wrong, author of this example is not counting with magic
+ which will make preprocessor! Of course, every normal people will
+ expect translation to preprocessed source really as you can see program
+ example above. Reality is different:
+ 
+   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+   ³     line := 0                                                         ³
+   ³     SetColor( "$$$$$$$$$$$" )                       ; QOut( ++line )  ³
+   ³     x := setcolor()                                 ; QOut( ++line )  ³
+   ³     QOut( "Setcolor return ", x )                   ; QOut( ++line )  ³
+   ³     SetColor( "&x              <end of line> ? ++line" )              ³
+   ³     z := "@@@@@@@@@@@@"                             ; QOut( ++line )  ³
+   ³     SetColor( "&Z              <end of line> ? ++line" )              ³
+   ³     SetColor( '"z+/z/t/m/q"    <end of line> ? ++line' )              ³
+   ³     QOut( setcolor() )                              ; QOut( ++line )  ³
+   ³     m = "z+/z/t+/m/q"                               ; QOut( ++line )  ³
+   ³     setcolor(m)                                     ; QOut( ++line )  ³
+   ³     SetColor( "&m              <end of line> ? ++line" )              ³
+   ³     QOut( setcolor() )                              ; QOut( ++line )  ³
+   ³     SetColor( '"w/n,w/n,w/n,w/n,w/n,w/n"' )         //*//             ³
+   ³     setcolor("W/n,w/n,w/n,w/n,w/n,w/n,w/n")                           ³
+   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ As everybody now can see, all SET COLOR TO commands with "&" operator
+ or with direct string ("...") parameter are eating complete end of
+ line! It means, all ? ++line commands are eaten and unhappy program is
+ counting ONLY to 8 and not to 12 as author expected!
+ 
+ It finally means - error is on line marked with //*// in .PPO list and
+ not in line signed with //9 in original program. Internal Error in this
+ case is on right place, because of totally crazy color string specifying
+ six color codes!
+ 
+ Another question at this moment is - how Nantucket can produce
+ Preprocessor which is eating remain of line when is used operator for
+ multiple commands on line together with macro operator.
+ 
+                              GOLD RULE IS
+ Never trust to your program, because is preprocessed by Cliper
+ preprocessor.
+ 
+ 
+ CLIPBBS 1-05                   Page 31                  25 Feb 1991
+
+
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                 COPY FILE TO is not working in one case
+ 
+ Nice surprise of COPY FILE command is this case:
+ 
+      there is a file:
+                some text
+                another texts
+                lot of text
+                <eof>
+ 
+                It means, file is ended with EOF character as is
+                standard is DOS.
+ 
+      Then is there command:
+                COPY FILE <file> TO LPT1
+ 
+      And result is:
+           Unrecoverable error: write error....
+ 
+      Just, COPY FILE TO printer will NOT handle files which are
+      containing EOF character. Why? Because when COPY command is
+      writing something to printer port, then is doing this in block and
+      then is checking if returned number of really processed characters
+      is the same as return of passed character. DOS will of course NOT
+      COUNT _EOF_ character between processed characters and giving back
+      different number. And then will your program immediately fail with
+      "unrecoverable" error and return to DOS. I found this very
+      annoying. And from this moment i have to use RUN("copy ...")
+      command instead of normal and logical COPY FILE.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                             DBU is hanging
+ 
+ Be very carefully when using DBU supplied with Clipper 5.01. This
+ program is coming in some cases to never ending cycle of WHILE command.
+ Exactly:
+ 
+      Open EMPTY database
+      Go to do BROWSE of this database
+      Start typing new values for record
+           And then wait forever.
+ 
+      Point is, that you MUST first press INS key for insert NEW
+      record. But when one will forget did this?
+ 
+ P.S.! In number ONE or TWO of this magazine was printed a BUG fix for
+ this.
+ CLIPBBS 1-05                   Page 32                  25 Feb 1991
+
+
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 33                  25 Feb 1991
+
+
+ =============================================================================
+                                 ADVERTISEMENT
+ =============================================================================
+
+
+                   What was in previous number, number 04?
+ 
+     Hungarian identifier naming conventions
+     DOSRCS - Revision Control System - part (2)
+     The Programmer's Guide to CLIPPER Linkers - part (1)
+     DANIEL.LIB - Network locking and opening
+     DANIEL.LIB - Configer function
+     STRUCTURE DUMP - programmers utility
+     What was in previous number, number 03?
+     CONFERENCE DUMP part (3)
+     Index of described files in Clipper BBS Magazine
+     Clipper File - CLIPLINK.ARJ
+     ClipNet - HGLASS.ZIP
+     ClipNet - NOTATION.ARJ
+     ClipNet - PACKUP.ARJ
+     ClipNet - ADHOC302.ARJ
+     ClipNet - ALTDO328.ARJ
+     ClipNet - CL5REP6.ARJ
+     ClipNet - CL5103.ARJ
+
+ -----------------------------------------------------------------------------
+
+
+                 CLIPPER WRITTEN FAX/TELEX/MAIL APPLICATION
+ 
+ Netcom+, original product of NETCONSULT (The Netherlands) is capable of
+ serving complete network needs of FAXING, TELEXING and local mailing.
+ 
+ Netcom+ is combination of Clipper, C and Assembler code working in ANY
+ network which is in PC environment. With one dedicated computer reserved
+ for receving and sending faxes and telexes can server complete needs of
+ any big company with many fax/telex communication through day. Easy to
+ use basic interface, multiple language supports, coming in complete
+ ready to use release with all needed hardware.
+ 
+ List of possibilites is including import and export of texts between
+ WordPerfect 5.x. Import and export databases between dBASE, ASCII and
+ WordPerfect mailmerge format. Complete local mail, group mail sends,
+ unique system of priorities, two fax and two telex number for condi-
+ tional system of sending. Resident version of program available on
+ press of ONE key from EVERY your program. Future version supporting
+ remote e-Mail capabilities with Novell MHS standard.
+ 
+ Including pictures into your FAX texts in easy hot-key way, CUT of
+ received faxes to new pictures, signatures and letterheads are easy
+ to implement. Complete USER system with all protections of OWN
+ messages. Network Incoming Message Supervisor for sorting of incoming
+ faxes and telexes to appropriate persons.
+ 
+ Included file manager with WordPerfect file viewer, graphics images
+ in TIFF format with conversion program to and from any other formats.
+ CLIPBBS 1-05                   Page 34                  25 Feb 1991
+
+
+ direct interface to OCR reader. Macro codes for using in user texts
+ are replaced in time of transfer to values from adres database or
+ system parameters. Immediate or later sending allowing to set complete
+ system of night transfer in cheaper rate daily window. Statistics of
+ all transfers are available, every FAX call analysis including decibel
+ or noise analysis of call.
+ 
+ Interface to PostScript printers with direct creating picture TIFF
+ equivalent of your PostScript print. Then directly use in your FAX.
+ Changeable fonts for faxing, including variable number of characters
+ per line for support of faxing big prints from your spreadshears.
+ 
+ All and more in NetCom+ package, available from The Netherlands!
+ 
+ CALL 31-10-4157140 and ask about Netcom+
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 35                  25 Feb 1991
+
+
+ =============================================================================
+                                    WANTED
+ =============================================================================
+
+
+                           WANTED! WANTED! WANTED!
+ 
+ CLIPPER BBS MAGAZINE IS LOOKING FOR:
+ 
+     -   distribution systems in any countries!
+ 
+         Yes, we need more places where Clipper user will be able to
+         get issues of Clipper BBS Magazine.
+ 
+         Requirements and duties:
+ 
+         -   FidoNet session capable mailer is WELCOME, but not
+             neccesity
+         -   WEEKLY pickuping latest issue number
+         -   offering latest and all previous issues to users
+             FREE for download or filerequest
+         -   collecting articles coming from your region and
+             sending them to Clipper BBS HQ System
+ 
+     -   CONTRIBUTORS, AUTHORS of articles
+ 
+         Yes, of course. Clipper BBS is at this moment mostly
+         created by only one author. Some other articles are
+         collected from already existing texts possible to use.
+ 
+         WE ARE LOOKING for new articles, interesting articles,.
+         sharing experiencies with other users and readers.
+ 
+         Contact us on Clipper BBS Magazine HQ system or on any
+         distribution site.......
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 36                  25 Feb 1991
+
+
+ =============================================================================
+                                   COMMENTS
+ =============================================================================
+
+
+                       Another DBEVAL x WHILE comments
+ 
+ Before we beat the subject of dbeval() vs DO WHILE to death, lets make a
+ few assumptions:
+ 
+ 1. DO WHILE has been around for a long time. The efficiency of it
+ determines the results of many benchmarks. So you can be 100% certain that
+ Nan has done everything they can to make it as fast as possible.
+ 
+ 2. dbeval() internally performs the same function as a DO WHILE. I would be
+ surprised if NAN didn't re-use some DO WHILE basics here.
+ 
+ 3. So theoretically, DO WHILE and dbeval() should perform about the same.
+ How come then, that dbeval() is a tad slower? Well consider the following
+ benchmark:
+ 
+         DO WHILE !EOF()
+         m=m+field
+         SKIP
+         ENDDO
+         DBEVAL( {||m=m+field}
+ 
+ If we expand the DBEVAL to its basics, it comes down to this:
+ 
+         GO TOP  // Extra database access. Can be ignored for large databases.
+         DO WHILE !EOF()
+         temp := (m=m+field)
+         SKIP
+         ENDDO
+ 
+ Don't forget that the code block, besides evaluating the contents, ALSO
+ RETURNS the result expression. In the benchmark, we did not use this return
+ value, but it IS being assigned to a temporary variable internally!
+ 
+ This I believe accounts for the slightly slower execution of dbeval(). Note
+ however that for a code block that does something more significant than
+ that above, this difference will become negligable.
+ 
+ So, can we all agree that for all practical purposes the two methods are
+ about equal in performance?
+ 
+ Of course there still remains the matter of personal preference, but lets
+ not get into that.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 37                  25 Feb 1991
+
+
+ =============================================================================
+                                   ECHODUMP
+ =============================================================================
+
+
+                          CONFERENCE DUMP part (4)
+ 
+ Subj: IS CLIPPER SUITABLE?  1/2      Prvt: N          Read: N
+ 
+ 
+ Are you staying that with enough built in functions, you don't
+ really need a decent programming language? That flexibility and
+ structured code aren't really important?
+ 
+ This has to be a joke, right?  If a programmer can't implement
+ this simple feature in a few minutes, I agree that he should be
+ using a product like FoxPro.
+ 
+ But why would you want to do such a thing?  I've implemented a
+ simple function that automatically pops up a pick box if the
+ valid fails:
+ 
+     @ 08, 02 say "Payment Method" get cust->method pict "@!";
+         valid auto_pick({"COD", "PRE", "COC", "CAC", "NET"})
+ 
+ It is true that I *wasted* 10 or 15 minutes implementing this
+ feature, but have used it dozens of times.
+ 
+ I *like* to build my own libraries.  I'd rather spend time
+ building libraries than attempting to force a product like FoxPro
+ to do what it wasn't meant to do.  And I find that power in a
+ language, translates into few lines of code that are required to
+ build the system and easier maintainability.
+ 
+ Hacking out code in a quick and dirty way has its place. But once
+ you learning how to control the complexity of code you will
+ become a master programmer.
+ 
+ But an application development package isn't necessarily a good
+ language.
+ 
+ I like the direction Nantucket is taking Clipper.  A lot of
+ programmers don't like the new 5.0 stuff, and those are the types
+ who should switch to FoxPro, their work style suits it.  But the
+ new 5.0 additions are things I've disparately needed for a long
+ time.  And I would have switched to C, if I could have found
+ someone who would pay me to write C code.
+ 
+ The truth is that you can't get much simpler than the dBase style
+ languages.  dBase is at one end of the scale and C/ASM is at the
+ other.  Sometimes I do stuff in FoxBase because that best suits
+ the task, sometimes I do it in C.  However, Clipper 5.0 is a good
+ attempt at having the best of both.  I.E. it is a pretty good
+ programming language and a pretty good development tool.
+ 
+ Couldn't agree with you more. Where time is dollars the nice
+ CLIPBBS 1-05                   Page 38                  25 Feb 1991
+
+
+ portability allowed between C, ASM, S-Code , commercial/private
+ libraries provides for a whole lot, especially if time and financing
+ a development team is rather limited .
+   Where I think a lot of people have problems with their software is
+ in their initial development stratagies . They want it pretty and at
+ the same time they want all the bells and whistles . Thats where a
+ good analysis of the system is often more beneficial to the client
+ than the program/s written .
+   Anyway, besides all that, xBase did give us sound basics for a
+ database language. Clipper provided an in expensive way to enhance
+ that database language .
+ 
+ Subj: IS CLIPPER SUITABLE?  1/2      Prvt: N          Read: N
+ 
+ Not at all. Do you need to use Clipper to force yourself to write
+ structured code?  Of course not.  And flexibility is a relative
+ term. Sometimes a little is enough. Sometimes it's not. Sometimes
+ Fox is flexible enough. Sometimes it's not.
+ 
+ Now, now, don't be nasty.  I didn't say you couldn't, and I
+ didn't say _I_ couldn't.  I just said that in Fox, it's there
+ already.  If it was the only thing there, NBD, but there are even
+ a couple of more things, hard to believe as that may be.
+ 
+ I hate to tell you, but we all have.  In fact, some of us also
+ implement it so that it pops up automatically _immediately_ so
+ that the user doesn't have to be wrong first to see the pick
+ list. Depends on what's best for the circumstances -- I have it
+ both ways....  And the enhanced GETs in the Grumpfish library
+ probably do it better than both of us....
+ 
+ I agree with you there.  You could have to do an application in
+ <shudder> DataEase...  (grin, duck and run from the DataEase users)
+ 
+ I'd say DataEase is probably closer to the "end" than dBASE.
+ 
+ Cynthia, please don't think I'm attacking either you or Clipper.
+ Remeber, I spend all day _using_ Clipper, and I know quite well
+ that it's both powerful and flexible.  I just happen to think
+ that Fox doesn't deserve quite as bad a rap as you're putting on
+ it.
+ 
+ Subj: IS CLIPPER SUITABLE?  2/2      Prvt: N          Read: N
+ 
+ The DBF file format is a horrible legacy.  Database drivers need
+ to be separated from the language.  I *need* to be able to have
+ my code work with Rushmore, Paradox, B-trieve, or dBase files.
+ 
+ Subj: LANTASTIC TO NOVELL            Prvt: N          Read: N
+ 
+ I have an application currently running very nicely on a Lantastic
+ network.  The question I have is:  Will the same application run on a
+ Novell network without modification?   If modification is necessary can
+ anyone point me to some type of information that would help me make the
+ transition?
+ 
+ CLIPBBS 1-05                   Page 39                  25 Feb 1991
+
+
+ Subj: LANTASTIC TO NOVELL            Prvt: N          Read: N
+ 
+ Yes it will.  Be sure that netbios captiablity is loaded in the Novell
+ config files.
+ 
+ Subj: Lengthening Arrays             Prvt: N          Read: N
+ 
+ I need some help with extending the length of an array of arrays.  I need to
+ extend the main array by 1 and create an empty array at the new subscript.
+ The initial array is:
+ 
+ local marray := [1,3]
+ marray[1,1] := 'Billy'
+ marray[1,2] := 'Smith'
+ marray[1,3] := 'Winnipeg'
+ 
+ If the user now attempts to add another name I want the array to be
+ lengthened so that I can add the following to it and end up with marray of
+ length [2,3] so that:
+ 
+ marray[2,1] = 'Susan'
+ marray[2,2] = 'Black'
+ marray[2,3] = 'Altona'
+ 
+ Is there some way of doing this with ASIZE() or is there some other way?
+ 
+ Subj: Lengthening Arrays             Prvt: N          Read: N
+ 
+ AAdd() would be better I think.  You could do it like this:
+ 
+     AAdd (marray, Array (3))
+     marray[2,1] = 'Susan'
+     marray[2,2] = 'Black'
+     marray[2,3] = 'Altona'
+ 
+ or just:
+ 
+     AAdd (marray, {'Susan', 'Black', 'Altona'})
+ 
+ Subj: LENGTHENING ARRAYS             Prvt: N          Read: N
+ 
+ When creating the initial array I prefer:
+ 
+ LOCAL marray := { { "Billy", "Smith", "Winnipeg" } }
+ 
+ or even:
+ 
+ LOCAL marray
+ marray := { { "Billy", "Smith", "Winnipeg" } }
+ 
+ To add an element to the main array use
+ 
+ aadd( marray, { "Susan", "Black", "Altona" } )
+ 
+ You could use ASIZE(), but for adding a single element AADD() is more
+ elegant.  I normally only use ASIZE() to decrease the size of the array.
+ CLIPBBS 1-05                   Page 40                  25 Feb 1991
+
+
+ As in:
+ 
+ nVar := <some arcane number representing an element in marray>
+ adel( marray, nVar )     // delete the element, actually it makes the
+                          // element equal to NIL and moves it to the
+                          // end of the array
+ asize( marray, len( marray ) - 1 ) // now we remove the last element of
+                                    // the main array which of course
+                                    // takes the sub-elements with it
+ 
+ Subj: Lengthening Arrays             Prvt: N          Read: N
+ 
+ Unless I am missing something, the answer is quite straightforward.
+ 
+ You can use Clipper's AADD function to add elements  to your existing array.
+ Given your vars
+ 
+    LOCAL aTemp := { 'Susan', 'Black', 'Altona' }
+    // You've gathered your additions into an array
+    // Presuming marray is defined an exists
+ 
+    AADD( myarray, aTemp )
+    // And you're done
+ 
+ You can play around with ASIZE() but why bother?
+ 
+ Subj: LENGTHENING ARRAYS             Prvt: N          Read: N
+ 
+ Your array is actually an array of an array.  That is, MARRAY is a
+ single dimension with the first element being an array.
+   MARRAY[1] = {"FIRST","MIDDLE","LAST"}
+ I find it easier to reference these types of array elements as :
+   MARRAY[1][1]="FIRST"
+   MARRAY[1][2]="MIDDLE"
+   MARRAY[1][3]="LAST"
+ 
+   This helps enforce the fact that it is not a "TRUE" two-dimensional
+ array.  Knowing this, we can easily extend any array with AADD()
+ AADD() will add an element to the end of an array.
+ 
+    AADD(MARRAY,{"FIRST","MIDDLE","LAST"})
+ 
+    Will add another array to the end of MARRAY[].
+    You may use variables of any kind for the array elements.  You may
+ even want to build the array before adding it ...
+ 
+    Name=ARRAY(3)                // Create a 3-element empty array
+    @2,3 SAY "FIRST" GET Name[1]
+    @3,3 SAY "MIDDLE" GET Name[2]
+    @4,3 SAY "LAST" GET Name[3]
+    READ
+    IF LASTKEY()#27
+     AADD(MARRAY,Name)           // Add new names to list
+    ENDIF
+ 
+   Well, that's not 100% accurate as shown.  Name should be initialized
+ CLIPBBS 1-05                   Page 41                  25 Feb 1991
+
+
+ before we can do input.  You can do this when creating the array as:
+ 
+   Name={SPACE(20),SPACE(20),SPACE(20)}
+ 
+   This will create array Name with 3 elements, each with a string of 20
+ blanks.
+   This will go into the input better.
+ 
+   Now, I dont know what your Clipper skill level is, so I may have
+ stated some information that you already know.  Sorry.  If you still
+ have questions, pose it and I will try to get it if someone else does
+ not.
+ 
+ Subj: LENGTHENING ARRAYS             Prvt: N          Read: N
+ 
+ In Clipper 5.01 you can use AADD().  This is new in Clipper.  In Summer
+ 87 you had to name the lengt of the array ahead of time.  Also, if you
+ added to that aray later in your program you lost all the other
+ elements.  In Clipper 5.01 AADD() is an array function that increases
+ the actual lengght of the target array by one.  AADD() is similar to
+ ASIZE() but only adds one element at a time;  ASIZE() can grow or shrink
+ an array to a specified size.  AADD(), howeer, has the advantage that it
+ can assign a value to the new element, while ASIZE() cannot.
+ 
+ Subj: Macros (&) and DBEval          Prvt: N          Read: N
+ 
+ I am writing an application that allows the user to "query" a
+ database using queries that are contained in another database.
+ These queries are strings (that I enter, so they are valid) and are
+ just a condition such as "volunteer==.T.".
+ 
+ What I do is a DBEval( {|| QueryProc()} ) where QueryProc is the
+ procedure I use to process the query.  In QueryProc, we have the
+ line:
+ 
+  if ( &(query->main) )
+ 
+ where query is the database in which the queries are stored and main
+ is the field in which the condition string is stored.
+ 
+ My question is this:  Since I am processing the same condition on
+ each record in the database (using DBEval) would it be more efficient
+ to somehow convert the macro &(query->main) to the actual condition
+ and then evaluate the condition on each record in the database and is
+ this possible?
+ 
+ It seems to me that having the runtime macro compiler do this
+ conversion for every record in the database is very inefficient and
+ if it could be converted only once I would save a lot of time.
+ 
+ I would appreciate any ideas that anyone would be able to give me.
+ Thanks in anticipation of your responses.
+ 
+ Subj: Macros (&) and DBEval          Prvt: N          Read: N
+ 
+ What you want to do is this:
+ CLIPBBS 1-05                   Page 42                  25 Feb 1991
+
+
+     QueryBlock:= &("{||"+query->main+"}")
+     DBEval(QueryBlock)
+ 
+ Subj: Macros (&) and DBEval          Prvt: N          Read: N
+ 
+     Local wbBlock
+     ... <code> ...
+     wbBlock := &('{|| QUERY->Main })
+     DBEval ({|| QueryProc (wbBlock)})
+     ... <code> ...
+ 
+     Function QueryProc (pbBlock)
+     ... <code> ...
+     If Eval (pbBlock)
+     ... <code> ...
+ 
+ This should reduce the number of macro calls.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 43                  25 Feb 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper 
+ BBS magazine in previous numbers. Purpose of this index list is to allow 
+ anybody find needed file descriptions in growing number of described files. 
+ Short description after name will give first possible close image about 
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                          WHAT IS <<Clipper Net>>??
+ 
+ 
+ 
+                            The Clipper File-Net
+                            Policy for ClipperNet
+              (Non-Official! Official Policy will be released soon)
+ 
+ 
+                            What is ClipperNet?
+                            ===================
+ 
+         ClipperNet is a specialized network of BBS's that are
+         intrested in the subject of the dBase-Compilers Clipper,
+         Foxbase, FCO (Force) and dBase.
+ 
+ CLIPBBS 1-05                   Page 44                  25 Feb 1991
+
+
+         ClipperNet was started in June 1991,
+                    by Mike Paschen, Hamburg, Germany,
+                    Clipper WorkShop BBS  (FidoNet 2:240/100)
+ 
+                          Who may join ClipperNet ?
+                          =========================
+ 
+         Any Node is free to join Clipper, but there is a maximum of
+         2 CLN nodes in each local telephonezone. In according with
+         the RC this maximum can be exceeded, after rectification
+         with CLN-HQ. The amount should be in agree with the number
+         of BBS's and users in that telephonezone.
+ 
+         The CLN Nodes must allow FREQ's to all nodes even points
+         and unlisted ones. A free download of 30 minutes and
+         500 kb should be respected to.
+ 
+         There maye no money asked for one of the CLN files, neither
+         for download nor for feeding downlinks without permission
+         of CLN-HQ.
+ 
+ 
+                           Who may hatch files ?
+                           ======================
+ 
+         Only RCs and NCs may hatch files into CLN. Before hatching
+         any CLN file MUST first be checked on viruses with the latest
+         availlable scanner. [McAfee]
+ 
+ 
+                     What's the meaning with ClipperNet ?
+                     ====================================
+ 
+         The idea behind ClipperNet is to spread information and new
+         files about Clipper, dBase, Foxbase, FCO (Force).
+ 
+ 
+                                 Echo Areas ?
+                                 ============
+ 
+         File echos availible for the moment are
+ 
+         CL-87           Clipper '87 Tools
+         CL-50           Clipper 5.x Tools
+         CL-DOC          Docs, Reports
+         CL-FOX          FoxBase Tools
+         CL-FCO          FCO (Force) Support
+         CL-DBASE        dBase III + IV
+ 
+ 
+         Mail echos availible for the moment are
+ 
+         ANNOUNCE.CLN    New Files arrived in ClipperNet
+         SYSOPS.CLN      Sysops talking in CLN
+ 
+ 
+ CLIPBBS 1-05                   Page 45                  25 Feb 1991
+
+
+                                 Packing ?
+                                 =========
+ 
+         All Files should be packed with Arj. We use Arj as a
+         standard in ClipperNet. For reaching a high transfer-rate
+         all TIC's should be packed with TickEcho.
+ 
+ 
+                                 Nodelist ?
+                                 ==========
+ 
+         Updates to the nodelist should be sent to 2:240/100 as
+         soon as possible to optimize the file-routing.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - CLIP110.ARJ
+ 
+ File Name:      CLIP110.ARJ
+ Other Names:
+ 
+ File Size:      27,114 bytes
+ File Contents:
+                 CLIP.EXE          25530
+                 CLIP.CFG            215
+                 CLIP5.CFG           191
+                 CLIP.DOC          37211
+ 
+ Seems like nice and usefull Clipper programmers utility. Let authors say
+ what is the purpose of this program:
+ 
+ Clip is the command-line compiler driver that Nantucket should have written
+ for Clipper.  Instead, we got CL.BAT and (with Clipper 5.0) RMAKE.  The
+ first only works for simple programs composed of a single module, and the
+ second (while powerful) is confusing and requires a lot of work to use.
+ 
+ Clip comes somewhere between the two.  It was inspired by the compiler
+ drivers included with most C compilers (like CL.EXE with Microsoft C, or
+ "cc" with UNIX C compilers).  Originally, our intent was to provide a
+ single command that would compile and link one or more Clipper source
+ modules, optionally along with other object files and third-party
+ libraries.
+ 
+ Clip is not a compiler or linker; it's just a program that RUNS compilers
+ and linkers.  Obviously, you must have those other programs before you can
+ run them.  So, at very least you'll need a copy of Clipper (Summer '87 or
+ 5.0) and a linker.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - VSIX711.ARJ
+ 
+ CLIPBBS 1-05                   Page 46                  25 Feb 1991
+
+
+ File Name:      VSIX711.ARJ
+ Other Names:
+ 
+ File Size:      136,721 bytes
+ File Contents:
+                 CHANGES.DOC        7921     READ.ME            1831
+                 COMPILE.BAT          86     README.BAT           29
+                 DBF_DICT.DBF       1224     SAMPLE.DBF       101492
+                 ERRORSYS.LZH       6442     VERNDEMO.PRG      56458
+                 MAKEDEM5.BAT         73     VERNSIX.DOC      129531
+                 MAKEDEMO.BAT         73     VERNSIX.LIB       77159
+                 NTX_DICT.DBF        295     VERNSIX.NG        54608
+                 READ.COM           4288     VERNSIX5.LIB      77133
+ 
+ Vernon Six library for CLipper 5.0x and for Summer 87. It's good done
+ library with some usefull high level functions. It will be too long, to
+ describe it completely, maybe we will see later some articles about this
+ library. Only few small comments:
+ 
+ 1) ERRORSYS.LZH contains another replacement of ErrorSys in CLipper
+    with some good ideas
+ 
+ 2) COMPILE.BAT is .BAT file for linking clipper with standard LINK.EXE
+    Microsoft Linker.
+ 
+ 3) Some useful conversion functions are inside of this library when
+    comparing with other libraries
+ 
+ 4) Interesting idea of network locking function with one "fake" lock
+    function which is simulating that database is locked
+ 
+ 5) Color setting functions which can be easily used in your applications
+ 
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - AC2TB.ARJ
+ 
+ File Name:      AC2TB.ARJ
+ Other Names:
+ 
+ File Size:      10,868
+ File Contents:
+                 ACH2TB.PRG        27803
+                 FT_ACH2T.CH        4570
+ 
+ 
+ Function prototype for replacing ACHOICE with TBROWSE object.
+ Function is coming from NANFORUM TOOLKIT library. Probably
+ someone was extracting this out and posting it as separate
+ archive. It's nice for see how functions in NANFORUM LIBRARY are
+ looking. Best what to do is of course to get NANFORUM LIBRARY!
+ 
+ CLIPBBS 1-05                   Page 47                  25 Feb 1991
+
+
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - CLIPSQL.ARJ
+ 
+ File Name:      CLIPSQL.ARJ
+ Other Names:
+ 
+ File Size:      26,717
+ File Contents:
+                 README             3095     SQLBROW.PRG        3634
+                 CLIPSQL.LIB       26661     SQLDEMO.PRG        4828
+                 SQLPATCH.LIB       2575     LINK-S87.ARJ        395
+                 SQLLIST.PRG        1232     CLIPSQL.DOC       20354
+                                             LINK-501.ARJ        474
+ 
+ 
+ Clipper SQL/Sybase server intergace library. Five active
+ connections is able to to keep connection to SQL server database.
+ Long time expected update of Clipper abilities is available
+ through this library. I'm not able to test it, because of missing
+ any SQL or SYBEX servers, but if someone will do this, i'm
+ interested in result for publishing here.
+ 
+ This library is BETA version of future Commercial product, but is
+ limited to FIVE minutes of working??? (seems strange anyway)...
+ Also is needed LLIBCA.LIB from MicroSoft C, therefore ig you
+ haven't, don't take this.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - DBSCN2.ARJ
+ 
+ File Name:      DBSCN2.ARJ
+ Other Names:
+ 
+ File Size:      162,837 bytes
+ File Contents:
+                 DBSCREEN.DOC      21646
+                 DBSCREEN.EXE     346112
+ 
+ Clipper .PRG screen designer generator. Complex program which is
+ offering capabilities similar to FoxView program (for FOXBASE
+ fans). Result of your work with this program is screen definition
+ for your application, together with not only string, just
+ database fields are included (memory variables also). From this
+ definition is generated .PRG file for direct using in your
+ Clipper application.
+ 
+ Sample of generated code is:
+             // dbscreen work file work
+ CLIPBBS 1-05                   Page 48                  25 Feb 1991
+
+
+             if iscolor()
+                 currcolor=setcolor("W/B,B/W")
+             endif
+             setmode(25,80)
+             clear
+             dispbegin()
+             @ 00,00 say "This is a sample screen"
+             @ 02,29 say "Centered line (ALT C)"
+             @ 04,00 say "Box Draw"
+             @ 07,00 say "Extended chars"
+             @ 08,03 say "DBF FILE select , field select"
+             @ 04,09 to 05,23 double
+             @ 08,34 get M->TEST
+             if iscolor()
+                 setcolor(currcolor)
+             endif
+             dispend()
+ 
+ It's as everyone can see for use in Clipper 5.01 at all.
+ 
+ Personally i will prefer still my copy of FoxView for doing
+ paintings, but for someone starting from scratch can be this
+ utility nice.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - POPUPCAL.ARJ
+ 
+ File Name:      POPUPCAL.ARJ
+ Other Names:
+ 
+ File Size:      6,306 bytes
+ File Contents:
+                 POPUPCAL.PRG      13931
+                 POPUPCAL.TXT       1292
+ 
+ Clipper POP UP CALENDAR (_not_ calculator), with using of NANFORUM library
+ (therefore HAVE IT on the hand :-) ), it's allowing select a datum (in case
+ of pressing ENTER) with real user interface.
+ 
+ Author is telling in, that it's coming into NANFORUM library, therefore
+ maybe next version will have it. Latest one not.
+ 
+ For all of you who will want to run it with included demo, please make some
+ correction in program, because author forget a bit, that making function
+ MAIN() is not quite enough to have it runned after executing .EXE file..
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            CLN - SCRSAVE.ARJ
+ CLIPBBS 1-05                   Page 49                  25 Feb 1991
+
+
+ File Name:      SCRSAVE.ARJ
+ Other Names:
+ 
+ File Size:      2,694 bytes
+ File Contents:
+                 SCRSAVE.DOC         580
+                 SCRSAVE.OBJ        2585
+                 SCRTEST.PRG         149
+ 
+ Screen save function... No, it's not interrupt driven function which is
+ saving your screen in case of inactivity of program, it's nice function
+ which one can call when will detect inactivity by own. Supplied is ONLY
+ .OBJ code, not source code.
+ 
+ I was trying to link it, but It's giving unresolved external symbols like
+ MILLISEC, KEYSEC... For sure they are NOT coming from Clipper 5.01, nor
+ from standard libraries. .OBJ code is telling that it's for 5.01 version of
+ Clipper.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 50                  25 Feb 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-05                   Page 51                  25 Feb 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

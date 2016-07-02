@@ -1,0 +1,153 @@
+                                SCHOONER
+                             An Introduction
+                              Version 1.10
+
+               SPECIAL BONUS OFFER FOR THOSE WHO REGISTER!
+                      See Shareware Concepts below
+                                   and
+                       be sure to run DEMO200.BAT
+                for a look at Schooner Version 2.00 GUI.
+                     Your Bonus when you register!!
+
+  Schooner is  a powerful, full  featured database programming language
+  in the style of Dbase III Plus(r) and Clipper(r) Summer 87.
+
+  While programmed much the same way as these two "standards", Schooner
+  provides a much easier  and faster development environment as well as
+  a "function" based language (as opposed to a command based language).
+
+  In addition, Schooner has  a complete set of graphics functions which
+  allow you to  custom build virtually any  graphic screen desired. The
+  graphics functions  also allow  you to  display text  and even accept
+  user input.
+
+  Schooner uses  the industry  standard Dbase(r) file  format (and even
+  the  Clipper(r)  extensions  to  that  format)  and  the  development
+  environment contains a powerful  text editor with all of the standard
+  text editing features in  addition to those features required to pre-
+  compile and run your programs.
+
+  Schooner  can open  and  reference 9  databases  at once,  create and
+  display graphics, print reports  (custom or from templates created in
+  the report  writer) and  provide complete,  professional, stand-alone
+  computer applications at a  fraction of the cost and time required by
+  other systems.
+
+  Not only  is the  Schooner development environment  provided, but the
+  unlimited and royalty-free  Schooner runtime module is included. This
+  allows you to develop applications and then release as many copies of
+  that application  as desired. Simply  distribute the SCHOONRT.EXE and
+  SCHOONRT.OVL runtime modules  with your pre-compiled .RUN modules and
+  your application is complete.
+
+
+                            SHAREWARE CONCEPT
+
+  This version of Schooner  is distributed under the shareware plan. If
+  you use Schooner it is requested that you register your copy.
+
+  Shareware allows you,  the user, the opportunity  to preview and test
+  Schooner to see if it meets your needs.
+
+  We have tried  hard to put together a  quality product and we believe
+  it to be competitive  with the corresponding high priced, big company
+  products.
+
+  As a bonus, we will  provide Schooner Version 2.00 GUI free of charge
+  to all those  who register this version. To  see a preview of Version
+  2.00 GUI, run DEMO200.BAT  (requires VGA display and mouse with mouse
+  driver installed).  This is  just a  sample of  what you  can do with
+  Version 2.00 GUI.
+
+  Schooner Version 2.00 GUI contains a complete set of graphics imaging
+  functions. Add  full-color images to  your applications. Display them
+  along with  text and  data. Full mouse  support is  included. Build a
+  professional Graphical  User Interface  (GUI) for  your applications.
+  All of this for only $39.95.!
+
+  As a SPECIAL BONUS,  we will include a separate diskette containing a
+  variety of  image processing  utilities. These  stand-alone utilities
+  will help you  convert image formats, scale  and crop your images and
+  much more. This disk is free with your paid registration.
+
+  So register  your copy  today and get  Schooner Version  2.00 AND the
+  imaging utilities free!!
+
+  Please register your copy by sending the following:
+
+                        $39.95 in U.S. funds to:
+
+                              Jonathan Cook
+                         7034 N. Cedar Ave. #108
+                            Fresno, CA 93720
+
+
+  Please include the following information:
+
+            Name:
+    Company Name:
+         Address:
+            City:
+           State:
+             Zip:
+         Version:
+
+       What is your profession?
+       Where did you find Schooner?
+       Comments regarding Schooner?
+
+  The last questions will help  us to improve Schooner as well as get a
+  feel for who uses Schooner and the best distribution channels.
+
+
+                              USER SUPPORT
+
+  We encourage you to write with your questions and comments.
+
+  You can write us at the above address or at our CompuServe address:
+
+                               72672,2502
+
+
+                       SCHOONER 1.10 RELEASE NOTES
+
+  The following  modifications to  version 1.00  have been  included in
+  this release:
+
+  TONE(): The  Tone() function  was inadvertently  left out  of Version
+  1.00. This has been corrected.
+
+  UDF(): The documentation  for the UDF() function  has been updated to
+  reflect that the UDF() function does not return a value when assigned
+  to an  "MV" variable. You  should pass data  back through public "MV"
+  variables.  UDF() will  return values  when used  in nested  lines of
+  code.
+
+  E000: The  E000 Clipper  memory option is  now documented  and can be
+  used to help resolve memory conflicts with DOS 5.00 and 6.00.
+
+  MLCOUNT() and  MEMOLINE(): The documentation  for these functions has
+  been modified  to show that  string variables and  not files are used
+  within the function.
+
+  EXIT: The  Exit option  of the  DO WHILE  - ENDDO  construct has been
+  modified to properly handle  exits from nested IF - ENDIF constructs.
+  This caused rare subscript out of range errors.
+
+
+                 Association of Shareware Professionals
+
+  Jonathan  Cook   is  a   member  of  the   Association  of  Shareware
+  Professionals  (ASP).   ASP  wants to  make  sure that  the shareware
+  principle works  for you. If  you are unable  to resolve a shareware-
+  related problem with an ASP member by contacting the member directly,
+  ASP may  be able to  help. The ASP  Ombudsman can help  you resolve a
+  dispute or problem with an ASP member, but does not provide technical
+  support for members' products.   Please write to the ASP Ombudsman at
+  545 Grover  Road, Muskegon,  MI 49442-9427  USA, FAX  616-788-2765 or
+  send  a  CompuServe message  via  CompuServe  Mail  to  ASP Ombudsman
+  70007,3536."
+
+  Please read the General  Documentation found on the README menu. This
+  will introduce you to the programming techniques of Schooner.
+

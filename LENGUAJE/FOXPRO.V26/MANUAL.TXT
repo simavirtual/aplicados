@@ -1,0 +1,1360 @@
+Manual del usuario
+
+Kit de distribuci¢n de Microsoft(R) FoxPro(R) para
+MS-DOS(TM)
+Versi¢n 2.6
+
+Microsoft Corporation
+
+La informaci¢n contenida en este documento puede ser modificada sin previo
+aviso. Las empresas, nombres y datos usados en los ejemplos son ficticios, a
+menos que se indique lo contrario. Ninguna parte de este manual puede ser
+reproducida o transmitida bajo forma alguna, ni por cualquier medio, ya sea
+electr¢nico o mec nico, sea cual sea el motivo, sin mediar la previa
+autorizaci¢n por escrito de Microsoft Corporation.
+
+(C) 1989-1994 Microsoft Corporation. Reservados todos los derechos.
+
+Microsoft, el logotipo gr fico de Fox, FoxPro, MS y MS-DOS son marcas
+registradas, y Windows es una marca comercial, todas ellas propiedad de
+Microsoft Corporation en los Estados Unidos de Am‚rica y en otros pa¡ses.
+
+El resto de los nombres de productos mencionados se utilizan s¢lo para fines
+de identificaci¢n, y pueden ser marcas registradas y/o marcas comerciales
+propiedad de sus respectivas empresas.
+
+
+Documento N§	FX38075-0293
+
+______________________________________________________
+Uso de Write para ver este documento
+
+Si desea Ayuda sobre el uso de Write, presione F1.
+
+Si maximiza la ventana de Write, podr  leer f cilmente este documento. Para
+ello, haga clic en el bot¢n "Maximizar" situado en la esquina superior derecha
+de la ventana. O bien, abra el Men£ de control en la esquina superior
+izquierda de la ventana de Write (presione ALT+BARRA ESPACIADORA) y elija el
+comando Maximizar.
+
+Para imprimir el documento, elija Imprimir en el men£ Archivo.
+
+Acerca de este documento
+
+Este documento contiene informaci¢n traducida y adaptada correspondiente al
+Kit de distribuci¢n de Microsoft FoxPro para MS-DOS. La informaci¢n contenida
+en este documento est  m s actualizada que la incluida en el manual del
+usuario (User's Guide) en ingl‚s.
+______________________________________________________________________________
+
+Contenido
+
+Cap¡tulo 1   Introducci¢n e instalaci¢n
+       1.1   Contenido del paquete del Kit de distribuci¢n
+	       1.1.1   Registro
+	       1.1.2   Contrato de licencia
+       1.2   Requisitos de la plataforma
+       1.3   Actualizar aplicaciones de FoxPro para MS-DOS 2.0
+	       1.3.1   Cambios con respecto al Kit de distribuci¢n de FoxPro
+		       para MS-DOS 2.0
+       1.4   Instalaci¢n
+	       1.4.1   Art¡culos de la base de conocimientos
+       1.5   Distribuir aplicaciones de FoxPro para MS-DOS
+
+Cap¡tulo 2   Desarrollar aplicaciones de FoxPro para su distribuci¢n
+       2.1   Desarrollar una aplicaci¢n runtime
+       2.2   Otras consideraciones
+	       2.2.1   Consideraciones sobre hardware, memoria y redes
+	       2.2.2   Men£s y comandos de men£ disponibles en aplicaciones
+		       runtime
+	       2.2.3   Caracter¡sticas no disponibles en aplicaciones
+		       distribuidas
+			 Men£s
+			 Comandos
+			 Programas de men£ y comandos READ de fundaci¢n
+			 Otras caracter¡sticas
+	       2.2.4   Proteger el c¢digo fuente
+	       2.2.5   Incluir el archivo de recursos FOXUSER
+			 FOXUSER como archivo
+			 FOXUSER en un proyecto
+	       2.2.6   Incluir controladores de impresora
+			 Controladores de impresora como archivos
+			 Controladores de impresora en un proyecto
+	       2.2.7   Agregar ayuda a la aplicaci¢n
+			 Ayuda como archivo
+			 Ayuda en un proyecto
+       2.3   Tratamiento de errores
+
+Cap¡tulo 3   Preparar la aplicaci¢n para su distribuci¢n
+       3.1   Empaquetar la aplicaci¢n
+       3.2   Crear un .FXP
+	       3.2.1   Asegurar el c¢digo fuente para un archivo .FXP
+       3.3   Crear archivos .APP y .EXE
+	       3.3.1   Asegurar el c¢digo fuente para archivos .APP y .EXE
+	       3.3.2   Desde el Administrador de proyectos
+	       3.3.3   Con el comando BUILD APP
+	       3.3.4   Con el comando BUILD EXE
+
+Cap¡tulo 4   Probar la aplicaci¢n runtime
+       4.1   Ejecutar archivos .FXP, .APP y .EXE
+	       4.1.1   S¡mbolo del sistema de MS-DOS
+			 Ejecutar un archivo .FXP o .APP
+			 Ejecutar un archivo .EXE compacto
+			 Ejecutar un archivo .EXE aut¢nomo est ndar o un
+			 archivo .EXE aut¢nomo extendido de 32 bits
+			 Incluir modificadores de l¡nea de comandos
+			 Transferir par metros desde el s¡mbolo del sistema
+			 de MS-DOS a una aplicaci¢n
+	       4.1.2   Archivo de proceso por lotes
+	       4.1.3   Cargador runtime
+	       4.1.4   Modificadores del cargador runtime
+	       4.1.5   Modificadores de l¡nea de comandos
+			 Especificar un archivo de configuraci¢n: -C
+			 Evitar el uso de la memoria expandida: -E
+			 Evitar el uso de F11 o F12: -K
+			 Suprimir la pantalla de introducci¢n de FoxPro: -T
+	       4.1.6   Especificar modificadores con FOXPROSWX
+	       4.1.7   Archivo CONFIG.FP
+
+Cap¡tulo 5   Crear discos de distribuci¢n
+       5.1   Hacer copias de seguridad del c¢digo fuente
+       5.2   Crear un archivo personalizado de instalaci¢n por lotes
+       5.3   Archivos necesarios del Kit de distribuci¢n de FoxPro
+       5.4   Otros archivos necesarios
+       5.5   Archivos prohibidos
+	       Documentaci¢n de FoxPro
+	       Condiciones para usar c¢digo de las aplicaciones de ejemplo
+	       de FoxPro
+
+
+Cap¡tulo 1:  Introducci¢n e instalaci¢n
+
+Con el Kit de distribuci¢n de Microsoft(R) FoxPro(R) para MS-DOS(R)*, podr 
+crear y distribuir aplicaciones y archivos ejecutables. Los usuarios podr n
+ejecutar los programas de FoxPro para MS-DOS, archivos de aplicaci¢n y
+archivos ejecutables que usted desarrolle sin necesidad de disponer de una
+copia de FoxPro para MS-DOS.
+___________________________________________________________________________
+Importante    Ciertas caracter¡sticas utilizadas en la fase de desarrollo no
+estar n disponibles en las aplicaciones y archivos ejecutables que usted cree
+y/o distribuya con el Kit de distribuci¢n de FoxPro para MS-DOS. Estos
+elementos se enumeran en la secci¢n "Caracter¡sticas no disponibles en
+aplicaciones distribuidas" del cap¡tulo 2.
+___________________________________________________________________________
+
+En este cap¡tulo se describe:
+  El contenido del paquete del Kit de distribuci¢n
+  Los requisitos de la plataforma
+  La actualizaci¢n de aplicaciones de FoxPro para MS-DOS 2.0
+  La instalaci¢n
+  La forma de distribuir aplicaciones de FoxPro para MS-DOS
+
+*Tambi‚n se menciona simplemente como el Kit de distribuci¢n
+
+1.1  Contenido del paquete del Kit de distribuci¢n
+Su paquete del Kit de distribuci¢n de Microsoft FoxPro para MS-DOS contiene lo
+siguiente:
+  Los archivos del Kit de distribuci¢n, tanto en formato de disquetes de 5,25
+  pulgadas como de 3,5 pulgadas de alta densidad.
+  Este manual.
+  Una tarjeta de registro del Kit de distribuci¢n. Cuando la devuelva a
+  Microsoft, esta tarjeta de registro ser  su prueba de propiedad del Kit de
+  distribuci¢n de Microsoft FoxPro para MS-DOS.
+  Un contrato de licencia del Kit de distribuci¢n. Esta es la licencia para
+  usar y distribuir los archivos de biblioteca de soporte y el cargador
+  runtime de FoxPro para MS-DOS.
+
+1.1.1  Registro
+Por favor, rellene la tarjeta de registro y rem¡tala a Microsoft
+inmediatamente. Esta tarjeta documenta su posesi¢n de una licencia del Kit de
+distribuci¢n y le garantiza que recibir  todas las noticias relativas a los
+productos e informaci¢n actualizada.
+
+1.1.2  Contrato de licencia
+La licencia del Kit de distribuci¢n de FoxPro para MS-DOS est  limitada a
+usted. Esta licencia le da derecho a distribuir los archivos de la Biblioteca
+de soporte de FoxPro para MS-DOS y/o el cargador runtime junto con sus
+archivos .FXP, .APP y .EXE, a tantos usuarios como desee y sin hacer ning£n
+pago adicional a Microsoft. Para ver una lista completa de los archivos del
+Kit de distribuci¢n y el uso que se autoriza de ellos, consulte el cap¡tulo 5,
+"Crear discos de distribuci¢n".
+
+Usted deber  proporcionar toda la asistencia que necesiten los usuarios de las
+aplicaciones que distribuya. Microsoft no asume ninguna obligaci¢n relativa a
+la comercializaci¢n ni a la asistencia de las aplicaciones distribuidas.
+___________________________________________________________________________
+Importante    Bajo ninguna circunstancia deber  distribuir a los usuarios la
+versi¢n de desarrollo de Microsoft FoxPro para MS-DOS.
+___________________________________________________________________________
+
+Su empresa debe poseer una copia con licencia del Kit de distribuci¢n por cada
+desarrollador que vaya a crear aplicaciones para su distribuci¢n. Si en su
+empresa hay cinco desarrolladores que crean aplicaciones para distribuirlas,
+deber  adquirir cinco copias con licencia del Kit de distribuci¢n.
+
+Con el Kit de distribuci¢n puede crear todo tipo de aplicaciones (monousuario,
+multiusuario). Mientras que la versi¢n 2.0 de FoxPro requer¡a contratos de
+licencia para monousuario, multiusuario, etc., la versi¢n 2.6 de FoxPro ya no
+hace estas distinciones. Sin embargo, como se ha mencionado anteriormente,
+para cumplir los requisitos legales deber  poseer una copia con licencia del
+Kit de distribuci¢n de FoxPro 2.6 para MS-DOS para cada desarrollador que
+utilice FoxPro 2.6 para MS-DOS para crear aplicaciones para su distribuci¢n.
+
+1.2  Requisitos de la plataforma
+Cada una de las plataformas de Microsoft FoxPro requiere su propio Kit de
+distribuci¢n. El Kit de distribuci¢n de Microsoft FoxPro para MS-DOS s¢lo se
+puede utilizar para distribuir aplicaciones Microsoft FoxPro para MS-DOS. Para
+crear y/o distribuir aplicaciones desarrolladas en cualquier otra plataforma
+de Microsoft FoxPro, deber  usar el Kit de distribuci¢n correspondiente a esa
+plataforma. Por ejemplo, para distribuir aplicaciones para Microsoft FoxPro
+para Windows, deber  usar el Kit de distribuci¢n de Microsoft FoxPro para
+Windows.
+
+1.3  Actualizar aplicaciones de FoxPro para MS-DOS 2.0
+Para actualizar una aplicaci¢n desarrollada para su distribuci¢n mediante
+FoxPro para MS-DOS versi¢n 2.0, primero deber  volver a generar la aplicaci¢n
+en Microsoft FoxPro para MS-DOS versi¢n 2.6. Entonces podr  usar el Kit de
+distribuci¢n de Microsoft FoxPro para MS-DOS versi¢n 2.6 para crear y/o
+distribuir la aplicaci¢n. Para ver m s informaci¢n acerca de la actualizaci¢n
+de aplicaciones, consulte el cap¡tulo 24, "Uso de archivos de otras
+plataformas", del manual de FoxPro para MS-DOS.
+
+1.3.1  Cambios con respecto al Kit de distribuci¢n de FoxPro para MS-DOS 2.0
+Hay pocas diferencias entre las versiones 2.0 y 2.6 del Kit de distribuci¢n de
+Microsoft FoxPro para MS-DOS. Una diferencia importante es que en el Kit de
+distribuci¢n versi¢n 2.6 ya no se usa PROAPI16.EXE.
+
+1.4  Instalaci¢n
+______________________________________________________________________________
+Importante    Antes de instalar el Kit de distribuci¢n, haga una copia de
+seguridad de los discos del Kit de distribuci¢n copi ndolos a un segundo juego
+de discos. Guarde los discos originales en un lugar seguro y use las copias
+como discos de trabajo.
+______________________________________________________________________________
+______________________________________________________________________________
+Importante    El programa de instalaci¢n del Kit de distribuci¢n de FoxPro
+para MS-DOS cambia los archivos de versi¢n de desarrollo existentes de FoxPro
+para MS-DOS. Para instalarlo correctamente:
+*  Debe instalar el Kit de distribuci¢n en el directorio donde se encuentre
+   instalada la versi¢n de desarrollo de Microsoft FoxPro para MS-DOS versi¢n
+   2.6.
+*  Si va a instalar el Kit de distribuci¢n en una red, su nombre de usuario
+   deber  tener todos los derechos de archivo.
+______________________________________________________________________________
+
+Para iniciar la instalaci¢n, inserte en la unidad A el disco 1 del Kit de
+distribuci¢n y escriba:
+
+a:INSTALAR
+
+Presione ENTRAR y siga las instrucciones de instalaci¢n que aparecer n en la
+pantalla.
+
+La primera vez que instale el Kit de distribuci¢n, el programa de instalaci¢n
+le preguntar  su nombre y el nombre de su empresa. Esta informaci¢n se
+mostrar  si ejecuta otra vez el programa de instalaci¢n.
+
+A continuaci¢n, el programa de instalaci¢n le pedir  que confirme la unidad y
+el directorio de destino para los archivos del Kit de distribuci¢n. El
+directorio de destino predeterminado es FPD26. Si ha instalado la versi¢n
+de desarrollo de Microsoft FoxPro para MS-DOS versi¢n 2.6 en un directorio
+distinto de FPD26, especifique esta unidad y/o directorio, y luego presione
+ENTRAR.
+
+El programa de instalaci¢n mostrar  las opciones del Kit de distribuci¢n junto
+con la cantidad de espacio en disco que necesita cada opci¢n. Cuando
+seleccione las opciones que desea  instalar, el programa comprobar  el espacio
+disponible en el disco y le avisar  si no hay suficiente espacio para
+completar la instalaci¢n. Puede ignorar el aviso y continuar la instalaci¢n.
+
+Si responde "S¡" a la instalaci¢n de cualquiera de las opciones se activar  el
+bot¢n radio "Generar ejecutable" del di logo Opciones al generar del
+Administrador de proyectos, de forma que pueda generar archivos .EXE. Para
+obtener m s informaci¢n acerca de las diferentes opciones de instalaci¢n y su
+uso, consulte "Empaquetar la aplicaci¢n", en el cap¡tulo 3.
+
+Si instala el Kit de distribuci¢n completo, su directorio de inicio (FPD26
+de manera predeterminada) contendr  los archivos siguientes:
+______________________________________________________________________________
+Archivos del Kit de distribuci¢n
+______________________________________________________________________________
+Archivo 			    Descripci¢n
+______________________________________________________________________________
+FOXCLIBM.LIB			    Crea archivos .EXE aut¢nomos versi¢n
+FOXMATHM.LIB			    est ndar
+FOXPRO.LIB
+FOXPROS.LIB
+WOVL.LIB
+
+FOXBIND.EXE			    Crea archivos .EXE aut¢nomos versi¢n
+FOXCLIBR.LIB			    extendida de 32 bits
+FOXMATHR.LIB
+FOXPROSX.LIB
+FOXPROX.LIB
+
+WLINK8.EXE			    Vinculador para generar archivos .EXE
+				    aut¢nomos
+
+FOXD2600.ESL			    Biblioteca de soporte runtime
+
+FOXD2600.ESO
+
+FOXDX260.ESL			    Biblioteca de soporte runtime
+				    extendida de 32 bits
+
+FOXR.EXE			    Cargador runtime
+______________________________________________________________________________
+
+
+1.4.1  Art¡culos de la base de conocimientos
+El Kit de distribuci¢n de FoxPro para MS-DOS contiene art¡culos de la base de
+conocimientos. Puede verlos ejecutando KBVIEW.APP, una aplicaci¢n FoxPro
+instalada en el directorio de FoxPro. Estos art¡culos contienen informaci¢n
+£til acerca de diversos temas relacionados con FoxPro.
+
+
+1.5  Distribuir aplicaciones de FoxPro para MS-DOS
+Crear aplicaciones de FoxPro para MS-DOS para su distribuci¢n es un proceso
+similar a desarrollar aplicaciones est ndar de FoxPro para MS-DOS. Debe crear
+una aplicaci¢n con la versi¢n de desarrollo de FoxPro para MS-DOS, teniendo en
+cuenta las caracter¡sticas que no se encuentran disponibles en el entorno
+runtime. La aplicaci¢n se compila como archivo .FXP, .APP o .EXE, y se somete
+a prueba en el entorno runtime.
+
+Entonces puede distribuir a los puntos de distribuci¢n esa aplicaci¢n, los
+archivos de proceso por lotes relacionados y los archivos runtime necesarios
+de FoxPro para MS-DOS. Los puntos de distribuci¢n no necesitan tener FoxPro
+para MS-DOS para poder ejecutar la aplicaci¢n.
+
+
+
+Cap¡tulo 2:  Desarrollar aplicaciones de FoxPro para su distribuci¢n
+
+Este cap¡tulo proporciona directrices para el desarrollo de aplicaciones para
+el entorno runtime. Para obtener informaci¢n detallada acerca de la creaci¢n
+de aplicaciones usando una versi¢n de desarrollo de Microsoft FoxPro para
+MS-DOS, consulte la documentaci¢n de desarrollo de FoxPro y el cap¡tulo 13,
+"Administrador de proyectos", del Manual del usuario de FoxPro.
+
+2.1 Desarrollar una aplicaci¢n runtime
+El desarrollo de una aplicaci¢n runtime de FoxPro para su distribuci¢n implica
+seis pasos b sicos:
+1.  Crear y depurar la aplicaci¢n usando una versi¢n de desarrollo de FoxPro
+    para MS-DOS.
+2.  Crear archivos de ayuda y dem s documentaci¢n.
+    La aplicaci¢n utiliza su propio archivo de ayuda en lugar del archivo de
+    ayuda est ndar de FoxPro para MS-DOS (FOXHELP.DBF). Consulte la secci¢n
+    "Agregar ayuda a la aplicaci¢n" m s adelante en  este manual para obtener
+    m s informaci¢n sobre la creaci¢n de ayuda para la aplicaci¢n. Adem s,
+    cree los manuales u otra documentaci¢n impresa que desee distribuir con su
+    aplicaci¢n.
+3.  Ejecutar y depurar su aplicaci¢n en el entorno runtime.
+    El entorno runtime es id‚ntico al entorno de la versi¢n de desarrollo de
+    FoxPro en la mayor¡a de los aspectos. Sin embargo, puesto que varias
+    caracter¡sticas est ndar no est n disponibles en el entorno runtime,
+    deber  asegurarse de que la aplicaci¢n funciona correctamente.
+    Las diferencias entre el entorno runtime y el de la versi¢n de desarrollo
+    de FoxPro se explican m s adelante en este mismo cap¡tulo.
+4.  Usando el Kit de distribuci¢n de FoxPro para MS-DOS, tiene la opci¢n de
+    compilar la aplicaci¢n para crear un archivo .EXE compacto o un archivo
+    .EXE aut¢nomo.
+5.  Crear un archivo personalizado por lotes de instalaci¢n, si lo desea, y
+    crear los discos de distribuci¢n.
+6.  Empaquetar los discos de distribuci¢n y la documentaci¢n impresa, y poner
+    la aplicaci¢n a disposici¢n de los puntos de distribuci¢n.
+    Para obtener informaci¢n acerca de los archivos necesarios en los discos
+    de distribuci¢n adem s de los archivos de la aplicaci¢n, consulte el
+    cap¡tulo 5, "Crear discos de distribuci¢n".
+
+2.2  Otras consideraciones
+Las secciones siguientes describen algunas de las limitaciones del Kit de
+distribuci¢n. Aseg£rese de tener en cuenta estas limitaciones cuando
+desarrolle una aplicaci¢n para distribuirla con el Kit de distribuci¢n.
+
+2.2.1  Consideraciones sobre hardware, memoria y redes
+Las aplicaciones que cree con el Kit de distribuci¢n de Microsoft FoxPro para
+MS-DOS tendr n los mismos requisitos de hardware, memoria y redes que la
+versi¢n de desarrollo de FoxPro para MS-DOS.
+
+Puede proporcionar las siguientes versiones de sus aplicaciones:
+
+ * Versi¢n est ndar.
+    Los archivos .FXP, .APP y .EXE de la versi¢n est ndar proporcionan la
+    velocidad y versatilidad de FoxPro a sistemas con restricciones de
+    memoria, o con procesadores 8086, 8088 ¢ 286.
+*  Versi¢n extendida de 32 bits.
+    Los  archivos .FXP, .APP y .EXE de la versi¢n extendida de 32 bits
+    utilizan la capacidad de los microprocesadores 386 y 486, y pueden usar
+    toda la memoria extendida disponible, lo que normalmente significa una
+    mayor velocidad de ejecuci¢n.
+
+Utilice las directrices siguientes para decidir qu‚ versi¢n se ajusta mejor a
+su entorno de distribuci¢n:
+
+*  Para usar la versi¢n extendida de 32 bits, el sistema que ejecute la
+   aplicaci¢n deber  tener un procesador 386 o superior y al menos 3 MB de
+   memoria.
+*  Si el sistema que vaya a ejecutar la aplicaci¢n tiene 3 MB de memoria o
+   m s, el uso de la versi¢n extendida de 32 bits ofrecer  un mejor
+   rendimiento en la mayor¡a de los casos.
+
+Para obtener m s informaci¢n acerca de las capacidades de la versi¢n extendida
+de 32 bits y de la versi¢n est ndar de FoxPro para MS-DOS, consulte la
+documentaci¢n de FoxPro para MS-DOS.
+
+Para obtener informaci¢n adicional acerca del uso del Kit de distribuci¢n de
+FoxPro para crear aplicaciones que se ejecuten en un entorno de red, consulte
+la documentaci¢n de FoxPro para MS-DOS.
+
+2.2.2  Men£s y comandos de men£ disponibles en aplicaciones runtime
+Cuando distribuya un archivo .FXP, .APP o .EXE, la estructura de men£s de
+FoxPro para MS-DOS incluir  los siguientes men£s y comandos de men£
+predeterminados:
+
+*  Men£ Sistema
+    Acerca de FoxPro, Ayuda, y los siguientes accesorios de escritorio:
+    Calculadora, Calendario/Agenda, Caracteres especiales, Tabla ASCII,
+    Capturar y Puzzle.
+*  Men£ Archivo
+    Cerrar, Guardar, Guardar como y Revertir.
+*  Men£ Edici¢n
+    Todos los comandos est ndar del men£ Edici¢n se encuentran disponibles.
+*  Men£ Ventana
+    Ocultar (as¡ como Ocultar todo y Mostrar todo), Borrar, Mover, Tama¤o,
+    Zoom, Recorrer y los nombres de todas las ventanas abiertas (con las
+    teclas de m‚todo abreviado 0-9 para las diez primeras).
+
+Puede desactivar o quitar cualquiera de estos men£s y comandos de men£
+predeterminados. Utilice SET SKIP OF para desactivar o activar men£s y
+comandos de men£. Para quitar uno o todos los t¡tulos o comandos de men£, use
+RELEASE PAD o RELEASE BAR.
+
+Tambi‚n puede agregar men£s y comandos de men£ a la estructura de men£s de
+FoxPro para MS-DOS. Consulte la documentaci¢n de FoxPro para MS-DOS para
+obtener informaci¢n adicional acerca de c¢mo agregar men£s y comandos de men£
+a su aplicaci¢n.
+
+2.2.3  Caracter¡sticas no disponibles en aplicaciones distribuidas
+Las bibliotecas del Kit de distribuci¢n de FoxPro no admiten ciertas
+caracter¡sticas que est n disponibles en la versi¢n de desarrollo de FoxPro
+para MS-DOS. Las caracter¡sticas siguientes no estar n disponibles en las
+aplicaciones .FXP, .APP o .EXE que usted distribuya utilizando el Kit de
+distribuci¢n de FoxPro para MS-DOS.
+
+Men£s
+Los siguientes men£s del sistema de FoxPro y sus comandos no estar n
+disponibles en las aplicaciones que usted distribuya:
+
+*  Men£ Tabla
+*  Men£ Registro
+*  Men£ Programa
+*  Men£ Pantalla
+*  Men£ Men£
+*  Men£ RQBE
+*  Men£ Proyecto
+
+T¡tulos de men£
+Los t¡tulos de men£ siguientes no estar n disponibles en las aplicaciones que
+usted distribuya.
+
+Men£ SISTEMA: Macros..., Archivador
+Men£ ARCHIVO: Nuevo..., Abrir..., Especificar impresora...,
+	      Imprimir..., Salir
+Men£ VENTANA: Color..., Comandos, Depuraci¢n, Seguimiento, Ver
+
+Comandos
+Los comandos siguientes devolver n un mensaje de error "Caracter¡stica no
+disponible" si los incluye en las aplicaciones que usted distribuya:
+
+BUILD APP			     CREATE SCREEN*
+BUILD EXE			     MODIFY MENU*
+BUILD PROJECT			     MODIFY QUERY*
+COMPILE 			     MODIFY SCREEN*
+FILER				     SET
+CREATE MENU*			     SET VIEW ON
+CREATE QUERY*			     SUSPEND
+
+* Aunque no pueda incluir comandos que creen o modifiquen men£s, pantallas o
+consultas, podr  ejecutar programas existentes de men£, pantalla o consulta
+(archivos .MPR, .SPR y .QPR).
+
+Los comandos siguientes no se admiten en los archivos .FXP, .APP o .EXE y se
+ignoran cuando se encuentran:
+
+SET DEBUG			     SET ECHO
+SET DEVELOPMENT 		     SET STEP
+SET DOHISTORY
+
+Programas de men£ y comandos READ de fundaci¢n
+En muchos casos, un programa de men£ personalizado funciona en la versi¢n de
+desarrollo de FoxPro para MS-DOS, pero cuando se ejecuta la versi¢n de
+distribuci¢n del programa, el men£ aparece y a continuaci¢n el programa sale
+al s¡mbolo del sistema de MS-DOS.
+
+En tales casos, incorpore un comando READ de fundaci¢n a la aplicaci¢n.
+
+Para incorporar un comando READ de fundaci¢n, siga estos pasos:
+
+1.  Incluya el c¢digo siguiente en el preprograma del men£ o programa:
+
+   PUBLIC m.done
+   m.done = .F.
+
+2.  Ejecute el c¢digo siguiente cuando el usuario elija el comando de men£
+    Salir:
+
+   m.done = .T.
+   CLEAR READ ALL
+
+3.  En el postprograma del men£ o programa, incluya el c¢digo siguiente antes
+    de cualquier otro c¢digo:
+
+     READ VALID m.done
+______________________________________________________________________________
+Nota	Para obtener m s informaci¢n acerca de los comandos READ de formaci¢n,
+consulte el ejemplo EX1.PJX del directorio GOODIES\FNDATION y la secci¢n
+relativa al comando READ en la documentaci¢n de FoxPro para MS-DOS.
+______________________________________________________________________________
+
+Otras caracter¡sticas
+Las aplicaciones .FXP, .APP y .EXE distribuidas no contienen caracter¡sticas
+que s¡ se encuentran disponibles en el entorno de desarrollo interactivo. Por
+ejemplo, los usuarios de runtime no pueden abrir las ventanas Depuraci¢n,
+Seguimiento o Ver, ni usar el Generador de men£s, el Generador de pantallas,
+la ventana RQBE, etc. Adem s, la ejecuci¢n y compilaci¢n de archivos fuente
+requiere la versi¢n de desarrollo de FoxPro.
+
+2.2.4  Proteger el c¢digo fuente
+Para impedir que alguien pueda ver el c¢digo fuente, incluya SET DEBUG OFF
+como primera l¡nea en todos los programas de aplicaci¢n que cree para su
+distribuci¢n. Si transfiere par metros a su programa desde el s¡mbolo del
+sistema de MS-DOS, incluya SET DEBUG OFF como segunda l¡nea del programa
+despu‚s de la instrucci¢n PARAMETERS. Consulte SET DEBUG en la Ayuda de FoxPro
+para obtener m s informaci¢n al respecto.
+
+Para evitar que la aplicaci¢n incluya informaci¢n de depuraci¢n, muestre
+primero el cuadro de di logo Opciones del proyecto escogiendo Opciones en el
+men£ Proyecto. Luego, seleccione la casilla "Codificar" y desactive la casilla
+"Info para depuraci¢n" del cuadro de di logo Opciones del proyecto. Guarde el
+proyecto antes de generar el archivo ejecutable.
+
+2.2.5  Incluir el archivo de recursos FOXUSER
+El archivo de recursos de FoxPro almacena informaci¢n variada que puede
+utilizar su aplicaci¢n, tal como la posici¢n de las ventanas, las
+configuraciones de color, las configuraciones de la ventana Examinar, las
+definiciones de etiquetas y las configuraciones de los controladores de
+impresora. Este archivo de recursos es una tabla/.DBF de FoxPro con un archivo
+memo asociado, denominados respectivamente FOXUSER.DBF y FOXUSER.FPT.
+
+Cuando se crea una aplicaci¢n FoxPro se almacenan muchos elementos de
+informaci¢n en el archivo FOXUSER. Si su aplicaci¢n utiliza cualquiera de
+estos recursos, deber  distribuir con la aplicaci¢n la tabla/.DBF FOXUSER (o
+la tabla/.DBF de recursos que usted cree espec¡ficamente para la aplicaci¢n).
+
+FOXUSER como archivo
+Si su aplicaci¢n utiliza informaci¢n almacenada en un archivo de recursos de
+FoxPro y distribuye la aplicaci¢n como un archivo .FXP, aseg£rese de
+distribuir FOXUSER.DBF y FOXUSER.FPT junto con la aplicaci¢n. El archivo de
+recursos debe estar situado en el mismo directorio que los archivos
+ejecutables distribuidos. Si tambi‚n distribuye un archivo de configuraci¢n
+CONFIG.FP, puede incluir el elemento de configuraci¢n RESOURCE en CONFIG.FP
+para especificar una ubicaci¢n y un nombre diferentes para el archivo de
+recursos. Tambi‚n es posible especificar en la aplicaci¢n la ubicaci¢n y el
+nombre del archivo de recursos mediante el comando SET RESOURCE.
+
+FOXUSER en un proyecto
+Si su aplicaci¢n utiliza informaci¢n almacenada en un archivo de recursos de
+FoxPro y usted distribuye la aplicaci¢n como un archivo .APP o .EXE, puede
+incluir FOXUSER.DBF y FOXUSER.FPT en el proyecto de la aplicaci¢n. Si incluye
+FOXUSER en un proyecto, ser  de s¢lo lectura y no se podr  modificar.
+
+Si no incluye el archivo de recursos en el proyecto de la aplicaci¢n, o si
+marca el archivo de recursos como excluido del proyecto de la aplicaci¢n,
+aseg£rese de distribuir el archivo de recursos junto con la aplicaci¢n.
+FOXUSER se podr  modificar si tiene el atributo de lectura/escritura.
+
+Para obtener m s informaci¢n acerca de c¢mo crear un proyecto e incluir y
+excluir archivos de un proyecto, consulte la documentaci¢n de FoxPro para
+MS-DOS.
+
+2.2.6  Incluir controladores de impresora
+Si su aplicaci¢n incluye un informe que utiliza una configuraci¢n de
+controlador de impresora o si su aplicaci¢n usa SET PDSETUP para especificar
+una configuraci¢n de controlador de impresora, deber  distribuir junto con su
+aplicaci¢n GENPD.APP, el programa de interfaz de controlador de impresora de
+FoxPro.
+
+Las configuraciones de controladores de impresora se almacenan en el archivo
+de recursos de FoxPro, FOXUSER.DBF. Si crea configuraciones de controlador de
+impresora para sus aplicaciones, incluya el archivo de recursos que contiene
+las configuraciones de controlador de impresora y su archivo memo asociado.
+
+Controladores de impresora como archivos
+Si distribuye la aplicaci¢n como un archivo .FXP, aseg£rese de distribuir
+GENPD.APP como un archivo junto con su aplicaci¢n. GENPD.APP debe estar
+situado en el mismo directorio que los archivos ejecutables distribuidos. Si
+distribuye tambi‚n un archivo de configuraci¢n CONFIG.FP, podr  incluir en
+CONFIG.FP el elemento de configuraci¢n _GENPD para especificar una ubicaci¢n
+diferente para GENPD.APP.
+
+Si su aplicaci¢n incluye configuraciones de controlador de impresora
+almacenados en el archivo de recursos FOXUSER.DBF, aseg£rese de distribuir
+FOXUSER.DBF y FOXUSER.FPT junto con su aplicaci¢n. El archivo de recursos
+FOXUSER debe estar situado en el mismo directorio que los archivos ejecutables
+distribuidos. Si distribuye un archivo de configuraci¢n CONFIG.FP, podr 
+incluir en CONFIG.FP el elemento de configuraci¢n RESOURCE para especificar
+una ubicaci¢n y un nombre diferente para el archivo de recursos. Tambi‚n es
+posible especificar el nombre y ubicaci¢n del archivo de recursos dentro de la
+aplicaci¢n mediante el comando SET RESOURCE.
+
+Controladores de impresora en un proyecto
+GENPD.APP debe distribuirse como archivo junto con su aplicaci¢n, tanto si
+incluye GENPD.APP en el proyecto como si no lo incluye. Si se incluye
+GENPD.APP en el proyecto, FoxPro lo marcar  autom ticamente como excluido del
+proyecto y s¢lo permanecer  en el proyecto como referencia.
+
+Si su aplicaci¢n incluye configuraciones de controlador de impresora
+almacenadas en el archivo de recursos de FoxPro, FOXUSER.DBF, puede incluir
+FOXUSER.DBF y FOXUSER.FPT en el proyecto de la aplicaci¢n. Si no incluye el
+archivo de recursos en el proyecto de la aplicaci¢n, aseg£rese de distribuir
+el archivo de recursos junto con la aplicaci¢n.
+
+2.2.7  Agregar ayuda a la aplicaci¢n
+Puede crear ayuda interactiva para distribuirla junto con la aplicaci¢n. El
+texto de ayuda se almacena en una tabla/.DBF de ayuda junto con la aplicaci¢n.
+Para obtener m s informaci¢n acerca de la creaci¢n de un archivo de ayuda
+personalizado, consulte la documentaci¢n de FoxPro para MS-DOS.
+
+Ayuda como archivo
+Si su aplicaci¢n utiliza un archivo de ayuda personalizado y la aplicaci¢n se
+distribuye como un archivo .FXP, aseg£rese de distribuir los archivos de ayuda
+junto con la aplicaci¢n. Los archivos de ayuda deben estar situados en el
+mismo directorio que los archivos ejecutables distribuidos. Si distribuye un
+archivo de configuraci¢n CONFIG.FP, podr  incluir en CONFIG.FP el elemento de
+configuraci¢n HELP para especificar un nombre y una ubicaci¢n diferentes para
+los archivos de ayuda. La ubicaci¢n y el nombre de los archivos de ayuda pueden
+especificarse tambi‚n dentro de la aplicaci¢n mediante el comando SET HELP.
+
+Ayuda en un proyecto
+Si su aplicaci¢n usa un archivo de ayuda personalizado y la aplicaci¢n se
+distribuye como un archivo .APP o .EXE, podr  incluir los archivos de ayuda en
+el proyecto de la aplicaci¢n. Si no incluye los archivos de ayuda en el
+proyecto de la aplicaci¢n, aseg£rese de distribuir los archivos de ayuda junto
+con la aplicaci¢n.
+
+Si los archivos de ayuda est n incluidos en el proyecto pero est n marcados
+como excluidos, deber  distribuir los archivos .DBF y .FPT junto con la
+aplicaci¢n. El usuario puede cambiar estos archivos. Si no desea que los
+usuarios tengan la posibilidad de cambiar el contenido de los archivos de
+ayuda, incl£yalos en el proyecto, pero no los marque como excluidos.
+______________________________________________________________________________
+Nota	No tiene autorizaci¢n para distribuir los archivos de ayuda o
+cualquier parte de los archivos de ayuda que se incluyen en la versi¢n de
+desarrollo de FoxPro para MS-DOS.
+______________________________________________________________________________
+
+
+2.3  Tratamiento de errores
+En ocasiones, es posible que ocurran errores inesperados durante la ejecuci¢n
+de la aplicaci¢n. Para tratar errores imprevistos, puede especificar en su
+aplicaci¢n una rutina de tratamiento de errores mediante ON ERROR. Para
+obtener m s informaci¢n acerca del tratamiento de errores, consulte ON ERROR
+en la ayuda de FoxPro.
+
+Si no especifica una rutina ON ERROR, cuando FoxPro encuentre un error
+detendr  la ejecuci¢n del programa y mostrar  una alerta de error que
+presentar  al usuario las dos opciones siguientes:
+
+*   Cancelar
+
+Si elige Cancelar, FoxPro detendr  inmediatamente la ejecuci¢n del programa y
+devolver  el control al MS-DOS.
+
+*   Ignorar
+
+Si elige Ignorar, FoxPro ignorar  la l¡nea que caus¢ el error y ejecutar  la
+siguiente l¡nea del programa. O bien, si presiona la tecla ESC durante la
+ejecuci¢n del programa, FoxPro ignorar  la pulsaci¢n ESC y reanudar  la
+ejecuci¢n sin omitir ninguna l¡nea del programa. Puede especificar en su
+aplicaci¢n un procedimiento, con ON ESCAPE, para interceptar la pulsaci¢n de
+la tecla ESC.
+______________________________________________________________________________
+Nota	 Para ver una lista y una explicaci¢n completa de los mensajes de
+error de FoxPro para MS-DOS, consulte la ayuda de FoxPro.
+______________________________________________________________________________
+
+
+
+Cap¡tulo 3:  Preparar la aplicaci¢n para su distribuci¢n
+
+Esta secci¢n contiene informaci¢n acerca de c¢mo preparar los archivos .FXP,
+.APP y .EXE de FoxPro para su distribuci¢n.
+
+3.1  Empaquetar la aplicaci¢n
+Antes de poder distribuir su aplicaci¢n, debe crear un archivo .FXP, .APP o
+.EXE para la aplicaci¢n. Use la versi¢n de desarrollo de FoxPro para MS-DOS
+para crear estos archivos.
+
+La tabla siguiente contiene una lista de las ventajas y los requisitos de cada
+tipo de archivo.
+
+______________________________________________________________________________
+Consideraciones sobre el tipo de archivo
+______________________________________________________________________________
+Tipo de
+archivo       Ventajas				  Notas
+______________________________________________________________________________
+.FXP	      Requiere menos espacio en disco.	  Requiere una Biblioteca de
+						  soporte. Si incluye la
+						  Biblioteca de soporte
+						  extendida, requiere un
+						  sistema 386 o superior y al
+						  menos 3 MB de memoria.
+
+						  Puede que se requieran otros
+						  archivos .FXP si su
+						  aplicaci¢n llama a otros
+						  programas.
+
+						  No es posible incluir otros
+						  archivos (CONFIG.FP,
+						  archivos de recursos, etc.)
+						  en el archivo .FXP.
+______________________________________________________________________________
+.APP	      Un solo archivo.			  Requiere una Biblioteca de
+						  soporte. Si incluye la
+	      Es posible incluir archivos	  Biblioteca de soporte
+	      adicionales (CONFIG.FP, archivo	  extendida, requiere un
+	      de recursos, etc.) en el archivo	  sistema 386 o superior y al
+	      .APP. Estos archivos ser n de s¢lo  menos 3 MB de memoria.
+	      lectura
+						  Puede ser mayor que un
+						  archivo .FXP.
+______________________________________________________________________________
+.EXE	      Un solo archivo.			  Requiere una Biblioteca
+compacto					  de soporte. Si incluye
+	      Requiere menos espacio en disco.	  la Biblioteca de soporte
+						  extendida, requiere un
+	      Es posible incluir archivos	  sistema 386 o superior y al
+						  menos 3 MB de memoria.
+	      adicionales (CONFIG.FP, archivo de
+	      recursos, etc.) en el archivo .EXE.
+	      Estos archivos ser n de s¢lo
+	      lectura.
+______________________________________________________________________________
+.EXE	      Un solo archivo.			  Puede ser muy grande. Puede
+aut¢nomo					  que tenga que dividir un
+	      Es posible incluir archivos	  archivo .EXE grande en dos o
+	      adicionales (CONFIG.FP, archivo de  m s discos para poder
+	      recursos, etc.) en el archivo .EXE  distribuirlo.
+	      Estos archivos ser n de s¢lo
+	      lectura.				  Requieren mucho tiempo para
+						  generarse.
+______________________________________________________________________________
+.EXE	      Un solo archivo.			  Puede ser muy grande. Puede
+extendido					  que tenga que dividir un
+aut¢nomo      Es posible incluir archivos	  archivo .EXE grande en dos
+de 32 bits    adicionales (CONFIG.FP, archivo	  o m s discos para poder
+	      de recursos, etc.) en el archivo	  distribuirlo.
+	      .EXE. Estos archivos ser n de
+	      s¢lo lectura.			  Requieren mucho tiempo para
+						  generarse.
+	      Ejecuci¢n r pida.
+						  Requieren un sistema 386 o
+						  superior y al menos 3 MB de
+						  memoria.
+______________________________________________________________________________
+
+
+3.2  Crear un .FXP
+Puede distribuir una aplicaci¢n para su uso en runtime compil ndola en un
+archivo .FXP. Para ello, elija Compilar en el men£ Programa como se explica en
+la documentaci¢n de FoxPro o utilice el comando COMPILE como se explica en la
+ayuda de FoxPro.
+
+Si su aplicaci¢n llama a otros programas, aseg£rese de compilar estos
+programas e incluirlos en los discos de distribuci¢n.
+
+3.2.1  Asegurar el c¢digo fuente para un archivo .FXP
+Si crea un archivo .FXP mediante el di logo Compilar, desactive la casilla de
+selecci¢n "Info para depuraci¢n" y seleccione la casilla de selecci¢n
+"Codificado". Si crea un archivo .FXP con el comando COMPILE, incluya las
+palabras clave NODEBUG y ENCRYPT. El primer paso excluye la informaci¢n de
+depuraci¢n del archivo .FXP, reduciendo el tama¤o del c¢digo compilado y
+ahorrando espacio en el disco, e impide que los usuarios de la aplicaci¢n
+compilada puedan ver la ejecuci¢n del programa en la ventana Seguimiento. El
+segundo paso impide que los usuarios puedan alterar el c¢digo fuente.
+
+3.3  Crear archivos .APP y .EXE
+Cuando su proyecto contenga todos los archivos necesarios, podr  generar un
+archivo de aplicaci¢n .APP o un archivo ejecutable .EXE para su distribuci¢n.
+Puede generar un archivo .APP mediante la ventana Proyecto o con el comando
+BUILD APP y puede generar un archivo .EXE mediante la ventana Proyecto o con
+el comando BUILD EXE.
+
+______________________________________________________________________________
+Importante    Si existe un archivo .APP con el mismo nombre que el archivo
+.EXE aut¢nomo, FoxPro para MS-DOS lo eliminar  cuando usted cree el archivo
+.EXE. Tenga en cuenta tambi‚n que si existe un archivo .EXE y usted crea un
+archivo .APP con el mismo nombre, FoxPro para MS-DOS eliminar  el archivo
+.EXE. Esto evitar  que usted ejecute o distribuya el archivo equivocado.
+______________________________________________________________________________
+
+Es posible incluir una amplia variedad de archivos en el proyecto. Por
+ejemplo, puede incluir una tabla/.DBF de recursos FOXUSER y un archivo de
+configuraci¢n CONFIG.FP.
+
+______________________________________________________________________________
+Importante
+Si en un proyecto incluye un archivo de configuraci¢n de FoxPro, ‚ste deber 
+llamarse CONFIG.FP.
+______________________________________________________________________________
+
+______________________________________________________________________________
+Nota	Para obtener m s informaci¢n acerca de c¢mo crear un proyecto e
+incluir y excluir archivos de un proyecto, consulte la documentaci¢n de
+Microsoft FoxPro para MS-DOS.
+______________________________________________________________________________
+
+3.3.1  Asegurar el c¢digo fuente para archivos .APP y .EXE
+Desactive la casilla de selecci¢n "Info para depuraci¢n" en el di logo
+Opciones del proyecto, seleccione la casilla "Codificado" y guarde el proyecto
+antes de generar la aplicaci¢n o el archivo ejecutable. Estos pasos protegen
+el c¢digo fuente. Para mostrar el cuadro de di logo Opciones del proyecto,
+elija Opciones en el men£ Proyecto.
+
+3.3.2  Desde el Administrador de proyectos
+Para crear un archivo .APP cuando el proyecto de la aplicaci¢n se encuentra
+abierto en la ventana Proyecto, elija el bot¢n de comando"Generar". Aparecer 
+el cuadro de di logo Opciones al generar. En dicho cuadro de di logo, elija el
+bot¢n de comando "Generar aplicaci¢n".
+
+Para crear un archivo .EXE cuando el proyecto de la aplicaci¢n se encuentra
+abierto en la ventana Proyecto, elija el bot¢n de comando "Generar". Aparecer 
+el di logo Opciones al generar. En dicho cuadro de di logo, elija el bot¢n de
+comando "Generar ejecutable".
+
+______________________________________________________________________________
+Importante    El bot¢n de comando "Generar ejecutable" aparecer  desactivado
+si no se ha instalado el Kit de distribuci¢n de FoxPro.
+______________________________________________________________________________
+
+Puede crear tres tipos de archivos .EXE:
+
+ *   Compacto
+
+Un archivo .EXE compacto requiere la Biblioteca de soporte .EXE de FoxPro. La
+Biblioteca de soporte .EXE de FoxPro consta de tres archivos:  FOXD2600.ESL,
+la Biblioteca de soporte .EXE est ndar, FOXD2600.ESO y la Biblioteca de soporte
+.EXE extendida de 32 bits FOXDX260.ESL.
+
+ *   Aut¢nomo
+
+Crea un archivo .EXE completamente autocontenido que tiene los mismos
+requisitos que la versi¢n est ndar de FoxPro para MS-DOS.
+
+ *   Aut¢nomo extendido
+
+Crea un archivo .EXE completamente autocontenido que tiene los mismos
+requisitos que la versi¢n extendida de 32 bits de FoxPro para MS-DOS.
+
+3.3.3  Con el comando BUILD APP
+Puede usar BUILD APP para crear un archivo .APP en lugar de generar el archivo
+.APP desde la ventana Proyecto. Puede usar BUILD APP en un programa o en la
+ventana Comandos.
+
+BUILD APP crea un archivo .APP a partir de un proyecto. Antes de usar BUILD
+APP para crear el archivo .APP, aseg£rese de que su proyecto contenga todos
+los archivos que necesite la aplicaci¢n. Las opciones de generaci¢n
+especificadas en el cuadro de di logo Opciones al generar se guardan junto con
+el proyecto y son utilizadas por BUILD APP.
+
+Las referencias no resueltas u otros errores que se encuentren durante el
+proceso de generaci¢n se presentan y opcionalmente se almacenan, en el
+directorio del proyecto, en un archivo de errores que tiene el mismo nombre
+que el proyecto y la extensi¢n .ERR. Para obtener informaci¢n adicional acerca
+del uso de BUILD APP para crear un archivo .APP, consulte la ayuda de FoxPro.
+
+3.3.4  Con el comando BUILD EXE
+Puede usar el comando BUILD EXE para crear un archivo .EXE en lugar de generar
+el archivo .EXE ejecutable desde la ventana Proyecto. Puede usar BUILD EXE en
+un programa o en la ventana Comandos. Sin embargo, dispondr  de m s opciones
+si crea el archivo .EXE desde la ventana Proyecto.
+
+BUILD EXE crea un archivo .EXE a partir de un proyecto. Antes de usar BUILD
+EXE para crear el archivo .EXE, aseg£rese de que su proyecto contenga todos
+los archivos que necesite la aplicaci¢n. Las opciones de generaci¢n
+especificadas en el cuadro de di logo Opciones al generar se guardan junto con
+el proyecto y son utilizadas por BUILD APP. Las referencias no resueltas u
+otros errores que se encuentren durante el proceso de generaci¢n se presentan
+y opcionalmente se almacenan, en el directorio del proyecto, en un archivo de
+errores que tiene el mismo nombre que el proyecto y la extensi¢n .ERR.
+
+Si incluye la palabra clave opcional STANDALONE con el comando BUILD EXE se
+crear  un archivo .EXE versi¢n est ndar completamente autocontenido. No
+necesitar  distribuir ning£n archivo adem s del archivo .EXE aut¢nomo, pero
+dependiendo de la naturaleza de su aplicaci¢n puede que desee incluir algunos
+de los archivos enumerados en la tabla Archivos que puede necesitar la
+aplicaci¢n, en el cap¡tulo 5.
+
+Un archivo .EXE aut¢nomo tiene los mismos requisitos que la versi¢n est ndar
+de FoxPro para MS-DOS. Para crear un archivo .EXE aut¢nomo, los archivos
+siguientes deber n estar en el mismo directorio que los archivos de FoxPro
+para MS-DOS:
+
+FOXPRO.LIB			      FOXMATHM.LIB
+FOXPROS.LIB			      WLINK8.EXE
+FOXCLIBM.LIB			      WOVL.LIB
+
+Si incluye la cl usula opcional EXTENDED en el comando BUILD.EXE se crear  un
+archivo .EXE versi¢n extendida de 32 bits completamente autocontenido. No
+necesitar  distribuir ning£n otro archivo adem s del archivo .EXE aut¢nomo de
+32 bits, pero puede que desee incluir algunos de los archivos enumerados en la
+tabla Archivos que puede necesitar la aplicaci¢n, en el cap¡tulo 5.
+
+Un archivo .EXE aut¢nomo extendido de 32 bits tiene los mismos requisitos que
+la versi¢n extendida de 32 bits de FoxPro para MS-DOS. Para crear un archivo
+.EXE aut¢nomo extendido de 32 bits, los archivos siguientes deber n estar en
+el mismo directorio que los archivos de FoxPro para MS-DOS:
+
+FOXPROX.LIB			      FOXMATHR.LIB
+FOXPROSX.LIB			      FOXBIND.EXE
+FOXCLIBR.LIB			      WLINK8.EXE
+
+______________________________________________________________________________
+Importante    Los archivos ejecutables aut¢nomos requieren mucho m s tiempo
+(aproximadamente de 5 a 60 minutos m s) para generarse que los archivos
+ejecutables compactos. Si piensa que el proceso de generaci¢n est  llevando
+mucho tiempo o que su sistema se ha bloqueado, espere hasta que se complete el
+proceso de compilaci¢n. No reinicie el sistema, ya que esto podr¡a da¤ar sus
+archivos.
+______________________________________________________________________________
+
+Si no incluye la cl usula STANDALONE o EXTENDED con el comando BUILD EXE,
+FoxPro para MS-DOS crear  un archivo .EXE compacto. Para ejecutar un archivo
+.EXE compacto, la Biblioteca de soporte .EXE de FoxPro deber  estar en la ruta
+del MS-DOS. La Biblioteca de soporte .EXE consta de tres archivos:
+FOXD2600.ESL, la Biblioteca de soporte .EXE est ndar FOXD2600.ESO y la
+Biblioteca de soporte .EXE extendida de 32 bits FOXDX260.ESL.
+
+
+
+Cap¡tulo 4:  Probar la aplicaci¢n runtime
+
+Despu‚s de compilar la aplicaci¢n runtime, es importante probar la aplicaci¢n
+en el entorno runtime, usando los mismos procedimientos de inicio que
+recomiende para la aplicaci¢n.
+
+Este cap¡tulo describe varias maneras de configurar e iniciar la aplicaci¢n y
+de tratar los errores que pueden aparecer al probar la aplicaci¢n compilada.
+
+4.1  Ejecutar archivos .FXP, .APP y .EXE
+Un archivo .FXP o .APP puede iniciarse desde el s¡mbolo del sistema de MS-DOS
+o desde un archivo de proceso por lotes usando el cargador runtime. Tambi‚n
+puede usar el archivo CONFIG.FP para iniciar un archivo .FXP o .APP
+directamente desde el s¡mbolo del sistema de MS-DOS sin incluir un nombre de
+archivo. Para iniciar un archivo .EXE, introduzca el nombre del archivo a
+continuaci¢n del s¡mbolo del sistema de MS-DOS.
+
+4.1.1  S¡mbolo del sistema de MS-DOS
+
+Ejecutar un archivo .FXP o .APP
+Un archivo .FXP o .APP puede iniciarse desde el s¡mbolo del sistema de MS-DOS
+usando el cargador runtime. Utilice esta l¡nea de comando:
+
+FOXR <nombre de archivo>
+
+Especifique con <nombre de archivo> el nombre del archivo .FXP o .APP que
+desea ejecutar.
+
+Ejecutar un archivo .EXE compacto
+Para ejecutar un archivo .EXE compacto, escriba su nombre en el s¡mbolo del
+sistema de MS-DOS y presione la tecla ENTRAR. Los archivos .EXE compactos
+act£an autom ticamente como el cargador runtime y ejecutan la versi¢n m s
+avanzada de la Biblioteca de soporte. La Biblioteca de soporte debe estar en
+la ruta del MS-DOS. Puede incluir el modificador -X despu‚s del nombre del
+archivo .EXE compacto para forzar al archivo ejecutable a usar la Biblioteca
+de soporte est ndar. Incluya +X despu‚s del nombre de archivo para forzar el
+uso de la Biblioteca de soporte extendida de 32 bits.
+
+Ejecutar un archivo .EXE aut¢nomo est ndar o un archivo .EXE aut¢nomo
+extendido de 32 bits
+Para ejecutar un archivo .EXE aut¢nomo est ndar o un archivo .EXE aut¢nomo
+extendido de 32 bits, escriba su nombre de archivo a continuaci¢n del s¡mbolo
+del sistema de MS-DOS y presione ENTRAR.
+
+Incluir modificadores de l¡nea de comandos
+Puede incluir los modificadores -C, -E, -K y/o -T de l¡nea de comandos despu‚s
+del nombre de archivo al ejecutar un archivo .FXP, .APP o .EXE. Puede agregar
+los modificadores en la misma l¡nea de comandos, despu‚s de los modificadores
+del cargador runtime. Los modificadores de l¡nea de comandos y los
+modificadores del cargador runtime se explican detalladamente m s adelante en
+este mismo cap¡tulo.
+
+Transferir par metros desde el s¡mbolo del sistema de MS-DOS a una aplicaci¢n
+Si la primera l¡nea de programa del archivo fuente del archivo .FXP, .APP o
+.EXE es una instrucci¢n PARAMETERS, podr  transferir par metros al programa
+desde la l¡nea de comandos de MS-DOS. Especifique los par metros despu‚s de
+todos los modificadores del cargador runtime y de l¡nea de comandos, y separe
+los par metros con espacios en blanco.
+
+Ejemplo:
+Inicie MIEXE.EXE con la l¡nea de comandos:
+
+MIEXE HOLA ADIOS
+
+El primer programa ejecutado en MIEXE.EXE tiene como primera l¡nea:
+
+PARAMETERS x y
+
+Los par metros de tipo alfanum‚rico deben incluirse entre comillas dobles
+(" ") s¢lo si los par metros incluyen espacios en blanco o caracteres
+especiales. Si utiliza comillas simples, FoxPro para MS-DOS generar  el
+mensaje de error: "N£mero de par metros incorrecto".
+
+Todos los par metros se transfieren como de tipo alfanum‚rico. Por ejemplo, si
+transfiere el n£mero 1 a un programa, el programa identificar  la variable
+como de tipo alfanum‚rico.
+
+4.1.2  Archivo de proceso por lotes
+Puede crear un archivo de comandos por lotes que ejecute el archivo .FXP, .APP
+o .EXE.
+
+Por ejemplo, para crear un archivo de comandos por lotes denominado CUENTA.BAT
+que ejecute una aplicaci¢n FoxPro para MS.DOS denominada CUENTA1.APP,
+introduzca la l¡nea siguiente en un archivo creado con el editor de texto de
+FoxPro y luego guarde el archivo como CUENTA.BAT:
+
+FOXR CUENTA1.APP
+
+Al escribir el siguiente comando a continuaci¢n del s¡mbolo del sistema se
+ejecutar  la aplicaci¢n de FoxPro para MS-DOS denominada CUENTA1.APP:
+
+CUENTA
+
+Tambi‚n puede incluir en el archivo de proceso por lotes modificadores del
+cargador y modificadores de l¡nea de comandos despu‚s del nombre de la
+aplicaci¢n. Ambos tipos de modificadores se explican detalladamente m s
+adelante en este mismo cap¡tulo.
+
+4.1.3  Cargador runtime
+El cargador runtime de FoxPro, FOXR.EXE, se utiliza para ejecutar archivos
+.APP y .FXP. FOXR.EXE comprueba qu‚ versi¢n o versiones de la Biblioteca de
+soporte de FoxPro se encuentran disponibles (est ndar o extendida de 32 bits).
+Luego invoca la Biblioteca de la versi¢n m s avanzada que pueda ejecutarse en
+el sistema. Tenga en cuenta que el cargador consume algo de memoria.
+
+Los archivos .EXE compactos act£an autom ticamente como cargadores e invocan
+la versi¢n m s avanzada disponible de la Biblioteca de soporte de FoxPro.
+
+Cuando FOXR.EXE tiene la opci¢n de ejecutar distintas versiones de la
+Biblioteca de soporte de FoxPro, se ejecuta la versi¢n m s avanzada.
+
+El orden de precedencia es el siguiente:
+1.  Biblioteca de soporte de FoxPro extendida de 32 bits
+2.  Biblioteca de soporte de FoxPro est ndar
+
+Para usar FOXR.EXE, escriba FOXR a continuaci¢n del s¡mbolo del sistema de MS-
+DOS y presione ENTRAR. FOXR invocar  la versi¢n apropiada de la Biblioteca de
+soporte de FoxPro.
+
+4.1.4  Modificadores del cargador runtime
+Para ejecutar una versi¢n espec¡fica de la Biblioteca de soporte de FoxPro,
+puede especificar modificadores opcionales del cargador runtime despu‚s del
+nombre del cargador o del archivo .EXE compacto.
+
+La tabla siguiente describe los modificadores del cargador runtime, FOXR.EXE.
+
+______________________________________________________________________________
+Modificadores del cargador runtime FOXR.EXE
+______________________________________________________________________________
+Modificador	Significado				Notas
+______________________________________________________________________________
++X		Cargar versi¢n extendida de 32 bits
+-X		No cargar versi¢n extendida de 32 bits
+-M<n>		Con <n> K de memoria libres, ejecutar	Valor <n>
+		la versi¢n extendida.			predeterminado = 2000
+/?		Mostrar texto de ayuda.
+______________________________________________________________________________
+
+Para forzar la ejecuci¢n de una versi¢n, incluya el signo + delante del
+modificador. Para evitar que se ejecute una versi¢n, incluya el signo -
+delante del modificador.
+
+Ejemplos
+Para ver una lista de los modificadores disponibles para el cargador, escriba
+en el s¡mbolo del sistema de MS-DOS el nombre del cargador seguido de un
+espacio en blanco y /?, y luego presione ENTRAR.
+
+FOXR /?
+
+En este ejemplo se utiliza FOXR.EXE con el modificador +X para forzar que se
+invoque la Biblioteca de soporte extendida:
+
+FOXR +X
+
+La configuraci¢n predeterminada para el cargador runtime FOXR invoca la
+Biblioteca de soporte versi¢n est ndar si hay menos de 2 MB de memoria
+disponibles, y la Biblioteca de soporte extendida si hay 2 MB de memoria o
+m s. En este ejemplo, el modificador -M se utiliza para que se requieran al
+menos 4 MB de memoria libre antes de que el cargador intente usar la
+Biblioteca de soporte extendida.
+
+FOXR -M4000
+
+4.1.5  Modificadores de l¡nea de comandos
+Los modificadores de l¡nea de comandos de FoxPro, o de inicio, permiten
+configurar la aplicaci¢n que va a distribuir. Los modificadores se incluyen
+despu‚s del nombre de archivo del cargador runtime. Si incluye modificadores
+del cargador runtime (-X, +X), incluya los modificadores de l¡nea de comandos
+despu‚s de los modificadores del cargador runtime. Si incluye m s de un
+modificador, sep relos con espacios. A continuaci¢n de los modificadores,
+especifique el nombre de su aplicaci¢n de FoxPro para MS-DOS.
+
+Especificar un archivo de configuraci¢n: -C
+Puede especificar el nombre del archivo de configuraci¢n que usar  FoxPro para
+MS-DOS con el modificador de inicio -C. La sintaxis de este modificador es:
+
+-C<nombre de ruta>\<archivo>
+
+Si no incluye <archivo>, deber  incluir de todas formas una barra inversa (\)
+despu‚s del <nombre de ruta> para que FoxPro para MS-DOS busque un archivo
+CONFIG.FP existente.
+
+Evitar el uso de la memoria expandida: -E
+Para evitar que FoxPro para MS-DOS utilice memoria expandida, use el
+modificador -E.
+
+FOXR -E
+
+Evitar el uso de F11 o F12: -K
+Para evitar el uso de las teclas F11 y F12 en la aplicaci¢n distribuida, use
+el modificador -K.
+
+FOXR -K
+
+
+Suprimir la pantalla de introducci¢n de FoxPro: -T
+Puede evitar que en la aplicaci¢n que usted distribuya se presente la pantalla
+de introducci¢n de FoxPro; para ello, incluya el modificador -T. El ejemplo
+siguiente ejecuta el programa ORGANIZE y suprime la pantalla de introducci¢n
+de FoxPro.
+
+FOXR -T ORGANIZE
+
+______________________________________________________________________________
+Nota	Para obtener m s informaci¢n acerca de los modificadores de inicio,
+consulte la documentaci¢n de FoxPro para MS-DOS.
+______________________________________________________________________________
+
+4.1.6  Especificar modificadores con FOXPROSWX
+Si ejecuta el cargador runtime o un archivo .EXE compacto sin ninguno de los
+modificadores, el cargador runtime o el archivo .EXE compacto buscar  los
+modificadores especificados en una variable de entorno del MS-DOS denominada
+FOXPROSWX. Si existe FOXPROSWX, el cargador runtime o el archivo .EXE compacto
+utilizar  los modificadores que dicha variable contenga. Cree esta variable de
+entorno del MS-DOS mediante el comando SET del MS-DOS.
+
+FOXPROSWX puede especificar los modificadores -C, -E, -K y -T de l¡nea de
+comandos despu‚s de los modificadores del cargador runtime. Tambi‚n puede
+incluir el nombre de la aplicaci¢n que se debe ejecutar.
+
+En el ejemplo siguiente, se crea FOXPROSWX en el s¡mbolo del sistema de MS-DOS
+y se almacena en ella el modificador -T (suprimir la pantalla de
+introducci¢n). Luego se ejecuta el cargador runtime FOXR.EXE. Puesto que la
+l¡nea de comando del cargador runtime no especifica ning£n modificador, el
+cargador utiliza el modificador contenido en FOXPROSWX.
+
+SET FOXPROSWX= -T
+FOXR
+
+Si se incluyen modificadores en la l¡nea de comandos del cargador runtime,
+‚stos complementar n o, en caso de conflicto, anular n los modificadores de la
+variable de entorno FOXPROSWX.
+
+______________________________________________________________________________
+Importante    No incluya espacios en blanco entre FOXPROSWX y el signo igual.
+Para obtener informaci¢n adicional acerca de la creaci¢n de una variable de
+entorno del MS-DOS mediante SET, consulte el manual del MS-DOS.
+______________________________________________________________________________
+
+4.1.7  Archivo CONFIG.FP
+Puede iniciar un archivo .FXP o .APP directamente desde el s¡mbolo del sistema
+de MS-DOS sin incluir el nombre del archivo .FXP o .APP en la l¡nea de
+comandos del cargador runtime, si el archivo CONFIG.FP contiene la l¡nea:
+
+COMMAND = DO <nombre de archivo>
+
+Cuando escriba FOXR, FoxPro para MS-DOS leer  el archivo CONFIG.FP y ejecutar 
+el archivo .FXP o .APP especificado mediante COMMAND. S¢lo se puede incluir
+una instrucci¢n COMMAND en el archivo CONFIG.FP.
+
+
+
+Cap¡tulo 5:  Crear discos de distribuci¢n
+
+Este cap¡tulo proporciona informaci¢n acerca de la creaci¢n de discos de
+distribuci¢n para la aplicaci¢n, los archivos necesarios para distribuir una
+aplicaci¢n completa y los archivos que est  prohibido distribuir.
+
+5.1  Hacer copias de seguridad del c¢digo fuente
+Como ocurre en todos los  mbitos del desarrollo de aplicaciones, es
+conveniente hacer copias de seguridad completas de los archivos originales del
+programa antes de crear el archivo o archivos .FXP, .APP y .EXE. Guarde las
+copias de seguridad en un lugar distinto que las aplicaciones compiladas.
+______________________________________________________________________________
+Advertencia    Aseg£rese de guardar copias separadas de los archivos fuente
+originales para su uso futuro. No es posible volver a crear programas fuente a
+partir del c¢digo compilado.
+______________________________________________________________________________
+
+5.2  Crear un archivo personalizado de instalaci¢n por lotes
+Puede que desee crear un archivo personalizado de proceso por lotes que
+instale su aplicaci¢n. Consulte la documentaci¢n de Microsoft MS-DOS para
+obtener informaci¢n acerca de c¢mo crear archivos de proceso por lotes del MS-
+DOS. Tambi‚n puede encontrar ejemplos £tiles de archivos personalizados de
+instalaci¢n por lotes en libros de otras empresas que traten sobre el
+desarrollo de aplicaciones FoxPro.
+
+5.3  Archivos necesarios del Kit de distribuci¢n de FoxPro
+Cuando vaya a incluir su archivo o archivos .FXP, .APP o .EXE en un disco,
+aseg£rese de incluir tambi‚n los dem s archivos necesarios.
+
+Algunos archivos ser n necesarios para la mayor¡a de las aplicaciones que
+distribuya porque son necesarios para el entorno runtime. Otros archivos s¢lo
+se necesitar n si las aplicaciones incluyen determinadas caracter¡sticas. La
+tabla siguiente contiene una lista de los archivos que deber  distribuir para
+cada tipo de aplicaci¢n.
+
+______________________________________________________________________________
+Archivos necesarios en los discos de distribuci¢n seg£n el tipo de aplicaci¢n.
+______________________________________________________________________________
+Cuando distribuya    Con esta	  Deber  distribuir    Descripci¢n
+una aplicaci¢n	     biblioteca   tambi‚n estos
+de este tipo:	     de soporte:  archivos:
+______________________________________________________________________________
+.FXP		     Est ndar	  FOXR.EXE		Cargador runtime
+				  FOXD2600.ESL		Biblioteca de soporte
+				  FOXD2600.ESO		Biblioteca de soporte
+
+.FXP		     Extendida	  FOXR.EXE		Cargador runtime
+				  FOXDX260.ESL		Biblioteca de soporte
+							extendida de 32 bits
+
+.APP		     Est ndar	  FOXR.EXE		Cargador runtime
+				  FOXD2600.ESL		Biblioteca de soporte
+				  FOXD2600.ESO		Biblioteca de soporte
+
+.APP		     Extendida	  FOXR.EXE		Cargador runtime
+				  FOXPROX.ESL		Biblioteca de soporte
+							extendida de 32 bits
+
+.EXE compacto	     Est ndar	  FOXD2600.ESL		Biblioteca de soporte
+				  FOXD2600.ESO		Biblioteca de soporte
+
+.EXE compacto	     Extendida	  FOXDX260.ESL		Biblioteca de soporte
+							extendida de 32 bits
+
+.EXE aut¢nomo	     (no se requieren archivos de Bibliotecas de soporte ni
+		     cargador runtime para ninguna de las versiones)
+______________________________________________________________________________
+
+
+5.4  Otros archivos necesarios
+Puede que necesite incluir archivos adicionales en sus discos de distribuci¢n
+para dar soporte a ciertas caracter¡sticas incluidas en la aplicaci¢n. La
+tabla siguiente contiene una lista de los archivos que puede necesitar y
+cu ndo se requieren.
+
+______________________________________________________________________________
+Archivos que puede necesitar la aplicaci¢n
+______________________________________________________________________________
+Archivo       Descripci¢n		      Se necesita
+______________________________________________________________________________
+CONFIG.FP     Archivo de configuraci¢n	      Si desea aplicar configuraciones
+	      para la aplicaci¢n	      personalizadas a la aplicaci¢n
+
+FOXSWAP.COM				      Si la aplicaci¢n usa RUN con el
+					      modificador /N
+
+FOXUSER.DBF y Archivo de recursos	      Si desea aplicar configuraciones
+FOXUSER.FPT				      personalizadas a la aplicaci¢n
+
+*.FKY	      Archivos de macros de teclado   Si ha creado macros de teclado
+					      personalizadas para la
+					      aplicaci¢n
+
+GENPD.APP     Aplicaci¢n de controladores     Si distribuye con la aplicaci¢n
+	      de impresora		      configuraciones de controladores
+					      de impresora personalizados
+
+*.MEM	      Archivo de variables de memoria Para personalizar o inicializar
+					      variables de memoria
+
+Archivos      Archivos marcados como	      Cuando hay archivos que no se
+excluidos     "Excluir" en el proyecto de la  pueden incluir en el proyecto
+	      aplicaci¢n
+
+DRIVER2.PLB   Aplicaci¢n de controladores de  Si la aplicaci¢n requiere
+	      impresora 		      controladores de impresora
+
+______________________________________________________________________________
+______________________________________________________________________________
+
+Nota  Se recomienda incluir FOXPRO.INT, el archivo internacional de FoxPro que
+proporciona secuencias de ordenaci¢n adicionales y soporte de p ginas de
+c¢digo, junto con la aplicaci¢n a distribuir. Debe incluir FOXPRO.INT junto
+con la aplicaci¢n si ‚sta utiliza una secuencia de ordenaci¢n diferente de
+MACHINE o si se ejecuta en m£ltiples plataformas de FoxPro. Incluya FOXPRO.INT
+en el directorio ra¡z de la estructura de directorios que contenga los
+archivos que desee incluir en los discos de distribuci¢n.
+______________________________________________________________________________
+
+5.5  Archivos prohibidos
+El contrato de licencia prohibe la distribuci¢n de los siguientes archivos
+est ndar de FoxPro para MS-DOS. Para obtener m s informaci¢n al respecto,
+consulte el contrato de licencia Microsoft.
+
+______________________________________________________________________________
+Archivos que no puede distribuir con las aplicaciones
+______________________________________________________________________________
+Archivo 	       Descripci¢n
+______________________________________________________________________________
+FOXHELP.DBF	       Archivo de ayuda de FoxPro
+FOXHELP.FPT	       Archivo memo de ayuda de FoxPro
+FOXCLIBM.LIB
+FOXMATHM.LIB
+FOXPRO.LIB
+FOXPROS.LIB
+WOVL.LIB	       Para crear archivos .EXE aut¢nomos versi¢n est ndar
+FOXCLIBR.LIB
+FOXBIND.EXE
+FOXMATHR.LIB
+FOXPROSX.LIB
+FOXPROX.LIB	       Para crear archivos .EXE aut¢nomos versi¢n extendida
+		       de 32 bits
+WLINK8.EXE	       Vinculador para crear archivos .EXE aut¢nomos
+FOXPRO.EXE
+FOXPROX.EXE
+FOX.EXE
+FOXPRO.OVL	       Archivos de programa de la versi¢n de desarrollo de
+		       FoxPro
+______________________________________________________________________________
+
+Documentaci¢n de FoxPro
+No est  autorizada la reproducci¢n o distribuci¢n, total o parcial, de la
+documentaci¢n o de los archivos de ayuda de FoxPro para MS-DOS.
+
+
+Condiciones para usar c¢digo de las aplicaciones de ejemplo de FoxPro
+
+El contrato de licencia le prohibe incluir ninguna de las aplicaciones de
+ejemplo de FoxPro para MS-DOS. Sin embargo, puede usar fragmentos del c¢digo
+de las aplicaciones de ejemplo como ejemplos para crear sus propias
+aplicaciones.
+
+<Fin de DKREAD.WRI>
+
+
+
+

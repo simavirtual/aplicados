@@ -1,0 +1,11 @@
+#
+#  96.03.15    DM.LNK
+#
+#  This sample link file demonstrates how to create
+#  a DOS extended DLL with Microsoft Visual C/C++
+#
+
+@d                         # Include generic link file
+
+lib blxmvc15               # Blinker DOS extender library for Visual C/C++
+lib llibce                 # Microsoft Visual C/C++ library

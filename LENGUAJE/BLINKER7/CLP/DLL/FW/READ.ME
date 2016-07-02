@@ -1,0 +1,40 @@
+
+READ.ME - Blinker 4 DLL Stub for FivewWin.
+-------------------------------------------
+
+ The accompanying file FiveSTUB.LIB should be linked to any DLLs containing
+ FiveWin code. It provides the assembled FiveStub.asm code that will resolve
+ unresolved externals to functions within the FiveWin and FiveDB libraries.
+ If you call a FiveWin\FiveDB function from the DLL that has not been linked
+ into the main .EXE, then your application will be ended with a message that
+ identifies the culprit. 
+
+ Please be aware, that the FiveWin libraries should only be linked to the
+ main .EXE. !
+
+ If you have to call functions that have not yet been included in the list,
+ you can easily create a dummy function and link it to your DLL :
+
+   FUNCTION NotIncluded()
+   RETURN MsgAlert( "Function " + ProcName() + "() has not been linked in ! ")
+
+ This will resolve unresolved external errors from Blinker, and your dummy
+ function is executed if NotIncluded() is not found, notifying you about the
+ missing module.
+
+ 
+ The following files are included in the FW directory :
+ ------------------------------------------------------------------------
+  Read.me              This file ..  
+
+  FiveStub.Lib         Library that should be linked with your DLL
+
+  FiveExe.mak          The rMake script to create a sample .EXE
+  FiveExe.lnk          The link script to create the sample .EXE
+  FiveExe.prg          Fivewin sample application that will use the DLL
+
+  FiveDLL.mak          rMake script to create the sample .DLL
+  FiveDLL.lnk          The link script to create the sample .DLL
+  FiveDLL.prg          Fivewin sample that will be placed inside the DLL
+
+

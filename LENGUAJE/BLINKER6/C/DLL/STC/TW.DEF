@@ -1,0 +1,15 @@
+;
+;  96.03.23    TW.DEF
+;
+;  This sample module definition file demonstrates how to
+;  create a Windows EXE to use a statically linked DLL.
+;
+
+name        't'            ; Indicate an EXE and specify its module name
+exetype     windows 3.1    ; It is for Windows 3.1 and above
+heapsize    1024           ; It requires a local heap of 1 Kb
+stacksize   8192           ; It requires a stack of 8 Kb
+
+imports                    ; It imports the following symbols
+   _test = d.testexp       ; Imports testexp from D.DLL as _test
+

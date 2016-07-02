@@ -1,0 +1,22 @@
+#
+#  96.02.08    TW.LNK
+#
+#  This sample link file is included by the compiler
+#  specific link files used to create a Windows EXE.
+#
+
+out tw                     # Output file name
+fi tw                      # List OBJ files here
+
+defbegin
+   name        'tw'
+   exetype     windows 3.1
+   heapsize    1024
+   stacksize   8192
+   imports
+      _test = d.testexp
+defend
+
+nodef
+nobell
+map s,a

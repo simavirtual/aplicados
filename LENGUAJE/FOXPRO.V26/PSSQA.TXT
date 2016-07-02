@@ -1,0 +1,1038 @@
+                           PSSQA.TXT
+*************************************************************
+         Respuestas a preguntas frecuentes acerca de
+
+      Microsoft(R) FoxPro(R) para MS-DOS(R) Versi¢n 2.6
+
+(C)1994 Microsoft Corporation. Reservados todos los derechos.
+*************************************************************
+
+
+=========
+CONTENIDO
+=========
+
+Parte   Descripci¢n
+-----   ----------------
+  1     Temas de redes
+  2     Convertir desde FoxPro 2.0 a FoxPro 2.6 para MS-DOS
+  3     Temas de impresi¢n 
+  4     Pantallas 
+  5     Importar datos 
+  6     Comando BROWSE 
+  7     Crear aplicaciones y ejecutables
+  8     Nota para el usuario sobre el uso del espa§ol
+
+----------------------------------------------------------
+
+
+=======================
+Parte 1: Temas de redes
+=======================
+
+Preguntas
+---------
+
+1  Cuando un segundo usuario carga Microsoft FoxPro para MS-DOS 
+   en mi red, dicho usuario recibe el mensaje de error "Archivo 
+   en uso por otro usuario". ®C¢mo puedo corregir ese problema?
+2  En un entorno de red, ®d¢nde crea FoxPro los archivos 
+   temporales?
+3  Al escribir en un archivo, aparece el mensaje de error
+   "Denegado el acceso al archivo". ®C¢mo puedo corregir ese
+   problema?
+4  ®C¢mo puedo resolver el error "Violaci¢n de compartici¢n al
+   leer la unidad" de FoxPro?
+----------------------------------------------------------
+
+Pregunta 1
+
+Cuando un segundo usuario carga Microsoft FoxPro para MS-DOS en 
+mi red, dicho usuario recibe el mensaje de error "Archivo en 
+uso por otro usuario". ®C¢mo puedo corregir este problema?
+
+Respuesta 1
+
+Si est† utilizando una red interpares distinta de Windows para 
+Trabajo en Grupo, deber† cargar primero el programa SHARE de 
+MS-DOS y verificar a continuaci¢n que los archivos de FoxPro 
+est†n marcados como de s¢lo lectura.
+
+FoxPro utiliza un archivo de recursos llamado FOXUSER para 
+almacenar informaci¢n acerca de las ventanas, los conjuntos de 
+colores y otros objetos de FoxPro. La base de datos FOXUSER 
+s¢lo se puede compartir si dicho archivo est† marcado como de 
+s¢lo lectura. Si aparece este mensaje de error cuando intenta 
+abrir un archivo de base de datos, aseg£rese de que todos los 
+usuarios tienen SET EXCLUSIVE como OFF.
+----------------------------------------------------------
+
+Pregunta 2
+
+En un entorno de red, ®d¢nde crea FoxPro los archivos 
+temporales?
+
+Respuesta 2
+
+FoxPro crea los archivos temporales en el directorio activo de 
+trabajo, a menos que usted designe espec°ficamente otra 
+ubicaci¢n alternativa incluyendo una o varias de las 
+instrucciones EDITWORK, SORTWORK, PROGWORK y/o TMPFILES en el 
+archivo CONFIG.FP.
+
+Si las estaciones de trabajo locales tienen discos duros de 
+tama§o ajustable con mucho espacio libre o con grandes 
+cantidades de RAM, puede mejorar el rendimiento en el entorno 
+multiusuario situando los archivos temporales de trabajo de 
+FoxPro en la unidad local o en una unidad RAM. Redirigir estos 
+archivos a una unidad local o a una unidad RAM proporciona 
+mayor velocidad, ya que se reduce la necesidad de acceder a la 
+unidad de red.
+
+En redes peque§as que tengan estaciones de trabajo m†s antiguas 
+con discos duros lentos, puede probar a mejorar el rendimiento 
+dejando los archivos temporales de FoxPro en el servidor de 
+archivos. En caso de duda, dirija los archivos temporales al 
+disco duro local.
+----------------------------------------------------------
+
+Pregunta 3
+
+Aparece el mensaje de error "Denegado el acceso al archivo" al 
+escribir en un archivo. ®C¢mo puedo corregir este problema?
+
+Respuesta 3
+
+Los pasos que debe seguir para resolver este problema dependen 
+del producto de red que estÇ utilizando.
+
+En el caso de una red LANtastic, haga lo siguiente:
+
+1. Compruebe los archivos y bloqueos en el comando SHARE del 
+archivo AUTOEXEC.BAT. Se recomiendan los siguientes valores:
+
+      share /f:5120 /l:500
+
+2. Verifique que los archivos .EXE, .RSC y .OVL estÇn marcados 
+como de s¢lo lectura. Si es necesario, cambie la seguridad 
+mediante el comando ATTRIB de MS-DOS (por ejemplo, ATTRIB +R 
+<archivo>).
+
+3. Aseg£rese de que el archivo CONFIG.FP del servidor redirige 
+OVERLAY= a un directorio distinto del directorio donde se 
+encuentra el archivo FOXPRO.EXE.
+
+En el caso de una red Novell, haga lo siguiente:
+
+1. Verifique los privilegios de los usuarios. 
+
+2. Haga que el usuario se conecte como supervisor y repita la 
+operaci¢n.
+
+3. Aseg£rese de que los archivos .EXE, .ESO y .ESL estÇn 
+marcados como de s¢lo lectura. Si es necesario, cambie la 
+seguridad mediante el comando ATTRIB de MS-DOS (por ejemplo, 
+ATTRIB +R <archivo>).
+
+LANtastic est† fabricada por Artisoft, Inc. y los productos 
+Novell por Novell, Inc., ambos fabricantes independientes de 
+Microsoft; no hacemos ninguna garant°a, impl°cita ni impl°cita, 
+con respecto al rendimiento o la fiabilidad de estos productos.
+----------------------------------------------------------
+
+Pregunta 4 
+
+®C¢mo puedo resolver el error "Violaci¢n de compartici¢n al 
+leer la unidad" de FoxPro?
+
+Respuesta 4
+
+A continuaci¢n se ofrecen seis pasos para solucionar este 
+error:
+
+  - Verifique que cada usuario tenga un archivo FOXUSER.DBF.
+
+  - Verifique que el archivo CONFIG.FP del servidor incluya la 
+instrucci¢n EXCLUSIVE=OFF. Si se utiliza EXCLUSIVE=OFF, ser† 
+posible compartir archivos de base de datos.
+
+ - Verifique que el archivo CONFIG.FP del servidor incluya la 
+instrucci¢n RESOURCE=OFF o que los archivos FOXUSER.DBF y 
+FOXUSER.FPT de cada usuario estÇn marcados como de s¢lo 
+lectura.
+
+  - Si est† utilizando la versi¢n de red local de FoxPro 2.0, 
+verifique que los archivos FOXPROL.EXE, FOXPROLX.EXE y FOXR.EXE 
+estÇn marcados como de s¢lo lectura. Si est† utilizando FoxPro 
+2.5 para MS-DOS, verifique que los archivos FOXPRO.EXE, 
+FOXPROX.EXE y FOXR.EXE estÇn marcados como de s¢lo lectura.
+
+ - Si utiliza el Kit de distribuci¢n para crear una aplicaci¢n 
+aut¢noma, verifique que los archivos .EXE estÇn marcados como 
+de s¢lo lectura.
+
+ - Si crea archivos compactos ejecutables, marque los archivos 
+.ESL y .ESO como de s¢lo lectura.
+
+ - En algunos casos, la utilidad SHARE debe cargarse en el 
+servidor y en cada estaci¢n de trabajo. Especifique los 
+par†metros /F y /L de la siguiente manera:
+
+      SHARE /F:5120 /L:500
+----------------------------------------------------------
+
+
+============================================================
+Parte 2: Convertir desde FoxPro 2.0 a FoxPro 2.6 para MS-DOS
+============================================================
+
+Preguntas
+---------
+
+1  ®Son compatibles con FoxPro 2.6 mis pantallas e informes 
+   existentes de FoxPro 2.0?
+2  ®Puedo utilizar en FoxPro 2.6 los archivos de biblioteca 
+   existentes creados con el Kit de construcci¢n de bibliotecas 
+   de FoxPro 2.0?
+3  ®Son compatibles con FoxPro 2.6 los programas existentes 
+   compilados bajo FoxPro 2.0?
+----------------------------------------------------------
+
+Pregunta 1
+
+®Son compatibles con FoxPro 2.6 mis pantallas e informes 
+existentes de FoxPro 2.0?
+
+Respuesta 1
+
+Las estructuras de las bases de datos creadas por las 
+herramientas avanzadas han cambiado en FoxPro 2.6. La primera 
+vez que abra archivos de pantalla e informe creados en FoxPro 
+2.0, FoxPro 2.6 le preguntar† si desea convertirlos al formato 
+de FoxPro 2.6. Esta conversi¢n es un proceso de una v°a: los 
+archivos que se hayan convertido a los formatos de FoxPro 2.6 
+no podr†n volver a abrirse en FoxPro 2.0. Por tanto, quiz† 
+desee hacer copias de seguridad de los mismos antes de 
+convertirlos. Para obtener m†s informaci¢n acerca de 
+determinados formatos de archivo de FoxPro 2.6, consulte la 
+Ayuda de FoxPro.
+----------------------------------------------------------
+
+Pregunta 2
+
+®Puedo utilizar en FoxPro 2.6 los archivos de biblioteca 
+existentes creados con el Kit de construcci¢n de bibliotecas de 
+FoxPro 2.0? 
+
+Respuesta 2
+
+Los archivos de biblioteca creados con el Kit de construcci¢n 
+de bibliotecas de FoxPro 2.0 deben volver a vincularse antes de 
+poder utilizarse en FoxPro 2.6.  
+
+El directorio FOXPRO25\GOODIES\LCKUPDAT contiene archivos que 
+le permiten actualizar los archivos PLBs creados mediante el 
+Kit de construcci¢n de bibliotecas de FoxPro 2.0 para su uso 
+con FoxPro 2.6 para MS-DOS. Si ha obtenido los PLBs de otra 
+fuente, como un proveedor de software o un servicio en 
+pantalla, p¢ngase en contacto con dicha fuente para pedir 
+bibliotecas que funcionen con FoxPro 2.6. Para utilizar estos 
+archivos, siga las instrucciones descritas en el archivo 
+LCKUPDAT.TXT que se encuentra en el directorio 
+FOXPRO25\GOODIES\LCKUPDAT.
+----------------------------------------------------------
+
+Pregunta 3
+
+®Son compatibles con FoxPro 2.6 los programas existentes 
+compilados bajo FoxPro 2.0? 
+
+Respuesta 3
+
+Los programas compilados bajo FoxPro 2.0, como archivos .APP y 
+.FXP, no son compatibles con FoxPro 2.6. Para ejecutar dichas 
+aplicaciones o programas en FoxPro 2.6, debe volver a 
+generarlos o compilarlos. Para obtener m†s informaci¢n sobre la 
+forma de volver a generar aplicaciones de FoxPro 2.0, consulte 
+la Ayuda de FoxPro.
+----------------------------------------------------------
+
+
+===========================
+Parte 3: Temas de impresi¢n
+===========================
+
+Preguntas
+---------
+
+1  Cuando intento imprimir cuadros, se imprimen caracteres 
+   ASCII en lugar de cuadros. ®C¢mo puedo corregir este 
+   problema?
+2  Estoy utilizando el sistema Consulta relacional seg£n 
+   ejemplo (RQBE) para enviar datos a un informe. Los datos del 
+   informe son incorrectos; el informe imprime el mismo 
+   registro una y otra vez. ®C¢mo puedo corregir este problema?
+3  ®Por quÇ no puedo seleccionar la casilla de verificaci¢n del 
+   controlador de impresora en el cuadro de di†logo Especificar 
+   impresora?
+4  Estoy utilizando una red Novell. Puedo imprimir mediante el 
+   comando CAPTURE de Novell, pero el comando SET PRINTER TO 
+   \\SPOOLER no funciona. ®C¢mo puedo corregir este problema?
+5  No consigo que los controladores de impresora funcionen en 
+   un archivo ejecutable. ®C¢mo puedo corregir este problema?
+6  ®C¢mo puedo iniciar un trabajo de impresi¢n desde una p†gina 
+   distinta de la p†gina 1?
+7  Tengo problemas al imprimir etiquetas en una impresora l†ser 
+   sin controlador de impresora. ®C¢mo puedo corregir este 
+   problema?
+8  Al imprimir un informe aparece el mensaje de error 
+   "Imposible escribir en archivos de s¢lo lectura". ®C¢mo 
+   puedo corregir este problema?
+9  Al imprimir etiquetas aparece una l°nea en blanco adicional. 
+   ®C¢mo puedo corregir este problema?
+10 He activado NuevaP†gina y ResetPage en mi agrupaci¢n de 
+   datos pero la numeraci¢n de p†gina no se restablece a 1. 
+   ®C¢mo puedo corregir este problema?
+11 Al imprimir en LAN Manager aparece el mensaje de error
+   "El archivo ["<archivo>"] no existe". ®C¢mo puedo corregir 
+   este problema?
+----------------------------------------------------------
+
+Pregunta 1
+
+Cuando intento imprimir cuadros, se imprimen caracteres ASCII 
+en lugar de cuadros. ®C¢mo puedo corregir este problema?
+
+Respuesta 1
+
+Si est† utilizando una impresora HP LaserJet, el juego de 
+caracteres predeterminado no incluye caracteres de dibujo de 
+l°neas. Puede cambiar el juego de caracteres predeterminado 
+utilizando los controles del panel frontal de la impresora. 
+Deber† establecer como juego predeterminado el juego de 
+caracteres PC-8.
+
+Si no est† utilizando una impresora HP LaserJet y est† usando 
+controladores de impresora en el cuadro de di†logo Especificar 
+impresora, especifique una configuraci¢n de impresora apropiada 
+para su impresora. Si ya est† utilizando un controlador de 
+impresora, modifique la base de datos P_CODES para enviar el 
+c¢digo correcto para su impresora y vuelva a generar el archivo 
+GENPD.APP. Si no est† utilizando ning£n controlador de 
+impresora, env°e a la impresora los c¢digos de escape 
+apropiados antes de imprimir mediante el comando ???
+----------------------------------------------------------
+
+Pregunta 2
+
+Estoy utilizando el sistema Consulta relacional seg£n ejemplo 
+(RQBE) para enviar datos a un informe. Los datos del informe 
+son incorrectos; el informe imprime el mismo registro una y 
+otra vez. ®C¢mo puedo corregir este problema?
+
+Respuesta 2
+
+Cuando cre¢ el informe, us¢ nombres de alias en las 
+definiciones de campos. Para corregir el informe, basta con 
+quitar los nombres de alias. Por ejemplo, un campo que contenga 
+NOMBRE CLIENTE debe modificarse de manera que s¢lo contenga 
+NOMBRE.
+----------------------------------------------------------
+
+Pregunta 3
+
+®Por quÇ no puedo seleccionar la casilla de verificaci¢n del 
+controlador de impresora en el cuadro de di†logo Especificar 
+impresora?
+
+Respuesta 3
+
+Este problema se producir† si falta el archivo GENPD.APP, si la 
+variable de memoria _GENPD se ha establecido de forma 
+incorrecta, si el archivo de recursos est† desactivado o si el 
+archivo FOXUSER falta, est† da§ado o est† marcado como de s¢lo 
+lectura.
+----------------------------------------------------------
+
+Pregunta 4
+
+Estoy utilizando una red Novell. Puedo imprimir mediante el 
+comando CAPTURE de Novell, pero el comando SET PRINTER TO 
+\\SPOOLER no funciona. ®C¢mo puedo corregir este problema?
+
+Respuesta 4
+
+Si aparece el mensaje de error "Impresora no preparada", 
+aseg£rese que no hay ning£n espacio en blanco antes o despuÇs 
+de las cl†usulas \\SPOOLER de SET PRINTER. Si la informaci¢n de 
+la impresora no se imprime hasta que no sale de FoxPro, deber† 
+ejecutar el comando SET PRINT TO a fin de liberar la cola de 
+impresi¢n.
+----------------------------------------------------------
+
+Pregunta 5
+
+No consigo que los controladores de impresora funcionen en un 
+archivo ejecutable. ®C¢mo puedo corregir este problema?
+
+Respuesta 5
+
+Abra el proyecto para asegurarse de que el archivo GENPD.APP 
+est† incluido en el proyecto como una aplicaci¢n. Si no est† 
+incluido, agregue GENPD.APP al proyecto como una aplicaci¢n.
+
+Para agregar GENPD.APP como una aplicaci¢n, elija el bot¢n de 
+comando "Agregar". En el cuadro de di†logo que aparecer†, elija 
+"Aplicaci¢n" en el men£ emergente "Tipo", seleccione GENPD.APP 
+y elija luego el bot¢n de comando "Agregar".
+
+Nota: GENPD.APP se marca autom†ticamente como elemento excluido 
+del proyecto.
+
+Vuelva a generar el proyecto y su archivo ejecutable. Aseg£rese 
+de distribuir los archivos GENPD.APP, FOXUSER.DBF, FOXUSER.FPT 
+y FOXSWAP.COM con su archivo ejecutable.
+----------------------------------------------------------
+
+Pregunta 6
+
+®C¢mo puedo iniciar un trabajo de impresi¢n desde una p†gina 
+distinta de la p†gina 1?
+
+Respuesta 6
+
+Para iniciar un trabajo de impresi¢n en un lugar distinto de la 
+p†gina 1, establezca _PBPAGE como el n£mero de la p†gina en la 
+que debe comenzar la impresi¢n y cree un programa que utilice 
+los comandos PRINTJOB...ENDPRINTJOB.
+
+Utilizar la variable _PBPAGE para especificar el n£mero de 
+p†gina donde comienza un trabajo de impresi¢n no funciona fuera 
+de PRINTJOB...ENDPRINTJOB.
+
+Por ejemplo, suponga que su impresora se ha atascado en la 
+p†gina 75 de un informe de 100 p†ginas y que toda la salida 
+desde la p†gina 75 hasta la 100 se ha perdido. El c¢digo 
+necesario para volver a crear las 25 £ltimas p†ginas es el 
+siguiente:
+
+   _PBPAGE=75
+   PRINTJOB
+   REPORT FORM C:\FOXPRO2\test.FRX ;
+      ENVIRONMENT PDSETUP TO PRINT
+   ENDPRINTJOB
+
+O bien, si s¢lo quisiera imprimir la p†gina 75, en el ejemplo 
+anterior deber°a establecer "_PBPAGE=75" y "_PEPAGE=75".
+----------------------------------------------------------
+
+Pregunta 7
+
+Tengo problemas al imprimir etiquetas en una impresora l†ser 
+sin controlador de impresora. ®C¢mo puedo corregir este 
+problema?
+
+Respuesta 7
+
+Imprimir etiquetas en una impresora l†ser Hewlett-Packard (HP) 
+sin un controlador de impresora requiere enviar ciertos c¢digos 
+de escape a la impresora antes del comando para imprimir las 
+etiquetas.
+
+
+MAS INFORMACION
+===============
+
+Las etiquetas Avery 5161 ¢ 5261 miden 1 por 4 pulgadas. Una 
+p†gina de etiquetas tiene dos columnas de diez etiquetas cada 
+una. Para imprimir este tipo de etiquetas, ejecute c¢digo como 
+el siguiente:
+
+   SET PDSETUP TO
+   SET DEVICE TO PRINTER
+   ??? CHR(27)+'E'         && Restablecer
+   ??? CHR(27)+'&l8.00C'   && Altura de l°nea 8/48" (LPI 6)
+   ??? CHR(27)+'&l3E'      && Margen superior de 3 l°neas
+   ??? CHR(27)+'&l56P'     && Longitud de p†gina de 60 l°neas
+   SET DEVICE TO SCREEN
+   LABEL FORM <etiqueta> TO PRINTER
+   SET PRINTER TO
+   SET DEVICE TO SCREEN
+
+   NOTA: las l°neas del c¢digo de escape que contienen un 
+   signo & utilizan una letra "L" min£scula, no un n£mero 1.
+
+En el Generador de etiquetas, utilice las siguientes 
+configuraciones:
+
+   Margen - 3
+   Anchura - 34
+   Etiquetas a lo ancho - 2
+   Altura - 6
+   L°neas entre - 0
+
+Las configuraciones anteriores son solamente un ejemplo y quiz† 
+tenga que modificarlas para determinadas etiquetas, impresoras 
+y aplicaciones. Para ver las secuencias exactas de c¢digos de 
+escape, consulte el manual de su impresora.
+----------------------------------------------------------
+
+Pregunta 8
+
+Al imprimir un informe aparece el mensaje de error "Imposible 
+escribir en archivos de s¢lo lectura". ®C¢mo puedo corregir 
+este problema?
+
+Respuesta 8
+
+Dadas las siguientes circunstancias, el mensaje de error 
+"Imposible escribir en archivos de s¢lo lectura" se producir† 
+cuando intente imprimir un informe desde una aplicaci¢n (.APP) 
+o desde un archivo ejecutable (.EXE):
+
+ - El archivo de recursos est† incluido en el proyecto.
+
+ - El recurso est† establecido como el nombre del archivo 
+incluido.
+
+ - Se ejecuta el comando REPORT FORM <nombre> PDSETUP TO PRINT 
+o LABEL FORM <nombre> PDSETUP TO PRINT.
+
+Hay dos formas de evitar este problema:
+
+ - Eliminar PDSETUP del comando.
+
+   -o bien-
+
+ - Marcar el archivo de recursos como excluido y entregarlo 
+junto con el archivo .APP o .EXE.
+----------------------------------------------------------
+
+Pregunta 9
+
+Al imprimir etiquetas aparece una l°nea en blanco adicional. 
+®C¢mo puedo corregir este problema?
+
+Respuesta 9
+
+Este comportamiento ya exist°a en dBASE III y FoxBASE, y se 
+cambi¢ en la versi¢n 1.02 de FoxPro. Sin embargo, con el fin de 
+mantener la compatibilidad con la gran base instalada de 
+aplicaciones Xbase, se tom¢ la decisi¢n de revertir al 
+comportamiento original.
+
+Para resolver este problema, imprima el formulario de etiquetas 
+en un archivo, abra el archivo mediante funciones de archivo de 
+bajo nivel, quite los caracteres de retorno de carro/salto de 
+l°nea (CR/LF) y env°e el archivo a la impresora mediante el 
+comando COPY de MS-DOS. Por ejemplo:
+
+   *--Establecer el n£mero de l°neas impresas por p†gina e 
+   *  imprimir en un archivo.
+   _PLENGTH=56
+   LABEL FORM <nombre formulario> ENVIRONMENT PDSETUP TO FILE 
+temp.txt
+
+   *--Abrir archivo y reemplazar el par CR/LF por 
+   *  caracteres nulos.
+   control=FOPEN('temp.txt',2)
+   =FGETS(control)
+   =FSEEK(control,-2,1)
+   =FWRITE(control,chr(0)+chr(0))
+   =FCLOSE(control)
+
+   *--Copiar el archivo a la impresora e impedir la aparici¢n 
+   *  de la pantalla MS-DOS.
+   HIDE WINDOW SAVE ALL
+   RUN COPY temp.txt LPT1 > NUL
+   SHOW WINDOW ALL
+----------------------------------------------------------
+
+Pregunta 10
+
+He activado NuevaP†gina y ResetPage en mi agrupaci¢n de datos 
+pero la numeraci¢n de p†gina no se restablece a 1. ®C¢mo puedo 
+corregir este problema?
+
+Respuesta 10
+
+El informe tiene un margen inferior mayor que 0 (cero).
+
+Establezca Margen inferior como 0 y agregue las l°neas 
+necesarias a la banda Pie de p†gina. Por ejemplo, si Margen 
+inferior est† establecido como 2, restablÇzcalo a 0 y agregue 
+dos l°neas a la banda Pie de p†gina.
+----------------------------------------------------------
+
+Pregunta 11
+
+Al imprimir en LAN Manager aparece el mensaje de error "El 
+archivo ["<archivo>"] no existe". ®C¢mo puedo corregir este 
+problema?
+
+Respuesta 11
+
+Cuando el programa intenta abrir un archivo, busca en un 
+determinado directorio. Si no encuentra en Çl el archivo 
+buscado, probar† en otros directorios hasta encontrar el 
+archivo. Cuando expire el temporizador "chartime" de LAN 
+Manager (que de forma predeterminada es 250 milisegundos), 
+enviar† a la estaci¢n de trabajo un mensaje de cierre de la 
+cola de impresi¢n; si el programa est† en medio de una b£squeda 
+del siguiente archivo que debe abrir, el programa saldr† 
+incorrectamente mostrando el mensaje de error anterior.
+
+Si el par†metro chartime del archivo LANMAN.INI para la 
+estaci¢n de trabajo est† establecido como un valor 
+suficientemente alto, el programa no quedar† interrumpido por 
+el mensaje de cierre de la cola de impresi¢n y funcionar† 
+correctamente.
+
+En LAN Manager versi¢n 2.1, el par†metro chartime controla el 
+tiempo que espera la cola de impresi¢n para recibir datos 
+adicionales de impresi¢n antes de cerrar el archivo activo de 
+la cola e imprimirlo. En versiones anteriores de LAN Manager, 
+este par†metro controla el tiempo que espera datos de 
+encadenamiento o datos de la cola de comunicaciones.
+
+Para obtener m†s informaci¢n acerca del par†metro chartime y el 
+archivo LANMAN.INI, consulte la documentaci¢n de LAN Manager o 
+p¢ngase en contacto con el Servicio tÇcnico de Microsoft LAN 
+Manager.
+
+Consulte tambiÇn el manual "Microsoft LAN Manager 
+Administrator's Reference", versi¢n 2.1, p†gina 225.
+----------------------------------------------------------
+
+
+==================
+Parte 4: Pantallas
+==================
+
+Preguntas
+---------
+
+1   Cada vez que intento generar una determinada pantalla, 
+tengo que agregar mis pantallas de soporte al conjunto de 
+pantallas. ®C¢mo puedo evitar este problema?
+2   Cuando creo un conjunto de pantallas con m†s de una 
+ventana, ®c¢mo puedo mover el cursor de una ventana a la 
+siguiente?
+3   ®C¢mo se coordinan las ventanas Examinar con las pantallas?
+4   ®C¢mo paginar un archivo de formato que contiene un READ?
+5   El comando Recorrer no funciona para pantallas de 
+escritorio. ®C¢mo puedo corregir este problema?
+----------------------------------------------------------
+
+Pregunta 1
+
+Cada vez que intento generar una determinada pantalla, tengo 
+que agregar mis pantallas de soporte al conjunto de pantallas. 
+®C¢mo puedo evitar este problema?
+
+Respuesta 1
+
+Para guardar estas opciones debe crear un proyecto e incluir 
+las pantallas como un conjunto de pantallas.
+----------------------------------------------------------
+
+Pregunta 2
+
+Cuando creo un conjunto de pantallas con m†s de una ventana, 
+®c¢mo puedo mover el cursor de una ventana a la siguiente? 
+
+Respuesta 2
+
+Si todas las ventanas de su conjunto de pantallas est†n 
+controladas por un comando READ, utilice la tecla RE PAG, la 
+tecla AV PAG o bien modifique la variable de memoria del 
+sistema _CUROBJ para recorrer las ventanas del conjunto de 
+pantallas. Si alguna de las ventanas de su conjunto de 
+pantallas no est† controlada por el comando READ, como por 
+ejemplo una ventana Examinar, deber† presionar CTRL+F1 para 
+recorrer el conjunto de pantallas.
+----------------------------------------------------------
+
+Pregunta 3
+
+®C¢mo se coordinan las ventanas Examinar con las pantallas?
+
+Respuesta 3
+
+En las p†ginas D2-96 de la "Developers Guide" de FoxPro para 
+MS-DOS se incluye un ejemplo de c¢mo coordinar ventanas 
+Examinar, pero en dicho ejemplo se omite la cl†usula SAVE. Si 
+se omite el par†metro opcional de BROWSE, SAVE, la ventana 
+Examinar se cerrar† en cuanto se haga clic sobre cualquier otro 
+objeto.
+
+El ejemplo podr°a cambiarse para que quedase tal como sigue:
+
+  IF NOT WVISIBLE("Lista clientes")
+    BROWSE NORMAL NOWAIT NODELETE LAST TITLE "Lista clientes" ;
+         NOAPPEND NOMENU SAVE FIELDS empresa ;
+         WHEN showgets()
+  ENDIF
+
+  IF NOT WVISIBLE("Detalles de cuenta")
+   SELECT detalles
+    BROWSE NORMAL NOWAIT NODELETE LAST TITLE "Lista clientes" ;
+            NOAPPEND NOMENU SAVE  ;
+            FIELDS ;
+            Trans_type:10, ;
+            Trans_date:10, ;
+            Amt:7,Service
+   SELECT clientes
+  ENDIF
+----------------------------------------------------------
+
+Pregunta 4
+
+®C¢mo paginar un archivo de formato que contiene un READ?
+
+Respuesta 4
+
+Al presionar las teclas RE PAG y AV PAG se salta de registro en 
+registro, hacia adelante o hacia atr†s, de la base de datos y 
+tambiÇn se actualizan los GET de la pantalla.
+
+Es posible situar objetos en distintas p†ginas o en distintas 
+pantallas incluyendo un comando READ en el archivo de formato. 
+El comando READ debe incluirse despuÇs del £ltimo GET que 
+aparecer°a en cada pantalla. El siguiente ejemplo de archivo de 
+formato coloca dos objetos en la primera pantalla y dos m†s en 
+la segunda pantalla. Para ver los objetos que hay en la 
+siguiente pantalla, presione la tecla RE PAG o AV PAG.
+
+      @5,1 GET <var1>
+      @6,1 GET <var2>
+      READ
+      @5,1 GET <var3>
+      @6,1 GET <var4>
+----------------------------------------------------------
+
+Pregunta 5
+
+El comando Recorrer no funciona para pantallas de escritorio. 
+®C¢mo puedo corregir este problema?
+
+
+Respuesta 5
+
+El comando Recorrer del men£ Ventana est† dise§ado para 
+alternar entre las ventanas definidas en el escritorio. Cuando 
+un conjunto de pantallas contiene varias ventanas y una 
+pantalla de escritorio, Recorrer se detendr† en la pantalla de 
+escritorio. Este comportamiento es normal, ya que el comando 
+Recorrer est† pensado para utilizarlo con pantallas de ventana, 
+no del escritorio.
+ 
+Para corregir este comportamiento, defina una ventana sin 
+bordes en lugar de utilizar una pantalla de escritorio. Esto 
+producir† una ventana que se asemeja al escritorio.
+
+El comando Recorrer se utiliza para recorrer las pantallas de 
+ventana de un conjunto de pantallas o las ventanas definidas en 
+el escritorio. TambiÇn puede utilizarse CTRL+F1 como tecla de 
+mÇtodo abreviado para recorrer las ventanas del escritorio.
+----------------------------------------------------------
+
+
+=======================
+Parte 5: Importar datos
+=======================
+
+Pregunta 1
+
+®C¢mo puedo importar un archivo de datos en Microsoft FoxPro 
+para MS-DOS?
+
+Respuesta 1
+
+Para importar un archivo de datos, utilice el comando IMPORT o 
+el comando APPEND FROM. Si aparece el mensaje de error "Cadena 
+demasiado larga", aseg£rese de que ning£n "campo" del archivo 
+de datos de origen supera la capacidad de campo para una tabla 
+de FoxPro. Consulte el tema de Ayuda "Capacidades del sistema" 
+para obtener informaci¢n adicional al respecto. Se admiten 
+numerosos formatos de archivo. Consulte la secci¢n de 
+referencia del lenguaje en la Ayuda de FoxPro para ver una 
+lista completa de los formatos de archivo admitidos.
+----------------------------------------------------------
+
+
+=======================
+Parte 6: Comando BROWSE
+=======================
+
+Preguntas
+---------
+
+1  He modificado la estructura de mi base de datos, pero cuando 
+   utilizo el comando BROWSE para ver el archivo no veo los 
+   cambios. ®C¢mo puedo corregir este problema?
+2  Cuando presiono la combinaci¢n de teclas CTRL+N en mi
+   programa para a§adir un nuevo registro en la ventana 
+   Examinar, obtengo en su lugar el s°mbolo de nota musical. 
+   ®C¢mo puedo corregir este problema?
+----------------------------------------------------------
+
+Pregunta 1
+
+He modificado la estructura de mi base de datos, pero cuando 
+utilizo el comando BROWSE para ver el archivo no veo los 
+cambios. ®C¢mo puedo corregir este problema?
+
+Respuesta 1
+
+Lo m†s probable es que estÇ utilizando el comando BROWSE desde 
+el men£ Sistema o desde el panel Ver, o que estÇ utilizando un 
+comando BROWSE LAST o BROWSE PREFERENCE desde la ventana 
+Comandos. Para ver estos cambios estructurales, primero debe 
+emitir un simple comando BROWSE desde la ventana Comandos para 
+ver la nueva representaci¢n predeterminada de la base de datos.
+----------------------------------------------------------
+
+Pregunta 2
+
+Cuando presiono la combinaci¢n de teclas CTRL+N en mi programa 
+para a§adir un nuevo registro en la ventana Examinar, obtengo 
+en su lugar el s°mbolo de nota musical. ®C¢mo puedo corregir 
+este problema? 
+
+Respuesta 2
+
+CTRL+N es una combinaci¢n de teclas de mÇtodo abreviado 
+asociada al men£ Sistema. En su programa, debe emitir el 
+comando SET SYSMENU ON y/o utilizar un comando BROWSE en lugar 
+del comando BROWSE NOMENU.
+----------------------------------------------------------
+
+
+=========================================
+Parte 7: Crear aplicaciones y ejecutables
+=========================================
+
+Preguntas
+---------
+
+1  He creado una aplicaci¢n que no me permite editar mis 
+   archivos de base de datos. ®C¢mo puedo corregir este 
+   problema?
+2  ®Por quÇ no puedo crear un archivo ejecutable desde dentro 
+   de mi proyecto? Las opciones necesarias para ello est†n 
+   atenuadas y no disponibles.
+3  Cuando intento generar un archivo ejecutable aparece el 
+   mensaje de error "Fallo en comando de v°nculo". ®C¢mo puedo 
+   corregir este problema?
+4  Mi archivo ejecutable se ejecuta correctamente bajo la 
+   versi¢n de desarrollo, pero en la versi¢n aut¢noma aparece 
+   el mensaje de error "Funci¢n no disponible". ®C¢mo puedo 
+   corregir este problema?
+----------------------------------------------------------
+
+Pregunta 1
+
+He creado una aplicaci¢n que no me permite editar mis archivos 
+de base de datos. ®C¢mo puedo corregir este problema?
+
+Respuesta 1
+
+Marque su base de datos como excluida del proyecto y vuelva a 
+generar su aplicaci¢n. Debe distribuir estos archivos a sus 
+usuarios finales. Al incluir la base de datos en el proyecto, 
+estos archivos se marcan autom†ticamente como de s¢lo lectura.
+----------------------------------------------------------
+
+Pregunta 2
+
+®Por quÇ no puedo crear un archivo ejecutable desde dentro de 
+mi proyecto? Las opciones necesarias para ello est†n atenuadas 
+y no disponibles.
+
+Respuesta 2
+
+Para generar un archivo ejecutable debe adquirir el Kit de 
+distribuci¢n de Microsoft FoxPro e instalarlo en el directorio 
+de FoxPro. Antes de instalar el Kit de distribuci¢n de FoxPro, 
+aseg£rese de que los archivos de FoxPro no estÇn marcados como 
+de s¢lo lectura.
+----------------------------------------------------------
+
+Pregunta 3
+
+Cuando intento generar un archivo ejecutable aparece el mensaje 
+de error "Fallo en comando de v°nculo". ®C¢mo puedo corregir 
+este problema? 
+
+Respuesta 3
+
+Si aparece este mensaje de error, compruebe lo siguiente:
+
+* Aseg£rese de que tiene suficiente memoria convencional.
+* Aseg£rese de que tiene suficiente espacio en disco.
+* Incremente el n£mero de controladores de archivo disponibles 
+para FoxPro. Para ello, puede incrementar la configuraci¢n de 
+FILES en el archivo CONFIG.SYS o bien la configuraci¢n de FILE 
+HANDLES en el archivo SHELL.CFG. Esto es espec°fico de redes 
+Novell.
+* Aseg£rese de que FoxPro pueda encontrar el archivo 
+COMMAND.COM.
+* Aseg£rese de que en la ruta de acceso estÇn incluidos los 
+siguientes archivos: WLINK8.EXE y FOXSWAP.COM.
+* Si est† ejecutando la versi¢n extendida de 32 bits de FoxPro, 
+aseg£rese de que DOSMEM no es ON en el archivo CONFIG.FP. Para 
+obtener m†s informaci¢n acerca de DOSMEM, consulte la 
+documentaci¢n de FoxPro.
+----------------------------------------------------------
+
+Pregunta 4
+
+Mi archivo ejecutable se ejecuta correctamente bajo la versi¢n 
+de desarrollo, pero en la versi¢n aut¢noma aparece el mensaje 
+de error "Funci¢n no disponible". ®C¢mo puedo corregir este 
+problema? 
+
+Respuesta 4
+
+En primer lugar, consulte la lista de funciones no disponibles 
+en la documentaci¢n del Kit de distribuci¢n de FoxPro. Algunas 
+funciones empleadas para desarrollo no est†n disponibles en las 
+aplicaciones y los ejecutables que usted crea. Si sigue 
+teniendo problemas, es posible que estÇ empleando una 
+sustituci¢n de macro en su programa. La soluci¢n recomendada 
+consiste en crear una instrucci¢n que haga que el compilador 
+vea las posibles opciones para los comandos sustituidos por 
+macros, de forma que se compilen en el archivo .EXE. Por 
+ejemplo:
+
+ IF .F.
+   MODIFY REPORT ficticio
+   MODIFY LABEL ficticio
+ ENDIF
+
+Este c¢digo permite al compilador ver los comandos MODIFY 
+REPORT y MODIFY LABEL, pero puesto que nunca se ejecutan, los 
+nombres de informe y de etiqueta no son significativos.
+----------------------------------------------------------
+
+
+======================================================
+Parte 6: Nota para el usuario sobre el uso del espa§ol
+======================================================
+
+Al terminar el siglo XX habr† en el mundo cerca de 500 millones 
+de personas que tendr†n el espa§ol (o castellano) como lengua 
+materna. Esta expansi¢n se ver†, sin embargo, envuelta en 
+numerosas dificultades y conflictos idiom†ticos. Algunos de los 
+peligros que acosan al espa§ol son: el influjo del inglÇs, el 
+mal uso que del mismo hacen los medios de comunicaci¢n y, 
+quiz†s el m†s importante y relacionado con el primero, los 
+vac°os existentes en el vocabulario tÇcnico.
+
+El campo de la inform†tica o computaci¢n es un motor continuo 
+de creaci¢n de nueva terminolog°a proveniente, casi en su 
+totalidad, del inglÇs. A esto se suma otro problema: la 
+existencia de inevitables peculiaridades y variedades 
+lingÅ°sticas que caracterizan a los diversos pa°ses 
+hispanoparlantes. Si bien es verdad que las diferencias son 
+m°nimas y adem†s se circunscriben en su mayor parte al 
+vocabulario (que es la parte que menos altera una lengua), 
+tambiÇn es verdad que dichas "diferencias" pueden crear en el 
+usuario la sensaci¢n de que est† leyendo un manual "hecho para 
+otro pa°s" y sentirlo como ajeno.
+
+En Microsoft somos conscientes de todos estos problemas, por lo 
+que a la hora de "adaptar" (y no s¢lo traducir) un programa al 
+castellano, tratamos de aunar la lengua tanto como sea posible, 
+buscando un espa§ol que pueda ser entendido, por ejemplo, lo 
+mismo en Venezuela o Argentina que en MÇxico o Espa§a. QuÇ duda 
+cabe que la b£squeda de una "norma com£n", conlleva, a menudo, 
+el rechazo de numerosos usuarios que encuentran la terminolog°a 
+ajena y hasta jocosa, y que preferir°an ver recogidas las 
+peculiaridades lingÅ°sticas de su propio pa°s en lugar de una 
+traducci¢n m†s general.
+
+As°, por ejemplo, para los usuarios de Espa§a el empleo del 
+tÇrmino computadora en lugar de ordenador suena chocante e 
+incluso ajeno, aunque es entendido por todos; sin embargo, el 
+galicismo ordenador (Fr. ordinateur) queda bien lejos de los 
+pa°ses latinoamericanos como para haber podido asentarse en 
+ellos, habiÇndolo hecho en su lugar el anglicismo computadora 
+(Ing. computer). Del mismo modo, un anglicismo como reporte 
+(Ing. report) tan com£n en hispanoamÇrica, tiene su equivalente 
+castellano informe, tambiÇn comprendido en toda AmÇrica Latina.
+
+Se tratar°a pues de elegir el tÇrmino que, aunque un poco ajeno 
+o extra§o, pueda ser comprendido por todos los usuarios sin 
+importar de quÇ pa°s se trate. Se recogen a continuaci¢n 
+algunos tÇrminos conflictivos:
+
+InglÇs            Espa§a                 AmÇrica Latina
+----------------  ---------------------  ----------------------
+Backup            Copia de seguridad     Copia de respaldo
+BBS               Bolet°n Electr¢nico    Tablero de mensajes
+Environment       Entorno                Ambiente
+File              Fichero                Archivo
+Mouse             Rat¢n                  Mouse
+Press             Pulsar                 Presionar/Oprimir
+Plotter           Trazador gr†fico       Graficador
+Word Processing   Tratamiento de textos  Procesador de palabras
+
+Aunque a primera vista pudiera parecer, viendo la tabla, que 
+existen dos normas claras (Espa§a opuesta al resto de 
+LatinoamÇrica), esto no es totalmente cierto. Si bien es verdad 
+que tanto por la proximidad geogr†fica, como por el influjo m†s 
+acusado del inglÇs sobre determinados pa°ses hispanoamericanos, 
+una gran cantidad de tÇrminos se han hecho comunes en estos 
+pa°ses, tambiÇn es cierto que no existe una norma com£n 
+latinoamericana. As°, un usuario venezolano puede sentir una 
+palabra mexicana como m†s cercana que su correspondiente 
+espa§ola, pero tambiÇn puede suceder al revÇs con otro tÇrmino 
+que sea propio y restringido a MÇxico. Otros pa°ses como Chile 
+o Argentina, m†s alejados geogr†ficamente del influjo del 
+inglÇs, pueden identificarse m†s con la terminolog°a que se 
+emplea en Espa§a.
+
+Lo mismo sucede con los ejemplos que aparecen en los manuales. 
+Los productos en espa§ol van destinados a todos los pa°ses 
+hispanoparlantes y por ello nos tenemos que hacer eco de las 
+variedades y peculiaridades existentes a la hora de elegir los 
+nombres de localidades, personas, direcciones, etc.
+
+Un problema concreto, que afecta principalmente a los usuarios 
+mexicanos, es el de los separadores decimales y de miles. En 
+MÇxico se sigue la norma de EE.UU. de separar los decimales con 
+un punto y los millares con una coma, esta norma es minoritaria 
+en AmÇrica Latina y no se aplica en Espa§a. En este caso, la 
+elecci¢n es clara a favor de la £ltima y, aunque el programa 
+siempre deja al usuario elegir la configuraci¢n deseada, en los 
+ejemplos tenemos que tomar partido por una opci¢n, por lo que 
+los usuarios mexicanos deber†n tener esto es cuenta y cambiar 
+adecuadamente los puntos por comas y viceversa.
+
+Otro problema que se plantea es el de los usuarios habituados a 
+trabajar con las versiones inglesas. A menudo estos usuarios 
+encuentran la traducci¢n de los comandos, men£s, etc. 
+inadecuada o confusa respecto a su correspondiente inglesa. 
+Este es un tipo de usuario que no est† acostumbrado a trabajar 
+con programas en espa§ol ni a utilizar terminolog°a traducida. 
+La importancia de la traducci¢n de los productos va mucho m†s 
+all† del mero entendimiento de los mismos por parte del 
+usuario; demuestra adem†s que cualquier lengua (y en nuestro 
+caso el espa§ol) puede ser una lengua tÇcnica si se desarrolla 
+suficientemente y ayuda a crear este vocabulario cient°fico-
+tÇcnico tan necesario para el futuro.
+
+Hagamos entre todos del espa§ol una lengua universal tratando 
+de aunar esfuerzos con el objetivo de evitar, en la medida de 
+lo posible, por una parte ese vac°o en el vocabulario tÇcnico y 
+por otra el surgimiento y adopci¢n de nuevos tÇrminos en inglÇs 
+sin su correspondiente adaptaci¢n al espa§ol. Somos 300 
+millones de hablantes que compartimos la misma lengua y todos 
+tenemos que sentirnos orgullosos y responsables de ella.
+
+                       ==================
+                       Final de PSSQA.TXT
+                       ==================
+

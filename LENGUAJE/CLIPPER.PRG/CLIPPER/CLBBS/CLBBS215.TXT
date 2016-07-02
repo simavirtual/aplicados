@@ -1,0 +1,957 @@
+
+
+        °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+      °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+      °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+      °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+      °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+      °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+      °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+
+  Volume 2, Number 15                                     28 August 1992
+
+                 (c) Daniel Do‡ekal, All Rights Reserved
+
+     The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+
+     Some of the material used comes from scanning CLIPPER echoes
+     which are carried in various BBS throughout the World.
+     These Echoes are very often the source of the most often asked
+     Questions and Answers about Clipper.
+
+     Other material, which is fully signed or abbreviated is the
+     copyright of the appropriate persons.
+
+     The publisher is not responsible for other authors submissions....
+     Published material is not necessarily the opinion of the publisher.
+
+     Redaction:
+        Publisher...................................Daniel Docekal
+        Chief editor ...............................Daniel Docekal
+        Language editor .................................Dave Wall
+
+
+
+                               Table of Contents
+
+1. ARTICLES  ...............................................................  1
+   Clipper in Network, tips, suggestions... (1)  ...........................  1
+   CA-Clipper 5.01a alias Long promised bugfix?  ...........................  7
+   Hitchhikkers Guide to Network (12)  ..................................... 11
+2. ANOMALIES  .............................................................. 14
+   ANOMALIES reports and commets  .......................................... 14
+3. CLIPPER NET  ............................................................ 15
+   Index of described files in Clipper BBS Magazine  ....................... 15
+4. CLIPBBS  ................................................................ 17
+   CLIPBBS distribution  ................................................... 17
+   CLIPBBS, how to write an article!!!  .................................... 19
+
+                                   - - - - -
+CLIPBBS 2-15                   Page 1                   28 Aug 1992
+
+
+===============================================================================
+                                   ARTICLES
+===============================================================================
+
+
+                  Clipper in Network, tips, suggestions...
+                                    alias
+                    Network Guide for Clipper programmer
+                      ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                                     by
+                               Daniel Docekal
+
+
+Clipper application in network is something that should work on first moment
+of start if some guidelines are followed and some conditions fulfilled. If
+program you are writing is written with record and file locking and is taking
+care of everything that can happened in file sharing, there shouldn't be
+problem to run it and use it. Reality is often different, many problems can
+rise out from nowhere which will prevent your application from running or
+will give difficulties to application's run. What this article will try is to
+give helpful hand to those who are starting in networking with Clipper, but
+also for those who are swimming in problems with written Clipper application.
+I would like to ask anybody who wishes to contribute in this Network Clipper
+guideline to do so, then i can collect opinions and release them in new
+edition.
+
+NETWORK APPLICATIONÄÄ¿
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+Network application in general must follow idea that it's not only one
+program running at the same time. Network application which is using ANY from
+resources of network must take good care of fact that in most cases it WILL
+SHARE them with other applications running at the same time and requiring
+access to the same resources. In most cases it's matter of programming
+languages to give tools for networking rather than programmers knowledge.
+Clipper is high level programming language in difference from assembler or
+basic of C language, therefore is expected that networking behavior will be
+covered with filling needs.
+
+NETWORKÄÄ¿
+ÄÄÄÄÄÄÄÄÄÙ
+
+Network is something most horrible and bad for every programmer, nightmare
+like environment with every problem hidden after not sufficient knowledge and
+not experienced people around. Believe or not, it's right definition of
+network for beginning. Users of network which are in most cases not even good
+equipped with knowledge of MS DOS are of course able to broke all rules which
+logically thinking programmer will have in mind when programming, therefore
+programmer must start thinking like average (or even, like under average)
+users. Difficulty of this mind change is paid in most cases by application
+which is created with best wishes and is ending SOMETIME in troubles.
+
+CLIPPERÄÄ¿
+ÄÄÄÄÄÄÄÄÄÙ
+
+Clipper is programming language offering enough to start writing network
+CLIPBBS 2-15                   Page 2                   28 Aug 1992
+
+
+application. General guidelines are very simple:
+
+Ú·  if database file has to be used at one time by MORE users (workstations
+Ô¼  will be used in all next text) then it must be opened as SHAREABLE
+
+    What this is requiring is very simple, either USE..SHARED or
+    SET EXCLUSIVE OFF before all USE which are not equipped with SHARED nor
+    EXCLUSIVE keyword.
+
+    ³ Experienced users are probably falling away, but please don't rather
+    ³ skip those basic informations, later are coming more handy ones.
+
+    What can be often source of problems:
+
+    WS-A has file FILE opened as EXCLUSIVE and WS-B is trying top open it
+    by USE (of any form). As far as WS-A has it exclusive there is no way
+    how to access this file.
+
+    WS-A has file opened as SHARED and WS-B is trying open it as EXCLUSIVE
+    which cannot because may not gain EXCLUSIVE access to already SHARED
+    file.
+
+    WS-A has file opened with fopen() (or just by program like Norton
+    Commander), no any other workstation is able to access file.
+
+    USE command is NOT well made for network operations. it's requiring
+    little effort from programmer because needs test of NETERR() function
+    after USE if required operation was finished:
+
+    ³   USE ADRES SHARED NEW
+    ³   IF !NETERR()
+    ³       SET INDEX TO ADRESI1,ADRESI2,ADRESI3
+    ³   ELSE
+    ³       //  error situation
+    ³   ENDIF
+
+    This is base fragment of opening a files in network. ANY application
+    can be built with this method because it WILL work perfect even without
+    network and what it also will - work inside of MS WINDOWs or any other
+    multitasking software which also requires network methods of file access.
+
+    Here we do have of course little problem, USE attempt is just made one
+    time and not repeated again and again for case that condition will change
+    and file will be ready for opening. That's of course trouble of
+    programmer which must know in what conditions will program run. 24hours
+    running mail server should again and again try to open files, but user
+    program just shall only tell to user about problem and then exit. It's
+    user's decision what to do, call supervisor or try it later.
+
+Ú·  if any file has to be used at one time by MORE workstations then it must
+Ô¼  be opened also in SHARED mode.
+
+    This must be based on FOPEN() function which IS allowing some MORE
+    attributes of open
+
+        0               FO_READ              Open for reading (default)
+CLIPBBS 2-15                   Page 3                   28 Aug 1992
+
+
+        1               FO_WRITE             Open for writing
+        2               FO_READWRITE         Open for reading or writing
+    addition which should be done:
+        16              FO_DENYALL           Not allow ANYBODY else access
+        32              FO_DENYWRITE         Write access of others denied
+        32+16           FO_DENYREAD          Read access of others denied
+        64              FO_DENYNONE          Full access of others permitted
+
+    This extension of fopen() function will allow to control if two
+    workstations can simultaneously access the same text file (for example).
+
+Ú·  Any updates to database files are requiring record or file locking,
+Ô¼  unless database is opened in EXCLUSIVE mode.
+
+    SHARED open database is suitable for READING records but not for
+    writing. Basic conflict which can happened when two workstations will
+    try to change database is that both of them will come into the very
+    same record. It's something that may not be. Therefore RECORD LOCK is
+    required before ANY operation which CHANGES value of FIELD in RECORD
+    of database. Record lock is in general result of RLOCK() function which
+    will TRY to lock record, but it must not be successful. In general
+    record locking mechanism should follow:
+
+    -   try to lock record and if it goes fine just continue with
+        operations
+    -   if request for locking failed there are several possibilities:
+
+        -   try it for INFINITE time
+        -   try it until user will stop it with STOP key
+        -   try it for DEFINED time (let say one minute)
+        -   try it for DEFINED number of attempts
+        -   try FIX reason of failed record lock request
+        -   stop immediate and tell user and not continue
+
+        In general there are combinations usual given by:
+
+        -   it's trying some time and user can stop it by pressing
+            STOP key
+
+        Many from third part add-ons are offering replacement for
+        rlock() function, therefore let them to do job. BBS systems
+        and Compuserve will have for sure enough of those examples...
+
+    The same as above written is valid about locking of WHOLE file. Locking
+    of record is needed in case of operation which will change ONE record,
+    locking of FILE is needed on operation which will be changing WHOLE FILE
+    or in cases when is NEEDED to be sure that no other workstation can
+    jump in middle of counting values and change some of them just second
+    after they were counted. Function for file lock is FLOCK() and works
+    exactly the same way as RLOCK(), only effect is on COMPLETE file. After
+    FLOCK() issued is file still accessible for READING, but no-one can write
+    to any from file's records. All rlock() or flock() operation tried by
+    other workstation will be unsuccessful. Requirement for successful
+    flock() is therefore:
+
+    -   no one has locked ANY from records in database
+CLIPBBS 2-15                   Page 4                   28 Aug 1992
+
+
+    -   no one else has flocked() database
+
+    General required are flock() or rlock() in functions/commands:
+
+        rlock()                             flock()
+     ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+    :=                                  APPEND FROM
+    DELETE (for one record)             DELETE (for more records)
+    RECALL (for one record)             RECALL (for more records)
+    REPLACE (for one record)            REPLACE (for more records)
+    @..GET (operating on field)         UPDATE ON
+    fieldput()                          dbeval() (changing records)
+    fieldwblock()
+
+    Considerably required is flock() in:
+
+        SUM                             COPY TO         LIST
+        AVERAGE                         JOIN            DISPLAY
+        TOTAL                           LABEL
+        dbeval() (counting values)      REPORT
+        LOCATE and CONTINUE             SORT
+
+        Those commands DO NOT change values in database at all, but are
+        dependent FROM values in database. In some cases it's therefore
+        good to think if it's normal and good that someone else will be
+        able change values in database during some counting processes.
+
+    Clipper is placing OWN method of record locking on file which is NOT\
+    compatible with methods used by dBASE, FOXBASE, "C" language or others.
+    in general is this method based on locking one byte areas beyond any
+    possible end of file. This method is picked up because of needed side
+    effect, records are still READABLE even when lock is placed on them.
+    In normal case, when record is locked by locking AREA of file in which
+    record is, any locked area UNREADABLE on the same way as no-one can
+    WRITE to them. Clipper record which is LOCKED _must_ be readable from
+    other workstations, therefore locking is done by simulation of fake
+    records beyond possible end of file. All of this has next bad side
+    effect - any other software which wants to access Clipper files at the
+    same time as Clipper will have to follow exactly the same method of
+    record locking, otherwise it can only make big mess from Clipper database
+    files.
+
+Ú·  Several database operations are requiring EXCLUSIVE use of file and
+Ô¼  without this they will not operate at all.
+
+    EXCLUSIVE use of database is giving application right to do ANYTHING
+    application wants with database. It's therefore required for some
+    Clipper operation. EXCLUSIVEly used database is not allowed even to
+    open from other workstations. From this point of view is power of
+    "locking" in this order:
+
+        EXCLUSIVE used      no one else can ACCESS database file, database
+                            MAY NOT be open by other workstations, otherwise
+                            is impossible to make USE...EXCLUSIVE
+
+        flock()             no one can CHANGE thing in database, rlock() or
+CLIPBBS 2-15                   Page 5                   28 Aug 1992
+
+
+                            flock() from other workstations will fail, no one
+                            can EXCLUSIVE USE database
+
+        rlock()             no one can CHANGE record in database, rlock() or
+                            flock() from other workstations will fail, no one
+                            can EXCLUSIVE USE database
+
+        SHARED used         everyone can open database, use flock() or
+                            rlock(), but no can EXCLUSIVE open database
+
+    Functions and commands for which EXCLUSIVE is required are:
+
+        INDEX (*)                   PACK
+        REINDEX                     ZAP
+        dbcreateind() (*)           dbreindex()
+
+    INDEX/dbcreateind() are partially excluded from this list in case that
+    on one is interested in multi-use of created indexes. INDEX/dbcreateind()
+    are generating index files which are not available for other workstations
+    by default, therefore EXCLUSIVE use of database is NOT required. But
+    there is one important detail:
+
+    Index file generated on non-exclusive (or non-flocked()) database is
+    quite unstable in case someone just changed some values of keys in
+    middle of creating index key, therefore as general requirements can
+    be given:
+
+     ³º Database _must_ be either file-locked or EXCLUSIVE used for
+     ³º case of index generation. Only with this one can overcome possible
+     ³º index destruction with later IE1210 (well know to most of us).
+
+Ú·  Appending of new record is not requiring rlock(), but it's requiring
+Ô¼  test of success.
+
+    APPEND/dbappend() are used for ADDING ONE new record at END of database.
+    INSERT command which is present for example in FoxBase doesn't exist
+    in Clipper and therefore problem with new records is eliminated only to
+    appending at END of database.
+
+    APPEND/dbappend() is by default trying to make one NEW record and then
+    place rlock() at this record. If something fails (two workstations
+    are doing dbappend() at the same time) dbappend() will not succeed and
+    NETERR() will be again returning information about error. Good sequence
+    therefore is:
+
+        dbappend()
+        while neterr()
+            dbappend()
+        enddo
+
+    This sample of course is limited in never ending waiting for append
+    of record, but what was told about flock() can be applied also in
+    custom appending function. There are therefore few points about
+    appending:
+
+    -   record is ALWAYS locked if dbappend()/APPEND _was_ successful,
+CLIPBBS 2-15                   Page 6                   28 Aug 1992
+
+
+        no need for additional RLOCK(), it's wasting of time
+    -   record is EMPTY after APPEND and MUST NOT be currently updated
+        in database YET nor in index files
+
+    There is no need for checking success of APPEND/dbappend() in cases
+    of USE...EXCLUSIVE or flocked() databases, but considerable is fact
+    that flock() active _before_ dbappend() is replaced with rlock()
+    active _after_ dbappend() (see following comments).
+
+<to be continuing next time>
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 7                   28 Aug 1992
+
+
+                CA-Clipper 5.01a alias Long promised bugfix?
+                                     by
+                               Daniel Docekal
+
+It's here! 5.01a release of Clipper 5.01 from Computer Associates. Maybe it
+is moment of long time waited when Clipper will have several in-between
+releases which will slowly fix most problematic bugs and add some badly
+needed features. Nearly 300KB big patch file will update 5.01 installation to
+5.01a revision by DeltaPatch technique. Update will include several .EXE
+files, all .LIB files and few sources with non-significant change of .CH
+files. Let us take a look and make few comments.
+
+First of all, delta-file patch is REQUIRING to have complete and untouched
+installation of Clipper 5.01, those from you who deleted files like RL
+sources, moved libraries somewhere or something must start thinking about
+making ready installation of original Clipper 5.01 and then extract back and
+copy changed files. On one side it's something very limiting and not clever
+enough, because .EXE file where all patches are compressend and hidden WILL
+NOT work when some from files are missing, but on other hand it's forcing
+someone to have real full Clipper installation. Side effect of this was that
+i made new installation from original floppies into different directory and
+that left me with easy option to compare original files. In other way even
+when installing over LIVE files all files of original will be left as backup
+copy and new files will have right names. Any mistake therefore or needed
+switching between is possible to realize or correct later.
+
+Documentation is as usual coming in form of .NG file (another new one) and is
+surprisingly short. From 300KB of COMPRESSED delta files one can expect more
+than:
+
+    þ   9 new runtime error messages covering some bugs and not fully
+        covered problems:
+        -   COPY FILE reacting on disk full state by standard error
+        -   AEVAL() argument error
+        -   DISKSPACE() device open error
+        -   illegal ALIAS names and duplicite ALIAS name
+        -   TOTAL pointing to fields in other work areas
+        -   executin command on area which has not database open
+        -   DBEVAL() argument error
+        -   SEEK or dbseek() or area where no index is present
+
+    þ   improved handling of expanded memory which fixes hanging
+        when EMS page frame is disabled
+
+    þ   new ERRORINHANDLER() function used for leaving error handler
+        in case of multiple errors
+
+    þ   fixed COPY FILE TO when EOF character is part of stream
+
+    þ   2 new generic error codes, EG_DUPALIAS and EG_BADALIAS
+
+    þ   GETSYS.PRG changed to act as compatible with Summer 87 and
+        dBASE III when SET BELL ON and SET CONFIRM ON
+
+    þ   Added type checking during instance variable assignments,
+        for fixing of Tbrowse and TBCollumn trouble with invalid
+CLIPBBS 2-15                   Page 8                   28 Aug 1992
+
+
+        data.
+
+    þ   improved error handling in many Clipper commands and
+        functions traps and reports missing arguments or invalid
+        arguments passed to them.
+
+    þ   Rl utility fixed for producing real dBase III+, not allowing
+        semicolons in headings and fixing right margin problem
+
+    þ   LABEL FORM uses SET DEFAULT setting for looking for file
+
+    þ   DBEDIT() accepts memory variables and expressions as collumns
+
+    þ   DBEDIT() properly displays field aliases in headings
+
+    þ   WAIT accepts ASCII with codes 32 to 255
+
+    þ   MENU TO no longer repaints screen with last prompt when
+        you press ESC to Exit the menu.
+
+    þ   Improved VMM handling with famous 53xx errors which nearly
+        makes impossible to get 53xx because of Clipper. FINALLY
+        is something doing something with faulty VMM!
+
+And what next? Nothing, that's all. Oh sorry:
+
+    þ   ALL .CH files changed header to include that they are (c) by
+        Computer associates instead of Nantucket.
+
+    þ   CLIPPER.EXE, CLD.EXE and RMAKE.EXE are also changing (c) from
+        Nantucket to CA.
+
+Expected something else? Actually i did. For example some from those bugs
+(based on report given by Nantucket together with this patch are not
+fixed)::
+
+    þ   At least notices about undocumented standards in some functions
+        like AEVAL() which is passing TWO parameters to codeblock and it
+        can be just documented as documentation addition. ALERT()
+        documentation addition,
+
+    þ   fixing APPEND FROM which is not translating numbers enclosed
+        in quotes
+
+    þ   MANY from BREAK...RECOVER bugs, but to be right i will run
+        all those bug test programs and will write again.
+
+    þ   Bugs in CLD.EXE like COL() and ROW() messing up, incorrect
+        parameter recognition and for sure many other. (CLD.EXE _IS_
+        updated, but evidently not for fixing bugs)
+
+    þ   @...CLEAR change in STD.CH definition to allow colors which
+        should be very simply
+
+    þ   Update of DBU sources to solve hanging problem which requires
+        two lines of changes.
+CLIPBBS 2-15                   Page 9                   28 Aug 1992
+
+
+    þ   FOR..NEXT error with non-integer numbers. That's NOT fixed and
+        that's VERY important for ANY counting operations...
+
+    þ   inability to access edited string from inside of MemoEdit() is
+        still the same. More than Year old promise of Nantucket is still
+        not filled.
+
+    þ   ROUND() function is still not rounding some particular numbers
+
+    þ   RTLINK is left untouched even when it's well known that incremental
+        linking is defect
+
+    þ   STD.CH is left untouched for SET COLOUR wrong specification
+
+And what is interesting - some things are fixed and NOT documented, as
+two samples i was able to find -
+
+    þ   bug of dbcreate() removing ALIAS of existin database from database
+        table is SOLVED. GREAT!
+
+    þ   error on ++ operator is finally giving information about "Argument
+        error: ++". This one was giving "Argument error: --". Probably
+        should be understood as part of "improved error handling", but
+        my opinion is should be documented
+
+    þ   i'm absolutely certaing that there are MORE bugs fixed because
+        after short compare of libraries there are MANY changes in MANY
+        modules which are NOT documented in connected documentation
+
+Another surprise is coming:
+
+    þ   final size of your .EXE will be about 3~4KB bigger than 5.01
+        initial revision. Hope that EMS memory handling was improved also
+        in way that it will not give so much famous 53xx problems
+
+Changed files?
+
+    þ   CLD.EXE, RMAKE.EXE and CLIPPER.EXE
+
+    þ   ALL .LIB files (CLIPPER, EXTEND, RTLUTILS, DBFNTX, CLD)
+
+    þ   ALL .CH files in INCLUDE directory, but this change ONLY
+        includes change of (c) in header
+
+    þ   RL related source files, some are in changed header for (c) and
+        rest is bug fix described above
+
+
+Closing words?
+
+    þ   It's nice to see that Computer Associates are TRYING to fill
+        needs of their customers. For FIRST try it's very good way and
+        in case that it WILL continue with OTHER updates all will be perfect.
+        All what programmers in Clipper need are slowly fixed all bugs which
+        are in Clipper 5.01
+
+CLIPBBS 2-15                   Page 10                  28 Aug 1992
+
+
+    þ   For next release maybe few recommendation:
+
+        1)  make optional patching of files which are not found by
+            delta-file because no one wants again and again install
+            complete directories
+
+        2)  take BETTER look to bug/anomaly reports because there is
+            too many things to solve that next update must be two times
+            bigger
+
+        3)  give try to more concrete and precious documentation of all
+            changes because that's most important part of all...
+
+        4)  don;t forget that DOCUMENTATION for Clipper needs also
+            updates and therefore add/remove or change things in already
+            old .NG files
+
+        5)  don't forget to change headers of all other source files
+            with new (c) because it's most important patch we are waiting
+            for <grin>
+
+    þ   Anyway, with all this negative  i would like to thank you for
+        first positive light in long dark way of Clipper developing.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 11                  28 Aug 1992
+
+
+                        Hitch Hikers Guide To The Net
+              Episode 12 - Life, The Net, and Everything Part 2
+
+ (Ralph, the 'Video Testament' is just about to explain Life, the Net,
+ and Everything to the crew of the Infinity)
+
+ Gillian:       Tell us, what does all this neo-Nazi stuff have to do
+                with the Net.
+ Arnold Lint:   I don't think I want to know.
+ Martin:        Me neither.
+ Rod:           Quiet.
+ Xaphod:        Go on . . .
+ Ralph:         Anyway, Kubla Konthemasus' followers were doing great.
+                Anything they showed on TV was immediately accepted as truth.
+                Disco became an overnight sensation, and then was phased out
+                when the profit wasn't great enough. It was soon realized
+                that there was a significant group of people in computer
+                related fields who possessed considerable wealth. It was also
+                realized that these people were not being taken in by the
+                video blitz.
+Arnold Lint:    Good for us| Martin: Not really, I'm afraid.
+
+Ralph:          Very perceptive, robot. Konthemasus' research showed that
+                hackers do not believe what they see or hear, unless it comes
+                across a computer terminal. It was fast becoming apparent
+                that computers would be vital to the power of the new regime,
+                so it was vital that anyone who worked with computers could
+                be controlled.
+
+Gillian:        Yes,  but what does that have to do with the Net? The Net is
+                an exchange of ideas and ideals between computer
+                professionals|
+
+ (Martin starts coughing sarcastically)
+
+Ralph:  Kubla Konthemasus, in a brilliant stroke, figured out a way to
+        not only carry out an experiment in behavioral psychology on the
+        computing professionals, but also to put into action all his
+        findings. He created the Net. You see, there are a few key links in
+        the Net controlled by his men. At first they tried a variety of
+        topics and tested reactions. Then they started trying to bend the
+        opinion of Net-landers. First by trying to get everyone to like
+        current trends in music, then by trying to create the impression that
+        North Dakota does not exist. Anyone who rejected the ideas they tried
+        to push, and was fool enough to say so, was put onto a list. This
+        list will be used to purge the society of all those who would corrupt
+        the purity of essence of Konthemasus' new order of conformity and
+        religious fulfillment.
+
+Xaphod:         Wow, that's unbelievable.
+Rod:            Yah, I don't think I do believe it.
+Arnold Lint:    Me neither . . . An actor in the white house? . . .
+                No North Dakota? . . . Couldn't happen|
+Gillian:        I don't know, maybe . . .
+Ralph:          Well, that's about it. I've got to go, lots to do.
+Rod:            What could a book have to do?
+CLIPBBS 2-15                   Page 12                  28 Aug 1992
+
+
+Ralph:          About an ounce of cocaine|
+
+ (With that, Ralph vanishes into thin air. The crew of the Infinity is left
+ standing, dumb founded by what they have heard. They start to leave and come
+ to the door. There is a moment of hesitation.)
+
+Gillian:        If anyone of you open the door for me, I'll put the boot in.
+Arnold Lint:    What's with her.
+Rod:            she's an ERA.
+Arnold Lint:    A what?
+Xaphod:         ERA - An Extra Rights Activist.
+
+ [*****************************************************************************
+ According to "The Hitch Hikers Guide To The Net", the Extra Rights Activists
+ group was started by a group of women who were quite upset by their station
+ in life. They didn't just want equality, they wanted superiority. They
+ figured they could get all the privileges of equality with men, and yet
+ retain all the conveniences regarded them as women.  They wanted equal pay
+ for less work, lower taxes for women, shorter work hours. After all, the
+ fairer sex shouldn't have to work so hard, but they do deserve the same pay.
+ They didn't want to join the army though. They felt that in some cases,
+ where it was convenient, men could still have it all. The one thing you
+ could do to make an ERA mad was to hold the door for her. They took it as a
+ sign of harassment . . . no one knows why. Other acts of courtesy were also
+ mistaken as antagonizing the ERA movement. Helping an ERA with her coat was
+ the same as telling her she smelled like bathroom at the National Food
+ Poisoners Convention. Helping an ERA with her chair in a restaurant was
+ tantamount to clubbing her about the head with a moldy Albatros.  In
+ response to this threat to male dominated society, the all-male anti-ERA
+ faction MCP (Male Counter-ERA Pact) circulated a pamphlet explaining what a
+ man could do if the woman he was with gave any indications of trying to open
+ the door before he could open it for her. It read as follows:
+
+ =============================================================================
+
+                  ** How not to hold the door for an ERA **
+
+ If the woman you are with starts to race for the door so she can open it for
+ herself, and this upsets you, here are a few things you can do to make sure
+ it won't happen again.
+
+ *       Just as she gets up to speed, trip her from behind.
+ *       When she has a large enough lead, and has the door open, stop to
+         tie your shoe.
+ *       If there is a convenient doorway (like a men's room) nearby, wait
+         until she isn't looking and duck in as she opens the door.
+ *       If she is holding the door, take hold of it as you enter the
+         doorway and close it behind. Locking it is a sure-fire clue to her
+         that you are displeased.
+ *       If there is a long corridor before the offending door, and she
+         starts to speed up, keep pace with her. When you both hit a dead run,
+         body check her into the wall. A well timed 'Ooops' will make it all
+         look innocent. This is dangerous if you are with a lady roller
+         derby player.
+ *       If you really don't care about offending her, give her a quick
+         feel just as she turns away from you to head for the door. Of course,
+CLIPBBS 2-15                   Page 13                  28 Aug 1992
+
+
+         she may never turn her back on you again.
+
+ Remember, there is nothing wrong with being courteous. But if she won't take
+ it gracefully, make it bloody inconvenient for her to keep doing so.
+
+ ========================================================================
+
+ The ERA movement, surprisingly, took no action against the MCP. Rumor has it
+ that they settled the debate in some non-violent manner.  History notes that
+ there followed a sudden increase in the sale of plastic drop clothes and
+ corn oil followed by a sudden increase in births about 9 months later.
+ ***********************************************************************]
+
+
+ ******************** End Of Part 12 ********************
+
+ Will Arnold Lint hold the door for Gillian? Or will he become a soprano? To
+ find out . . . Tune in next time . . .  same Net-time . .  . same
+ Net-channel.
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 14                  28 Aug 1992
+
+
+===============================================================================
+                                   ANOMALIES
+===============================================================================
+
+
+                     ANOMALIES and their comments
+
+This part of Clipper BBS Magazine is dedicated to all discovered 
+anomalies and comments about them in Clipper products. Because 
+Nantucket is still unable to give own bug and anomalies reports (as 
+actually did in past with Summer 87 version) is very handy to have 
+results of many investigations done on many user places. I'm also
+doing my own investigatings, because i'm always very good when someting 
+has hidden problems. Everything what i buy will first show all problems 
+and then all normal things. This amazing part of my live is sometime 
+making me crazy, but for testing of programs it's great <grin>.
+
+Daniel
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 15                  28 Aug 1992
+
+
+===============================================================================
+                                  CLIPPER NET
+===============================================================================
+
+
+
+Following is COMPLETE list of all published file descriptions in Clipper
+BBS magazine in previous numbers. Purpose of this index list is to allow
+anybody find needed file descriptions in growing number of described files.
+Short description after name will give first possible close image about
+file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+³FileName     ³Src ³Description                                     ³Where ³
+ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper (-->Clipper !!)   ³[1-19]³
+³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+CLIPBBS 2-15                   Page 16                  28 Aug 1992
+
+
+³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+
+Src can be:
+    Cln     File is accesible on ClipperNet
+    Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 17                  28 Aug 1992
+
+
+===============================================================================
+                                    CLIPBBS
+===============================================================================
+
+
+                             CLIPBBS Distribution
+
+  CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+  another related problems and xBASE languages). This magazine is for
+  free and articles aren't honored. Nobody can make a profit from the
+  distribution of this magazine.
+
+  CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+  public system without changes of original contents or number of files
+  in original archive (kind of archive can be changed, but we are sup-
+  porting ARJ archive because is best and smallest).
+
+  If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+  site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+  or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+  voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+
+  A BIG NEWS is that also Compuserve messages are welcome:
+
+     Daniel Docekal,  100064,2343
+
+  Distribution sites:
+
+  Clipper BBS Home system  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+      Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+      Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+      2:285/608@fidonet.org
+
+  United Kingdom   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+      Daily whole day, modem speed HST
+
+  Italy   ³
+  ÄÄÄÄÄÄÄÄÙ
+      Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+      20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+      24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+      2:334/307@fidonet.org
+
+  United States of America  ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+     The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+      Daily whole day, modem speed HST
+
+      The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+      Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+
+  Canada    ³
+CLIPBBS 2-15                   Page 18                  28 Aug 1992
+
+
+  ÄÄÄÄÄÄÄÄÄÄÙ
+      SYSOP Gordon Kennet, phone 1-604-599-4451 
+      Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+
+  WORLDWIDE   ³
+  ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+  
+      Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+      Various systems around whole world
+
+
+
+-------------------------------------------------------------------------------
+CLIPBBS 2-15                   Page 19                  28 Aug 1992
+
+
+                     How to write articles in CLIPBBS?
+  
+  
+  Submission of articles to CLIPBBS is really easy:
+    Maximum of 78 characters per line, as long or as short as you like
+    ASCII text.
+    Choose from the list of extension which most describes your text, or
+    just name it .ART as ARTicle and send it to publisher or to any
+    distribution site via modem to BBS or with mailer as file attach.
+    Article will come automatically appear in the next free issue.
+  
+  Extensions are:
+  
+          Articles (anything)             .ART
+          Software                        .SOF
+          News                            .NEW
+          Question and Answers            .Q&A
+          ANOMALIES and their comments    .ANO
+          Letters to editors              .LET
+          Advertisement                   .ADV
+          Wanted                          .WAN
+          Comments                        .CMS
+          DUMP from conferences           .DMP
+          Clipper Net                     .CLN
+          
+  That's all at the moment, there will probably be changes later, as the
+  magazine evolves. If you have any ideas for a new section of CLIPBBS,
+  please tell us, or just write an article about it.
+  
+  Daniel, publisher
+
+-------------------------------------------------------------------------------
+

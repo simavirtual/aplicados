@@ -1,0 +1,17 @@
+The showfont.exe utility can be used to display fonts.
+
+To run, type:
+
+C:>showfont fname.@
+
+where fname is the name of the font file you want to view.  Wild cards
+can be used w/ fname.
+
+   + and -  move a cursor through the characters.
+
+   P key -  move to the next page.
+
+   *     -  view next file.
+
+   Ctrl C-  drop out of the program any any time.
+

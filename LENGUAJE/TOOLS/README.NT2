@@ -1,0 +1,256 @@
+
+
+
+
+
+
+              ษอออออออออออออออออออออออออออออออออออออออออออออป
+              บ                                             บ
+              บ        Important information about          บ
+              บ     Nantucket Tools II for Clipper 5.01     บ
+              บ                   Rev.B                     บ
+              บ                                             บ
+              ศอออออออออออออออออออออออออออออออออออออออออออออผ
+
+
+
+
+
+ 
+ ***********************************************************************
+          Last minute changes and enhancements to the manuals
+ ***********************************************************************
+
+ Page       Description
+ -----------------------
+ R.I-1-7    According to the documentation, WCOL(), with the
+            <lAfterWCENTER> parameter set to .T., returns the
+            left column of a window after a WCENTER().
+            The correct text should be .....after a WCENTER(.F.)...
+
+ R.I-1-21   According to the documentation, WROW(), with the
+            <lAfterWCENTER> parameter set to .T., returns the
+            top row of a window after a WCENTER().
+            The correct text should be .....after a WCENTER(.F.)...
+ 
+ R.I-2-I    Extended Drivers Introduction :
+            The correct file name is NT2US50.OBJ.
+
+ R.II-7-75  A new argument has been added to the TRUENAME() function.  
+            Please see Norton Guides for further information.
+
+ R.II-7-78  It is not necessary to enter a period after the eigth
+            character of the volume name.
+
+            The VOLUME() function does not take into account the
+            CSETSAFETY() setting.
+
+ 
+ ***********************************************************************
+ Notes   Notes   Notes   Notes   Notes   Notes   Notes           Page  1
+ ***********************************************************************
+
+ DEBUGGING WITH TWO SCREENS
+ --------------------------
+ When debugging with two monitors, the 'Exchange Screens' switch within
+ the OPTION menu should be off; otherwise, errant output might appear on 
+ the application monitor.
+
+
+ ERROR MESSAGES IN OPENED WINDOWS
+ --------------------------------
+ When a Runtime Error occurs during execution in a Tools window, the error
+ message might not be readable if the current window is too small. In 
+ order to  prevent the  error message from  being truncated,  insert 
+ WSELECT(0) before  line 67 in  ERRORSYS.PRG.  This will select the 
+ physical screen before any error message will be displayed. 
+
+
+ CALLING R&R VIA RUN
+ -------------------
+ When  calling the report generator  R&R  via a RUN command from within a 
+ Clipper program linked with Nantucket Tools, a 'NOT ENOUGH MEMORY' error
+ message might occur.  The R&R swapper has determined that Nantucket Tools
+ have changed interrupt vectors (i.e. INT 9h, 10h, or 29h) and refuses to
+ swap Clipper code out of memory, as the service routines for the existing
+ vectors would no longer be available.
+
+ To circumvent the error message the following steps are recommended:
+
+ a) Before starting your Clipper application, call INTSAVE.EXE from the
+    BIN subdirectory of Nantucket Tools directory.
+
+    INTSAVE /S START.INT                // save original interrupts
+
+ b) When ready to RUN R&R, call a batch file containing the following 
+    commands:
+
+    INTSAVE /S RUN.INT                  // save modified interrupts
+    INTSAVE /R START.INT                // restore original interrupts
+     * call R&R
+    INTSAVE /R RUN.INT                  // restore modified interrupts
+
+ WARNING!  When using Clipper applications linked with Nantucket Tools 
+ on a network,  it might be  possible that a  station  would read the
+ interrupt table of another station; this would lead to a system crash.
+ Therefore, always use file names or separate directories specific to
+ each particular station.
+
+ **********************************************************************
+ Notes   Notes   Notes   Notes   Notes   Notes   Notes          Page  2
+ **********************************************************************
+
+ WOPEN() -  Opening a window outside of WBOARD() area
+ -----------------------------------------------------
+ If a Tools window is opened outside the visible area of the screen 
+ defined by WBOARD(), runtime error messages will not appear because 
+ the  current selected  Tools window is not visible.  This is why a
+ Tools window should be  opened in the visible area  first and then
+ moved outside the visible area.
+
+
+ Opening a new window without erasing the contents
+ -------------------------------------------------
+ When a new Tools window is opened with the fifth parameter set to .F.
+ and no window shadow is set via  WSETSHADOW(), the new  Tools window 
+ will contain the  portion of the screen where the  Tools window was
+ opened.  The contents of the window will not be erased until a CLEAR
+ or  WBOX() is called.  The end result is a very 'jagged'  appearance
+ of a window on screen.
+ As a rule, WBOX() is called immediately after a WOPEN() and the 'jagged'
+ appearance is not visible.  However, this behaviour can be noticed when
+ there is a WAIT between WOPEN() and WBOX(), or when a program is running
+ in single step mode of the debugger.  To avoid this, WOPEN() should be
+ called with the fifth parameter set to .T..
+
+
+ FILESMAX()/FILESFREE(), IN PARTICULAR UNDER MS DOS 5.0
+ ------------------------------------------------------
+ At system start, the FILES= parameter in CONFIG.SYS determines the
+ size of a buffer to be reserved for file information of open files.
+
+ The  value from  SET CLIPPER=Fnnn  determines the  size of a  Clipper
+ application's  handle table.  The  internal handle table is created by 
+ the Clipper application at program start and valid only for the current
+ .EXE file.  The internal handle table will use either the 20 handles in
+ PSP or up to 255 handles in the DOS extended handle.  
+ 
+ Under DOS 5.0, it is possible, that the DOS file buffer can be reallo-
+ cated and extended when required. This behaviour can not be foreseen by
+ FILESMAX() and FILESFREE(). Both functions can determine the setting of
+ CONFIG.SYS (NOT by reading from CONFIG.SYS!!) and the size of the appli-
+ cation internal handle table, but cannot recognize unexpected extensions
+ of the DOS file buffer.
+
+
+ SETKXLAT()
+ ----------
+ This function can either be used with the symbolic constants (K_<key>,
+ KS_<key>) defined in the Clipper header file INKEY().CH or with the
+ symbolic constants from the Nantucket Tools header file NT2SCAN.CH.
+
+ The only exception is the symbol K_F2 from INKEY.CH.  K_F2 in INKEY.CH
+ has been defined as -1; however, -1 is used to 'switch off' the trans-
+ lation for a particular keycode.  In this case, use the symbol KS_F2
+ from NT2SCAN.CH corresponding to a value of CHR(0) + CHR(60).
+
+ **********************************************************************
+ Notes   Notes   Notes   Notes   Notes   Notes   Notes          Page  3
+ **********************************************************************
+
+ NORTON GUIDES, WINDOWS AND DSETWINDOW()
+ ---------------------------------------
+ With DSETWINDOW() set to .T. (default setting), calling Norton Guides
+ from within a Tools window would result in an erratic screen as INT 10h
+ is changed.  This behaviour can be prevented by DSETWINDOW() to .F., or
+ by selecting the physical screen with WSELECT(0).
+
+
+ VIDRAM.COM, QUARTERDECK CORP. (PART OF QEMM)
+ --------------------------------------------
+ VIDRAM.COM from Quarterdeck readdresses areas for the video memory of 
+ VGA and / or monochrome adapters as working memory.  For some programs, 
+ VIDRAM can simulate a  video adapter other than the  current existing  
+ one.  In this case, it is no longer possible to work with the Nantucket
+ Tools font functions or color palettes.
+
+
+ The following functions require DOS 3.1 or higher
+ -------------------------------------------------
+ Chapter 14 - Network: 
+              All network functions
+ 
+ Chapter 12 - System Information:
+              All error functions, that call the DOS function INT 21/59h:
+              ERRORCODE(), ERRORBASE(), ERRORACT(), ERRORORG()
+
+              GETCOUNTRY() queries the country setting of the operating
+              system using the DOS function INT 21/38h (00).
+
+ Chapter  7 - Disk Utilities:
+              The TEMPFILE() function creates a temporary file using 
+              the DOS function INT 21/5Bh.
+
+ 
+                             Additional notes
+                            ------------------
+
+ Chapter 12 - System Information
+ -------------------------------
+ R.III-12-13 FILESFREE() 
+ R.III-12-14 FILESMAX()
+ R.III-12-20 NUMBUFFERS()
+ R.III-12-21 NUMFILES()
+
+ These functions cannot be used in the compatibility box of OS/2, as 
+ the emulation is not completely compatible.
+
+ ***********************************************************************
+     Copyrights   Copyrights   Copyrights   Copyrights   Copyrights
+ ***********************************************************************
+
+ INSTALL.EXE
+ The  installation  program used to install  Nantucket Tools II / 5.01,
+ INSTALL, is based on licensed software provided by Knowledge Dynamics
+ Corp., Highway Contract 4 Box 185-H, Canyon Lake,  Texas 78133-3508,
+ 1-512-964-3994. INSTALL is Copyright (c)1987-91 by Knowledge Dynamics
+ Corp., which reserves all copyright protection worldwide.
+
+ INSTALL is provided to you for the exclusive purpose use of installing
+ Nantucket Tools II / 5.01.  Nantucket has made  modifications to  the
+ software as provided by Knowledge Dynamics Corp, and thus the performance
+ and behavior of the INSTALL program shipped with Nantucket Tools II/5.01
+ may not represent the performance and behavior of INSTALL as shipped by
+ Knowledge Dynamics Corp.  Nantucket is exclusively responsible for the
+ support of  Nantucket Tools II / 5.01,  including support during  the
+ installation phase.  In no event will Knowledge Dynamics Corp be able
+ to provide any technical support for Nantucket Tools II / 5.01.
+
+
+ LZEXE COMPRESSION
+ The file  TOOLINFO.EXE as well as the help programs INTSAVE.EXE and
+ INTOFF.EXE shipped with Nantucket Tools II / 5.01 have been reduced
+ in their size using the freeware utility LZEXE -
+
+ author:
+
+    Fabrice Bellard
+    451 chemin du mas de matour
+    34790 GRABELS (France)
+
+ While the original size of  TOOLINFO.EXE  after  linking is 310 kB,
+ the size of the compressed file is only 154 kB.  LZEXE  compresses
+ the .EXE  file with a  very  efficient pack  algorithm and does not
+ optimize the Clipper program; the requested memory size will therefore
+ not be reduced!  As LZEXE adds a small unpack routine, the compressed
+ .EXE files can be started like 'normal' .EXE files. LZEXE is in no way
+ distributed by Nantucket.  Usually you can download it from many BBS
+ or order it from freeware distribution companies.
+
+ According to the license agreements of LZEXE, the commercial sale of
+ any .EXE files, compressed with LZEXE, is permitted.
+
+                              *     *     *
+*****************************************************************************
+
+

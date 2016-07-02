@@ -1,0 +1,9 @@
+# TEST.LNK (This is a comment)
+
+FILE test
+FILE limerick
+
+LIB force         # Force compiler library
+
+OUTPUT t          # Output .EXE name
+

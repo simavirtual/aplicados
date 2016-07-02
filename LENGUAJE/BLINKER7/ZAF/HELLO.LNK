@@ -1,0 +1,26 @@
+#
+#  HELLO.LNK   Blinker link script for ZAF 5.1 HELLO example for BC++ 5.x
+#
+
+fi c0lp50.obj     # Blinker replacement startup for BC++ 5.x
+
+fi hello1.o16     # OBJ file names
+
+out hello1        # Output file name
+map s,a           # Create a MAP file
+
+bli exe ext       # Create DOS extended program
+lib blxbcp50      # Blinker protected mode library for BC++ 5.x
+
+lib zafd16p       # ZAF libraries
+lib zafd16
+lib met_xp2d
+lib met_pp2l
+
+lib emu           # Borland libraries
+lib mathl
+lib cl
+
+nodef             # No default libraries
+nobell            # No irritating beep
+

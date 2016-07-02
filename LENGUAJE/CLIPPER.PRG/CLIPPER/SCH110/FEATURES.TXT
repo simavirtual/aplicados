@@ -1,0 +1,38 @@
+SCHOONER Version 2.00 is the same powerful, full featured database as SCHOONER Version 1.00, but Version 2.00 now offers the added capability ofç
+creating full featured Graphical User Interface (GUI) Applications. In other words, your programs can now come alive with graphics, images, icons andç
+fully programmable mouse controls. You can integrate text and graphics together on the same screen or easily switch from graphics mode to text modeç
+depending on your needs.
+
+Here are just a few of the enhancements found in SCHOONER Version 2.00:
+
+    Full support of all Version 1.00 commands
+        and functions
+    Full support of .PCX image display
+        EGA
+        VGA 320x200 and 640x480
+    Full screen wallpaper
+    Graphical mouse support
+    Programmable mouse hot spots
+    Programmable List Boxes
+    Menu displays
+    Icon boxes
+        Raised or etched with full color control
+        Full icon image control
+        Push button effects
+    Graphical GET and SAY effects
+        Full text display with upto 3 point sizes
+        GET data with picture clauses
+    Image scrolling (up or down)
+    Image save and restore for screen painting
+        effects
+    Graphical file and screen printing to:
+         HP Laser, Deskjet and Epson printers
+    Lower memory requirements than Version 1.00
+    Powerful memory swapping features that allow
+        you to run outside programs larger than
+        available SHELL() memory.
+    AND MORE...
+
+In short, virtually all of the tools necessary to create powerful GUI applications in a fraction of the time of other application development systems.ç
+In addition, you can leverage the Xbase skills you already have so you don't waste valuable time learning a new language.
+

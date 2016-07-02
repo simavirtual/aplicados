@@ -1,0 +1,128 @@
+                      REPORTS
+
+The report writer  function found in Schooner is the
+same  one  provided  by  the  Clipper(r)  Summer  87
+system. It is provided here for your convenience.
+
+
+F2 Report Layout:
+
+Provides "get boxes"  to hold specifications for the
+page header,  the page  width, the  left margin, the
+lines  per page,  line spacing,  page ejects,  and a
+plain page  format. Plain page  means that the date,
+time and page numbers are not printed.
+
+
+F3 Report Group:
+
+Specify  an  expression to  act  as  a  report group
+break. A  break occurs  whenever the  current record
+and the record's key expression are not equal to the
+previous record's  key expression. This  can be used
+to separate and  subtotal groups of records based on
+a key value.
+
+
+F4 Report Field Definition:
+
+Define  expressions  that  are  translated  into the
+detail  lines.  This can  be  any  legal expression.
+Because reports  are not compiled  into the Schooner
+system, you  must refer  only to  functions that are
+documented in Schooner  and not just any DBASE(r) or
+Clipper(r) function.  It is recommended  that you do
+not reference Schooner  UDF() user defined functions
+without very good testing.
+
+
+F5 Report Delete:
+
+Erases the current field definition.
+
+
+F6 Report Insert:
+
+Adds a report field into the report format.
+
+
+F7 Report Go to:
+
+Allows you  to jump from one  field to another. PgUp
+and PgDn will  move you one field  at a time, but F7
+can be faster.
+
+
+F10 Report Save:
+
+Saves the report in .FRM format.
+
+
+
+
+
+
+                       LABELS
+
+The label  writer function found  in Schooner is the
+same  one  provided  by  the  Clipper(r)  Summer  87
+system. It is provided here for your convenience.
+
+
+F2 Label Toggle:
+
+Allows you  to switch  back and  forth between label
+field creation and formatting.
+
+
+F3 Label Formats:
+
+Allows  you  to  select  on  of  five  common  label
+formats.
+
+
+F10 Label Exit:
+
+Saves your label format in .lbl format and exits the
+label writer.
+
+
+Note:  Commas  found  in  a  label  line  act  as  a
+terminator. Anything to the right is ignored. If you
+wish to  use a  comma in  a label,  surround it with
+quotes or  define a MV  variable as a  comma and use
+it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

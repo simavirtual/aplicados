@@ -1,0 +1,64 @@
+//
+// Blinker Project - Definition - File created by PBUILD Version 1.0
+//
+// Remember to set the LIB environment variable to point to XPPW32\LIB\OMF
+//
+
+[PROJECT]
+    COMPILE       = xpp
+    COMPILE_FLAGS = -q -OMF
+    DEBUG         = yes
+    GUI           = no
+    LINKER        = blinker.com /qm
+    LINK_FLAGS    =
+    OBJ_FORMAT    = COFF
+    OMF_LINKER    = blinker.com /qm
+    RC_COMPILE    = arc
+    RC_FLAGS      = -v
+    PROJECT.XPJ
+
+[XDLL.PRJ]
+    XDLL1.DLL
+    XDLL2.DLL
+    MAIN.EXE
+
+[XDLL1.DLL]
+// $START-AUTODEPEND
+    COLLAT.CH
+    GET.CH
+    MEMVAR.CH
+    PROMPT.CH
+    SET.CH
+    STD.CH
+    XDLL1.DEF
+//  XDLL2.LIB
+    XDLL1.OBJ
+// $STOP-AUTODEPEND
+    XDLL1.PRG
+
+[XDLL2.DLL]
+// $START-AUTODEPEND
+    COLLAT.CH
+    GET.CH
+    MEMVAR.CH
+    PROMPT.CH
+    SET.CH
+    STD.CH
+    XDLL2.DEF
+//  XDLL1.LIB
+    XDLL2.OBJ
+// $STOP-AUTODEPEND
+    XDLL2.PRG
+
+[MAIN.EXE]
+// $START-AUTODEPEND
+    COLLAT.CH
+    GET.CH
+    MEMVAR.CH
+    PROMPT.CH
+    SET.CH
+    STD.CH
+    XDLL1.LIB
+    MAIN.OBJ
+// $STOP-AUTODEPEND
+    MAIN.PRG

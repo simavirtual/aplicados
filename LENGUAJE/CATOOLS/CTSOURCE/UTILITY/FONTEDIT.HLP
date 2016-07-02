@@ -1,0 +1,153 @@
+
+ FONTEDIT   [INPUT file [OUTPUT file]]
+            Default for INPUT file is the font memory
+
+ space bar  Pixel is inverted, after that, pixel mode is set
+ -/+:       Pixel mode OFF/ON
+            influences pulling mode, insert of pixel and lines
+ INS        pixel (mode) is inserted, following pixel will be moved
+            to the right
+ DEL        pixel is deleted,  following pixel will be moved to the
+            left
+ Enter      pulling mode is set ON/OFF
+            'ON' means: cursor 'draws' (mode) in edit range
+ Caps Lock  OFF: only the 'edit' character is touched
+            ON : all characters are modified
+ Tab        changes between 'edit' window and the window for ASCII
+            selection
+
+   HELP windows can be moved on the screen by using scroll lock,
+   cursor keys, ESC or the grey '+' key
+
+                                                              Taste 
+
+Ý
+ Setting of function keys:
+
+ F1   anywhere in the program, a help text can be called
+
+ F2   calls a submenu for loading, saving and selecting fonts
+ F3   allows to insert, delete and duplicate pixel lines in a character
+ F4   returns an input mask for a column indent pattern (e.g. italic)
+ F5   mirrors one or all characters round the horizontal axis
+ F6   mirrors one or all characters round the vertical axis
+ F7   allows to rotate one or all characters
+ F8   inverts one or all characters of a font
+ F9   returns an input mask for copying original characters
+ F10  reloads the original pattern of one or all characters
+ F11  returns an input mask for overlaying original characters
+      (instead of F11 also Shift F1 can be used)
+
+Ý
+ LOAD      :Loading a font file; disk drive and path can be specified.
+            Use F2 to display a menu of font files in the current
+            directory.
+ SAVE      :Saving a loaded and perhaps modified font. Default is
+            the last used file name.
+ PRINT     :This procedure prints one or all (caps lock) characters
+            of the active font under usage of a block character.
+            No print fonts are created!
+ ROM FONT  :The ROM font of the used screen adapter can be reloaded.
+ LINES     :The screen mode including the number of displayable
+            characters can be selected.
+ PIX HEIGHT:The number of pixel (character height) of the current font
+            within a range of 5 up to 32 pixel can be selected.
+            Depending on the selected number of lines (mode) an edit
+            window for the required height can not always be displayed.
+            In a sequential menu, it can be selected between a mode
+            change or a virtual screen (scroll mode).
+
+Ý
+ The screen mode and the available number of screen lines
+ can be modified. EGA adapters allow 25 and 43, VGA adapters
+ 25, 28 and 50 lines. This modes are based on pixel heights
+ (8, 14 and 16) with an available ROM font.
+ Example: If the VGA 50 lines mode is selected, the new pixel height
+ is 8. The 50 lines would allow to set an edit window also for fonts
+ with the maximum of 32 pixel, but in the characters of the font
+ window the modifications are not visible at once, as their pixel
+ height deviates from the edit window.
+Ý
+ Any pixel height within the specified range can be entered, also if
+ there is no existing ROM character set. If the required pixel height
+ needs more lines than available on screen, a sequential
+ menu offers two possibilities to be selected:
+
+  The screen mode can be modified to make more lines available
+
+  A virtual screen containing more lines than the real screen
+  can be created
+Ý
+ The selected pixel height needs more lines than available on the
+ screen. It can be selected between another mode with
+ a sufficient number of lines and a virtual screen.
+ A virtual screen can contain more lines than a screen can display
+ simultaneously. By moving the cursor, the displayed part of the
+ screen will be scrolled.
+ Through selection of a fixed number of lines in the FONT menu (F2)
+ a virtual mode can be discarded.
+
+Ý
+ The default mask for the file selection can be modified. Disk drive
+ an path can be specified.
+Ý
+ Confirm the default name with >RETURN< or enter a new name. By
+ entering one character, the default name will be deleted. All
+ files can be entered with drive specification and path.
+Ý
+ A menu of the font files in the current directory will be displayed.
+ The required file can be selected with the cursor keys. The
+ program recognizes the font file by the extension .00? (only
+ valid for files already processed with this font editor).
+Ý
+ Pixel lines can be inserted in a character. Depending on the pixel
+ mode, the new created line can consist of set and non set pixel.
+ With the function DUPLICATE, the current line will be duplicated.
+ (e.g. to extend characters)
+Ý
+ This function is not able to insert complete columns! It is possible
+ to enter a relocation pattern for up to 16 pixel lines. The default
+ relocation of the program results in an italic display corresponding
+ to an ITALIC font.
+ Positive values insert, negative values delete a pixel in the
+ corresponding line, 0 does not change the line.
+ Values are valid in a range between -8 and +8, values outside this
+ range will not be accepted.
+ With an active CAPS LOCK, all characters can be modified according
+ to a specified pattern.
+Ý
+ Copy of font ranges
+
+ This procedure copies a specified number of characters (patterns)
+ either from the original font or from the edit font to any position
+ within the active font.
+
+ So you are able to:
+
+ 1. copy back a part of the original patterns after modification
+    off all characters.
+
+ 2. duplicate a part of the characters in the edit font to
+    another position within the same font range.
+Ý
+ Specifies the start position within the original or the edit font
+ for the copying of characters. This option applies to the field
+ for the E/O input.
+Ý
+ Specifies the target position of the copy process (from this
+ position the characters are overwritten with the copied
+ pixel patterns)
+Ý
+ Specifies the number of characters to be copied from the start
+ position
+Ý
+ Which character shall overlay others (source character)
+Ý
+ Specifies the target position for the overlay process (from
+ this position the characters in the edit font range are
+ overlaid with the pixel pattern of the source character)
+Ý
+ Specifies the number of characters to be overlaid from the
+ target position
+Ý
+

@@ -1,0 +1,27 @@
+######################################################################
+##                                                                  ##
+##                    ExoSpace Script for PCONSOL2                  ##
+##                A Novell Utility Written with NOVLIB              ##
+##                                                                  ##
+######################################################################
+
+EXOSPACE PROCEDURE DEPTH 100
+EXOSPACE EXECUTABLE NODELETE
+NOBELL
+
+# My PRGs
+	FILE PCONSOL2, NWI
+
+# NOVLIB
+	FILE NOVLIB50
+    @NOVLIB30.LNK
+
+# ExoSpace protected mode material
+	EXOSPACE PACKAGE IPX, IPXCT
+
+# CA-Clipper
+	LIB CLIPPER, EXTEND, TERMINAL
+
+OUTPUT PCONSOL2
+MAP A,S
+

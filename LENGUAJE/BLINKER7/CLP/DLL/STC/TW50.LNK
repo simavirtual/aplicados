@@ -1,0 +1,10 @@
+#
+#  96.03.23    TW50.LNK for CA-Clipper 5.01
+#
+#  This sample link file demonstrates how to link a Windows CA-Clipper
+#  5.01 EXE which will call a statically linked CA-Clipper Windows DLL.
+#
+   @t                      # Include the generic link file for all versions
+
+   file blxclp50           # Clipper 5.01 DLL OBJ for the EXE
+

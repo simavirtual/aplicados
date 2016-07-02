@@ -1,0 +1,75 @@
+
+* WIZNAME = WZ_BQUER
+* VERSION = .96
+* TIMESTAMP = 493573204.0000
+* CLIENTSERVER =
+* TABLES = D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF;D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF
+* JOINS = Facturas;C¢dcli;Clientes;C¢dcli;0
+* FIELDS = Clientes.empresa;Clientes.contacto;Clientes.ciudad;Facturas.c¢dfac;Facturas.impfac
+* SORT FIELDS = Clientes.empresa
+* GROUP = 
+* SQL = SQL Select statement for Mailmerge Wizard:
+* SELECT Clientes.empresa,Clientes.contacto,Clientes.ciudad,Facturas.c¢dfac,Facturas.impfac;
+*	FROM D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF,D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF;
+*	WHERE Clientes.C¢dcli = Facturas.C¢dcli;
+*	ORDER BY Clientes.empresa;
+*	INTO CURSOR Consulta
+IF !USED("Clientes")
+	SELECT 0
+	USE (LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\CLIENTES.DBF","DBF","Buscar Clientes.DBF ?")) AGAIN ALIAS Clientes
+ELSE
+	SELECT Clientes
+	SET RELATION TO
+	SET SKIP TO
+	SET ORDER TO
+	SET FILTER TO
+ENDIF
+IF !USED("Facturas")
+	SELECT 0
+	USE (LOCFILE("D:\FPD26\SAMPLE\CATALOG.DOS\FACTURAS.DBF","DBF","Buscar Facturas.DBF ?")) AGAIN ALIAS Facturas
+ELSE
+	SELECT Facturas
+	SET RELATION TO
+	SET SKIP TO
+	SET ORDER TO
+	SET FILTER TO
+ENDIF
+SELECT Facturas
+m.i=1
+DO WHILE !EMPTY(KEY(m.i))
+	IF NORMALIZE(KEY(m.i))="C‡DCLI"
+		SET ORDER TO m.i
+		EXIT
+	ENDIF
+	m.i=m.i+1
+ENDDO
+IF EMPTY(SET("ORDER"))
+	IF SYS(2011)#"Exclusive"
+		USE DBF(ALIAS()) EXCLUSIVE AGAIN ALIAS (ALIAS())
+	ENDIF
+	INDEX ON C¢dcli TAG C¢dcli &&C¢dcli
+ENDIF
+SELECT Clientes	&&Parent Area
+SET RELATION TO C¢dcli INTO Facturas ADDITIVE
+SET FILTER TO FOUND("Facturas")
+SELECT Clientes
+SET SKIP TO Facturas
+*Sort order
+m.i=1
+DO WHILE !EMPTY(KEY(m.i))
+	IF NORMALIZE(KEY(m.i))="UPPER(EMPRESA)" OR NORMALIZE(KEY(m.i))="EMPRESA"
+		SET ORDER TO m.i ASCENDING
+		EXIT
+	ENDIF
+	m.i=m.i+1
+ENDDO
+IF EMPTY(SET("ORDER"))
+	IF SYS(2011)#"Exclusive"
+		USE DBF(ALIAS()) EXCLUSIVE AGAIN ALIAS (ALIAS())
+	ENDIF
+	INDEX ON UPPER(empresa) TAG empresa
+ENDIF
+LOCATE
+SET FIELDS GLOBAL
+SET FIELDS TO
+SET FIELDS TO Clientes.empresa,Clientes.contacto,Clientes.ciudad,Facturas.c¢dfac,Facturas.impfac

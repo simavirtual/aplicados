@@ -1,0 +1,1249 @@
+ 
+ 
+         °±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       °°±±±°ÞÞÞÞ±°ÞÞÞÞ±±±±°ÞÞÞÞ±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±°ÞÞ°°ÞÞ±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±°ÞÞ±±°°±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞÞ±±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±±±±±°ÞÞ±±±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞÞÞ±±°ÞÞÞ±±±±
+       °°±°ÞÞ±±±±±±°ÞÞ±±°Þ±±°ÞÞ±±±±°ÞÞ°°±±±°ÞÞ°°ÞÞ±°ÞÞ°°ÞÞ±±±°ÞÞÞ±±
+       °°±°°ÞÞ±±ÞÞ±°ÞÞ±°ÞÞ±±°ÞÞ±±±±°ÞÞ±±±±±°ÞÞ±°ÞÞ±°ÞÞ±°ÞÞ°ÞÞ°°ÞÞ±±
+       °°±±°°ÞÞÞÞ±°ÞÞÞÞÞÞÞ±°ÞÞÞÞ±±°ÞÞÞÞ±±±°ÞÞÞÞÞÞ±°ÞÞÞÞÞÞ±±°ÞÞÞÞ±±±
+       °°±±±°°°°±±°°°°°°°±±°°°°±±±°°°°±±±±°°°°°°±±°°°°°°±±±°°°°±±±±
+       °°°±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°
+ 
+   Volume 2, Number 6                                    21 February 1992
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    Starters corner, second part!  .........................................  1
+    Hitch Hikers Guide To The Net  .........................................  4
+    Nantucket Code Guidelines  .............................................  8
+ 2. SOFTWARE  .............................................................. 12
+    WHAT IS WHAT, just take a short look into Clipper World  ............... 12
+    How to get rid of unwanted memoedit scrolling of blank lines  .......... 15
+ 3. Q&A  ................................................................... 17
+    Q&A: Norton Guide is NOT bringing up when pressed hotkey  .............. 17
+ 4. ANOMALIES  ............................................................. 18
+    ANOMALIES reports and commets  ......................................... 18
+ 5. COMMENTS  .............................................................. 19
+    Preprocessor, make it simple!  ......................................... 19
+ 6. CLIPPER NET  ........................................................... 20
+    Index of described files in Clipper BBS Magazine  ...................... 20
+ 7. CLIPBBS  ............................................................... 22
+    CLIPBBS distribution  .................................................. 22
+    CLIPBBS, how to write an article!!!  ................................... 24
+
+                                   - - - - -
+ CLIPBBS 2-06                   Page 1                   21 Feb 1992
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+ Starters corner
+ ---------------
+ 
+ In this episode we are going to 're-build' FIRSTTRY.dbf. For those who havn't
+ got the previous episode around: the raw 'data' are enclosed
+ as a addendum. Please find a recipe (in dutch, and partly in english)
+ and a description of the FIRSTTRY.dbf-file.
+ 
+ Before we start: in the following episodes i'll show bad programming
+ habits. For example: i just 'make-up' some names for fields and
+ databasefiles. There are good workable rules about this subject.  They even
+ are published (you're reading the magazine right now!)!
+ 
+ Don't worry about it, but keep it in mind. Second: better bad habits
+ than no habits at all! Set up your own rules but stick to it!  (And that's
+ why i haven't changed everything.)
+ 
+ Problems all over
+ =================
+ Problem one: number of ingredients
+ ----------------------------------
+ Firsttry.dbf can be a part of a very simple approach for storing vital
+ information. But when you start using it soon one problem will arise: what to
+ do with recipes with more than eight ingredients?
+ 
+ Solution for number one
+ -----------------------
+ The solution for this problem looks simple, but will create a lot of
+ programming. Being the objective, more programming is good!
+ 
+ We create a second file which only contains the ingredients. Each record in
+ this file contains one (1) ingredient. Looks like this:
+ 
+ 
+      Name: Ingrdnt.dbf  (1)
+      ====================
+        NAME  TYPE  LENGTH
+      1 Ingri   C    40
+ 
+ To make this possible, we have to link INGRDNT.dbf to FIRSTTRY.DBF.
+ Therefore numbers are introduced. Each recipe gets one. And each ingredient
+ also gets the number of the recipe.
+ 
+ Firsttry.dbf is thrown away, we welcome Secondtry.dbf! We also see a second
+ appearance of INGRDNT.dbf.
+ 
+      Name: Ingrdnt.dbf  (2)        Name: Secondtry.dbf
+      ======================        =====================
+        NAME  TYPE  LENGTH            NAME  TYPE  LENGTH
+      1 Re_num  N     4,0            1 Re_num  N      4,0
+      2 Ingri   C    40              2 Name    C     40
+ CLIPBBS 2-06                   Page 2                   21 Feb 1992
+
+
+      ----------------------         3 Descri  M     10
+      TOTAL          44              ---------------------
+                                     TOTAL           81
+ 
+ At this time it isn't possible to just start dBase open some files and say to
+ a novice 'type ahead'. There has to be a proper user-interface.
+ 
+ First because the numbers. Each recipe has an unique number. A duplicate
+ will cause serious trouble.
+ 
+ Second: each ingredient has to receive the right recipenumber.  Otherwise
+ you get Brussels Sprout in your Canard a l'Orange.
+ 
+ In jargon: there is a relation between the two files. One file is the
+ 'top' file: SECONDTRY.DBF. Each record in SECONDTRY.DBF has a relation
+ to a number of records in INGRDNT.DBF. A "one-to-many"relation.
+ 
+ When we (simulate to) list both files we get:
+ 
+ >-- Listing of INGRDNT.DBF ----------------<
+ 
+ RECNO()        Re_num    Ingri
+ --------------------------------------------
+ 1         1    3 sneetjes brood
+ 2         1    5 eieren
+ 3         1    50 gram oude kaas
+ 4         1    klontje boter
+ 5         1    knoflook
+ 6         1    paprika
+ 7         1    peper
+ 
+ >-- Listing ends -------------------------<
+ 
+ >-- Listing of SECONDTRY.DBF -------------<
+ 
+ Recno()        Re_num    Descri
+ -------------------------------------------
+ 1         1    Breek de eieren in een beslagkom. Roer ze goed
+                   door. Doe de boter in de pan, smelt ze. Doe de
+                   geroerde eieren in de pan.  Zet het vuur zo laag
+                   mogelijk. Doe een deksel op de pan! Laat het
+                   langzaam sudderen. Na 3 minuten de kaas op het ei
+                   doen. Kruiden naar smaak.  Deksel weer op de pan doen.
+                   Als de kaas grotendeels gesmolten is is het ei
+                   goed. Opdienen op de sneetjes brood.
+ 
+ >-- Listing ends -------------------------<
+ 
+ Because we haven't got a second receipie, we only have one record in
+ SECONDTRY.DBF. But we have seven records in INGRDNT.DBF !.
+ 
+ Two benefits are apperant:
+ 
+ 1)   now it is possible to store a reciepie regardless the number of
+      ingredients.
+ 2)   Space. In FIRSTTRY.DBF one reciepie alwas took at least 360 bytes
+ CLIPBBS 2-06                   Page 3                   21 Feb 1992
+
+
+      (we forget the description). In SECONDTRY.DBF our example takes
+ 
+      In INGRDNT.DBF 7 records, 44 bytes = 308 bytes
+      In SECONDTRY.DBF 1 record, 81 bytes =  81 bytes
+      Total for this reciepie               389 bytes.
+ 
+      Oke, this is more than in FIRSTTRY.DBF, but when you have
+      a reciepie with only six ingredients it already takes less
+      space!
+ 
+ Next episode will elaborate on space saving and increasing programming!
+ 
+ 
+ ------------------ article ends here, addendum starts ---------
+      Gebakken eieren Extra.      Fried eggs Extra
+      ======================     ======================
+      3 sneetjes brood           3 slices bread
+      5 eieren                   5 eggs
+      50 gram oude kaas          50 grames mature cheddar
+      klontje boter              little butter
+      knoflook                   garlic
+      paprika                    red pepper
+      peper                      pepper
+ 
+         Breek de eieren in een beslagkom. Roer ze goed
+         door. Doe de boter in de pan, smelt ze. Doe de
+         geroerde eieren in de pan.  Zet het vuur zo laag
+         mogelijk. Doe een deksel op de pan! Laat het
+         langzaam sudderen. Na 3 minuten de kaas op het ei
+         doen. Kruiden naar smaak.  Deksel weer op de pan doen.
+         Als de kaas grotendeels gesmolten is is het ei
+         goed. Opdienen op de sneetjes brood.
+ 
+ *.*.**.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+ 
+      Name: Firsttry.dbf
+ 
+         FIELD  TYPE  LENGTH
+      1  Name     C     40
+      2  Ingre1   C     20
+      3  Ingre2   C     20
+      4  Ingre3   C     20
+      5  Ingre4   C     20
+      6  Ingre5   C     20
+      7  Ingre6   C     20
+      8  Ingre7   C     20
+      9  Ingre8   C     20
+      10 Descri   M     10
+        ------------------
+      ** total         210
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 4                   21 Feb 1992
+
+
+                    Hitch Hikers Guide To The Net
+ 
+ 
+                       Episode 2 - The Flamers
+ 
+  (The Infinity's scanners are showing the Flamer's ships approaching fast.
+  Arnold Lint and Rod Perfect are frantically scurrying about.  Xaphod is
+  trying to figure out how to fly the node, and Gillian is fixing her
+  makeup. Martin the android is off on a corner moping about how he's too
+  young to die.)
+ 
+  Xaphod: This is the node Infinity, we are on a peaceful, although a bit
+          mercenary, mission. Hold your fire.
+ 
+  (The commander of the Flamer's fleet appears on the screen. He appears to
+  be a normal human, except for a small silver halo stapled to his head.)
+ 
+  Flamer: I am Adolf Riteyus, commander of the Flaming Queen. You have
+          violated Flaming space and must be blasted. You will be given a
+          fair and drawn out hearing before you are found guilty.
+ 
+  Rod:    We didn't know this was Flaming space|
+ 
+  Adolf:  Ignorance is no excuse. Do you think that just because you don't
+          know something you shouldn't be responsible for it? Why, if we
+          didn't go around blasting people who thought they were innocent,
+          there'd be no order. The whole power structure of the Net is based
+          on the inalienable right to flame. He who flames the loudest and
+          strongest will prevail, for he will have maintained purity
+          of essence by not compromising his principles. It doesn't matter
+          what one flames about, as long as one comes out a winner. Winning
+          the argument for mandatory retroactive birth control is one of our
+          greatest victories.  We Flamers always win because we never give
+          up. No, things are either our way or they're WRONG.
+ 
+  [The "Hitch Hikers Guide to the Net" lists the Flamers as one of the most
+  argumentative races in the Net. History shows that the Flamers went to war
+  over the right to keep and bear tongue depressors. They also had a violent
+  and bloody discussion over the morality of Odor Eaters. The only time the
+  Flamers can be easily beaten in combat is on Sunday mornings when they all
+  watch evangelist shows, or during Ronco "Mr. Microphone" commercials
+  (their symbol of worship).]
+ 
+  Gillian:        What should we do?
+ 
+  Xaphod: How 'bout evasive actions?
+ 
+  Marvin: It won't help.
+ 
+  Rod:    Oh shut up|
+ 
+  Rod:    OK, evasive action|
+ 
+  Adolf:  Where do you come from?
+ 
+  Xaphod: Not from around here.
+ CLIPBBS 2-06                   Page 5                   21 Feb 1992
+
+
+  Adolf:  Where are you headed?
+ 
+  Rod:    Left.
+ 
+  Gillian:        That's telling him?
+ 
+  Adolf:  What is your favorite color?
+ 
+  Arnold Lint:    My what?
+ 
+  Adolf:  Your favorite color|
+ 
+  Rod:    White|
+ 
+  Adolf:  What is the maximum warp speed of a ladened Swaldrel?
+ 
+  Xaphod: Denebian or Rigelian?
+ 
+  Adolf:  I don't know that . . . all right, enough evading, if you don't
+          surrender in the next five seconds I'll blast you right out of
+          existence.
+ 
+  Rod:    Well, now what.
+ 
+  Adolf:  Five|
+ 
+  Arnold Lint:    What's this button do?
+ 
+  Adolf:  Four|
+ 
+  Xaphod: That's the Illogical Drive. It propels the node on power from hard
+          drugs and acid rock. It's kind of dangerous though.
+ 
+  Adolf:  Three|
+ 
+  Arnold Lint:    Should we try it?
+ 
+  Adolf:  Two|
+ 
+  Rod:    Well, lets not . . . Four|
+ 
+  Adolf:  Four|
+ 
+  Arnold Lint:    So this is it, we're all going to die.
+ 
+  Adolf:  Three|
+ 
+  Martin: I warned you about this trip.
+ 
+  Adolf:  Two|
+ 
+  Xaphod: All right, all right, engage the Illogical Drive|
+ 
+  Adolf:  One|
+ 
+  (Arnold Lint engages the Illogical drive. Images of the movie "Easy Rider"
+ CLIPBBS 2-06                   Page 6                   21 Feb 1992
+
+
+  float across the view port. "In-a-gadda-da-vida" starts coming across the
+  radio. The 12" CRT on Xaphod's shoulder starts scrolling "Wow man, what a
+  trip|". The scanners show that the Flamers couldn't handle the sudden
+  flood of sensory excitation and burst their brains.  This only made their
+  reactions a bit slower though as the Flamer's brain is remarkably small.
+  The Infinity, charged up with Liquid Super Duetrillium, was able to make
+  warp speed and turn the corner before the Highway patrol picked them up on
+  radar. This was fortunate for it meant that they wouldn't be caught by
+  Spiny Norman, the 45 foot blue hedgehog that had been following them.)
+ 
+  Gillian:        We made it.
+ 
+  Rod:    Yah, where are we Martin.
+ 
+  Martin: We're way out man.
+ 
+  Xaphod: Oh, he's useless now - it'll take a while before he comes down.
+ 
+  Arnold Lint:    At least he isn't so gloomy.
+ 
+  Martin: Nooo body knows, the trouble I've see . . . have any of you ever
+          contemplated the death of a grain of salt?
+ 
+  [The "Hitch Hikers Guide to the Net" points out that the life and death of
+  a grain of salt can have amazing importance in the course of life on the
+  Net.  On particular grain of salt (named Nigel) was responsible for the
+  overthrow of an entire government. Nigel gave his
+ 
+                    . <- Nigel
+ 
+  life by falling into the barrel of a shotgun that was aimed at the planets
+  dictator. Thanks to lousy marksmanship on the part of the rebels, only
+  Nigel was able to hit the dictator. The rest of the buck shot killed the
+  dictator's pet salmon, Eric.  Nigel, however, penetrated the dictators eye
+  and eventually killed him 8 months later just before a firing squad cut
+  the dictator in two.]
+ 
+  Rod:    Shut Up|
+ 
+  Xaphod: Well, lets get back on course.
+ 
+  Arnold Lint:    What are those?
+ 
+  (The scanners now show a dozen ships shaped like the number one heading
+  toward the Infinity.)
+ 
+  Xaphod: Those are Singularan ships. They're worse than flamers|
+ 
+  Rod: Oh yeah, they're worse than a visit from an insurance salesman.
+ 
+  Gillian:They're normally mild mannered computer scientists. But when they
+          get on the Net, they become endowed with a superhuman ability to
+          talk about incredibly personal things, things they couldn't
+          otherwise discuss.
+ 
+  Arnold Lint:    Sounds awful.
+ CLIPBBS 2-06                   Page 7                   21 Feb 1992
+
+
+  Martin: That's what I keep telling you.
+ 
+  Rod:    Shut up|
+ 
+  Xaphod: If we don't get out of here fast, we'll end up debating which
+          finger a divorced person should wear his or her ring on when going
+          to homosexual orgies - or worse, have to go to a Pot Luck Dinner
+          where all that the people do is talk.
+ 
+          ******************** End Of Part 2 ********************
+ 
+  Will the crew of the infinity avoid the clutches of the Singularans?  Or
+  will they end up exchanging recipes for onion dip. For the answers to
+  these and several other amazingly unimportant questions . . . Tune in next
+  time . . .  same Net-time . . . same Net-channel.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 8                   21 Feb 1992
+
+
+                           Nantucket Code Guidelines
+ 
+ Followin text come as text called "nantucket code guidelines" in form of not
+ very clear and clever written text. As this text can be important and
+ helpfull if is taken seriously, i will try to make it more readable and add
+ some comments. Also, i cannot stay out, there are some guidelines given by
+ Nantucket which i have to comment out from view of practical use. For sure
+ is, Nantucket is using those guidelines and good knowledge of them can help
+ with better understanding of Nantucket code or texts. Nobody is forced to
+ take them.
+ 
+ The following guidelines are applicable to all source code.  Nantucket
+ reserves the right to alter submitted code, text, and comments if necessary.
+ 
+ 1.  Commands and Keywords
+ 
+     1.1     All commands and keywords are uppercase, both in programs and in
+             text.  Be sure to specify the complete spelling; never use the
+             four-letter abbreviation:
+ 
+              REPLACE CustName WITH cCustName
+ 
+             COMMENTS: Clipper keywords and commands are suggested to be in
+             upper case letters and NEVER truncated. It's quite good sugges-
+             tion. Anyone reading Clipper program then can see what is own
+             by Clipper. And problem with not easily readable abbreviated
+             commands is also eliminated.
+ 
+     1.2     When specifying a command in text or in a special element other
+             than code, and the command includes a clause, separate each
+             keyword with an ellipsis (...) and do not specify the TO clause
+             unless it is followed by the FILE, PRINT or SCREEN keywords:
+ 
+              COPY...SDF
+              SET MESSAGE...CENTER
+              @...SAY...GET
+ 
+             COMMENTS: This is case, when someone is writing let say a book
+             about Clipper and just using naming of commands in this book,
+             OUTSIDE of any program elements. Then it's better use
+             construction REPLACE...WITH as specifying of REPLACE command,
+             than separater REPLACE WITH because it's not giving needed way
+             of easy recognition in other text.
+ 
+ 2.  Language Syntax
+ 
+     2.1     When specifying the complete syntax of a language element in
+             text, input items, parameters, etc. are referred to using the
+             following symbols:
+ 
+                 SYMBOLS                 DESCRIPTION
+ 
+                 < >                     Indicates user input item
+ 
+                 ( )                     Indicates function argument list
+ 
+ CLIPBBS 2-06                   Page 9                   21 Feb 1992
+
+
+                 [ ]                     Indicates optional item or list
+ 
+                 { }                     Indicates code block or literal array
+ 
+                 | |                     Indicates code block argument list
+ 
+                 -->                     Indicates function return value
+ 
+                 ...                     Repeated elements if followed by a
+                                         symbol,Intervening code if followed
+                                         by a keyword
+ 
+                 ,                       List item separator
+ 
+                 |                       Indicates two or more mutually
+                                         exclusive options
+ 
+                 @                       Indicates that an item must be passed
+                                         by reference
+ 
+                 *                       Indicates a compatibility command or
+                                         function
+ 
+             For example:
+ 
+              LEN(<cString>|<aTarget>) --> nCount
+ 
+             For more examples, please consult the Clipper 5.0 Reference
+             Guide.
+ 
+             COMMENTS: Guidelines here are used for formatting of descriptions
+             and texts using for explanation of functions or commands.
+             Complete Clipper documentation is written with this style, and
+             is very often also used in any other documentation for
+             programming languages or for documentation about network,
+             programs or anything similar.
+ 
+     2.2     Metasymbols describe the general nature of basic syntax elements.
+             They are used in conjunction with the symbols listed above to
+             specify the syntax of a language element.  A metasymbol consists
+             of one or more lowercase data type designators, followed by a
+             mixedcase description:
+ 
+              RANGE <dnLower>, <dnUpper>
+ 
+             In this example, dnLower and dnUpper can be either date or
+             numeric.  Data type designators are as follows:
+ 
+                 DESIGNATOR  DESCRIPTION
+ 
+                 a           Array
+                 b           Code block
+                 c           Character expression
+                 d           Date expression
+                 exp         Expression of any type
+                 id          Literal identifier
+ CLIPBBS 2-06                   Page 10                  21 Feb 1992
+
+
+                 l           Logical expression
+                 m           Memo field
+                 n           Numeric expression
+                 o           Object
+                 x           Extended expression
+ 
+             COMMENT: This is MOST important part of this document. If you did
+             read some from older Clipper BBS Magazine numbers, then maybe you
+             know about article about Hungarian Notation for Clipper. It's the
+             same way how Nantucket is writing their code. Principle is
+             simple. EVERY identifier (and also names of variables in
+             programs) are PREFIXED by lowercase entered symbol giving
+             immediate view WHICH kind of data can symbol (variable) contain.
+             In case of multiple kind of values in symbol (variable) it will
+             be prefixed by MORE designators.
+ 
+ 3.  Filenames
+ 
+     3.1     The names of Clipper program and data files have the first letter
+             capitalized and the extensions in lowercase (e.g., MyProg.prg,
+             Items.dbf).  Extensions are:
+ 
+                 .ch         .dbt        .frm
+                 .mem        .ntx        .prg
+                 .dbf        .fmt        .lbl
+                 .ndx        .txt        .vew
+ 
+             When referring to specific file types in text, enclose the file
+             extension in parentheses:
+ 
+              A program is stored in a text file with a (.prg) extension.
+ 
+             COMMENT: Because of kind of DOS file namming where Clipper is
+             residing is this rule little bit discutable. My personal opinion
+             is, that DOS names should be either complete LOWERCASE or either
+             complete UPPERCASE (second one i do prefer). Then it's also
+             less confusing for reading (Items.dbf or items.dbf or
+             ITEMS.DBF)...
+ 
+     3.2     Underscores should not be used anywhere in the filename.  Use
+             mixedcase for filenames consisting of more than one word:
+ 
+             USE CustNames
+ 
+             COMMENT: There is no reason for ruling out use of underscores in
+             filenames. I like to use them, because then is MORE easy to
+             decide to which project belongs particular file names. Therefore
+             is normal that i have names "OA_xxxx" (Order Administration),
+             "IA_xxx" (Invoice Administration)...
+ 
+     3.3     The names and extensions of other files, including executable
+             and DOS files, are uppercase (e.g., CLIPPER.LIB, AUTOEXEC.BAT).
+ 
+             Extensions are:
+ 
+                 .ASM        .C          .CLP        .LIB
+ CLIPBBS 2-06                   Page 11                  21 Feb 1992
+
+
+                 .OBJ        .PLL        .BAT        .COM
+                 .EXE        .LNK        .OVL
+ 
+ 
+             When referring to specific file types in text, use the
+             appropriate extension, including the period:
+ 
+          Clipper compiles a set of (.prg) files into one .OBJ file.
+ 
+             COMMENTS: As described already above. My preferable way is not to
+             make difference between DOS NAMES of files. All of them are
+             UPPERCASE, extensions included.
+ 
+     3.4     Alias names follow the same conventions as filenames.
+ 
+             COMMENTS: As given, ALIAS names are following conventions of
+             filenames. Unfortunately, Nantucket guideline is NOT telling
+             WHICH filenames are taken. Therefore from this guideline can be
+             used that ALIASes are just UPPERCASE or they are mixed case?
+             My prefered way is UPPER CASE ( OA_ORDER->ORDERNR for example),
+             but i cannot decide what way is preferred by Nantucket.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 12                  21 Feb 1992
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+           WHAT IS WHAT, just take a short look into Clipper World
+ 
+ 
+ SOFTCODE
+ 
+         Program generator for people who hate program generators. Uses
+         template to build programs. The editor lets you change colours,
+         draw boxes, move blocks and place fields. Specify validation
+         and field types. Templates available for C, pascal, Basic and
+         dbASE which includes Clipper, Foxbase and QuickSilver.
+         Integrates with Softdemo.
+ 
+ SOFTDEMO
+ 
+         Full featured, low priced demo maker, that is powerfull enough
+         for programmers yet simple enough for anybody. The script
+         editor can play musing and display screens in a choice of over
+         25 special effects. Users can enter data, pull down menus,
+         flash up windows, working with the proram without having
+         aworking program. Integrates with SOFTCODE.
+ 
+ SOS HELP
+ 
+         Context sensitive help creator without the need to create
+         special help procedures. Just add 1 line to your program and
+         link with the SOS HELP library. Generates either compressed
+         binary file or source code for HELP.PRG, uses pull down menus,
+         supports full colour palette and networks.
+ 
+ SPELLCHECK ENGINE
+ 
+         Contains English language dictionary with over 100,000 words in
+         compressed format (350K), Supplied function calls include
+         look-up (exact match, caps difference, case difference),
+         suggested correct spelling and aux dictionary maintenance.
+         Works with Clipper and C. Price includes 25 licences.
+ 
+ SQLBASE LIBRARY
+ 
+         Collection of over 150 SQL function providing interface to
+         Gupta's SQLBase server. This allows you to access popular
+         moni.mainframe databases linke IBM's DB2 DBMS and ORACLE. Low
+         memory requirement. NG included. Summer 87 and 5.0
+ 
+ STAGE
+ 
+         Sysstem development tool. Helps build screens and reports using
+         template language. Supports arrays and virtual pages using 255
+         page objetcs.
+ 
+ STEVE STRALEY'S TOOLKIT
+ CLIPBBS 2-06                   Page 13                  21 Feb 1992
+
+
+         Steven Straley's Toolkit contains a lot of routines and tools
+         for program development. Allows changing of says, gets, reads,
+         pictures, colours without recompiling. Windowing, menus, array
+         functions, backup and restore, database generation, DBT
+         packing, word processing, report writer, source code debugger,
+         560 page manual, free reader for Tom Rettigs Help.
+ 
+ SUBNTX()
+ 
+         Fast and unique set of functiuons for thos who want much more
+         speed and flexibility from indexes. Creates a subset of an
+         index based upon your conditions or wildcards. Eliminates time
+         delays caused by skipping unwanted records in an index. Ideal
+         for reporting. Never use SET FILTER AGAIN.
+ 
+ SUPER.LIB Professional for Clipper
+ 
+         database Warehouse, œ198
+         (c) Functional Software Inc.
+ 
+         Complete drop-in procedures, compatible with Summer 87 and 5.0,
+         all major clipper libraries, european data formats supported.
+         100% source code, commented, readable and included at no extra
+         charge. Organized, cross-referenced manual with examples for
+         all function plus a NG database for fast reference. Over 100K
+         of sample programs, 30days phone support, unlimited BBS
+         support, Compuserver. No royalties. Included:
+ 
+         -       report writter
+         -       query/filter builder
+         -       form letters
+         -       mailing lables
+         -       data driven data entry
+         -       lookup tables
+         -       help system
+         -       frequency analysis
+         -       duplicate checking
+         -       selective global field replacement
+         -       expression building
+         -       record tagging
+         -       calendar, calculator and TODO list utilities
+         -       user definable pull down menus
+         -       selective copying and appending
+         -       text file browsing
+         -       directory tree
+         -       popup boxes and menus
+         -       production analysis (data sensitive)
+         -       interactive DBF and index building
+ T-BASE
+ 
+         Work with pictures in databases in grand style. Scanned
+         photographs, documents and pictures generated by drawing
+         packages adn other soruces such as vide frame grabbers can be
+         displayed alongside and active text screen at any [position
+         scalled and resized. Saves in popular PCX format.
+ 
+ CLIPBBS 2-06                   Page 14                  21 Feb 1992
+
+
+ TELEPATHY
+ 
+         Complete powerful serial communications library, easy to use
+         and highly efficient. all the usual transfer protocols, high
+         baud rate operation plus a notification mechanism for
+         background comms.
+ 
+ THE LIBRARY (PLANET)
+ 
+         Over 360 functuions covering 20 areas including arrays, date,
+         disk, DOS, file, financial, graph, graphics, keyboard, memory,
+         mouse, network, printer, screen, SQL API, statistical, time and
+         trigonometric. Includes a complimentary copy of Gupta SQLBASE
+         single user engine. Documentation only on disk.
+ 
+ TIME TRAK
+ 
+         Multiple users and resource scheduling program with 100%
+         Clipper source supplied. Includes simultaneous view of multiple
+         calendars, recurring and rescheduling appointments, 4display
+         formats (daily, weekly, monthly, 6month) things to do pad,
+         alarm clock, password protection. 140 page manual.
+ 
+ UI2
+ 
+         Powerful development environment which includes an editor for
+         designing screens and reports as well as template drive
+         applications generators, templates can generate Clipper, dbIII,
+         dbIV, Fox, QS, dbXL and C programs.
+ 
+ UI2 TOUCH&GO
+ 
+         Designed to generate complete systems using a few keystrokes
+         and the supplied templates. The build in screen editor allows
+         build own input and output screens. Multi user, interactive
+         query system, scrolling input screens, easy customisation using
+         template directives and integration with your own source code.
+ 
+ VALKYRIE
+ 
+         Reverse engineer an EXE file back into its various PRG files.
+         Works with S87. Lots of user configurable source code
+         formatting options plus symbol and cross referencing. Comments
+         cannot be reocevered, there is a password protection feature.
+ 
+ WARPLINK
+ 
+         Very fast DOS compatible dynamic overlay linker for use wiuth
+         any language that produces .OBJ files. Detailed map info and
+         online error handler provide debugging help. Incremental
+         linking and enhanced memory management. Includes ability to
+         create COM files.
+ 
+ WIPEOUT
+ 
+         Screen wipping routines, available as SHAREWARE (hope will stay
+ CLIPBBS 2-06                   Page 15                  21 Feb 1992
+
+
+         some time). Serie of very nice and good working functions for
+         clearing/displaying screens in many ways. Quite useful for
+         producing demos.
+ 
+ WORDWRAPPER
+ 
+         Alternative to using memo fields and .DBT files. Avoids file
+         bloat by storing data to a .DBF file. Allows word wrapping,
+         copy, zoom in.out, window size and position., Clipper source
+         supplied.
+
+ ------------------------------------------------------------------------------
+
+
+        How to get rid of unwanted memoedit scrolling of blank lines
+ 
+                              by Michael Magan
+ 
+ Copy the following to a file called MEMOFUNC.PRG, compile and run:
+ 
+ -------------- Cut here ------------
+ clear
+ 
+ text
+ 
+ When using the Clipper Memoedit function to browse a memo field
+ or some other text, it has the flaw that it allows you to scroll
+ down too far. This results in the last line of your text being
+ displayed on the first line in the window, leaving the rest of
+ the window empty.
+ 
+ This problem is resolved by the user-defined function MEMO_UDF.
+ With each keystroke, memoedit calls this function. On startup,
+ the MEMO_UDF is called with status 3. MEMO_UDF returns the value
+ 0. From then on, after each keystroke MEMO_UDF places the cursor
+ at the bottom right of the window.
+ 
+ A UDF can only do this if the status is 1,2 or 3. Since the
+ cursor keys give a status 0, we force a status 1 by placing ^T in
+ the keyboard buffer. Since MEMOEDIT is in browse mode, it does
+ not delete a word, but MEMOEDIT does call MEMO_UDF with status 1.
+ We can then move the cursor by returning the value 101.
+ 
+ The ESC key also gives a status 1, so we must also check if this
+ was the last key pressed.
+ 
+ endtext
+ wait 'Press any key for a demonstration ...'
+ 
+ set cursor off
+ memotext=memoread('MEMOFUNC.PRG')    && read an ASCII file
+ set key -9 to quitprg                && F10 quits
+ 
+ do while .t.
+    clear
+    @ 3,5 say 'Memoedit with MEMO_UDF, cursor down to the end'
+ CLIPBBS 2-06                   Page 16                  21 Feb 1992
+
+
+    @ 5,5 say '(Press ESC for Memoedit without MEMO_UDF, F10 to quit)'
+    @ 9,5 to 23,76
+    memoedit(memotext,10,6,22,75,.f.,'memo_udf')
+    clear
+    @ 3,5 say 'Memoedit without MEMO_UDF, cursor down to the end'
+    @ 5,5 say '(Press ESC for Memoedit with MEMO_UDF, F10 to quit)'
+    @ 9,5 to 23,76
+    memoedit(memotext,10,6,22,75,.f.)
+ enddo
+ 
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ 
+ function memo_udf
+ parameters status, line, col
+ do case
+    case M->status=0     && Idle
+       keyboard chr(20)  && force status 1 with ^T
+       return 0
+    case M->status=1     && re-configurable or unknown keystroke
+       if lastkey()=27   && ESC key
+          return 0       && exit
+       else
+          return 101     && goto bottom right of window
+       endif
+    otherwise            && status = 3 (startup)
+       return 0
+ endcase
+ 
+ *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+ 
+ procedure quitprg
+ clear
+ quit
+ 
+ -------------- Cut here ------------
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 17                  21 Feb 1992
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+          Q&A: Norton Guide is NOT bringing up when pressed hotkey
+ 
+ 
+ Question:   NG engine is loaded and Shift-F1 is used as default hotkey. But
+             when i will press it, nothing is happening. I'm using DOS 5.0
+ 
+ 
+ Answer:
+             DOS 5 has known problems with Norton Guide engine. It's somewhere
+             konflikt in keyboard handles. Sometime DOS 4.0 had the same
+             problem.
+ 
+             What also can be, some from keyboar handlers, KEYBxx programs
+             from DOS, keyboard enhancers... are making problems. Check order
+             of loading in your CONFIG.SYS / AUTOEXEC.BAT and try to change it.
+ 
+             Another way to get past the problem with bringing up NG in DOS
+             5 is to first hit the hotkey (Shift-F1 by default), then let go
+             of those keys and hit Escape.  That should bring it up.
+ 
+             Another way to use NG is to bring it up as a transient program.
+             You can invoke it in the following way:
+ 
+                NG ME <filename>
+ 
+             which runs NG, loads it temporarily into memory, then runs ME
+             (Multi-Edit -- substitute your own editor as desired) as a
+             child process and loads whatever file you've specified.  When
+             you leave the editor, NG automatically unloads and frees up the
+             memory it was occupying.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 18                  21 Feb 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 19                  21 Feb 1992
+
+
+ ==============================================================================
+                                    COMMENTS
+ ==============================================================================
+
+
+                        Preprocessor, make it simple!
+ 
+ Following on from that I saw a nice little ``trick'' in a bit of example
+ code from Nantucket the other week that let you access arrays as if they
+ were C style structures. This is only a cosmetic thing but I like the idea
+ and think it makes the source look just that little bit more readable.
+ 
+ Using this idea you could produce some code like this:
+ 
+ BEGIN CODE
+ 
+ #xtranslate .Surname    => /[1/]
+ #xtranslate .ForeName   => /[2/]
+ #xtranslate .Address1   => /[3/]
+ #xtranslate .Address2   => /[4/]
+ #xtranslate .Address3   => /[5/]
+ #xtranslate .Address4   => /[6/]
+ 
+ #define ADDRESS_STRUCT_SIZE     6
+ 
+ #xtranslate AddressStruct()     => array(ADDRESS_STRUCT_SIZE)
+ 
+ function Main()
+ local aAddress := AddressStruct()
+ aAddress.Surname  := space(30)
+ aAddress.ForeName := space(30)
+ aAddress.Address1 := space(30)
+ aAddress.Address2 := space(30)
+ aAddress.Address3 := space(30)
+ aAddress.Address4 := space(30)
+ ReadAddress(aAddress)
+ ? aAddress.Surname
+ ? aAddress.ForeName
+ ? aAddress.Address1
+ ? aAddress.Address2
+ ? aAddress.Address3
+ ? aAddress.Address4
+ return(NIL)
+ 
+ static function ReadAddress(aAddress)
+ local GetList := {}
+ @ 10,10 say "Surname.:" get aAddress.Surname
+ @ 11,10 say "Forename:" get aAddress.ForeName
+ // etc....
+ return(NIL)
+ 
+ END CODE
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 20                  21 Feb 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³ASCPOS.ARJ   ³Cln ³replacement of ASC(substr(cString,nPosition,1)) ³[1-11]³
+ ³BARNTX.ARJ   ³Cln ³Displaying bar indication during indexing       ³[1-13]³
+ ³BLOCK.ARJ    ³Cln ³Tetris game written in Cliper                   ³[1-19]³
+ ³BUTTON.ARJ   ³Cln ³@GET in form of BUTTON                          ³[1-14]³
+ ³CALC14.ARJ   ³Cln ³PoPup Calculator                                ³[1-08]³
+ ³CIVMIL.ARJ   ³Cln ³Upgrade of Civil->Military time conversion      ³[1-19]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPFPCX.ARJ ³Cln ³Fast .PCX displayer for CLipper                 ³[1-15]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPPLUS.ZIP ³Cln ³Object extension for CLIPPER 5.0                ³[1-14]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLIPWARN.AJ  ³Cln ³Semaphore for convert WARNING: into ERRORLEVEL  ³[1-11]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COMET.ARJ    ³Cln ³Demo version of communication library           ³[1-19]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³CWDEMO.ARJ   ³Cln ³Classworks lib written in CLASS(Y)              ³[1-13]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³DIAL.CLN     ³Cln ³Dialer with using of FOPEN()                    ³[1-07]³
+ ³DOC111.ARJ   ³Cln ³Documentor, newer version                       ³[1-08]³
+ ³DTF102.ARJ   ³Cln ³.DBT files replacement, fully functional        ³[1-14]³
+ ³ENDADD.ARJ   ³Cln ³replacement of incrementing last char of string ³[1-11]³
+ ³GETKEY.ARJ   ³Cln ³Input oriented library, wordprocessing          ³[1-12]³
+ ³GETPP.ARJ    ³Cln ³Modified GETSYS.PRG well documented             ³[1-19]³
+ ³GSR151.ARJ   ³Cln ³Global Search and replace for programmers       ³[1-07]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³HILITO.ARJ   ³Cln ³Highlighting of keywords on screen              ³[1-19]³
+ ³HOTKEY.ARJ   ³Cln ³Makin unique hot key letter for every arrat el. ³[1-14]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³IS.ARJ       ³Cln ³Several c sources of ISxxxx functions           ³[1-11]³
+ ³JG2.ARJ      ³Cln ³Jumping between GET statements in READ          ³[1-08]³
+ ³KF_LOKUP.ARJ ³Cln ³Set of program for database relations           ³[1-07]³
+ ³LUTLIB.ARJ   ³Cln ³Another Clipper library                         ³[1-08]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ CLIPBBS 2-06                   Page 21                  21 Feb 1992
+
+
+ ³MSWIN.ARJ    ³Cln ³Detection of Windows mode when running Clipper  ³[1-14]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³NTXBAR.ARJ   ³Cln ³Bar of indexing via system interrupts           ³[1-19]³
+ ³OCLIP.ARJ    ³Cln ³Object extension, real (not #define/command)    ³[1-12]³
+ ³OOPSCL5.ARJ  ³Cln ³Another version of pseudo objects               ³[1-07]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³PARTIDX3.ARJ ³Cln ³Partial indexing                                ³[1-12]³
+ ³PAT1.ARJ     ³Cln ³CIX NanForum Libraryy PATCH                     ³[1-07]³
+ ³PAT2-2.ARJ   ³Cln ³Fix for FLOPTST.ASM in Nanforum Library         ³[1-13]³
+ ³PAT2-3.ARJ   ³Cln ³TBWHILE improvement for Nanforum libray         ³[1-14]³
+ ³PAT2-4.ARJ   ³Cln ³FT_PEGS() patch for NFLIB                       ³[1-15]³
+ ³PAT2-5.ARJ   ³Cln ³FT_TEMPFIL() patch for NFLIB                    ³[1-16]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³POSTPRNT.ARJ ³Cln ³Postscript printing from inside of Clipper      ³[1-14]³
+ ³POWER10.ARJ  ³Cln ³French library                                  ³[1-07]³
+ ³PRINTSUP.AJR ³Cln ³Low level BIOS routines for printing            ³[1-11]³
+ ³QS20F.ARJ    ³Cln ³Screen designer, demo, looks very good          ³[1-11]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCANCODE.ARJ ³Cln ³Database with scan codes                        ³[1-07]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SEGUE.ARJ    ³Cln ³Novell library - demo                           ³[1-15]³
+ ³SHADO.ARJ    ³Cln ³Creating shadow on screen                       ³[1-14]³
+ ³SHELP50A.ARJ ³Cln ³SuperHelp for Clipper                           ³[1-07]³
+ ³SHOWANSI.ARJ ³Cln ³Displaying a ANSI from inside CLIPPER no ANSI.SY³[1-15]³
+ ³SNAP497.ARJ  ³Cln ³Beta version of SNAP, partially compatible to 5 ³[1-12]³
+ ³SNAP50.ARJ   ³Cln ³dBASE/CLIPPER documentor supporting 5.01 little ³[1-15]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³STATUS.ARJ   ³Cln ³Timer interrupt hooked status indicator         ³[1-12]³
+ ³SUPER160.ARJ ³Cln ³SUPER.LIB for Summer87                          ³[1-13]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBUNIQUE.ARJ ³Cln ³Browsing unique without unique index            ³[1-12]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³TICKER.ARJ   ³Cln ³Real Time Clock, interrupt driven on screen     ³[1-12]³
+ ³VOICE200.ARJ ³Cln ³VOICE synthetizing library for Clipper          ³[1-13]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ³VSIX800.ARJ  ³Cln ³Vernon's library, lot of functions              ³[1-12]³
+ ³WIPEV11.EXE  ³Cln ³VERY good screen manipulation library           ³[1-11]³
+ ³ZIP2BAR.ARJ  ³Cln ³Printing BAR (USPS) code on EPSON printer       ³[1-15]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 22                  21 Feb 1992
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+       2:285/608@fidonet.org
+ 
+   United Kingdom   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   Italy   ³
+   ÄÄÄÄÄÄÄÄÙ
+       Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+       20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+       24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+       2:334/307@fidonet.org
+ 
+   United States of America  ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+ 
+   Canada    ³
+   ÄÄÄÄÄÄÄÄÄÄÙ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+ 
+ CLIPBBS 2-06                   Page 23                  21 Feb 1992
+
+
+   WORLDWIDE   ³
+   ÄÄÄÄÄÄÄÄÄÄÄÄÙ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-06                   Page 24                  21 Feb 1992
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

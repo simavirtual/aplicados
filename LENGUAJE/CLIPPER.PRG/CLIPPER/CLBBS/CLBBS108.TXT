@@ -1,0 +1,1133 @@
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+     °°°°°°°²²²²°°²²²²°°°°°²²²²°°°²²²²²²°°²²²²²²°°²²²²²²°°°²²²²°°°°°°°°°°°    
+   °°°°°°°°²²  ²²°°²²  °°°°°²²  °°°²²  ²²°°²²  ²²°°²²  ²²°²²  ²²°°°°°°°°°°°°  
+  °°°°°°°°²²  °°  °²² °°°°°°²² °°°°²² °²² °²² °²² °²² °²² ²²²°°  °°°°°°°°°°°° 
+ °°°°°°°°°²² °°°°°°²² °°°°°°²² °°°°²²²²²  °²²²²²  °²²²²²  °²²²°°°°°°°°°°°°°°°°
+ °°°°°°°°°²² °°°°°°²² °°²°°°²² °°°°²²    °°²²  ²²°°²²  ²²°°° ²²²°°°°°°°°°°°°°°
+  °°°°°°°°°²²°°²²°°²² °²² °°²² °°°°²² °°°°°²² °²² °²² °²² ²²°°²² °°°°°°°°°°°° 
+   °°°°°°°°°²²²²  ²²²²²²² °²²²²°°°²²²²°°°°²²²²²²  ²²²²²²  °²²²²  °°°°°°°°°°°  
+     °°°°°°°°    °°       °°    °°°    °°°°      °°      °°°    °°°°°°°°°°    
+        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°       
+              °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°             
+                        °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°                      
+ 
+   Volume 1, Number 8                                    15 Octomber 1991
+ 
+                  (c) Daniel Do‡ekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  .............................................................  1
+    DOSRCS - Revision Control System - part (6)  ..........................  1
+    The Programmer's Guide to CLIPPER Linkers - part (5)  .................  9
+ 2. ANOMALIES  ............................................................ 14
+    ANOMALIES reports and commets  ........................................ 14
+    Memory(n) function  ................................................... 14
+    MENU functions incompatibility  ....................................... 14
+    RTLINK is not possible to stop  ....................................... 15
+ 3. CLIPPER NET  .......................................................... 16
+    Index of described files in Clipper BBS Magazine  ..................... 16
+    ClipperNet - CALC14.ARJ  .............................................. 16
+    ClipperNet - DOC111.ARJ  .............................................. 17
+    ClipperNet - JG2.ARJ  ................................................. 18
+    ClipperNet - LUTLIB.ARJ  .............................................. 18
+ 4. CLIPBBS  .............................................................. 20
+    CLIPBBS distribution  ................................................. 20
+    CLIPBBS, how to write an article!!!  .................................. 21
+
+                                   - - - - -
+ CLIPBBS 1-08                   Page 1                   15 Oct 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+             DOSRCS - Revision Control System - part (6)
+ 
+ 
+                     __________________________
+                     Identify files - IDENT.EXE
+                     ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ IDENT.EXE is small one purpose utility for DOSRCS system. It's
+ searching named files for all occurrences of the pattern
+ 
+         $keyword: .... $
+ 
+ where keyword is one from keywords defined in article about CO
+ (Check Out). This command has only one option "-q" which is
+ suppressing warning given if there are no pattern in a file.
+ 
+ IDENT works on text files as well as object files, therefore can be
+ used for identifying if files are made with support of RCS or not.
+ Just use this like this:
+ 
+         IDENT -q *.PRG      or    IDENT -q *.OBJ
+ 
+                      ________________________
+                      RCSDIFF - DIFF interface
+                      ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ RCSDIFF.EXE is used for comparing RCS revision. Normally it's used
+ INTERNALLY in CheckIn (CI) program and user cannot see this using.
+ But sometime can be good to know how to use this utility. But one
+ must be warned before. RCSDIFF needs for work file DIFF.EXE which
+ is also coming with DOSRCS package.
+ 
+ ______
+ SYNTAX
+ 
+     RCSDIFF [ -biwt ] [ -cefhn ] [ -q ] [ -rrev1 ] [ -rrev2 ] file ...
+ 
+ 
+ Options -b, -i, -w, -t, -c, -e, -f and -h are the same as options
+ described in documentation about DIFF.EXE and i will try to explain
+ them there if i will find docs about DIFF.EXE because they are not
+ part of DOSRCS.
+ 
+         -n
+ 
+         RCSDIFF generates edit script of the format used by RCS
+         systems.
+ 
+         -q
+ 
+         Supresses diagnostic output.
+ CLIPBBS 1-08                   Page 2                   15 Oct 1991
+
+
+         -rrev1 and -rrev2
+ 
+         If both rev1 and rev2 are omitted, rcsdiff compares latest
+         revision on the default branch (normally highest branch on
+         the trunk) with te contents of the corresponding working
+         file. This is useful for determining what you changes since
+         the last CheckIn.
+ 
+         If rev1 is given, rev2 is omitted, RCSDIFF compares
+         revision rev1 of the RCS file with the contents of the
+         corresponding working file.
+ 
+         If both rev1 and rev2 are given, RCSDIFF compares revisions
+         rev1 and rev2 of the RCS file.
+ 
+                   _______________________________
+                   RLOG.EXE - Log messages utility
+                   ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ RLOG.EXE is another utility used for getting direct informations
+ from RCS files.
+ 
+ ______
+ SYNTAX
+ 
+           RLOG [ options ] file ...
+ 
+ Rlog prints the following information for each RCS file: RCS file
+ name, working file name, head (i.e., the number of the latest
+ revision on the trunk), default branch, access list, locks,
+ symbolic names, suffix, total number of revisions, number of
+ revisions selected for printing, and descriptive text. This is
+ followed by entries for the selected revisions in reverse
+ chronological order for each branch. For each revision, rlog prints
+ revision number, author, date/time, state, number of lines
+ added/deleted (with respect to the previous revision), locker of
+ the revision (if any), and log message.  Without options, rlog
+ prints complete information.  The options below restrict this
+ output.
+ 
+ _______
+ OPTIONS
+ 
+         -L
+ 
+         ignores RCS files that have no locks set; convenient in
+         combination with -R, -h, or -l.
+ 
+         -R
+ 
+         only prints the name of the RCS file; convenient for
+         translating a working file name into an RCS file name.
+ 
+         -h
+ 
+         prints only RCS file name, working file name, head, default
+ CLIPBBS 1-08                   Page 3                   15 Oct 1991
+
+
+         branch, access list, locks, symbolic names, and suffix.
+ 
+         -t
+ 
+         prints the same as -h, plus the descriptive text.
+ 
+         -b
+ 
+         prints information about the revisions on the default
+         branch (normally the highest branch on the trunk).
+ 
+         -ddates
+ 
+         prints information about revisions with a checkin date/time
+         in the ranges given by the semicolon- separated list of
+         dates.  A range of the form d1<d2 or d2>d1 selects the
+         revisions that were deposited between d1 and d2,
+         (inclusive).  A range of the form <d or d> selects all
+         revisions dated d or earlier.  A range of the form d< or >d
+         selects all revisions dated d or later.  A range of the
+         form d selects the single, latest revision dated d or
+         earlier.  The date/time strings d, d1, and d2 are in the
+         free format explained in co(1L).  Quoting is normally
+         necessary, especially for < and >.  Note that the separator
+         is a semicolon.
+ 
+         -l[lockers]
+ 
+         prints information about locked revisions.  If the
+         comma-separated list lockers of login names is given, only
+         the revisions locked by the given login names are printed.
+         If the list is omitted, all locked revisions are printed.
+ 
+         -rrevisions
+ 
+         prints information about revisions given in the
+         comma-separated list revisions of revisions and ranges. A
+         range rev1-rev2 means revisions rev1 to rev2 on the same
+         branch, -rev means revisions from the beginning of the
+         branch up to and including rev, and rev- means revisions
+         starting with rev to the end of the branch containing rev.
+         An argument that is a branch means all revisions on that
+         branch. A range of branches means all revisions on the
+         branches in that range.
+ 
+         -sstates
+ 
+         prints information about revisions whose state attributes
+         match one of the states given in the comma-separated list
+         states.
+ 
+         -w[logins]
+ 
+         prints information about revisions checked in by users with
+         login names appearing in the comma- separated list logins.
+         If logins is omitted, the user's login is assumed.
+ CLIPBBS 1-08                   Page 4                   15 Oct 1991
+
+
+ Rlog prints the intersection of the revisions selected with the
+ options -d, -l, -s, -w, intersected with the union of the revisions
+ selected by -b and -r.
+ 
+                  _________________________________
+                  DIFF.EXE - difference GNU utility
+                  ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+ Unfortunately, DIFF.EXE documentation was not a part of DOSRCS
+ package, therefore i will try to describe a bit this utility from
+ my own discovering. If i will later find correct documentation from
+ GNU, i will write new article only about DIFF.EXE
+ 
+ Syntax
+ 
+         DIFF [-options] file1 file2
+ 
+ DIFF is comparing TWO files named <file1> and <file2> and
+ generatinf several kind of outputs about differences between this
+ two files. Originally, DIFF belongs to UNIX and therefore outputs
+ are fitting for some other utilities from UNIX.
+ 
+ Best will be, try to explain work of DIFF on example file(s):
+ 
+ FILE1
+      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³  This is example text file called FILE1       ³
+      ³  It will be used for DIFF.EXE checking        ³
+      ³                                               ³
+      ³  Line3 was empty, Line4 is here               ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ FILE2
+      ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+      ³  This is example text file called FILE2       ³
+      ³  It will be used for DIFF.EXE   checking      ³
+      ³  Line3 is here,but Line4 is empty             ³
+      ³                                               ³
+      ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ WITHOUT any options is result of comparation like this:
+       ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+       ³ 1,2c1,3                                             ³
+       ³ <         This is example text file called FILE1    ³
+       ³ <         It will be used for DIFF.EXE checking     ³
+       ³ ---                                                 ³
+       ³ >         This is example text file called FILE2    ³
+       ³ >         It will be used for DIFF.EXE   checking   ³
+       ³ >         Line3 is here,but Line4 is empty          ³
+       ³ 4d4                                                 ³
+       ³ <         Line3 was empty, Line4 is here            ³
+       ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ 
+ It's special format telling about changes between file1 -> file2.
+ Notation like "4d4" or "1,2c1,3" are telling about copying,
+ changing or deleting lines between files.
+ CLIPBBS 1-08                   Page 5                   15 Oct 1991
+
+
+ OPTIONS
+ 
+         -a
+ 
+         All compared files are TEXT files, never trying to get them
+         as BINARY files. DIFF.EXE is able of course to compare also
+         binaries.
+ 
+         -q
+ 
+         All compared files are BINARY files. It's opposite switch
+         from "-a" switch.
+ 
+         -b
+ 
+         Ignore changes in amount of whitespace. In our two examples
+         if FILE2 different in two more more spaces on SECOND line.
+         When used "-b" switch , result is:
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³ 1c1                                              ³
+               ³ <         This is example text file called FILE1 ³
+               ³ ---                                              ³
+               ³ >         This is example text file called FILE2 ³
+               ³ 2a3                                              ³
+               ³ >         Line3 is here,but Line4 is empty       ³
+               ³ 4d4                                              ³
+               ³ <         Line3 was empty, Line4 is here         ³
+               ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         Really is here a difference, that SECOND line is not
+         treated as change, because it has only change in spaces.
+ 
+         -B
+ 
+         Ignore changes affecting only blank lines. It means, every
+         changes with adding or deleting BLANK lines are ignored, it
+         will work of course only for TEXT files.
+ 
+         -c
+ 
+         Make context-style output. Example is:
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³ *** file1       Sun Sep 15 12:42:14 1991           ³
+               ³ --- file2       Sun Sep 15 16:21:24 1991           ³
+               ³ ***************                                    ³
+               ³ *** 1,4 ****                                       ³
+               ³ !         This is example text file called FILE1   ³
+               ³ !         It will be used for DIFF.EXE checking    ³
+               ³                                                    ³
+               ³ -         Line3 was empty, Line4 is here           ³
+               ³ --- 1,4 ----                                       ³
+               ³ !         This is example text file called FILE2   ³
+               ³ !         It will be used for DIFF.EXE   checking  ³
+               ³ !         Line3 is here,but Line4 is empty         ³
+               ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         Just another kind of output from DIFF program. Is giving
+         information which is probably better for print human
+ CLIPBBS 1-08                   Page 6                   15 Oct 1991
+
+
+         readable output.
+ 
+         -C n
+ 
+         Make context-style output and show name of last C function.
+         Define context size to be n lines.
+ 
+         -d
+ 
+         Don't discard lines. This can be used for MINIMAL set of
+         changes, it's of course much slower than normal way, but
+         can give more accurate result.
+ 
+         -D
+ 
+         Make merged #ifdef output. Without complete documentation,
+         i was not able to make this working at all. Therefore, i
+         will search around for complete documentation.
+ 
+         -e
+ 
+         Make output that is a valid "ed" script. Example:
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³ 4d                                               ³
+               ³ 1,2c                                             ³
+               ³         This is example text file called FILE2   ³
+               ³         It will be used for DIFF.EXE   checking  ³
+               ³         Line3 is here,but Line4 is empty         ³
+               ³ .                                                ³
+               ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         Above script is useful for running "ed" (unix editor) on
+         FILE1 and it will make from FILE1 new FILE2.
+ 
+         -f
+ 
+         Make output that look like "ed" script but changes are in
+         order of appereance in the file.
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³ c1 2                                            ³
+               ³         This is example text file called FILE2  ³
+               ³         It will be used for DIFF.EXE checking   ³
+               ³         Line3 is here,but Line4 is empty        ³
+               ³ .                                               ³
+               ³ d4                                              ³
+               ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         Compare it with above generated script and one can see
+         difference which is really in order of commands.
+ 
+         -F regular_expression
+ 
+         Show, for each set of changes, the previsou line that
+         matches then specified regexp. Currectly affects only
+         context-style output.
+ 
+         -h
+ 
+ CLIPBBS 1-08                   Page 7                   15 Oct 1991
+
+
+         Splits the files into chunks of around 1500 lines for faster
+         processing. It's not changing result mostly, but it's
+         faster.
+ 
+         -H
+ 
+         Use heuristic. Who now what is this doing...
+ 
+         -i
+ 
+         Ignore changes in case. With this switch, never mind if
+         there were changes in upper or lower form of text. It's
+         still the same.
+ 
+         -I reg_expression
+ 
+         Ignore changes affecting only lines that match the
+         specified regular expression.  Because of not having
+         original documentation, really cannot make explanation what
+         regular expression is.
+ 
+         -l
+ 
+         Pass the output through "PR" to paginate it. In UNIX
+         environment it has probably effect, because PR is utility
+         for formating text, but in DOS it's doing nothing.
+ 
+         -n
+ 
+         Output is in RCS-style diffs. Example:
+               ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+               ³ d1 2                                             ³
+               ³ a2 3                                             ³
+               ³         This is example text file called FILE2   ³
+               ³         It will be used for DIFF.EXE   checking  ³
+               ³         Line3 is here,but Line4 is empty         ³
+               ³ d4 1                                             ³
+               ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+         DOSRCS is then using this 'script' for recoring informations
+         about all changes made between versions.
+ 
+         -N
+ 
+         When comparing directories, if a file appears only in one
+         directory, treat is as present but empty in the other.
+ 
+         DIFF is also able to compare directories if they have the
+         same contents and also ALL files within directories if they
+         have the same name. For comparing and generating diff
+         script of files in directories is usual to guess, that
+         files which aren't exist are as empty files.
+ 
+         For comparing directory is needed to use
+                         DIFF dirname dirname
+ 
+         -p
+ CLIPBBS 1-08                   Page 8                   15 Oct 1991
+
+
+         Make context-style output and show name of last C funtion.'
+ 
+         -r
+ 
+         When comparing directories, recursively compare subdir's
+         found.
+ 
+         -s
+ 
+         Print a message if the files are the same.
+ 
+         -S filename
+ 
+         When comparing directories, start with the specified file
+         name. This is used for resuming an aborted comparison.
+ 
+         -t
+ 
+         Expand tabs to spaces in the output so tat it preserves the
+         alignment of the input files.
+ 
+         -T
+ 
+         Use a tab in the output rather than a space, before the
+         text of an input line, so as to keep the proper alignment
+         in the input line without changing the characters in it.
+ 
+         -v
+ 
+         Print version number
+ 
+         -w
+ 
+         Ignore horizontal whitespace when comparing lines.
+ 
+ 
+ See you later...
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 9                   15 Oct 1991
+
+
+        The Programmer's Guide to CLIPPER Linkers - part (5)
+ 
+ 
+         = MEMORY-PACKING =
+ 
+         BLINKER, WARPLINK and dCLIP provide an "automatically-called"
+         and "user-callable" function which helps to prevent the common
+         memory fragmentation caused by Clipper applications.  Some of
+         the fragmentation is actually caused by the linkers themselves
+         because "dynamic-linking" creates unresolved symbols at runtime.
+         These symbols are placed in the Clipper free-pool or "heap" at
+         the most prudent location determined by the Clipper memory
+         management system.  Once a symbol has been created, it will
+         occupy the same memory space forever, therefore it is desirable
+         that the symbols all be placed in adjacent memory locations
+         rather than "fragmenting" the free pool.
+ 
+         "Memory packing" is a technique developed by Steve Steiner and
+         was introduced in his product SMARTMEM.  This is a very simple
+         process in which unneccesary memory control boundaries are removed
+         thereby giving the Clipper application a large contiguous block
+         of memory to work with rather many small blocks placed end to end.
+         BLINKER calls its memory pack routine at user-definable intervals
+         each time an overlay is loaded.  For example, the command BLINKER
+         MEMORY PACK 10 will insure that memory is packed every tenth
+         time an overlay is loaded.  BLINKER's overlay pool may also be
+         "flushed" by calling a function before packing memory to insure
+         that fragmented code segments are also removed thereby providing
+         the best possible de-fragmentation.  dCLIP calls its memory-pack
+         function "every" time a module is loaded into memory, whereas
+         WARPLINK uses a similar technique as BLINKER.  dCLIP and WARPLINK
+         do not need to "flush" their overlay pools to prevent main heap
+         fragmentation because they allocate a separate memory area and
+         will only "flush" their overlay pools when they cannot find
+         sufficient space to load a new module.
+ 
+         Clipper-5.0 does not need third-party memory-packing routines
+         because a new "garbage-collection" system has been implemented
+         in their new Virtual Memory Manager (VMM) system to correct
+         memory fragmentation.
+ 
+ 
+         = MEMORY ALLOCATION =
+ 
+         Some linkers provide for complete control of memory allocation
+         to help the programmer manage the runtime environment of the
+         application.
+ 
+         PLINK86, RTLINK and BLINKER support a STACK command for
+         allocating the amount of memory reserved as the call stack.  This
+         is necessary in sophisticated applications which use windowing
+         schemes and nest calls many levels deep.  These linkers also
+         support a MEMORY command which will define the heap memory to
+         allocate to the application in addition to the .EXE load module.
+         If this command is not used, then Clipper grabs all the free
+         dos memory.  This command is useful to insure that Clipper uses
+ CLIPBBS 1-08                   Page 10                  15 Oct 1991
+
+
+         only the memory you want it to use.  This memory control can
+         also be accomplished with the SET CLIPPER=<memory parameters>
+         in your dos environment, but burning it into the .EXE can some-
+         times be more useful.
+ 
+         BLINKER provides a very useful feature for burning the SET
+         CLIPPER environment into the .EXEcutable program including the
+         files parameter.  For example, the command -
+         BLINKER EXECUTABLE CLIPPER V10;R32;F39 will eliminate the
+         need to use this command in your AUTOEXEC.BAT file.  BLINKER,
+         dCLIP and WARPLINK also provide control of the overlay pool size
+         to optimize the object memory allocation.
+ 
+         dCLIP follows the same guidelines as any Clipper application
+         and allocates memory from the SET CLIPPER environment variable.
+         dCLIP also incorporates a "virtual-memory" technique to allow
+         calls to other .EXEcutable programs which are larger than the
+         available memory.  This "virtual-memory" is any disk device,
+         expanded memory, or a network server.  Memory is released from
+         the application and saved as a temporary file, then reallocated
+         to dos as new free memory for calling the other program.  After
+         returning from the called program, the original memory condition
+         is restored from the temporary file.
+ 
+         Clipper-5.0 uses a virtual-memory (VMM) system for allocating
+         memory space outside the main DOS memory for memory that is
+         needed by the application.  This should not be confused with
+         "virtual-overlaying" because the Clipper-5.0 virtual memory
+         manager DOES NOT handle executable code segments.  Executable
+         code is managed through the caching system provided by the
+         RTLINK overlay manager, while Clipper memvars, arrays, and
+         database buffers can use up to 64MB of disk space or 8MB of
+         LIM 3.2 expanded memory as "virtual memory" in the event that the
+         Clipper application requires more memory than DOS can provide.
+         The great advantage of this system is that you will never run out
+         of memory, however there is a performance trade off while the
+         virtual memory system swaps to and from disk.
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+                          Linking Tips for Productivity
+ 
+         ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ
+ 
+         When using a compiler language such as Clipper, there is no way
+         to eliminate the EDIT-COMPILE-LINK cycle.  This is a necessary
+         to produce machine-readable code.   There are a variety of new
+         linking techniques, however, which reduce this cumbersome task
+         to an acceptable, manageable process.
+ 
+         In order to understand how to choose a linker for productivity
+         and project management, we must first examine the methods in which
+         linkers accomplish this task.  They are as follows:
+ 
+         1. Pre-linked Libraries
+         2. Dynamic Linking
+ CLIPBBS 1-08                   Page 11                  15 Oct 1991
+
+
+         3. Incremental Linking
+         4. Speed-Linking
+         5. Library-Module Linking
+         6. Debugging
+ 
+ 
+         PRE-LINKED LIBRARIES
+ 
+         NOLINK introduced the concept of pre-linked libraries to the
+         Clipper community about 3 years ago.  Shortly after that,
+         RTLINK introduced their .PLL (prelink-library) system for all
+         languages.
+ 
+         Pre-linked libraries are files which are built from object
+         and libraries into and .EXEcutable format.   The only step
+         remaining is the "fixing-up" of any references made by the code
+         in the pre-linked library to those in the rest of the application.
+         Unlike an .EXEcutable program, a pre-linked library cannot be
+         run from dos, but instead is used in conjunction with another
+         .EXEcutable program.
+ 
+         RTLINK developed their .PLL (prelinked-library) system with the
+         intent of saving disk-space for applications which use common
+         routines.  For example, every Summer 87 Clipper application links
+         in about 150k of code from the CLIPPER.LIB library into the .EXE
+         program.  If you have 10 Clipper .EXE programs, then this code
+         redundancy will use up 1.5megs of disk space.  RTLINK allows you
+         to build a .PLL file which pre-links this "common" code.  The .PLL
+         file is then referenced when you create the .EXE program with all
+         the "unique" code.  When you run your .EXE program the pre-linked
+         .PLL file will be "fixed-up" to the rest of your application code
+         each time you startup your program.
+ 
+         Clipper-5.0 includes a BASE50.LNK file to create a BASE50.PLL
+         file which contains about 277k of code from the Clipper libraries
+         which is common to most Clipper applications.  When creating
+         applications with RTLINK/CLIPPER-5.0 the command /PLL:BASE50 can
+         be inserted into your .LNK response file, thereby telling RTLINK
+         to use the BASE50.PLL file with with .EXE file containing the
+         custom application code.   You must be sure to distribute the
+         BASE50.PLL file with your application.  The disadvantage to .PLL
+         files, however, is that they cannot contain overlays, so this
+         technique will not allow the overlaying of the Clipper library
+         modules as demonstrated in the "RELOADABLE OVERLAYS" section of
+         this document.
+ 
+         NOLINK, dCLIP, and dCLIPRUN use pre-link libraries for a dual
+         purpose - disk management and memory management.  These linkers
+         provide linking from .DLB files (dynamic-libraries) at "runtime"
+         whereas RTLINK's .PLL system is simply a "load-time" linker.
+         Linkers which use "true-dynamic" pre-link libraries will only
+         link code into memory if it is called by the application that is
+         running.  These systems will also "manage" the object pool to use
+         a small amount of memory space for large applications.
+ 
+ 
+ CLIPBBS 1-08                   Page 12                  15 Oct 1991
+
+
+         DYNAMIC-LINKING
+ 
+         Dynamic-linking is also covered under the "Memory Management"
+         section because of its inherent memory-management capabilities.
+         Dynamic-linking is probably more useful however in its ability
+         to provide a "turbo-style" development system.  All other linkers
+         require that you QUIT the program being executed to make changes
+         to ANY part of the code.  Even the smallest change, such as
+         adding a "CLEAR" to clear the screen will require that you
+         (1) Quit to dos, (2) Edit your code, (3) Compile the code,
+         (4) Link the code and (5) Restart the application.
+ 
+         The NOLINK dynamic-linker eliminates step (4), the Link cycle,
+         because it links code into memory from your .OBJect files.  For
+         most Clipper developers, just saving the Link step will double
+         the programmer's productivity if he/she is using a slow linker
+         like ALINK, PLINK86 or RTLINK.
+ 
+         The dCLIP development platform takes the "dynamic-link"
+         concept two steps further and also eliminates step (1) and step
+         (5) of the EDIT-COMPILE-LINK cycle.  For many applications this
+         is also a great time savings because sometimes it takes a lot of
+         time to "restart" an application and get back into the desired
+         sub-menu to test the changes.  Some sophisticated application
+         development tools such as ARTFUL.LIB must open as many as 25
+         files, build arrays, set relations, etc. before you can even
+         get into the desired menu.  dCLIP helps during development of
+         these larger application systems by allowing the programmer to
+         (1) suspend execution of the program, (2) Call his/her editor,
+         (3) recompiles the changes, (4) automatically de-links the old
+         code and re-links the new codes into memory, (5) return to
+         the program.  This process does not in any way change the
+         program "environment", only the executable portion of the code,
+         thereby saving even more time in getting back to the desired
+         menu to test the changes.
+ 
+         dCLIP does have a limitation when being used in this manner.
+         Let's say that procedure A calls procedure B.  The programmer
+         hits the ALT-D hotkey while running procedure B to get to the
+         interactive dot prompt, then calls his editor and changes
+         something in procedure B.  dCLIP will allow the editing and
+         recompiling of the changes, however the procedure B code cannot
+         be replaced in memory until the application returns back to
+         procedure A and then comes back into B.  It is suggested that
+         if a change needs to be made to a procedure on the fly like
+         this, that the programmer go back one menu in the program
+         before hitting the ALT-D hot key.
+ 
+ 
+ 
+         INCREMENTAL-LINKING
+ 
+         Incremental Linking is a process in which only the code which
+         is changed is linked into the new .EXEcutable program.  RTLINK,
+         NOLINK, dCLIP and dCLIPRUN all support incremental linking
+         however, each uses a different concept.
+ CLIPBBS 1-08                   Page 13                  15 Oct 1991
+
+
+         RTLINK's and BLINKER's concept of incremental linking is to
+         create an information file which is generated containing a list
+         of each module in the program along with a checksum and time
+         stamp.  It is with the use of this file that the linker is able
+         to tell what has changed in the program.  This technique has the
+         disadvantage of causing the .EXEcutable program to grow larger
+         than usual because of wasted space in the output file which is
+         needed to allow for the growth of modules.  A certain amount of
+         extra space (25% is the default) is needed.  This is not really a
+         problem because incremental linking is usually done during the
+         development cycle.  The final product can be linked with
+         NOINCREMENTAL to disable the feature and bring the .EXE back down
+         to normal size.   I tried using this RTLINK feature in several of
+         my applications, but noticed no appreciable time-saving due to the
+         disk overhead involved in comparing linked objects to the data in
+         the information file.  Maybe on smaller applications this is more
+         effective.  BLINKER introduced this feature in version 1.3 and is
+         a much more effective method of incremental linking than either
+         RTLINK's or WARPLINK's incremental linking.
+ 
+         NOLINK's incremental linking system must work differently since
+         linking is normally done "on the fly" and is always activated.
+         When running an application under NOLINK and using dynamic-
+         libraries, each time a module is called and needs to be linked
+         into memory, the date and time of the module in the dynamic
+         library is checked against the date and time of the .OBJ file on
+         the disk.  If there is NO .OBJ file, then the module from the
+         library is linked, if there is an .OBJ file with a later date
+         and time then it is linked instead of the module in the library.
+ 
+         dCLIP's incremental linking system uses essentially the same
+         technique as NOLINK, except the DCLIP.SYS file allows the
+         programmer to define the location of the .OBJect files so they
+         may exist on another drive in another directory or on the
+         network server.  This makes project management simpler.  dCLIP
+         also allows the programmer to put a memory variable in the start
+         of his/her program to disable the incremental link system,
+         eliminating the constant disk access and date/time comparisions
+         and link only from the libraries thereby improving the speed of
+         operation.  This feature is usually implemented when using
+         dCLIPRUN rather than dCLIP.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 14                  15 Oct 1991
+
+
+ =============================================================================
+                                   ANOMALIES
+ =============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                           Memory(n) function
+ 
+ 
+ Never take a care of value returned by Memory() function. When there is
+ 30KB reported by Memory(1), then Memory(3) (run space) can report this
+ number:
+ 
+           -1   (probably -1 as result of calculating)
+           768  just perfect, i have 640KB of memory in computer
+                and RUN space is 768KB free
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                     MENU functions incompatibility
+ 
+ One nice surprise i had after running our applications. I made a own
+ menuying system which was using FACT that cursor is staying just
+ immediately AFTER selected menu line. This one WAS true in Clipper 5.0
+ and this one IS NOT true in 5.01 I don't understand why 5.01 is putting
+ cursor on place of SET MESSAGE (never mind if there is MESSAGE or not)
+ and not logically to place after selected menu line.
+ 
+ Then if your menu system is acting strange and you are getting sure
+ that MENU TO is still working the same, change your mind - it's
+ different.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 15                  15 Oct 1991
+
+
+                   RTLINK is not possible to stop....
+ 
+ Another stupidity of RTLINK which is making me really angry is fact,
+ that one still cannot press Ctrl Break for stop linking somewhere in
+ middle of linking. One MUST wait till RTLINK will display something to
+ screen (and this can be after 10 or 15 minutes from moment when one
+ pressed Ctrl Break). Only at moment of displaying will DOS see your
+ Ctrl Break. RTLINK will NEVER look for this key. Solving of this stupid
+ fact is only one. Use /VERBOSE:2 switch for your Rtlink and then there
+ will be continuous flow of text on screen and RTLINK will stop when you
+ will need it.
+ 
+ Another suggested solution coming from Nantucket (use BREAK ON in your
+ CONFIG.SYS) is not working with many versions of DOS, therefore we can
+ forget about this.
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 16                  15 Oct 1991
+
+
+ =============================================================================
+                                  CLIPPER NET
+ =============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÂÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÂÄÄÄÄÄÄ¿
+ ³FileName     ³Src ³Description                                     ³Where ³
+ ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄ´
+ ³ACCESS.ARJ   ³Cln ³Source of speed testing program                 ³[1-06]³
+ ³ACH2TB.ARJ   ³Cln ³Convert ACHOICE to TBROWSE                      ³[1-05]³
+ ³ACHOO2.ARJ   ³Cln ³Replacement of ACHOICE with GET possibilites    ³[1-06]³
+ ³ADHOC302.ARJ ³Cln ³Summer 87 inteligent report program             ³[1-04]³
+ ³CL5103.ARJ   ³Cln ³Report of 5.01 anomaly number 3                 ³[1-04]³
+ ³CL5REP6.ARJ  ³Cln ³5.01 replacement of REPORT command              ³[1-04]³
+ ³CLIP110.ARJ  ³Cln ³Clipper Documentor program                      ³[1-05]³
+ ³CLIPLINK.ARJ ³Cbs ³Complete text of R.Donnay about linkers         ³[1-04]³
+ ³CLIPSQL.ARJ  ³Cln ³Demo of complete SQL library for CLipper        ³[1-05]³
+ ³CLPFON.ARJ   ³Cln ³Set of fonts for EXPAND.LIB from author         ³[1-03]³
+ ³COND.ARJ     ³Cln ³Builder of conditional indexes like SUBNTX      ³[1-03]³
+ ³DBSCN2.ARJ   ³Cln ³Screen designer generator                       ³[1-05]³
+ ³HGLASS.ZIP   ³Cln ³Hour glass for indication of index progression  ³[1-04]³
+ ³INDXSL.ARJ   ³Cln ³User Fields selection builder for index generate³[1-03]³
+ ³IOBASYS9.ARJ ³Cln ³Demo of S87 library and calling Clipper from C  ³[1-03]³
+ ³MK30.ARJ     ³Cln ³Mouse library demo version                      ³[1-03]³
+ ³MOVEGETS.ARJ ³Cln ³GETSYS change for moving between gets via VALID ³[1-03]³
+ ³NFDESC2.ARJ  ³Cln ³NanForum library description list               ³[1-06]³
+ ³NFLIB2.ARJ   ³Cln ³NanForum library main file                      ³[1-06]³
+ ³NFSRC2.ARJ   ³Cln ³NanForum library Source files                   ³[1-06]³
+ ³NOTATION.ARJ ³Cln ³Complete text of article about hungarian notat. ³[1-04]³
+ ³PACKUP.ARJ   ³Cln ³ASM source of PACK/UNPACK replacement SCRSAVE.. ³[1-04]³
+ ³POPUPCAL.ARJ ³Cln ³Popup calender                                  ³[1-05]³
+ ³READPW.ARJ   ³Cln ³GETSYS change for password invisible reader     ³[1-03]³
+ ³SCRSAVE.ARJ  ³Cln ³Screen AntiBurning utility (inactivity snake)   ³[1-05]³
+ ³SOUND.ARJ    ³Cln ³Multiple TONE() used as one SOUND function      ³[1-06]³
+ ³SYMBOL.ARJ   ³Cln ³Dumper of symbol tables of Summer87 .EXE        ³[1-03]³
+ ³TBWHL4.ARJ   ³Cln ³WHILE browsing using TBROWSE, well commented    ³[1-06]³
+ ³VSIX711.ARJ  ³Cln ³Vernon Six Clipper utilities and library        ³[1-05]³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÙ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - CALC14.ARJ
+ 
+ CLIPBBS 1-08                   Page 17                  15 Oct 1991
+
+
+ File Name:      CALC14.ARJ
+ Other Names:
+ 
+ File Size:      23,106 bytes
+ File Contents:
+                 CALC.TXT          20491
+                 CALC.OBJ          11831
+                 CALCEASY.PRG        346
+                 CALCHARD.PRG       3058
+                 REGISTER.DOC       2020
+                 CALCEASY.RMK        240
+                 CALCHARD.RMK        240
+                 READ.ME            2583
+                 CALC.NG           16966
+ 
+ "PopUp" calculator in .OBJ form with good facilities of classical pop-up
+ calculators, including tape, nesting of expressions and pasting value back
+ to edited GET. Good examples also included.
+ 
+ It's a DEMO version with (c) screen. Working version without (c) screen
+ available only after paying. In time of existency NANFOR.LIB it seems like
+ anachronism to ask for single function registration....
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - DOC111.ARJ
+ 
+ File Name:      DOC111.ARJ
+ Other Names:
+ 
+ File Size:      57,121 bytes
+ File Contents:
+                 DOC.EXE          111616
+                 DOCUMENT.DOC      28519
+                 CLIPPER5.KEY       1639
+                 READ.ME             771
+ 
+ Newer version of Clipper documentor program. DOC110 was described early
+ before as far as i can remember.
+ 
+ Sorry for delay :-) <grin> i was trying it to run now on 1500 lines of
+ code. It was 11 minutes of painfull waiting...
+ 
+ Some comments:
+ 
+     1)   it's very, very slow... (AT286 only)
+     2)   making of tree diagrams failing of course on #ifdef like this:
+         #ifdef TYPE1
+             if nValue<1
+         #endif
+         #ifdef TYPE2
+             if cValue<"a"
+         #endif
+ CLIPBBS 1-08                   Page 18                  15 Oct 1991
+
+
+                 ,,,,action,,,,
+             endif
+     3)   trying to become intelligent in case of passing parameters and
+          returning values is resulting in some strange commenting comments
+          in program....
+     4)   lengths of inputs for names and paths are TOO short for reality
+          and too long for displaying in program itself...
+ 
+ 
+ Finally. It has lot of things to do to become small equivalent of SNAP or
+ FOXDOC...
+ 
+ .DD.
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - JG2.ARJ
+ 
+ File Name:      JG2.ARJ
+ Other Names:
+ 
+ File Size:      4,550 bytes
+ File Contents:
+                 JG2.PRG            9242
+                 JUMP2GET.CH        2545
+ 
+ Demonstration of capabilities of GET system:
+ 
+     o  Enter a READ at *ANY* GET in the 'getlist';
+     o  Jump to any other GET in the getlist from a GET's postblock;
+     o  Jump to any other GET based on user input of either the ordinal
+        position of the GET in the getlist, or, the GET's name.
+ 
+ This one is not requiring ANY changes of GET system in Clipper!
+
+ -----------------------------------------------------------------------------
+
+
+                            ClipperNet - LUTLIB.ARJ
+ 
+ File Name:      LUTLIB.ARJ
+ Other Names:
+ 
+ File Size:      10,598 bytes
+ File Contents:
+                 LUTLIB.LIB        19003
+                 LUTLIB.DOC         9984
+ 
+ Yet Another Clipper Library (YACL) with Shareware idea of distributing.
+ Functions for:
+ 
+     Menuing
+     Conversion number to string of words
+     Global string replace
+     Selection menu
+ CLIPBBS 1-08                   Page 19                  15 Oct 1991
+
+
+     Appends from open working area
+ 
+ .DD>
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 20                  15 Oct 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-08                   Page 21                  15 Oct 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+

@@ -1,0 +1,9 @@
+SELECT Oficinas.ciudad, Persvent.c¢dofi, Facturas.c¢drep, Persvent.nombre,;
+  SUM(Facturas.impfac);
+ FROM Facturas, Persvent, Oficinas;
+ WHERE Persvent.c¢drep = Facturas.c¢drep;
+   AND Oficinas.c¢dofi = Persvent.c¢dofi;
+ GROUP BY Persvent.c¢dofi, Facturas.c¢drep;
+ INTO CURSOR PASO3
+REPORT FORM PASO3.FRX PREVIEW
+

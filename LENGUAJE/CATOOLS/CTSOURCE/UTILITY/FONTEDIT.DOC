@@ -1,0 +1,364 @@
+ The Nantucket Tools II Font-Editor
+ --------------------------------
+ The font editor is a full program to modify and generate screen fonts.
+ Such fonts, in each case saved in a separate file, can be loaded
+ from any Clipper application via the function FONTLOAD().
+ In the program, the source code is included, so it can also be used to
+ demonstrate the VIDEO- and FONT-functions of Nantucket Tools II.
+ You are free to modify the program or procedures from this, resp. to
+ use in own programs. So, the font editor can become a component
+ of your application.
+
+
+ What is a font
+ --------------
+ Formerly, the character settings at PC's used for the screen usually
+ have been programmed in an EPROM.
+ Today, various screen adapters allow to change these character
+ settings by modifying the pixel pattern of separate characters.
+ How many of these pixel are used for one character depends on the
+ adapter and the set mode. The font editor of Nantucket Tools determines
+ automatically the current pixel pattern, which of course can be
+ modified.
+ With Nantucket Tools II, fonts with a pixel height up to 32 pixel
+ can be used. With the font editor, only fonts between 2 and 32
+ pixel can be processed, which seemed to be an efficient range.
+
+
+ Technical details
+ -----------------
+ Fonts are only supported for EGA- and VGA-adapters. For other screen
+ adapters, e.g. EIZO mono set, the included font software has to be
+ used.
+
+ The number of fonts, that can be loaded in an adapter at the same
+ time, is different. The number is not only depending on the used
+ adapter, but also on its memory component placement. This information
+ can be found out with the function MAXFONT().
+ As via FONTSELECT() one font for normal and one font for high
+ intensity output can be activated at the same time, up to 512
+ characters can be displayed on one screen (see also Twofonts.prg
+ in the SAMPLES directory).
+
+
+ Compiling and linking
+ ---------------------
+ To be able to use the font editor, it has to be compiled and linked
+ under usage of Nantucket Tools II before. For this, you have to copy
+ FONTEDIT.PRG in the current directory of your hard disk.
+ Then, the compiling of FONTEDIT can be started with:
+
+                 CLIPPER FONTEDIT
+
+ The following parameters have to be added to the link statements:
+
+                 NT2US50.OBJ   at the .OBJ files
+                 NT250.LIB     at the libraries
+
+ After linking, FONTEDIT can be started at once. Additionally, you will
+ find a .RMK file in the directory 'UTILITY', so that the font editor
+ can also be generated with:
+
+                 RMAKE FONTEDIT.
+
+ How to start FONTEDIT
+ ---------------------
+ FONTEDIT.EXE can be started under specification of two file names:
+
+ FONTEDIT [<input file> [<output file>]]
+
+ <input file>  specifies the name of a file, out of which FONTEDIT
+               has to load a font.
+
+ <output file> specifies the name of a file, where the modified
+               font has to be saved.
+
+
+ How to use the editor
+ ---------------------
+ An unlimited number of fonts can be generated and saved, the only
+ restriction is in the hard disk capacity. Once generated, fonts
+ can be loaded by the editor and modified in any way.
+
+ The font editor contains three windows, where the characters to be
+ processed are displayed, a main menu on the right screen border
+ and a double line status range on the bottom of the screen.
+
+ 1. window
+ ---------
+   The original pattern of a character is displayed.
+   This is conforming to the pixel pattern of the build in ROM font
+   of an adapter.
+
+ 2. window
+ ---------
+   The selected character with its modifications is displayed.
+   This window can be selected or deselected, for this, note the
+   representation of the double frame. If the window is selected,
+   the active character can be modified either by activating the
+   function keys described right on the screen or pixel for pixel.
+   To change individual pixel, first the ON- or OFF- status has to be
+   selected via space bar (displayed in the status range). Then,
+   pixel can be set (ON mode) or reset (OFF mode) with the arrow keys.
+
+ 3. window
+ ---------
+   A complete ASCII table including all 256 characters is
+   available. If this window is selected, an entered character will
+   be displayed in the EDIT window for manipulation (please pay
+   attention to the frame!).
+   By trying to select a character with the arrow key, you will
+   find out, that the Ctrl code, valid under Clipper, will be
+   selected as character instead!
+
+   SWITCHING BETWEEN WINDOW 2 AND 3 IS DONE VIA TAB KEY !
+
+
+ The main menu
+ -------------
+ On the right border of the screen all function keys for the operation
+ of the program are described. Hereby, either the function key
+ or the function key in combination with 'shift' can be used.
+ With the shift combination, all characters of window 3 will be
+ processed (e.g. at mirroring function).
+
+  HELP
+  ----
+  With this menu option a short summary of the operation of the
+  font editor will be displayed.
+
+  FONTS
+  -----
+   1 LOAD
+   ------
+   With this menu option any font file can be read. As default, a
+   file mask including a complete path can be defined. By pressing
+   F2, all existing font files corresponding to this file mask
+   will be displayed. A file can be selected by using the arrow
+   keys and the RETURN key.
+   The default values for the file mask are the current directory
+   and "*.0*".
+
+
+   2 SAVE
+   ------
+   A modified font can be saved in a file. Automatically, the
+   special file format, required by the function FONTLOAD(), will
+   be created. The other options are described above ('LOAD').
+
+
+   3 PRINT
+   -------
+   With the font editor and the font functions of Nantucket Tools II
+   only screen fonts can be manipulated and used. Any special
+   printer fonts are not supported.
+   So, with this menu option, the printer can not be switched to
+   a printer font mode conforming to the screen font. It is only
+   to print out one or all (CAPS LOCK) characters under usage of
+   block characters. In doing so, the output is conforming to the
+   screen display within the edit window.
+
+
+   4 ROM FONT
+   ----------
+   With this menu option the original ROM font of the used screen
+   adapter can be loaded. However, ROM fonts are only available
+   for some defined pixel heights: for EGA 8 and 14 pixel, for
+   VGA 8, 14 and 16 pixel. At the attempt to load a ROM font for
+   other pixel heights, an error message will be displayed.
+
+
+   5 ?GA MODES
+   -----------
+   With this menu option, the screen modes, typical for EGA/VGA,
+   with 8 pixel (43/50 rows), 14 pixel (25/28 rows) and 16 pixel
+   (VGA 16 rows) can be set. Hereby, the synchron mode is set,
+   so the pixel height of the actual displayed characters is
+   corresponding to the edit window.
+
+
+   6 PIX HEIGHT
+   ------------
+   As already mentioned above, the font editor allows to process
+   pixel heights between 5 and 32 pixel. With this menu option,
+   the pixel height can be set within that range. Hereby, the
+   display shows a particularity:
+
+   After the start, the font editor is working in synchron mode first.
+   The font, currently loaded in the edit window for manipulation,
+   is displayed in its real size in the ASCII window at the same time.
+   Through this real size font display also the number of screen lines
+   will be changed, when the pixel height is modified. The number of
+   screen lines is calculated with the number of total available
+   scan lines divided through the lines per pixel.
+   Selecting e.g. a 32 pixel font, on a VGA adapter only 12 lines
+   (400 / 32) are available now. However, in the edit window 32
+   lines are required for the manipulation of one character!
+   If the selected pixel height with the current settings can not
+   be displayed anymore, the font editor offers two selection
+   possibilities:
+
+   1. ASYNCHRON MODE
+
+      You quit the synchron mode. The font editor is switching into a
+      display mode, that makes sufficient lines available.
+      If a 32 pixel font has been selected, this would be e.g. a
+      50 lines mode on a VGA adapter. With that, for the edit window
+      enough lines are available, but actually, another mode is
+      used (for the example mentioned above 8 pixel/line).
+      Now the font can be modified in any way, but it is not
+      possible to verify the result on the 'real' character of this
+      pixel height at once. Of course, the font can be loaded in
+      a Clipper application via FONTLOAD() later, and will be
+      displayed as a real 32 pixel font!
+
+   2. SYNCHRON MODE
+      You also can remain in the synchron mode. In this case, the
+      font editor is switching into a virtual screen (based on
+      the SETMAXROW(<n>) function). A virtual screen can contain
+      more lines than a screen can display simultaneously. By
+      moving the cursor, the displayed part of the screen will be
+      scrolled, whereby other parts will be made visible.
+
+   The font editor offers the selection between sybchron and asynchron
+   mode, whenever a switching is possible. A switching can also
+   be performed, when the pixel height is kept.
+
+
+  LINES
+  -----
+  This menu option calls a sub menu. With that menu pixel rows
+  can be inserted, duplicated or deleted within the edit window.
+  When working in the synchron mode, the modifications can be seen
+  in the 'real' font immediately.
+
+    1 DUPLICATE
+    -----------
+    This function copies the current pixel row in the edit
+    window to the current cursor position into the character.
+    Example: When you move the cursor to the lower range of an
+    "A" and call this function several times, the "A" will be
+    extended below.
+
+    2 INSERT
+    --------
+    This function inserts an empty pixel row at the current cursor
+    position in the edit window into the character.
+
+    3 DELETE
+    --------
+    This function deletes a pixel row at the current cursor position
+    in the edit window.
+
+
+  COLUMNS
+  -------
+  With this menu option, pixel rows can be inserted at the left
+  margin of the current selected or all characters. Hereby, also
+  a pattern can be selected, where an individual indention for
+  each pixel row of the character can be determined. The default
+  setting of these values assigns, that a 'normal' character
+  will become an italic character.
+
+
+  MIRRORING
+  ----------
+  With this menu option the character selected in the edit window
+  can be mirrored round its horizontal axis. Some mirrored
+  characters equal the original character, so the modification
+  is not visible.
+
+
+  MIRRORING
+  ----------
+  With this menu option the character selected in the edit window
+  can be mirrored round its vertical axis. Some mirrored
+  characters equal the original character, so the modification
+  is not visible.
+
+
+  ROTATE
+  ------
+  With this menu option the character in the edit window can be
+  rotated round its center. If at this process pixel of a character
+  are moved to the outside of the window frame,they will be cut off!
+  When the rotation of the character is still continued, these
+  pixel remain 'lost'. The original of a 'destroyed' character
+  can be recovered with the F10 key.
+
+
+  INVERT
+  ------
+  With this menu option, the character in the edit window is
+  inverted, that means, each pixel is represented exactly reversed.
+
+
+  COPY
+  ----
+  This procedure copies a specified number of characters (patterns)
+  either from the original font or from the edit font to any position
+  within the active font.
+
+  So you are able to:
+
+  1. copy back a part of the original patterns after modification
+     of all characters
+
+  2. duplicate a part of the characters in the edit font to
+     another position within the same font range.
+
+
+  ORIGINAL
+  --------
+  With this menu option one or all charactes can be reset to
+  the original pattern, as displayed in the ORIGINAL window.
+
+
+  OVERLAY
+  -------
+  With this menu option two separate characters or two character
+  ranges can be overlaid (mixed). Example: When the character "A"
+  is overlaid with an underline "_", the result is an underlined
+  "A".
+
+
+ The status range
+ ----------------
+ In addition to some operating instructions, in the two lines
+ on the bottom of the screen you will find a status display for
+ the following settings:
+
+   Input:
+    The name of the file, out of which the last font has been read.
+
+   Output:
+    The name of the file, where the font will be saved by calling
+    the function 'SAVE'.
+
+   Mode:
+    The current screen mode is displayed. Here, we want to refer once
+    again to the fact, that you also have to work with an EGA- or
+    VGA- adapter under CGA80 mode. An EGA25 or a VGA25 mode is not
+    available for textdisplay!
+
+   Rows:
+    Two values, text rows and pixel rows, are displayed.
+
+   Space:
+    It is displayed, if at cursor movements in the second window
+    pixel will be set (ON) or deleted (OFF). 'Space' means,
+    that the space bar has to be activated to switch this status.
+
+
+ Exit the program
+ ----------------
+ The program can be terminated with ESC. For safety reasons, you
+ will be asked again, if you want to exit the program.
+ Before terminating the program, you have the possibility to
+ save a modified font.
+
+
+Michael Peters
+Lothar Bongartz
+Nantucket GmbH, Leverkusen
+

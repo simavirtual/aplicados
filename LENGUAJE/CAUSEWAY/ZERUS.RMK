@@ -1,0 +1,115 @@
+///PARAMETROS DEL ENCADENADOR
+     #ifdef OK
+	CompOptions := /m
+     #else
+        CompOptions := /w/m/b 
+     #end
+///FIN PARAMETROS DEL ENCADENADOR
+
+///RELACIONES DE DEPENDENCIA PARA LOS OBJS
+.prg.obj:
+         clipper $< $(CompOptions)/oobjs\$ > otro
+
+objs\PlusCaja.obj: \desarro\zerusges\pluscaja\f\zerus.prg
+objs\Cajas101.obj: \desarro\zerusges\pluscaja\f\Cajas101.prg
+objs\Cajas102.obj: \desarro\zerusges\pluscaja\f\Cajas102.prg
+objs\Cajas103.obj: \desarro\zerusges\pluscaja\f\Cajas103.prg
+objs\Cajas104.obj: \desarro\zerusges\pluscaja\f\Cajas104.prg
+objs\Cajas105.obj: \desarro\zerusges\pluscaja\f\Cajas105.prg
+objs\Cajas106.obj: \desarro\zerusges\pluscaja\f\Cajas106.prg
+objs\Cajas107.obj: \desarro\zerusges\pluscaja\f\Cajas107.prg
+objs\Cajas108.obj: \desarro\zerusges\pluscaja\f\Cajas108.prg
+objs\Cajas109.obj: \desarro\zerusges\pluscaja\f\Cajas109.prg
+objs\Cajas110.obj: \desarro\zerusges\pluscaja\f\Cajas110.prg
+objs\Cajas111.obj: \desarro\zerusges\pluscaja\f\Cajas111.prg
+objs\Cajas112.obj: \desarro\zerusges\pluscaja\f\Cajas112.prg
+objs\Cajas113.obj: \desarro\zerusges\pluscaja\f\Cajas113.prg
+objs\Cajas115.obj: \desarro\zerusges\pluscaja\f\Cajas115.prg
+objs\Cajas116.obj: \desarro\zerusges\pluscaja\f\Cajas116.prg
+objs\Cajas117.obj: \desarro\zerusges\pluscaja\f\Cajas117.prg
+objs\Cjas119A.obj: \desarro\zerusges\pluscaja\f\Cjas119A.prg
+objs\Cjas119B.obj: \desarro\zerusges\pluscaja\f\Cjas119B.prg
+objs\Cajas121.obj: \desarro\zerusges\pluscaja\f\Cajas121.prg
+objs\Cajas122.obj: \desarro\zerusges\pluscaja\f\Cajas122.prg
+objs\Cajas123.obj: \desarro\zerusges\pluscaja\f\Cajas123.prg
+objs\Cajas124.obj: \desarro\zerusges\pluscaja\f\Cajas124.prg
+objs\Cajas125.obj: \desarro\zerusges\pluscaja\f\Cajas125.prg
+objs\Cajas126.obj: \desarro\zerusges\pluscaja\f\Cajas126.prg
+objs\Cajas127.obj: \desarro\zerusges\pluscaja\f\Cajas127.prg
+objs\Cajas128.obj: \desarro\zerusges\pluscaja\f\Cajas128.prg
+objs\Cajas129.obj: \desarro\zerusges\pluscaja\f\Cajas129.prg
+objs\Cajas130.obj: \desarro\zerusges\pluscaja\f\Cajas130.prg
+objs\Cajas131.obj: \desarro\zerusges\pluscaja\f\Cajas131.prg
+objs\Cajas132.obj: \desarro\zerusges\pluscaja\f\Cajas132.prg
+objs\Cajas135.obj: \desarro\zerusges\pluscaja\f\Cajas135.prg
+objs\Cajas201.obj: \desarro\zerusges\pluscaja\f\Cajas201.prg
+objs\Cajas202.obj: \desarro\zerusges\pluscaja\f\Cajas202.prg
+objs\CajaFunc.obj: \desarro\zerusges\pluscaja\f\funcions\CajaFunc.prg
+objs\FuncsEmp.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsEmp.prg
+objs\FuncsArt.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsArt.prg
+objs\FuncsTra.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsTra.prg
+objs\FuncsMov.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsMov.prg
+objs\FuncsPag.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsPag.prg
+objs\FuncsCaj.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCaj.prg
+objs\FuncsCli.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCli.prg
+objs\FuncsVen.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsVen.prg
+objs\FuncsCon.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCon.prg
+objs\FuncsCo1.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCo1.prg
+objs\FuncsCo2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCo2.prg
+objs\FuncsCo3.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCo3.prg
+objs\FuncsCo4.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCo4.prg
+objs\FuncsCba.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCba.prg
+objs\FuncsBan.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsBan.prg
+objs\FuncsCla.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCla.prg
+objs\FuncsSc1.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsSc1.prg
+objs\FuncsSc2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsSc2.prg
+objs\FuncsLec.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsLec.prg
+objs\FuncsDet.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsDet.prg
+objs\FuncsVar.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsVar.prg
+objs\FuncsFis.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsFis.prg
+objs\FuncsFi2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsFi2.prg
+objs\FuncsVal.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsVal.prg
+objs\FuncsIva.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsIva.prg
+objs\FuncsFac.obj: \desarro\zerusges\pluscaja\f\funcions\Funcsfac.prg
+objs\FuncsFco.obj: \desarro\zerusges\pluscaja\f\funcions\Funcsfco.prg
+objs\FuncsCxP.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCxP.prg
+objs\FuncsCx2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCx2.prg
+objs\FuncsCar.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCar.prg
+objs\FuncsCa2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsCa2.prg
+objs\FuncsEgr.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsEgr.prg
+objs\FuncsRec.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsRec.prg
+objs\FuncsRe2.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsRe2.prg
+objs\FuncsMAu.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsMAu.prg
+objs\FuncsTAu.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsTAu.prg
+objs\FuncsTba.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsTba.prg
+objs\FuncsPla.obj: \desarro\zerusges\pluscaja\f\funcions\FuncsPla.prg
+
+///FIN RELACIONES DE DEPENDENCIA PARA LOS OBJS
+
+///CONSTRUCCION DEL EJECUTABLE
+     dbu.exe:  objs\zerus.obj     objs\Cajas101.obj  objs\Cajas111.obj  \\
+               objs\Cajas112.obj  objs\Cajas113.obj  objs\Cajas115.obj  \\
+               objs\Cajas102.obj  objs\Cajas121.obj  objs\Cajas126.obj  \\
+	       objs\Cajas122.obj  objs\Cajas123.obj  objs\Cajas103.obj  \\
+               objs\Cajas131.obj  objs\Cajas132.obj  objs\Cajas104.obj 	\\
+               objs\Cajas105.obj  objs\CajaFunc.obj  objs\FuncsEmp.obj  \\
+               objs\FuncsArt.obj  objs\FuncsTra.obj  objs\FuncsMov.obj 	\\
+               objs\FuncsPag.obj  objs\FuncsCaj.obj  objs\FuncsCli.obj 	\\
+               objs\FuncsVen.obj  objs\FuncsCon.obj  objs\FuncsBan.obj  \\
+               objs\FuncsCla.obj  objs\FuncsLec.obj  objs\FuncsDet.obj	\\
+	       objs\Cajas201.obj  objs\Cajas124.obj  objs\Cajas125.obj  \\
+               objs\Funcsvar.obj  objs\Cajas127.obj  objs\Cajas135.obj   \\
+               objs\Cajas128.obj  objs\Cajas202.obj  objs\FuncsSc1.obj   \\
+	       objs\FuncsFis.obj  objs\FuncsVal.obj  objs\Cajas106.obj   \\
+	       objs\Cajas107.obj  objs\FuncsIva.obj  objs\Cajas129.obj  \\
+	       objs\Cajas130.obj  objs\FuncsFac.obj  objs\Cajas108.obj  \\
+	       objs\FuncsCar.obj  objs\FuncsRec.obj  objs\FuncsSc2.obj  \\
+	       objs\FuncsMAu.obj  objs\FuncsCo1.obj  objs\FuncsCo2.obj   \\
+	       objs\Cajas116.obj  objs\Cajas117.obj  objs\FuncsTAu.obj  \\
+               objs\Cjas119A.obj  objs\Cajas110.obj  objs\FuncsCba.obj  \\
+               objs\FuncsFi2.obj  objs\FuncsCa2.obj  objs\FuncsRe2.obj \\
+               objs\FuncsTba.obj  objs\FuncsCo3.obj  objs\FuncsPla.obj \\
+               objs\Cjas119B.obj  objs\Cajas109.obj  objs\FuncsCxP.obj \\
+               objs\FuncsFco.obj  objs\FuncsEgr.obj  objs\FuncsCo4.obj  \\
+               objs\FuncsCx2.obj
+///FIN CONSTRUCCION DEL EJECUTABLE

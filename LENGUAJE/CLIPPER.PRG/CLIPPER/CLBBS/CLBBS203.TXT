@@ -1,0 +1,1660 @@
+ 
+ 
+         ∞±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+       ∞∞±±±∞ﬁﬁﬁﬁ±∞ﬁﬁﬁﬁ±±±±∞ﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±
+       ∞∞±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ∞ﬁﬁ∞∞ﬁﬁ±±
+       ∞∞±∞ﬁﬁ±±∞∞±±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ∞ﬁﬁﬁ±±±±±
+       ∞∞±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±±±∞ﬁﬁ±±±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁ±±±±
+       ∞∞±∞ﬁﬁ±±±±±±∞ﬁﬁ±±∞ﬁ±±∞ﬁﬁ±±±±∞ﬁﬁ∞∞±±±∞ﬁﬁ∞∞ﬁﬁ±∞ﬁﬁ∞∞ﬁﬁ±±±∞ﬁﬁﬁ±±
+       ∞∞±∞∞ﬁﬁ±±ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±±∞ﬁﬁ±±±±∞ﬁﬁ±±±±±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ±∞ﬁﬁ∞ﬁﬁ∞∞ﬁﬁ±±
+       ∞∞±±∞∞ﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±∞ﬁﬁﬁﬁﬁﬁ±∞ﬁﬁﬁﬁﬁﬁ±±∞ﬁﬁﬁﬁ±±±
+       ∞∞±±±∞∞∞∞±±∞∞∞∞∞∞∞±±∞∞∞∞±±±∞∞∞∞±±±±∞∞∞∞∞∞±±∞∞∞∞∞∞±±±∞∞∞∞±±±±
+       ∞∞∞±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±±
+         ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞
+ 
+   Volume 2, Number 3                                     21 January 1992
+ 
+                  (c) Daniel Doáekal, All Rights Reserved
+ 
+      The BBS Clipper magazine, published SEMIWEEKLY, every FRIDAY
+ 
+      Some of the material used comes from scanning CLIPPER echoes
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+ 
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+ 
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief editor ...............................Daniel Docekal
+         Language editor .................................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. ARTICLES  ..............................................................  1
+    PGP - Pretty Good Privacy, revolution in security?  ....................  1
+    Some nice tips of Clipper 5.01  ........................................  2
+    What was in ALL previous number  .......................................  8
+ 2. SOFTWARE  .............................................................. 15
+    WHAT IS WHAT, just take a short look into Clipper World  ............... 15
+    LIST, Another Database of Files - Clipper Shareware/Public  ............ 17
+ 3. Q&A  ................................................................... 22
+    Q&A: Using multiple GetList varibles, but one is closing every time?  .. 22
+ 4. ANOMALIES  ............................................................. 23
+    ANOMALIES reports and commets  ......................................... 23
+    SETCOLOR() is giving INTERNAL ERRORS  .................................. 23
+ 5. CLIPPER NET  ........................................................... 24
+    Index of described files in Clipper BBS Magazine  ...................... 24
+    ClipperNet - CLIPSWAP.ZIP  ............................................. 25
+    ClipperNet - DW125.ARJ  ................................................ 26
+    ClipperNet - LUIZ0991.ARJ  ............................................. 26
+    ClipperNet - OCLIP1A.ARJ  .............................................. 27
+    ClipperNet - REGTEST.ARJ  .............................................. 27
+ CLIPBBS 2-03       Table of Contents (...)        21 Jan 1992
+
+
+    ClipperNet - REPLCH.ARJ  ............................................... 28
+ 6. CLIPBBS  ............................................................... 29
+    CLIPBBS distribution  .................................................. 29
+    CLIPBBS, how to write an article!!!  ................................... 31
+
+                                   - - - - -
+ CLIPBBS 2-03                   Page 1                   21 Jan 1992
+
+
+ ==============================================================================
+                                    ARTICLES
+ ==============================================================================
+
+
+             PGP - Pretty Good Privacy, revolution in security?
+                    RA Public Key Cryptography for Masses
+ 
+ 
+                                UUENCODING..
+ 
+ UUencoding is method for sending 8bit ASCII files through channels allowing
+ only 7bit ASCII printable characters. It's very often used in some real big
+ networks based on old made protocols and sets of characters. Princip is
+ easy, UUENCODE converts text by expanding groups of 3 8bit character into 4
+ printable ASCII characters. Grow is somewhere around 35%, but in world of
+ data compression can be UUencoded already compressed file and therefore it
+ will be still compressed after UUencoding...
+ 
+ PGP is also allowing use UUencoding with adding "u" option into all
+ commands creating files. Therefore like:
+ 
+     PGP -esu message.txt her_userid your_userid
+ 
+ Produced file "message.ctx" is in Unix uuencode format whic is capable of
+ transfer through 7bit channels of E-Mail, Internet or anything else not
+ supporting 8bit data.
+ 
+ Decrypting of UUencoded message is simple:
+ 
+     PGP message
+ 
+ PGP is automatically recognizing that "message.txt" is in uuncoded format
+ and will uudecode it before processing. Product will be normal 8bit file,
+ without anything to do with uudecoding or uuencoding..
+ 
+ 
+                        CLEAN your disk after coding
+ 
+ Wiping disk space used by your original plaintext file after PGP operations
+ is also good possibility, because everybody can use UNERASE (UNDELETE) or
+ something like this and get your "deleted" text from disc.
+ 
+ "w" option in following command will clear used disk space after
+ operations:
+ 
+     PGP -esw message.txt her_userid your_userid
+ 
+ "Message.txt" file is deleted from disk and place used by this file is
+ overwritten to override possibility of undelete with original text.
+ 
+ 
+ OK, that's all about PGP. Just get it and start use of it. More and more
+ people is doing it....
+ 
+ .DD.
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 2                   21 Jan 1992
+
+
+                        Some nice tips of Clipper 5.01
+ 
+ Ya, year ago most of us were working with 5.0 version of our nice Clipper
+ compiler and were screaming with problems, bugs and total disaster coming
+ from Clipper's inability to fit in our memories.
+ 
+ Then come 5.01 fixing most of our troubles (and coming with some new ones),
+ but some from OLD style of 5.0 is still present. What about taking short look
+ into Clipper 5.01 what is nice to start use?
+ 
+ OK, just start alphabetically from beginning of functions, what do you think.
+ 
+ AADD()
+ 
+     It's my very often used function now. After discovering troubles with
+     inline declaration and initalizing of array:
+ 
+     local   aArray := {  initialize ,;
+                          initialize ,... }
+ 
+     I had to switch to more suitable way for CLIPPER.EXE
+ 
+     function InitaArray()
+     local   aArray
+         AADD(initialize)
+         AADD(initialize)
+         ...
+     return (aArray)
+ 
+     Now for user you are thinking, what i'm talking about now. It's simple
+     'parsing error' or 'buffer overflow' is very soon stopping any tries
+     of use of first method. CLIPPER.EXE has one big trouble, assignments
+     (or just lines) are limited in length and i have really very long
+     constructions in my programs. Therefore i switched to making pseudo-
+     function needed for initialization which will return needed array
+     initialized inside with AADD() serie of functions. Actually this
+     solving has another possibility - if i'm in function where original
+     array is NOT visible (but i need it), i can just call this function
+     and get it without any troubles again.
+ 
+     With little change it can be made:
+ 
+     function InitArray()
+     static  aArray := {}
+         if empty(aArray)
+             //  serie of AADD functions
+         endif
+     return (aArray)
+ 
+     Then it will mean saving of time of execution of all AADD() functions in
+     additional executions. Initialized STATIC is left for swapping mechanism
+     of RTLINK (or other linkers).
+ 
+ AEVAL()
+ 
+     Sometime is AEVAL() going to be replacement for old good FOR statement.
+ CLIPBBS 2-03                   Page 3                   21 Jan 1992
+
+
+     Contstruction:
+ 
+         FOR i:=1 to len(aArray)
+             actions
+         NEXT
+ 
+     Can be easily replaced with
+ 
+         AEVAL(aArray,{|x,i| actions})
+ 
+     Especially because undocumented feature of AEVAL() is offering second
+     parameter when calling codeblock - index into main array.
+ 
+     it's only matter of personal preference which way to use, but i'm always
+     thinking about fact that classic FOR construction IS FASTER than AEVAL()
+     construction.
+ 
+ ATAIL()
+ 
+     It was nice from Nantucket to include this funciton. It is simple.
+ 
+     Instead of          aArray(len(aArray))
+ 
+     is possible to use  atail(aArray)
+ 
+     It's shorter and more readable, therefore making nicer program.
+ 
+ DBAPPEND()
+ 
+     Personally i like more to use DBAPPEND() function than APPEND BLANK
+     command. It's again matter of personal preference, what is a better and
+     what not. My opinion is, that programming languages are based on
+     functions and not commands and i'm not playing with backward
+     compatibility with anything like dBASE. Also time needed for
+     preproccessor when CLIPPERing .PRG is shorter for directly used functions
+     than parsing of APPEND BLANK command into DBAPPED().
+ 
+ DBCOMMIT() and DBCOMMITALL()
+ 
+     Somewhere in time of 5.0 i did several tests what to do with COMMIT
+     commands. After those tests is decided to DO NOT use them at all, because
+     they were only growing program and taking execution time. My programs are
+     now using this construction:
+ 
+     #ifndef NOCOMMIT
+         dbcommit()
+     #endif
+ 
+     This construction is placed in place where is probably needed commit
+     action when is wanted. Then is easy to place in compiling script part
+     information about defining NOCOMMIT and then having application WITH
+     or WITHOUT commit parts.
+ 
+ DBCREATE()
+ 
+     This function is most nice which is in Clipper. It's allowing keep
+ CLIPBBS 2-03                   Page 4                   21 Jan 1992
+
+
+     completely up to date all databases used in all my programs without ever
+     needs of user to see it. All structures of all databases are keept in
+     arrays immediate for use in DBCREATE() and when opening function of
+     databases at beginning of program will see a difference between reality
+     (or non existent file at all), it will just create or convert file for
+     latest version.
+ 
+ DBCREATEIND()
+ 
+     Previous one DBCREATE() with connection of this function is finally
+     giving a way how to make optimail Opening and Caring function for
+     databases and all indexes. INDEX ON command NO longer exist in my
+     programs because it's just too old and DBCREATEIND() function is much
+     more flexible. Somewhere later in Clipper BBS Magazine i'm planning to
+     release DT_OPEN() and DT_CLOSE() duo of functions using all possible
+     profits (which i was able to get out till today) from those functions
+     for creating databases and indexes.
+ 
+ DBGOBOTTOM() or DBGOTOP()
+ 
+     Because of using TBrowse objects is this function just a MUST. What
+     about NOT assigning Tbrowse:gobottom block to function which IS doing
+     GO BOTTOM command? Just assign it directly to DbGoBottom() :-)
+ 
+ DBSEEK()
+ 
+     Great idea of including two commands in one is just so great to help
+     with making code more readable, safe and smaller.
+ 
+     Old way:
+ 
+         local   lSav := SET(_SET_SOFSEEK, .F.)
+             seek cValue
+             SET(_SET_SOFTSEEK, lSav)
+             //  some other actions
+ 
+     Can now be replaced with
+ 
+         dbseek(cValue,.F.)
+ 
+     It's saving one variable declared for saving state of seek command,
+     one operation of getting this value and one back setting of value.
+ 
+     This all mean time, memory and safety. Which? Simple, forget after
+     one of SET(_SET_SOFTSEEK) return value back and some of other part of
+     your program, based on sure that SET SOFTSEEK is something, will work
+     totally different.
+ 
+ DBSETORDER(), DBSKIP() and some others
+ 
+     What was already told somewhere before. It's always better to have
+     function than command. In codeblocks it's much easier to decide, there
+     can be only function. But in general function is saving some time
+     of commands parser and making your program being more functionally
+     based.
+ 
+ CLIPBBS 2-03                   Page 5                   21 Jan 1992
+
+
+ DISPBEGIN() and DISPEND()
+ 
+     My complete Tbrowse based browser generic function (yes, everyone is
+     writing it again and again hoping his will be better than others) is
+     using DISPBEGIN() and DISPEND() in place of stabilizing display. This
+     solution offered nicer way of displaying changes in all records in
+     case of PgUp and PgDn (for example) where it was before like leaving
+     half screen totally empty and other filled with something.
+ 
+ EVAL()
+ 
+     Most often used function. Complete elimination of "&" macro operator
+     is offering less memory used by application, much faster code (three
+     to four times) and better understability. There is NO "&" operator
+     in my code at all. Most of generic functions are getting parameters
+     as codeblocks. As one example can be funtion which is deleting record
+     with question on screen and then is calling codeblock passed as parameter
+     which (if passed) can do some additional cleaning of data connected to
+     just deleted record.
+ 
+ FOUND()
+ 
+     This function is slowly disappearing out from my programs. Construction:
+ 
+         seek cValue
+         if found()
+             actions
+         endif
+ 
+     is changed to much simpler:
+ 
+         if dbseek(cValue)
+             actions
+         endif
+ 
+ GETACTIVE()
+ 
+     This is great thing. My customers are always interested in getting
+     program which will just offet to fill in Customer number, Article number
+     or just something what is in other database, but if they don't know, they
+     just need to press a key and get list and from this list move other
+     things back to original editing screen. One function per program is then
+     just getting value of GetActive() and checking for name of used variable
+     and then running TBROWSE browsing for selection from needed database.
+     Edited variables are using the same names as fields in database only
+     prefixed with type - it means if field is BTW, then variable is nBtw...
+ 
+     This, together with ability to get currect complete GET object and
+     scan it for additional names against database field names is allowing
+     after it move values from selected records into screen editing, sending
+     GetList[i]:display() message and continuing with values from connected
+     databae every time when needed.
+ 
+ INKEY()
+ 
+     This is something wild, this function. Maybe in future we all will get
+ CLIPBBS 2-03                   Page 6                   21 Jan 1992
+
+
+     better written INKEY() not taking too much time from system CPU time.
+     Anyway, i wrote out DD_Inkey() so called function which is based on this
+     inkey() original, but is solving one problem of INKEY() original - my one
+     is calling needed SETKE() assignment when exist...
+ 
+ MAXCOL() and MAXROW()
+ 
+     It's long time ago, this couple of functions replaced two constants in
+     my programs, MAXCOL() is good replacement for 78, MAXROW() is good
+     replacement of 23 (or 24). When this is used, program is not suprised
+     when started in EGA/VGA screen expansion of 50 lines or 136 characters
+     per line because will just change in all possible places for new screen.
+ 
+ NEXTKEY()
+ 
+     I like it really much, it's allowing me to check next coming key
+     from keyboard before really using it with INKEY(). TBrowse based browsing
+     is good example of using this function for interrupting a stabilization
+     when key is waiting for processing. With this, there is no need of use
+     a time consuming inkey() every time.
+ 
+ PAD()
+ 
+     Serie of PADx() function is something really MUST in case of playing with
+     index keys. Hope all of you know, that INDEX ON
+     altrim(NAME)+alltrim(FIRSTNAME) is maybe good and needed idea, but with
+     totally wrong result = non functional index!
+ 
+     Simple solving PADR(alltrim(NAME)+alltrim(FIRSTNAME),30) is doing the
+     needed effect and offering working way...
+ 
+ PCOUNT()
+ 
+     One question now actually. PCOUNT() is nice, but where is PARAMSTR() or
+     how was named this handy function? Now is possible to see how much
+     parameters were passed from command line into your Clipper .EXE program,
+     but way to get them is away....
+ 
+ SET()
+ 
+     Somewhere in past used SET comands are again better to change in series
+     of SET() function. Especially when can be created aSet which will
+     contain all values for setting as follows:
+ 
+     local aSet := { {_SET_EXACT     , TRUE} ,;
+                     {_SET_DECIMALS  , 2   } ,;
+                     {_SET_DELETED   , TRUE}    }
+ 
+     And then use just ONE function:
+ 
+         AEVAL(aSet,{|x| SET(x[1],x[2]))
+ 
+     And that's all. It's better than serie of SET commands which is also
+     harder to change - actually this is also possible use as saving all
+     needed values into configuration file...
+ 
+ CLIPBBS 2-03                   Page 7                   21 Jan 1992
+
+
+ SETKEY()
+ 
+     Every from my applications is using some set of standard keys which
+     are available through complete application. It's something like:
+ 
+         ALT M           display memory status informations
+         ALT F3          DOS SHELL with swapping
+         ALT W           WordPerfect Interface
+         ALT X           immediate exit
+         ALT F1          credit screen
+         SHIFT F1        SETUP of application
+         F1              Help (screen sensitive)
+ 
+     For all of this is used SETKEY() function. Again, i'm fan of functions
+     instead of commands, therefore SET KEY command is not used anymore...
+ 
+ VALTYPE()
+ 
+     Short note, ALL existences of TYPE() functions is better to change in
+     VALTYPE() function. See notes in Clipper documentation.
+ 
+ 
+ OK, maybe somewhere later other parts of Clipper also...
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 8                   21 Jan 1992
+
+
+                        What was in ALL previous number
+ 
+ 
+ Following is complete list of articles from Volume 1, number 1 till Volume 2,
+ Number 2 (previous number). It can help you when looking for some particular
+ old informations where to get them.
+ 
+ Volume 1, number 1
+    First letter from editor&publisher  .................................  1
+    .PPO? OOPs, CLIPPER 5.0 has a preprocessor!  ........................  3
+    To be aware in 5.01?  ...............................................  5
+    4DOS and CLIPPER  ................................................... 13
+    Clipper books and magazines  ........................................ 13
+    Needed fix of BNU for hanging in 5.01?  ............................. 16
+    Discovering GHOST empty records  .................................... 16
+    Turbo C++ and Clipper  .............................................. 16
+ 
+ Volume 1, number 2
+   EDITORIAL, now?  ......................................................  1
+   THEDRAW - An Ansi Screen Editor  ......................................  2
+   Public domain library?  ...............................................  4
+   DANIEL.LIB - public domain library, RMAKE part  .......................  4
+   Getting PATH to your .EXE  ............................................  5
+   WYSIWYG Designer for Clipper/dBase  ...................................  9
+   Magic of Clipper compiler or not?  .................................... 10
+   CONFERENCE DUMP part (1)  ............................................. 11
+ 
+ Volume 1, number 3
+    New things are coming  ...............................................  1
+    Hungarian identifier naming conventions  .............................  2
+    DBEVAL() or classic WHILE ! EOF() ??  ................................  7
+    RCS - Revision Control System  ....................................... 12
+    DANIEL.LIB - RMAKE file for build library  ........................... 16
+    DANIEL.LIB - ISPRINTER2() universal function  ........................ 17
+    DANIEL.LIB - SCREEN shadowing module  ................................ 19
+    M&T Books: Clipper 5 - A Developer's Guide  .......................... 22
+    Why is .EXE in 5.0x so big  .......................................... 24
+    What was published in previous number?  .............................. 25
+    SOLUTION of preprocessor limitation for recursion  ................... 26
+    CONFERENCE DUMP part (2)  ............................................ 27
+    ClipNet - CLPFON.ARJ  ................................................ 32
+    ClipNet - COND.ARJ  .................................................. 32
+    ClipNet - INDXSL.ARJ  ................................................ 33
+    ClipNet - IOBASYS9.ARJ  .............................................. 33
+    ClipNet - MK30.ARJ  .................................................. 34
+    ClipNet - MOVEGETS.ARJ  .............................................. 35
+    ClipNet - READPW.ARJ  ................................................ 35
+    ClipNet - SYMBOL.ARJ  ................................................ 35
+ 
+ Volume 1, number 4
+   Hungarian identifier naming conventions  ..............................  1
+   DOSRCS - Revision Control System - part (2)  ..........................  6
+   The Programmer's Guide to CLIPPER Linkers - part (1)  .................  9
+   DANIEL.LIB - Network locking and opening  ............................. 13
+   DANIEL.LIB - Configer function  ....................................... 15
+   STRUCTURE DUMP - programmers utility  ................................. 19
+ CLIPBBS 2-03                   Page 9                   21 Jan 1992
+
+
+   What was in previous number, number 03?  .............................. 22
+   CONFERENCE DUMP part (3)  ............................................. 23
+   Index of described files in Clipper BBS Magazine  ..................... 28
+   Clipper File - CLIPLINK.ARJ  .......................................... 28
+   ClipNet - HGLASS.ZIP  ................................................. 29
+   ClipNet - NOTATION.ARJ  ............................................... 29
+   ClipNet - PACKUP.ARJ  ................................................. 29
+   ClipNet - ADHOC302.ARJ  ............................................... 30
+   ClipNet - ALTDO328.ARJ  ............................................... 30
+   ClipNet - CL5REP6.ARJ  ................................................ 31
+   ClipNet - CL5103.ARJ  ................................................. 31
+ 
+ Volume 1, number 5
+    SUNDAY's editorial  ..................................................  1
+    SUMMARY OF HUNGARIAN NOTATION  .......................................  3
+    RCSDOS - Revision Control System - part (3)  .........................  4
+    The Programmer's Guide to CLIPPER Linkers - part (2)  ................  7
+    IS SHARE.EXE really needed and for what then?  ....................... 12
+    Speed of Clipper 5.01 and free memory, what a relation  .............. 14
+    NANFORUM library!!!!!!!!!!!!!!!!  .................................... 16
+    Expand Library  ...................................................... 22
+    Clipper 5.01 memory requirements  .................................... 28
+    ANOMALIES reports and commets  ....................................... 29
+    .PPO? OOPs, CLIPPER 5.0 has a preprocessor!  ......................... 29
+    COPY FILE TO is not working in one case  ............................. 31
+    DBU is hanging  ...................................................... 31
+    What was in previous number, number 04?  ............................. 33
+    CLIPPER WRITTEN FAX/TELEX/MAIL APPLICATION  .......................... 33
+    WANTED! WANTED! WANTED!  ............................................. 35
+    Another DBEVAL x WHILE comments  ..................................... 36
+    CONFERENCE DUMP part (4)  ............................................ 37
+    Index of described files in Clipper BBS Magazine  .................... 43
+    WHAT IS <<Clipper Net>>??  ........................................... 43
+    CLN - CLIP110.ARJ  ................................................... 45
+    CLN - VSIX711.ARJ  ................................................... 45
+    CLN - ACH2TB.ARJ  .................................................... 46
+    CLN - CLIPSQL.ARJ  ................................................... 47
+    CLN - DBSCN2.ARJ  .................................................... 47
+    CLN - POPUPCAL.ARJ  .................................................. 48
+    CLN - SCRSAVE.ARJ  ................................................... 48
+ 
+ Volume 1, number 6
+   DOSRCS - Revision Control System - part (4)  ..........................  1
+   The Programmer's Guide to CLIPPER Linkers - part (3)  .................  5
+   Best way of making FOR cyclus, and what about WHILE cyclus  ........... 10
+   WHICH packing/unpacking program to choose???????  ..................... 13
+   Will Clipper expand to graphics environment?  ......................... 16
+   TIPS&TRICKS - how to found largest string in array  ................... 18
+   DANIEL.LIB - NEW version of DANIEL.RMK  ............................... 18
+   ANOMALIES reports and commets  ........................................ 22
+   Clipper Debugger anomalies  ........................................... 22
+   INCONSISTENCY  ........................................................ 24
+   New RTLINK version, INCREMENTAL LINKING  .............................. 24
+   CONFERENCE DUMP part (5)  ............................................. 26
+   Index of described files in Clipper BBS Magazine  ..................... 28
+   Routing-Plan for ClipperNet  .......................................... 28
+ CLIPBBS 2-03                   Page 10                  21 Jan 1992
+
+
+   CLN - SOUND.ARJ  ...................................................... 30
+   CLN - TBWHL4.ARJ  ..................................................... 31
+   ClipNet - NFDESC2.ARJ  ................................................ 31
+   ClipNet - NFLIB2.ARJ  ................................................. 32
+   ClipNet - NFSRC2.ARJ  ................................................. 32
+   ClipperNet - ACCESS.ARJ  .............................................. 34
+   ClipperNet - ACHOO2.ARJ  .............................................. 34
+ 
+ Volume 1, number 7
+   Monday editorial  .....................................................  1
+   DOSRCS - Revision Control System - Part (5)  ..........................  2
+   The Programmer's Guide to CLIPPER Linkers - part (4)  .................  5
+   What is faster, FOR or AEVAL?  ........................................ 11
+   RCS - New version of PUT.BTM for 4DOS (or NDOS)  ...................... 13
+   Clipper 87 books  ..................................................... 15
+   ANOMALIES reports and commets  ........................................ 16
+   INKEY() function anomaly with SETKEY  ................................. 16
+   Keyboard codes missing from definition of K_xxxx  ..................... 17
+   Memoedit() function  .................................................. 17
+   WHAT WAS IN PREVIOUS NUMBER  .......................................... 18
+   Index of described files in Clipper BBS Magazine  ..................... 19
+   ClipperNet - DIAL.CLN  ................................................ 19
+   ClipperNet - GSR151.ARJ  .............................................. 20
+   ClipperNet - KF_LOKUP.ARJ  ............................................ 20
+   ClipperNet - OOPSCL5.ARJ  ............................................. 21
+   ClipperNet - PAT1.ARJ  ................................................ 21
+   ClipperNet - POWER10.ARJ  ............................................. 22
+   ClipperNet - SCANCODE.ARJ  ............................................ 22
+   ClipperNet - SHELP50A.ARJ  ............................................ 22
+ 
+ Volume 1, Number 8
+   DOSRCS - Revision Control System - part (6)  ..........................  1
+   The Programmer's Guide to CLIPPER Linkers - part (5)  .................  9
+   ANOMALIES reports and commets  ........................................ 14
+   Memory(n) function  ................................................... 14
+   MENU functions incompatibility  ....................................... 14
+   RTLINK is not possible to stop  ....................................... 15
+   Index of described files in Clipper BBS Magazine  ..................... 16
+   ClipperNet - CALC14.ARJ  .............................................. 16
+   ClipperNet - DOC111.ARJ  .............................................. 17
+   ClipperNet - JG2.ARJ  ................................................. 18
+   ClipperNet - LUTLIB.ARJ  .............................................. 18
+ 
+ Volume 1, Number 9
+   The Programmer's Guide to CLIPPER Linkers - part (6)  .................  1
+   What was in previous number, number 8?  ...............................  7
+   List of CLIPPER related areas on CLIPPER BBS HQ system  ...............  8
+   ANOMALIES reports and commets  ........................................ 13
+   Sample programs incompatibility  ...................................... 13
+   STATIC functions  ..................................................... 14
+   STATIC OVERLAYING  .................................................... 14
+   Another two recommended Clipper BOOKS  ................................ 15
+   Index of described files in Clipper BBS Magazine  ..................... 16
+ 
+ Volume 1, Number 10
+   The Programmer's Guide to CLIPPER Linkers - part (7)  ..................  1
+ CLIPBBS 2-03                   Page 11                  21 Jan 1992
+
+
+   Some improvement to read command line arguments!!!  ....................  7
+   Building code for REAL developers...  .................................. 12
+   List of CLIPPER related areas on CLIPPER BBS HQ system  ................ 17
+   ANOMALIES reports and commets  ......................................... 21
+   Jo French anomalies report, some comments  ............................. 21
+   AEVAL()           Undocumented return reference  ....................... 21
+   APPEND FROM       Append From Delimited with Character Numbers  ........ 22
+   Index of described files in Clipper BBS Magazine  ...................... 23
+ 
+ Volume 1, Number 11
+   The Programmer's Guide to CLIPPER Linkers - part (8)  ..................  1
+   QEMM 6.0 Switches  .....................................................  6
+   List of CLIPPER related areas on CLIPPER BBS HQ system  ................  9
+   ANOMALIES reports and commets  ......................................... 15
+   ATAIL()           Miscellaneous comment  ............................... 15
+   Debugger anomalies - PARAMETERS statement  ............................. 15
+   DBF FILES         Assure proper closing  ............................... 16
+   Index of described files in Clipper BBS Magazine  ...................... 17
+   ClipperNet - QS20F.ARJ  ................................................ 18
+   ClipperNet - WIPEV11.EXE  .............................................. 18
+   Routing plan of ClipperNet - where to find ClipperNet node  ............ 19
+   ClipperNet - ASCPOS.ARJ  ............................................... 21
+   ClipperNet - CLIPWARN.ARJ  ............................................. 21
+   ClipperNet - ENDADD.ARJ  ............................................... 22
+   ClipperNet - IS.ARJ  ................................................... 22
+   ClipperNet - PRINTSUP.ARJ  ............................................. 23
+ 
+ Volume 1, Number 12
+    Again back, it's of course me  ........................................  1
+    The Programmer's Guide to CLIPPER Linkers - part (9)  .................  2
+    List of CLIPPER related areas on CLIPPER BBS HQ system  ...............  7
+    Q&A:4DOS, Clipper 5.01 and RUN command  ...............................  8
+    Q&A: Clipper 5.0x books  ..............................................  8
+    Q&A: DBU in Clipper 5.01 is hanging?  ................................. 11
+    Q&A:GHOST RECORDS  .................................................... 11
+    ANOMALIES reports and commets  ........................................ 12
+    DBEDIT()*         Locks up with return value of 2  .................... 12
+    DOS 5.0           Using PLL's with DOS 5.0  ........................... 13
+    DOS ERROR 4       Encountered on a network  ........................... 13
+    How to use 4DOS for managing projects  ................................ 15
+    NOTICE of some older articles second time  ............................ 17
+    Index of described files in Clipper BBS Magazine  ..................... 18
+    ClipperNet - TBUNIQUE.ARJ  ............................................ 19
+    ClipperNet - TICKER.ARJ  .............................................. 19
+    ClipperNet - GETKEY.ARJ  .............................................. 20
+    ClipperNet - VSIX800.ARJ  ............................................. 20
+    ClipperNet - OCLIP.ARJ  ............................................... 21
+    ClipperNet - STATUS.ARJ  .............................................. 21
+    ClipperNet - PARTIDX3.ARJ  ............................................ 22
+    ClipperNet - SNAP497.ARJ  ............................................. 22
+ 
+ Volume 1, Number 13
+   The Programmer's Guide to CLIPPER Linkers - part (10)  .................  1
+   Netware Lite or Lantastic  .............................................  5
+   Clipper is OOP, comments about OCLIP library  ..........................  7
+   argc and argv (argument passsed retrieving) trick  ..................... 10
+ CLIPBBS 2-03                   Page 12                  21 Jan 1992
+
+
+   Save and restore screen from disk  ..................................... 10
+   ANOMALIES reports and commets  ......................................... 11
+   LOCAL             Inline assignment clarification  ..................... 11
+   MISC              Miscellaneous clarification/anomalies  ............... 11
+   PICTURE           Comments on 5.01's PICTURE clause  ................... 12
+   Index of described files in Clipper BBS Magazine  ...................... 13
+   ClipperNet - SUPER160.ARJ  ............................................. 14
+   ClipperNet - VOICE200.ARJ  ............................................. 16
+   The Clipper File-Net, Policy for ClipperNet  ........................... 16
+   Routing-Plan for ClipperNet  ........................................... 18
+   Clipper File-Net, Application form  .................................... 20
+   ClipperNet - PAT2-2.ARJ  ............................................... 21
+   ClipperNet - BARNTX.ARJ  ............................................... 22
+   ClipperNet - CWDEMO.ARJ  ............................................... 22
+ 
+ Volume 1, Number 14
+   Second decade editorial  ...............................................  1
+   5.0 FOCUS: Memory Management, Overlay Reloading #1  ....................  3
+   PATCH of OPTIMIZE coming with QEMM 6.0  ................................  7
+   QEMM 6.0 and troubles coming with STEALTH options  .....................  9
+   Q&A: Desqview and CACHE programs are NOT working properly together  .... 16
+   Q&A: Desqview and high speed communication programs  ................... 16
+   Q&A: File corruptions under Desqview  .................................. 16
+   Q&A: Hangs of system after floppy access in Desqview  .................. 17
+   Q&A: Desqview is repeatedly hanging  ................................... 17
+   ANOMALIES reports and commets  ......................................... 18
+   MISC              Miscellaneous clarification/anomalies  ............... 18
+   DBCREATE() is killing existing ALIAS  .................................. 18
+   KEYBOARD anomaly  ...................................................... 19
+   Index of described files in Clipper BBS Magazine  ...................... 20
+   ClipperNet - PAT2-3.ARJ  ............................................... 21
+   ClipperNet - CLIPPLUS.ZIP  ............................................. 21
+   ClipperNet - MSWIN.ARJ  ................................................ 22
+   ClipperNet - POSTPRNT.ARJ  ............................................. 22
+   ClipperNet - SHADO.ARJ  ................................................ 22
+   ClipperNet - BUTTON.ARJ  ............................................... 23
+   ClipperNet - DTF102.ARJ  ............................................... 23
+   ClipperNet - HOTKEY.ARJ  ............................................... 23
+ 
+ Volume 1, Number 15
+   5.0 FOCUS: Linking tips for saving time - PLL's  .......................  1
+   4DOS 4.0, final version what MS DOS 5.0 should be  .....................  4
+   QEMM 6.0 and troubles coming with STEALTH options  .....................  8
+   Q&A: Hard drive is slower under Desqview that without  ................. 15
+   Q&A: Exception 13 with Lantastic and Desqiew/QEMM  ..................... 15
+   Q&A: Desqview is hanging when used PrtScr  ............................. 15
+   Q&A: Getting additional RAM for Desqview  .............................. 15
+   Q&A: Desqview is slowing or stopping when used Communication program  .. 16
+   ANOMALIES reports and commets  ......................................... 17
+   REPLACE and BEGIN SEQUENCE anomaly  .................................... 17
+   SELECT misunderstanding rather than bug  ............................... 18
+   TBDEMO.PRG file bug  ................................................... 19
+   Index of described files in Clipper BBS Magazine  ...................... 20
+   ClipperNet - PAT2-4.ARJ  ............................................... 21
+   ClipperNet - SNAP50.ARJ  ............................................... 21
+   ClipperNet - SHOWANSI.ARJ  ............................................. 22
+ CLIPBBS 2-03                   Page 13                  21 Jan 1992
+
+
+   ClipperNet - ZIP2BAR.ARJ  .............................................. 22
+   ClipperNet - CLIPFPCX.ARJ  ............................................. 22
+   ClipperNet - SEGUE.ARJ  ................................................ 23
+ 
+ Volume 1, Number 16
+   Monday editorial  ......................................................  1
+   5.0 FOCUS: Memory Management - Symbol Reduction  .......................  3
+   Some useful aliases for 4DOS!!!!  ......................................  9
+   DOS 5 and QUARTERDECK PRODUCTS  ........................................ 10
+   How to get more options out of <GRUMPBROW>  ............................ 15
+   How to be indepndent from drive letters, directory names  .............. 18
+   Q&A: DSZ aborting uploads when running on BBS with Lantastic  .......... 19
+   Q&A: Lantastic hangs system after loading network drivers  ............. 19
+   Q&A: Optimizing Lantastic performance  ................................. 20
+   Q&A: MNP5 problems with connection, slowing speed  ..................... 20
+   ANOMALIES reports and commets  ......................................... 21
+   AEVAL, undocumented second passing parameter  .......................... 21
+   Index of described files in Clipper BBS Magazine  ...................... 22
+   ClipperNet - PAT2-5.ARJ  ............................................... 23
+ 
+ Volume 1, Number 17
+   Some interesting Network and CLipper files from ClipperNet HQ system  ..  1
+   Q&A: ZIP downloads are sometime slower  ................................ 36
+   Q&A: "Drive not ready" message from hard disk  ......................... 36
+   Q&A: Desqview is doing strange things  ................................. 37
+   Q&A: NATIONal support and using of PLL's  .............................. 37
+   ANOMALIES reports and commets  ......................................... 39
+   Index of described files in Clipper BBS Magazine  ...................... 40
+ 
+ Volume 1, Number 18
+   Codeblocks, is it for something or not?  ...............................  1
+   ANOMALIES reports and commets  .........................................  7
+   Index of described files in Clipper BBS Magazine  ......................  8
+   ATTENTION! PDNDBASE Are is coming to be closed  ........................  9
+ 
+ Volume 1, Number 19
+   Clipper User Clubs  ....................................................  1
+   DMAKE  STARTUP.MK file with CLIPPER/TURBOC++/MSC  ......................  3
+   WHAT IS WHAT, just take a short look into Clipper World  ...............  6
+   ATTENTION!  ............................................................  8
+   LIST, Another Database of Files - Clipper Shareware/Public  ............ 10
+   ANOMALIES reports and commets  ......................................... 14
+   Index of described files in Clipper BBS Magazine  ...................... 15
+   ClipperNet - BLOCK.ARJ  ................................................ 16
+   ClipperNet - CIVMIL.ARJ  ............................................... 17
+   ClipperNet - COMET.ARJ  ................................................ 17
+   ClipperNet - GETPP.ARJ  ................................................ 17
+   ClipperNet - HILITO.ARJ  ............................................... 17
+   ClipperNet - NTXBAR.ARJ  ............................................... 18
+ 
+ Volume 2, Number 1
+   WHAT IS WHAT, just take a short look into Clipper World  ...............  1
+   LIST, Another Database of Files - Clipper Shareware/Public  ............  3
+   ANOMALIES reports and commets  .........................................  8
+   Index of described files in Clipper BBS Magazine  ......................  9
+ 
+ CLIPBBS 2-03                   Page 14                  21 Jan 1992
+
+
+ Volume 2, Number 2
+   PGP - Pretty Good Privacy, revolution in security?  ....................  1
+   A one very nice fragment, where is rest?  ..............................  7
+   Clipper 5.01 and Microsoft C or Turbo C?  ..............................  8
+   WHAT IS WHAT, just take a short look into Clipper World  ............... 17
+   LIST, Another Database of Files - Clipper Shareware/Public  ............ 19
+   .NDX driver finaly available!!!!  ...................................... 23
+   Q&A: How to display status bar when using INDEX ON  .................... 24
+   Q&A: PCBIOS driver for Clipper 5.01  ................................... 25
+   ANOMALIES reports and commets  ......................................... 26
+   INTERNAL ERROR #1210 - coming od DATABASE operations  .................. 26
+   Clipper 5.01 negative GET error when using PICTURE  .................... 26
+   CLIPPER.EXE and RTLINK.EXE problems with EMS memory  ................... 27
+   Index of described files in Clipper BBS Magazine  ...................... 29
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 15                  21 Jan 1992
+
+
+ ==============================================================================
+                                    SOFTWARE
+ ==============================================================================
+
+
+           WHAT IS WHAT, just take a short look into Clipper World
+ 
+ 
+ DR.SWITCH ASE
+ 
+         Turns a Clipper program into a 13K TSR which can be popped up
+         anywhere just by adding a few lines of code. Includes powerful
+         cut and paste facilities to move edata between applications and
+         a function to replace keystrokes from disk. Supports
+         expanded/extended memory and is fully network compatible.
+ 
+ dSALVAGE PROFESSIONAL
+ 
+         dBASE doctor, checks your data and reports on its health.
+         Enhanced UNZAP which recovers zapped files even if partially
+         overwritten, faster repair with "continue from here" feature,
+         header builder, paste convert from any dBASE versions to any
+         other versions. Includes record, hex, header and byte stream
+         editor.
+ 
+ ESCAPE
+ 
+         Support for HP printers and compatibles, You are able to
+         program forms and reports without nneedint to know compiulcated
+         escape sequences, print objects, lines and boxes in different
+         shades of grey, setup margins, no of copies and page layout
+         parameters. Print centralised or right justified, download
+         fonts, ue subscript and superscript features...
+ 
+ EXPAND
+         SHAREWARE library with MANY useful functions. MOUSE support,
+         low level functions together with high level, DOS environment,
+         disk/directories functions, file handles functions, file DOS
+         low level functions, Sound functions, DOS PRINT access, modem
+         DIAL function, Screen related functions, string functions,
+         Lotus 1-2-3 files writing, date and time, EGA/VFA FONT support,
+         joystick.
+ 
+ EZ_PRINT
+ 
+         printer support/driver system that links into your code
+         supporting over 240 printers from laser to dot matrix. Clipper
+         source supplied to allow printer selection adn driver loading
+         allowing the use of advanced printer features. includes a
+         printer instllation utility to enable easy modification of
+         printer lists.
+ 
+ FAST TEXT SEARCH
+ 
+         Alternative indexing system written in C and ultra fast. Search
+         memo fields, multiple data fields, multiple .dbf files for any
+ CLIPBBS 2-03                   Page 16                  21 Jan 1992
+
+
+         character strings, words or phrases easily and quickly,
+         included other usefuls 'status' functions.
+ 
+ FLASHTOOLS
+ 
+         Multi formatted bar selections, mouse support, window painting,
+         screen design, dynamic menus, more than 20 special effects such
+         as curatins, sliding windows, venetian blinds, low level
+         function include vertical horizontal, tabular and free from bar
+         selection with user defined prompts.
+ 
+ FLEXFILE
+ 
+         Variable length fields for Clipper. Store any Clipper data such
+         as Savescreen(), memoedit(), array (5.0 multidimensional too),
+         binary, graphics (PCX) as well as normal data types. Cut down
+         disk file size eliminating empty 'white space' wastage - a
+         handy replacement to MEMo fields. Alows unlimited file sizes,
+         5.0 and 87 compatible, written in C and assembler.
+ 
+ FLIPPER
+ 
+         Graphics package for CLipper with many features. Fonts
+         compatible with Ventura and GEM. Mouse support, viewports, XY
+         graphs, pie charts, font editor, automatic XY axis scalling,
+         dot matrix, laser and HP supported. CGA, EGA, VGA and HERCULES
+         plus 800x600 Genoa graphics.
+ 
+ FUNCKY
+ 
+         Advanced development kit with over 400 functions. Reads and
+         writes arrays to text files, nested reads with savegets(), and
+         restgets(), control with timeout() and onkey(), drop down adn
+         tear off menus, dynamically resizable windows, mouseable scroll
+         bars, 64 colour palette, different fonts on EGA and VGA, comes
+         with Tom rettigs help database.
+ 
+ GET-IT
+ 
+         Offering GET manipulation, including true nested reads, save
+         and restore gets as tou now save and restore screens.
+         Dynamically refresh gets, call a procedure when NOKEY's have
+         been pressed, create popup help for each input field. Not
+         memory resident.
+ 
+ GRUMPFISH LIBRARY
+ 
+         Database Warehouse
+ 
+         Collection of Clipper function for both Summer87 and Clipper
+         5.01, source code for both is included. What's in:
+ 
+         pop up calculator, pop up calendar, pop up phone diary, pop up
+         note editor, stopwatch facility
+ 
+         exploding, imploding, shrinking, pop-up, drop down boxes,
+ CLIPBBS 2-03                   Page 17                  21 Jan 1992
+
+
+         shadowing,
+ 
+         menuing functions, horizontal LOTUS style light bar menu,
+         vertical bounce bar menu, trigger letter menu. Context specific
+         help for menu options, ticking clock on screen when waiting,
+         timeout period for screen saver
+ 
+         network user, locking and adding record
+ 
+         yes/no prompts, error messages, verification of pritner
+         readiness, on-line help system, passwording, validation system
+         of adresses and postcodes for U.S., index bar function
+ 
+         special printing methods on screen, spreading, ttying,
+         dropping, bombing, unique screen clearing, text centering
+ 
+         reviewing and modifying CONFIG.SYS, SHELL.CFG, screen blankers,
+         copying of records between areas, random filename generator,
+         saving arrays to disk and reading back
+ 
+         simple spreadsheet, color configuration programs and functions,
+         xsaving and restoring complete working environment, saving and
+         restoring multiple getlists and move among them, saving and
+         restoring complete SET variables
+ 
+         replacement for inkey() function
+ 
+         Norton guide documentation together with printed documentation
+ 
+ GRUMPFISH MENU
+ 
+         Fast, sleek pull-down menu generator/prototyping system with
+         source code provided. Multiple config files contain different
+         interface information including colors. embed source code
+         within your menu structure. Installation program and tutorial.
+
+ ------------------------------------------------------------------------------
+
+
+         LIST, Another Database of Files - Clipper Shareware/Public
+ 
+       EDITOR-1.ARJ   77822 CL-87     [Beschreibung ging leider verloren]
+       EE.ARJ        135641 CL-DEMO   Ken Levitt's Word Processor for Memo
+       EFS.ARJ        11366 CL-DB     Electronic Filing System
+                                      (database prgm)
+       EGA.ARJ         6167 CL-87     EGA Anpassung fÅr Clipper
+       EGAFIX.ARJ      7175 CL-87     43 Zeilen Treiber fÅr Clipper
+       EMPTY.ARJ       2318 CL-FCO    Simuliert die EMPTY-Funktion
+ [1-11]ENDADD.ARJ      2508 CL-87     Increases the weight of a string
+       EOQPROG.ARJ     7975 CL-DB     dBase for Econ Order Qlty Catch $$$
+                                      Hamm
+       ERINV10.ARJ    18827 CL-87     Some useful functions and programs
+       ERROR1.PRG      3340 CL-87     Beispiel fÅr Clipper Error-Handling
+       ERROR2.PRG      4596 CL-87     Noch ein Beispiel fÅr CL-Error-Handling
+       ERRORS.ARJ      4682 CL-87     Clipper Error System
+       ERS501.ARJ      6792 CL-50     5.01  Tim Palmquist version of nice
+ CLIPBBS 2-03                   Page 18                  21 Jan 1992
+
+
+       ES-TOOLS.ARJ  146340 CL-87     5 Clipper power-tools
+       EVENT.ARJ      10789 CL-DB     A Utility to Remind You of
+                                      Important Dai
+       EXPAND30.ARJ   65418 CL-LIB    S87  Expand Library for Summer 87
+       EXPAND50.ARJ   78090 CL-LIB    5.0x Expand Library for CLIPPER 5.0
+       EXPAND52.ARJ   87272 CL-LIB    5.01 Expand library v2.00
+       EXTENDB.ARJ     3720 CL-87     NumLock
+       EZDBASE.ARJ    45012 CL-DB     8dBase Screen & Menu Editor with Doc.
+       EZPRINT.ARJ    13156 CL-87     Printer Manager-System f. Clipper
+       EZWIN12.ARJ   179392 CL-DB     dBase III window generator util.ver 1.2
+       F2.ARJ          5079 CL-87     Rec-Nr. und SchlÅsselausdruck aus NTX
+       FACEIT.ARJ     43398 CL-87     Demo-MenÅ-Toolbox fÅr Clipper
+       FAST50.ARJ      1465 CL-50only script to make prelinked lib FULL
+       FASTCLIP.ARJ    3949 CL-87     Speed-utilities f. Clipper
+       FCO_BROW.ARJ   15924 CL-FCO    BROWSE-Library
+       FCO_FCT1.ARJ   42057 CL-FCO    Force Tools Library v1.0
+       FCO_MAKR.ARJ   12309 CL-FCO    Macro simulation with source - German
+       FCO_MAUS.ARJ   10444 CL-FCO    mOuse Library - German description
+       FDM.ARJ        21683 CL-DB     File Drawer Manager (Database..untested)
+       FEIERTAG.ARJ    3689 CL-87     Feiertagsberechnungen
+       FEIERTAG.ARJ    3704 CL-NONe   Feiertagsberechnung in Clipper 5.0
+       FENSTER.ARJ     4505 CL-87     Fenster-Verwaltung mit Cl. und Nan-Tools
+       FEXP1.ARJ      59284 CL-DB     File Express data base mgr.V3.73 (1/4)
+       FEXP2.ARJ      55428 CL-DB     File Express data base mgr.V3.73 (2/4)
+       FEXP3.ARJ      68599 CL-DB     File Express data base mgr.V3.73(3/4)
+       FEXP4.ARJ      71062 CL-DB     File Express data base mgr.V3.73(4/4)
+       FFIND.ARJ      37175 CL-87     DBF Frindly Finder findet ALLES
+       FFUD.ARJ       90539 CL-87     Filefind in Unterverzeichnissen fÅr
+                                      Clipper 87 mit Source
+       FIELDS.ARJ      2588 CL-FCO    FORCE INTERNALS: Accesing DBF fields
+       FILEDATE.ARJ    7048 CL-87     Demo
+       FILEMGR.ARJ    12702 CL-NONe   Filemanager unter Clipper + Tools II
+       FILT.ARJ        6858 CL-87     Filterbedingung selbst zusammenstellen
+       FIND_IT.ARJ   267028 CL-87     Clipper Tools von Nantucket aus PC-WELT
+       FLOW.ARJ       21500 CL-DB     A dBASE III utility to diagram prg.flow
+       FLOW1.ARJ      21500 CL-DB     NICE DBASE III PROG LOGIC OUTLINER
+       FMREVIEW.ARJ    8343 CL-DB     Reviews of PD File Manager programs - VG
+       FOGFIND.ARJ     8584 CL-87     Die Lesbarkeit von Dokum. verbessern
+       FONEBOOK.ARJ   13451 CL-DB     DBASE III Mailing List
+       FONEWORD.ARJ   24618 CL-DB     A dBASE III telephone management utility
+       FORCE.ARJ     142012 CL-DB     DBASE*.prg FORCE Comp.Demo Cebit90 pk(-d
+       FORCE-NG.ARJ  261334 CL-FCO    Norton-Guide fuer FCO/Force
+       FORCECOM.ARJ  141187 CL-FCO    Funktionsfaehige FCO-Demo !!
+       FORM.ARJ       46942 CL-87     Analysieren von PRG Clipper
+       FORMDB2.ARJ     7126 CL-DB     Mailing Label Utilities for dBase II
+       FORMGEN.ARJ    62927 CL-87     Formulargenerator leistungsfÑhig.
+       FOXDCOMP.ARJ   44812 cl-fox    This one is NOT a CLIPPER
+       FOXMENU.ARJ    15110 CL-DB     Fox Module ab V 2.1 fÅr Popup MenÅ
+       FPRINT.ARJ     25817 CL-FCO    Source-Code Formatierer
+       FRC-DEMO.ARJ  147432 CL-DB     Demo FORCE dBase-Compiler
+       FREEFILE.ARJ  119146 CL-DB     FreeFile User Supported Database Manager
+       FRM2PR23.ARJ   16851 CL-50     Making.PRG  from .FRM files.
+       FTOSW.ARJ      18749 CL-FCO    Advert. for SAYWHAT tools?
+       FULL501.ARJ     2828 CL-50     Linkfile fuer PLL
+       FUNC87_1.ARJ   13651 CL-87     Clipper Summer87 Functions
+       FUNCKY.ARJ   1159792 CL-87     Demoversion der FUNCky-LIB fÅr Clipper
+ CLIPBBS 2-03                   Page 19                  21 Jan 1992
+
+
+       FUNCTLST.ARJ   43583 CL-87     Norton-Guides Datei
+       FX86E.ARJ       3795 CL-LIB    Epson FX-86e/286e printer driver library
+       FXDEMO.ARJ    117751 CL-FCO    FX-Library v1.0 - Super Tools
+       F_INGET.PRG      889 CL-87     Get Åber Inkey (bei offenen GET's)
+       F_MACROS.ARJ   13898 CL-FCO    Indirekter Funktionsaufruf - simuliert die
+       GBROWSE.ARJ     8596 CL-87     Browser f. Clipper
+       GET.ARJ         2905 CL-87     Benutzereingabe im Get
+ [1-12]GETKEY.ARJ    280043 CL-LIB    Getkey v2.01, input oriented
+                                      and wordprocessing lib
+       GETS.ARJ        7581 CL-50     Sources rund ums GET-System
+       GETSETS.ARJ     3332 CL-87     Abfrage Set Schalter C Source f. Clipper
+       GET_PICK.ARJ   31033 CL-FCO    GET w/valid pop-up picklist example
+       GFORCE.ARJ    117251 CL-DEMO   DEMO version of GFORCE
+       GFUNC.ARJ      10029 CL-87     Grafik funktionen f. Clipper
+       GLOVAR.ARJ     25698 CL-87     Treiber fÅr globale Variablen Source
+       GPLUS.ARJ       5266 CL-50     Upgrade GET system for 5.0x
+       GRAPH_IT.ARJ   16726 CL-87     Funktion fÅr Balken Grafik
+       GRUMP_NG.ARJ   28849 CL-50     Grumpfish Library database for Norton
+ [1-07]GSR151.ARJ    140879 CL-50     Multifile Global Search and Replace 1.51
+       H89_DB2.ARJ     4612 CL-DB     Patch to Let H89 Use Keypad&Function
+       HANDEL.ARJ     74906 CL-DB     Dbase III Plus GetrÑnkehandel-Programm
+       HANDLE87.ARJ    6984 CL-87     Handle table util. function
+       HANDLENO.ARJ    6878 CL-87     Handle table expansion
+       HANDLE_C.ARJ    5737 CL-87     ôffenen v.mehr als 20 Prozed.
+       HANDNEU.ARJ     5831 CL-87     Neues Handels fÅr Clipper 87 und Novell
+       HEADER.ARJ     14081 CL-DB     Print dBASEIII file structure to a file
+       HELPSYS.ARJ     6934 CL-87     Help mit MEMOEDIT und Create Window help
+       HELPSYS.ARJ   122825 CL-50
+ [1-04]HGLASS.ARJ      4932 CL-50     (yet  to be descriped)
+       HILFE.ARJ       5781 CL-87     Hilfssystem fÅr Clipper
+       HILFE2.ARJ     97914 CL-87     Hilfe Editor fÅr Clipper
+       HKLIB01.ARJ    11147 CL-87     Clipper UDF's
+       HORWITZ.ARJ     7209 CL-50     3 C-Functions
+ [1-14]HOTKEY.ARJ      1708 CL-50     Searches for an unique letter
+                                      (hotkey) in an array
+       HP2.ARJ         1027 CL-50
+       HPLJLIB.ARJ     3582 CL-50
+       HP_NEU.ARJ      7301 CL-DB     Neue HP Laserjettreiber von Ashton Tate
+       HYPER1.ARJ    139728 CL-87     HyperHelp fÅr Clipper
+       HYPER2.ARJ     51815 CL-87     HyperHelp fÅr Clipper
+       HYPER2GR.EXE  299944 CL-DEUTCH HyperHelp for Clipper v2.00
+       IMPORT.ARJ     21615 CL-DB     Database utility
+       INC_V11.ARJ    26639 CL-FCO    #INCLUDE - File Maker
+       INDDUMP.ARJ   129120 CL-NONe   Index Dump
+       INDENT.ARJ      3229 CL-DB     [Beschreibung ging leider verloren]
+       INDEX.ARJ       3416 CL-FCO    FORCE INTERNALS: Information Åber FDX-Files
+ [1-03]INDXSL.ARJ      4154 CL-50     Index selection function written for Cl 5.0
+       INF_DB.ARJ      2863 CL-50
+       INSTALL.ARJ    21857 CL-FCO    Das FORCE 2.1 Installations Program. Dies
+       INV1.ARJ       12762 CL-DB     An inventory program for dBASE III+
+       INVTORY.ARJ     7304 CL-DB     DB2 or 3 Inventory prgm - looks good
+       IO.ARJ          3921 CL-FCO    FORCE INTERNALS: Information Åber FORCE
+ [1-03]IOBASYS9.ARJ   62548 CL-DEMO   Demo of Sub_Set() & EditMemo() Clipper 5
+       IONET.ARJ     151852 CL-50
+ [1-11]IS.ARJ          8045 CL-87     Six C-Functions for string handling
+       ISCURSOR.ARJ    6941 CL-87     Ist Cursor on /off f. Clipper
+ CLIPBBS 2-03                   Page 20                  21 Jan 1992
+
+
+       ISDIR87.ARJ     5569 CL-87     I'wo isse denn...Clipper
+       ISPRINT.ARJ     2962 CL-87     Ist der Drucker da? f. Clipper
+       JARGON.ARJ     97797 CL-87     Jargon 1.1 on-line manual fÅr dB/Clipper
+       JBBS2_00.ARJ   77246 CL-50
+       JBBSEXE.ARJ   186983 CL-50
+       JBBSMSG2.ARJ  110771 CL-50
+       JBBSPRGS.ARJ  216957 CL-87     BBS -Source CLipper S'87 (mit Fido)
+       JBBSUTL.ARJ   173547 CL-50
+       JDCDEMO.ARJ    74280 CL-FCO    JD Communications Demo
+       JD_DEMO.ARJ    68321 CL-FCO    Demo of Jeff Davis lib. Windowing functions
+       JEFFDAV.ARJ     9920 CL-FCO    Funktionsliste aus der Jeff Davis Library
+ [1-08]JG2.ARJ         4550 CL-50     Jump 2 another Get
+       JLIB0301.ARJ   79383 CL-50
+       JLIB0710.ARJ  102348 CL-50
+       JLIB0923.ARJ  101400 CL-50
+       JMAIL21.ARJ   150238 CL-50
+       KEYBPUNK.ARJ    8448 CL-87     Tasterturtreiber KEYBPUNK fÅr Clipper 87
+       KEYCODE.ARJ     4855 CL-50     Inkey()-Codes for IBM PS/2
+       KEYLOCK.ARJ     2674 CL-DB     Access NUM Lock/CAPS Lock from dBASEIII+
+       KEYLOCK2.ARJ    3992 CL-87     Status der Lock-Tasten
+ [1-07]KF_LOKUP.ARJ   12028 CL-50     Great LookUp function for Clipper 5.01
+       KIT.ARJ        14982 CL-DB     Keep In Touch!  Notebook/Rolodex mgr.
+       KITE.ARJ        2733 CL-DB     An interesting random color kite -- in B
+       KLACKER.ARJ     3145 CL-87     Gibt Laufschrift mit  Klacken  Source
+       KUNDEN.ARJ     36274 CL-87     Kundenverwaltung in Clipper mit Source
+       KW.ARJ          3466 CL-87     Versch. Datums/Kalenderfunktionen
+       LABEL.ARJ      14437 CL-87     Aufkleberdruckprogramm
+       LABELMKR.ARJ    4319 CL-DB     Label Maker Utility for dBase II
+       LASER.ARJ       9554 CL-87     Clipper Laserjet controlling - lines
+       LASERLST.ARJ   12933 CL-FCO    Ausdruck auf HP-Laserdruckern
+       LBARGEN.ARJ    15986 CL-DB     Generat lite-bar menu codes for dBASEIII
+       LBARMENU.ARJ    3985 CL-DB     Programmierung v.LeuchtbalkenmenÅs DB3+
+       LIB.ARJ         3046 CL-87     Die FUNC.LIB verschiedene Funktionen
+       LIB-1.ARJ      93306 CL-87     gro·e Clipper Libaray Teil 1 (Sommer 87)
+       LIB-2.ARJ     110288 CL-87     gro·e Clipper Libaray Teli 2
+       LIB-3.ARJ     134051 CL-87     gro·e Clipper Libaray Teil 3
+       LIBCAT.ARJ    149693 CL-50     CLIPPER
+       LIBRARY.ARJ    11220 CL-DB     A library routine for dBASE II
+       LIBRDB2.ARJ    11568 CL-DB     Library Utilities for dBase II
+       LIB_1.ARJ     138172 CL-87     Sehr umfangreiche Lib fÅr Clipper  1/2
+       LIB_2.ARJ     185591 CL-87     Lib. Teil 2/2
+       LINE.ARJ        8908 CL-87     schneller Zeilennumerierer fuer Source
+       LIST.ARJ        4826 CL-87     Ein Lister db/Clipper
+       LISTDBF.ARJ    15439 CL-87     Stellt dbf dar.
+       LISTSTRU.ARJ   12614 CL-DB     List structure  dBASEIII files from DOS
+       LITEBR42.ARJ   44474 CL-DB     Quick MenÅ fÅr Dbase III*
+       LITEMENU.ARJ   10184 CL-50     PROMPT with hilighted Hotkey
+       LIZENZ.ARJ     11134 CL-87     Schreibt Copyright in EXE
+       LOGICLP.ARJ     3711 CL-87     AND
+       LOOK4.ARJ      18717 CL-87     DBF Such Util. Sucht in allen Felder.
+       LOOKDBF.ARJ    88933 CL-DB     Erkennt verschiedene DBF-Versionen
+       LOOKUP.ARJ      3542 CL-FCO    Beispiel: Benutzung von @..GET..VALID
+       LOTLIB.ARJ      6120 CL-87     Lotus 1-2-3 WorkSheets mit Clipper bearbeiten
+       LREPTC51.ARJ   69433 CL-50     Report Writer
+       LSTGRF.ARJ     10998 CL-87     Tool fÅr Clipper / Quiksilver
+       LSTSCN.ARJ     10677 CL-87     Tool Clipper /Quicksilver
+ CLIPBBS 2-03                   Page 21                  21 Jan 1992
+
+
+       LTTRGEN.ARJ     7749 CL-DB     A form letter generator for dBASE II
+       LUIZ0991.ARJ  107535 CL-50     Recent TBROWSE examples from
+                                      Luiz Quintella - GREAT STUFF!
+ [1-08]LUTLIB.ARJ     10598 CL-LIB    Small lib with some menu functions
+       LXNET.ARJ      18048 CL-LIB    5.0x NOVELL Bindery and printing
+       MAIL.ARJ        9310 CL-DB     A dBASE II mailing label manager program
+       MAIL17.ARJ     26331 CL-DB     Mail.List
+       MAILABLE.ARJ    9314 CL-DB     other dBASEII mailing label manager prg
+       MAILDB2.ARJ     9313 CL-DB     Mailing List Programs for dBase II
+       MAILDB3.ARJ    10330 CL-DB     dBaseIII+ Mailing List Menus & Sub-Menus
+       MAILII.ARJ      9312 CL-DB     DBASE II mail list programs
+       MAILIST1.ARJ   20415 CL-DB     Mailing List Program
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 22                  21 Jan 1992
+
+
+ ==============================================================================
+                                      Q&A
+ ==============================================================================
+
+
+    Q&A: Using multiple GetList varibles, but one is closing every time?
+ 
+ 
+ Question:
+ 
+     In my programs, i'm using mutliple edit windows with standard access
+     to get system via @SAYGET and then READ command. I'm making in every
+     case LOCAL GETLIST :={} on beginning of editing function before new
+     definition, but somewhere when i return from editing it will close all
+     my previous editing windows and force me back to initial state? It seems
+     like it's clearing or overwriting my local GETLIST variable, but i
+     cannot track what is going on with CLD nor by looking in program.
+ 
+ Answer
+ 
+     Problem is simple, i had few hours of playing with this exactly the same
+     problem and then i found it finally. I was first thinking about another
+     Clipper anomaly, but it's problem of programmer....
+ 
+     CLEAR GETS cannot be used in building of your editing screen. Way which
+     i was using was
+ 
+         @ y,x SAY  "xxxx"   GET  something
+         clear gets
+         @ y,x SAY  "yyyy"   GET  other stuff
+ 
+     This was for displaying first "something" also in GET color. But CLEAR
+     GETS statement is calling some internal function of Clipper which is
+     in charge of clearing ALL existing GET's!!!! After removing of CLEAR GETS
+     everything works nice and fice.
+ 
+ Daniel
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 23                  21 Jan 1992
+
+
+ ==============================================================================
+                                   ANOMALIES
+ ==============================================================================
+
+
+                      ANOMALIES and their comments
+ 
+ This part of Clipper BBS Magazine is dedicated to all discovered 
+ anomalies and comments about them in Clipper products. Because 
+ Nantucket is still unable to give own bug and anomalies reports (as 
+ actually did in past with Summer 87 version) is very handy to have 
+ results of many investigations done on many user places. I'm also
+ doing my own investigatings, because i'm always very good when someting 
+ has hidden problems. Everything what i buy will first show all problems 
+ and then all normal things. This amazing part of my live is sometime 
+ making me crazy, but for testing of programs it's great <grin>.
+ 
+ Daniel
+ 
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                    SETCOLOR() is giving INTERNAL ERRORS
+ 
+ Feeling absolutely terrible some of Clipper programers already discovered
+ that SETCOLOR() function can give strange Internal errors. Mostly errors
+ which have not relation with coloring at all. In this case, remember problem
+ of Internal Error 1210 and loading of SHARE?
+ 
+ Try to fix loading of SHARE.EXE as really FIRST program in AUTOEXEC.BAT or
+ CONFIG.SYS. There was a report of utility for speeding keyboard to 30cps
+ loaded BEFORE SHARE.EXE causing problem of SETCOLOR(). It's very hard to
+ believe and is for sure, that this utility is not really correct and good,
+ but what one can do when Internal errors are knocking every time at your
+ display from back side and evidently there is NO reason for them?
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 24                  21 Jan 1992
+
+
+ ==============================================================================
+                                  CLIPPER NET
+ ==============================================================================
+
+
+ 
+ Following is COMPLETE list of all published file descriptions in Clipper
+ BBS magazine in previous numbers. Purpose of this index list is to allow
+ anybody find needed file descriptions in growing number of described files.
+ Short description after name will give first possible close image about
+ file. Number enclosed in "[]" will mean number of Clipper BBS magazine.
+ 
+ ⁄ƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒ¬ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¬ƒƒƒƒƒƒø
+ ≥FileName     ≥Src ≥Description                                     ≥Where ≥
+ √ƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒ≈ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ≈ƒƒƒƒƒƒ¥
+ ≥ACCESS.ARJ   ≥Cln ≥Source of speed testing program                 ≥[1-06]≥
+ ≥ACH2TB.ARJ   ≥Cln ≥Convert ACHOICE to TBROWSE                      ≥[1-05]≥
+ ≥ACHOO2.ARJ   ≥Cln ≥Replacement of ACHOICE with GET possibilites    ≥[1-06]≥
+ ≥ADHOC302.ARJ ≥Cln ≥Summer 87 inteligent report program             ≥[1-04]≥
+ ≥ASCPOS.ARJ   ≥Cln ≥replacement of ASC(substr(cString,nPosition,1)) ≥[1-11]≥
+ ≥BARNTX.ARJ   ≥Cln ≥Displaying bar indication during indexing       ≥[1-13]≥
+ ≥BLOCK.ARJ    ≥Cln ≥Tetris game written in Cliper                   ≥[1-19]≥
+ ≥BUTTON.ARJ   ≥Cln ≥@GET in form of BUTTON                          ≥[1-14]≥
+ ≥CALC14.ARJ   ≥Cln ≥PoPup Calculator                                ≥[1-08]≥
+ ≥CIVMIL.ARJ   ≥Cln ≥Upgrade of Civil->Military time conversion      ≥[1-19]≥
+ ≥CL5103.ARJ   ≥Cln ≥Report of 5.01 anomaly number 3                 ≥[1-04]≥
+ ≥CL5REP6.ARJ  ≥Cln ≥5.01 replacement of REPORT command              ≥[1-04]≥
+ ≥CLIP110.ARJ  ≥Cln ≥Clipper Documentor program                      ≥[1-05]≥
+ ≥CLIPFPCX.ARJ ≥Cln ≥Fast .PCX displayer for CLipper                 ≥[1-15]≥
+ ≥CLIPLINK.ARJ ≥Cbs ≥Complete text of R.Donnay about linkers         ≥[1-04]≥
+ ≥CLIPPLUS.ZIP ≥Cln ≥Object extension for CLIPPER 5.0                ≥[1-14]≥
+ ≥CLIPSQL.ARJ  ≥Cln ≥Demo of complete SQL library for CLipper        ≥[1-05]≥
+ ≥CLIPWARN.AJ  ≥Cln ≥Semaphore for convert WARNING: into ERRORLEVEL  ≥[1-11]≥
+ ≥CLPFON.ARJ   ≥Cln ≥Set of fonts for EXPAND.LIB from author         ≥[1-03]≥
+ ≥COMET.ARJ    ≥Cln ≥Demo version of communication library           ≥[1-19]≥
+ ≥COND.ARJ     ≥Cln ≥Builder of conditional indexes like SUBNTX      ≥[1-03]≥
+ ≥CWDEMO.ARJ   ≥Cln ≥Classworks lib written in CLASS(Y)              ≥[1-13]≥
+ ≥DBSCN2.ARJ   ≥Cln ≥Screen designer generator                       ≥[1-05]≥
+ ≥DIAL.CLN     ≥Cln ≥Dialer with using of FOPEN()                    ≥[1-07]≥
+ ≥DOC111.ARJ   ≥Cln ≥Documentor, newer version                       ≥[1-08]≥
+ ≥DTF102.ARJ   ≥Cln ≥.DBT files replacement, fully functional        ≥[1-14]≥
+ ≥ENDADD.ARJ   ≥Cln ≥replacement of incrementing last char of string ≥[1-11]≥
+ ≥GETKEY.ARJ   ≥Cln ≥Input oriented library, wordprocessing          ≥[1-12]≥
+ ≥GETPP.ARJ    ≥Cln ≥Modified GETSYS.PRG well documented             ≥[1-19]≥
+ ≥GSR151.ARJ   ≥Cln ≥Global Search and replace for programmers       ≥[1-07]≥
+ ≥HGLASS.ZIP   ≥Cln ≥Hour glass for indication of index progression  ≥[1-04]≥
+ ≥HILITO.ARJ   ≥Cln ≥Highlighting of keywords on screen              ≥[1-19]≥
+ ≥HOTKEY.ARJ   ≥Cln ≥Makin unique hot key letter for every arrat el. ≥[1-14]≥
+ ≥INDXSL.ARJ   ≥Cln ≥User Fields selection builder for index generate≥[1-03]≥
+ ≥IOBASYS9.ARJ ≥Cln ≥Demo of S87 library and calling Clipper from C  ≥[1-03]≥
+ ≥IS.ARJ       ≥Cln ≥Several c sources of ISxxxx functions           ≥[1-11]≥
+ ≥JG2.ARJ      ≥Cln ≥Jumping between GET statements in READ          ≥[1-08]≥
+ ≥KF_LOKUP.ARJ ≥Cln ≥Set of program for database relations           ≥[1-07]≥
+ ≥LUTLIB.ARJ   ≥Cln ≥Another Clipper library                         ≥[1-08]≥
+ ≥MK30.ARJ     ≥Cln ≥Mouse library demo version                      ≥[1-03]≥
+ ≥MOVEGETS.ARJ ≥Cln ≥GETSYS change for moving between gets via VALID ≥[1-03]≥
+ CLIPBBS 2-03                   Page 25                  21 Jan 1992
+
+
+ ≥MSWIN.ARJ    ≥Cln ≥Detection of Windows mode when running Clipper  ≥[1-14]≥
+ ≥NFDESC2.ARJ  ≥Cln ≥NanForum library description list               ≥[1-06]≥
+ ≥NFLIB2.ARJ   ≥Cln ≥NanForum library main file                      ≥[1-06]≥
+ ≥NFSRC2.ARJ   ≥Cln ≥NanForum library Source files                   ≥[1-06]≥
+ ≥NOTATION.ARJ ≥Cln ≥Complete text of article about hungarian notat. ≥[1-04]≥
+ ≥NTXBAR.ARJ   ≥Cln ≥Bar of indexing via system interrupts           ≥[1-19]≥
+ ≥OCLIP.ARJ    ≥Cln ≥Object extension, real (not #define/command)    ≥[1-12]≥
+ ≥OOPSCL5.ARJ  ≥Cln ≥Another version of pseudo objects               ≥[1-07]≥
+ ≥PACKUP.ARJ   ≥Cln ≥ASM source of PACK/UNPACK replacement SCRSAVE.. ≥[1-04]≥
+ ≥PARTIDX3.ARJ ≥Cln ≥Partial indexing                                ≥[1-12]≥
+ ≥PAT1.ARJ     ≥Cln ≥CIX NanForum Libraryy PATCH                     ≥[1-07]≥
+ ≥PAT2-2.ARJ   ≥Cln ≥Fix for FLOPTST.ASM in Nanforum Library         ≥[1-13]≥
+ ≥PAT2-3.ARJ   ≥Cln ≥TBWHILE improvement for Nanforum libray         ≥[1-14]≥
+ ≥PAT2-4.ARJ   ≥Cln ≥FT_PEGS() patch for NFLIB                       ≥[1-15]≥
+ ≥PAT2-5.ARJ   ≥Cln ≥FT_TEMPFIL() patch for NFLIB                    ≥[1-16]≥
+ ≥POPUPCAL.ARJ ≥Cln ≥Popup calender                                  ≥[1-05]≥
+ ≥POSTPRNT.ARJ ≥Cln ≥Postscript printing from inside of Clipper      ≥[1-14]≥
+ ≥POWER10.ARJ  ≥Cln ≥French library                                  ≥[1-07]≥
+ ≥PRINTSUP.AJR ≥Cln ≥Low level BIOS routines for printing            ≥[1-11]≥
+ ≥QS20F.ARJ    ≥Cln ≥Screen designer, demo, looks very good          ≥[1-11]≥
+ ≥READPW.ARJ   ≥Cln ≥GETSYS change for password invisible reader     ≥[1-03]≥
+ ≥SCANCODE.ARJ ≥Cln ≥Database with scan codes                        ≥[1-07]≥
+ ≥SCRSAVE.ARJ  ≥Cln ≥Screen AntiBurning utility (inactivity snake)   ≥[1-05]≥
+ ≥SEGUE.ARJ    ≥Cln ≥Novell library - demo                           ≥[1-15]≥
+ ≥SHADO.ARJ    ≥Cln ≥Creating shadow on screen                       ≥[1-14]≥
+ ≥SHELP50A.ARJ ≥Cln ≥SuperHelp for Clipper                           ≥[1-07]≥
+ ≥SHOWANSI.ARJ ≥Cln ≥Displaying a ANSI from inside CLIPPER no ANSI.SY≥[1-15]≥
+ ≥SNAP497.ARJ  ≥Cln ≥Beta version of SNAP, partially compatible to 5 ≥[1-12]≥
+ ≥SNAP50.ARJ   ≥Cln ≥dBASE/CLIPPER documentor supporting 5.01 little ≥[1-15]≥
+ ≥SOUND.ARJ    ≥Cln ≥Multiple TONE() used as one SOUND function      ≥[1-06]≥
+ ≥STATUS.ARJ   ≥Cln ≥Timer interrupt hooked status indicator         ≥[1-12]≥
+ ≥SUPER160.ARJ ≥Cln ≥SUPER.LIB for Summer87                          ≥[1-13]≥
+ ≥SYMBOL.ARJ   ≥Cln ≥Dumper of symbol tables of Summer87 .EXE        ≥[1-03]≥
+ ≥TBUNIQUE.ARJ ≥Cln ≥Browsing unique without unique index            ≥[1-12]≥
+ ≥TBWHL4.ARJ   ≥Cln ≥WHILE browsing using TBROWSE, well commented    ≥[1-06]≥
+ ≥TICKER.ARJ   ≥Cln ≥Real Time Clock, interrupt driven on screen     ≥[1-12]≥
+ ≥VOICE200.ARJ ≥Cln ≥VOICE synthetizing library for Clipper          ≥[1-13]≥
+ ≥VSIX711.ARJ  ≥Cln ≥Vernon Six Clipper utilities and library        ≥[1-05]≥
+ ≥VSIX800.ARJ  ≥Cln ≥Vernon's library, lot of functions              ≥[1-12]≥
+ ≥WIPEV11.EXE  ≥Cln ≥VERY good screen manipulation library           ≥[1-11]≥
+ ≥ZIP2BAR.ARJ  ≥Cln ≥Printing BAR (USPS) code on EPSON printer       ≥[1-15]≥
+ ¿ƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒ¡ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒ¡ƒƒƒƒƒƒŸ
+ 
+ Src can be:
+     Cln     File is accesible on ClipperNet
+     Cbs     File is accesible in HQ BBS of CLipper BBS Magazine
+ 
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - CLIPSWAP.ZIP
+ 
+ File Name:      CLIPSWAP.ZIP
+ Other Names:
+ 
+ CLIPBBS 2-03                   Page 26                  21 Jan 1992
+
+
+ File Size:      7825
+ File Contents:
+                 swap2.com          97
+                 swapfix.txt      1408
+                 swapper.com      3982
+                 swapper.doc      5886
+ 
+ dBASE/CLIPPER usable Swapper program. dBASE is started via SWAPPER DBASE
+ command and ALL RUN commands could be done as RUN SWAP2 command. This two
+ will cause swapping out of memory complete loaded dBASE/Clipper and freeing
+ memory for your application.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - DW125.ARJ
+ 
+ File Name:      DW125.ARJ
+ Other Names:
+ 
+ File Size:      215,006 bytes
+ File Contents:
+                 DWINDOWS.ZIP     200996
+                 VXBTEST.ZIP        7372
+                 DWMASTER.ZIP       7078
+                 README.TXT         5621
+ 
+ Dataworks is xBASE file manager for Windows without support of .NDX files!
+ 
+ DataWorks is designed as an xBase power user's toll to be used by
+ developers building applications with VXBASE for Visual Basic.  VXBASE may
+ be found on the bulletin board that carries DataWorks.  It is uploaded as
+ two files. The latest release is composed of files vxd102.zip
+ (documentation) and vxb102.zip (vxbase.dll).
+ 
+ DWMASTER.ZIP  an empty DataWorks data dictionary set to be loaded and
+                 unzipped into any directory that contains or will contain
+                 xBase files. Retain this file to set up new xBase locations
+                 that are accessible through DataWorks.
+ 
+ VXBTEST.ZIP   If you currently have vxBase, move this file to \VB\VXBTEST
+                 and unzip it. It contains DataWorks dictionary definitions
+                 for the sample database that comes with VXBASE.
+ 
+ DWINDOWS.ZIP  contains dwx.exe, dwxdll.dll, dw.ini, and dwhelp.hlp. Move
+                 this file to your \WINDOWS directory and unzip. These are
+                 the actual program and supplementary files.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - LUIZ0991.ARJ
+ 
+ File Name:      LUIZ0991.ARJ
+ Other Names:
+ 
+ CLIPBBS 2-03                   Page 27                  21 Jan 1992
+
+
+ File Size:      107,535 bytes
+ File Contents:
+                 ARRAYS.ARJ         8928
+                 BROTEXT.ARJ        5846
+                 FILEMRG.ARJ       12586
+                 GENERAL.ARJ       41125
+                 GETSYS.ARJ         3642
+                 README.1ST         3739
+                 SKIPDBF.ARJ       16338
+                 SPRDSHT.ARJ       12406
+                 TBRNET.ARJ        10406
+ 
+ Set of examples most probably from books or from some presentation. All of
+ them are based on TBrowse objects and are VERY good for someone who doesn't
+ know yet how it works and also for someone who needs to upgrade bit of
+ knowledge about this powerful facility of Clipper. Some really practic
+ examples for browsing an arrays, building spreadsheets, file manager
+ program, file network locking are included. All well good documented.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - OCLIP1A.ARJ
+ 
+ File Name:      OCLIP1A.ARJ
+ Other Names:
+ 
+ File Size:      15,308
+ File Contents:
+                 READ.ME             771
+                 IVAR.ASM           5626
+                 OCLIP.LIB         11807
+                 SIVAR.ASM          6237
+                 OCLIP.CH           1638
+                 OCLIP.PRG          3073
+                 ODEMO2.PRG          470
+                 OCLIP.DOC          9900
+                 ODEMO1.PRG          257
+                 HISTORY.TXT        3958
+ 
+ FREE Object extension of Clipper which is using Clipper internals made by
+ Nantucket for complete creating of your own objects which are real Clipper
+ objects and are compatible with all Clipper functions. This is upgrade and
+ bugfix of some problems with self refering.
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - REGTEST.ARJ
+ 
+ File Name:      REGTEST.ARJ
+ Other Names:
+ 
+ File Size:      1,789 byes
+ File Contents:
+                 REGTEST.PRG        3822
+ CLIPBBS 2-03                   Page 28                  21 Jan 1992
+
+
+ FT_Int86() function interface (function is in NanForum Tools II) which is
+ allowing to 'debug' calls to this function and returns from this function.
+ it's displaying all registers passed in and returned from function. Also
+ it's allowing to edit them, therefore one can from keyboard make all test
+ calls to DOS/BIOS functions and immediately see result (which is also hang
+ of system in case of wrong registers <grin>).
+
+ ------------------------------------------------------------------------------
+
+
+                            ClipperNet - REPLCH.ARJ
+ 
+ File Name:      REPLCH.ARJ
+ Other Names:
+ 
+ File Size:      1,566 bytes
+ File Contents:
+                 REPLCH.C           4018
+ 
+ "C" written function called PB_REPLCH() allowing to make VERY fast replaces
+ of characters in Clipper strings. Power of this function can be in using of
+ arrays as input parameters.
+ 
+     PB_REPL(cOriginalStrin,aSourceStrings,aDestString)
+ 
+ Call can be for example:
+ 
+     PB_REPL("Hello world",{"ll","w"},{"xx","b"})
+ 
+ Which will return "Hewo borld"....
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 29                  21 Jan 1992
+
+
+ ==============================================================================
+                                    CLIPBBS
+ ==============================================================================
+
+
+                              CLIPBBS Distribution
+ 
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+ 
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+ 
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, top is V32b) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+ 
+   Distribution sites:
+ 
+   Clipper BBS Home system  ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+       NETCONSULT BBS, SYSOP Daniel Docekal, phone 31-10-4157141
+       Daily 18:00 till 08:00 (GMT+1), sat+sun whole day
+       Modem speed 1200, 2400, 9600, 12000, 14400 (V32b)
+       2:285/608@fidonet.org
+ 
+   United Kingdom   ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+       Daily whole day, modem speed HST
+ 
+   Italy   ≥
+   ƒƒƒƒƒƒƒƒŸ
+       Lady Bright BBS, SYSOP Gianni Bragante, Phone: +39-15-8353153
+       20:00-08:00 monday to friday, from saturday 13:00 to 08:00 monday
+       24h/24h holydays, 300-9600 baud v21,v22,v32,v42bis
+       2:334/307@fidonet.org
+ 
+   United States of America  ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒŸ
+      The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+       Daily whole day, modem speed HST
+ 
+       The New Way BBS, SYSOP Tom Held, phone, 1-602-459-2412
+       Daily 24hours, 1:309/1@Fidonet.org, 8:902/6@RBBS-Net
+ 
+   Canada    ≥
+   ƒƒƒƒƒƒƒƒƒƒŸ
+       SYSOP Gordon Kennet, phone 1-604-599-4451 
+       Daily 24houts, 2400bps V42b, 1:153/931@fidonet.org
+ 
+ CLIPBBS 2-03                   Page 30                  21 Jan 1992
+
+
+   WORLDWIDE   ≥
+   ƒƒƒƒƒƒƒƒƒƒƒƒŸ
+   
+       Clipper File Distrubution Network (ClipperNet, area CL-DOC)
+       Various systems around whole world
+ 
+ 
+
+ ------------------------------------------------------------------------------
+ CLIPBBS 2-03                   Page 31                  21 Jan 1992
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           ANOMALIES and their comments    .ANO
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           Clipper Net                     .CLN
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ ------------------------------------------------------------------------------
+

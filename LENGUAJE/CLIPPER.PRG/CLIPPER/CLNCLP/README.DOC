@@ -1,0 +1,36 @@
+  Product: CleanClipper V1.0
+
+  Invariant Software                  Invariant Software
+  P.O. Box 10206             or       3117 W. Gordon
+  Spokane, WA  99209                  Spokane, WA  99205
+
+  Phone: 509-328-9542     Email: CIS 73501,1643
+
+  CleanClipper is a Clipper 5.0+ soure code formatter.  The program
+  handles such things as indentation, operator spacing, function
+  statement spacing, control statement spacing, code-block spacing,
+  comment positioning, parentheses min/max, reserved word case, and
+  more.  CleanClipper is a great tool for programmers who have to
+  maintain or review Clipper programs developed by others.  
+
+  This packet should contain the following files:
+     cleancl.exe     cleancl.doc     cleancl.hlp
+     cleancl.rsv     cleancl.dat     sample.prg
+     register.doc    readme.doc      sharewar.doc
+     file_id.diz
+
+  QUICK TEST OF CleanClipper:
+ 
+  If you wish to sample CleanClipper right off the bat type
+  "CLEANCL SAMPLE.PRG *.FMT" at the DOS prompt.  Use the F1 help
+  screens to navigate the screen.  Once	the program is completed,
+  use a word processor to compare SAMPLE.PRG and SAMPLE.FMT.  
+
+  For more details, instructions and registration information,
+  please see CLEANCL.DOC.
+
+  DISTRIBUTION POLICY
+
+  If you distribute CleanClipper to friends, associates, or to
+  a computer bulletin board system (BBS), please distribute the
+  file CLNCLP10.ZIP.

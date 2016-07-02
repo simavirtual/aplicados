@@ -1,0 +1,864 @@
+                                                             
+        ≤≤≤≤   ≤≤      ≤≤≤≤   ≤≤≤≤≤≤  ≤≤≤≤≤≤  ≤≤≤≤≤≤   ≤≤≤≤    
+       ≤≤∞∞≤≤  ≤≤∞      ≤≤∞∞   ≤≤∞∞≤≤  ≤≤∞∞≤≤  ≤≤∞∞≤≤ ≤≤∞∞≤≤   
+      ≤≤∞∞  ∞∞ ≤≤∞      ≤≤∞    ≤≤∞ ≤≤∞ ≤≤∞ ≤≤∞ ≤≤∞ ≤≤∞≤≤≤  ∞∞  
+      ≤≤∞      ≤≤∞      ≤≤∞    ≤≤≤≤≤∞∞ ≤≤≤≤≤∞∞ ≤≤≤≤≤∞∞ ≤≤≤     
+      ≤≤∞      ≤≤∞      ≤≤∞    ≤≤∞∞∞∞  ≤≤∞∞≤≤  ≤≤∞∞≤≤   ∞≤≤≤   
+       ≤≤  ≤≤  ≤≤∞      ≤≤∞    ≤≤∞     ≤≤∞ ≤≤∞ ≤≤∞ ≤≤∞≤≤  ≤≤∞  
+        ≤≤≤≤∞∞ ≤≤≤≤≤≤  ≤≤≤≤   ≤≤≤≤    ≤≤≤≤≤≤∞∞≤≤≤≤≤≤∞∞ ≤≤≤≤∞∞  
+         ∞∞∞∞   ∞∞∞∞∞∞  ∞∞∞∞   ∞∞∞∞    ∞∞∞∞∞∞  ∞∞∞∞∞∞   ∞∞∞∞   
+                                                             
+   Volume 1, Number 2                                4 February 1991
+                  (c) Daniel Doáekal, All Rights Reserved
+   
+      The BBS Clipper magazine, published PERIODICALLY, later WEEKLY......
+   
+      Some of the material used comes from scanning CLIPPER echos
+      which are carried in various BBS throughout the World.
+      These Echoes are very often the source of the most often asked
+      Questions and Answers about Clipper.
+     
+      Other material, which is fully signed or abbreviated is the
+      copyright of the appropriate persons.
+   
+      The publisher is not responsible for other authors submissions....
+      Published material is not necessarily the opinion of the publisher.
+ 
+      Redaction:
+         Publisher...................................Daniel Docekal
+         Chief redacteur.............................Daniel Docekal
+         Language redacteur...............................Dave Wall
+ 
+
+
+                               Table of Contents
+
+ 1. EDITORIAL  ............................................................  1
+    EDITORIAL, now?  ......................................................  1
+ 2. ARTICLES  .............................................................  2
+    THEDRAW - An Ansi Screen Editor  ......................................  2
+ 3. SOFTWARE  .............................................................  4
+    Public domain library?  ...............................................  4
+    DANIEL.LIB - public domain library, RMAKE part  .......................  4
+    Getting PATH to your .EXE  ............................................  5
+ 4. NEWS  .................................................................  9
+    WYSIWYG Designer for Clipper/dBase  ...................................  9
+ 5. Q&A  .................................................................. 10
+    Magic of Clipper compiler or not?  .................................... 10
+ 6. ECHODUMP  ............................................................. 11
+    CONFERENCE DUMP part (1)  ............................................. 11
+ 7. CLIPBBS  .............................................................. 17
+    CLIPBBS distribution  ................................................. 17
+    CLIPBBS, how to write an article!!!  .................................. 18
+
+                                   - - - - -
+ CLIPBBS 1-02                   Page 1                    4 Feb 1991
+
+
+ =============================================================================
+                                   EDITORIAL
+ =============================================================================
+
+
+                               EDITORIAL, now?
+ 
+ Seems, that i have to sit down and write new editorial. Second issue of
+ CLIPBBS is out and first one is succesfully flowing in world. ClipNet and PDN
+ are carying it really nice and some other distribution sites hope will be
+ also enough to brought it to your home bbs and finally to your computer.
+ Curious about some comments about number one, but don't expecting them at
+ all. Because of missing back channel.
+ 
+ Actually, i was planning to put number two sunner out, but after crash of
+ 120MB harddisc i had to install everything again from zero. Including of this
+ collection from number two. Thanx to fact, that Dave, our great language
+ editor, has on his BBS complete copy of all parts from prepared new numbers i
+ could get it back. Never trust to SEAGATE seems the same as never trust to
+ NANTUCKET? No. Really not. I'm in trust to both of them, but sometime bad
+ luck hasn't enough. First it was computer (286 NONAME) who was refusing to
+ work, then it was harddisc (120MB harddisc). Now i'm expecting something in
+ third attempt, but maybe it already was (Lantastic 2MB network cards and
+ combination with QEMM for my new 386 machine).
+ 
+ What's new in number two? New submission kind called DUMP from CONFERENCES or
+ ECHOS. Just some usefull parts of public conferences. For all of you from
+ FidoNet, DUMP in this and next numbers is coming from Dave Wall and from GT
+ echo about Clipper programming (i hope, that's really from here). This number
+ is bigger than number one and hopefully will go out just two weeks after
+ first one. At this moment i will probably keep this 2weeks interval, because
+ nobody (exlude Dave) is giving any articles. Please do so, if you can. I
+ cannot pay, but your heroic act will be written in any next number of
+ CLIPBBS.
+ 
+ That's all. Half past ten, sitting on bed with portable computer on it,
+ writing some articles just now (only one quite part of day, night).
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 2                    4 Feb 1991
+
+
+ =============================================================================
+                                   ARTICLES
+ =============================================================================
+
+
+                     THEDRAW - An Ansi Screen Editor
+ 
+ THEDRAW is an excellent drawing program available through many BBS for
+ download. Generally it's main purpose is to make ANSI screens for BBS
+ programs like Remote Access, Quick BBS or any other directly handling
+ ANSI screens. Also of course for DOS. It can also handle ANIMATION with
+ ANSI sequencies, but this is not of interest at the moment.
+ 
+ THEDRAW can be used effectively in Clipper also, because screens can
+ quite easily be made in full colour, and all ASCI characters can be
+ saved in a 'binary' format which is exactly the same format as is used
+ in RESTSCREEN() and SAVESCREEN() functions in Clipper 5.01 and SAVE
+ SCREEN and RESTORE SCREEN commands in Clipper. Only one is needed,
+ write function which will get correct this into variable and then put
+ back to screen.
+ 
+ After using this function/procedure it is possible to generate complete
+ screens (or parts when one knows how big they are) for Clipper
+ applications.  They can be stored on disc and read and displayed on
+ screen. The possibility to support some other languages is also
+ available but limited to full screens.
+ 
+ 
+ Following is a function for getting the whole screen from a disk file
+ which has been previously saved using the "binary" format save option
+ of THEDRAW.
+ 
+ 
+ NB.
+ This function should only be referred to as an idea because it has not
+ yet been fully tested, and its integrity cannot be guaranteed.
+ 
+ <-----------------------cut here, start of program---------------------->
+ function scrread(ScrName)
+ local   Handle:=0 ,;
+         retval:=space(4000)
+ Handle:=fopen(ScrName)              //  open file, not tests
+ if Handle!=0                        //  if succesfull open, will do
+         retval:=freadstr(Handle,4000)   //  reading 2*25*80 bytes of screen
+         fclose(Handle)                  //  and close handle then
+ else
+         retval:=""                      //  otherwise will return empty
+ endif
+ return (retval)                         //  returning value
+ <-----------------------cut here, end of program------------------------>
+ 
+ 
+ The use of this function is very easy:
+ 
+ restscreen(0,0,24,79,scrread("TEST.BIN"))
+ 
+ CLIPBBS 1-02                   Page 3                    4 Feb 1991
+
+
+ Other video modes are supported also, because THEDRAW can work in
+ 43lines or 50lines mode for EGA or VGA screens, then of course must be
+ changes to using RESTSCREEN() function.
+ 
+ Another possibility with this package is, that TheDraw can also save
+ complete screen picture in OBJECT format as file .OBJ also in LARGE
+ model which is directly linkable to Clipper as can be used as normal
+ variable, also with some other variables set to the size of picture and
+ location on screen. More about this another time..........
+                                                                 .DD.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 4                    4 Feb 1991
+
+
+ =============================================================================
+                                   SOFTWARE
+ =============================================================================
+
+
+                           Public domain library?
+ 
+ The following series of articles will eventually come to form the basics
+ of a library of functions for Clipper. A Library comprised of Turbo C++,
+ MicroSoft C and Clipper code. It will not necessarily be ingenious, but may
+ well be of some help to beginners in bettering their understanding of
+ Clipper, while at the same time give a helping hand in how to create
+ C code functions and user libraries.
+ 
+ I will endeavour to document all functions as thoroughly as possible, in
+ order to give as much explanation of what each function is doing.
+ 
+ I am currently using this library as part of my own development work, and
+ it is slowly growing. I am sure that the general functions may be used by
+ many others in developing their own libraries.
+ 
+ Daniel
+
+ -----------------------------------------------------------------------------
+
+
+              CLEANUP() function to clean your strings....
+ 
+   Function CLEANUP() came about when I found some problems with strings
+   passed from a FAX interface. The passed name of the connected station
+   could possibly contain unprintable characters and I needed a function in
+   order to filter them out.
+ 
+   Clipper was too slow.....therefore, the solution was to use C.
+ 
+   <-------cut out here, program is coming------------------------------->
+ 
+   /*      all C programs will have this set of include statements
+           for getting all C internal definitions into file.
+   */
+   #include <stdio.h>
+   #include <ctype.h>
+   #include <string.h>
+   #include <dir.h>
+   #include <stdlib.h>
+   #include <dos.h>
+   #include <fcntl.h>
+   #include <stdarg.h>
+   #include <process.h>
+   #include <errno.h>
+   #include <io.h>
+   #include <sys\stat.h>
+   /*      extend.h is coming from CLIPPER 5.0x only, sorry for
+           all who are still using old CLipper S87, this will not
+           work, but can be changed...
+   */
+ CLIPBBS 1-02                   Page 5                    4 Feb 1991
+
+
+   #include <extend.h>
+ 
+   CLIPPER CleanUp()                               /* Clipper function  */
+ 
+       char *str;                                  /* for passed string */
+       char *tbl;                                  /* internal table    */
+       int  i;                                     /* temporary var.    */
+ 
+   /*      following is just table defining all 256 characters table
+           for translation. It's used on way that incoming character
+           is used as index into table and returned then character
+           on his position. All low codes and high codes are turned
+           into space, only nation characters are staying in this
+           single example
+   */
+       tbl="                                "     /* 00 */
+           " !.#$%&'()*+,-./0123456789:;<=>?"     /* 20 */
+           "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"    /* 40 */
+           "`abcdefghijklmnopqrstuvwxyz{|}~."     /* 60 */
+           "ÄÅÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü"     /* 80 */
+           "†°¢£§•¶ß®©™´¨≠ÆØ                "     /* a0 */
+           "                                "     /* c0 */
+           "                                ";    /* e0 */
+ 
+       if (PCOUNT==1 && ISCHAR(1))
+         str=_parc(1);                            /* get first only   */
+       if (PCOUNT==2 && ISCHAR(1) && ISCHAR(2))
+          { str=_parc(1);                         /* get both when so */
+            tbl=_parc(2);
+          }
+   /*      function accepts two parameters:
+           CLEANUP(<instring>[,<mytable>])
+           Instring is string which has to be translated, mytable is
+           possible passed complete NEW table for translation, if this is
+           not passed, then the internal defined table in function is used
+   */
+       if (PCOUNT==1 || PCOUNT==2)                 /* if 1 or 2 params  */
+       {
+           for(i=0; i<_parclen(1); i++)            /* scan whole string */
+              *(str+i)=*(tbl+*(str+i));            /* and translate all */
+           _retclen(str,_parclen(1));              /* characters in it  */
+       }                                           /* with return new   */
+       else
+          _ret();          /* wrong number of parameters, none or >2    */
+ 
+   <------------cut here, end of program------------------------>
+
+ -----------------------------------------------------------------------------
+
+
+                          Getting PATH to your .EXE
+ 
+ Followin public domain code is giving possibility to get full path of
+ Clipper .EXE program when is runned from different directory. Code was
+ given in CLIPPER echo in FidoNet by author, Terry Carmen.
+ 
+ CLIPBBS 1-02                   Page 6                    4 Feb 1991
+
+
+ ;*  exe_path.asm  Written by Terry Carmen on 8/23/1991
+ ;*
+ ;*  [1] Who am I?
+ ;*  [2] What am I doing here?
+ ;*  [3] What's the meaning of life?
+ ;*
+ ;*  Answering question 3 requires a philosopher
+ ;*  Answering question 2 requires a debugger
+ ;*  Answering question 1 only requires this program
+ ;*
+ ;*  Well, 1 out of 3 isn't bad....
+ ;*
+ ;*  This program returns the complete path and filename of your
+ ;*  Clipper program, ie. "e:\clipper\work\TEST.EXE"
+ ;*
+ ;*  File requestable as exe_path at 1:260/338@fidonet
+ ;*  23 hours, 300-38,400 baud
+ ;*
+ ;*  Released to the public domain.
+ ;*
+ ;*  Compile with TASM (and probably MASM)
+ ;*  with the /mu flag, and link with your
+ ;*  Clipper program
+ ;*
+ ;*  Usage: path=exe_path()
+ ;*
+ ;*  Note: This program uses a DOS function call that was unreliable in
+ ;*  DOS version 3.0 and earlier.
+ 
+ public  exe_path
+ 
+ extrn   __retc:far         ; return a string
+ 
+ ENV_SEG_ADDR_OFFSET  EQU  2Ch
+ 
+ dgroup  group   datasg
+ datasg  segment public  '_DATA'
+ assume cs:_prog, ds:dgroup, es:nothing
+ 
+ bad_path db 0
+ 
+ datasg  ends
+ 
+ _prog   segment 'CODE'
+ 
+ 
+ exe_path        proc    far
+ 
+                 push    bp
+                 mov     bp,sp
+                 push    si
+                 push    di
+ 
+                 mov     ah, 51h
+                 int     21h               ; BX now contains segment for PSP
+                 mov     es, bx
+ CLIPBBS 1-02                   Page 7                    4 Feb 1991
+
+
+                 mov     si, ENV_SEG_ADDR_OFFSET
+                ; offset of address of env. block
+ 
+                 mov     ax, es:[si]
+                 mov     es, ax            ; ES now contains the segment for
+                                           ; the environment for this process
+ 
+                 xor     si, si            ; zero the SI register
+ 
+ @@next_char:    cmp si, 32767
+                 je @@bug_out              ; this will never execute
+                                           ; unless the environment
+                                           ; is trashed
+ 
+                 cmp byte ptr es:[si],0    ; did we find a null?
+                 je @@try_second_zero      ; yes, look for another
+                 inc si                    ; no,
+                 jmp @@next_char           ; look at next char
+ 
+ @@try_second_zero:
+                 inc si                    ; point to next char
+                 cmp byte ptr es:[si],0    ; is it a second zero?
+                 jne @@next_char           ; it was only a single
+                                           ; zero, so it was probably
+                                           ; just the end of a line
+ 
+                 ; we found the end of the environment
+ 
+                 inc si                    ; skip over the next 3 bytes
+                 inc si
+                 inc si
+ 
+                 ; at this point, we're pointing to the beginning of the
+                 ; full path and filename of the currently executing program.
+ 
+                 jmp short @@bye
+ 
+ @@bug_out:      mov    ax, ds                 ; if we blew up, point to our
+                 mov    es, ax                 ; null, so we can
+                 mov    si, offset bad_path    ; send back nothing
+ 
+ @@bye:          mov    ax, es                 ; point to seg for
+                 mov    bx, si                 ; return string
+ 
+                 push   ax
+                 push   bx
+ 
+                 call   __retc
+                 add    sp,4
+ 
+                 pop     di
+                 pop     si
+                 pop     bp
+                 ret                              ; far return to Clipper
+ 
+ exe_path        endp
+ CLIPBBS 1-02                   Page 8                    4 Feb 1991
+
+
+ _prog           ends
+                 end
+ 
+ 
+ *********end************
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 9                    4 Feb 1991
+
+
+ =============================================================================
+                                     NEWS
+ =============================================================================
+
+
+                     WYSIWYG Designer for Clipper/dBase
+ 
+ 
+ Clipper Expert Group - a division of SA Developers Conference - has
+ released CLBrush, a WYSIWYG screen designer and code generator for Clipper
+ and dBase type products.
+ 
+ "Fully menu driven, with both keyboard and mouse support, CLBrush product
+ allows user to rapidly produce professional looking screens for
+ applications in minutes rather than  hours," said Russel Stromin, director
+ of CEG.
+ 
+ "If users spend time designing input screens and menus or polishing up
+ their application's interface, then CLBrush is ideal for their programmers
+ toolboxes."
+ 
+ CLBrush's features include block move, copy, line and box drawing and lines
+ or blocks of text can be centred  horizontally, vertically or even
+ internally within a  predefined block.
+ 
+ "CLBrush also features input fields that provide the ability of inserting a
+ picture and valid clauses within the 'Get',"  said Stromin.
+ 
+ "Users can choose fields from multiple .DBF's for 'GETS'."
+ 
+ Existing application screens can also be captured and  converted to CLBrush
+ images for modification.
+ 
+ A free Clipper program engine is included with CLBrush to do add, edit and
+ delete.
+ 
+ For more information, contact Clipper Expert Group, Russel Stromin, at
+ Johannesburg (011) 642-4588
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 10                   4 Feb 1991
+
+
+ =============================================================================
+                                      Q&A
+ =============================================================================
+
+
+ Question:
+ 
+     How is possible, that Clipper will succesfully compile following line?
+ 
+     test :U= 55
+ 
+     And also RTLINK will link it and create EXE file.
+ 
+ 
+ Answer:
+ 
+     It's very simple in this case it's assigning to class variable
+     called "test". It's similar as MyBrowse:cargo = <value>. It's
+     just problem of misunderstanding that Clipper 5.01 will accept
+     ":" as operator for classes.
+ 
+     Rtlink will also compile this one line, but program will every
+     time end with error that "test" variable is not defined and it
+     is right of course.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 11                   4 Feb 1991
+
+
+ =============================================================================
+                                   ECHODUMP
+ =============================================================================
+
+
+                          CONFERENCE DUMP part (1)
+ 
+ This, brand new, part of CLIPBBS will serve only one purpose.
+ From time to time will publish some parts of public media available
+ conferences (echos) with interesting subjects. Names are removed,
+ therefore please don't complain if find yourself. Complain to
+ author of this dumps.
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ The other day some mentioned that they were importing files on a
+ regular basis that take up to 48 hours to append.  At the time, I
+ recommend that he do the append in FoxBase since Fox's append
+ function is so much faster.
+ 
+ Since then, I decided to write my own append program.  I wrote a
+ highly optimized routine that does a straight APPEND SDF 3 times
+ faster than FoxPro and 14 times faster than Clipper.
+ 
+ Now if Nantucket would just open up their architecture, I could
+ write an APPEND function that would maintain the indexes and use
+ conditionals. <sigh>
+ 
+ Subj: A FASTER APPEND                Prvt: N          Read: N
+ 
+    Give um a call , you never know ! If you don't , Borland probably
+ will over at A-T ... < aaaarg! >
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ The spec's for the ntx cannot be that tuff to get.  The C lib CodeBase
+ does update NTX files without any problems.  Skip Moon must also have
+ access to the stuff because it would otherwise be very hard to make
+ SubNtx().
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ 
+ I know it is possible.  But I also know it is a lot of work, and
+ not just a matter of passing a code block, and since I don't have
+ a financial incentive, I don't  want to waste a lot of time
+ hacking around the clipper internals.
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ 
+ Anyway, thanks for your vote of confidence in my ability!
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ 
+ CLIPBBS 1-02                   Page 12                   4 Feb 1991
+
+
+ What did you write this in ??  WHy not set it up so that one can enter
+ filename parameters and release it as shareware ??
+ 
+ Are you using Clipper 5.01 ?? You should be able to substitute your
+ function for theirs by using the preprocessor or by directly calling
+ your function from your app.
+ 
+ Subj: A faster APPEND                Prvt: N          Read: N
+ 
+ It is a nice little 12k COM file written in highly optimized C,
+ and it is potentially useful to dBase, FoxBase, and Clipper
+ programmers.
+ 
+ Yes, but the problem is that if I plugged in my routine the
+ indexes wouldn't know about the new records.
+ 
+ 
+ Subj: ACCOUNTS RECEIVABLE            Prvt: N          Read: N
+ 
+ SBT accounting package is dBase compatible package.  The package is
+ modular (ie. A/R, A/P, GL, etc.) and comes with the source code.  The
+ company that distributes/makes it is MSR, Inc. up in Toronto.
+ 
+ Subj: ACCOUNTS RECEIVABLE            Prvt: N          Read: N
+ 
+ 
+ 
+ The accounting program. ACCPAC PLUS by Computer Associates, allows the
+ import and export of several different file formats, including dBASE III
+ and standard delimited formats. You could use the A/R of ACCPAC to
+ import data from your order entry and inventory package as I do writing
+ commercial Clipper applications. Also, you can have ACCPAC export the
+ A/R customer file into your application.
+ 
+ Subj: ACCOUNTS RECEIVABLE            Prvt: N          Read: N
+ 
+ Thanks for the tip on Accpac Plus. I like the idea of Accpac since it
+ makes it easy for them to add more modules as they become more
+ computerized.
+ 
+ The problem I can see is in adding new customers since they would need
+ to be added to both programs. Do you know of any way to read Accpac's
+ customer file directly? Someone once mentioned they thought the
+ files were Btrieve format. Also since I need to keep a couple of account
+ numbers for each customer, is there a miscellaneous field I could use
+ for that?
+ 
+ I'm going to see if I can track down a demo of AccPac Plus A/R.
+ 
+ Subj: ACCOUNTS RECEIVABLE            Prvt: N          Read: N
+ 
+ If you call the BOSS BBS in New Jersey at 1-201-568-7293 <the best
+ clipper BBS in the United States <my opinion> > and download a file name
+ "CLIP-AR.ZIP".  In that file is a complete account receivable with
+ source code written for Clipper Summer 87.  I have not used it so I do
+ not know how good it is.
+ CLIPBBS 1-02                   Page 13                   4 Feb 1991
+
+
+ I hope the code is worth your while and saves you lots of time.
+ 
+ Subj: ACCOUNTS RECEIVABLE            Prvt: N          Read: N
+ 
+ I've never actually tried to read (or had access to) the actual ACCPAC
+ data files. All that I have done is read in the exported file from
+ ACCPAC and also created a file to be read in by ACCPAC. I'm sure you
+ could write some routine to compare the .dbf files from both
+ applications and add/modify the datafiles in both applications. In
+ regards to the miscellaneous field, I do believe it does have a comment
+ field, which should work for your purposes.
+ 
+ Subj: Borland C                      Prvt: N          Read: N
+ 
+ Alright, what's FP?  Floating Point?
+ 
+ What do you do -- compile your Clipper .PRG files, and then use the
+ above Turbo C command to link them?  Will this make them more compact?
+ 
+ Open question to all:  Has anyone tried using PKLTE to slim down Clipper
+ .EXE programs?
+ 
+ Subj: Borland C                      Prvt: N          Read: N
+ 
+         FP is Floating Point.
+ 
+         No.  One compiles the .prgs with Clipper, compiles the C with
+ an appropriate C compiler, the assembly with an assembler, etc., then
+ links all the .obj files together, using either a command line or a
+ script file, depending on which linker is used.
+ 
+         Pklite works well on Clipper-compiled programs, even those
+ that include C and assembler, with certain limitations.  It does NOT
+ work with RTLinked final programs.  It does NOT work with programs
+ that have external overlays.  It DOES work with MSLink, Tlink, and
+ Warplink.  With Warplink it will even compress overlayed programs if
+ the overlay is internal (using the "oi" command-line switch).  There
+ may well be instances where PKLite would not work with some commands
+ included in the program, but I have not encountered any yet.  Average
+ compression is 45 to 51 percent.  The initial load takes a fraction
+ of a second longer, but I have seen no degradation of program execution
+ speed beyond loading.  BTW, compiling Warplinked overlayed programs
+ will provide the message that the program is probably overlayed and
+ will query if you want to continue anyway.  In any event, should you
+ encounter a program that does not run after compressing, uncompress it.
+ 
+ Subj: BORLAND C                      Prvt: N          Read: N
+ 
+    Indeed I have , and with no problems thus far. I am told that there
+ could be problems if you program using internal/external overlays tho!
+ It does indeed save disk area , in no way that I can tell does it or
+ should it increase access speeds/time .
+    I recall once reading an idea posted by a chap who suggested that
+ one might be able to remove certain asm/c functions from the Clipper
+ Libraries thus saving link size. However, my limited knowledge of
+ the inter relationships of these functions prohibits me from any
+ CLIPBBS 1-02                   Page 14                   4 Feb 1991
+
+
+ certainty regarding this course of action. I would suspect tho that
+ he was onto something . Perhaps it's an option that Nantucket will
+ provide in the future .
+ 
+ Subj: C5 Memo Editor/Spell chk       Prvt: N          Read: N
+ 
+ I am looking for a good replacement for MemoEdit().  Several products
+ are advertised but are they any good?
+ 
+ What I need is Bold, Underline, Paragraph indent, Block move/delete and
+ a spell checker.  Preferably the screen should show bold/underline, not
+ just a start/end character.
+ 
+ Any comments will be apreciated.
+ 
+ 
+ Subj: C5 MEMO EDITOR/SPELL CHK       Prvt: N          Read: N
+ 
+    There is a commercial library called ClipWord with SpellClip by
+ Action Plus Software , try the Programmers Shop 1-800-446-3846...
+ Also there are some pretty good ad-hoc editors out in ShareWare
+ Land ... one comes to mind called Super142.LIB ...
+  *  < AND ... > if you have the additional memory available, nothing
+     wrong with running a small external editor from within Clipper
+     itself , a good example is V.B.'s LIST v. x.xx or in my case, I
+     really like Qedit ...
+ 
+ Subj: CLIPPER AND DBASE3 NDX         Prvt: N          Read: N
+ 
+ You will have to request the file that does the .NDX from Nantucket
+ (s'posed to be free)... they no longer provide it in Clipper 5.xx.
+ 
+ Subj: CLIPPER AND DBASE3 NDX         Prvt: N          Read: N
+ 
+ Nan have not, to my knowledge, released it as yet. It certainly is not
+ available down under.
+ 
+ Last I heard was at Palm Desert, when Larry H said that it was going
+ into Beta in July. That might mean that the file will be available real
+ soon now.
+ 
+ Personally, I don't use it, preferring to keep my users out of dbase,
+ where it is quite likely that they will destroy the data, indexes, etc.
+ 
+ Oh, for a quiet life.
+ 
+ Subj: Clipper on Novell              Prvt: N          Read: N
+ 
+ I would like to get a few pointers from anybody out there with experience
+ in designing Clipper applications to be run under Novell Netware.  I am
+ trying to help an associate develop a multi-user app and getting it to run
+ properly on the network is (apparently) easier said than done.
+ 
+ We have both been working in the network environment with network-aware
+ products like Advanced Revelation, so file and record locking concepts
+ (and the usage of them) are not new.  The solution to one major problem
+ CLIPBBS 1-02                   Page 15                   4 Feb 1991
+
+
+ seems to be eluding us at the moment.  As part of the application, there
+ is an option to re-build the indexes for the DBF files.  As required, the
+ DBF's are USEd EXCLUSIVEly and the appropriate indexes are rebuilt.  At
+ that point, the Novell FLAG utility reports that all the NTX files are now
+ Non-Shareable Read/Write, as opposed to Sharable Read/Write before
+ reindexing.  The application is now effectively single user again.
+ 
+ At the moment, we have no idea why this is happening, or how to correct
+ it ... any and all comments are appreciated.  Advice is even more welcome!
+ 
+ 
+ Subj: CLIPPER ON NOVELL              Prvt: N          Read: N
+ 
+    Here's the scoop -- The index file is being ReCreated when you
+ reindex the database.  It is getting created, by default, to
+ NonShareable.  I cant recall if you can change the default for a newly
+ created file, but you can change the attribute from within your
+ application.  After reindexing, close the index, set the attribute to
+ shareable, then open the index.  I dont think you can change the
+ attribute with the file open.
+ 
+ Subj: CLIPPER ON NOVELL              Prvt: N          Read: N
+ 
+ Here's what happens when your indexing on a Novell Network.
+ 
+ set exclusive on
+ use <filename.dbf> index <filename.ntx>
+ reindex
+ * or the way I allways do it!
+ erase <filename>
+ index on <condition> to <filename.ntx>
+ 
+ This sets the share flag off.
+ 
+ To keep it from being turned off.
+ 
+ set exclusive off
+ use <filename.dbf> exclusive
+ * Test for network error
+ if neterr()
+     * file not open
+     return
+ endif
+ * if you get here file is open
+ erase <filename.ntx>
+ index on <condition> to <filename.ntx>
+ 
+ After doing it this way your files are still flaged as sharable.
+ Then all you have to do is reopen yor file as non-exclusive to allow
+ multi-user access.
+ 
+ I have never had this happen to me so I did some playing on it last
+ night and found out what different ways of indexing do to the flags
+ during and index and after your done indexing.
+ I also recommend rebuilding indexes from scratch instead of using the
+ reindex command. If your header is corrupt then the index file will
+ CLIPBBS 1-02                   Page 16                   4 Feb 1991
+
+
+ still be corrupted after a reindex.
+ 
+ The thing that makes a difference is that when you set exclusive off
+ your program is now going to open files as sharable, but you can
+ specificly open individual files as exclusive, but if you set exclusive
+ on then your program treats everything as a single user system, so all
+ of your files that are accessed are flaged as non-sharable.
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 17                   4 Feb 1991
+
+
+ =============================================================================
+                                    CLIPBBS
+ =============================================================================
+
+
+                              CLIPBBS Distribution
+   
+   CLIPBBS is special magazine about CLIPPER and CLIPPERing (or about 
+   another related problems and xBASE languages). This magazine is for
+   free and articles aren't honored. Nobody can make a profit from the
+   distribution of this magazine.
+   
+   CLIPBBS can be freely downloaded and uploaded to any BBS or any other
+   public system without changes of original contents or number of files
+   in original archive (kind of archive can be changed, but we are sup-
+   porting ARJ archive because is best and smallest).
+   If you are interested in CLIPBBS and would like to become a DISTRIBUTION
+   site, contact publisher on 2:285/608@fidonet or 27:1331/4412@signet
+   or just call to 31-10-4157141 (BBS, working 18:00->08:00, 2400bps) or
+   voice to 31-10-4843870 in both cases asking for DANIEL (Docekal).
+   
+   Distribution sites:
+   
+   United Kingdom
+       Welsh Wizard, SYSOP Dave Wall, phone 44-656-79477
+   
+   United States of America
+       The Southern Clipper, SYSOP Jerry Pults, phone 1-405-789-2078
+
+ -----------------------------------------------------------------------------
+ CLIPBBS 1-02                   Page 18                   4 Feb 1991
+
+
+                      How to write articles in CLIPBBS?
+   
+   
+   Submission of articles to CLIPBBS is really easy:
+     Maximum of 78 characters per line, as long or as short as you like
+     ASCII text.
+     Choose from the list of extension which most describes your text, or
+     just name it .ART as ARTicle and send it to publisher or to any
+     distribution site via modem to BBS or with mailer as file attach.
+     Article will come automatically appear in the next free issue.
+   
+   Extensions are:
+   
+           Articles (anything)             .ART
+           Software                        .SOF
+           News                            .NEW
+           Question and Answers            .Q&A
+           Letters to editors              .LET
+           Advertisement                   .ADV
+           Wanted                          .WAN
+           Comments                        .CMS
+           DUMP from conferences           .DMP
+           
+   That's all at the moment, there will probably be changes later, as the
+   magazine evolves. If you have any ideas for a new section of CLIPBBS,
+   please tell us, or just write an article about it.
+   
+   Daniel, publisher
+
+ -----------------------------------------------------------------------------
+
